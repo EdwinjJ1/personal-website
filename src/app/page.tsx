@@ -45,13 +45,6 @@ const featuredProjects = [
     technologies: ["Node.js", "Claude MCP", "TypeScript"],
     status: "In Development",
     link: "/projects"
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Full-stack solution with Stripe payments and Firebase backend.",
-    technologies: ["React", "Firebase", "Stripe"],
-    status: "Completed",
-    link: "/projects"
   }
 ];
 

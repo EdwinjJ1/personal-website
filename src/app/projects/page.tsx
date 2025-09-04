@@ -46,25 +46,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-commerce Platform with Stripe Integration",
-    description: "Full-stack e-commerce solution with Firebase backend, Stripe payments, internationalization, and hybrid deployment architecture.",
-    longDescription: "A complete e-commerce platform featuring Firebase Functions backend, Stripe payment processing, multi-language support (i18n), and hybrid deployment with NGINX. Includes user authentication, product management, order processing, and comprehensive admin dashboard.",
-    technologies: ["React", "Firebase", "Node.js", "Express", "Stripe", "NGINX", "Docker"],
-    category: "Web Development",
-    featured: true,
-    status: "Completed",
-    githubUrl: "#",
-    imageUrl: "/api/placeholder/600/400",
-    highlights: [
-      "Full Stripe payment integration",
-      "Firebase backend architecture",
-      "Multi-language support",
-      "Docker containerization",
-      "NGINX load balancing"
-    ]
-  },
-  {
-    id: 4,
     title: "Machine Learning Portfolio",
     description: "Collection of ML projects exploring various algorithms, from computer vision to natural language processing.",
     longDescription: "A comprehensive portfolio of machine learning projects showcasing different algorithms and applications. Includes image classification models, sentiment analysis systems, recommendation engines, and time series forecasting models built with TensorFlow and PyTorch.",
@@ -167,7 +148,7 @@ export default function ProjectsPage() {
                 Projects
               </h1>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-                A showcase of my technical projects, from educational platforms and AI systems to e-commerce solutions. 
+                A showcase of my technical projects, from educational platforms and AI systems to modern web applications. 
                 Each project represents a unique challenge and learning experience.
               </p>
             </motion.div>
