@@ -9,8 +9,8 @@ const projects = [
     id: 1,
     title: "UNSW Study Materials Platform",
     description: "Interactive study notes and resources for UNSW Computer Science students, featuring bilingual content, data visualizations, and comprehensive course materials.",
-    longDescription: "A comprehensive educational platform designed specifically for UNSW Computer Science students. Features include interactive code examples, bilingual content support (English/Chinese), dynamic data visualizations using Chart.js and Plotly.js, and responsive design optimized for both desktop and mobile learning.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Chart.js", "Plotly.js"],
+    longDescription: "A comprehensive educational platform designed specifically for UNSW Computer Science students. Features include interactive code examples, bilingual content support (English/Chinese), dynamic data visualizations using Chart.js and Plotly.js, and responsive design optimized for both desktop and mobile learning. An optional payments/donation module (Stripe) was previously integrated for select premium resources.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "Chart.js", "Plotly.js", "Stripe"],
     category: "Education",
     featured: true,
     status: "Live",
@@ -22,7 +22,8 @@ const projects = [
       "Bilingual content support",
       "Dynamic data visualizations",
       "Mobile-responsive design",
-      "Comprehensive course coverage"
+      "Comprehensive course coverage",
+      "Optional payments/donation module (Stripe) integration"
     ]
   },
   {

@@ -34,7 +34,7 @@ const recentPosts = [
 const featuredProjects = [
   {
     title: "UNSW Study Materials",
-    description: "Interactive educational platform for CS students with bilingual content and visualizations.",
+    description: "Interactive educational platform with bilingual content, visualizations, and an optional payment module.",
     technologies: ["JavaScript", "Chart.js", "Tailwind"],
     status: "Live",
     link: "http://www.preuni.xyz/"
