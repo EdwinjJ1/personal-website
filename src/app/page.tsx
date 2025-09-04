@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ClientOnlyParticles from '@/components/ClientOnlyParticles';
@@ -143,12 +144,12 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
               </a>
-              <a
+              <Link
                 href="/about"
                 className="inline-flex items-center px-8 py-4 border border-teal-500 text-teal-400 font-semibold rounded-full hover:bg-teal-500 hover:text-white transform hover:scale-105 transition-all duration-300 mb-4"
               >
                 Learn More About Me
-              </a>
+              </Link>
             </motion.div>
           </motion.div>
         </section>
@@ -206,21 +207,33 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <a
-                      href={project.link}
-                      className="text-teal-400 hover:text-teal-300 text-sm font-medium inline-flex items-center"
-                    >
-                      {project.status === 'Live' ? 'View Live' : 'Learn More'}
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
+                    {project.link.startsWith('http') ? (
+                      <a
+                        href={project.link}
+                        className="text-teal-400 hover:text-teal-300 text-sm font-medium inline-flex items-center"
+                      >
+                        {project.status === 'Live' ? 'View Live' : 'Learn More'}
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </a>
+                    ) : (
+                      <Link
+                        href={project.link}
+                        className="text-teal-400 hover:text-teal-300 text-sm font-medium inline-flex items-center"
+                      >
+                        {project.status === 'Live' ? 'View Live' : 'Learn More'}
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    )}
                   </motion.div>
                 ))}
               </div>
 
               <motion.div variants={item} className="text-center">
-                <a
+                <Link
                   href="/projects"
                   className="inline-flex items-center px-6 py-3 border border-teal-500 text-teal-400 font-semibold rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-300"
                 >
@@ -228,7 +241,7 @@ export default function Home() {
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </div>
@@ -424,7 +437,7 @@ export default function Home() {
               </div>
 
               <motion.div variants={item} className="text-center">
-                <a
+                <Link
                   href="/blog"
                   className="inline-flex items-center px-6 py-3 border border-teal-500 text-teal-400 font-semibold rounded-lg hover:bg-teal-500 hover:text-white transition-all duration-300"
                 >
@@ -432,7 +445,7 @@ export default function Home() {
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </div>
@@ -456,7 +469,7 @@ export default function Home() {
                 about technology and innovation. Let's connect!
               </motion.p>
               <motion.div variants={item} className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
+                <Link
                   href="/about"
                   className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-full hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 >
@@ -464,8 +477,8 @@ export default function Home() {
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                </a>
-                <a
+                </Link>
+                <Link
                   href="/blog"
                   className="inline-flex items-center px-8 py-4 border border-teal-500 text-teal-400 font-semibold rounded-full hover:bg-teal-500 hover:text-white transition-all duration-300"
                 >
@@ -473,7 +486,7 @@ export default function Home() {
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                </a>
+                </Link>
               </motion.div>
             </motion.div>
           </div>

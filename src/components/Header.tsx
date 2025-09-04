@@ -26,10 +26,18 @@ const Header = () => {
         
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li><a href="/blog" className="text-white hover:text-teal-400 transition-colors font-medium">Blog</a></li>
-            <li><a href="/projects" className="text-white hover:text-teal-400 transition-colors font-medium">Projects</a></li>
-            <li><a href="#" className="text-white hover:text-teal-400 transition-colors font-medium">Links</a></li>
-            <li><a href="/about" className="text-white hover:text-teal-400 transition-colors font-medium">About</a></li>
+            <li>
+              <Link href="/blog" className="text-white hover:text-teal-400 transition-colors font-medium">Blog</Link>
+            </li>
+            <li>
+              <Link href="/projects" className="text-white hover:text-teal-400 transition-colors font-medium">Projects</Link>
+            </li>
+            <li>
+              <a href="#" className="text-white hover:text-teal-400 transition-colors font-medium">Links</a>
+            </li>
+            <li>
+              <Link href="/about" className="text-white hover:text-teal-400 transition-colors font-medium">About</Link>
+            </li>
             <li>
               <button className="text-white hover:text-teal-400 transition-colors font-medium">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,10 +72,10 @@ const Header = () => {
           exit={{ opacity: 0, y: -10 }}
         >
           <div className="px-6 py-4 space-y-2">
-            <a href="/blog" className="block py-2 text-white hover:text-teal-400 font-medium">Blog</a>
-            <a href="/projects" className="block py-2 text-white hover:text-teal-400 font-medium">Projects</a>
+            <Link href="/blog" className="block py-2 text-white hover:text-teal-400 font-medium">Blog</Link>
+            <Link href="/projects" className="block py-2 text-white hover:text-teal-400 font-medium">Projects</Link>
             <a href="#" className="block py-2 text-white hover:text-teal-400 font-medium">Links</a>
-            <a href="/about" className="block py-2 text-white hover:text-teal-400 font-medium">About</a>
+            <Link href="/about" className="block py-2 text-white hover:text-teal-400 font-medium">About</Link>
             <button className="block py-2 text-white hover:text-teal-400 font-medium">Search</button>
           </div>
         </motion.div>
