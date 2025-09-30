@@ -25,17 +25,6 @@ export default function Home() {
         <ClientOnlyParticles />
 
         <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 py-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-center mb-4 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
-              Welcome to my digital space
-            </h1>
-          </motion.div>
-
           {/* Modular Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)]">
 
