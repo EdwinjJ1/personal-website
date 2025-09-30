@@ -110,6 +110,27 @@ export const projects: Project[] = [
   },
   {
     id: 5,
+    title: 'SafeEyes for macOS',
+    description:
+      'A native macOS eye-strain reminder with customizable breaks, bilingual support, and multiple notification modes.',
+    longDescription:
+      'SafeEyes for macOS is a cross-platform eye-strain prevention tool adapted specifically for macOS users. It schedules customizable microbreaks and longer rest periods to reduce screen fatigue. Features include native AppleScript integration, bilingual notifications (English/Chinese), persistent settings, and three launch modes: native dialogs, fullscreen overlay, and lightweight menu flow.',
+    technologies: ['Python', 'AppleScript', 'macOS', 'JSON'],
+    category: 'AI & Automation',
+    featured: false,
+    status: 'Live',
+    githubUrl: 'https://github.com/EdwinJia1/SafeEyes-mac-',
+    icon: '👁️',
+    highlights: [
+      'Native macOS integration via AppleScript',
+      'Bilingual support (EN / CN)',
+      'Customizable work/break intervals',
+      'Multiple notification modes',
+      'Zero external dependencies',
+    ],
+  },
+  {
+    id: 6,
     title: 'Startup MVP Platform',
     description:
       'The MVP from my startup journey featuring real-time collaboration, analytics, and a scalable stack.',
