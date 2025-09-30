@@ -45,7 +45,7 @@ const item = {
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-gray-50">
+    <section id="education" className="py-20">
       <div className="container mx-auto px-6">
         <motion.div
           className="max-w-4xl mx-auto"
@@ -55,7 +55,7 @@ const Education = () => {
           viewport={{ once: true, amount: 0.3 }}
         >
           <motion.h2 
-            className="text-4xl font-bold text-gray-800 mb-12 text-center"
+            className="text-4xl font-bold text-white mb-12 text-center"
             variants={item}
           >
             Education & Experience
@@ -66,36 +66,36 @@ const Education = () => {
               <motion.div
                 key={index}
                 variants={item}
-                className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-300"
+                className="bg-gray-950/60 rounded-xl p-8 border border-gray-800 hover:border-teal-400 transition-colors duration-300 backdrop-blur"
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                    <h3 className="text-2xl font-bold text-white mb-2">
                       {edu.institution}
                     </h3>
-                    <h4 className="text-lg font-semibold text-teal-600 mb-2">
+                    <h4 className="text-lg font-semibold text-teal-300 mb-2">
                       {edu.degree}
                     </h4>
-                    <p className="text-gray-600 mb-4">
+                    <p className="text-gray-300 mb-4">
                       {edu.description}
                     </p>
                   </div>
                   <div className="md:text-right md:ml-6">
-                    <div className="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-sm font-medium mb-2">
+                    <div className="inline-block bg-teal-500/20 text-teal-200 px-3 py-1 rounded-full text-sm font-medium mb-2">
                       {edu.period}
                     </div>
-                    <p className="text-gray-500 text-sm">
+                    <p className="text-gray-400 text-sm">
                       📍 {edu.location}
                     </p>
                   </div>
                 </div>
 
-                <div className="border-l-4 border-teal-400 pl-4">
-                  <h5 className="font-semibold text-gray-700 mb-2">Key Achievements:</h5>
+                <div className="border-l-4 border-teal-400/70 pl-4">
+                  <h5 className="font-semibold text-white mb-2">Key Achievements:</h5>
                   <ul className="space-y-1">
                     {edu.achievements.map((achievement, achieveIndex) => (
-                      <li key={achieveIndex} className="text-gray-600 flex items-start">
-                        <svg className="w-4 h-4 text-teal-500 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                      <li key={achieveIndex} className="text-gray-300 flex items-start">
+                        <svg className="w-4 h-4 text-teal-400 mt-0.5 mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                           <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                         </svg>
                         {achievement}

@@ -11,8 +11,8 @@ import PageTransition from '@/components/PageTransition';
 export default function MainPage() {
   return (
     <PageTransition>
-      <div className="bg-white">
-        <main className="relative z-10">
+      <div className="min-h-screen">
+        <main className="relative z-10 flex flex-col">
           <Profile />
           <About />
           <Posts />

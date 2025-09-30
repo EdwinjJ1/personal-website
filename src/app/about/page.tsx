@@ -35,7 +35,7 @@ const timeline = [
     location: "Sydney, Australia",
     description: "Specializing in Artificial Intelligence and Software Engineering. Maintaining high academic performance while actively participating in tech societies and startup programs.",
     highlights: [
-      "Dean's List for Academic Excellence",
+      "Dean&apos;s List for Academic Excellence",
       "Active member of UNSW Tech Society",
       "Participant in UNSW Startup Incubator Program"
     ],
@@ -74,12 +74,12 @@ const timeline = [
 const interests = [
   {
     title: "Artificial Intelligence",
-    description: "Fascinated by AI's potential to enhance human capabilities and solve complex problems.",
+    description: "Fascinated by AI&apos;s potential to enhance human capabilities and solve complex problems.",
     icon: "🤖"
   },
   {
     title: "Entrepreneurship",
-    description: "Passionate about building products that make a meaningful impact on people's lives.",
+    description: "Passionate about building products that make a meaningful impact on people&apos;s lives.",
     icon: "🚀"
   },
   {
@@ -147,7 +147,7 @@ export default function AboutPage() {
                     <h2 className="text-3xl font-bold mb-6 text-white">My Journey</h2>
                     <div className="space-y-4 text-gray-300 leading-relaxed">
                       <p>
-                        At 19, I'm a Computer Science student at UNSW Sydney with an unconventional background that combines 
+                        At 19, I&apos;m a Computer Science student at UNSW Sydney with an unconventional background that combines 
                         academic excellence with real-world entrepreneurial experience. My journey into technology began with 
                         curiosity and has evolved into a deep passion for artificial intelligence and innovation.
                       </p>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                         maintaining high performance while pursuing my passion for computer science.
                       </p>
                       <p>
-                        Today, I'm focused on mastering the fundamentals of AI and software engineering while exploring 
+                        Today, I&apos;m focused on mastering the fundamentals of AI and software engineering while exploring 
                         how technology can enhance human productivity and solve meaningful problems. My goal is to become 
                         an influential figure in the tech industry, contributing to innovations that drive positive change.
                       </p>

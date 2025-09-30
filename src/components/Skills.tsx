@@ -43,7 +43,7 @@ const item = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-20 bg-gray-50">
+    <section id="skills" className="py-20">
       <motion.div
         className="container mx-auto px-6"
         variants={container}
@@ -51,20 +51,20 @@ const Skills = () => {
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
       >
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">Skills & Technologies</h2>
+        <h2 className="text-4xl font-bold text-center mb-12 text-white">Skills & Technologies</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {categories.map((cat) => (
             <motion.div
               key={cat.title}
               variants={item}
-              className="rounded-xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="rounded-xl border border-gray-800 bg-gray-950/60 p-6 backdrop-blur hover:border-teal-400 transition-colors duration-300"
             >
-              <h3 className="text-xl font-semibold mb-4 text-teal-600">{cat.title}</h3>
+              <h3 className="text-xl font-semibold mb-4 text-teal-300">{cat.title}</h3>
               <ul className="flex flex-wrap gap-2">
                 {cat.items.map((skill) => (
                   <li key={skill}>
-                    <span className="inline-block rounded-full border border-teal-200 bg-teal-50 px-3 py-1 text-sm text-teal-700 hover:bg-teal-100 transition-colors cursor-default">
+                    <span className="inline-block rounded-full border border-teal-500/40 bg-teal-500/10 px-3 py-1 text-sm text-teal-200 hover:bg-teal-500/20 transition-colors cursor-default">
                       {skill}
                     </span>
                   </li>
@@ -75,7 +75,7 @@ const Skills = () => {
         </div>
 
         <motion.p 
-          className="text-center text-gray-600 mt-12 text-sm max-w-2xl mx-auto"
+          className="text-center text-gray-400 mt-12 text-sm max-w-2xl mx-auto"
           variants={item}
         >
           Also exploring AI workflows and automation (Claude MCP, Notion/Google APIs) to enhance productivity and create intelligent systems.
@@ -86,4 +86,3 @@ const Skills = () => {
 };
 
 export default Skills;
-
