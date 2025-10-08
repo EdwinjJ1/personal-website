@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
+import { getAssetPath } from '@/lib/utils';
 
 interface Photo {
   id: number;
@@ -24,7 +25,7 @@ const photos: Photo[] = [
     location: 'Sydney Harbour Bridge',
     description: 'Long exposure shot capturing the golden hour light reflecting off the harbour waters.',
     category: 'Landscape',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-12',
     camera: 'Sony A7III',
     settings: 'f/8 • 1/125s • ISO 100'
@@ -35,7 +36,7 @@ const photos: Photo[] = [
     location: 'Sydney CBD',
     description: 'Modern architecture meets natural light in the heart of the city.',
     category: 'Architecture',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-11',
     camera: 'Sony A7III',
     settings: 'f/5.6 • 1/250s • ISO 200'
@@ -46,7 +47,7 @@ const photos: Photo[] = [
     location: 'Bondi Beach',
     description: 'Early morning waves crashing against the iconic Bondi coastline.',
     category: 'Landscape',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-10',
     camera: 'Sony A7III',
     settings: 'f/11 • 1/500s • ISO 100'
@@ -57,7 +58,7 @@ const photos: Photo[] = [
     location: 'Newtown',
     description: 'Candid moment capturing the vibrant street culture of inner Sydney.',
     category: 'Street',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-09',
     camera: 'Sony A7III',
     settings: 'f/2.8 • 1/500s • ISO 400'
@@ -68,7 +69,7 @@ const photos: Photo[] = [
     location: 'Royal Botanic Garden',
     description: 'Natural light portrait session in the lush gardens.',
     category: 'Portrait',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-08',
     camera: 'Sony A7III',
     settings: 'f/1.8 • 1/200s • ISO 100'
@@ -79,7 +80,7 @@ const photos: Photo[] = [
     location: 'Circular Quay',
     description: 'Long exposure capturing the city lights and ferry trails.',
     category: 'Night',
-    image: '/profile.jpg', // Replace with actual photo
+    image: getAssetPath('profile.jpg'), // Replace with actual photo
     date: '2024-07',
     camera: 'Sony A7III',
     settings: 'f/16 • 30s • ISO 100'

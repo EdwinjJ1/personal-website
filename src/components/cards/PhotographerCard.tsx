@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import BaseCard from './BaseCard';
+import { getAssetPath } from '@/lib/utils';
 
 const highlight = {
   title: 'Golden Hour at the Harbour',
@@ -50,7 +51,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
         <div className="grid grid-cols-2 gap-1.5">
           <div className="relative col-span-2 min-h-[90px] overflow-hidden rounded-2xl border border-gray-700/60">
             <Image
-              src="/profile.jpg"
+              src={getAssetPath('profile.jpg')}
               alt="Long exposure photograph at Sydney Harbour Bridge"
               fill
               className="object-cover brightness-[0.9]"

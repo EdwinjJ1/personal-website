@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
 
@@ -57,8 +58,15 @@ export default function ActivityCard() {
   const [isLoading, setIsLoading] = useState(true);
   const [isRealData, setIsRealData] = useState(false);
   const [debugInfo, setDebugInfo] = useState<string>('');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     const fetchGitHubActivity = async () => {
       try {
         const username = 'EdwinJia1';
@@ -133,9 +141,48 @@ export default function ActivityCard() {
     };
 
     fetchGitHubActivity();
-  }, []);
+  }, [isMounted]);
 
   const totalActivity = activityData.reduce((sum, day) => sum + day.count, 0);
+
+  // Prevent hydration mismatch by not rendering until mounted
+  if (!isMounted) {
+    return (
+      <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
+        <div className="h-full">
+          <div className="flex justify-between items-center mb-3">
+            <h3 className="text-white font-semibold flex items-center gap-2">
+              <span className="text-teal-400">📊</span>
+              GitHub Activity
+            </h3>
+            <span className="text-xs text-gray-400">
+              Loading...
+            </span>
+          </div>
+          <div className="grid grid-cols-12 gap-[3px] mb-3">
+            {Array.from({ length: 84 }).map((_, index) => (
+              <div
+                key={index}
+                className="aspect-square rounded-sm bg-gray-700"
+              />
+            ))}
+          </div>
+          <div className="flex justify-between items-center text-xs text-gray-400">
+            <span>Less</span>
+            <div className="flex gap-1">
+              {[0, 1, 2, 3, 4].map((level) => (
+                <div
+                  key={level}
+                  className={`w-2 h-2 rounded-sm ${getActivityColor(level)}`}
+                />
+              ))}
+            </div>
+            <span>More</span>
+          </div>
+        </div>
+      </BaseCard>
+    );
+  }
 
   return (
     <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
