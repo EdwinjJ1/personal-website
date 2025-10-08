@@ -1,39 +1,37 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
 
-// Lightweight deterministic pseudo-random number generator so SSR + CSR match
-const createSeededRandom = (seed: number) => {
-  let state = seed >>> 0;
-  return () => {
-    state = (state * 1664525 + 1013904223) % 4294967296;
-    return state / 4294967296;
-  };
-};
+interface ActivityDay {
+  date: string;
+  activity: number;
+  count: number;
+}
 
-const buildStaticActivityData = () => {
+// Fallback data generator for SSR and error cases
+const buildFallbackActivityData = (): ActivityDay[] => {
   const weeks = 12;
   const totalDays = weeks * 7;
-  const startDate = new Date(Date.UTC(2024, 0, 1));
-  const rand = createSeededRandom(42);
+  const today = new Date();
 
   return Array.from({ length: totalDays }, (_, index) => {
-    const date = new Date(startDate);
-    date.setUTCDate(startDate.getUTCDate() + index);
+    const date = new Date(today);
+    date.setDate(date.getDate() - (totalDays - 1 - index));
 
-    const activity = Math.floor(rand() * 5);
-    const multiplier = Math.floor(rand() * 5);
+    const seed = date.getTime();
+    const random = Math.abs(Math.sin(seed)) * 5;
+    const activity = Math.floor(random);
+    const count = activity * (Math.floor(Math.abs(Math.sin(seed * 2)) * 5) + 1);
 
     return {
       date: date.toISOString().split('T')[0],
       activity,
-      count: activity * (multiplier + 1)
+      count
     };
   });
 };
-
-const STATIC_ACTIVITY_DATA = buildStaticActivityData();
 
 const getActivityColor = (level: number) => {
   const colors = [
@@ -46,8 +44,83 @@ const getActivityColor = (level: number) => {
   return colors[level];
 };
 
+function getActivityLevel(count: number): number {
+  if (count === 0) return 0;
+  if (count <= 2) return 1;
+  if (count <= 5) return 2;
+  if (count <= 10) return 3;
+  return 4;
+}
+
 export default function ActivityCard() {
-  const activityData = STATIC_ACTIVITY_DATA;
+  const [activityData, setActivityData] = useState<ActivityDay[]>(buildFallbackActivityData());
+  const [isLoading, setIsLoading] = useState(true);
+  const [isRealData, setIsRealData] = useState(false);
+
+  useEffect(() => {
+    const fetchGitHubActivity = async () => {
+      try {
+        const username = 'EdwinJia1';
+        const response = await fetch(
+          `https://api.github.com/users/${username}/events/public?per_page=100`,
+          {
+            headers: {
+              'Accept': 'application/vnd.github.v3+json',
+            }
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+
+        const events = await response.json();
+
+        // Process events into daily activity
+        const activityMap = new Map<string, number>();
+
+        // Initialize last 12 weeks with 0 activity
+        const weeks = 12;
+        const totalDays = weeks * 7;
+        const today = new Date();
+
+        for (let i = totalDays - 1; i >= 0; i--) {
+          const date = new Date(today);
+          date.setDate(date.getDate() - i);
+          const dateStr = date.toISOString().split('T')[0];
+          activityMap.set(dateStr, 0);
+        }
+
+        // Count events per day
+        events.forEach((event: any) => {
+          const date = new Date(event.created_at).toISOString().split('T')[0];
+          if (activityMap.has(date)) {
+            activityMap.set(date, (activityMap.get(date) || 0) + 1);
+          }
+        });
+
+        // Convert to array format
+        const processedData: ActivityDay[] = Array.from(activityMap.entries())
+          .map(([date, count]) => ({
+            date,
+            count,
+            activity: getActivityLevel(count)
+          }))
+          .sort((a, b) => a.date.localeCompare(b.date));
+
+        setActivityData(processedData);
+        setIsRealData(true);
+      } catch (error) {
+        console.error('Failed to fetch GitHub activity:', error);
+        // Keep fallback data
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchGitHubActivity();
+  }, []);
+
   const totalActivity = activityData.reduce((sum, day) => sum + day.count, 0);
 
   return (
@@ -56,10 +129,13 @@ export default function ActivityCard() {
         <div className="flex justify-between items-center mb-3">
           <h3 className="text-white font-semibold flex items-center gap-2">
             <span className="text-teal-400">📊</span>
-            Activity
+            GitHub Activity
+            {isRealData && (
+              <span className="text-xs text-green-400 ml-1">●</span>
+            )}
           </h3>
           <span className="text-xs text-gray-400">
-            {totalActivity} contributions this year
+            {totalActivity} contributions
           </span>
         </div>
 

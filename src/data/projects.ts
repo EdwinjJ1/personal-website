@@ -150,6 +150,69 @@ export const projects: Project[] = [
       'AWS + Docker deployment pipeline',
     ],
   },
+  {
+    id: 7,
+    title: 'Bank Statement Automation',
+    description:
+      'Automated personal finance management system that reads bank statements, categorizes expenses, and provides real-time spending analytics.',
+    longDescription:
+      'A comprehensive financial automation tool that monitors email notifications, parses bank statements, and intelligently categorizes transactions. Features include real-time expense tracking, budget alerts, smart categorization with machine learning, and encrypted local storage for privacy. Integrates with multiple banks and supports multi-currency transactions.',
+    technologies: ['Node.js', 'SQLite', 'crypto-js', 'node-cron', 'Chart.js'],
+    category: 'AI & Automation',
+    featured: false,
+    status: 'In Development',
+    githubUrl: '#',
+    icon: '💰',
+    highlights: [
+      'Automated email parsing and OCR recognition',
+      'Smart expense categorization with ML',
+      'Real-time budget tracking and alerts',
+      'End-to-end encryption for security',
+      'Multi-bank and multi-currency support',
+    ],
+  },
+  {
+    id: 8,
+    title: 'AI Equity Radar',
+    description:
+      'Interactive dashboard identifying global poverty hotspots to prioritize AI intervention strategies for underserved communities.',
+    longDescription:
+      'Built for UNSW AIP Hackathon, this data-driven platform analyzes 184 countries using World Bank data to identify inequality hotspots. Features composite risk scoring, interactive visualizations with Plotly.js, and recommends targeted AI interventions including offline education kiosks, agricultural advisors, and mobile health assistants for rural communities.',
+    technologies: ['Python', 'Flask', 'Pandas', 'Plotly.js', 'Bootstrap 5'],
+    category: 'Machine Learning',
+    featured: true,
+    status: 'Live',
+    githubUrl: '#',
+    icon: '🌍',
+    highlights: [
+      'Analyzed 184 countries with 44 indicators',
+      'Composite risk scoring algorithm',
+      'Interactive data visualization dashboard',
+      '4 AI intervention strategies designed',
+      'Targets 250K+ people in Year 1',
+    ],
+  },
+  {
+    id: 9,
+    title: 'AI Gaming Platform',
+    description:
+      'Gamified learning platform leveraging AI to create interactive educational experiences and adaptive quizzes.',
+    longDescription:
+      'An innovative educational gaming platform that combines AI-powered content generation with interactive learning mechanics. Features adaptive difficulty, real-time feedback, and personalized learning paths to make education engaging and effective.',
+    technologies: ['React', 'Node.js', 'OpenAI API', 'PostgreSQL', 'WebSocket'],
+    category: 'AI & Automation',
+    featured: false,
+    status: 'In Development',
+    githubUrl: '#',
+    icon: '🎮',
+    highlights: [
+      'AI-generated educational content',
+      'Adaptive difficulty system',
+      'Real-time multiplayer quizzes',
+      'Personalized learning analytics',
+      'Gamification and reward systems',
+    ],
+  },
 ];
 
 export const projectCategories: ProjectCategory[] = [

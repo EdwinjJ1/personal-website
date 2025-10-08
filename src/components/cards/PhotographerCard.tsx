@@ -89,10 +89,13 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
             </svg>
           </a>
           <a
-            href="#contact"
-            className="inline-flex items-center gap-1 text-gray-300 hover:text-white"
+            href="/photography"
+            className="inline-flex items-center gap-1 text-gray-300 hover:text-white transition-colors"
           >
-            Gallery preview
+            View Portfolio
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </a>
         </div>
       </div>
