@@ -56,6 +56,7 @@ export default function ActivityCard() {
   const [activityData, setActivityData] = useState<ActivityDay[]>(buildFallbackActivityData());
   const [isLoading, setIsLoading] = useState(true);
   const [isRealData, setIsRealData] = useState(false);
+  const [debugInfo, setDebugInfo] = useState<string>('');
 
   useEffect(() => {
     const fetchGitHubActivity = async () => {
@@ -76,6 +77,13 @@ export default function ActivityCard() {
 
         const events = await response.json();
 
+        // Debug: Log fetched events
+        console.log('📊 GitHub Events fetched:', events.length);
+        if (events.length > 0) {
+          console.log('📅 Latest event:', events[0].created_at);
+          console.log('📅 Oldest event:', events[events.length - 1].created_at);
+        }
+
         // Process events into daily activity
         const activityMap = new Map<string, number>();
 
@@ -92,12 +100,16 @@ export default function ActivityCard() {
         }
 
         // Count events per day
+        let eventsInRange = 0;
         events.forEach((event: any) => {
           const date = new Date(event.created_at).toISOString().split('T')[0];
           if (activityMap.has(date)) {
             activityMap.set(date, (activityMap.get(date) || 0) + 1);
+            eventsInRange++;
           }
         });
+
+        console.log(`✅ Events in last 12 weeks: ${eventsInRange}/${events.length}`);
 
         // Convert to array format
         const processedData: ActivityDay[] = Array.from(activityMap.entries())
@@ -110,8 +122,10 @@ export default function ActivityCard() {
 
         setActivityData(processedData);
         setIsRealData(true);
+        setDebugInfo(`${eventsInRange} events in range`);
       } catch (error) {
-        console.error('Failed to fetch GitHub activity:', error);
+        console.error('❌ Failed to fetch GitHub activity:', error);
+        setDebugInfo('Using fallback data');
         // Keep fallback data
       } finally {
         setIsLoading(false);
@@ -131,11 +145,17 @@ export default function ActivityCard() {
             <span className="text-teal-400">📊</span>
             GitHub Activity
             {isRealData && (
-              <span className="text-xs text-green-400 ml-1">●</span>
+              <span className="text-xs text-green-400 ml-1" title="Live data from GitHub API">●</span>
+            )}
+            {!isRealData && !isLoading && (
+              <span className="text-xs text-yellow-400 ml-1" title="Using fallback data">○</span>
             )}
           </h3>
           <span className="text-xs text-gray-400">
             {totalActivity} contributions
+            {debugInfo && (
+              <span className="ml-2 text-gray-500" title={debugInfo}>ℹ️</span>
+            )}
           </span>
         </div>
 
