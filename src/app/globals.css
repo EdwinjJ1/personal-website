@@ -1,9 +1,37 @@
 @import "tailwindcss";
 
+:root {
+  --bg-primary: #1a1816;
+  --bg-card: #282622;
+  --text-primary: #c8c0b4;
+  --text-secondary: #9a968e;
+  --text-tertiary: #726e66;
+  --bg-hover: #312e2a;
+  --bg-subtle: #211e1c;
+  --accent-primary: #7a9088;
+  --accent-secondary: #6a8a8e;
+  --border-color: rgba(114, 110, 102, 0.3);
+  --border-hover: rgba(122, 144, 136, 0.5);
+}
+
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-gradient-to-br from-gray-900 to-black text-white;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom text color utilities */
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
 }

@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-br from-gray-900 to-black text-white`} suppressHydrationWarning={true}>
+      <body className={`${inter.className}`} style={{backgroundColor: '#1a1816', color: '#c8c0b4'}} suppressHydrationWarning={true}>
         <ClientRouter />
         <Header />
         {children}

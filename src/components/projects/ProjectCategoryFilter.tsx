@@ -22,11 +22,12 @@ export default function ProjectCategoryFilter({
             type="button"
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`rounded-full border px-4 py-2 text-sm transition-colors ${
+            className={`rounded-full border px-4 py-2 text-sm transition-colors`}
+            style={
               isActive
-                ? 'border-teal-500 bg-teal-500/20 text-teal-200'
-                : 'border-gray-700 text-gray-300 hover:border-teal-500/40 hover:text-white'
-            }`}
+                ? { borderColor: '#7a9088', backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }
+                : { borderColor: 'rgba(114, 110, 102, 0.3)', color: '#9a968e' }
+            }
           >
             {category}
           </button>

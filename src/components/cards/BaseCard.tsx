@@ -30,15 +30,18 @@ export default function BaseCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
+      style={{ 
+        backgroundColor: '#282622',
+        borderColor: 'rgba(114, 110, 102, 0.3)'
+      }}
       className={`
         ${sizeClasses[size]}
-        bg-gray-800/90 backdrop-blur-sm rounded-2xl p-5
-        border border-gray-700/50
-        ${hover ? 'hover:border-teal-500/50 hover:bg-gray-700/90 cursor-pointer' : ''}
-        transition-all duration-300
+        backdrop-blur-sm rounded-2xl p-5
+        border
+        ${hover ? 'transition-all duration-300' : ''}
         ${className}
       `}
-      whileHover={hover ? { scale: 1.02, y: -2 } : {}}
+      whileHover={hover ? { scale: 1.02, y: -2, borderColor: 'rgba(122, 144, 136, 0.5)' } : {}}
     >
       {children}
     </motion.div>

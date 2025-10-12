@@ -9,12 +9,14 @@ export default function LocationCard() {
       <div className="h-full flex flex-col items-center justify-center text-center">
         <div className="relative mb-3">
           <motion.div
-            className="w-16 h-16 bg-gradient-to-br from-blue-500 to-teal-500 rounded-full flex items-center justify-center"
+            className="w-16 h-16 rounded-full flex items-center justify-center"
+            style={{ background: 'linear-gradient(to bottom right, #7a9088, #6a8a8e)' }}
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
             <motion.div
-              className="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center"
+              className="w-12 h-12 rounded-full flex items-center justify-center"
+              style={{ backgroundColor: '#211e1c' }}
               animate={{ rotate: -360 }}
               transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             >
@@ -24,11 +26,11 @@ export default function LocationCard() {
         </div>
 
         <div className="flex items-center gap-2 mb-1.5">
-          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-          <h3 className="text-white font-medium">Sydney, Australia</h3>
+          <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#7a9088' }}></div>
+          <h3 className="font-medium" style={{ color: '#c8c0b4' }}>Sydney, Australia</h3>
         </div>
 
-        <p className="text-gray-400 text-xs">
+        <p className="text-xs" style={{ color: '#726e66' }}>
           UTC+11
         </p>
       </div>

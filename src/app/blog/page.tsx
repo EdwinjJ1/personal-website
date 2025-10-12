@@ -73,7 +73,7 @@ const item = {
 export default function BlogPage() {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-gray-900 text-white pt-20">
+      <div className="min-h-screen pt-20" style={{ color: '#c8c0b4' }}>
         <div className="container mx-auto px-6 py-12">
           <motion.div
             variants={container}
@@ -83,10 +83,10 @@ export default function BlogPage() {
           >
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Blog
               </h1>
-              <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#9a968e' }}>
                 Thoughts on technology, entrepreneurship, and personal growth. 
                 Sharing insights from my journey as a student, developer, and former startup founder.
               </p>
@@ -94,35 +94,37 @@ export default function BlogPage() {
 
             {/* Featured Posts */}
             <motion.div variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8 text-white">Featured Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#c8c0b4' }}>Featured Posts</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {posts.filter(post => post.featured).map((post) => (
                   <motion.article
                     key={post.id}
                     variants={item}
-                    className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 hover:border-teal-500 transition-all duration-300 group cursor-pointer"
+                    className="rounded-xl overflow-hidden border transition-all duration-300 group cursor-pointer"
+                    style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
                   >
                     <div className="p-8">
                       <div className="flex flex-wrap gap-2 mb-4">
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="px-3 py-1 bg-teal-900/30 text-teal-300 text-sm rounded-full border border-teal-500/30"
+                            className="px-3 py-1 text-sm rounded-full border"
+                            style={{ backgroundColor: 'rgba(122, 144, 136, 0.15)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.3)' }}
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
 
-                      <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-teal-300 transition-colors">
+                      <h3 className="text-2xl font-bold mb-4 transition-colors" style={{ color: '#c8c0b4' }}>
                         {post.title}
                       </h3>
 
-                      <p className="text-gray-400 mb-6 line-clamp-3">
+                      <p className="mb-6 line-clamp-3" style={{ color: '#9a968e' }}>
                         {post.excerpt}
                       </p>
 
-                      <div className="flex justify-between items-center text-sm text-gray-500">
+                      <div className="flex justify-between items-center text-sm" style={{ color: '#726e66' }}>
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString('en-US', { 
                             year: 'numeric', 
@@ -140,13 +142,14 @@ export default function BlogPage() {
 
             {/* All Posts */}
             <motion.div variants={item}>
-              <h2 className="text-3xl font-bold mb-8 text-white">All Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#c8c0b4' }}>All Posts</h2>
               <div className="space-y-6">
                 {posts.map((post) => (
                   <motion.article
                     key={post.id}
                     variants={item}
-                    className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-teal-500 transition-all duration-300 group cursor-pointer"
+                    className="rounded-xl p-6 border transition-all duration-300 group cursor-pointer"
+                    style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
                   >
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                       <div className="flex-1">
@@ -154,18 +157,19 @@ export default function BlogPage() {
                           {post.tags.map((tag) => (
                             <span
                               key={tag}
-                              className="px-2 py-1 bg-teal-900/20 text-teal-300 text-xs rounded-full border border-teal-500/20"
+                              className="px-2 py-1 text-xs rounded-full border"
+                              style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.2)' }}
                             >
                               {tag}
                             </span>
                           ))}
                         </div>
 
-                        <h3 className="text-xl font-bold mb-2 text-white group-hover:text-teal-300 transition-colors">
+                        <h3 className="text-xl font-bold mb-2 transition-colors" style={{ color: '#c8c0b4' }}>
                           {post.title}
                         </h3>
 
-                        <p className="text-gray-400 text-sm mb-3">
+                        <p className="text-sm mb-3" style={{ color: '#9a968e' }}>
                           {post.excerpt}
                         </p>
                       </div>
@@ -173,7 +177,8 @@ export default function BlogPage() {
                       <div className="md:text-right md:min-w-0 md:ml-6">
                         <time 
                           dateTime={post.date}
-                          className="block text-sm text-gray-500 mb-1"
+                          className="block text-sm mb-1"
+                          style={{ color: '#726e66' }}
                         >
                           {new Date(post.date).toLocaleDateString('en-US', { 
                             year: 'numeric', 
@@ -181,7 +186,7 @@ export default function BlogPage() {
                             day: 'numeric' 
                           })}
                         </time>
-                        <span className="text-xs text-gray-600">{post.readTime}</span>
+                        <span className="text-xs" style={{ color: '#726e66' }}>{post.readTime}</span>
                       </div>
                     </div>
                   </motion.article>
@@ -191,19 +196,20 @@ export default function BlogPage() {
 
             {/* Newsletter Signup */}
             <motion.div variants={item} className="mt-20">
-              <div className="bg-gradient-to-r from-teal-900/20 to-cyan-900/20 rounded-2xl p-8 border border-teal-500/30">
+              <div className="rounded-2xl p-8 border" style={{ background: 'linear-gradient(to right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4 text-white">Stay Updated</h3>
-                  <p className="text-gray-400 mb-6 max-w-md mx-auto">
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#c8c0b4' }}>Stay Updated</h3>
+                  <p className="mb-6 max-w-md mx-auto" style={{ color: '#9a968e' }}>
                     Get notified when I publish new articles about technology, entrepreneurship, and personal insights.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="flex-1 px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent text-white placeholder-gray-400"
+                      className="flex-1 px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
+                      style={{ backgroundColor: 'rgba(40, 38, 34, 0.6)', borderColor: 'rgba(114, 110, 102, 0.3)', color: '#c8c0b4' }}
                     />
-                    <button className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300">
+                    <button className="px-6 py-3 font-semibold rounded-lg transform hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}>
                       Subscribe
                     </button>
                   </div>

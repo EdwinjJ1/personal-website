@@ -25,7 +25,7 @@ export default function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
       case 'In Development':
         return 'bg-yellow-900/30 text-yellow-300 border-yellow-500/30';
       case 'Coming Soon':
-        return 'bg-blue-900/30 text-blue-300 border-blue-500/30';
+        return 'bg-teal-900/30 text-teal-300 border-teal-500/30';
       default:
         return 'bg-gray-900/30 text-gray-300 border-gray-500/30';
     }
@@ -41,7 +41,7 @@ export default function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
           </span>
         </div>
 
-        <h3 className="text-white font-semibold mb-2 text-sm leading-tight">
+        <h3 className="text-gray-50 font-semibold mb-2 text-sm leading-tight">
           {project.title}
         </h3>
 

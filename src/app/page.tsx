@@ -21,7 +21,7 @@ const orderedProjects = [...projectData.filter((project) => project.featured), .
 export default function Home() {
   return (
     <PageTransition>
-      <div className="min-h-screen bg-gray-900 text-white">
+      <div className="min-h-screen" style={{ color: '#c8c0b4' }}>
         <ClientOnlyParticles />
 
         <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
@@ -60,19 +60,22 @@ export default function Home() {
           >
             <a
               href="/about"
-              className="px-6 py-3 bg-gradient-to-r from-teal-500 to-cyan-500 text-white font-semibold rounded-full hover:from-teal-600 hover:to-cyan-600 transform hover:scale-105 transition-all duration-300"
+              className="px-6 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
+              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
             >
               Learn More About Me
             </a>
             <a
               href="/projects"
-              className="px-6 py-3 border border-teal-500 text-teal-400 font-semibold rounded-full hover:bg-teal-500 hover:text-white transition-all duration-300"
+              className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
+              style={{ borderColor: '#7a9088', color: '#7a9088' }}
             >
               View All Projects
             </a>
             <a
               href="/blog"
-              className="px-6 py-3 border border-gray-500 text-gray-400 font-semibold rounded-full hover:bg-gray-600 hover:text-white transition-all duration-300"
+              className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
+              style={{ borderColor: '#726e66', color: '#9a968e' }}
             >
               Read My Blog
             </a>

@@ -5,10 +5,10 @@ import BaseCard from './BaseCard';
 import type { Project, ProjectStatus } from '@/data/projects';
 
 const statusClasses: Record<ProjectStatus, string> = {
-  Live: 'bg-teal-500/15 text-teal-200 border border-teal-500/30',
-  'In Development': 'bg-amber-500/15 text-amber-200 border border-amber-500/30',
-  Ongoing: 'bg-sky-500/15 text-sky-200 border border-sky-500/30',
-  Archived: 'bg-slate-500/15 text-slate-200 border border-slate-500/30',
+  Live: 'border',
+  'In Development': 'border',
+  Ongoing: 'border',
+  Archived: 'border',
 };
 
 interface TechnicalProjectsCardProps {
@@ -23,11 +23,11 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
     <BaseCard size="md" hover={false} delay={delay} className="md:col-span-2 lg:col-span-4">
       <div className="flex h-full flex-col gap-3.5">
         <div>
-          <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <span className="text-2xl text-teal-300">🛠️</span>
+          <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#c8c0b4' }}>
+            <span className="text-2xl" style={{ color: '#7a9088' }}>🛠️</span>
             Technical Projects
           </h3>
-          <p className="text-sm text-gray-400 mt-1">
+          <p className="text-sm mt-1" style={{ color: '#9a968e' }}>
             A snapshot of the products I am building right now.
           </p>
         </div>
@@ -37,25 +37,27 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
             <Link
               key={project.id}
               href="/projects"
-              className="group flex items-start gap-3 rounded-xl border border-gray-700/60 bg-gray-900/60 p-2 transition-all hover:border-teal-400/40 hover:bg-gray-900"
+              className="group flex items-start gap-3 rounded-xl border p-2 transition-all"
+              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-teal-500/10 text-lg">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg text-lg" style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)' }}>
                 {project.icon ?? '🚀'}
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="text-sm font-semibold text-white group-hover:text-teal-200 transition-colors">
+                  <p className="text-sm font-semibold transition-colors" style={{ color: '#c8c0b4' }}>
                     {project.title}
                   </p>
                   <span
                     className={`whitespace-nowrap rounded-full px-2.5 py-1 text-[10px] uppercase tracking-wide ${
                       statusClasses[project.status]
                     }`}
+                    style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(74, 70, 64, 0.15)', color: '#9a968e' }}
                   >
                     {project.status}
                   </span>
                 </div>
-                <p className="mt-1 text-xs text-gray-400 line-clamp-1">{project.description}</p>
+                <p className="mt-1 text-xs line-clamp-1" style={{ color: '#9a968e' }}>{project.description}</p>
               </div>
             </Link>
           ))}
@@ -63,7 +65,8 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
 
         <Link
           href="/projects"
-          className="inline-flex items-center gap-1 self-end text-xs font-medium text-teal-200 hover:text-teal-100"
+          className="inline-flex items-center gap-1 self-end text-xs font-medium transition-colors"
+          style={{ color: '#7a9088' }}
         >
           See all projects
           <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

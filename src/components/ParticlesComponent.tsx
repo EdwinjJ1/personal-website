@@ -42,13 +42,14 @@ const ParticlesComponent = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none" aria-hidden>
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-black opacity-80"></div>
+      <div className="absolute inset-0 opacity-80" style={{ background: 'linear-gradient(to bottom right, #1a1816, #211e1c, #1a1816)' }}></div>
       
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className={`absolute ${particle.size} bg-white rounded-full opacity-20 animate-pulse`}
+          className={`absolute ${particle.size} rounded-full opacity-20 animate-pulse`}
           style={{
+            backgroundColor: '#c8c0b4',
             left: `${particle.left}%`,
             top: `${particle.top}%`,
             animationDelay: `${particle.delay}s`,

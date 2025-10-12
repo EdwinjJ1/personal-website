@@ -36,14 +36,14 @@ export default function ProjectsPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-gray-900 text-white pt-20">
+      <div className="min-h-screen pt-20" style={{ color: '#c8c0b4' }}>
         <div className="container mx-auto px-6 py-12">
           <motion.div variants={container} initial="hidden" animate="visible" className="max-w-7xl mx-auto">
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-cyan-400 bg-clip-text text-transparent">
+              <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Projects
               </h1>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl max-w-3xl mx-auto" style={{ color: '#9a968e' }}>
                 A collection of the products, experiments, and platforms I am building — from AI automation to production-ready
                 web applications.
               </p>
@@ -58,7 +58,7 @@ export default function ProjectsPage() {
             </motion.div>
 
             <motion.section variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold text-white mb-8">Featured builds</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#c8c0b4' }}>Featured builds</h2>
               <div className="grid gap-8 lg:grid-cols-2">
                 {(featured.length > 0 ? featured : filteredProjects.slice(0, 2)).map((project) => (
                   <ProjectHighlightCard key={project.id} project={project} />
@@ -68,8 +68,8 @@ export default function ProjectsPage() {
 
             <motion.section variants={item}>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <h3 className="text-2xl font-semibold text-white">Project log</h3>
-                <p className="text-sm text-gray-500">
+                <h3 className="text-2xl font-semibold" style={{ color: '#c8c0b4' }}>Project log</h3>
+                <p className="text-sm" style={{ color: '#726e66' }}>
                   Showing {filteredProjects.length} project{filteredProjects.length === 1 ? '' : 's'} in total
                 </p>
               </div>
