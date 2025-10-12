@@ -16,18 +16,18 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
       <div className="flex h-full flex-col gap-3.5">
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#c8c0b4' }}>
+            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
               <span className="text-2xl" style={{ color: '#7a9088' }}>📝</span>
               Latest Writing
             </h3>
-            <p className="text-sm mt-1" style={{ color: '#9a968e' }}>
+            <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
               Brief notes from my blog on engineering, AI, and creative practice.
             </p>
           </div>
           <Link
             href="/blog"
             className="rounded-full border px-3 py-1 text-xs transition-colors"
-            style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#9a968e' }}
+            style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
           >
             View all
           </Link>
@@ -41,16 +41,16 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
               style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
             >
               <div className="flex items-center justify-between gap-3">
-                <h4 className="text-sm font-semibold line-clamp-2" style={{ color: '#c8c0b4' }}>{post.title}</h4>
-                <span className="text-xs whitespace-nowrap" style={{ color: '#726e66' }}>
+                <h4 className="text-sm font-semibold line-clamp-2" style={{ color: '#e0d8cc' }}>{post.title}</h4>
+                <span className="text-xs whitespace-nowrap" style={{ color: '#8a8680' }}>
                   {new Date(post.date).toLocaleDateString('en-US', {
                     month: 'short',
                     day: 'numeric',
                   })}
                 </span>
               </div>
-              <p className="mt-2 text-xs line-clamp-2" style={{ color: '#9a968e' }}>{post.excerpt}</p>
-              <div className="mt-2 flex items-center justify-between text-[11px]" style={{ color: '#726e66' }}>
+              <p className="mt-2 text-xs line-clamp-2" style={{ color: '#b8b4aa' }}>{post.excerpt}</p>
+              <div className="mt-2 flex items-center justify-between text-[11px]" style={{ color: '#8a8680' }}>
                 <span>{post.tags[0] ?? 'Update'}</span>
                 <span>{post.readTime}</span>
               </div>

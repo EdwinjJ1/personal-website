@@ -21,7 +21,7 @@ const orderedProjects = [...projectData.filter((project) => project.featured), .
 export default function Home() {
   return (
     <PageTransition>
-      <div className="min-h-screen" style={{ color: '#c8c0b4' }}>
+      <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
         <ClientOnlyParticles />
 
         <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
@@ -61,7 +61,7 @@ export default function Home() {
             <a
               href="/about"
               className="px-6 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
-              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
+              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
             >
               Learn More About Me
             </a>
@@ -75,7 +75,7 @@ export default function Home() {
             <a
               href="/blog"
               className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
-              style={{ borderColor: '#726e66', color: '#9a968e' }}
+              style={{ borderColor: '#8a8680', color: '#b8b4aa' }}
             >
               Read My Blog
             </a>

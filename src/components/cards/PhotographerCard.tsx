@@ -35,15 +35,15 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
       <div className="flex h-full flex-col gap-3.5">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#c8c0b4' }}>
+            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
               <span className="text-2xl" style={{ color: '#7a9088' }}>📷</span>
               Photographer Notes
             </h3>
-            <p className="text-sm mt-0.5" style={{ color: '#9a968e' }}>
+            <p className="text-sm mt-0.5" style={{ color: '#b8b4aa' }}>
               Favourite frames from recent shoots when I trade the keyboard for a camera.
             </p>
           </div>
-          <span className="rounded-full border px-3 py-1 text-xs" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#9a968e' }}>
+          <span className="rounded-full border px-3 py-1 text-xs" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}>
             Side Project
           </span>
         </div>
@@ -59,11 +59,11 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
             <div className="absolute bottom-3 left-3 space-y-1">
-              <p className="text-sm font-semibold flex.items-center gap-2" style={{ color: '#c8c0b4' }}>
+              <p className="text-sm font-semibold flex.items-center gap-2" style={{ color: '#e0d8cc' }}>
                 <span style={{ color: '#7a9088' }}>{highlight.location}</span>
                 · {highlight.title}
               </p>
-              <p className="text-xs" style={{ color: '#9a968e' }}>{highlight.mood}</p>
+              <p className="text-xs" style={{ color: '#b8b4aa' }}>{highlight.mood}</p>
             </div>
           </div>
 
@@ -77,8 +77,8 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
               }}
             >
               <p className="text-lg">{set.icon}</p>
-              <p className="mt-2 text-sm font-semibold" style={{ color: '#c8c0b4' }}>{set.title}</p>
-              <p className="text-xs leading-relaxed" style={{ color: '#9a968e' }}>{set.subtitle}</p>
+              <p className="mt-2 text-sm font-semibold" style={{ color: '#e0d8cc' }}>{set.title}</p>
+              <p className="text-xs leading-relaxed" style={{ color: '#b8b4aa' }}>{set.subtitle}</p>
             </div>
           ))}
         </div>
@@ -87,7 +87,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           <a
             href="mailto:jiaedwin0605@gmail.com"
             className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold transition-transform hover:scale-105"
-            style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
+            style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
           >
             Book a shoot
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,7 +97,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           <a
             href="/photography"
             className="inline-flex items-center gap-1 transition-colors"
-            style={{ color: '#9a968e' }}
+            style={{ color: '#b8b4aa' }}
           >
             View Portfolio
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

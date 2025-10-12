@@ -27,10 +27,10 @@ export default function LocationCard() {
 
         <div className="flex items-center gap-2 mb-1.5">
           <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#7a9088' }}></div>
-          <h3 className="font-medium" style={{ color: '#c8c0b4' }}>Sydney, Australia</h3>
+          <h3 className="font-medium" style={{ color: '#e0d8cc' }}>Sydney, Australia</h3>
         </div>
 
-        <p className="text-xs" style={{ color: '#726e66' }}>
+        <p className="text-xs" style={{ color: '#8a8680' }}>
           UTC+11
         </p>
       </div>

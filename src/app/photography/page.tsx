@@ -99,7 +99,7 @@ export default function PhotographyPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen py-24 px-4" style={{ backgroundColor: '#1a1816', color: '#c8c0b4' }}>
+      <div className="min-h-screen py-24 px-4" style={{ backgroundColor: '#1a1816', color: '#e0d8cc' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -111,7 +111,7 @@ export default function PhotographyPage() {
             <h1 className="text-5xl font-bold mb-4" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
               Photography Portfolio
             </h1>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#9a968e' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
               Capturing moments when I trade the keyboard for a camera. 
               Exploring Sydney through light, composition, and storytelling.
             </p>
@@ -131,8 +131,8 @@ export default function PhotographyPage() {
                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300`}
                 style={
                   selectedCategory === category
-                    ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }
-                    : { backgroundColor: '#282622', color: '#9a968e' }
+                    ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }
+                    : { backgroundColor: '#282622', color: '#b8b4aa' }
                 }
               >
                 {category}
@@ -159,13 +159,13 @@ export default function PhotographyPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <h3 className="text-xl font-bold mb-1" style={{ color: '#c8c0b4' }}>{photo.title}</h3>
-                    <p className="text-sm mb-2" style={{ color: '#9a968e' }}>{photo.location}</p>
+                    <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>{photo.title}</h3>
+                    <p className="text-sm mb-2" style={{ color: '#b8b4aa' }}>{photo.location}</p>
                     <div className="flex items-center gap-2">
                       <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }}>
                         {photo.category}
                       </span>
-                      <span className="text-xs" style={{ color: '#9a968e' }}>{photo.date}</span>
+                      <span className="text-xs" style={{ color: '#b8b4aa' }}>{photo.date}</span>
                     </div>
                   </div>
                 </div>
@@ -200,29 +200,29 @@ export default function PhotographyPage() {
                     />
                   </div>
                   <div className="p-8">
-                    <h2 className="text-3xl font-bold mb-2" style={{ color: '#c8c0b4' }}>{selectedPhoto.title}</h2>
+                    <h2 className="text-3xl font-bold mb-2" style={{ color: '#e0d8cc' }}>{selectedPhoto.title}</h2>
                     <p className="mb-4" style={{ color: '#7a9088' }}>{selectedPhoto.location}</p>
-                    <p className="mb-6" style={{ color: '#9a968e' }}>{selectedPhoto.description}</p>
+                    <p className="mb-6" style={{ color: '#b8b4aa' }}>{selectedPhoto.description}</p>
                     
                     <div className="space-y-3 mb-6">
                       <div className="flex items-center gap-2">
-                        <span style={{ color: '#9a968e' }}>Category:</span>
-                        <span style={{ color: '#c8c0b4' }}>{selectedPhoto.category}</span>
+                        <span style={{ color: '#b8b4aa' }}>Category:</span>
+                        <span style={{ color: '#e0d8cc' }}>{selectedPhoto.category}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span style={{ color: '#9a968e' }}>Date:</span>
-                        <span style={{ color: '#c8c0b4' }}>{selectedPhoto.date}</span>
+                        <span style={{ color: '#b8b4aa' }}>Date:</span>
+                        <span style={{ color: '#e0d8cc' }}>{selectedPhoto.date}</span>
                       </div>
                       {selectedPhoto.camera && (
                         <div className="flex items-center gap-2">
-                          <span style={{ color: '#9a968e' }}>Camera:</span>
-                          <span style={{ color: '#c8c0b4' }}>{selectedPhoto.camera}</span>
+                          <span style={{ color: '#b8b4aa' }}>Camera:</span>
+                          <span style={{ color: '#e0d8cc' }}>{selectedPhoto.camera}</span>
                         </div>
                       )}
                       {selectedPhoto.settings && (
                         <div className="flex items-center gap-2">
-                          <span style={{ color: '#9a968e' }}>Settings:</span>
-                          <span style={{ color: '#c8c0b4' }}>{selectedPhoto.settings}</span>
+                          <span style={{ color: '#b8b4aa' }}>Settings:</span>
+                          <span style={{ color: '#e0d8cc' }}>{selectedPhoto.settings}</span>
                         </div>
                       )}
                     </div>
@@ -230,7 +230,7 @@ export default function PhotographyPage() {
                     <button
                       onClick={() => setSelectedPhoto(null)}
                       className="w-full px-6 py-3 font-semibold rounded-full transition-all duration-300"
-                      style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
+                      style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
                     >
                       Close
                     </button>
@@ -247,14 +247,14 @@ export default function PhotographyPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16 text-center"
           >
-            <h2 className="text-2xl font-bold mb-4" style={{ color: '#c8c0b4' }}>Interested in a photoshoot?</h2>
-            <p className="mb-6" style={{ color: '#9a968e' }}>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>Interested in a photoshoot?</h2>
+            <p className="mb-6" style={{ color: '#b8b4aa' }}>
               Available for portrait sessions, event photography, and creative collaborations in Sydney.
             </p>
             <a
               href="mailto:jiaedwin0605@gmail.com"
               className="inline-block px-8 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
-              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
+              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
             >
               Get in Touch
             </a>

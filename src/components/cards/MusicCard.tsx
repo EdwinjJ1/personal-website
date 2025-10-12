@@ -46,7 +46,7 @@ export default function MusicCard() {
             🎵
           </motion.div>
           <div>
-            <h3 className="font-semibold text-sm" style={{ color: '#c8c0b4' }}>Now Playing</h3>
+            <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>Now Playing</h3>
             <div className="flex items-center gap-2">
               <motion.div
                 animate={{ opacity: [1, 0.5, 1] }}
@@ -66,13 +66,13 @@ export default function MusicCard() {
                 {currentTrack.albumArt}
               </div>
               <div className="flex-grow min-w-0">
-                <h4 className="font-medium text-sm truncate" style={{ color: '#c8c0b4' }}>
+                <h4 className="font-medium text-sm truncate" style={{ color: '#e0d8cc' }}>
                   {currentTrack.title}
                 </h4>
-                <p className="text-xs truncate" style={{ color: '#9a968e' }}>
+                <p className="text-xs truncate" style={{ color: '#b8b4aa' }}>
                   by {currentTrack.artist}
                 </p>
-                <p className="text-xs truncate" style={{ color: '#726e66' }}>
+                <p className="text-xs truncate" style={{ color: '#8a8680' }}>
                   {currentTrack.album}
                 </p>
               </div>
@@ -90,7 +90,7 @@ export default function MusicCard() {
                 transition={{ duration: 0.5 }}
               />
             </div>
-            <div className="flex justify-between text-xs" style={{ color: '#726e66' }}>
+            <div className="flex justify-between text-xs" style={{ color: '#8a8680' }}>
               <span>2:45</span>
               <span>5:55</span>
             </div>

@@ -1,7 +1,42 @@
 'use client';
 
 import Link from 'next/link';
-import type { Project } from '@/data/projects';
+import type { Project, ProjectStatus } from '@/data/projects';
+
+const getStatusStyle = (status: ProjectStatus) => {
+  switch (status) {
+    case 'Live':
+      return {
+        borderColor: 'rgba(45, 212, 191, 0.3)',
+        backgroundColor: 'rgba(20, 184, 166, 0.15)',
+        color: '#5eead4'
+      };
+    case 'In Development':
+      return {
+        borderColor: 'rgba(251, 191, 36, 0.3)',
+        backgroundColor: 'rgba(245, 158, 11, 0.15)',
+        color: '#fbbf24'
+      };
+    case 'Ongoing':
+      return {
+        borderColor: 'rgba(96, 165, 250, 0.3)',
+        backgroundColor: 'rgba(59, 130, 246, 0.15)',
+        color: '#93c5fd'
+      };
+    case 'Archived':
+      return {
+        borderColor: 'rgba(148, 163, 184, 0.3)',
+        backgroundColor: 'rgba(100, 116, 139, 0.15)',
+        color: '#94a3b8'
+      };
+    default:
+      return {
+        borderColor: 'rgba(114, 110, 102, 0.3)',
+        backgroundColor: 'rgba(74, 70, 64, 0.15)',
+        color: '#b8b4aa'
+      };
+  }
+};
 
 interface ProjectHighlightCardProps {
   project: Project;
@@ -19,26 +54,26 @@ export default function ProjectHighlightCard({ project }: ProjectHighlightCardPr
           <span className="rounded-full border px-3 py-1 text-xs font-semibold" style={{ borderColor: 'rgba(122, 144, 136, 0.3)', backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088' }}>
             {project.category}
           </span>
-          <span className="rounded-full border px-3 py-1 text-xs" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(74, 70, 64, 0.3)', color: '#9a968e' }}>
+          <span className="rounded-full border px-3 py-1 text-xs" style={getStatusStyle(project.status)}>
             {project.status}
           </span>
         </div>
 
         <div>
-          <h3 className="text-2xl font-bold" style={{ color: '#c8c0b4' }}>{project.title}</h3>
-          <p className="mt-3 text-sm leading-relaxed" style={{ color: '#9a968e' }}>{project.longDescription}</p>
+          <h3 className="text-2xl font-bold" style={{ color: '#e0d8cc' }}>{project.title}</h3>
+          <p className="mt-3 text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{project.longDescription}</p>
         </div>
 
         <div className="flex flex-wrap gap-2 text-xs">
           {project.technologies.slice(0, 6).map((tech) => (
-            <span key={`${project.id}-${tech}`} className="rounded-full border px-3 py-1" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#9a968e' }}>
+            <span key={`${project.id}-${tech}`} className="rounded-full border px-3 py-1" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}>
               {tech}
             </span>
           ))}
         </div>
 
         <div className="mt-auto flex items-center justify-between text-sm">
-          <div className="flex flex-wrap gap-2" style={{ color: '#9a968e' }}>
+          <div className="flex flex-wrap gap-2" style={{ color: '#b8b4aa' }}>
             {project.highlights.slice(0, 3).map((highlight) => (
               <span key={highlight} className="rounded-full border px-3 py-1 text-xs" style={{ borderColor: 'rgba(114, 110, 102, 0.3)' }}>
                 {highlight}
@@ -51,7 +86,7 @@ export default function ProjectHighlightCard({ project }: ProjectHighlightCardPr
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold hover:scale-105 transition-transform"
-              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}
+              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
             >
               View live
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,7 +97,7 @@ export default function ProjectHighlightCard({ project }: ProjectHighlightCardPr
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm transition-colors"
-              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#9a968e' }}
+              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
             >
               Request demo
             </Link>

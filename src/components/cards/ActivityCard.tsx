@@ -37,10 +37,10 @@ const buildFallbackActivityData = (): ActivityDay[] => {
 const getActivityColor = (level: number) => {
   const colors = [
     'bg-[#312e2a]', // 0 - no activity
-    'bg-[#4a4640]/40', // 1 - low
-    'bg-[#5a5650]/60', // 2 - medium
-    'bg-[#7a7670]/80', // 3 - high
-    'bg-[#7a9088]' // 4 - very high
+    'bg-teal-900/40', // 1 - low
+    'bg-teal-700/60', // 2 - medium
+    'bg-teal-500/80', // 3 - high
+    'bg-teal-400' // 4 - very high
   ];
   return colors[level];
 };
@@ -151,11 +151,11 @@ export default function ActivityCard() {
       <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
         <div className="h-full">
           <div className="flex justify-between items-center mb-3">
-            <h3 className="font-semibold flex items-center gap-2" style={{ color: '#c8c0b4' }}>
-              <span style={{ color: '#7a9088' }}>📊</span>
+            <h3 className="font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
+              <span className="text-teal-400">📊</span>
               GitHub Activity
             </h3>
-            <span className="text-xs" style={{ color: '#9a968e' }}>
+            <span className="text-xs" style={{ color: '#b8b4aa' }}>
               Loading...
             </span>
           </div>
@@ -167,7 +167,7 @@ export default function ActivityCard() {
               />
             ))}
           </div>
-          <div className="flex justify-between items-center text-xs" style={{ color: '#726e66' }}>
+          <div className="flex justify-between items-center text-xs" style={{ color: '#8a8680' }}>
             <span>Less</span>
             <div className="flex gap-1">
               {[0, 1, 2, 3, 4].map((level) => (
@@ -188,20 +188,20 @@ export default function ActivityCard() {
     <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
       <div className="h-full">
         <div className="flex justify-between items-center mb-3">
-          <h3 className="font-semibold flex items-center gap-2" style={{ color: '#c8c0b4' }}>
-            <span style={{ color: '#7a9088' }}>📊</span>
+          <h3 className="font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
+            <span className="text-teal-400">📊</span>
             GitHub Activity
             {isRealData && (
-              <span className="text-xs ml-1" style={{ color: '#7a9088' }} title="Live data from GitHub API">●</span>
+              <span className="text-xs text-green-400 ml-1" title="Live data from GitHub API">●</span>
             )}
             {!isRealData && !isLoading && (
-              <span className="text-xs ml-1" style={{ color: '#9a8870' }} title="Using fallback data">○</span>
+              <span className="text-xs text-yellow-400 ml-1" title="Using fallback data">○</span>
             )}
           </h3>
-          <span className="text-xs" style={{ color: '#9a968e' }}>
+          <span className="text-xs" style={{ color: '#b8b4aa' }}>
             {totalActivity} contributions
             {debugInfo && (
-              <span className="ml-2" style={{ color: '#726e66' }} title={debugInfo}>ℹ️</span>
+              <span className="ml-2" style={{ color: '#8a8680' }} title={debugInfo}>ℹ️</span>
             )}
           </span>
         </div>
@@ -214,18 +214,17 @@ export default function ActivityCard() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.6 + index * 0.005 }}
               className={`aspect-square rounded-sm ${getActivityColor(day.activity)}
-                hover:ring-1 cursor-pointer relative group`}
-              style={{ '--tw-ring-color': '#7a9088' } as React.CSSProperties}
+                hover:ring-1 hover:ring-teal-400 cursor-pointer relative group`}
               title={`${day.count} contributions on ${day.date}`}
             >
-              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10" style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', color: '#c8c0b4' }}>
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10" style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', color: '#e0d8cc' }}>
                 {day.count} contributions
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="flex justify-between items-center text-xs" style={{ color: '#726e66' }}>
+        <div className="flex justify-between items-center text-xs" style={{ color: '#8a8680' }}>
           <span>Less</span>
           <div className="flex gap-1">
             {[0, 1, 2, 3, 4].map((level) => (

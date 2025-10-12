@@ -49,7 +49,7 @@ const ParticlesComponent = () => {
           key={particle.id}
           className={`absolute ${particle.size} rounded-full opacity-20 animate-pulse`}
           style={{
-            backgroundColor: '#c8c0b4',
+            backgroundColor: '#e0d8cc',
             left: `${particle.left}%`,
             top: `${particle.top}%`,
             animationDelay: `${particle.delay}s`,

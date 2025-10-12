@@ -3,9 +3,9 @@
 :root {
   --bg-primary: #1a1816;
   --bg-card: #282622;
-  --text-primary: #c8c0b4;
-  --text-secondary: #9a968e;
-  --text-tertiary: #726e66;
+  --text-primary: #e0d8cc;
+  --text-secondary: #b8b4aa;
+  --text-tertiary: #8a8680;
   --bg-hover: #312e2a;
   --bg-subtle: #211e1c;
   --accent-primary: #7a9088;
@@ -34,4 +34,17 @@ body {
 
 .text-tertiary {
   color: var(--text-tertiary);
+}
+
+/* Placeholder styles */
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-tertiary);
+  opacity: 1;
+}
+
+/* Focus ring colors */
+input:focus,
+textarea:focus {
+  --tw-ring-color: #7a9088;
 }

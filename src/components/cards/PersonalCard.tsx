@@ -10,12 +10,12 @@ export default function PersonalCard() {
         <div className="flex items-center gap-3 mb-3">
           <Avatar size="sm" />
           <div>
-            <h1 className="text-2xl font-bold" style={{ color: '#c8c0b4' }}>Evan Lin</h1>
+            <h1 className="text-2xl font-bold" style={{ color: '#e0d8cc' }}>Evan Lin</h1>
             <p className="text-sm" style={{ color: '#7a9088' }}>Computer Science Student</p>
           </div>
         </div>
 
-        <p className="text-sm leading-relaxed flex-grow" style={{ color: '#9a968e' }}>
+        <p className="text-sm leading-relaxed flex-grow" style={{ color: '#b8b4aa' }}>
           19-year-old CS student at UNSW Sydney with a passion for AI and innovation.
           Former startup founder turned student, dedicated to building technology that makes a meaningful impact.
         </p>

@@ -73,7 +73,7 @@ const item = {
 export default function BlogPage() {
   return (
     <PageTransition>
-      <div className="min-h-screen pt-20" style={{ color: '#c8c0b4' }}>
+      <div className="min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
         <div className="container mx-auto px-6 py-12">
           <motion.div
             variants={container}
@@ -86,7 +86,7 @@ export default function BlogPage() {
               <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Blog
               </h1>
-              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#9a968e' }}>
+              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
                 Thoughts on technology, entrepreneurship, and personal growth. 
                 Sharing insights from my journey as a student, developer, and former startup founder.
               </p>
@@ -94,7 +94,7 @@ export default function BlogPage() {
 
             {/* Featured Posts */}
             <motion.div variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#c8c0b4' }}>Featured Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>Featured Posts</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {posts.filter(post => post.featured).map((post) => (
                   <motion.article
@@ -116,15 +116,15 @@ export default function BlogPage() {
                         ))}
                       </div>
 
-                      <h3 className="text-2xl font-bold mb-4 transition-colors" style={{ color: '#c8c0b4' }}>
+                      <h3 className="text-2xl font-bold mb-4 transition-colors" style={{ color: '#e0d8cc' }}>
                         {post.title}
                       </h3>
 
-                      <p className="mb-6 line-clamp-3" style={{ color: '#9a968e' }}>
+                      <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
                         {post.excerpt}
                       </p>
 
-                      <div className="flex justify-between items-center text-sm" style={{ color: '#726e66' }}>
+                      <div className="flex justify-between items-center text-sm" style={{ color: '#8a8680' }}>
                         <time dateTime={post.date}>
                           {new Date(post.date).toLocaleDateString('en-US', { 
                             year: 'numeric', 
@@ -142,7 +142,7 @@ export default function BlogPage() {
 
             {/* All Posts */}
             <motion.div variants={item}>
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#c8c0b4' }}>All Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>All Posts</h2>
               <div className="space-y-6">
                 {posts.map((post) => (
                   <motion.article
@@ -165,11 +165,11 @@ export default function BlogPage() {
                           ))}
                         </div>
 
-                        <h3 className="text-xl font-bold mb-2 transition-colors" style={{ color: '#c8c0b4' }}>
+                        <h3 className="text-xl font-bold mb-2 transition-colors" style={{ color: '#e0d8cc' }}>
                           {post.title}
                         </h3>
 
-                        <p className="text-sm mb-3" style={{ color: '#9a968e' }}>
+                        <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
                           {post.excerpt}
                         </p>
                       </div>
@@ -178,7 +178,7 @@ export default function BlogPage() {
                         <time 
                           dateTime={post.date}
                           className="block text-sm mb-1"
-                          style={{ color: '#726e66' }}
+                          style={{ color: '#8a8680' }}
                         >
                           {new Date(post.date).toLocaleDateString('en-US', { 
                             year: 'numeric', 
@@ -186,7 +186,7 @@ export default function BlogPage() {
                             day: 'numeric' 
                           })}
                         </time>
-                        <span className="text-xs" style={{ color: '#726e66' }}>{post.readTime}</span>
+                        <span className="text-xs" style={{ color: '#8a8680' }}>{post.readTime}</span>
                       </div>
                     </div>
                   </motion.article>
@@ -198,8 +198,8 @@ export default function BlogPage() {
             <motion.div variants={item} className="mt-20">
               <div className="rounded-2xl p-8 border" style={{ background: 'linear-gradient(to right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#c8c0b4' }}>Stay Updated</h3>
-                  <p className="mb-6 max-w-md mx-auto" style={{ color: '#9a968e' }}>
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>Stay Updated</h3>
+                  <p className="mb-6 max-w-md mx-auto" style={{ color: '#b8b4aa' }}>
                     Get notified when I publish new articles about technology, entrepreneurship, and personal insights.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
@@ -207,9 +207,9 @@ export default function BlogPage() {
                       type="email"
                       placeholder="Enter your email"
                       className="flex-1 px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent"
-                      style={{ backgroundColor: 'rgba(40, 38, 34, 0.6)', borderColor: 'rgba(114, 110, 102, 0.3)', color: '#c8c0b4' }}
+                      style={{ backgroundColor: 'rgba(40, 38, 34, 0.6)', borderColor: 'rgba(114, 110, 102, 0.3)', color: '#e0d8cc' }}
                     />
-                    <button className="px-6 py-3 font-semibold rounded-lg transform hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#c8c0b4' }}>
+                    <button className="px-6 py-3 font-semibold rounded-lg transform hover:scale-105 transition-all duration-300" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}>
                       Subscribe
                     </button>
                   </div>

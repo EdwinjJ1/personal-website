@@ -19,7 +19,7 @@ export default function SkillsCard() {
   return (
     <BaseCard size="md" delay={0.3} className="lg:col-span-6">
       <div className="h-full">
-        <h3 className="font-semibold mb-3 flex items-center gap-2" style={{ color: '#c8c0b4' }}>
+        <h3 className="font-semibold mb-3 flex items-center gap-2" style={{ color: '#e0d8cc' }}>
           <span style={{ color: '#9a8870' }}>⚡</span>
           Tech Stack
         </h3>
@@ -38,7 +38,7 @@ export default function SkillsCard() {
               <div className={`text-2xl mb-1 ${skill.color}`}>
                 {skill.icon}
               </div>
-              <span className="text-xs text-center" style={{ color: '#726e66' }}>
+              <span className="text-xs text-center" style={{ color: '#8a8680' }}>
                 {skill.name}
               </span>
             </motion.div>
