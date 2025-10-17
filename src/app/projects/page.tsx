@@ -7,6 +7,7 @@ import { projects, projectCategories } from '@/data/projects';
 import ProjectCategoryFilter from '@/components/projects/ProjectCategoryFilter';
 import ProjectHighlightCard from '@/components/projects/ProjectHighlightCard';
 import ProjectListItem from '@/components/projects/ProjectListItem';
+import GradientText from '@/components/GradientText';
 
 const container = {
   hidden: { opacity: 0 },
@@ -40,8 +41,14 @@ export default function ProjectsPage() {
         <div className="container mx-auto px-6 py-12">
           <motion.div variants={container} initial="hidden" animate="visible" className="max-w-7xl mx-auto">
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Projects
+              <h1 className="text-5xl font-bold mb-6">
+                <GradientText
+                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                  animationSpeed={6}
+                  showBorder={false}
+                >
+                  Projects
+                </GradientText>
               </h1>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: '#b8b4aa' }}>
                 A collection of the products, experiments, and platforms I am building — from AI automation to production-ready

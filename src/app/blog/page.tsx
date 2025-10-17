@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
+import GradientText from '@/components/GradientText';
 
 const posts = [
   {
@@ -83,11 +84,17 @@ export default function BlogPage() {
           >
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                Blog
+              <h1 className="text-5xl font-bold mb-6">
+                <GradientText
+                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                  animationSpeed={6}
+                  showBorder={false}
+                >
+                  Blog
+                </GradientText>
               </h1>
               <p className="text-xl max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
-                Thoughts on technology, entrepreneurship, and personal growth. 
+                Thoughts on technology, entrepreneurship, and personal growth.
                 Sharing insights from my journey as a student, developer, and former startup founder.
               </p>
             </motion.div>

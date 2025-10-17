@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
+import GradientText from '@/components/GradientText';
 
 const skills = [
   {
@@ -130,11 +131,17 @@ export default function AboutPage() {
           >
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-                About Me
+              <h1 className="text-5xl font-bold mb-6">
+                <GradientText
+                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                  animationSpeed={6}
+                  showBorder={false}
+                >
+                  About Me
+                </GradientText>
               </h1>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: '#b8b4aa' }}>
-                A passionate Computer Science student, former startup founder, and aspiring technologist 
+                A passionate Computer Science student, former startup founder, and aspiring technologist
                 dedicated to building innovative solutions and making a positive impact through technology.
               </p>
             </motion.div>

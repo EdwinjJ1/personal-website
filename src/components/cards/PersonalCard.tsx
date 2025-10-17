@@ -2,6 +2,7 @@
 
 import BaseCard from './BaseCard';
 import Avatar from '../Avatar';
+import FuzzyText from '../FuzzyText';
 
 export default function PersonalCard() {
   return (
@@ -10,8 +11,20 @@ export default function PersonalCard() {
         <div className="flex items-center gap-3 mb-3">
           <Avatar size="sm" />
           <div>
-            <h1 className="text-2xl font-bold" style={{ color: '#e0d8cc' }}>Evan Lin</h1>
-            <p className="text-sm" style={{ color: '#7a9088' }}>Computer Science Student</p>
+            <h1 className="text-2xl font-bold">
+              <FuzzyText
+                baseIntensity={0.08}
+                hoverIntensity={0.25}
+                enableHover={true}
+                color='#7a9088'
+                fontSize="1.5rem"
+              >
+                Evan Lin
+              </FuzzyText>
+            </h1>
+            <p className="text-sm" style={{ color: '#7a9088' }}>
+              Computer Science Student
+            </p>
           </div>
         </div>
 
