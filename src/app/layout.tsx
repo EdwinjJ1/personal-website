@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className}`} style={{backgroundColor: '#1a1816', color: '#e0d8cc'}} suppressHydrationWarning={true}>
         <ClientRouter />
         <Header />

@@ -70,26 +70,50 @@ export default function ActivityCard() {
     const fetchGitHubActivity = async () => {
       try {
         const username = 'EdwinJia1';
-        const response = await fetch(
-          `https://api.github.com/users/${username}/events/public?per_page=100`,
-          {
-            headers: {
-              'Accept': 'application/vnd.github.v3+json',
-            }
-          }
-        );
 
-        if (!response.ok) {
-          throw new Error(`GitHub API error: ${response.status}`);
+        // Fetch multiple pages to get more events
+        let allEvents: any[] = [];
+        let page = 1;
+        const maxPages = 3; // Fetch up to 300 events (100 per page)
+
+        console.log('🔄 Fetching GitHub activity for:', username);
+
+        while (page <= maxPages) {
+          const response = await fetch(
+            `https://api.github.com/users/${username}/events/public?per_page=100&page=${page}`,
+            {
+              headers: {
+                'Accept': 'application/vnd.github.v3+json',
+              }
+            }
+          );
+
+          if (!response.ok) {
+            throw new Error(`GitHub API error: ${response.status}`);
+          }
+
+          const events = await response.json();
+
+          if (events.length === 0) {
+            break; // No more events
+          }
+
+          allEvents = [...allEvents, ...events];
+          page++;
         }
 
-        const events = await response.json();
-
         // Debug: Log fetched events
-        console.log('📊 GitHub Events fetched:', events.length);
-        if (events.length > 0) {
-          console.log('📅 Latest event:', events[0].created_at);
-          console.log('📅 Oldest event:', events[events.length - 1].created_at);
+        console.log('📊 Total GitHub Events fetched:', allEvents.length);
+        if (allEvents.length > 0) {
+          console.log('📅 Latest event:', allEvents[0].created_at, '-', allEvents[0].type);
+          console.log('📅 Oldest event:', allEvents[allEvents.length - 1].created_at);
+
+          // Log event types
+          const eventTypes = allEvents.reduce((acc: any, event: any) => {
+            acc[event.type] = (acc[event.type] || 0) + 1;
+            return acc;
+          }, {});
+          console.log('📋 Event types:', eventTypes);
         }
 
         // Process events into daily activity
@@ -109,15 +133,19 @@ export default function ActivityCard() {
 
         // Count events per day
         let eventsInRange = 0;
-        events.forEach((event: any) => {
+        const eventsByDate: { [key: string]: number } = {};
+
+        allEvents.forEach((event: any) => {
           const date = new Date(event.created_at).toISOString().split('T')[0];
           if (activityMap.has(date)) {
             activityMap.set(date, (activityMap.get(date) || 0) + 1);
+            eventsByDate[date] = (eventsByDate[date] || 0) + 1;
             eventsInRange++;
           }
         });
 
-        console.log(`✅ Events in last 12 weeks: ${eventsInRange}/${events.length}`);
+        console.log(`✅ Events in last 12 weeks: ${eventsInRange}/${allEvents.length}`);
+        console.log('📊 Events by date:', Object.entries(eventsByDate).sort().slice(-10));
 
         // Convert to array format
         const processedData: ActivityDay[] = Array.from(activityMap.entries())
@@ -130,7 +158,7 @@ export default function ActivityCard() {
 
         setActivityData(processedData);
         setIsRealData(true);
-        setDebugInfo(`${eventsInRange} events in range`);
+        setDebugInfo(`${eventsInRange} events`);
       } catch (error) {
         console.error('❌ Failed to fetch GitHub activity:', error);
         setDebugInfo('Using fallback data');
@@ -200,8 +228,14 @@ export default function ActivityCard() {
           </h3>
           <span className="text-xs" style={{ color: '#b8b4aa' }}>
             {totalActivity} contributions
-            {debugInfo && (
-              <span className="ml-2" style={{ color: '#8a8680' }} title={debugInfo}>ℹ️</span>
+            {isRealData && (
+              <span
+                className="ml-2"
+                style={{ color: '#8a8680' }}
+                title={`${debugInfo} from GitHub API (last 90 days of public activity)`}
+              >
+                ℹ️
+              </span>
             )}
           </span>
         </div>

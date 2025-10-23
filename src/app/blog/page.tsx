@@ -1,62 +1,14 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
+import { getEnglishPosts } from '@/data/blogPosts';
 
-const posts = [
-  {
-    id: 1,
-    title: "Building AI-Powered Personal Assistants",
-    excerpt: "Exploring Claude MCP servers and how they can revolutionize personal productivity workflows. This deep dive covers the implementation details, challenges faced, and future possibilities.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...",
-    date: "2024-03-15",
-    readTime: "5 min read",
-    tags: ["AI", "Productivity", "Claude", "MCP"],
-    featured: true
-  },
-  {
-    id: 2,
-    title: "From Startup to Student: My Entrepreneurial Journey",
-    excerpt: "Lessons learned from founding a startup at 18 and transitioning to university life. A candid reflection on challenges, failures, and growth.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    date: "2024-02-28",
-    readTime: "8 min read",
-    tags: ["Entrepreneurship", "Personal", "Startup"],
-    featured: true
-  },
-  {
-    id: 3,
-    title: "Next.js 15 and the Future of React Development",
-    excerpt: "Deep dive into the latest features and how they improve developer experience. Performance improvements, new APIs, and migration strategies.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    date: "2024-02-10",
-    readTime: "6 min read",
-    tags: ["React", "Next.js", "Web Dev"],
-    featured: false
-  },
-  {
-    id: 4,
-    title: "Machine Learning in Production: Lessons Learned",
-    excerpt: "Real-world experiences deploying ML models at scale. From prototype to production, covering monitoring, versioning, and performance optimization.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    date: "2024-01-22",
-    readTime: "10 min read",
-    tags: ["Machine Learning", "DevOps", "Python"],
-    featured: false
-  },
-  {
-    id: 5,
-    title: "The Evolution of Personal Knowledge Management",
-    excerpt: "How digital tools are reshaping how we capture, organize, and retrieve information. From note-taking apps to AI-powered systems.",
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    date: "2024-01-08",
-    readTime: "7 min read",
-    tags: ["Productivity", "Tools", "Knowledge Management"],
-    featured: false
-  }
-];
+// Get only English posts for display
+const posts = getEnglishPosts();
 
 const container = {
   hidden: { opacity: 0 },
@@ -104,45 +56,46 @@ export default function BlogPage() {
               <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>Featured Posts</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {posts.filter(post => post.featured).map((post) => (
-                  <motion.article
-                    key={post.id}
-                    variants={item}
-                    className="rounded-xl overflow-hidden border transition-all duration-300 group cursor-pointer"
-                    style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
-                  >
-                    <div className="p-8">
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {post.tags.map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-3 py-1 text-sm rounded-full border"
-                            style={{ backgroundColor: 'rgba(122, 144, 136, 0.15)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.3)' }}
-                          >
-                            {tag}
-                          </span>
-                        ))}
+                  <Link key={post.id} href={`/blog/${post.slug}`}>
+                    <motion.article
+                      variants={item}
+                      className="rounded-xl overflow-hidden border transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
+                      style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
+                    >
+                      <div className="p-8">
+                        <div className="flex flex-wrap gap-2 mb-4">
+                          {post.tags.map((tag) => (
+                            <span
+                              key={tag}
+                              className="px-3 py-1 text-sm rounded-full border"
+                              style={{ backgroundColor: 'rgba(122, 144, 136, 0.15)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.3)' }}
+                            >
+                              {tag}
+                            </span>
+                          ))}
+                        </div>
+
+                        <h3 className="text-2xl font-bold mb-4 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
+                          {post.title}
+                        </h3>
+
+                        <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
+                          {post.excerpt}
+                        </p>
+
+                        <div className="flex justify-between items-center text-sm" style={{ color: '#8a8680' }}>
+                          <time dateTime={post.date}>
+                            {new Date(post.date).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
+                            })}
+                          </time>
+                          <span>{post.readTime}</span>
+                        </div>
                       </div>
-
-                      <h3 className="text-2xl font-bold mb-4 transition-colors" style={{ color: '#e0d8cc' }}>
-                        {post.title}
-                      </h3>
-
-                      <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
-                        {post.excerpt}
-                      </p>
-
-                      <div className="flex justify-between items-center text-sm" style={{ color: '#8a8680' }}>
-                        <time dateTime={post.date}>
-                          {new Date(post.date).toLocaleDateString('en-US', { 
-                            year: 'numeric', 
-                            month: 'long', 
-                            day: 'numeric' 
-                          })}
-                        </time>
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
-                  </motion.article>
+                    </motion.article>
+                  </Link>
                 ))}
               </div>
             </motion.div>
@@ -152,51 +105,52 @@ export default function BlogPage() {
               <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>All Posts</h2>
               <div className="space-y-6">
                 {posts.map((post) => (
-                  <motion.article
-                    key={post.id}
-                    variants={item}
-                    className="rounded-xl p-6 border transition-all duration-300 group cursor-pointer"
-                    style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
-                  >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                      <div className="flex-1">
-                        <div className="flex flex-wrap gap-2 mb-3">
-                          {post.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-2 py-1 text-xs rounded-full border"
-                              style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.2)' }}
-                            >
-                              {tag}
-                            </span>
-                          ))}
+                  <Link key={post.id} href={`/blog/${post.slug}`}>
+                    <motion.article
+                      variants={item}
+                      className="rounded-xl p-6 border transition-all duration-300 group cursor-pointer hover:border-[#7a9088]"
+                      style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
+                    >
+                      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                        <div className="flex-1">
+                          <div className="flex flex-wrap gap-2 mb-3">
+                            {post.tags.map((tag) => (
+                              <span
+                                key={tag}
+                                className="px-2 py-1 text-xs rounded-full border"
+                                style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.2)' }}
+                              >
+                                {tag}
+                              </span>
+                            ))}
+                          </div>
+
+                          <h3 className="text-xl font-bold mb-2 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
+                            {post.title}
+                          </h3>
+
+                          <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
+                            {post.excerpt}
+                          </p>
                         </div>
 
-                        <h3 className="text-xl font-bold mb-2 transition-colors" style={{ color: '#e0d8cc' }}>
-                          {post.title}
-                        </h3>
-
-                        <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
-                          {post.excerpt}
-                        </p>
+                        <div className="md:text-right md:min-w-0 md:ml-6">
+                          <time
+                            dateTime={post.date}
+                            className="block text-sm mb-1"
+                            style={{ color: '#8a8680' }}
+                          >
+                            {new Date(post.date).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'short',
+                              day: 'numeric'
+                            })}
+                          </time>
+                          <span className="text-xs" style={{ color: '#8a8680' }}>{post.readTime}</span>
+                        </div>
                       </div>
-
-                      <div className="md:text-right md:min-w-0 md:ml-6">
-                        <time 
-                          dateTime={post.date}
-                          className="block text-sm mb-1"
-                          style={{ color: '#8a8680' }}
-                        >
-                          {new Date(post.date).toLocaleDateString('en-US', { 
-                            year: 'numeric', 
-                            month: 'short', 
-                            day: 'numeric' 
-                          })}
-                        </time>
-                        <span className="text-xs" style={{ color: '#8a8680' }}>{post.readTime}</span>
-                      </div>
-                    </div>
-                  </motion.article>
+                    </motion.article>
+                  </Link>
                 ))}
               </div>
             </motion.div>
