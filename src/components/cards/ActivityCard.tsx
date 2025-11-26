@@ -69,7 +69,7 @@ export default function ActivityCard() {
 
     const fetchGitHubActivity = async () => {
       try {
-        const username = 'EdwinJia1';
+        const username = 'EdwinjJ1';
 
         // Fetch multiple pages to get more events
         let allEvents: any[] = [];

@@ -12,8 +12,8 @@ const Footer = () => {
           >
             jiaedwin0605@gmail.com
           </a>
-          <a 
-            href="https://github.com/EdwinJia1"
+          <a
+            href="https://github.com/EdwinjJ1"
             target="_blank"
             rel="noopener noreferrer"
             className="text-teal-400 hover:text-teal-300 transition-colors duration-300"
