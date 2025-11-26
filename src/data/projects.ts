@@ -119,7 +119,7 @@ export const projects: Project[] = [
     category: 'AI & Automation',
     featured: false,
     status: 'Live',
-    githubUrl: 'https://github.com/EdwinJia1/SafeEyes-mac-',
+    githubUrl: 'https://github.com/EdwinjJ1/SafeEyes-mac-',
     icon: '👁️',
     highlights: [
       'Native macOS integration via AppleScript',
