@@ -11,23 +11,17 @@ interface ActivityDay {
   count: number;
 }
 
-// Mock data generator with FIXED 362 contributions
-const buildFallbackActivityData = (): ActivityDay[] => {
+// Generates mock historical activity to fill the heatmap
+const buildMockHistoricalData = (): ActivityDay[] => {
   const weeks = 12;
   const totalDays = weeks * 7; // 84 days
   const today = new Date();
-  const TOTAL_CONTRIBUTIONS = 362;
 
-  // Generate realistic distribution pattern
-  const contributionsPerDay: number[] = new Array(totalDays).fill(0);
-  let remainingContributions = TOTAL_CONTRIBUTIONS;
-
-  // Distribute contributions with a realistic pattern
-  // Higher activity on weekdays, lower on weekends
-  for (let i = 0; i < totalDays && remainingContributions > 0; i++) {
+  // Generate realistic-looking activity pattern
+  return Array.from({ length: totalDays }, (_, index) => {
     const date = new Date(today);
-    date.setDate(date.getDate() - (totalDays - 1 - i));
-    const dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
+    date.setDate(date.getDate() - (totalDays - 1 - index));
+    const dayOfWeek = date.getDay();
 
     // Use seed for consistent pattern
     const seed = date.getTime();
@@ -37,45 +31,15 @@ const buildFallbackActivityData = (): ActivityDay[] => {
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
     const maxDaily = isWeekend ? 3 : 8;
 
-    // Determine count based on random with some 0 days
+    // Generate count with some variety
     let count = 0;
-    if (random > 0.2) { // 80% chance of having activity
-      count = Math.min(
-        Math.floor(random * maxDaily) + 1,
-        remainingContributions
-      );
+    if (random > 0.25) { // 75% chance of having activity
+      count = Math.floor(random * maxDaily) + 1;
     }
-
-    contributionsPerDay[i] = count;
-    remainingContributions -= count;
-  }
-
-  // Distribute any remaining contributions
-  while (remainingContributions > 0) {
-    for (let i = 0; i < totalDays && remainingContributions > 0; i++) {
-      const date = new Date(today);
-      date.setDate(date.getDate() - (totalDays - 1 - i));
-      const dayOfWeek = date.getDay();
-      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-
-      if (!isWeekend && contributionsPerDay[i] < 8) {
-        contributionsPerDay[i]++;
-        remainingContributions--;
-      }
-    }
-  }
-
-  // Convert to ActivityDay format
-  return Array.from({ length: totalDays }, (_, index) => {
-    const date = new Date(today);
-    date.setDate(date.getDate() - (totalDays - 1 - index));
-
-    const count = contributionsPerDay[index];
-    const activity = getActivityLevel(count);
 
     return {
       date: date.toISOString().split('T')[0],
-      activity,
+      activity: getActivityLevel(count),
       count
     };
   });
@@ -101,11 +65,12 @@ function getActivityLevel(count: number): number {
 }
 
 export default function ActivityCard() {
-  const [activityData, setActivityData] = useState<ActivityDay[]>(buildFallbackActivityData());
+  const [activityData, setActivityData] = useState<ActivityDay[]>(buildMockHistoricalData());
   const [isLoading, setIsLoading] = useState(true);
   const [isRealData, setIsRealData] = useState(false);
   const [debugInfo, setDebugInfo] = useState<string>('');
   const [isMounted, setIsMounted] = useState(false);
+  const [realGitHubActivity, setRealGitHubActivity] = useState(0);
 
   useEffect(() => {
     setIsMounted(true);
@@ -194,18 +159,26 @@ export default function ActivityCard() {
         console.log(`✅ Events in last 12 weeks: ${eventsInRange}/${allEvents.length}`);
         console.log('📊 Events by date:', Object.entries(eventsByDate).sort().slice(-10));
 
-        // Convert to array format
-        const processedData: ActivityDay[] = Array.from(activityMap.entries())
-          .map(([date, count]) => ({
-            date,
-            count,
-            activity: getActivityLevel(count)
-          }))
-          .sort((a, b) => a.date.localeCompare(b.date));
+        // Convert to array format and merge with mock data
+        const mockData = buildMockHistoricalData();
+        const realDataMap = new Map(Array.from(activityMap.entries()));
+
+        // Merge: use real data where available, otherwise use mock data
+        const processedData: ActivityDay[] = mockData.map(mockDay => {
+          const realCount = realDataMap.get(mockDay.date) || 0;
+          // If there's real data for this date, use it; otherwise keep mock data
+          const finalCount = realCount > 0 ? realCount : mockDay.count;
+          return {
+            date: mockDay.date,
+            count: finalCount,
+            activity: getActivityLevel(finalCount)
+          };
+        });
 
         setActivityData(processedData);
+        setRealGitHubActivity(eventsInRange); // Store only real GitHub activity count
         setIsRealData(true);
-        setDebugInfo(`${eventsInRange} events`);
+        setDebugInfo(`${eventsInRange} real events`);
       } catch (error) {
         console.error('❌ Failed to fetch GitHub activity:', error);
         setDebugInfo('Using fallback data');
@@ -218,10 +191,9 @@ export default function ActivityCard() {
     fetchGitHubActivity();
   }, [isMounted]);
 
-  // Base historical contributions + recent activity
+  // Base historical contributions (362) + only count real GitHub activity
   const BASE_CONTRIBUTIONS = 362;
-  const recentActivity = activityData.reduce((sum, day) => sum + day.count, 0);
-  const totalActivity = BASE_CONTRIBUTIONS + recentActivity;
+  const totalActivity = BASE_CONTRIBUTIONS + realGitHubActivity;
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!isMounted) {
@@ -282,7 +254,7 @@ export default function ActivityCard() {
               <span
                 className="ml-2"
                 style={{ color: '#8a8680' }}
-                title={`Base: 362 (historical) + ${recentActivity} (recent 12 weeks from GitHub API)`}
+                title={`Base: 362 (historical) + ${realGitHubActivity} (real GitHub activity in last 12 weeks). Heatmap shows simulated data merged with real activity.`}
               >
                 ℹ️
               </span>

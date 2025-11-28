@@ -119,7 +119,7 @@ export const projects: Project[] = [
     category: 'AI & Automation',
     featured: false,
     status: 'Live',
-    githubUrl: 'https://github.com/EdwinjJ1/SafeEyes-mac-',
+    githubUrl: 'https://github.com/EdwinjJ1/SafeEyes--mac',
     icon: '👁️',
     highlights: [
       'Native macOS integration via AppleScript',
@@ -211,6 +211,48 @@ export const projects: Project[] = [
       'Real-time multiplayer quizzes',
       'Personalized learning analytics',
       'Gamification and reward systems',
+    ],
+  },
+  {
+    id: 10,
+    title: 'Discord Bot',
+    description:
+      'A versatile Discord bot with custom commands, moderation tools, and interactive features for community engagement.',
+    longDescription:
+      'A feature-rich Discord bot designed to enhance server management and community interaction. Includes custom commands, automated moderation, welcome messages, role management, and fun interactive features. Built with discord.js and deployed with robust error handling and logging.',
+    technologies: ['Node.js', 'discord.js', 'JavaScript'],
+    category: 'AI & Automation',
+    featured: false,
+    status: 'Live',
+    githubUrl: 'https://github.com/EdwinjJ1/discord-bot',
+    icon: '🤖',
+    highlights: [
+      'Custom command system',
+      'Automated moderation tools',
+      'Welcome and role management',
+      'Interactive community features',
+      'Robust error handling and logging',
+    ],
+  },
+  {
+    id: 11,
+    title: 'Smart Calendar System',
+    description:
+      'Intelligent calendar application with Google Calendar integration, AI-powered scheduling, and automated event management.',
+    longDescription:
+      'A smart calendar system that integrates with Google Calendar API to provide intelligent scheduling assistance. Features include AI-powered event parsing, automated conflict resolution, natural language processing for event creation, and seamless synchronization across devices.',
+    technologies: ['Node.js', 'Google Calendar API', 'TypeScript', 'OpenAI API'],
+    category: 'AI & Automation',
+    featured: false,
+    status: 'In Development',
+    githubUrl: 'https://github.com/EdwinjJ1/calendar',
+    icon: '📅',
+    highlights: [
+      'Google Calendar API integration',
+      'AI-powered event parsing',
+      'Natural language event creation',
+      'Automated conflict detection',
+      'Cross-device synchronization',
     ],
   },
 ];
