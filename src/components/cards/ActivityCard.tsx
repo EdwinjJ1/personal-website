@@ -11,20 +11,67 @@ interface ActivityDay {
   count: number;
 }
 
-// Fallback data generator for SSR and error cases
+// Mock data generator with FIXED 362 contributions
 const buildFallbackActivityData = (): ActivityDay[] => {
   const weeks = 12;
-  const totalDays = weeks * 7;
+  const totalDays = weeks * 7; // 84 days
   const today = new Date();
+  const TOTAL_CONTRIBUTIONS = 362;
 
+  // Generate realistic distribution pattern
+  const contributionsPerDay: number[] = new Array(totalDays).fill(0);
+  let remainingContributions = TOTAL_CONTRIBUTIONS;
+
+  // Distribute contributions with a realistic pattern
+  // Higher activity on weekdays, lower on weekends
+  for (let i = 0; i < totalDays && remainingContributions > 0; i++) {
+    const date = new Date(today);
+    date.setDate(date.getDate() - (totalDays - 1 - i));
+    const dayOfWeek = date.getDay(); // 0 = Sunday, 6 = Saturday
+
+    // Use seed for consistent pattern
+    const seed = date.getTime();
+    const random = Math.abs(Math.sin(seed));
+
+    // Weekend (Sat/Sun) - less activity
+    const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+    const maxDaily = isWeekend ? 3 : 8;
+
+    // Determine count based on random with some 0 days
+    let count = 0;
+    if (random > 0.2) { // 80% chance of having activity
+      count = Math.min(
+        Math.floor(random * maxDaily) + 1,
+        remainingContributions
+      );
+    }
+
+    contributionsPerDay[i] = count;
+    remainingContributions -= count;
+  }
+
+  // Distribute any remaining contributions
+  while (remainingContributions > 0) {
+    for (let i = 0; i < totalDays && remainingContributions > 0; i++) {
+      const date = new Date(today);
+      date.setDate(date.getDate() - (totalDays - 1 - i));
+      const dayOfWeek = date.getDay();
+      const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
+
+      if (!isWeekend && contributionsPerDay[i] < 8) {
+        contributionsPerDay[i]++;
+        remainingContributions--;
+      }
+    }
+  }
+
+  // Convert to ActivityDay format
   return Array.from({ length: totalDays }, (_, index) => {
     const date = new Date(today);
     date.setDate(date.getDate() - (totalDays - 1 - index));
 
-    const seed = date.getTime();
-    const random = Math.abs(Math.sin(seed)) * 5;
-    const activity = Math.floor(random);
-    const count = activity * (Math.floor(Math.abs(Math.sin(seed * 2)) * 5) + 1);
+    const count = contributionsPerDay[index];
+    const activity = getActivityLevel(count);
 
     return {
       date: date.toISOString().split('T')[0],
@@ -171,7 +218,10 @@ export default function ActivityCard() {
     fetchGitHubActivity();
   }, [isMounted]);
 
-  const totalActivity = activityData.reduce((sum, day) => sum + day.count, 0);
+  // Base historical contributions + recent activity
+  const BASE_CONTRIBUTIONS = 362;
+  const recentActivity = activityData.reduce((sum, day) => sum + day.count, 0);
+  const totalActivity = BASE_CONTRIBUTIONS + recentActivity;
 
   // Prevent hydration mismatch by not rendering until mounted
   if (!isMounted) {
@@ -232,7 +282,7 @@ export default function ActivityCard() {
               <span
                 className="ml-2"
                 style={{ color: '#8a8680' }}
-                title={`${debugInfo} from GitHub API (last 90 days of public activity)`}
+                title={`Base: 362 (historical) + ${recentActivity} (recent 12 weeks from GitHub API)`}
               >
                 ℹ️
               </span>
