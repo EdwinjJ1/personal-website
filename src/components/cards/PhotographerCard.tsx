@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import BaseCard from './BaseCard';
 import { getAssetPath } from '@/lib/utils';
 
@@ -94,7 +95,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </a>
-          <a
+          <Link
             href="/photography"
             className="inline-flex items-center gap-1 transition-colors"
             style={{ color: '#b8b4aa' }}
@@ -103,7 +104,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </div>
     </BaseCard>
