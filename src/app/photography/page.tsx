@@ -126,7 +126,7 @@ export default function PhotographyPage() {
                   onClick={() => setSelectedPhotoIndex(index)}
                 >
                   <Image
-                    src={photo.image}
+                    src={getAssetPath(photo.image)}
                     alt={photo.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -197,7 +197,7 @@ export default function PhotographyPage() {
                     className={`relative w-full h-full max-w-7xl max-h-[85vh] ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   >
                     <Image
-                      src={currentPhoto.image}
+                      src={getAssetPath(currentPhoto.image)}
                       alt={currentPhoto.title}
                       fill
                       className="object-contain"
