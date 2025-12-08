@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 import { photos, categories, Photo } from '@/data/photography';
+import { getAssetPath } from '@/lib/utils';
 
 export default function PhotographyPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -12,8 +13,8 @@ export default function PhotographyPage() {
   const [isZoomed, setIsZoomed] = useState(false);
 
   // Filter photos based on category
-  const filteredPhotos = selectedCategory === 'All' 
-    ? photos 
+  const filteredPhotos = selectedCategory === 'All'
+    ? photos
     : photos.filter(photo => photo.category === selectedCategory);
 
   // Find the actual index in the full 'photos' array or the filtered list?
@@ -23,7 +24,7 @@ export default function PhotographyPage() {
   const handleNext = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedPhotoIndex === null) return;
-    setSelectedPhotoIndex((prev) => 
+    setSelectedPhotoIndex((prev) =>
       prev === null || prev === filteredPhotos.length - 1 ? 0 : prev + 1
     );
     setIsZoomed(false);
@@ -32,7 +33,7 @@ export default function PhotographyPage() {
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedPhotoIndex === null) return;
-    setSelectedPhotoIndex((prev) => 
+    setSelectedPhotoIndex((prev) =>
       prev === null || prev === 0 ? filteredPhotos.length - 1 : prev - 1
     );
     setIsZoomed(false);
@@ -55,7 +56,7 @@ export default function PhotographyPage() {
     if (!currentPhoto) return;
     const url = window.location.href;
     const text = `Check out "${currentPhoto.title}" by Edwin on his portfolio!`;
-    
+
     if (navigator.share) {
       try {
         await navigator.share({ title: currentPhoto.title, text, url });
@@ -83,7 +84,7 @@ export default function PhotographyPage() {
               Photography Portfolio
             </h1>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
-              Capturing moments when I trade the keyboard for a camera. 
+              Capturing moments when I trade the keyboard for a camera.
               Exploring Sydney through light, composition, and storytelling.
             </p>
           </motion.div>
@@ -126,7 +127,7 @@ export default function PhotographyPage() {
                   onClick={() => setSelectedPhotoIndex(index)}
                 >
                   <Image
-                    src={photo.image}
+                    src={getAssetPath(photo.image)}
                     alt={photo.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -161,7 +162,7 @@ export default function PhotographyPage() {
               >
                 {/* Top Bar: Close & Share */}
                 <div className="absolute top-4 right-4 z-50 flex gap-4">
-                   <button
+                  <button
                     onClick={handleShare}
                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-white"
                     title="Share"
@@ -181,7 +182,7 @@ export default function PhotographyPage() {
                 </div>
 
                 {/* Main Image Container */}
-                <div 
+                <div
                   className="relative w-full h-full flex items-center justify-center p-4 md:p-12"
                   onClick={(e) => {
                     e.stopPropagation();
@@ -197,7 +198,7 @@ export default function PhotographyPage() {
                     className={`relative w-full h-full max-w-7xl max-h-[85vh] ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   >
                     <Image
-                      src={currentPhoto.image}
+                      src={getAssetPath(currentPhoto.image)}
                       alt={currentPhoto.title}
                       fill
                       className="object-contain"
@@ -226,7 +227,7 @@ export default function PhotographyPage() {
                 </button>
 
                 {/* Info Bar (Bottom) */}
-                <div 
+                <div
                   className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent text-white"
                   onClick={(e) => e.stopPropagation()}
                 >
@@ -255,7 +256,7 @@ export default function PhotographyPage() {
                         </span>
                       </div>
                     </div>
-                    
+
                     {/* Settings Badge */}
                     <div className="px-3 py-1 rounded bg-white/10 border border-white/20 text-xs font-mono whitespace-nowrap">
                       {currentPhoto.settings}
