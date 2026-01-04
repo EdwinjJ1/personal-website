@@ -23,25 +23,30 @@ export default function BaseCard({
   className = '',
   size = 'sm',
   hover = true,
-  delay = 0
-}: BaseCardProps) {
+  delay = 0,
+  glass = false,
+}: BaseCardProps & { glass?: boolean }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
-      style={{ 
+      style={glass ? {} : {
         backgroundColor: '#282622',
         borderColor: 'rgba(114, 110, 102, 0.3)'
       }}
       className={`
         ${sizeClasses[size]}
-        backdrop-blur-sm rounded-2xl p-5
-        border
+        ${glass ? 'glass-card' : 'backdrop-blur-sm rounded-2xl p-5 border'}
+        ${!glass ? 'rounded-2xl p-5' : 'rounded-2xl p-5'}
         ${hover ? 'transition-all duration-300' : ''}
         ${className}
       `}
-      whileHover={hover ? { scale: 1.02, y: -2, borderColor: 'rgba(122, 144, 136, 0.5)' } : {}}
+      whileHover={hover ? {
+        scale: 1.02,
+        y: -4,
+        ...(glass ? {} : { borderColor: 'rgba(122, 144, 136, 0.5)' })
+      } : {}}
     >
       {children}
     </motion.div>

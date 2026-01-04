@@ -6,7 +6,7 @@ import FuzzyText from '../FuzzyText';
 
 export default function PersonalCard() {
   return (
-    <BaseCard size="md" delay={0.1} className="lg:col-span-4">
+    <BaseCard size="md" delay={0.1} className="lg:col-span-4" glass={true}>
       <div className="h-full flex flex-col">
         <div className="flex items-center gap-3 mb-3">
           <Avatar size="sm" />

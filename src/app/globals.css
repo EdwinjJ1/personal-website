@@ -14,6 +14,21 @@
   --border-hover: rgba(122, 144, 136, 0.5);
 }
 
+.glass-card {
+  background: rgba(40, 38, 34, 0.7) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(122, 144, 136, 0.15) !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect for glass card */
+.glass-card:hover {
+  background: rgba(49, 46, 42, 0.8) !important;
+  border-color: rgba(122, 144, 136, 0.4) !important;
+  box-shadow: 0 10px 40px -10px rgba(122, 144, 136, 0.2);
+}
+
 html {
   scroll-behavior: smooth;
 }
