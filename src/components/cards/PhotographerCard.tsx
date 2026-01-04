@@ -32,7 +32,7 @@ interface PhotographerCardProps {
 
 export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps) {
   return (
-    <BaseCard size="md" hover={false} delay={delay} className="md:col-span-2 lg:col-span-4 overflow-hidden">
+    <BaseCard size="md" hover={true} delay={delay} className="md:col-span-2 lg:col-span-4 overflow-hidden" glass={true}>
       <div className="flex h-full flex-col gap-3.5">
         <div className="flex items-start justify-between gap-3">
           <div>
@@ -72,7 +72,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
             <div
               key={set.title}
               className={`rounded-2xl border p-3 transition-all`}
-              style={{ 
+              style={{
                 borderColor: 'rgba(114, 110, 102, 0.3)',
                 background: 'linear-gradient(to bottom right, rgba(122, 144, 136, 0.2), rgba(106, 138, 142, 0.2))'
               }}
