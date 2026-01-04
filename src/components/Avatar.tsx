@@ -12,8 +12,8 @@ const Avatar = ({ size = 'md', className = '' }: AvatarProps) => {
     lg: 'w-48 h-48'
   };
 
-  // Use basePath for GitHub Pages deployment
-  const basePath = process.env.NODE_ENV === 'production' ? '/personal-website' : '';
+  // No longer needed for custom domain
+  const basePath = '';
 
   return (
     <div className={`relative ${sizeClasses[size]} mx-auto ${className}`}>
