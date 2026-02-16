@@ -4,8 +4,8 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
-import { photos, categories, Photo } from '@/data/photography';
-import { getAssetPath } from '@/lib/utils';
+import { photos, categories } from '@/data/photography';
+import { getThumbnailUrl, getLightboxUrl } from '@/lib/imageUtils';
 
 export default function PhotographyPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -127,7 +127,7 @@ export default function PhotographyPage() {
                   onClick={() => setSelectedPhotoIndex(index)}
                 >
                   <Image
-                    src={getAssetPath(photo.image)}
+                    src={getThumbnailUrl(photo.image)}
                     alt={photo.title}
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -198,7 +198,7 @@ export default function PhotographyPage() {
                     className={`relative w-full h-full max-w-7xl max-h-[85vh] ${isZoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
                   >
                     <Image
-                      src={getAssetPath(currentPhoto.image)}
+                      src={getLightboxUrl(currentPhoto.image)}
                       alt={currentPhoto.title}
                       fill
                       className="object-contain"
@@ -267,11 +267,144 @@ export default function PhotographyPage() {
             )}
           </AnimatePresence>
 
-          {/* Contact CTA */}
+          {/* Gear List */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            className="mt-16"
+          >
+            <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: '#e0d8cc' }}>
+              📷 My Gear
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+              {/* Camera Bodies */}
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                  <span className="text-2xl">🎥</span> Camera Bodies
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                    <div>
+                      <span className="font-medium">Panasonic Lumix S9</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Full-frame Mirrorless</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                    <div>
+                      <span className="font-medium">Panasonic Lumix S5II</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Full-frame Mirrorless</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                    <div>
+                      <span className="font-medium">Olympus OM-D E-M1 Mark III</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>MFT Mirrorless</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Lenses */}
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                  <span className="text-2xl">🔭</span> L Mount Lenses
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 20-200mm</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Superzoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 24-35mm f/2 Art</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Wide Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 50mm f/1.4 Art</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 100-400mm f/5-6.3 DG DN</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* EF Mount Lenses */}
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                  <span className="text-2xl">🔷</span> Canon EF Lenses
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Canon 16-35mm f/2.8L II USM</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Canon 70-200mm f/2.8L II IS USM</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              {/* MFT Lenses */}
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                  <span className="text-2xl">✨</span> MFT Lenses
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">TTArtisan 70mm f/2</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">TTArtisan 40mm f/2</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">Shenguang 24mm f/6.3</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Manual Wide</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Contact CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-16 text-center"
           >
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>Interested in a photoshoot?</h2>
