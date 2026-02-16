@@ -25,6 +25,71 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 101,
+    title: 'EgoTrace',
+    description:
+      'AI-powered second brain and smart calendar for habit building, time management, and team collaboration.',
+    longDescription:
+      'A modern productivity suite that helps you build better habits, manage your schedule with AI, and understand yourself. Features include a smart calendar with AI import, habit tracking with gamification, team collaboration tools, and personality insights. Built with a modern tech stack including Next.js 15, Prisma, and Capacitor for mobile.',
+    technologies: ['Next.js 15', 'React 19', 'Prisma', 'Tailwind CSS', 'Capacitor', 'AI Integration'],
+    category: 'AI & Automation',
+    featured: true,
+    status: 'In Development',
+    liveUrl: 'https://egotrace.vercel.app/',
+    githubUrl: 'https://github.com/EdwinjJ1/calendar',
+    icon: '🧠',
+    highlights: [
+      'Smart Calendar with AI Event Import',
+      'Habit Tracking & Gamification',
+      'Team Collaboration & Chat',
+      'Cross-platform (Web & Mobile)',
+      'Personality Insights & Analytics',
+    ],
+  },
+  {
+    id: 102,
+    title: 'Axon',
+    description:
+      'Professional desktop application boilerplate for prompt engineering, built with Electron and React.',
+    longDescription:
+      'Electron + React + TypeScript boilerplate tailored for a prompt engineering desktop assistant. The template separates concerns between main, preload, and renderer processes, enabling plug-and-play AI feature integration. Designed for high performance and scalability.',
+    technologies: ['Electron', 'React', 'TypeScript', 'Vite', 'Node.js'],
+    category: 'AI & Automation',
+    featured: true,
+    status: 'Live',
+    liveUrl: 'https://www.promptenhenceraxon.top',
+    githubUrl: 'https://github.com/EdwinjJ1/Axon',
+    icon: '💠',
+    highlights: [
+      'Electron + React + TypeScript Architecture',
+      'Secure IPC Communication',
+      'Hot Reloading Development Workflow',
+      'Production-ready Build Pipeline',
+      'Tailored for AI Applications',
+    ],
+  },
+  {
+    id: 103,
+    title: 'Chiron Prompt Enhancer',
+    description:
+      'An open-source Claude Code skill that transforms basic prompts into expert-grade specifications and executes them.',
+    longDescription:
+      'Chiron Prompt Enhancer is a skill for Claude Code that upgrades underspecified requests into expert-grade specs and then executes the work. It features 7 optimization strategies (Concise, Detailed, Creative, etc.), smart auto-detection, and bilingual support.',
+    technologies: ['Claude Code', 'Python', 'Prompt Engineering', 'Markdown'],
+    category: 'AI & Automation',
+    featured: true,
+    status: 'Live',
+    githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
+    icon: '🏹',
+    highlights: [
+      '7 Smart Optimization Strategies',
+      'Auto-detection of Intent',
+      'Bilingual Support (EN/CN)',
+      'Agentic Execution Capability',
+      'Local Prompt History Logging',
+    ],
+  },
+  {
     id: 1,
     title: 'UNSW Study Materials Platform',
     description:
@@ -54,7 +119,7 @@ export const projects: Project[] = [
       'Built on Claude MCP, this system coordinates five autonomous agents for daily planning, AI news curation, daily reports, guided reflections, and wellness check-ins. It integrates with the Notion API and Google Calendar to automate workflows and deliver actionable insights.',
     technologies: ['Node.js', 'Claude MCP', 'Notion API', 'Google APIs', 'TypeScript', 'Jest'],
     category: 'AI & Automation',
-    featured: true,
+    featured: false,
     status: 'In Development',
     githubUrl: '#',
     icon: '🤖',
@@ -130,48 +195,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 6,
-    title: 'Startup MVP Platform',
-    description:
-      'The MVP from my startup journey featuring real-time collaboration, analytics, and a scalable stack.',
-    longDescription:
-      'The production MVP that supported 1,000+ active users during my startup experience. Includes user authentication, real-time messaging powered by Socket.io, an analytics dashboard, and a microservices architecture deployed on AWS with Docker.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Socket.io', 'AWS', 'Docker'],
-    category: 'Entrepreneurship',
-    featured: false,
-    status: 'Archived',
-    githubUrl: '#',
-    icon: '🚀',
-    highlights: [
-      'Scaled to 1,000+ active users',
-      'Real-time messaging engine',
-      'Analytics and reporting dashboards',
-      'Microservices-based architecture',
-      'AWS + Docker deployment pipeline',
-    ],
-  },
-  {
-    id: 7,
-    title: 'Bank Statement Automation',
-    description:
-      'Automated personal finance management system that reads bank statements, categorizes expenses, and provides real-time spending analytics.',
-    longDescription:
-      'A comprehensive financial automation tool that monitors email notifications, parses bank statements, and intelligently categorizes transactions. Features include real-time expense tracking, budget alerts, smart categorization with machine learning, and encrypted local storage for privacy. Integrates with multiple banks and supports multi-currency transactions.',
-    technologies: ['Node.js', 'SQLite', 'crypto-js', 'node-cron', 'Chart.js'],
-    category: 'AI & Automation',
-    featured: false,
-    status: 'In Development',
-    githubUrl: '#',
-    icon: '💰',
-    highlights: [
-      'Automated email parsing and OCR recognition',
-      'Smart expense categorization with ML',
-      'Real-time budget tracking and alerts',
-      'End-to-end encryption for security',
-      'Multi-bank and multi-currency support',
-    ],
-  },
-  {
     id: 8,
     title: 'AI Equity Radar',
     description:
@@ -190,27 +213,6 @@ export const projects: Project[] = [
       'Interactive data visualization dashboard',
       '4 AI intervention strategies designed',
       'Targets 250K+ people in Year 1',
-    ],
-  },
-  {
-    id: 9,
-    title: 'AI Gaming Platform',
-    description:
-      'Gamified learning platform leveraging AI to create interactive educational experiences and adaptive quizzes.',
-    longDescription:
-      'An innovative educational gaming platform that combines AI-powered content generation with interactive learning mechanics. Features adaptive difficulty, real-time feedback, and personalized learning paths to make education engaging and effective.',
-    technologies: ['React', 'Node.js', 'OpenAI API', 'PostgreSQL', 'WebSocket'],
-    category: 'AI & Automation',
-    featured: false,
-    status: 'In Development',
-    githubUrl: '#',
-    icon: '🎮',
-    highlights: [
-      'AI-generated educational content',
-      'Adaptive difficulty system',
-      'Real-time multiplayer quizzes',
-      'Personalized learning analytics',
-      'Gamification and reward systems',
     ],
   },
   {
@@ -233,28 +235,7 @@ export const projects: Project[] = [
       'Interactive community features',
       'Robust error handling and logging',
     ],
-  },
-  {
-    id: 11,
-    title: 'Smart Calendar System',
-    description:
-      'Intelligent calendar application with Google Calendar integration, AI-powered scheduling, and automated event management.',
-    longDescription:
-      'A smart calendar system that integrates with Google Calendar API to provide intelligent scheduling assistance. Features include AI-powered event parsing, automated conflict resolution, natural language processing for event creation, and seamless synchronization across devices.',
-    technologies: ['Node.js', 'Google Calendar API', 'TypeScript', 'OpenAI API'],
-    category: 'AI & Automation',
-    featured: false,
-    status: 'In Development',
-    githubUrl: 'https://github.com/EdwinjJ1/calendar',
-    icon: '📅',
-    highlights: [
-      'Google Calendar API integration',
-      'AI-powered event parsing',
-      'Natural language event creation',
-      'Automated conflict detection',
-      'Cross-device synchronization',
-    ],
-  },
+  }
 ];
 
 export const projectCategories: ProjectCategory[] = [
