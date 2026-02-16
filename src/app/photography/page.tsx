@@ -325,22 +325,22 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
                     <div>
-                      <span className="font-medium">Sigma 24-35mm f/2 Art</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Wide Zoom</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
-                    <div>
-                      <span className="font-medium">Sigma 50mm f/1.4 Art</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
-                    <div>
                       <span className="font-medium">Sigma 100-400mm f/5-6.3 DG DN</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">TTArtisan 70mm f/2</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">TTArtisan 40mm f/2</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
                     </div>
                   </li>
                 </ul>
@@ -366,6 +366,20 @@ export default function PhotographyPage() {
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom</span>
                     </div>
                   </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 24-35mm f/2 Art</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Wide Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 50mm f/1.4 Art</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                    </div>
+                  </li>
                 </ul>
               </div>
 
@@ -375,20 +389,6 @@ export default function PhotographyPage() {
                   <span className="text-2xl">✨</span> MFT Lenses
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
-                    <div>
-                      <span className="font-medium">TTArtisan 70mm f/2</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
-                    <div>
-                      <span className="font-medium">TTArtisan 40mm f/2</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
-                    </div>
-                  </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
                     <div>
