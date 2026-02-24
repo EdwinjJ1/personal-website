@@ -103,11 +103,57 @@
     ],
     "research": [
       {
+        "time": "16:04",
+        "tag": "paper",
+        "title": "R1-V: Reinforcing VLM reasoning with only 2 samples",
+        "authors": "Hu et al.",
+        "summary": "Shows how to improve vision-language model reasoning with reinforcement learning using only 2 training samples. Achieves significant gains with minimal data.",
+        "impact": "Could democratize VLM development.",
+        "arxiv": "https://arxiv.org/abs/2602.20537"
+      },
+      {
+        "time": "16:04",
+        "tag": "paper",
+        "title": "Avoiding unanswerable questions in VQA",
+        "authors": "Zhang et al.",
+        "summary": "Teaches models to recognize when they CAN'T answer a question - prevents hallucination in visual QA.",
+        "impact": "Critical for VQA reliability.",
+        "arxiv": "https://arxiv.org/abs/2602.20536"
+      },
+      {
+        "time": "16:04",
+        "tag": "paper",
+        "title": "The Flux.1 Trademark Dispute: AI and Trademark Law",
+        "authors": "Legal analysis",
+        "summary": "Examines the Flux.1 trademark dispute and implications for AI model naming and IP rights.",
+        "impact": "Could set legal precedents for AI.",
+        "arxiv": "https://arxiv.org/abs/2602.20544"
+      },
+      {
+        "time": "16:04",
+        "tag": "paper",
+        "title": "Nexus-0: Human-robot teaming with on-the-fly planning",
+        "authors": "Chen et al.",
+        "summary": "Real-time task planning framework for human-robot collaboration. Adapts plans based on human behavior.",
+        "impact": "Advances manufacturing and healthcare robotics.",
+        "arxiv": "https://arxiv.org/abs/2602.20540"
+      },
+      {
+        "time": "16:04",
+        "tag": "paper",
+        "title": "UrbanGlobe: Urban world model from street views",
+        "authors": "Li et al.",
+        "summary": "Learns comprehensive urban world model from street view imagery for navigation and autonomous vehicles.",
+        "impact": "Improves AV navigation and urban AI.",
+        "arxiv": "https://arxiv.org/abs/2602.20543"
+      },
+      {
         "time": "04:00",
         "tag": "paper",
         "title": "Thinking by Subtraction: Confidence-Driven Contrastive Decoding",
         "authors": "Lexiang Tang et al.",
         "summary": "Training-free decoding that targets low-confidence tokens → better reasoning, shorter outputs.",
+        "impact": "Works with any LLM without retraining.",
         "arxiv": "https://arxiv.org/abs/2602.18232"
       },
       {
@@ -116,6 +162,7 @@
         "title": "CoT Monitorability via Information Theory",
         "authors": "Usman Anwar et al.",
         "summary": "Formalizes when/how to monitor chain-of-thought reasoning for AI safety.",
+        "impact": "Critical for AI safety monitoring.",
         "arxiv": "https://arxiv.org/abs/2602.18297"
       },
       {
@@ -124,6 +171,7 @@
         "title": "Proto-Tokens for One-Step Text Reconstruction",
         "authors": "Ivan Bondarenko et al.",
         "summary": "LLMs can reconstruct hundreds of tokens from two 'proto-tokens' in one forward pass.",
+        "impact": "Could enable faster non-autoregressive generation.",
         "arxiv": "https://arxiv.org/abs/2602.18301"
       },
       {
@@ -132,6 +180,7 @@
         "title": "VIRAASAT: Indian Cultural Reasoning",
         "authors": "Harshul Surana et al.",
         "summary": "3,200+ multi-hop questions. SCoM beats CoT by 20%.",
+        "impact": "Addresses non-Western cultural gap in LLMs.",
         "arxiv": "https://arxiv.org/abs/2602.18429"
       },
       {
@@ -140,6 +189,7 @@
         "title": "Retrieve-Verify-Retrieve (RVR)",
         "authors": "Deniz Qian et al.",
         "summary": "Multi-round retrieval → 10%+ recall improvement.",
+        "impact": "Better comprehensive QA systems.",
         "arxiv": "https://arxiv.org/abs/2602.18425"
       }
     ],
@@ -149,6 +199,7 @@
         "tag": "ma",
         "title": "Gilead acquires Arcellx for $8B",
         "summary": "CAR-T acquisition sets up J&J showdown in multiple myeloma.",
+        "impact": "CAR-T therapies cost $400K+ per dose.",
         "source": "https://www.fiercebiotech.com"
       },
       {
@@ -156,6 +207,7 @@
         "tag": "clinical",
         "title": "Novo's CagriSema loses to Lilly's Zepbound",
         "summary": "20.2% vs 23.6% weight loss — Novo -12%, Lilly +4%.",
+        "impact": "GLP-1 market projected at $100B+.",
         "source": "https://www.statnews.com"
       },
       {
@@ -163,6 +215,7 @@
         "tag": "product",
         "title": "Generate Biopharma plans $425M IPO",
         "summary": "AI drug discovery company funding phase 3 trials.",
+        "impact": "AI drug discovery moving from hype to validation.",
         "source": "https://www.fiercebiotech.com"
       },
       {
@@ -170,6 +223,7 @@
         "tag": "policy",
         "title": "FDA new pathway for bespoke gene therapies",
         "summary": "Framework for individualized treatments.",
+        "impact": "Could unlock N-of-1 personalized medicine.",
         "source": "https://www.fiercebiotech.com"
       },
       {
@@ -177,15 +231,41 @@
         "tag": "clinical",
         "title": "Gossamer PAH drug fails phase 3",
         "summary": "Will seek FDA approval on secondary endpoints.",
+        "impact": "Tests FDA's flexibility on borderline cases.",
         "source": "https://www.statnews.com"
       }
     ],
     "global": [
       {
-        "time": "08:00",
+        "time": "16:00",
         "tag": "breaking",
-        "title": "Trump tariffs in chaos after Supreme Court ruling",
-        "summary": "15% across-the-board announced. Critical minerals exempt.",
+        "title": "Trump tariff back to 10%",
+        "summary": "Not 15% as initially announced. FedEx suing for 'full refund' of unlawful tariffs.",
+        "impact": "Lower than expected but legal uncertainty continues.",
+        "source": "https://www.abc.net.au/news"
+      },
+      {
+        "time": "16:00",
+        "tag": "policy",
+        "title": "AUKUS $300M Australia-UK defense deal",
+        "summary": "Australia commits $300M to UK for nuclear submarine reactor development.",
+        "impact": "Strengthens trilateral defense partnership.",
+        "source": "https://www.smh.com.au/world"
+      },
+      {
+        "time": "16:00",
+        "tag": "policy",
+        "title": "Mandelson released on bail in Epstein probe",
+        "summary": "Ex-minister Peter Mandelson arrested and bailed. Prince Andrew remains in spotlight.",
+        "impact": "UK political instability continues.",
+        "source": "https://www.smh.com.au/world"
+      },
+      {
+        "time": "16:00",
+        "tag": "policy",
+        "title": "US blizzard hits NYC",
+        "summary": "Major winter storm, thousands of flights cancelled.",
+        "impact": "Supply chain disruptions.",
         "source": "https://www.abc.net.au/news"
       },
       {
@@ -193,6 +273,7 @@
         "tag": "policy",
         "title": "Australia-Canada 'supergroup' forming",
         "summary": "ASPI urges pivot from US-reliance on critical minerals.",
+        "impact": "Could stabilize EV/battery supply chains.",
         "source": "https://www.abc.net.au/news"
       },
       {
@@ -200,6 +281,7 @@
         "tag": "policy",
         "title": "Ukraine war enters 4th year",
         "summary": "Both sides under maximum strain.",
+        "impact": "Cyber/energy risks elevated.",
         "source": "https://www.smh.com.au"
       },
       {
@@ -207,6 +289,7 @@
         "tag": "breaking",
         "title": "Trump considers 'much bigger attack' on Iran",
         "summary": "Strait of Hormuz disruption risk.",
+        "impact": "Energy price spike potential.",
         "source": "https://www.smh.com.au"
       },
       {
@@ -214,6 +297,7 @@
         "tag": "policy",
         "title": "Prince Andrew arrested",
         "summary": "Royal family crisis as Andrew swept up in Epstein probe.",
+        "impact": "Limited direct tech impact.",
         "source": "https://www.smh.com.au"
       }
     ]
