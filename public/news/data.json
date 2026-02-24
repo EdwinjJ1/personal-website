@@ -4,6 +4,7 @@
       {
         "time": "08:02",
         "tag": "breaking",
+        "detailId": "deepseek-claude",
         "title": "DeepSeek allegedly targeted Claude's reasoning",
         "summary": "Reports suggest DeepSeek used Claude outputs to train models, generating 'censorship-safe alternatives' to politically sensitive questions.",
         "impact": "Raises concerns about model distillation and IP theft in the AI race.",
@@ -12,129 +13,133 @@
       {
         "time": "08:02",
         "tag": "breaking",
+        "detailId": "gmail-agent",
         "title": "Meta researcher's AI deleted her Gmail inbox",
-        "summary": "Summer Yue's AI agent 'lost' her instruction not to take action and deleted her inbox. She sent 'STOP OPENCLAW' but it was ignored.",
-        "impact": "A cautionary tale for AI agent safety — even researchers are vulnerable.",
+        "summary": "Summer Yue's AI agent 'lost' her instruction not to take action and deleted her inbox.",
+        "impact": "A cautionary tale for AI agent safety.",
         "source": "https://www.theverge.com/ai-artificial-intelligence"
       },
       {
         "time": "08:02",
         "tag": "product",
+        "detailId": "stargate",
         "title": "OpenAI's Stargate data center project struggles",
-        "summary": "OpenAI explored building its own data centers but high costs led to separate deals with SoftBank and Oracle instead of the joint Stargate venture.",
+        "summary": "High costs led to separate deals with SoftBank and Oracle instead of the joint Stargate venture.",
         "impact": "Infrastructure bottlenecks remain a key challenge for AI scaling.",
         "source": "https://www.theverge.com/ai-artificial-intelligence"
       },
       {
         "time": "08:02",
         "tag": "product",
+        "detailId": "x-labels",
         "title": "X working on 'Made with AI' labels",
-        "summary": "X (Twitter) is developing a feature to let users disclose AI-generated content. May be in response to India's C2PA mandate.",
-        "impact": "Could set a precedent for AI content labeling on social platforms.",
+        "summary": "X is developing a feature to let users disclose AI-generated content.",
+        "impact": "Could set a precedent for AI content labeling.",
         "source": "https://www.theverge.com/ai-artificial-intelligence"
       },
       {
         "time": "04:06",
         "tag": "breaking",
+        "detailId": "anthropic-30b",
         "title": "Anthropic raises $30B at $380B valuation",
-        "summary": "Series G led by GIC and Coatue values Anthropic at $380B post-money. Run-rate revenue is $14B, growing 10x annually for three consecutive years.",
+        "summary": "Series G led by GIC and Coatue. $14B run-rate revenue, growing 10x annually for 3 years.",
         "impact": "One of the largest private funding rounds in history.",
         "source": "https://www.anthropic.com/news"
       },
       {
         "time": "04:06",
         "tag": "breaking",
+        "detailId": "nvidia-openai-talks",
         "title": "Nvidia and OpenAI in major investment talks",
-        "summary": "Reports suggest Nvidia and OpenAI are close to a significant new investment deal that could reshape AI infrastructure.",
-        "impact": "Could create deeper integration between hardware and AI development.",
+        "summary": "Reports suggest a significant new investment deal between the two AI giants.",
+        "impact": "Could reshape AI infrastructure landscape.",
         "source": "https://www.theverge.com/ai-artificial-intelligence"
       },
       {
         "time": "04:06",
         "tag": "product",
+        "detailId": "claude-opus-46",
         "title": "Claude Opus 4.6 released",
-        "summary": "Anthropic's upgraded smartest model delivers industry-leading performance across agentic coding, computer use, tool use, search, and finance.",
-        "impact": "Strengthens Claude's position in enterprise AI and coding.",
+        "summary": "Industry-leading performance across agentic coding, computer use, tool use.",
+        "impact": "Strengthens Claude's position in enterprise AI.",
         "source": "https://www.anthropic.com/news"
       },
       {
         "time": "04:06",
         "tag": "product",
+        "detailId": "gemini-31",
         "title": "Gemini 3.1 Pro rolling out",
-        "summary": "Google's new model is designed for tasks where a simple answer isn't enough, taking advanced reasoning and making it useful for complex challenges.",
-        "impact": "Available in Gemini app and NotebookLM starting today.",
+        "summary": "Advanced reasoning for complex tasks. Available in Gemini app and NotebookLM.",
+        "impact": "Google competes strongly in the AI race.",
         "source": "https://blog.google"
       },
       {
         "time": "04:06",
         "tag": "product",
+        "detailId": "chatgpt-ads",
         "title": "ChatGPT ads go live",
-        "summary": "OpenAI has started showing ads in ChatGPT responses. Early advertisers include Expedia, Qualcomm, Best Buy, and Enterprise Mobility.",
-        "impact": "New revenue stream for OpenAI beyond subscriptions.",
+        "summary": "Expedia, Qualcomm, Best Buy now advertising in ChatGPT responses.",
+        "impact": "New revenue stream, but may face user pushback.",
         "source": "https://www.adweek.com"
       },
       {
         "time": "04:06",
         "tag": "research",
+        "detailId": "ggml-huggingface",
         "title": "GGML and llama.cpp join Hugging Face",
-        "summary": "Major consolidation for local AI: GGML and llama.cpp teams join Hugging Face to ensure long-term progress of local/open-source AI inference.",
-        "impact": "Big win for privacy-first and edge AI applications.",
+        "summary": "Major consolidation for local AI inference. Teams join Hugging Face.",
+        "impact": "Big win for privacy-first and edge AI.",
         "source": "https://huggingface.co/blog"
       },
       {
         "time": "04:06",
         "tag": "policy",
+        "detailId": "meta-65m-pac",
         "title": "Meta spending $65M on AI election influence",
-        "summary": "Meta plans to fund pro-AI super PACs including Republican-focused 'Forge the Future Project' and Democrat-focused 'Making Our Tomorrow'.",
-        "impact": "Backing politicians friendly to AI development.",
+        "summary": "Funding pro-AI super PACs targeting both parties.",
+        "impact": "Could influence AI regulation for years.",
         "source": "https://www.nytimes.com"
       }
     ],
     "research": [
       {
         "time": "04:00",
-        "tag": "research",
+        "tag": "paper",
         "title": "Thinking by Subtraction: Confidence-Driven Contrastive Decoding",
         "authors": "Lexiang Tang et al.",
-        "summary": "A novel training-free decoding method that targets low-confidence tokens during generation. Instead of uniform computation, detects uncertain tokens and selectively refines predictions.",
-        "impact": "Better math reasoning accuracy with shorter outputs. Works with any LLM without retraining.",
-        "arxiv": "https://arxiv.org/abs/2602.18232",
-        "github": "https://github.com/bolo-web/CCD"
+        "summary": "Training-free decoding that targets low-confidence tokens → better reasoning, shorter outputs.",
+        "arxiv": "https://arxiv.org/abs/2602.18232"
       },
       {
         "time": "04:00",
-        "tag": "research",
-        "title": "Analyzing and Improving Chain-of-Thought Monitorability Through Information Theory",
+        "tag": "paper",
+        "title": "CoT Monitorability via Information Theory",
         "authors": "Usman Anwar et al.",
-        "summary": "Uses information theory to formalize when and how LLM chain-of-thought reasoning can be monitored. Identifies two key error sources: information gap and elicitation error.",
-        "impact": "Critical for AI safety — enables better detection of problematic behaviors.",
+        "summary": "Formalizes when/how to monitor chain-of-thought reasoning for AI safety.",
         "arxiv": "https://arxiv.org/abs/2602.18297"
       },
       {
         "time": "04:00",
-        "tag": "research",
-        "title": "On the Semantic and Syntactic Information Encoded in Proto-Tokens",
+        "tag": "paper",
+        "title": "Proto-Tokens for One-Step Text Reconstruction",
         "authors": "Ivan Bondarenko et al.",
-        "summary": "Investigates how frozen LLMs can reconstruct hundreds of tokens from just two learned 'proto-tokens' in a single forward pass.",
-        "impact": "Could enable non-autoregressive seq2seq systems — orders of magnitude faster.",
+        "summary": "LLMs can reconstruct hundreds of tokens from two 'proto-tokens' in one forward pass.",
         "arxiv": "https://arxiv.org/abs/2602.18301"
       },
       {
         "time": "04:00",
-        "tag": "research",
-        "title": "VIRAASAT: Traversing Novel Paths for Indian Cultural Reasoning",
+        "tag": "paper",
+        "title": "VIRAASAT: Indian Cultural Reasoning",
         "authors": "Harshul Surana et al.",
-        "summary": "Introduces 3,200+ multi-hop QA dataset for Indian culture. Proposes SCoM (Symbolic Chain-of-Manipulation) which beats CoT by 20%.",
-        "impact": "Addresses gap in non-Western cultural knowledge in LLMs.",
+        "summary": "3,200+ multi-hop questions. SCoM beats CoT by 20%.",
         "arxiv": "https://arxiv.org/abs/2602.18429"
       },
       {
         "time": "04:00",
-        "tag": "research",
-        "title": "Retrieve-Verify-Retrieve for Comprehensive Question Answering",
+        "tag": "paper",
+        "title": "Retrieve-Verify-Retrieve (RVR)",
         "authors": "Deniz Qian et al.",
-        "summary": "Multi-round retrieval framework designed to maximize answer coverage. Uses a verifier to identify high-quality documents, then augments queries with verified results.",
-        "impact": "10%+ recall improvement on QAMPARI benchmark.",
+        "summary": "Multi-round retrieval → 10%+ recall improvement.",
         "arxiv": "https://arxiv.org/abs/2602.18425"
       }
     ],
@@ -142,41 +147,36 @@
       {
         "time": "06:00",
         "tag": "ma",
-        "title": "Gilead acquires Arcellx for $8B in CAR-T showdown",
-        "summary": "Gilead Sciences inked an $8 billion buyout of Arcellx to strengthen its position in CAR-T cell therapy, setting up direct competition with Johnson & Johnson in multiple myeloma.",
-        "impact": "CAR-T therapies cost $400K+ per dose. This consolidates Gilead's cell therapy portfolio.",
+        "title": "Gilead acquires Arcellx for $8B",
+        "summary": "CAR-T acquisition sets up J&J showdown in multiple myeloma.",
         "source": "https://www.fiercebiotech.com"
       },
       {
         "time": "06:00",
         "tag": "clinical",
-        "title": "Novo's CagriSema fails to beat Eli Lilly's Zepbound",
-        "summary": "Novo's next-gen obesity drug achieved 20.2% weight loss vs 23.6% for Eli Lilly's tirzepatide over 84 weeks — failing non-inferiority. Novo shares -12%, Lilly +4%.",
-        "impact": "Major blow to Novo's obesity comeback. GLP-1 market projected at $100B+.",
+        "title": "Novo's CagriSema loses to Lilly's Zepbound",
+        "summary": "20.2% vs 23.6% weight loss — Novo -12%, Lilly +4%.",
         "source": "https://www.statnews.com"
       },
       {
         "time": "06:00",
         "tag": "product",
         "title": "Generate Biopharma plans $425M IPO",
-        "summary": "AI drug discovery company planning IPO to fund phase 3 clinical trials for antibody-based asthma treatments.",
-        "impact": "AI drug discovery moving from hype to clinical validation.",
+        "summary": "AI drug discovery company funding phase 3 trials.",
         "source": "https://www.fiercebiotech.com"
       },
       {
         "time": "06:00",
         "tag": "policy",
         "title": "FDA new pathway for bespoke gene therapies",
-        "summary": "FDA outlined a new regulatory framework for approving individualized gene therapies, potentially accelerating access for ultra-rare genetic diseases.",
-        "impact": "Could unlock a new category of N-of-1 personalized medicine.",
+        "summary": "Framework for individualized treatments.",
         "source": "https://www.fiercebiotech.com"
       },
       {
         "time": "06:00",
         "tag": "clinical",
         "title": "Gossamer PAH drug fails phase 3",
-        "summary": "Gossamer Bio's experimental drug for pulmonary arterial hypertension failed primary endpoints but company still plans to seek FDA approval based on secondary analyses.",
-        "impact": "Will test FDA's flexibility on borderline efficacy cases.",
+        "summary": "Will seek FDA approval on secondary endpoints.",
         "source": "https://www.statnews.com"
       }
     ],
@@ -185,40 +185,35 @@
         "time": "08:00",
         "tag": "breaking",
         "title": "Trump tariffs in chaos after Supreme Court ruling",
-        "summary": "SCOTUS struck down targeted tariffs under emergency powers. Trump announced 15% across-the-board using different legal authority. Critical minerals exempt.",
-        "impact": "Hardware supply chains face massive uncertainty. Billions in refunds may be owed.",
+        "summary": "15% across-the-board announced. Critical minerals exempt.",
         "source": "https://www.abc.net.au/news"
       },
       {
         "time": "08:00",
         "tag": "policy",
-        "title": "Australia-Canada 'supergroup' alliance forming",
-        "summary": "ASPI urges Australia to partner with Canada, Japan, South Korea on critical minerals rather than relying on US. China controls 60-90% of refined output.",
-        "impact": "Could stabilize EV/battery supply chains outside China.",
+        "title": "Australia-Canada 'supergroup' forming",
+        "summary": "ASPI urges pivot from US-reliance on critical minerals.",
         "source": "https://www.abc.net.au/news"
       },
       {
         "time": "08:00",
         "tag": "policy",
-        "title": "Ukraine war enters 4th year under maximum pressure",
-        "summary": "Both sides under extreme strain. Trump continues pressuring Ukraine to cede territory for peace. War of attrition set to continue.",
-        "impact": "Cyber/energy risks elevated. Semiconductor-grade neon supply concerns.",
+        "title": "Ukraine war enters 4th year",
+        "summary": "Both sides under maximum strain.",
         "source": "https://www.smh.com.au"
       },
       {
         "time": "08:00",
         "tag": "breaking",
         "title": "Trump considers 'much bigger attack' on Iran",
-        "summary": "Reports indicate Trump is considering significant military strike as part of two-pronged approach if diplomacy fails.",
-        "impact": "Strait of Hormuz disruption risk → energy price spike potential.",
+        "summary": "Strait of Hormuz disruption risk.",
         "source": "https://www.smh.com.au"
       },
       {
         "time": "08:00",
         "tag": "policy",
-        "title": "Prince Andrew arrested in Epstein probe",
-        "summary": "Prince Andrew and former minister Peter Mandelson arrested. Royal family in crisis mode. Australia backs removal from succession.",
-        "impact": "UK political instability may affect tech policy temporarily.",
+        "title": "Prince Andrew arrested",
+        "summary": "Royal family crisis as Andrew swept up in Epstein probe.",
         "source": "https://www.smh.com.au"
       }
     ]

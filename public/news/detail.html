@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Detail - Evan Lin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-primary: #1a1816;
+      --bg-secondary: #1f1d1a;
+      --bg-card: rgba(38, 35, 32, 0.6);
+      --text-primary: #e0d8cc;
+      --text-secondary: #c8c0b4;
+      --text-muted: #8a8680;
+      --text-subtle: #6a6660;
+      --accent: #7a9088;
+      --border: rgba(114, 110, 102, 0.25);
+    }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+    .container { max-width: 800px; margin: 0 auto; padding: 100px 24px 48px; }
+    
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; margin-bottom: 24px; font-size: 0.9rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--text-primary); }
+
+    .meta { margin-bottom: 24px; }
+    .meta-date { font-size: 0.85rem; color: var(--text-subtle); margin-bottom: 8px; }
+    .meta-tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-right: 8px;
+    }
+    .meta-tag.breaking { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+    .meta-tag.product { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+    .meta-tag.research { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+    .meta-tag.policy { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+    .meta-tag.clinical { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .meta-tag.ma { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
+    .meta-tag.paper { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+    .meta-time { font-size: 0.85rem; color: var(--text-muted); }
+
+    .title { font-size: 2rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; margin-bottom: 16px; }
+    
+    .summary {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 32px;
+    }
+
+    .section { margin-bottom: 32px; }
+    .section-title { font-size: 1rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 1px solid var(--border); }
+    .section-content { color: var(--text-secondary); font-size: 0.95rem; }
+    .section-content ul, .section-content ol { margin: 12px 0; padding-left: 24px; }
+    .section-content li { margin-bottom: 8px; }
+
+    .highlight-box {
+      background: rgba(122, 144, 136, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .highlight-box strong { color: var(--accent); }
+
+    .source-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-top: 32px;
+    }
+    .source-label { font-size: 0.8rem; color: var(--text-subtle); margin-bottom: 8px; }
+    .source-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+    .source-link:hover { text-decoration: underline; }
+
+    .related { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .related-title { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 16px; }
+    .related-item { display: block; padding: 12px 16px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px; text-decoration: none; color: var(--text-primary); transition: all 0.2s; }
+    .related-item:hover { border-color: var(--accent); }
+
+    .loading { text-align: center; padding: 48px; color: var(--text-muted); }
+    .error { text-align: center; padding: 48px; color: #f87171; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back-link">← Back to News</a>
+    <div id="content"><div class="loading">Loading...</div></div>
+  </div>
+
+  <script>
+    const ARTICLES = {
+      'anthropic-30b': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'breaking',
+        title: 'Anthropic Raises $30 Billion at $380 Billion Valuation',
+        summary: 'Anthropic has raised $30 billion in Series G funding at a $380 billion post-money valuation, making it one of the most valuable private companies in the world.',
+        sections: [
+          {
+            title: 'The Deal',
+            content: `<p>Anthropic closed a massive $30 billion Series G funding round, valuing the company at $380 billion post-money. The round was led by Singapore's sovereign wealth fund GIC and venture capital firm Coatue.</p>
+            <p>This brings Anthropic's total funding to over $45 billion, making it one of the best-funded AI startups in history, rivaling even OpenAI's war chest.</p>`
+          },
+          {
+            title: 'Key Numbers',
+            content: `<ul>
+              <li><strong>Valuation:</strong> $380 billion post-money</li>
+              <li><strong>Raise Amount:</strong> $30 billion Series G</li>
+              <li><strong>Revenue:</strong> $14 billion run-rate</li>
+              <li><strong>Growth:</strong> 10x annually for 3 consecutive years</li>
+              <li><strong>Lead Investors:</strong> GIC, Coatue</li>
+            </ul>`
+          },
+          {
+            title: 'What This Means',
+            content: `<p>The funding will fuel several key areas:</p>
+            <ul>
+              <li><strong>Frontier Research:</strong> Advancing Claude's capabilities and safety</li>
+              <li><strong>Infrastructure:</strong> Building more compute capacity for training</li>
+              <li><strong>Product Development:</strong> Enterprise features and consumer applications</li>
+              <li><strong>Talent:</strong> Hiring top AI researchers and engineers</li>
+            </ul>
+            <p>This positions Anthropic strongly against competitors like OpenAI, Google DeepMind, and Meta AI in the race to build safe, capable AI systems.</p>`
+          },
+          {
+            title: 'Market Context',
+            content: `<p>The massive raise comes amid intensifying competition in the AI industry. Key dynamics:</p>
+            <ul>
+              <li>Enterprise demand for AI tools continues to accelerate</li>
+              <li>Claude has become the preferred model for coding and software development</li>
+              <li>AI safety focus differentiates Anthropic from competitors</li>
+              <li>Investor appetite for AI remains strong despite broader market uncertainty</li>
+            </ul>`
+          }
+        ],
+        impact: 'This is one of the largest private funding rounds in history, signaling continued massive investment in AI. It values Anthropic higher than many Fortune 500 companies.',
+        source: 'https://www.anthropic.com/news',
+        sourceName: 'Anthropic'
+      },
+      'nvidia-openai-talks': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'breaking',
+        title: 'Nvidia and OpenAI in Major Investment Talks',
+        summary: 'Reports suggest Nvidia and OpenAI are close to a significant new investment deal that could reshape the AI infrastructure landscape.',
+        sections: [
+          {
+            title: 'What We Know',
+            content: `<p>According to sources familiar with the matter, Nvidia and OpenAI are in advanced discussions about a significant investment deal. The talks could lead to:</p>
+            <ul>
+              <li>Deeper integration between Nvidia hardware and OpenAI software</li>
+              <li>Potential preferential access to Nvidia's latest chips</li>
+              <li>Joint development of AI infrastructure solutions</li>
+            </ul>`
+          },
+          {
+            title: 'Strategic Implications',
+            content: `<p>This partnership could significantly impact the AI industry:</p>
+            <ul>
+              <li><strong>For OpenAI:</strong> More reliable access to compute resources</li>
+              <li><strong>For Nvidia:</strong> Guaranteed demand from a leading AI company</li>
+              <li><strong>For Competitors:</strong> Potential disadvantage in chip access</li>
+              <li><strong>For the Industry:</strong> Accelerated AI development pace</li>
+            </ul>`
+          }
+        ],
+        impact: 'Could create deeper integration between AI hardware and software, potentially reshaping competitive dynamics in the industry.',
+        source: 'https://www.theverge.com/ai-artificial-intelligence',
+        sourceName: 'The Verge'
+      },
+      'claude-opus-46': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'product',
+        title: 'Claude Opus 4.6 Released',
+        summary: 'Anthropic has released Claude Opus 4.6, an upgraded version of their smartest model, delivering industry-leading performance across multiple domains.',
+        sections: [
+          {
+            title: 'Key Improvements',
+            content: `<p>Opus 4.6 shows significant improvements across several key areas:</p>
+            <ul>
+              <li><strong>Agentic Coding:</strong> Autonomous code generation, debugging, and refactoring</li>
+              <li><strong>Computer Use:</strong> Operating computers like a human user</li>
+              <li><strong>Tool Use:</strong> Better integration with external tools and APIs</li>
+              <li><strong>Search:</strong> Enhanced information retrieval and synthesis</li>
+              <li><strong>Finance:</strong> Improved numerical reasoning for financial analysis</li>
+            </ul>`
+          },
+          {
+            title: 'Performance Benchmarks',
+            content: `<p>Opus 4.6 leads the industry on several key benchmarks:</p>
+            <ul>
+              <li>SWE-bench (coding): #1 ranking</li>
+              <li>Multi-step reasoning: Significant improvement</li>
+              <li>Tool calling accuracy: Industry-leading</li>
+              <li>Complex task completion: Best-in-class</li>
+            </ul>`
+          },
+          {
+            title: 'Availability',
+            content: `<p>Claude Opus 4.6 is available now through:</p>
+            <ul>
+              <li>Anthropic API (direct)</li>
+              <li>Claude.ai (consumer)</li>
+              <li>AWS Bedrock</li>
+              <li>Google Cloud Vertex AI</li>
+            </ul>`
+          }
+        ],
+        impact: 'Strengthens Claude\'s position as the preferred model for enterprise AI, particularly in software development and complex reasoning tasks.',
+        source: 'https://www.anthropic.com/news',
+        sourceName: 'Anthropic'
+      },
+      'gemini-31': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'product',
+        title: 'Gemini 3.1 Pro Rolling Out',
+        summary: "Google's new Gemini 3.1 Pro model is now available, designed for complex tasks where simple answers aren't enough.",
+        sections: [
+          {
+            title: 'What\'s New',
+            content: `<p>Gemini 3.1 Pro focuses on advanced reasoning capabilities:</p>
+            <ul>
+              <li>Better synthesis of complex information</li>
+              <li>Clear, visual explanations of complicated topics</li>
+              <li>Enhanced creative project support</li>
+              <li>Improved multi-turn conversation handling</li>
+            </ul>`
+          },
+          {
+            title: 'Where to Use It',
+            content: `<p>Gemini 3.1 Pro is available in:</p>
+            <ul>
+              <li>Gemini app (consumer)</li>
+              <li>Google AI Studio</li>
+              <li>Vertex AI (enterprise)</li>
+              <li>NotebookLM</li>
+            </ul>`
+          }
+        ],
+        impact: 'Google continues to compete strongly in the AI race, with Gemini 3.1 Pro offering an alternative to Claude and GPT for complex reasoning tasks.',
+        source: 'https://blog.google',
+        sourceName: 'Google Blog'
+      },
+      'chatgpt-ads': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'product',
+        title: 'ChatGPT Ads Go Live',
+        summary: 'OpenAI has started showing advertisements in ChatGPT responses, marking a significant shift in monetization strategy.',
+        sections: [
+          {
+            title: 'How It Works',
+            content: `<p>Ads can now appear in ChatGPT responses, potentially triggered after just one prompt. The initial rollout includes:</p>
+            <ul>
+              <li>Sponsored suggestions in responses</li>
+              <li>Product recommendations with affiliate links</li>
+              <li>Brand partnerships for specific query types</li>
+            </ul>`
+          },
+          {
+            title: 'Early Advertisers',
+            content: `<ul>
+              <li><strong>Expedia:</strong> Travel recommendations</li>
+              <li><strong>Qualcomm:</strong> Technology products</li>
+              <li><strong>Best Buy:</strong> Consumer electronics</li>
+              <li><strong>Enterprise Mobility:</strong> Car rental services</li>
+            </ul>`
+          },
+          {
+            title: 'Implications',
+            content: `<p>This move signals OpenAI's need to diversify revenue beyond subscriptions:</p>
+            <ul>
+              <li>Advertising could subsidize free tier costs</li>
+              <li>May affect user experience and trust</li>
+              <li>Competitors like Claude and Gemini remain ad-free</li>
+              <li>Could influence the broader AI industry's monetization strategies</li>
+            </ul>`
+          }
+        ],
+        impact: 'New revenue stream for OpenAI, but may face user pushback. Competitors have an opportunity to differentiate on ad-free experience.',
+        source: 'https://www.adweek.com',
+        sourceName: 'Adweek'
+      },
+      'ggml-huggingface': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'research',
+        title: 'GGML and llama.cpp Join Hugging Face',
+        summary: 'Two of the most important projects for local AI inference have joined Hugging Face to ensure long-term progress of open-source AI.',
+        sections: [
+          {
+            title: 'What This Means',
+            content: `<p>GGML (the tensor library) and llama.cpp (the popular inference tool) teams are joining Hugging Face. This consolidation:</p>
+            <ul>
+              <li>Ensures sustainable development of local AI tools</li>
+              <li>Integrates better with the Hugging Face ecosystem</li>
+              <li>Provides more resources for optimization</li>
+              <li>Strengthens the open-source AI community</li>
+            </ul>`
+          },
+          {
+            title: 'Why It Matters',
+            content: `<p>Local AI inference is crucial for:</p>
+            <ul>
+              <li><strong>Privacy:</strong> Running models without sending data to cloud</li>
+              <li><strong>Cost:</strong> No API fees for inference</li>
+              <li><strong>Offline Use:</strong> Working without internet</li>
+              <li><strong>Edge Deployment:</strong> Running on phones, IoT devices</li>
+            </ul>`
+          }
+        ],
+        impact: 'Big win for local/open-source AI. Privacy-first applications and edge AI will benefit from accelerated development.',
+        source: 'https://huggingface.co/blog/ggml-joins-hf',
+        sourceName: 'Hugging Face Blog'
+      },
+      'meta-65m-pac': {
+        date: '2026-02-24',
+        time: '04:06',
+        tag: 'policy',
+        title: 'Meta Spending $65M on AI Election Influence',
+        summary: 'Meta plans to fund pro-AI super PACs to back politicians friendly to AI development and push back against restrictive legislation.',
+        sections: [
+          {
+            title: 'The Strategy',
+            content: `<p>Meta is planning to spend $65 million on political influence through super PACs:</p>
+            <ul>
+              <li><strong>Forge the Future Project:</strong> Republican-focused</li>
+              <li><strong>Making Our Tomorrow:</strong> Democrat-focused</li>
+              <li><strong>Goal:</strong> Support politicians favorable to AI development</li>
+            </ul>`
+          },
+          {
+            title: 'Why Now',
+            content: `<p>Several factors are driving this political push:</p>
+            <ul>
+              <li>Rising AI regulation proposals in Congress</li>
+              <li>State-level AI legislation spreading</li>
+              <li>International AI governance frameworks being established</li>
+              <li>Need to shape favorable regulatory environment</li>
+            </ul>`
+          }
+        ],
+        impact: 'Tech companies are becoming more politically active. This could influence AI regulation for years to come.',
+        source: 'https://www.nytimes.com',
+        sourceName: 'New York Times'
+      }
+    };
+
+    // Get article ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const article = ARTICLES[id];
+
+    if (article) {
+      document.title = article.title + ' - Evan Lin News';
+      
+      let html = `
+        <div class="meta">
+          <div class="meta-date">${new Date(article.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</div>
+          <span class="meta-tag ${article.tag}">${article.tag.toUpperCase()}</span>
+          <span class="meta-time">${article.time}</span>
+        </div>
+        <h1 class="title">${article.title}</h1>
+        <div class="summary">${article.summary}</div>
+      `;
+
+      article.sections.forEach(section => {
+        html += `
+          <div class="section">
+            <div class="section-title">${section.title}</div>
+            <div class="section-content">${section.content}</div>
+          </div>
+        `;
+      });
+
+      html += `
+        <div class="highlight-box">
+          <strong>Impact:</strong> ${article.impact}
+        </div>
+        <div class="source-box">
+          <div class="source-label">Source</div>
+          <a href="${article.source}" target="_blank" class="source-link">${article.sourceName} →</a>
+        </div>
+      `;
+
+      document.getElementById('content').innerHTML = html;
+    } else {
+      document.getElementById('content').innerHTML = `
+        <div class="error">
+          <p>Article not found</p>
+          <a href="index.html" class="back-link" style="margin-top: 20px;">← Back to News</a>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
