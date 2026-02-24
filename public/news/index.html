@@ -10,15 +10,17 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
       --bg-primary: #1a1816;
-      --bg-card: rgba(38, 35, 32, 0.8);
-      --bg-card-hover: rgba(50, 47, 44, 0.9);
+      --bg-secondary: #1f1d1a;
+      --bg-card: rgba(38, 35, 32, 0.6);
+      --bg-card-hover: rgba(50, 47, 44, 0.8);
       --text-primary: #e0d8cc;
+      --text-secondary: #c8c0b4;
       --text-muted: #8a8680;
       --text-subtle: #6a6660;
       --accent: #7a9088;
-      --accent-light: #6a8a8e;
-      --border: rgba(114, 110, 102, 0.3);
-      --border-strong: rgba(122, 144, 136, 0.5);
+      --accent-hover: #8aa098;
+      --border: rgba(114, 110, 102, 0.25);
+      --border-strong: rgba(122, 144, 136, 0.4);
     }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
@@ -27,50 +29,70 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-    .container { max-width: 1200px; margin: 0 auto; padding: 100px 24px 48px; }
-    
-    /* Header */
-    .page-header { margin-bottom: 40px; }
-    .page-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--text-primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-    .page-subtitle { color: var(--text-muted); font-size: 1rem; }
-    .time-display { font-size: 0.9rem; color: var(--text-subtle); margin-top: 8px; }
 
-    /* About Section */
-    .about-section {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 32px;
-      backdrop-filter: blur(10px);
+    /* Layout */
+    .container { max-width: 1100px; margin: 0 auto; padding: 100px 24px 48px; }
+    .layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; }
+    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+
+    /* Header */
+    .page-header { margin-bottom: 32px; }
+    .page-title { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
+    .current-date { 
+      display: inline-block; 
+      margin-top: 12px; 
+      padding: 6px 14px; 
+      background: var(--bg-card); 
+      border: 1px solid var(--border); 
+      border-radius: 20px; 
+      font-size: 0.85rem; 
+      color: var(--accent);
     }
-    .about-title { font-size: 1.1rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-    .about-content { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
-    .about-content strong { color: var(--text-primary); }
-    .about-content ul { margin: 12px 0; padding-left: 20px; }
-    .about-content li { margin-bottom: 6px; }
+
+    /* Sidebar */
+    .sidebar { position: sticky; top: 100px; height: fit-content; }
+    .sidebar-section { margin-bottom: 24px; }
+    .sidebar-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); margin-bottom: 12px; }
+    .nav-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      margin-bottom: 4px;
+    }
+    .nav-item:hover { background: var(--bg-card); color: var(--text-primary); }
+    .nav-item.active { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border-strong); }
+    .nav-item .count { font-size: 0.8rem; opacity: 0.6; }
+    .nav-item .icon { margin-right: 10px; }
 
     /* Stats */
-    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
-    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
-    .stat-card {
+    .stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
+    .stat-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
       background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      text-align: center;
-      transition: all 0.3s;
-    }
-    .stat-card:hover { border-color: var(--border-strong); background: var(--bg-card-hover); }
-    .stat-value { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
-    .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
-
-    /* Filter Tabs */
-    .filter-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
-    .filter-tab {
-      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
+    }
+    .stat-badge .num { font-weight: 600; color: var(--text-primary); }
+    .stat-badge .label { color: var(--text-muted); }
+
+    /* Date Selector */
+    .date-selector { margin-bottom: 24px; }
+    .date-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+    .date-tab {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.2s;
@@ -78,74 +100,92 @@
       background: transparent;
       color: var(--text-muted);
     }
-    .filter-tab:hover { border-color: var(--accent); color: var(--text-primary); }
-    .filter-tab.active { background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-color: transparent; color: var(--text-primary); }
+    .date-tab:hover { border-color: var(--accent); color: var(--text-primary); }
+    .date-tab.active { background: var(--accent); border-color: var(--accent); color: var(--bg-primary); }
 
     /* Cards */
-    .cards-grid { display: flex; flex-direction: column; gap: 16px; }
-    .card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      transition: all 0.3s;
-      backdrop-filter: blur(10px);
-    }
-    .card:hover { border-color: var(--border-strong); }
-    .card-header {
-      padding: 20px 24px;
+    .section { margin-bottom: 32px; }
+    .section-header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      cursor: pointer;
-      transition: background 0.2s;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
     }
-    .card-header:hover { background: var(--bg-card-hover); }
-    .card-left { display: flex; align-items: center; gap: 16px; }
-    .card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
-    .card-icon.ai { background: rgba(59, 130, 246, 0.15); }
-    .card-icon.research { background: rgba(139, 92, 246, 0.15); }
-    .card-icon.industry { background: rgba(16, 185, 129, 0.15); }
-    .card-icon.global { background: rgba(249, 115, 22, 0.15); }
-    .card-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
-    .card-meta { font-size: 0.85rem; color: var(--text-muted); }
-    .card-badge { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); background: rgba(114, 110, 102, 0.2); padding: 4px 12px; border-radius: 20px; }
-    .card-expand { color: var(--text-subtle); transition: transform 0.3s; font-size: 0.9rem; }
-    .card.expanded .card-expand { transform: rotate(180deg); }
-    .card-content { border-top: 1px solid var(--border); padding: 8px; display: none; }
-    .card.expanded .card-content { display: block; }
+    .section-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
+    .section-count { font-size: 0.8rem; color: var(--text-muted); background: var(--bg-card); padding: 4px 10px; border-radius: 12px; }
 
-    /* Items */
-    .item { padding: 16px 20px; border-radius: 12px; margin-bottom: 8px; transition: background 0.2s; }
-    .item:last-child { margin-bottom: 0; }
-    .item:hover { background: rgba(114, 110, 102, 0.1); }
-    .item-tag {
-      display: inline-block;
-      font-size: 0.7rem;
+    .news-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 10px;
+      transition: all 0.2s;
+    }
+    .news-item:hover { border-color: var(--border-strong); background: var(--bg-card-hover); }
+    .news-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .news-time { font-size: 0.75rem; color: var(--text-subtle); font-weight: 500; }
+    .news-tag {
+      font-size: 0.65rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       padding: 3px 8px;
       border-radius: 4px;
-      margin-bottom: 8px;
     }
-    .item-tag.breaking { background: rgba(239, 68, 68, 0.2); color: #f87171; }
-    .item-tag.product { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
-    .item-tag.research { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
-    .item-tag.policy { background: rgba(249, 115, 22, 0.2); color: #fb923c; }
-    .item-tag.clinical { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
-    .item-tag.ma { background: rgba(236, 72, 153, 0.2); color: #f472b6; }
-    .item-title { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
-    .item-summary { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+    .news-tag.breaking { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+    .news-tag.product { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+    .news-tag.research { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+    .news-tag.policy { background: rgba(249, 115, 22, 0.15); color: #fb923c; }
+    .news-tag.clinical { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+    .news-tag.ma { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
+    .news-tag.paper { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
+    .news-title { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; line-height: 1.4; }
+    .news-summary { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 8px; }
+    .news-impact { font-size: 0.8rem; color: var(--text-secondary); padding: 10px 12px; background: rgba(122, 144, 136, 0.1); border-radius: 8px; border-left: 3px solid var(--accent); }
+    .news-impact strong { color: var(--accent); }
+    .news-source { font-size: 0.75rem; color: var(--text-subtle); margin-top: 10px; }
+    .news-source a { color: var(--accent); text-decoration: none; }
+    .news-source a:hover { text-decoration: underline; }
+    .news-authors { font-size: 0.8rem; color: var(--text-subtle); margin-top: 6px; font-style: italic; }
+
+    /* About */
+    .about-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+    .about-title { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-bottom: 10px; }
+    .about-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
+    .about-text ul { margin: 10px 0; padding-left: 18px; }
+    .about-text li { margin-bottom: 4px; }
+
+    /* Back */
+    .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--text-primary); }
 
     /* Footer */
-    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-subtle); font-size: 0.85rem; }
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-subtle); font-size: 0.8rem; }
     .footer a { color: var(--accent); text-decoration: none; }
-    .footer a:hover { text-decoration: underline; }
 
-    /* Back link */
-    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; margin-bottom: 24px; font-size: 0.9rem; transition: color 0.2s; }
-    .back-link:hover { color: var(--text-primary); }
+    /* Loading */
+    .loading { text-align: center; padding: 48px; color: var(--text-muted); }
+    .error { text-align: center; padding: 48px; color: #f87171; }
+
+    /* Empty state */
+    .empty { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.9rem; }
+
+    /* Mobile nav */
+    .mobile-nav { display: none; }
+    @media (max-width: 900px) {
+      .mobile-nav { display: flex; gap: 8px; margin-bottom: 24px; overflow-x: auto; padding-bottom: 8px; }
+      .mobile-nav-item { flex-shrink: 0; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); cursor: pointer; }
+      .mobile-nav-item.active { background: var(--accent); border-color: var(--accent); color: var(--bg-primary); }
+    }
   </style>
 </head>
 <body>
@@ -154,140 +194,237 @@
     
     <header class="page-header">
       <h1 class="page-title">📰 News Dashboard</h1>
-      <p class="page-subtitle">AI-curated news from multiple sources, updated throughout the day</p>
-      <p class="time-display" id="time">Loading...</p>
+      <p class="page-subtitle">AI-curated news, updated throughout the day</p>
+      <span class="current-date" id="currentDate">Loading...</span>
     </header>
 
-    <!-- About Section -->
-    <section class="about-section">
-      <h2 class="about-title">🤖 About This Dashboard</h2>
-      <div class="about-content">
-        <p>This news dashboard is automatically generated by <strong>ClawBot</strong>, an AI assistant that monitors multiple sources 24/7 to bring you the most relevant updates.</p>
-        <ul>
-          <li><strong>AI News:</strong> OpenAI, Anthropic, Google DeepMind, Meta AI, Hugging Face, and more</li>
-          <li><strong>Research:</strong> Daily papers from Arxiv (cs.AI, cs.LG, cs.CL)</li>
-          <li><strong>Industry:</strong> Sector-specific news (rotates daily: Healthcare, Fintech, SaaS, etc.)</li>
-          <li><strong>Global:</strong> World events with tech/economic impact</li>
-        </ul>
-        <p><strong>Update Schedule:</strong> Every 2 hours • <strong>Sources:</strong> 15+ trusted outlets • <strong>Filtering:</strong> AI-prioritized by relevance and impact</p>
-      </div>
-    </section>
-
     <!-- Stats -->
-    <div class="stats-grid">
-      <div class="stat-card"><div class="stat-value">14</div><div class="stat-label">AI News</div></div>
-      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Research Papers</div></div>
-      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Industry</div></div>
-      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Global</div></div>
-    </div>
+    <div class="stats-row" id="statsRow"></div>
 
-    <!-- Filter Tabs -->
-    <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all">All</button>
-      <button class="filter-tab" data-filter="ai">🤖 AI News</button>
-      <button class="filter-tab" data-filter="research">📚 Research</button>
-      <button class="filter-tab" data-filter="industry">🏢 Industry</button>
-      <button class="filter-tab" data-filter="global">🌍 Global</button>
-    </div>
+    <!-- Mobile Nav -->
+    <div class="mobile-nav" id="mobileNav"></div>
 
-    <!-- Cards -->
-    <div class="cards-grid">
+    <div class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-section">
+          <div class="sidebar-title">Categories</div>
+          <div id="categoryNav"></div>
+        </div>
+        <div class="sidebar-section">
+          <div class="sidebar-title">About</div>
+          <div class="about-box">
+            <div class="about-title">How It Works</div>
+            <div class="about-text">
+              <ul>
+                <li>Monitors 15+ sources</li>
+                <li>Updates every 2 hours</li>
+                <li>AI-prioritized content</li>
+              </ul>
+              Categories rotate daily for industry news.
+            </div>
+          </div>
+        </div>
+      </aside>
 
-      <article class="card" data-type="ai">
-        <div class="card-header" onclick="toggle(this)">
-          <div class="card-left"><div class="card-icon ai">⚡</div><div><div class="card-title">AI News Update</div><div class="card-meta">DeepSeek/Claude, Gmail Agent, Stargate • 08:02 AM</div></div></div>
-          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">4 items</span><span class="card-expand">▼</span></div>
-        </div>
-        <div class="card-content">
-          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">DeepSeek allegedly targeted Claude's reasoning</div><div class="item-summary">Reports suggest DeepSeek used Claude outputs to train models, generating "censorship-safe alternatives" to sensitive questions.</div></div>
-          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Meta researcher's AI deleted her Gmail</div><div class="item-summary">Summer Yue's AI agent "lost" safety instruction and deleted her inbox — a cautionary tale for AI agent safety.</div></div>
-          <div class="item"><span class="item-tag product">Product</span><div class="item-title">OpenAI Stargate struggles</div><div class="item-summary">High costs led to separate deals with SoftBank & Oracle instead of joint venture.</div></div>
-          <div class="item"><span class="item-tag product">Product</span><div class="item-title">X working on 'Made with AI' labels</div><div class="item-summary">Response to India's C2PA mandate? X abandoned the standard under Musk.</div></div>
-        </div>
-      </article>
-
-      <article class="card" data-type="ai">
-        <div class="card-header" onclick="toggle(this)">
-          <div class="card-left"><div class="card-icon ai">🤖</div><div><div class="card-title">AI News Morning</div><div class="card-meta">Anthropic $30B, Gemini 3.1, ChatGPT Ads • 04:06 AM</div></div></div>
-          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">7 items</span><span class="card-expand">▼</span></div>
-        </div>
-        <div class="card-content">
-          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Anthropic raises $30B at $380B valuation</div><div class="item-summary">Series G led by GIC & Coatue. $14B run-rate revenue, 10x annual growth for 3 years.</div></div>
-          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Nvidia-OpenAI investment talks</div><div class="item-summary">Major new deal reportedly in the works between the two AI giants.</div></div>
-          <div class="item"><span class="item-tag product">Product</span><div class="item-title">Claude Opus 4.6 released</div><div class="item-summary">Industry-leading on agentic coding, computer use, tool use.</div></div>
-          <div class="item"><span class="item-tag product">Product</span><div class="item-title">Gemini 3.1 Pro rolling out</div><div class="item-summary">Advanced reasoning for complex tasks. Available in Gemini app & NotebookLM.</div></div>
-          <div class="item"><span class="item-tag product">Product</span><div class="item-title">ChatGPT ads go live</div><div class="item-summary">Expedia, Qualcomm, Best Buy, Enterprise Mobility advertising in responses.</div></div>
-          <div class="item"><span class="item-tag research">Research</span><div class="item-title">GGML + llama.cpp join Hugging Face</div><div class="item-summary">Big win for local/open-source AI inference ecosystem.</div></div>
-          <div class="item"><span class="item-tag policy">Policy</span><div class="item-title">Meta spending $65M on AI election influence</div><div class="item-summary">Pro-AI super PACs targeting both parties.</div></div>
-        </div>
-      </article>
-
-      <article class="card" data-type="research">
-        <div class="card-header" onclick="toggle(this)">
-          <div class="card-left"><div class="card-icon research">📄</div><div><div class="card-title">Arxiv Research</div><div class="card-meta">CoT Monitorability, Proto-Tokens, VIRAASAT • 04:00 AM</div></div></div>
-          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 papers</span><span class="card-expand">▼</span></div>
-        </div>
-        <div class="card-content">
-          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Thinking by Subtraction: Confidence-Driven Contrastive Decoding</div><div class="item-summary">Training-free decoding targeting low-confidence tokens → better reasoning, shorter outputs.</div></div>
-          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">CoT Monitorability via Information Theory</div><div class="item-summary">Formalizes when/how to monitor chain-of-thought reasoning — critical for AI safety.</div></div>
-          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Proto-Tokens for One-Step Text Reconstruction</div><div class="item-summary">LLMs can reconstruct hundreds of tokens from two "proto-tokens" in one forward pass.</div></div>
-          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">VIRAASAT: Indian Cultural Reasoning</div><div class="item-summary">3,200+ multi-hop questions. SCoM beats CoT by 20% on cultural reasoning.</div></div>
-          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Retrieve-Verify-Retrieve (RVR)</div><div class="item-summary">Multi-round retrieval → 10%+ recall improvement on QAMPARI benchmark.</div></div>
-        </div>
-      </article>
-
-      <article class="card" data-type="industry">
-        <div class="card-header" onclick="toggle(this)">
-          <div class="card-left"><div class="card-icon industry">💊</div><div><div class="card-title">Healthcare & Biotech</div><div class="card-meta">Gilead $8B, Novo vs Lilly, FDA Gene Therapy • 06:00 AM</div></div></div>
-          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">▼</span></div>
-        </div>
-        <div class="card-content">
-          <div class="item"><span class="item-tag ma">M&A</span><div class="item-title">Gilead acquires Arcellx for $8B</div><div class="item-summary">CAR-T acquisition sets up J&J showdown in multiple myeloma market.</div></div>
-          <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Novo's CagriSema loses to Lilly's Zepbound</div><div class="item-summary">20.2% vs 23.6% weight loss — Novo shares -12%, Lilly +4%.</div></div>
-          <div class="item"><span class="item-tag product">IPO</span><div class="item-title">Generate Biopharma plans $425M IPO</div><div class="item-summary">AI drug discovery company funding phase 3 asthma antibody trials.</div></div>
-          <div class="item"><span class="item-tag policy">Regulatory</span><div class="item-title">FDA new pathway for bespoke gene therapies</div><div class="item-summary">Framework for individualized treatments for ultra-rare diseases.</div></div>
-          <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Gossamer PAH drug fails phase 3</div><div class="item-summary">Will seek FDA approval on secondary endpoints.</div></div>
-        </div>
-      </article>
-
-      <article class="card" data-type="global">
-        <div class="card-header" onclick="toggle(this)">
-          <div class="card-left"><div class="card-icon global">🌐</div><div><div class="card-title">Global News</div><div class="card-meta">Trump Tariffs, Australia-Canada Alliance, Ukraine • 08:00 AM</div></div></div>
-          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">▼</span></div>
-        </div>
-        <div class="card-content">
-          <div class="item"><span class="item-tag breaking">US Trade</span><div class="item-title">Trump tariffs in chaos after Supreme Court ruling</div><div class="item-summary">15% across-the-board announced. Critical minerals exempt. Hardware supply chains uncertain.</div></div>
-          <div class="item"><span class="item-tag policy">Minerals</span><div class="item-title">Australia-Canada "supergroup" forming</div><div class="item-summary">ASPI urges pivot from US-reliance. China controls 60-90% of refined output.</div></div>
-          <div class="item"><span class="item-tag policy">Ukraine</span><div class="item-title">War enters 4th year</div><div class="item-summary">Both sides under maximum strain. Cyber/energy risks elevated.</div></div>
-          <div class="item"><span class="item-tag breaking">Iran</span><div class="item-title">Trump considers "much bigger attack"</div><div class="item-summary">Strait of Hormuz disruption risk → energy price spike potential.</div></div>
-          <div class="item"><span class="item-tag policy">UK</span><div class="item-title">Prince Andrew arrested</div><div class="item-summary">Royal family crisis as Andrew swept up in Epstein probe.</div></div>
-        </div>
-      </article>
-
+      <!-- Main -->
+      <main id="mainContent">
+        <div class="loading">Loading news...</div>
+      </main>
     </div>
 
     <footer class="footer">
-      <p>Generated by <a href="#">ClawBot</a> • Last updated: <span id="updateTime"></span></p>
+      <p>Generated by <a href="#">ClawBot</a> • Data from Arxiv, The Verge, STAT News, and more</p>
     </footer>
   </div>
 
   <script>
-    function updateTime() {
-      const now = new Date();
-      document.getElementById('time').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + ' • ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-      document.getElementById('updateTime').textContent = now.toLocaleString();
-    }
-    updateTime();
-    setInterval(updateTime, 60000);
+    const CATEGORIES = [
+      { id: 'all', name: 'All News', icon: '📊' },
+      { id: 'ai', name: 'AI News', icon: '🤖' },
+      { id: 'research', name: 'Research', icon: '📚' },
+      { id: 'industry', name: 'Industry', icon: '🏢' },
+      { id: 'global', name: 'Global', icon: '🌍' }
+    ];
 
-    function toggle(header) { header.closest('.card').classList.toggle('expanded'); }
-    
-    function filter(type) {
-      document.querySelectorAll('.filter-tab').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
-      document.querySelectorAll('.card').forEach(card => card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none');
+    let newsData = {};
+    let dates = [];
+    let currentDate = '';
+    let currentCategory = 'all';
+
+    // Format date
+    function formatDate(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     }
-    
-    document.querySelectorAll('.filter-tab').forEach(el => el.addEventListener('click', () => filter(el.dataset.filter)));
+
+    function formatDateShort(dateStr) {
+      const d = new Date(dateStr);
+      const today = new Date();
+      const yesterday = new Date(today);
+      yesterday.setDate(yesterday.getDate() - 1);
+      
+      if (dateStr === today.toISOString().split('T')[0]) return 'Today';
+      if (dateStr === yesterday.toISOString().split('T')[0]) return 'Yesterday';
+      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    // Get tag display name
+    function getTagName(tag) {
+      const names = {
+        breaking: 'Breaking',
+        product: 'Product',
+        research: 'Research',
+        policy: 'Policy',
+        clinical: 'Clinical',
+        ma: 'M&A',
+        paper: 'Paper'
+      };
+      return names[tag] || tag;
+    }
+
+    // Render news item
+    function renderItem(item, type) {
+      let html = `<div class="news-item">
+        <div class="news-meta">
+          <span class="news-time">${item.time}</span>
+          <span class="news-tag ${item.tag}">${getTagName(item.tag)}</span>
+        </div>
+        <div class="news-title">${item.title}</div>
+        <div class="news-summary">${item.summary}</div>`;
+      
+      if (item.impact) {
+        html += `<div class="news-impact"><strong>Impact:</strong> ${item.impact}</div>`;
+      }
+      
+      if (item.authors) {
+        html += `<div class="news-authors">${item.authors}</div>`;
+      }
+      
+      const source = item.arxiv || item.source;
+      if (source) {
+        html += `<div class="news-source">Source: <a href="${source}" target="_blank">${item.arxiv ? 'arXiv' : new URL(source).hostname}</a></div>`;
+      }
+      
+      html += `</div>`;
+      return html;
+    }
+
+    // Render category section
+    function renderSection(items, category) {
+      if (!items || items.length === 0) return '';
+      
+      const cat = CATEGORIES.find(c => c.id === category);
+      let html = `<div class="section" data-category="${category}">
+        <div class="section-header">
+          <div class="section-title">${cat.icon} ${cat.name}</div>
+          <span class="section-count">${items.length}</span>
+        </div>`;
+      
+      items.forEach(item => {
+        html += renderItem(item, category);
+      });
+      
+      html += `</div>`;
+      return html;
+    }
+
+    // Render main content
+    function renderContent() {
+      const data = newsData[currentDate];
+      if (!data) {
+        document.getElementById('mainContent').innerHTML = '<div class="empty">No news for this date</div>';
+        return;
+      }
+
+      let html = '';
+      
+      if (currentCategory === 'all') {
+        CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
+          if (data[cat.id] && data[cat.id].length > 0) {
+            html += renderSection(data[cat.id], cat.id);
+          }
+        });
+      } else {
+        if (data[currentCategory]) {
+          html += renderSection(data[currentCategory], currentCategory);
+        }
+      }
+
+      document.getElementById('mainContent').innerHTML = html || '<div class="empty">No items in this category</div>';
+    }
+
+    // Render stats
+    function renderStats() {
+      const data = newsData[currentDate];
+      if (!data) return;
+
+      let total = 0;
+      const counts = {};
+      CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
+        counts[cat.id] = (data[cat.id] || []).length;
+        total += counts[cat.id];
+      });
+
+      let html = `<div class="stat-badge"><span class="num">${total}</span> <span class="label">total items</span></div>`;
+      CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
+        if (counts[cat.id] > 0) {
+          html += `<div class="stat-badge"><span class="num">${counts[cat.id]}</span> <span class="label">${cat.name}</span></div>`;
+        }
+      });
+
+      document.getElementById('statsRow').innerHTML = html;
+    }
+
+    // Render category nav
+    function renderCategoryNav() {
+      const data = newsData[currentDate];
+      let html = '';
+      
+      CATEGORIES.forEach(cat => {
+        const count = cat.id === 'all' 
+          ? Object.values(data || {}).reduce((sum, arr) => sum + arr.length, 0)
+          : (data?.[cat.id]?.length || 0);
+        html += `<div class="nav-item ${currentCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">
+          <span><span class="icon">${cat.icon}</span>${cat.name}</span>
+          <span class="count">${count}</span>
+        </div>`;
+      });
+
+      document.getElementById('categoryNav').innerHTML = html;
+      document.getElementById('mobileNav').innerHTML = CATEGORIES.map(cat => 
+        `<div class="mobile-nav-item ${currentCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">${cat.icon} ${cat.name}</div>`
+      ).join('');
+
+      // Add click handlers
+      document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => {
+        el.addEventListener('click', () => {
+          currentCategory = el.dataset.category;
+          renderCategoryNav();
+          renderContent();
+        });
+      });
+    }
+
+    // Initialize
+    async function init() {
+      try {
+        const res = await fetch('data.json');
+        newsData = await res.json();
+        dates = Object.keys(newsData).sort().reverse();
+        currentDate = dates[0] || new Date().toISOString().split('T')[0];
+
+        document.getElementById('currentDate').textContent = formatDate(currentDate);
+        renderStats();
+        renderCategoryNav();
+        renderContent();
+      } catch (e) {
+        document.getElementById('mainContent').innerHTML = `<div class="error">Failed to load news: ${e.message}</div>`;
+        console.error(e);
+      }
+    }
+
+    init();
   </script>
 </body>
 </html>
