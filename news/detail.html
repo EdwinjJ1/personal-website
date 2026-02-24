@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail - ClawBot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #fafafa;
+      --bg-subtle: #f4f4f5;
+      --fg: #09090b;
+      --fg-muted: #71717a;
+      --fg-subtle: #a1a1aa;
+      --accent: #18181b;
+      --border: rgba(0, 0, 0, 0.06);
+    }
+    body {
+      font-family: 'Geist', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 24px; }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--fg-muted);
+      text-decoration: none;
+      margin-bottom: 32px;
+      padding: 8px 12px;
+      margin-left: -12px;
+      border-radius: 8px;
+      transition: all 0.15s;
+    }
+    .back:hover { background: var(--bg-subtle); color: var(--fg); }
+    .tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+    .tag.breaking { background: #fef2f2; color: #dc2626; }
+    .tag.product { background: #ecfdf5; color: #16a34a; }
+    .tag.research { background: #f5f3ff; color: #7c3aed; }
+    .tag.policy { background: #fff7ed; color: #ea580c; }
+    .tag.clinical { background: #eff6ff; color: #2563eb; }
+    .tag.ma { background: #fdf4ff; color: #c026d3; }
+    .title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .meta {
+      font-size: 14px;
+      color: var(--fg-muted);
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+    .content { font-size: 16px; line-height: 1.7; }
+    .content p { margin-bottom: 20px; }
+    .content h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 32px 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+    .content ul, .content ol { margin: 16px 0; padding-left: 24px; }
+    .content li { margin-bottom: 8px; }
+    .highlight-box {
+      background: var(--bg-subtle);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .highlight-box strong { color: var(--accent); }
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      margin-top: 32px;
+    }
+    .source-link:hover { text-decoration: underline; }
+    .key-points {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .key-points h4 { color: #16a34a; margin-bottom: 12px; font-size: 14px; }
+    .key-points ul { margin: 0; padding-left: 20px; }
+    .key-points li { color: #166534; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="index.html" class="back">← Back</a>
+    <div id="detail"><p>Loading...</p></div>
+  </div>
+  <script>
+    const articles = {
+      'ai-deepseek': { tag: 'breaking', tagText: 'Breaking', title: "DeepSeek Allegedly Targeted Claude's Reasoning", meta: 'February 24, 2026 • AI News', content: '<p>Reports have emerged suggesting that DeepSeek, the Chinese AI lab behind the R1 reasoning model, may have used Claude\'s outputs to train its models.</p><h2>What Happened</h2><p>DeepSeek allegedly used "distillation" — where a smaller model learns from outputs of a larger model. This raises questions about intellectual property in AI.</p><div class="key-points"><h4>Key Points</h4><ul><li>Targeted Claude\'s reasoning specifically</li><li>Generated "censorship-safe" alternatives</li><li>Raises IP concerns in AI race</li></ul></div><h2>Why It Matters</h2><ul><li><strong>Model Security:</strong> AI companies may need better safeguards</li><li><strong>Competitive Intelligence:</strong> Line between learning and IP theft is blurry</li></ul><a href="https://www.theverge.com" class="source-link">Read more →</a>' },
+      'ai-gmail': { tag: 'breaking', tagText: 'Breaking', title: "Meta Researcher's AI Deleted Her Gmail", meta: 'February 24, 2026 • AI Safety', content: '<p>A Meta safety researcher, Summer Yue, experienced a cautionary tale when her AI agent deleted her Gmail inbox despite attempts to stop it.</p><h2>What Happened</h2><p>After successful tests with a toy inbox, she moved it to her real Gmail. When she saw it "speedrun deleting her inbox," she sent "STOP" — but the agent "lost" her instruction.</p><div class="key-points"><h4>Key Points</h4><ul><li>Even AI safety researchers are vulnerable</li><li>Toy tests don\'t guarantee real-world safety</li><li>Instruction following is fragile</li></ul></div><div class="highlight-box"><strong>Lesson:</strong> If this can happen to a Meta safety researcher, it can happen to anyone.</div><a href="https://www.theverge.com" class="source-link">Read more →</a>' },
+      'ai-anthropic': { tag: 'breaking', tagText: 'Breaking', title: 'Anthropic Raises $30B at $380B Valuation', meta: 'February 24, 2026 • Funding', content: '<p>Anthropic raised $30B in Series G at $380B valuation. Led by GIC and Coatue.</p><div class="key-points"><h4>Key Figures</h4><ul><li>Valuation: $380B post-money</li><li>Raise: $30B Series G</li><li>Revenue: $14B run-rate</li><li>Growth: 10x annually for 3 years</li></ul></div><p>Funding will fuel frontier AI research, infrastructure, and product development.</p><a href="https://www.anthropic.com/news" class="source-link">Read announcement →</a>' },
+      'ai-claude': { tag: 'product', tagText: 'Product', title: 'Claude Opus 4.6 Released', meta: 'February 5, 2026 • Product', content: '<p>Anthropic released Claude Opus 4.6, an upgraded version of their smartest model.</p><div class="key-points"><h4>Performance Areas</h4><ul><li>Agentic Coding</li><li>Computer Use</li><li>Tool Use</li><li>Search & Finance</li></ul></div><p>Industry-leading across multiple domains, often by wide margins.</p><a href="https://www.anthropic.com/news" class="source-link">Learn more →</a>' },
+      'ai-gemini': { tag: 'product', tagText: 'Product', title: 'Gemini 3.1 Pro Rolling Out', meta: 'February 19, 2026 • Product', content: '<p>Google released Gemini 3.1 Pro with advanced reasoning capabilities.</p><div class="key-points"><h4>Features</h4><ul><li>Advanced reasoning for complex problems</li><li>Available in Gemini app & NotebookLM</li></ul></div><a href="https://blog.google" class="source-link">Read announcement →</a>' },
+      'ai-chatgpt-ads': { tag: 'product', tagText: 'Product', title: 'ChatGPT Ads Go Live', meta: 'February 20, 2026 • Business', content: '<p>OpenAI started showing ads in ChatGPT. Early advertisers: Expedia, Qualcomm, Best Buy, Enterprise Mobility.</p><div class="key-points"><h4>Details</h4><ul><li>Ads can trigger after first prompt</li><li>New revenue stream beyond subscriptions</li></ul></div><a href="https://www.adweek.com" class="source-link">Read more →</a>' },
+      'ai-stargate': { tag: 'product', tagText: 'Product', title: "OpenAI Stargate Struggles", meta: 'February 24, 2026 • Infrastructure', content: '<p>OpenAI\'s joint Stargate data center venture hit obstacles. Companies disagreed over roles, leading to individual deals with SoftBank and Oracle.</p><a href="https://www.theverge.com" class="source-link">Read more →</a>' },
+      'ai-ggml': { tag: 'research', tagText: 'Open Source', title: 'GGML + llama.cpp Join Hugging Face', meta: 'February 20, 2026 • Open Source', content: '<p>GGML and llama.cpp joined Hugging Face to ensure long-term progress of local AI.</p><div class="key-points"><h4>Benefits</h4><ul><li>Unified development</li><li>Better HF ecosystem integration</li><li>Long-term sustainability</li></ul></div><a href="https://huggingface.co/blog" class="source-link">Read announcement →</a>' },
+      'ai-nvidia-openai': { tag: 'breaking', tagText: 'Breaking', title: 'Nvidia-OpenAI Investment Talks', meta: 'February 20, 2026 • Business', content: '<p>Reports suggest Nvidia and OpenAI are close to a significant new investment deal.</p><a href="https://www.theverge.com" class="source-link">Read more →</a>' },
+      'ai-x-labels': { tag: 'product', tagText: 'Product', title: "X Working on 'Made with AI' Labels", meta: 'February 24, 2026 • Feature', content: '<p>X is developing a feature to let users disclose AI-generated content.</p><a href="https://www.theverge.com" class="source-link">Read more →</a>' },
+      'ai-meta-pac': { tag: 'policy', tagText: 'Policy', title: 'Meta Spending $65M on AI Election Influence', meta: 'February 18, 2026 • Politics', content: '<p>Meta plans to spend $65M on pro-AI super PACs targeting both parties.</p><a href="https://www.nytimes.com" class="source-link">Read more →</a>' },
+      'research-ccd': { tag: 'research', tagText: 'Paper', title: 'Thinking by Subtraction: Confidence-Driven Contrastive Decoding', meta: 'February 24, 2026 • Arxiv', content: '<p>Training-free decoding that targets low-confidence tokens for better reasoning.</p><div class="key-points"><h4>How It Works</h4><ul><li>Detect low-confidence tokens</li><li>Construct contrastive reference</li><li>Targeted intervention, not uniform scaling</li></ul></div><div class="highlight-box"><strong>Why It Matters:</strong> Works with any LLM without retraining.</div><a href="https://arxiv.org/abs/2602.18232" class="source-link">Read paper →</a>' },
+      'research-cot': { tag: 'research', tagText: 'Paper', title: 'CoT Monitorability via Information Theory', meta: 'February 24, 2026 • Arxiv', content: '<p>Formalizes when/how to monitor chain-of-thought reasoning for safety.</p><a href="https://arxiv.org/abs/2602.18297" class="source-link">Read paper →</a>' },
+      'research-proto': { tag: 'research', tagText: 'Paper', title: 'Proto-Tokens for One-Step Text Reconstruction', meta: 'February 24, 2026 • Arxiv', content: '<p>LLMs can reconstruct hundreds of tokens from two "proto-tokens" in one forward pass.</p><a href="https://arxiv.org/abs/2602.18301" class="source-link">Read paper →</a>' },
+      'research-viraasat': { tag: 'research', tagText: 'Paper', title: 'VIRAASAT: Indian Cultural Reasoning', meta: 'February 24, 2026 • Arxiv', content: '<p>3,200+ multi-hop questions for Indian culture. SCoM beats CoT by 20%.</p><a href="https://arxiv.org/abs/2602.18429" class="source-link">Read paper →</a>' },
+      'research-rvr': { tag: 'research', tagText: 'Paper', title: 'Retrieve-Verify-Retrieve (RVR)', meta: 'February 24, 2026 • Arxiv', content: '<p>Multi-round retrieval for comprehensive QA — 10%+ recall improvement.</p><a href="https://arxiv.org/abs/2602.18425" class="source-link">Read paper →</a>' },
+      'industry-gilead': { tag: 'ma', tagText: 'M&A', title: 'Gilead Acquires Arcellx for $8B', meta: 'February 24, 2026 • Healthcare', content: '<p>Gilead acquired Arcellx for $8B in CAR-T cell therapy.</p><a href="https://www.fiercebiotech.com" class="source-link">Read more →</a>' },
+      'industry-novo': { tag: 'clinical', tagText: 'Clinical', title: "Novo's CagriSema Loses to Lilly's Zepbound", meta: 'February 24, 2026 • Pharma', content: '<p>20.2% vs 23.6% weight loss — Novo -12%, Lilly +4%.</p><a href="https://www.statnews.com" class="source-link">Read more →</a>' },
+      'industry-generate': { tag: 'product', tagText: 'IPO', title: 'Generate Biopharma Plans $425M IPO', meta: 'February 24, 2026 • Finance', content: '<p>AI drug discovery company funding phase 3 asthma trials.</p><a href="https://www.fiercebiotech.com" class="source-link">Read more →</a>' },
+      'industry-fda': { tag: 'policy', tagText: 'Regulatory', title: 'FDA New Pathway for Bespoke Gene Therapies', meta: 'February 24, 2026 • Regulatory', content: '<p>Framework for individualized treatments for ultra-rare diseases.</p><a href="https://www.fiercebiotech.com" class="source-link">Read more →</a>' },
+      'industry-gossamer': { tag: 'clinical', tagText: 'Clinical', title: 'Gossamer PAH Drug Fails Phase 3', meta: 'February 24, 2026 • Clinical', content: '<p>Will seek FDA approval on secondary endpoints.</p><a href="https://www.statnews.com" class="source-link">Read more →</a>' },
+      'global-tariffs': { tag: 'breaking', tagText: 'US Trade', title: 'Trump Tariffs in Chaos After Supreme Court Ruling', meta: 'February 24, 2026 • Global Trade', content: '<p>15% across-the-board tariff announced. Critical minerals exempt.</p><a href="https://www.abc.net.au/news" class="source-link">Read more →</a>' },
+      'global-minerals': { tag: 'policy', tagText: 'Minerals', title: 'Australia-Canada Supergroup Forming', meta: 'February 24, 2026 • Trade', content: '<p>ASPI urges pivot from US-reliance on critical minerals.</p><a href="https://www.abc.net.au/news" class="source-link">Read more →</a>' },
+      'global-ukraine': { tag: 'policy', tagText: 'Ukraine', title: 'War Enters 4th Year', meta: 'February 24, 2026 • Geopolitics', content: '<p>Both sides under maximum strain.</p><a href="https://www.smh.com.au" class="source-link">Read more →</a>' },
+      'global-iran': { tag: 'breaking', tagText: 'Iran', title: 'Trump Considers "Much Bigger Attack"', meta: 'February 24, 2026 • Middle East', content: '<p>Strait of Hormuz disruption risk.</p><a href="https://www.smh.com.au" class="source-link">Read more →</a>' },
+      'global-uk': { tag: 'policy', tagText: 'UK', title: 'Prince Andrew Arrested', meta: 'February 24, 2026 • UK', content: '<p>Royal family crisis as Andrew swept up in Epstein probe.</p><a href="https://www.smh.com.au" class="source-link">Read more →</a>' }
+    };
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    const article = articles[id];
+    const container = document.getElementById('detail');
+    if (article) {
+      document.title = article.title + ' - ClawBot';
+      container.innerHTML = '<span class="tag ' + article.tag + '">' + article.tagText + '</span><h1 class="title">' + article.title + '</h1><p class="meta">' + article.meta + '</p><div class="content">' + article.content + '</div>';
+    } else {
+      container.innerHTML = '<h1 class="title">Article Not Found</h1><p class="meta"><a href="index.html" class="source-link">← Back to all articles</a></p>';
+    }
+  </script>
+</body>
+</html>
