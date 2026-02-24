@@ -29,13 +29,10 @@
       line-height: 1.6;
       min-height: 100vh;
     }
-
-    /* Layout */
     .container { max-width: 1100px; margin: 0 auto; padding: 100px 24px 48px; }
     .layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; }
     @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
 
-    /* Header */
     .page-header { margin-bottom: 32px; }
     .page-title { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
     .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
@@ -50,7 +47,6 @@
       color: var(--accent);
     }
 
-    /* Sidebar */
     .sidebar { position: sticky; top: 100px; height: fit-content; }
     .sidebar-section { margin-bottom: 24px; }
     .sidebar-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); margin-bottom: 12px; }
@@ -71,7 +67,6 @@
     .nav-item .count { font-size: 0.8rem; opacity: 0.6; }
     .nav-item .icon { margin-right: 10px; }
 
-    /* Stats */
     .stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
     .stat-badge {
       display: inline-flex;
@@ -86,24 +81,6 @@
     .stat-badge .num { font-weight: 600; color: var(--text-primary); }
     .stat-badge .label { color: var(--text-muted); }
 
-    /* Date Selector */
-    .date-selector { margin-bottom: 24px; }
-    .date-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
-    .date-tab {
-      padding: 8px 16px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.2s;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--text-muted);
-    }
-    .date-tab:hover { border-color: var(--accent); color: var(--text-primary); }
-    .date-tab.active { background: var(--accent); border-color: var(--accent); color: var(--bg-primary); }
-
-    /* Cards */
     .section { margin-bottom: 32px; }
     .section-header {
       display: flex;
@@ -123,8 +100,12 @@
       padding: 18px 20px;
       margin-bottom: 10px;
       transition: all 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      color: inherit;
     }
-    .news-item:hover { border-color: var(--border-strong); background: var(--bg-card-hover); }
+    .news-item:hover { border-color: var(--accent); background: var(--bg-card-hover); transform: translateX(4px); }
     .news-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
     .news-time { font-size: 0.75rem; color: var(--text-subtle); font-weight: 500; }
     .news-tag {
@@ -144,14 +125,9 @@
     .news-tag.paper { background: rgba(139, 92, 246, 0.15); color: #a78bfa; }
     .news-title { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; line-height: 1.4; }
     .news-summary { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 8px; }
-    .news-impact { font-size: 0.8rem; color: var(--text-secondary); padding: 10px 12px; background: rgba(122, 144, 136, 0.1); border-radius: 8px; border-left: 3px solid var(--accent); }
-    .news-impact strong { color: var(--accent); }
-    .news-source { font-size: 0.75rem; color: var(--text-subtle); margin-top: 10px; }
-    .news-source a { color: var(--accent); text-decoration: none; }
-    .news-source a:hover { text-decoration: underline; }
-    .news-authors { font-size: 0.8rem; color: var(--text-subtle); margin-top: 6px; font-style: italic; }
+    .news-arrow { font-size: 0.8rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; }
+    .news-item:hover .news-arrow { opacity: 1; }
 
-    /* About */
     .about-box {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -164,22 +140,16 @@
     .about-text ul { margin: 10px 0; padding-left: 18px; }
     .about-text li { margin-bottom: 4px; }
 
-    /* Back */
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; transition: color 0.2s; }
     .back-link:hover { color: var(--text-primary); }
 
-    /* Footer */
     .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-subtle); font-size: 0.8rem; }
     .footer a { color: var(--accent); text-decoration: none; }
 
-    /* Loading */
     .loading { text-align: center; padding: 48px; color: var(--text-muted); }
     .error { text-align: center; padding: 48px; color: #f87171; }
-
-    /* Empty state */
     .empty { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.9rem; }
 
-    /* Mobile nav */
     .mobile-nav { display: none; }
     @media (max-width: 900px) {
       .mobile-nav { display: flex; gap: 8px; margin-bottom: 24px; overflow-x: auto; padding-bottom: 8px; }
@@ -194,18 +164,14 @@
     
     <header class="page-header">
       <h1 class="page-title">📰 News Dashboard</h1>
-      <p class="page-subtitle">AI-curated news, updated throughout the day</p>
+      <p class="page-subtitle">AI-curated news • Click any item for full details</p>
       <span class="current-date" id="currentDate">Loading...</span>
     </header>
 
-    <!-- Stats -->
     <div class="stats-row" id="statsRow"></div>
-
-    <!-- Mobile Nav -->
     <div class="mobile-nav" id="mobileNav"></div>
 
     <div class="layout">
-      <!-- Sidebar -->
       <aside class="sidebar">
         <div class="sidebar-section">
           <div class="sidebar-title">Categories</div>
@@ -219,22 +185,21 @@
               <ul>
                 <li>Monitors 15+ sources</li>
                 <li>Updates every 2 hours</li>
-                <li>AI-prioritized content</li>
+                <li>Click for full details</li>
               </ul>
-              Categories rotate daily for industry news.
+              Categories rotate daily.
             </div>
           </div>
         </div>
       </aside>
 
-      <!-- Main -->
       <main id="mainContent">
         <div class="loading">Loading news...</div>
       </main>
     </div>
 
     <footer class="footer">
-      <p>Generated by <a href="#">ClawBot</a> • Data from Arxiv, The Verge, STAT News, and more</p>
+      <p>Generated by <a href="#">ClawBot</a> • Click any item for extended details</p>
     </footer>
   </div>
 
@@ -247,70 +212,39 @@
       { id: 'global', name: 'Global', icon: '🌍' }
     ];
 
+    const TAG_NAMES = {
+      breaking: 'Breaking',
+      product: 'Product',
+      research: 'Research',
+      policy: 'Policy',
+      clinical: 'Clinical',
+      ma: 'M&A',
+      paper: 'Paper'
+    };
+
     let newsData = {};
-    let dates = [];
-    let currentDate = '';
     let currentCategory = 'all';
 
-    // Format date
     function formatDate(dateStr) {
       const d = new Date(dateStr);
       return d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     }
 
-    function formatDateShort(dateStr) {
-      const d = new Date(dateStr);
-      const today = new Date();
-      const yesterday = new Date(today);
-      yesterday.setDate(yesterday.getDate() - 1);
+    function renderItem(item) {
+      const detailId = item.detailId || '';
+      const href = detailId ? `detail.html?id=${detailId}` : '#';
       
-      if (dateStr === today.toISOString().split('T')[0]) return 'Today';
-      if (dateStr === yesterday.toISOString().split('T')[0]) return 'Yesterday';
-      return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    }
-
-    // Get tag display name
-    function getTagName(tag) {
-      const names = {
-        breaking: 'Breaking',
-        product: 'Product',
-        research: 'Research',
-        policy: 'Policy',
-        clinical: 'Clinical',
-        ma: 'M&A',
-        paper: 'Paper'
-      };
-      return names[tag] || tag;
-    }
-
-    // Render news item
-    function renderItem(item, type) {
-      let html = `<div class="news-item">
+      return `<a href="${href}" class="news-item">
         <div class="news-meta">
           <span class="news-time">${item.time}</span>
-          <span class="news-tag ${item.tag}">${getTagName(item.tag)}</span>
+          <span class="news-tag ${item.tag}">${TAG_NAMES[item.tag] || item.tag}</span>
         </div>
         <div class="news-title">${item.title}</div>
-        <div class="news-summary">${item.summary}</div>`;
-      
-      if (item.impact) {
-        html += `<div class="news-impact"><strong>Impact:</strong> ${item.impact}</div>`;
-      }
-      
-      if (item.authors) {
-        html += `<div class="news-authors">${item.authors}</div>`;
-      }
-      
-      const source = item.arxiv || item.source;
-      if (source) {
-        html += `<div class="news-source">Source: <a href="${source}" target="_blank">${item.arxiv ? 'arXiv' : new URL(source).hostname}</a></div>`;
-      }
-      
-      html += `</div>`;
-      return html;
+        <div class="news-summary">${item.summary}</div>
+        <span class="news-arrow">→ Read more</span>
+      </a>`;
     }
 
-    // Render category section
     function renderSection(items, category) {
       if (!items || items.length === 0) return '';
       
@@ -321,24 +255,19 @@
           <span class="section-count">${items.length}</span>
         </div>`;
       
-      items.forEach(item => {
-        html += renderItem(item, category);
-      });
-      
+      items.forEach(item => { html += renderItem(item); });
       html += `</div>`;
       return html;
     }
 
-    // Render main content
     function renderContent() {
-      const data = newsData[currentDate];
+      const data = newsData['2026-02-24'];
       if (!data) {
-        document.getElementById('mainContent').innerHTML = '<div class="empty">No news for this date</div>';
+        document.getElementById('mainContent').innerHTML = '<div class="empty">No news available</div>';
         return;
       }
 
       let html = '';
-      
       if (currentCategory === 'all') {
         CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
           if (data[cat.id] && data[cat.id].length > 0) {
@@ -354,9 +283,8 @@
       document.getElementById('mainContent').innerHTML = html || '<div class="empty">No items in this category</div>';
     }
 
-    // Render stats
     function renderStats() {
-      const data = newsData[currentDate];
+      const data = newsData['2026-02-24'];
       if (!data) return;
 
       let total = 0;
@@ -366,7 +294,7 @@
         total += counts[cat.id];
       });
 
-      let html = `<div class="stat-badge"><span class="num">${total}</span> <span class="label">total items</span></div>`;
+      let html = `<div class="stat-badge"><span class="num">${total}</span> <span class="label">items today</span></div>`;
       CATEGORIES.filter(c => c.id !== 'all').forEach(cat => {
         if (counts[cat.id] > 0) {
           html += `<div class="stat-badge"><span class="num">${counts[cat.id]}</span> <span class="label">${cat.name}</span></div>`;
@@ -376,9 +304,8 @@
       document.getElementById('statsRow').innerHTML = html;
     }
 
-    // Render category nav
     function renderCategoryNav() {
-      const data = newsData[currentDate];
+      const data = newsData['2026-02-24'];
       let html = '';
       
       CATEGORIES.forEach(cat => {
@@ -396,7 +323,6 @@
         `<div class="mobile-nav-item ${currentCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">${cat.icon} ${cat.name}</div>`
       ).join('');
 
-      // Add click handlers
       document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => {
         el.addEventListener('click', () => {
           currentCategory = el.dataset.category;
@@ -406,21 +332,17 @@
       });
     }
 
-    // Initialize
     async function init() {
       try {
         const res = await fetch('data.json');
         newsData = await res.json();
-        dates = Object.keys(newsData).sort().reverse();
-        currentDate = dates[0] || new Date().toISOString().split('T')[0];
 
-        document.getElementById('currentDate').textContent = formatDate(currentDate);
+        document.getElementById('currentDate').textContent = formatDate('2026-02-24');
         renderStats();
         renderCategoryNav();
         renderContent();
       } catch (e) {
-        document.getElementById('mainContent').innerHTML = `<div class="error">Failed to load news: ${e.message}</div>`;
-        console.error(e);
+        document.getElementById('mainContent').innerHTML = `<div class="error">Failed to load news</div>`;
       }
     }
 
