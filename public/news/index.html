@@ -18,20 +18,31 @@
       --text-muted: #8a8680;
       --text-subtle: #6a6660;
       --accent: #7a9088;
-      --accent-hover: #8aa098;
       --border: rgba(114, 110, 102, 0.25);
       --border-strong: rgba(122, 144, 136, 0.4);
+    }
+    html, body {
+      height: 100%;
+      overflow-x: hidden;
     }
     body {
       font-family: 'Inter', -apple-system, sans-serif;
       background: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.6;
-      min-height: 100vh;
     }
+
     .container { max-width: 1100px; margin: 0 auto; padding: 100px 24px 48px; }
-    .layout { display: grid; grid-template-columns: 240px 1fr; gap: 32px; }
-    @media (max-width: 900px) { .layout { grid-template-columns: 1fr; } }
+    
+    .layout {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .layout { grid-template-columns: 1fr; }
+    }
 
     .page-header { margin-bottom: 32px; }
     .page-title { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
@@ -47,9 +58,34 @@
       color: var(--accent);
     }
 
-    .sidebar { position: sticky; top: 100px; height: fit-content; }
+    /* Sidebar - fixed on desktop, normal on mobile */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+      align-self: start;
+      max-height: calc(100vh - 120px);
+      overflow-y: auto;
+    }
+    @media (max-width: 900px) {
+      .sidebar {
+        position: relative;
+        top: 0;
+        max-height: none;
+        overflow: visible;
+        display: none;
+      }
+    }
+    
     .sidebar-section { margin-bottom: 24px; }
-    .sidebar-title { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-subtle); margin-bottom: 12px; }
+    .sidebar-title { 
+      font-size: 0.75rem; 
+      font-weight: 600; 
+      text-transform: uppercase; 
+      letter-spacing: 0.05em; 
+      color: var(--text-subtle); 
+      margin-bottom: 12px; 
+      padding: 0 4px;
+    }
     .nav-item {
       display: flex;
       align-items: center;
@@ -67,6 +103,19 @@
     .nav-item .count { font-size: 0.8rem; opacity: 0.6; }
     .nav-item .icon { margin-right: 10px; }
 
+    .about-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 8px;
+    }
+    .about-title { font-size: 0.85rem; font-weight: 600; color: var(--accent); margin-bottom: 10px; }
+    .about-text { font-size: 0.8rem; color: var(--text-muted); line-height: 1.6; }
+    .about-text ul { margin: 8px 0; padding-left: 16px; }
+    .about-text li { margin-bottom: 4px; }
+
+    /* Stats row */
     .stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
     .stat-badge {
       display: inline-flex;
@@ -81,6 +130,7 @@
     .stat-badge .num { font-weight: 600; color: var(--text-primary); }
     .stat-badge .label { color: var(--text-muted); }
 
+    /* Sections */
     .section { margin-bottom: 32px; }
     .section-header {
       display: flex;
@@ -93,6 +143,7 @@
     .section-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
     .section-count { font-size: 0.8rem; color: var(--text-muted); background: var(--bg-card); padding: 4px 10px; border-radius: 12px; }
 
+    /* News items */
     .news-item {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -128,33 +179,44 @@
     .news-arrow { font-size: 0.8rem; color: var(--accent); opacity: 0; transition: opacity 0.2s; }
     .news-item:hover .news-arrow { opacity: 1; }
 
-    .about-box {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .about-title { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-bottom: 10px; }
-    .about-text { font-size: 0.85rem; color: var(--text-muted); line-height: 1.7; }
-    .about-text ul { margin: 10px 0; padding-left: 18px; }
-    .about-text li { margin-bottom: 4px; }
-
+    /* Links */
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; margin-bottom: 20px; font-size: 0.9rem; transition: color 0.2s; }
     .back-link:hover { color: var(--text-primary); }
 
+    /* Footer */
     .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-subtle); font-size: 0.8rem; }
     .footer a { color: var(--accent); text-decoration: none; }
 
+    /* States */
     .loading { text-align: center; padding: 48px; color: var(--text-muted); }
     .error { text-align: center; padding: 48px; color: #f87171; }
     .empty { text-align: center; padding: 32px; color: var(--text-muted); font-size: 0.9rem; }
 
+    /* Mobile nav */
     .mobile-nav { display: none; }
     @media (max-width: 900px) {
-      .mobile-nav { display: flex; gap: 8px; margin-bottom: 24px; overflow-x: auto; padding-bottom: 8px; }
-      .mobile-nav-item { flex-shrink: 0; padding: 8px 14px; border-radius: 20px; font-size: 0.85rem; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); cursor: pointer; }
-      .mobile-nav-item.active { background: var(--accent); border-color: var(--accent); color: var(--bg-primary); }
+      .mobile-nav { 
+        display: flex; 
+        gap: 8px; 
+        margin-bottom: 24px; 
+        overflow-x: auto; 
+        padding-bottom: 8px; 
+      }
+      .mobile-nav-item { 
+        flex-shrink: 0; 
+        padding: 8px 14px; 
+        border-radius: 20px; 
+        font-size: 0.85rem; 
+        background: var(--bg-card); 
+        border: 1px solid var(--border); 
+        color: var(--text-muted); 
+        cursor: pointer; 
+      }
+      .mobile-nav-item.active { 
+        background: var(--accent); 
+        border-color: var(--accent); 
+        color: var(--bg-primary); 
+      }
     }
   </style>
 </head>
@@ -183,11 +245,11 @@
             <div class="about-title">How It Works</div>
             <div class="about-text">
               <ul>
-                <li>Monitors 15+ sources</li>
-                <li>Updates every 2 hours</li>
+                <li>15+ sources monitored</li>
+                <li>Updated every 2 hours</li>
                 <li>Click for full details</li>
               </ul>
-              Categories rotate daily.
+              Industry focus rotates daily.
             </div>
           </div>
         </div>
