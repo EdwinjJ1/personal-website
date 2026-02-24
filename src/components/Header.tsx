@@ -29,13 +29,15 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             <li>
+              <Link href="/news" className="transition-colors font-medium flex items-center gap-1" style={{ color: '#e0d8cc' }}>
+                <span>📰</span> News
+              </Link>
+            </li>
+            <li>
               <Link href="/blog" className="transition-colors font-medium" style={{ color: '#e0d8cc' }}>Blog</Link>
             </li>
             <li>
               <Link href="/projects" className="transition-colors font-medium" style={{ color: '#e0d8cc' }}>Projects</Link>
-            </li>
-            <li>
-              <a href="#" className="transition-colors font-medium" style={{ color: '#e0d8cc' }}>Links</a>
             </li>
             <li>
               <Link href="/about" className="transition-colors font-medium" style={{ color: '#e0d8cc' }}>About</Link>
@@ -76,11 +78,10 @@ const Header = () => {
           exit={{ opacity: 0, y: -10 }}
         >
           <div className="px-6 py-4 space-y-2">
+            <Link href="/news" className="block py-2 font-medium flex items-center gap-2" style={{ color: '#e0d8cc' }}>📰 News</Link>
             <Link href="/blog" className="block py-2 font-medium" style={{ color: '#e0d8cc' }}>Blog</Link>
             <Link href="/projects" className="block py-2 font-medium" style={{ color: '#e0d8cc' }}>Projects</Link>
-            <a href="#" className="block py-2 font-medium" style={{ color: '#e0d8cc' }}>Links</a>
             <Link href="/about" className="block py-2 font-medium" style={{ color: '#e0d8cc' }}>About</Link>
-            <button className="block py-2 font-medium" style={{ color: '#e0d8cc' }}>Search</button>
           </div>
         </motion.div>
       )}

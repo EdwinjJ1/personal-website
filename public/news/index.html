@@ -1,202 +1,293 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ClawBot Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>News Dashboard - Evan Lin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     :root {
-      --bg: #fafafa;
-      --bg-subtle: #f4f4f5;
-      --fg: #09090b;
-      --fg-muted: #71717a;
-      --accent: #18181b;
-      --border: rgba(0, 0, 0, 0.06);
+      --bg-primary: #1a1816;
+      --bg-card: rgba(38, 35, 32, 0.8);
+      --bg-card-hover: rgba(50, 47, 44, 0.9);
+      --text-primary: #e0d8cc;
+      --text-muted: #8a8680;
+      --text-subtle: #6a6660;
+      --accent: #7a9088;
+      --accent-light: #6a8a8e;
+      --border: rgba(114, 110, 102, 0.3);
+      --border-strong: rgba(122, 144, 136, 0.5);
     }
-    body { font-family: 'Geist', -apple-system, sans-serif; background: var(--bg); color: var(--fg); line-height: 1.5; }
-    .app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
-    @media (max-width: 800px) { .app { grid-template-columns: 1fr; } .sidebar { display: none; } }
-    .sidebar { background: var(--bg-subtle); border-right: 1px solid var(--border); padding: 24px 16px; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
-    .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; padding: 0 8px; }
-    .logo-mark { width: 28px; height: 28px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
-    .logo-mark svg { width: 16px; height: 16px; fill: white; }
-    .logo-text { font-size: 15px; font-weight: 600; }
-    .nav-section { margin-bottom: 24px; }
-    .nav-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: #a1a1aa; padding: 0 10px; margin-bottom: 8px; }
-    .nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--fg-muted); cursor: pointer; transition: all 0.15s; }
-    .nav-item:hover { background: rgba(0,0,0,0.04); color: var(--fg); }
-    .nav-item.active { background: var(--accent); color: white; }
-    .nav-item .count { margin-left: auto; font-size: 12px; opacity: 0.6; }
-    .main { padding: 32px 48px; max-width: 900px; }
-    @media (max-width: 600px) { .main { padding: 24px 20px; } }
-    .header { margin-bottom: 40px; }
-    .header-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
-    .title { font-size: 28px; font-weight: 700; }
-    .time { font-size: 13px; color: var(--fg-muted); font-weight: 500; }
-    .subtitle { font-size: 15px; color: var(--fg-muted); }
-    .stats { display: flex; gap: 24px; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
-    .stat { display: flex; flex-direction: column; gap: 4px; }
-    .stat-value { font-size: 32px; font-weight: 700; }
-    .stat-label { font-size: 13px; color: var(--fg-muted); }
-    .cards { display: flex; flex-direction: column; gap: 16px; }
-    .card { background: white; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: box-shadow 0.2s; }
-    .card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
-    .card-header { padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; cursor: pointer; }
-    .card-header:hover { background: var(--bg-subtle); }
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 100px 24px 48px; }
+    
+    /* Header */
+    .page-header { margin-bottom: 40px; }
+    .page-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 8px; background: linear-gradient(135deg, var(--text-primary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .page-subtitle { color: var(--text-muted); font-size: 1rem; }
+    .time-display { font-size: 0.9rem; color: var(--text-subtle); margin-top: 8px; }
+
+    /* About Section */
+    .about-section {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 32px;
+      backdrop-filter: blur(10px);
+    }
+    .about-title { font-size: 1.1rem; font-weight: 600; color: var(--accent); margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .about-content { color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; }
+    .about-content strong { color: var(--text-primary); }
+    .about-content ul { margin: 12px 0; padding-left: 20px; }
+    .about-content li { margin-bottom: 6px; }
+
+    /* Stats */
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 32px; }
+    @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .stat-card:hover { border-color: var(--border-strong); background: var(--bg-card-hover); }
+    .stat-value { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
+    .stat-label { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* Filter Tabs */
+    .filter-tabs { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; }
+    .filter-tab {
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--text-muted);
+    }
+    .filter-tab:hover { border-color: var(--accent); color: var(--text-primary); }
+    .filter-tab.active { background: linear-gradient(135deg, var(--accent), var(--accent-light)); border-color: transparent; color: var(--text-primary); }
+
+    /* Cards */
+    .cards-grid { display: flex; flex-direction: column; gap: 16px; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
+    }
+    .card:hover { border-color: var(--border-strong); }
+    .card-header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .card-header:hover { background: var(--bg-card-hover); }
     .card-left { display: flex; align-items: center; gap: 16px; }
-    .card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
-    .card-icon.ai { background: #eff6ff; }
-    .card-icon.research { background: #f5f3ff; }
-    .card-icon.industry { background: #ecfdf5; }
-    .card-icon.global { background: #fff7ed; }
-    .card-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
-    .card-meta { font-size: 13px; color: var(--fg-muted); }
-    .card-badge { font-size: 12px; font-weight: 500; color: var(--fg-muted); background: var(--bg-subtle); padding: 4px 10px; border-radius: 6px; }
-    .card-expand { color: #a1a1aa; transition: transform 0.2s; }
+    .card-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+    .card-icon.ai { background: rgba(59, 130, 246, 0.15); }
+    .card-icon.research { background: rgba(139, 92, 246, 0.15); }
+    .card-icon.industry { background: rgba(16, 185, 129, 0.15); }
+    .card-icon.global { background: rgba(249, 115, 22, 0.15); }
+    .card-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin-bottom: 4px; }
+    .card-meta { font-size: 0.85rem; color: var(--text-muted); }
+    .card-badge { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); background: rgba(114, 110, 102, 0.2); padding: 4px 12px; border-radius: 20px; }
+    .card-expand { color: var(--text-subtle); transition: transform 0.3s; font-size: 0.9rem; }
     .card.expanded .card-expand { transform: rotate(180deg); }
     .card-content { border-top: 1px solid var(--border); padding: 8px; display: none; }
     .card.expanded .card-content { display: block; }
-    .item { padding: 16px; border-radius: 8px; margin-bottom: 4px; display: block; text-decoration: none; color: inherit; }
-    .item:hover { background: var(--bg-subtle); }
-    .item-tag { display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
-    .item-tag.breaking { background: #fef2f2; color: #dc2626; }
-    .item-tag.product { background: #ecfdf5; color: #16a34a; }
-    .item-tag.research { background: #f5f3ff; color: #7c3aed; }
-    .item-tag.policy { background: #fff7ed; color: #ea580c; }
-    .item-tag.clinical { background: #eff6ff; color: #2563eb; }
-    .item-tag.ma { background: #fdf4ff; color: #c026d3; }
-    .item-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; }
-    .item-summary { font-size: 13px; color: var(--fg-muted); }
-    .item-arrow { float: right; color: #a1a1aa; margin-top: 8px; }
-    .mobile-nav { display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; border-top: 1px solid var(--border); padding: 8px 16px; z-index: 100; }
-    @media (max-width: 800px) { .mobile-nav { display: flex; justify-content: space-around; } .main { padding-bottom: 80px; } }
-    .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 12px; font-size: 11px; font-weight: 500; color: var(--fg-muted); }
-    .mobile-nav-item.active { color: var(--fg); }
+
+    /* Items */
+    .item { padding: 16px 20px; border-radius: 12px; margin-bottom: 8px; transition: background 0.2s; }
+    .item:last-child { margin-bottom: 0; }
+    .item:hover { background: rgba(114, 110, 102, 0.1); }
+    .item-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .item-tag.breaking { background: rgba(239, 68, 68, 0.2); color: #f87171; }
+    .item-tag.product { background: rgba(34, 197, 94, 0.2); color: #4ade80; }
+    .item-tag.research { background: rgba(139, 92, 246, 0.2); color: #a78bfa; }
+    .item-tag.policy { background: rgba(249, 115, 22, 0.2); color: #fb923c; }
+    .item-tag.clinical { background: rgba(59, 130, 246, 0.2); color: #60a5fa; }
+    .item-tag.ma { background: rgba(236, 72, 153, 0.2); color: #f472b6; }
+    .item-title { font-size: 0.95rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+    .item-summary { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+    /* Footer */
+    .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border); text-align: center; color: var(--text-subtle); font-size: 0.85rem; }
+    .footer a { color: var(--accent); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    /* Back link */
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--text-muted); text-decoration: none; margin-bottom: 24px; font-size: 0.9rem; transition: color 0.2s; }
+    .back-link:hover { color: var(--text-primary); }
   </style>
 </head>
 <body>
-  <div class="app">
-    <aside class="sidebar">
-      <div class="logo">
-        <div class="logo-mark"><svg viewBox="0 0 16 16"><path d="M8 0L0 4v8l8 4 8-4V4L8 0zm0 2.5L13.5 5 8 7.5 2.5 5 8 2.5z"/></svg></div>
-        <span class="logo-text">ClawBot</span>
+  <div class="container">
+    <a href="/" class="back-link">← Back to Home</a>
+    
+    <header class="page-header">
+      <h1 class="page-title">📰 News Dashboard</h1>
+      <p class="page-subtitle">AI-curated news from multiple sources, updated throughout the day</p>
+      <p class="time-display" id="time">Loading...</p>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+      <h2 class="about-title">🤖 About This Dashboard</h2>
+      <div class="about-content">
+        <p>This news dashboard is automatically generated by <strong>ClawBot</strong>, an AI assistant that monitors multiple sources 24/7 to bring you the most relevant updates.</p>
+        <ul>
+          <li><strong>AI News:</strong> OpenAI, Anthropic, Google DeepMind, Meta AI, Hugging Face, and more</li>
+          <li><strong>Research:</strong> Daily papers from Arxiv (cs.AI, cs.LG, cs.CL)</li>
+          <li><strong>Industry:</strong> Sector-specific news (rotates daily: Healthcare, Fintech, SaaS, etc.)</li>
+          <li><strong>Global:</strong> World events with tech/economic impact</li>
+        </ul>
+        <p><strong>Update Schedule:</strong> Every 2 hours • <strong>Sources:</strong> 15+ trusted outlets • <strong>Filtering:</strong> AI-prioritized by relevance and impact</p>
       </div>
-      <div class="nav-section">
-        <div class="nav-label">Reports</div>
-        <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
-        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">14</span></div>
-        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">5</span></div>
-        <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">5</span></div>
-        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">5</span></div>
-      </div>
-    </aside>
-    <main class="main">
-      <header class="header">
-        <div class="header-top">
-          <h1 class="title">Today</h1>
-          <span class="time" id="time">--:--</span>
+    </section>
+
+    <!-- Stats -->
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-value">14</div><div class="stat-label">AI News</div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Research Papers</div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Industry</div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label">Global</div></div>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="ai">🤖 AI News</button>
+      <button class="filter-tab" data-filter="research">📚 Research</button>
+      <button class="filter-tab" data-filter="industry">🏢 Industry</button>
+      <button class="filter-tab" data-filter="global">🌍 Global</button>
+    </div>
+
+    <!-- Cards -->
+    <div class="cards-grid">
+
+      <article class="card" data-type="ai">
+        <div class="card-header" onclick="toggle(this)">
+          <div class="card-left"><div class="card-icon ai">⚡</div><div><div class="card-title">AI News Update</div><div class="card-meta">DeepSeek/Claude, Gmail Agent, Stargate • 08:02 AM</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">4 items</span><span class="card-expand">▼</span></div>
         </div>
-        <p class="subtitle" id="date">Loading...</p>
-      </header>
-      <div class="stats">
-        <div class="stat"><span class="stat-value">14</span><span class="stat-label">AI News</span></div>
-        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Research</span></div>
-        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Industry</span></div>
-        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Global</span></div>
-      </div>
-      <div class="cards">
-        <article class="card" data-type="ai">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left"><div class="card-icon ai">⚡</div><div><div class="card-title">AI News Update</div><div class="card-meta">DeepSeek/Claude, Gmail Agent, Stargate</div></div></div>
-            <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">4 items</span><span class="card-expand">↓</span></div>
-          </div>
-          <div class="card-content">
-            <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">DeepSeek allegedly targeted Claude's reasoning</div><div class="item-summary">Reports suggest DeepSeek used Claude outputs to train models, generating "censorship-safe alternatives" to sensitive questions.</div></div>
-            <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Meta researcher's AI deleted her Gmail</div><div class="item-summary">Summer Yue's AI agent "lost" safety instruction and deleted her inbox — a cautionary tale for AI agent safety.</div></div>
-            <div class="item"><span class="item-tag product">Product</span><div class="item-title">OpenAI Stargate struggles</div><div class="item-summary">High costs led to separate deals with SoftBank & Oracle instead of joint venture.</div></div>
-            <div class="item"><span class="item-tag product">Product</span><div class="item-title">X working on 'Made with AI' labels</div><div class="item-summary">Response to India's C2PA mandate? X abandoned the standard under Musk.</div></div>
-          </div>
-        </article>
-        <article class="card" data-type="ai">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left"><div class="card-icon ai">🤖</div><div><div class="card-title">AI News Morning</div><div class="card-meta">Anthropic $30B, Gemini 3.1, ChatGPT Ads</div></div></div>
-            <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">7 items</span><span class="card-expand">↓</span></div>
-          </div>
-          <div class="card-content">
-            <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Anthropic raises $30B at $380B valuation</div><div class="item-summary">Series G led by GIC & Coatue. $14B run-rate revenue, 10x annual growth for 3 years.</div></div>
-            <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Nvidia-OpenAI investment talks</div><div class="item-summary">Major new deal reportedly in the works between the two AI giants.</div></div>
-            <div class="item"><span class="item-tag product">Product</span><div class="item-title">Claude Opus 4.6 released</div><div class="item-summary">Industry-leading on agentic coding, computer use, tool use.</div></div>
-            <div class="item"><span class="item-tag product">Product</span><div class="item-title">Gemini 3.1 Pro rolling out</div><div class="item-summary">Advanced reasoning for complex tasks. Available in Gemini app & NotebookLM.</div></div>
-            <div class="item"><span class="item-tag product">Product</span><div class="item-title">ChatGPT ads go live</div><div class="item-summary">Expedia, Qualcomm, Best Buy, Enterprise Mobility advertising in responses.</div></div>
-            <div class="item"><span class="item-tag research">Research</span><div class="item-title">GGML + llama.cpp join Hugging Face</div><div class="item-summary">Big win for local/open-source AI inference ecosystem.</div></div>
-            <div class="item"><span class="item-tag policy">Policy</span><div class="item-title">Meta spending $65M on AI election influence</div><div class="item-summary">Pro-AI super PACs targeting both parties.</div></div>
-          </div>
-        </article>
-        <article class="card" data-type="research">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left"><div class="card-icon research">📄</div><div><div class="card-title">Arxiv Research</div><div class="card-meta">CoT Monitorability, Proto-Tokens, VIRAASAT</div></div></div>
-            <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 papers</span><span class="card-expand">↓</span></div>
-          </div>
-          <div class="card-content">
-            <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Thinking by Subtraction: Confidence-Driven Contrastive Decoding</div><div class="item-summary">Training-free decoding targeting low-confidence tokens → better reasoning, shorter outputs.</div></div>
-            <div class="item"><span class="item-tag research">Paper</span><div class="item-title">CoT Monitorability via Information Theory</div><div class="item-summary">Formalizes when/how to monitor chain-of-thought reasoning — critical for AI safety.</div></div>
-            <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Proto-Tokens for One-Step Text Reconstruction</div><div class="item-summary">LLMs can reconstruct hundreds of tokens from two "proto-tokens" in one forward pass.</div></div>
-            <div class="item"><span class="item-tag research">Paper</span><div class="item-title">VIRAASAT: Indian Cultural Reasoning</div><div class="item-summary">3,200+ multi-hop questions. SCoM beats CoT by 20% on cultural reasoning.</div></div>
-            <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Retrieve-Verify-Retrieve (RVR)</div><div class="item-summary">Multi-round retrieval → 10%+ recall improvement on QAMPARI benchmark.</div></div>
-          </div>
-        </article>
-        <article class="card" data-type="industry">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left"><div class="card-icon industry">💊</div><div><div class="card-title">Healthcare & Biotech</div><div class="card-meta">Gilead $8B, Novo vs Lilly, FDA Gene Therapy</div></div></div>
-            <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">↓</span></div>
-          </div>
-          <div class="card-content">
-            <div class="item"><span class="item-tag ma">M&A</span><div class="item-title">Gilead acquires Arcellx for $8B</div><div class="item-summary">CAR-T acquisition sets up J&J showdown in multiple myeloma market.</div></div>
-            <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Novo's CagriSema loses to Lilly's Zepbound</div><div class="item-summary">20.2% vs 23.6% weight loss — Novo shares -12%, Lilly +4%.</div></div>
-            <div class="item"><span class="item-tag product">IPO</span><div class="item-title">Generate Biopharma plans $425M IPO</div><div class="item-summary">AI drug discovery company funding phase 3 asthma antibody trials.</div></div>
-            <div class="item"><span class="item-tag policy">Regulatory</span><div class="item-title">FDA new pathway for bespoke gene therapies</div><div class="item-summary">Framework for individualized treatments for ultra-rare diseases.</div></div>
-            <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Gossamer PAH drug fails phase 3</div><div class="item-summary">Will seek FDA approval on secondary endpoints.</div></div>
-          </div>
-        </article>
-        <article class="card" data-type="global">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left"><div class="card-icon global">🌐</div><div><div class="card-title">Global News</div><div class="card-meta">Trump Tariffs, Australia-Canada Alliance, Ukraine</div></div></div>
-            <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">↓</span></div>
-          </div>
-          <div class="card-content">
-            <div class="item"><span class="item-tag breaking">US Trade</span><div class="item-title">Trump tariffs in chaos after Supreme Court ruling</div><div class="item-summary">15% across-the-board announced. Critical minerals exempt. Hardware supply chains uncertain.</div></div>
-            <div class="item"><span class="item-tag policy">Minerals</span><div class="item-title">Australia-Canada "supergroup" forming</div><div class="item-summary">ASPI urges pivot from US-reliance. China controls 60-90% of refined output.</div></div>
-            <div class="item"><span class="item-tag policy">Ukraine</span><div class="item-title">War enters 4th year</div><div class="item-summary">Both sides under maximum strain. Cyber/energy risks elevated.</div></div>
-            <div class="item"><span class="item-tag breaking">Iran</span><div class="item-title">Trump considers "much bigger attack"</div><div class="item-summary">Strait of Hormuz disruption risk → energy price spike potential.</div></div>
-            <div class="item"><span class="item-tag policy">UK</span><div class="item-title">Prince Andrew arrested</div><div class="item-summary">Royal family crisis as Andrew swept up in Epstein probe.</div></div>
-          </div>
-        </article>
-      </div>
-    </main>
+        <div class="card-content">
+          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">DeepSeek allegedly targeted Claude's reasoning</div><div class="item-summary">Reports suggest DeepSeek used Claude outputs to train models, generating "censorship-safe alternatives" to sensitive questions.</div></div>
+          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Meta researcher's AI deleted her Gmail</div><div class="item-summary">Summer Yue's AI agent "lost" safety instruction and deleted her inbox — a cautionary tale for AI agent safety.</div></div>
+          <div class="item"><span class="item-tag product">Product</span><div class="item-title">OpenAI Stargate struggles</div><div class="item-summary">High costs led to separate deals with SoftBank & Oracle instead of joint venture.</div></div>
+          <div class="item"><span class="item-tag product">Product</span><div class="item-title">X working on 'Made with AI' labels</div><div class="item-summary">Response to India's C2PA mandate? X abandoned the standard under Musk.</div></div>
+        </div>
+      </article>
+
+      <article class="card" data-type="ai">
+        <div class="card-header" onclick="toggle(this)">
+          <div class="card-left"><div class="card-icon ai">🤖</div><div><div class="card-title">AI News Morning</div><div class="card-meta">Anthropic $30B, Gemini 3.1, ChatGPT Ads • 04:06 AM</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">7 items</span><span class="card-expand">▼</span></div>
+        </div>
+        <div class="card-content">
+          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Anthropic raises $30B at $380B valuation</div><div class="item-summary">Series G led by GIC & Coatue. $14B run-rate revenue, 10x annual growth for 3 years.</div></div>
+          <div class="item"><span class="item-tag breaking">Breaking</span><div class="item-title">Nvidia-OpenAI investment talks</div><div class="item-summary">Major new deal reportedly in the works between the two AI giants.</div></div>
+          <div class="item"><span class="item-tag product">Product</span><div class="item-title">Claude Opus 4.6 released</div><div class="item-summary">Industry-leading on agentic coding, computer use, tool use.</div></div>
+          <div class="item"><span class="item-tag product">Product</span><div class="item-title">Gemini 3.1 Pro rolling out</div><div class="item-summary">Advanced reasoning for complex tasks. Available in Gemini app & NotebookLM.</div></div>
+          <div class="item"><span class="item-tag product">Product</span><div class="item-title">ChatGPT ads go live</div><div class="item-summary">Expedia, Qualcomm, Best Buy, Enterprise Mobility advertising in responses.</div></div>
+          <div class="item"><span class="item-tag research">Research</span><div class="item-title">GGML + llama.cpp join Hugging Face</div><div class="item-summary">Big win for local/open-source AI inference ecosystem.</div></div>
+          <div class="item"><span class="item-tag policy">Policy</span><div class="item-title">Meta spending $65M on AI election influence</div><div class="item-summary">Pro-AI super PACs targeting both parties.</div></div>
+        </div>
+      </article>
+
+      <article class="card" data-type="research">
+        <div class="card-header" onclick="toggle(this)">
+          <div class="card-left"><div class="card-icon research">📄</div><div><div class="card-title">Arxiv Research</div><div class="card-meta">CoT Monitorability, Proto-Tokens, VIRAASAT • 04:00 AM</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 papers</span><span class="card-expand">▼</span></div>
+        </div>
+        <div class="card-content">
+          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Thinking by Subtraction: Confidence-Driven Contrastive Decoding</div><div class="item-summary">Training-free decoding targeting low-confidence tokens → better reasoning, shorter outputs.</div></div>
+          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">CoT Monitorability via Information Theory</div><div class="item-summary">Formalizes when/how to monitor chain-of-thought reasoning — critical for AI safety.</div></div>
+          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Proto-Tokens for One-Step Text Reconstruction</div><div class="item-summary">LLMs can reconstruct hundreds of tokens from two "proto-tokens" in one forward pass.</div></div>
+          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">VIRAASAT: Indian Cultural Reasoning</div><div class="item-summary">3,200+ multi-hop questions. SCoM beats CoT by 20% on cultural reasoning.</div></div>
+          <div class="item"><span class="item-tag research">Paper</span><div class="item-title">Retrieve-Verify-Retrieve (RVR)</div><div class="item-summary">Multi-round retrieval → 10%+ recall improvement on QAMPARI benchmark.</div></div>
+        </div>
+      </article>
+
+      <article class="card" data-type="industry">
+        <div class="card-header" onclick="toggle(this)">
+          <div class="card-left"><div class="card-icon industry">💊</div><div><div class="card-title">Healthcare & Biotech</div><div class="card-meta">Gilead $8B, Novo vs Lilly, FDA Gene Therapy • 06:00 AM</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">▼</span></div>
+        </div>
+        <div class="card-content">
+          <div class="item"><span class="item-tag ma">M&A</span><div class="item-title">Gilead acquires Arcellx for $8B</div><div class="item-summary">CAR-T acquisition sets up J&J showdown in multiple myeloma market.</div></div>
+          <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Novo's CagriSema loses to Lilly's Zepbound</div><div class="item-summary">20.2% vs 23.6% weight loss — Novo shares -12%, Lilly +4%.</div></div>
+          <div class="item"><span class="item-tag product">IPO</span><div class="item-title">Generate Biopharma plans $425M IPO</div><div class="item-summary">AI drug discovery company funding phase 3 asthma antibody trials.</div></div>
+          <div class="item"><span class="item-tag policy">Regulatory</span><div class="item-title">FDA new pathway for bespoke gene therapies</div><div class="item-summary">Framework for individualized treatments for ultra-rare diseases.</div></div>
+          <div class="item"><span class="item-tag clinical">Clinical</span><div class="item-title">Gossamer PAH drug fails phase 3</div><div class="item-summary">Will seek FDA approval on secondary endpoints.</div></div>
+        </div>
+      </article>
+
+      <article class="card" data-type="global">
+        <div class="card-header" onclick="toggle(this)">
+          <div class="card-left"><div class="card-icon global">🌐</div><div><div class="card-title">Global News</div><div class="card-meta">Trump Tariffs, Australia-Canada Alliance, Ukraine • 08:00 AM</div></div></div>
+          <div style="display:flex;align-items:center;gap:12px;"><span class="card-badge">5 items</span><span class="card-expand">▼</span></div>
+        </div>
+        <div class="card-content">
+          <div class="item"><span class="item-tag breaking">US Trade</span><div class="item-title">Trump tariffs in chaos after Supreme Court ruling</div><div class="item-summary">15% across-the-board announced. Critical minerals exempt. Hardware supply chains uncertain.</div></div>
+          <div class="item"><span class="item-tag policy">Minerals</span><div class="item-title">Australia-Canada "supergroup" forming</div><div class="item-summary">ASPI urges pivot from US-reliance. China controls 60-90% of refined output.</div></div>
+          <div class="item"><span class="item-tag policy">Ukraine</span><div class="item-title">War enters 4th year</div><div class="item-summary">Both sides under maximum strain. Cyber/energy risks elevated.</div></div>
+          <div class="item"><span class="item-tag breaking">Iran</span><div class="item-title">Trump considers "much bigger attack"</div><div class="item-summary">Strait of Hormuz disruption risk → energy price spike potential.</div></div>
+          <div class="item"><span class="item-tag policy">UK</span><div class="item-title">Prince Andrew arrested</div><div class="item-summary">Royal family crisis as Andrew swept up in Epstein probe.</div></div>
+        </div>
+      </article>
+
+    </div>
+
+    <footer class="footer">
+      <p>Generated by <a href="#">ClawBot</a> • Last updated: <span id="updateTime"></span></p>
+    </footer>
   </div>
-  <nav class="mobile-nav">
-    <div class="mobile-nav-item active" data-filter="all"><span>Overview</span></div>
-    <div class="mobile-nav-item" data-filter="ai"><span>AI</span></div>
-    <div class="mobile-nav-item" data-filter="research"><span>Research</span></div>
-    <div class="mobile-nav-item" data-filter="industry"><span>Industry</span></div>
-    <div class="mobile-nav-item" data-filter="global"><span>Global</span></div>
-  </nav>
+
   <script>
     function updateTime() {
       const now = new Date();
-      document.getElementById('time').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
-      document.getElementById('date').textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+      document.getElementById('time').textContent = now.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) + ' • ' + now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+      document.getElementById('updateTime').textContent = now.toLocaleString();
     }
     updateTime();
-    setInterval(updateTime, 1000);
+    setInterval(updateTime, 60000);
+
     function toggle(header) { header.closest('.card').classList.toggle('expanded'); }
+    
     function filter(type) {
-      document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
-      document.querySelectorAll('.card').forEach(card => card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
+      document.querySelectorAll('.filter-tab').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
+      document.querySelectorAll('.card').forEach(card => card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none');
     }
-    document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.addEventListener('click', () => filter(el.dataset.filter)));
+    
+    document.querySelectorAll('.filter-tab').forEach(el => el.addEventListener('click', () => filter(el.dataset.filter)));
   </script>
 </body>
 </html>
