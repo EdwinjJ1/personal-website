@@ -1,0 +1,228 @@
+{
+  "lastUpdated": "2026-02-26T10:30:00+11:00",
+  "availableDates": [
+    { "value": "2026-02-26", "label": "February 26, 2026" }
+  ],
+  "news": [
+    {
+      "id": "ai-2601",
+      "title": "Anthropic Raises $30B at $380B Valuation",
+      "summary": "Anthropic closed Series G funding led by GIC and Coatue, valuing the company at $380 billion. Run-rate revenue now $14B with 10x annual growth over three years.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-02-26",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2602",
+      "title": "AMD-Meta $100B AI Chip Deal",
+      "summary": "Meta signed a multi-year agreement for six gigawatts of AMD AI processors, potentially owning 10% of AMD stock. Follows similar AMD-OpenAI deal.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-02-26",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2603",
+      "title": "Perplexity Launches Computer - Unified AI Agent Platform",
+      "summary": "Perplexity announced 'Computer,' a new AI platform that 'reasons, delegates, searches, builds, remembers, codes, and delivers.' Currently available for Max subscribers.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-02-26",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2604",
+      "title": "Gemini Gets Multi-Step Task Capabilities on Mobile",
+      "summary": "Google Gemini can now perform multi-step tasks on phones, starting with ordering food or rides. Represents push into agentic AI for mobile.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-02-26",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2605",
+      "title": "Google Flow AI Expands with Whisk and ImageFX Integration",
+      "summary": "Google brings experimental Whisk and ImageFX AI image tools into Flow app, creating unified workspace to 'generate, edit and animate everything.'",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-02-26",
+      "time": "06:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2606",
+      "title": "Claude Opus 4.6 Released",
+      "summary": "Anthropic upgraded their smartest model with major improvements in agentic coding, computer use, tool use, search, and finance tasks.",
+      "tag": "PRODUCT",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-02-26",
+      "time": "04:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2607",
+      "title": "GGML and llama.cpp Join Hugging Face",
+      "summary": "Major consolidation for local AI: GGML and llama.cpp projects join Hugging Face to 'ensure long-term progress of Local AI.'",
+      "tag": "PRODUCT",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog",
+      "date": "2026-02-26",
+      "time": "04:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-2608",
+      "title": "Anthropic Consciousness Debate",
+      "summary": "Anthropic describes Claude as 'a new kind of entity' that might be conscious, sparking philosophical and ethical debates about AI sentience.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-02-26",
+      "time": "04:01",
+      "category": "ai"
+    },
+    {
+      "id": "res-2601",
+      "title": "Aletheia Tackles FirstProof Autonomously",
+      "summary": "Google DeepMind mathematics research agent powered by Gemini 3 Deep Think autonomously solved 6/10 FirstProof challenge problems, demonstrating superhuman mathematical reasoning.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2602.21201",
+      "date": "2026-02-26",
+      "time": "08:04",
+      "category": "research"
+    },
+    {
+      "id": "res-2602",
+      "title": "DEEPSYNTH: Benchmark for Deep Information Synthesis",
+      "summary": "New benchmark evaluating LLM agents on realistic tasks requiring information gathering, synthesis, and structured reasoning. SOTA agents achieve only 8.97-17.5 F1.",
+      "tag": "RESEARCH",
+      "source": "arXiv (ICLR 2026)",
+      "sourceUrl": "https://arxiv.org/abs/2602.21143",
+      "date": "2026-02-26",
+      "time": "08:04",
+      "category": "research"
+    },
+    {
+      "id": "res-2603",
+      "title": "UPipe: Memory-Efficient Context Parallelism via Headwise Chunking",
+      "summary": "Achieves 87.5% memory reduction for 32B Transformers, supporting 5M token context on single 8xH100 node while matching training speed.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2602.21196",
+      "date": "2026-02-26",
+      "time": "08:04",
+      "category": "research"
+    },
+    {
+      "id": "res-2604",
+      "title": "Prompt-Level Distillation: Non-Parametric Alternative to Fine-Tuning",
+      "summary": "Extracts reasoning patterns into System Prompt instructions. Gemma-3 4B improved from 57% to 90% F1 on StereoSet with negligible latency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2602.21103",
+      "date": "2026-02-26",
+      "time": "08:04",
+      "category": "research"
+    },
+    {
+      "id": "res-2605",
+      "title": "Nemotron-Terminal: Data Engineering for LLM Terminal Capabilities",
+      "summary": "NVIDIA releases Terminal-Task-Gen pipeline and Terminal-Corpus dataset. 32B model jumps from 3.4% to 27.4% on Terminal-Bench 2.0.",
+      "tag": "RESEARCH",
+      "source": "arXiv (NVIDIA)",
+      "sourceUrl": "https://arxiv.org/abs/2602.21193",
+      "date": "2026-02-26",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "ind-2601",
+      "title": "ADT Acquires Origin Wireless for AI-Powered Home Sensing",
+      "summary": "Home security giant ADT acquired Origin Wireless, which uses Wi-Fi signals to detect where people and objects are in a home without cameras.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-02-26",
+      "time": "06:02",
+      "category": "industry"
+    },
+    {
+      "id": "ind-2602",
+      "title": "Nothing Phone 4A Launches in Blush Pink",
+      "summary": "Nothing upcoming Phone 4A available in blush colorway with transparent chassis. Pink phone trend continues in Android market.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-02-26",
+      "time": "06:02",
+      "category": "industry"
+    },
+    {
+      "id": "ind-2603",
+      "title": "On LightSpray Cloudmonster 3 Hyper Launching Globally",
+      "summary": "On revolutionary sneakers made with spray-on fibers getting global release. LightSpray technology creates upper in 3 minutes using robotic arm.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-02-26",
+      "time": "06:02",
+      "category": "industry"
+    },
+    {
+      "id": "glo-2601",
+      "title": "Epstein Files Released: Gates, Summers, Mandelson Named",
+      "summary": "Millions of Epstein-related documents released by US Justice Department. Bill Gates 'took responsibility' in foundation staff meeting.",
+      "tag": "BREAKING",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.com/news/world",
+      "date": "2026-02-26",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "glo-2602",
+      "title": "Trump 10% Worldwide Tariff Goes Into Effect",
+      "summary": "President Trump new global tariff regime now active with baseline 10% tariff on imports. Direct impact on hardware imports and data center equipment.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-02-26",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "glo-2603",
+      "title": "Japan to Deploy Missiles on Island Near Taiwan by 2031",
+      "summary": "Japan announced plans to deploy missiles on Yonaguni island, which lies on the frontlines of Taiwan tensions with China.",
+      "tag": "POLICY",
+      "source": "BBC",
+      "sourceUrl": "https://www.bbc.com/news/world",
+      "date": "2026-02-26",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "glo-2604",
+      "title": "Australia Seals $300M AUKUS Sub Reactor Deal with UK",
+      "summary": "Australia finalized defence deal with UK, committing $300 million for AUKUS submarine nuclear reactors.",
+      "tag": "POLICY",
+      "source": "SMH",
+      "sourceUrl": "https://www.smh.com.au/world",
+      "date": "2026-02-26",
+      "time": "08:00",
+      "category": "global"
+    }
+  ]
+}

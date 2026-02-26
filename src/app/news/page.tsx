@@ -1,249 +1,245 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
-import GradientText from '@/components/GradientText';
-import { getAllNews, getBreakingNews, getNewsByCategory } from '@/data/newsPosts';
+import ClientOnlyParticles from '@/components/ClientOnlyParticles';
+import newsData from '@/data/news-data.json';
 
-const container = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.6, staggerChildren: 0.1 }
-  }
-};
+interface NewsItem {
+  id: string;
+  title: string;
+  summary: string;
+  tag: 'BREAKING' | 'PRODUCT' | 'RESEARCH' | 'POLICY';
+  source: string;
+  sourceUrl: string;
+  date: string;
+  time: string;
+  category: 'ai' | 'research' | 'industry' | 'global';
+}
 
-const item = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
-};
+const categories = [
+  { value: 'all', label: 'All', color: '#7a9088' },
+  { value: 'ai', label: 'AI News', color: '#00d4ff' },
+  { value: 'research', label: 'Research', color: '#a78bfa' },
+  { value: 'industry', label: 'Industry', color: '#22c55e' },
+  { value: 'global', label: 'Global', color: '#f59e0b' },
+];
 
-const categoryConfig = {
-  ai: { label: 'AI News', color: '#7a9088', icon: '🤖' },
-  research: { label: 'Research', color: '#6a8a8e', icon: '📚' },
-  industry: { label: 'Industry', color: '#8a7a6a', icon: '🏢' },
-  global: { label: 'Global', color: '#7a6a8a', icon: '🌍' }
+const tagColors = {
+  BREAKING: { bg: '#dc2626', text: '#fff' },
+  PRODUCT: { bg: '#2563eb', text: '#fff' },
+  RESEARCH: { bg: '#16a34a', text: '#fff' },
+  POLICY: { bg: '#d97706', text: '#fff' },
 };
 
 export default function NewsPage() {
-  const allNews = getAllNews();
-  const breakingNews = getBreakingNews();
-  const aiNews = getNewsByCategory('ai');
-  const researchNews = getNewsByCategory('research');
-  const industryNews = getNewsByCategory('industry');
-  const globalNews = getNewsByCategory('global');
+  const [selectedDate, setSelectedDate] = useState(newsData.availableDates[0]?.value || '2026-02-26');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const news = newsData.news as NewsItem[];
+  const availableDates = newsData.availableDates;
+
+  const filteredNews = news.filter(item => {
+    const dateMatch = item.date === selectedDate;
+    const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory;
+    return dateMatch && categoryMatch;
+  });
+
+  const stats = {
+    total: news.filter(item => item.date === selectedDate).length,
+    ai: news.filter(item => item.date === selectedDate && item.category === 'ai').length,
+    research: news.filter(item => item.date === selectedDate && item.category === 'research').length,
+    industry: news.filter(item => item.date === selectedDate && item.category === 'industry').length,
+    global: news.filter(item => item.date === selectedDate && item.category === 'global').length,
+  };
 
   return (
     <PageTransition>
-      <div className="min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
-        <div className="container mx-auto px-6 py-12">
-          <motion.div
-            variants={container}
-            initial="hidden"
-            animate="visible"
-            className="max-w-6xl mx-auto"
-          >
-            {/* Header */}
-            <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6">
-                <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                  animationSpeed={6}
-                  showBorder={false}
-                >
-                  News Hub
-                </GradientText>
-              </h1>
-              <p className="text-xl max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
-                AI industry developments, research breakthroughs, and tech news.
-                Updated throughout the day from top sources.
-              </p>
-            </motion.div>
+      <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
+        <ClientOnlyParticles />
 
-            {/* Breaking News */}
-            {breakingNews.length > 0 && (
-              <motion.div variants={item} className="mb-16">
-                <div className="flex items-center gap-3 mb-8">
-                  <span className="text-2xl">⚡</span>
-                  <h2 className="text-3xl font-bold" style={{ color: '#e0d8cc' }}>Breaking News</h2>
-                  <span className="px-3 py-1 text-sm font-bold rounded-full animate-pulse" 
-                    style={{ background: 'linear-gradient(to right, #dc2626, #b91c1c)', color: '#fff' }}>
-                    LIVE
+        <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
+          {/* Header */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-8"
+          >
+            <div className="flex items-start justify-between mb-4">
+              <div>
+                <h1 className="text-3xl font-bold mb-2" style={{ color: '#e0d8cc' }}>
+                  News Hub
+                </h1>
+                <p className="text-sm" style={{ color: '#8a8680' }}>
+                  AI industry news, research papers, and global updates
+                </p>
+              </div>
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all hover:border-[#7a9088]"
+                style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#7a9088' }}
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+                Back
+              </Link>
+            </div>
+
+            {/* ClawdBot Info Banner */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="rounded-xl border p-4 mb-6 flex items-center gap-4"
+              style={{ borderColor: 'rgba(122, 144, 136, 0.3)', backgroundColor: '#211e1c' }}
+            >
+              <div 
+                className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+                style={{ backgroundColor: '#282622' }}
+              >
+                <svg className="w-5 h-5" style={{ color: '#7a9088' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-semibold" style={{ color: '#e0d8cc' }}>Powered by ClawdBot</span>
+                  <span 
+                    className="text-xs px-2 py-0.5 rounded-full"
+                    style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)', color: '#22c55e' }}
+                  >
+                    Active
                   </span>
                 </div>
-                <div className="grid md:grid-cols-2 gap-6">
-                  {breakingNews.slice(0, 4).map((news) => (
-                    <Link key={news.id} href={`/news/${news.slug}`}>
-                      <motion.article
-                        variants={item}
-                        className="rounded-xl overflow-hidden border transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
-                        style={{ 
-                          background: 'linear-gradient(to bottom right, rgba(60, 35, 35, 0.6), rgba(45, 30, 30, 0.5), rgba(60, 35, 35, 0.6))', 
-                          borderColor: 'rgba(220, 38, 38, 0.4)' 
-                        }}
-                      >
-                        <div className="p-6">
-                          <div className="flex items-center gap-2 mb-3">
-                            <span className="text-xl">{categoryConfig[news.category].icon}</span>
-                            <span className="text-sm font-semibold" style={{ color: '#dc2626' }}>
-                              BREAKING
-                            </span>
-                            <span className="text-sm" style={{ color: '#8a8680' }}>
-                              {news.source}
-                            </span>
-                          </div>
-
-                          <h3 className="text-xl font-bold mb-3 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                            {news.title}
-                          </h3>
-
-                          <p className="mb-4 line-clamp-2 text-sm" style={{ color: '#b8b4aa' }}>
-                            {news.excerpt}
-                          </p>
-
-                          <div className="flex justify-between items-center text-xs" style={{ color: '#8a8680' }}>
-                            <time>{new Date(news.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</time>
-                            <span className="text-[#7a9088]">Read more →</span>
-                          </div>
-                        </div>
-                      </motion.article>
-                    </Link>
-                  ))}
+                <p className="text-xs" style={{ color: '#8a8680' }}>
+                  24/7 automated news assistant. Pulls updates every 2 hours from Anthropic, DeepMind, arXiv, The Verge, and more.
+                </p>
+              </div>
+              <div className="hidden md:flex items-center gap-4 text-xs" style={{ color: '#8a8680' }}>
+                <div className="text-center">
+                  <div className="font-semibold" style={{ color: '#7a9088' }}>4</div>
+                  <div>Categories</div>
                 </div>
-              </motion.div>
-            )}
-
-            {/* Category Sections */}
-            {(['ai', 'research', 'industry', 'global'] as const).map((category) => {
-              const news = getNewsByCategory(category);
-              const config = categoryConfig[category];
-              
-              return (
-                <motion.div key={category} variants={item} className="mb-16">
-                  <div className="flex items-center gap-3 mb-8">
-                    <span className="text-2xl">{config.icon}</span>
-                    <h2 className="text-3xl font-bold" style={{ color: '#e0d8cc' }}>{config.label}</h2>
-                    <span className="px-3 py-1 text-sm rounded-full border" 
-                      style={{ borderColor: `${config.color}40`, color: config.color }}>
-                      {news.length} stories
-                    </span>
-                  </div>
-
-                  <div className="space-y-4">
-                    {news.map((article) => (
-                      <Link key={article.id} href={`/news/${article.slug}`}>
-                        <motion.article
-                          variants={item}
-                          className="rounded-xl p-6 border transition-all duration-300 group cursor-pointer hover:border-[#7a9088]"
-                          style={{ 
-                            background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', 
-                            borderColor: 'rgba(114, 110, 102, 0.3)' 
-                          }}
-                        >
-                          <div className="flex flex-col md:flex-row md:items-start gap-4">
-                            <div className="flex-1">
-                              <div className="flex flex-wrap items-center gap-2 mb-3">
-                                {article.breaking && (
-                                  <span className="px-2 py-1 text-xs font-bold rounded" 
-                                    style={{ background: '#dc262620', color: '#dc2626' }}>
-                                    BREAKING
-                                  </span>
-                                )}
-                                {article.featured && (
-                                  <span className="px-2 py-1 text-xs rounded" 
-                                    style={{ background: `${config.color}20`, color: config.color }}>
-                                    Featured
-                                  </span>
-                                )}
-                                <span className="text-xs" style={{ color: '#8a8680' }}>
-                                  {article.source}
-                                </span>
-                              </div>
-
-                              <h3 className="text-lg font-bold mb-2 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                                {article.title}
-                              </h3>
-
-                              <p className="text-sm mb-3 line-clamp-2" style={{ color: '#b8b4aa' }}>
-                                {article.excerpt}
-                              </p>
-
-                              <div className="flex flex-wrap gap-2">
-                                {article.tags.slice(0, 3).map((tag) => (
-                                  <span
-                                    key={tag}
-                                    className="px-2 py-1 text-xs rounded-full border"
-                                    style={{ backgroundColor: `${config.color}10`, color: config.color, borderColor: `${config.color}30` }}
-                                  >
-                                    {tag}
-                                  </span>
-                                ))}
-                              </div>
-                            </div>
-
-                            <div className="md:text-right md:min-w-[120px]">
-                              <time
-                                className="block text-sm mb-1"
-                                style={{ color: '#8a8680' }}
-                              >
-                                {new Date(article.date).toLocaleDateString('en-US', {
-                                  month: 'short',
-                                  day: 'numeric'
-                                })}
-                              </time>
-                              <span className="text-xs group-hover:text-[#7a9088] transition-colors" style={{ color: '#8a8680' }}>
-                                Read more →
-                              </span>
-                            </div>
-                          </div>
-                        </motion.article>
-                      </Link>
-                    ))}
-                  </div>
-                </motion.div>
-              );
-            })}
-
-            {/* Stats */}
-            <motion.div variants={item} className="mt-20">
-              <div className="rounded-2xl p-8 border" style={{ background: 'linear-gradient(to right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                  <div>
-                    <div className="text-3xl font-bold mb-2" style={{ color: '#7a9088' }}>{allNews.length}</div>
-                    <div className="text-sm" style={{ color: '#b8b4aa' }}>Total Stories</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2" style={{ color: '#dc2626' }}>{breakingNews.length}</div>
-                    <div className="text-sm" style={{ color: '#b8b4aa' }}>Breaking</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2" style={{ color: '#6a8a8e' }}>{aiNews.length}</div>
-                    <div className="text-sm" style={{ color: '#b8b4aa' }}>AI News</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl font-bold mb-2" style={{ color: '#8a7a6a' }}>{researchNews.length}</div>
-                    <div className="text-sm" style={{ color: '#b8b4aa' }}>Research</div>
-                  </div>
+                <div className="text-center">
+                  <div className="font-semibold" style={{ color: '#7a9088' }}>2h</div>
+                  <div>Interval</div>
+                </div>
+                <div className="text-center">
+                  <div className="font-semibold" style={{ color: '#7a9088' }}>24/7</div>
+                  <div>Uptime</div>
                 </div>
               </div>
             </motion.div>
 
-            {/* Last Updated */}
-            <motion.div variants={item} className="text-center mt-12">
-              <p className="text-sm" style={{ color: '#8a8680' }}>
-                Last updated: {new Date().toLocaleDateString('en-US', { 
-                  weekday: 'long', 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric',
-                  hour: '2-digit',
-                  minute: '2-digit'
-                })}
-              </p>
-            </motion.div>
+            {/* Date Selector */}
+            {availableDates.length > 1 && (
+              <div className="flex flex-wrap gap-2 mb-6">
+                {availableDates.map((date) => (
+                  <button
+                    key={date.value}
+                    onClick={() => setSelectedDate(date.value)}
+                    className="px-4 py-2 rounded-lg border transition-all"
+                    style={{
+                      borderColor: selectedDate === date.value ? '#7a9088' : 'rgba(114, 110, 102, 0.3)',
+                      backgroundColor: selectedDate === date.value ? '#282622' : 'transparent',
+                      color: selectedDate === date.value ? '#e0d8cc' : '#8a8680'
+                    }}
+                  >
+                    {date.label}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {/* Category Filter & Stats */}
+            <div className="flex flex-wrap items-center gap-3 mb-6">
+              {categories.map((cat) => (
+                <button
+                  key={cat.value}
+                  onClick={() => setSelectedCategory(cat.value)}
+                  className="px-3 py-1.5 rounded-lg border transition-all text-sm"
+                  style={{
+                    borderColor: selectedCategory === cat.value ? cat.color : 'rgba(114, 110, 102, 0.3)',
+                    backgroundColor: selectedCategory === cat.value ? '#282622' : 'transparent',
+                    color: selectedCategory === cat.value ? cat.color : '#8a8680'
+                  }}
+                >
+                  {cat.label}
+                  <span className="ml-1.5 opacity-60">
+                    ({cat.value === 'all' ? stats.total : stats[cat.value as keyof typeof stats]})
+                  </span>
+                </button>
+              ))}
+            </div>
           </motion.div>
+
+          {/* News Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredNews.map((item, i) => (
+              <motion.a
+                key={item.id}
+                href={item.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: i * 0.03 }}
+                className="rounded-xl border p-5 transition-all hover:border-[#7a9088] block"
+                style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#282622' }}
+              >
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <span
+                      className="text-xs px-2 py-0.5 rounded font-medium"
+                      style={{ backgroundColor: tagColors[item.tag].bg, color: tagColors[item.tag].text }}
+                    >
+                      {item.tag}
+                    </span>
+                    <span
+                      className="text-xs px-2 py-0.5 rounded"
+                      style={{ backgroundColor: 'rgba(114, 110, 102, 0.2)', color: '#b8b4aa' }}
+                    >
+                      {categories.find(c => c.value === item.category)?.label}
+                    </span>
+                  </div>
+                  <span className="text-xs" style={{ color: '#8a8680' }}>{item.time}</span>
+                </div>
+                <h3 className="font-semibold mb-2" style={{ color: '#e0d8cc' }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{item.summary}</p>
+                <div className="mt-3 pt-3 border-t flex items-center justify-between" style={{ borderColor: 'rgba(114, 110, 102, 0.2)' }}>
+                  <span className="text-xs" style={{ color: '#8a8680' }}>{item.source}</span>
+                  <svg className="w-4 h-4" style={{ color: '#7a9088' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </div>
+              </motion.a>
+            ))}
+          </div>
+
+          {filteredNews.length === 0 && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-center py-20"
+            >
+              <p style={{ color: '#8a8680' }}>No news available for this date and category.</p>
+            </motion.div>
+          )}
+
+          {/* Footer */}
+          <motion.footer
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="mt-12 text-center text-sm"
+            style={{ color: '#8a8680' }}
+          >
+            <p>Generated by ClawdBot | Last updated: {newsData.lastUpdated}</p>
+          </motion.footer>
         </div>
       </div>
     </PageTransition>
