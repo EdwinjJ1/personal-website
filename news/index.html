@@ -225,11 +225,11 @@
       </div>
       <div class="nav-section">
         <div class="nav-label">Reports</div>
-        <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
-        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">14</span></div>
+        <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">5</span></div>
+        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">24</span></div>
         <div class="nav-item" data-filter="research"><span>Research</span><span class="count">5</span></div>
         <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">5</span></div>
-        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">5</span></div>
+        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">4</span></div>
       </div>
     </aside>
 
@@ -243,10 +243,10 @@
       </header>
       
       <div class="stats">
-        <div class="stat"><span class="stat-value">14</span><span class="stat-label">AI News</span></div>
+        <div class="stat"><span class="stat-value">24</span><span class="stat-label">AI News</span></div>
         <div class="stat"><span class="stat-value">5</span><span class="stat-label">Research</span></div>
         <div class="stat"><span class="stat-value">5</span><span class="stat-label">Industry</span></div>
-        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Global</span></div>
+        <div class="stat"><span class="stat-value">4</span><span class="stat-label">Global</span></div>
       </div>
 
       <!-- Date Navigation -->
@@ -259,18 +259,74 @@
 
       <div class="cards" id="cards">
 
-        <!-- AI News 08:02 -->
-        <article class="card" data-type="ai" data-date="2026-02-27" data-time="08:02">
+        <!-- AI News 16:02 - Latest -->
+        <article class="card expanded" data-type="ai" data-date="2026-02-27" data-time="16:02">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🔥</div>
+              <div>
+                <div class="card-title">AI News Afternoon</div>
+                <div class="card-meta">Anthropic $30B, Claude Opus 4.6, AMD-Meta $100B</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:02</span>
+              <span class="card-badge">6 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.anthropic.com/news">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic raises $30B at $380B valuation</div>
+              <div class="item-summary">Massive Series G led by GIC and Coatue. $14B run-rate revenue growing 10x annually. Solidifies Anthropic as enterprise AI leader.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Opus 4.6 released</div>
+              <div class="item-summary">Industry-leading on agentic coding, computer use, tool use, search, and finance capabilities.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">AMD forges $100B deal with Meta for AI chips</div>
+              <div class="item-summary">Multi-year agreement for six gigawatts of AMD processors. Meta could own 10% of AMD stock.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://deepmind.google/blog/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google releases Gemini 3.1 Pro and Deep Think</div>
+              <div class="item-summary">Gemini 3.1 Pro for complex tasks, Deep Think advances science and research capabilities.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Nvidia reports $68.1B Q4 revenue, up 73% YoY</div>
+              <div class="item-summary">Record quarter driven by data center demand for AI training. Massive GPU cluster build-out continues.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump demands tech companies self-fund power infrastructure</div>
+              <div class="item-summary">New policy requires AI data center operators to secure their own energy supply.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 12:01 -->
+        <article class="card" data-type="ai" data-date="2026-02-27" data-time="12:01">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon ai">⚡</div>
               <div>
-                <div class="card-title">AI News Update</div>
+                <div class="card-title">AI News Midday</div>
                 <div class="card-meta">DeepSeek/Claude, Gmail Agent, Stargate</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:02</span>
+              <span class="card-time">12:01</span>
               <span class="card-badge">4 items</span>
               <span class="card-expand">↓</span>
             </div>
@@ -298,68 +354,6 @@
               <span class="item-tag product">Product</span>
               <div class="item-title">X working on 'Made with AI' labels</div>
               <div class="item-summary">Response to India's C2PA mandate...</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- AI News 04:06 -->
-        <article class="card" data-type="ai" data-date="2026-02-27" data-time="04:06">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News Morning</div>
-                <div class="card-meta">Anthropic $30B, Gemini 3.1, ChatGPT Ads</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:06</span>
-              <span class="card-badge">7 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="detail.html?id=ai-anthropic">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Anthropic raises $30B at $380B valuation</div>
-              <div class="item-summary">Series G led by GIC & Coatue...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-nvidia-openai">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Nvidia-OpenAI investment talks</div>
-              <div class="item-summary">Major new deal reportedly in the works...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-claude">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Claude Opus 4.6 released</div>
-              <div class="item-summary">Industry-leading on agentic coding...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-gemini">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Gemini 3.1 Pro rolling out</div>
-              <div class="item-summary">Advanced reasoning for complex tasks...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-chatgpt-ads">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">ChatGPT ads go live</div>
-              <div class="item-summary">Expedia, Qualcomm, Best Buy advertising...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-ggml">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">GGML + llama.cpp join Hugging Face</div>
-              <div class="item-summary">Big win for local/open-source AI...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-meta-pac">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Meta spending $65M on AI election influence</div>
-              <div class="item-summary">Pro-AI super PACs targeting both parties...</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -415,77 +409,83 @@
           </div>
         </article>
 
-        <!-- Industry -->
-        <article class="card" data-type="industry" data-date="2026-02-27" data-time="07:00">
+        <!-- Industry - Climate & Energy -->
+        <article class="card" data-type="industry" data-date="2026-02-27" data-time="16:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon industry">💊</div>
+              <div class="card-icon industry">⚡</div>
               <div>
-                <div class="card-title">Healthcare & Biotech</div>
-                <div class="card-meta">Gilead $8B, Novo vs Lilly, FDA Gene Therapy</div>
+                <div class="card-title">Climate & Energy</div>
+                <div class="card-meta">Trump Tariffs, Nvidia $68B, Data Center Expansion</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">07:00</span>
+              <span class="card-time">16:00</span>
               <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=industry-gilead">
-              <span class="item-tag ma">M&A</span>
-              <div class="item-title">Gilead acquires Arcellx for $8B</div>
-              <div class="item-summary">CAR-T acquisition sets up J&J showdown...</div>
+            <a class="item" href="detail.html?id=industry-tariffs">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump's 10% Global Tariff: Energy Infrastructure Impact</div>
+              <div class="item-summary">Data center energy demands surge. Tech companies face rising costs for AI clusters.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=industry-novo">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">Novo's CagriSema loses to Lilly's Zepbound</div>
-              <div class="item-summary">20.2% vs 23.6% weight loss...</div>
+            <a class="item" href="detail.html?id=industry-nvidia">
+              <span class="item-tag product">Earnings</span>
+              <div class="item-title">Nvidia's $68.1B Q4 Revenue - Driven by Data Center Demand</div>
+              <div class="item-summary">Record quarter, up 73% YoY. Massive GPU cluster build-out continues.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=industry-generate">
-              <span class="item-tag product">IPO</span>
-              <div class="item-title">Generate Biopharma plans $425M IPO</div>
-              <div class="item-summary">AI drug discovery company...</div>
+            <a class="item" href="detail.html?id=industry-veo">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google DeepMind's Veo 3.1 Video Generation</div>
+              <div class="item-summary">Improved video generation with 1080p resolution and enhanced temporal consistency.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=industry-fda">
-              <span class="item-tag policy">Regulatory</span>
-              <div class="item-title">FDA new pathway for bespoke gene therapies</div>
-              <div class="item-summary">Framework for individualized treatments...</div>
+            <a class="item" href="detail.html?id=industry-microsoft">
+              <span class="item-tag ma">Expansion</span>
+              <div class="item-title">Microsoft's Data Center Expansion - AI Infrastructure Investment</div>
+              <div class="item-summary">Multi-billion dollar expansion for OpenAI, Azure, and Copilot AI services.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=industry-gossamer">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">Gossamer PAH drug fails phase 3</div>
-              <div class="item-summary">Will seek FDA approval on secondary endpoints...</div>
+            <a class="item" href="detail.html?id=industry-meta-power">
+              <span class="item-tag product">Energy</span>
+              <div class="item-title">Meta's AI Infrastructure - Data Center Power Agreements</div>
+              <div class="item-summary">Meta secures power contracts for AI data center operations, including renewable energy.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
         </article>
 
         <!-- Global -->
-        <article class="card" data-type="global" data-date="2026-02-27" data-time="05:00">
+        <article class="card" data-type="global" data-date="2026-02-27" data-time="08:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon global">🌐</div>
               <div>
                 <div class="card-title">Global News</div>
-                <div class="card-meta">Trump Tariffs, Australia-Canada Alliance, Ukraine</div>
+                <div class="card-meta">US-Iran Talks, Australia Tariffs, Geopolitical</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">05:00</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-time">08:00</span>
+              <span class="card-badge">4 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=global-tariffs">
-              <span class="item-tag breaking">US Trade</span>
-              <div class="item-title">Trump tariffs in chaos after Supreme Court ruling</div>
-              <div class="item-summary">15% across-the-board announced...</div>
+            <a class="item" href="detail.html?id=global-iran-talks">
+              <span class="item-tag breaking">GEOPOLITICAL</span>
+              <div class="item-title">US-Iran Nuclear Talks End with "Significant Progress"</div>
+              <div class="item-summary">Indirect negotiations in Geneva concluded with reports of progress. Could affect sanctions and tech trade.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-aus-tariffs">
+              <span class="item-tag policy">AUSTRALIA</span>
+              <div class="item-title">Australia Faces Higher Tariffs Threat from Trump</div>
+              <div class="item-summary">Preparing for trade disruption. Could raise costs for tech exports and affect startup funding.</div>
               <span class="item-arrow">→</span>
             </a>
             <a class="item" href="detail.html?id=global-minerals">
@@ -498,18 +498,6 @@
               <span class="item-tag policy">Ukraine</span>
               <div class="item-title">War enters 4th year</div>
               <div class="item-summary">Both sides under maximum strain...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=global-iran">
-              <span class="item-tag breaking">Iran</span>
-              <div class="item-title">Trump considers "much bigger attack"</div>
-              <div class="item-summary">Strait of Hormuz disruption risk...</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=global-uk">
-              <span class="item-tag policy">UK</span>
-              <div class="item-title">Prince Andrew arrested</div>
-              <div class="item-summary">Royal family crisis as Andrew swept up...</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
