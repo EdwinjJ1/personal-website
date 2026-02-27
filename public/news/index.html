@@ -33,7 +33,7 @@
     }
 
     .container { max-width: 1100px; margin: 0 auto; padding: 100px 24px 48px; }
-    
+
     .layout {
       display: grid;
       grid-template-columns: 240px 1fr;
@@ -47,14 +47,14 @@
     .page-header { margin-bottom: 32px; }
     .page-title { font-size: 2rem; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
     .page-subtitle { color: var(--text-muted); font-size: 0.95rem; }
-    .current-date { 
-      display: inline-block; 
-      margin-top: 12px; 
-      padding: 6px 14px; 
-      background: var(--bg-card); 
-      border: 1px solid var(--border); 
-      border-radius: 20px; 
-      font-size: 0.85rem; 
+    .current-date {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: 0.85rem;
       color: var(--accent);
     }
 
@@ -75,15 +75,15 @@
         display: none;
       }
     }
-    
+
     .sidebar-section { margin-bottom: 24px; }
-    .sidebar-title { 
-      font-size: 0.75rem; 
-      font-weight: 600; 
-      text-transform: uppercase; 
-      letter-spacing: 0.05em; 
-      color: var(--text-subtle); 
-      margin-bottom: 12px; 
+    .sidebar-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-subtle);
+      margin-bottom: 12px;
       padding: 0 4px;
     }
     .nav-item {
@@ -115,6 +115,54 @@
     .about-text ul { margin: 8px 0; padding-left: 16px; }
     .about-text li { margin-bottom: 4px; }
 
+    /* Date Navigation */
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+    .date-nav-label { font-size: 0.85rem; font-weight: 600; color: var(--accent); min-width: 80px; }
+    .date-nav-dates { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+    .date-btn {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg-secondary);
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .date-btn:hover { background: var(--bg-card-hover); border-color: var(--border-strong); }
+    .date-btn.active { background: var(--accent); color: var(--bg-primary); border-color: var(--accent); }
+    .date-btn.today { position: relative; }
+    .date-btn.today::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .date-btn.active.today::after { background: var(--bg-primary); }
+
+    @media (max-width: 600px) {
+      .date-nav { padding: 12px 16px; gap: 8px; }
+      .date-nav-label { display: none; }
+      .date-btn { padding: 10px 12px; min-width: 48px; min-height: 48px; }
+      .date-nav-dates { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+      .date-nav-dates::-webkit-scrollbar { display: none; }
+    }
+
     /* Stats row */
     .stats-row { display: flex; gap: 12px; margin-bottom: 24px; flex-wrap: wrap; }
     .stat-badge {
@@ -142,6 +190,7 @@
     }
     .section-title { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); display: flex; align-items: center; gap: 8px; }
     .section-count { font-size: 0.8rem; color: var(--text-muted); background: var(--bg-card); padding: 4px 10px; border-radius: 12px; }
+    .section-time { font-size: 0.75rem; color: var(--text-subtle); margin-left: 8px; }
 
     /* News items */
     .news-item {
@@ -195,27 +244,27 @@
     /* Mobile nav */
     .mobile-nav { display: none; }
     @media (max-width: 900px) {
-      .mobile-nav { 
-        display: flex; 
-        gap: 8px; 
-        margin-bottom: 24px; 
-        overflow-x: auto; 
-        padding-bottom: 8px; 
+      .mobile-nav {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 24px;
+        overflow-x: auto;
+        padding-bottom: 8px;
       }
-      .mobile-nav-item { 
-        flex-shrink: 0; 
-        padding: 8px 14px; 
-        border-radius: 20px; 
-        font-size: 0.85rem; 
-        background: var(--bg-card); 
-        border: 1px solid var(--border); 
-        color: var(--text-muted); 
-        cursor: pointer; 
+      .mobile-nav-item {
+        flex-shrink: 0;
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        background: var(--bg-card);
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+        cursor: pointer;
       }
-      .mobile-nav-item.active { 
-        background: var(--accent); 
-        border-color: var(--accent); 
-        color: var(--bg-primary); 
+      .mobile-nav-item.active {
+        background: var(--accent);
+        border-color: var(--accent);
+        color: var(--bg-primary);
       }
     }
   </style>
@@ -223,12 +272,18 @@
 <body>
   <div class="container">
     <a href="/" class="back-link">← Back to Home</a>
-    
+
     <header class="page-header">
       <h1 class="page-title">📰 News Dashboard</h1>
       <p class="page-subtitle">AI-curated news • Click any item for full details</p>
       <span class="current-date" id="currentDate">Loading...</span>
     </header>
+
+    <!-- Date Navigation -->
+    <div class="date-nav">
+      <span class="date-nav-label" id="monthLabel">Feb 2026</span>
+      <div class="date-nav-dates" id="dateNav"></div>
+    </div>
 
     <div class="stats-row" id="statsRow"></div>
     <div class="mobile-nav" id="mobileNav"></div>
@@ -286,16 +341,23 @@
 
     let newsData = {};
     let currentCategory = 'all';
+    let currentDate = '2026-02-27';
+    const availableDates = ['2026-02-27', '2026-02-26', '2026-02-25', '2026-02-24'];
 
     function formatDate(dateStr) {
       const d = new Date(dateStr);
       return d.toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' });
     }
 
+    function formatMonthYear(dateStr) {
+      const d = new Date(dateStr);
+      return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+
     function renderItem(item) {
       const detailId = item.detailId || '';
       const href = detailId ? `detail.html?id=${detailId}` : '#';
-      
+
       return `<a href="${href}" class="news-item">
         <div class="news-meta">
           <span class="news-time">${item.time}</span>
@@ -309,23 +371,24 @@
 
     function renderSection(items, category) {
       if (!items || items.length === 0) return '';
-      
+
       const cat = CATEGORIES.find(c => c.id === category);
+      const time = items[0]?.time || '';
       let html = `<div class="section" data-category="${category}">
         <div class="section-header">
-          <div class="section-title">${cat.icon} ${cat.name}</div>
+          <div class="section-title">${cat.icon} ${cat.name}<span class="section-time">${time}</span></div>
           <span class="section-count">${items.length}</span>
         </div>`;
-      
+
       items.forEach(item => { html += renderItem(item); });
       html += `</div>`;
       return html;
     }
 
     function renderContent() {
-      const data = newsData['2026-02-24'];
+      const data = newsData[currentDate];
       if (!data) {
-        document.getElementById('mainContent').innerHTML = '<div class="empty">No news available</div>';
+        document.getElementById('mainContent').innerHTML = '<div class="empty">📭 No news available for this date</div>';
         return;
       }
 
@@ -346,8 +409,11 @@
     }
 
     function renderStats() {
-      const data = newsData['2026-02-24'];
-      if (!data) return;
+      const data = newsData[currentDate];
+      if (!data) {
+        document.getElementById('statsRow').innerHTML = '';
+        return;
+      }
 
       let total = 0;
       const counts = {};
@@ -367,11 +433,11 @@
     }
 
     function renderCategoryNav() {
-      const data = newsData['2026-02-24'];
+      const data = newsData[currentDate];
       let html = '';
-      
+
       CATEGORIES.forEach(cat => {
-        const count = cat.id === 'all' 
+        const count = cat.id === 'all'
           ? Object.values(data || {}).reduce((sum, arr) => sum + arr.length, 0)
           : (data?.[cat.id]?.length || 0);
         html += `<div class="nav-item ${currentCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">
@@ -381,7 +447,7 @@
       });
 
       document.getElementById('categoryNav').innerHTML = html;
-      document.getElementById('mobileNav').innerHTML = CATEGORIES.map(cat => 
+      document.getElementById('mobileNav').innerHTML = CATEGORIES.map(cat =>
         `<div class="mobile-nav-item ${currentCategory === cat.id ? 'active' : ''}" data-category="${cat.id}">${cat.icon} ${cat.name}</div>`
       ).join('');
 
@@ -394,12 +460,60 @@
       });
     }
 
+    function renderDateNav() {
+      const container = document.getElementById('dateNav');
+      const monthLabel = document.getElementById('monthLabel');
+      const today = new Date().toISOString().split('T')[0];
+
+      container.innerHTML = '';
+
+      availableDates.forEach(date => {
+        const btn = document.createElement('button');
+        btn.className = 'date-btn';
+        btn.dataset.date = date;
+
+        const d = new Date(date);
+        const dayName = date === today ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
+        const dayNum = d.getDate();
+
+        const span1 = document.createElement('span');
+        span1.style.fontSize = '11px';
+        span1.style.display = 'block';
+        span1.textContent = dayName;
+
+        const span2 = document.createElement('span');
+        span2.style.fontSize = '14px';
+        span2.textContent = dayNum;
+
+        btn.appendChild(span1);
+        btn.appendChild(span2);
+
+        if (date === today) btn.classList.add('today');
+        if (date === currentDate) btn.classList.add('active');
+
+        btn.addEventListener('click', () => {
+          currentDate = date;
+          renderDateNav();
+          document.getElementById('currentDate').textContent = formatDate(date);
+          monthLabel.textContent = formatMonthYear(date);
+          renderStats();
+          renderCategoryNav();
+          renderContent();
+        });
+
+        container.appendChild(btn);
+      });
+
+      monthLabel.textContent = formatMonthYear(currentDate);
+    }
+
     async function init() {
       try {
         const res = await fetch('data.json');
         newsData = await res.json();
 
-        document.getElementById('currentDate').textContent = formatDate('2026-02-24');
+        document.getElementById('currentDate').textContent = formatDate(currentDate);
+        renderDateNav();
         renderStats();
         renderCategoryNav();
         renderContent();
