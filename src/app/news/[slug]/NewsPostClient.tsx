@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useParams } from 'next/navigation';
@@ -33,6 +33,11 @@ export default function NewsPostClient() {
   const slug = params.slug as string;
   const post = getNewsBySlug(slug);
   const allNews = getAllNews();
+  const [currentUrl, setCurrentUrl] = useState('');
+
+  useEffect(() => {
+    setCurrentUrl(window.location.href);
+  }, []);
 
   if (!post) {
     return (
@@ -198,15 +203,15 @@ export default function NewsPostClient() {
             <motion.div variants={item} className="mb-16 p-6 rounded-xl border" style={{ background: 'rgba(40, 38, 34, 0.4)', borderColor: 'rgba(114, 110, 102, 0.3)' }}>
               <h3 className="text-lg font-semibold mb-4" style={{ color: '#e0d8cc' }}>Share this article</h3>
               <div className="flex gap-3">
-                <button 
-                  onClick={() => navigator.clipboard.writeText(window.location.href)}
+                <button
+                  onClick={() => currentUrl && navigator.clipboard.writeText(currentUrl)}
                   className="px-4 py-2 rounded-lg border text-sm transition-all hover:border-[#7a9088]"
                   style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
                 >
                   📋 Copy Link
                 </button>
-                <a 
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(window.location.href)}`}
+                <a
+                  href={currentUrl ? `https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(currentUrl)}` : '#'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2 rounded-lg border text-sm transition-all hover:border-[#7a9088]"
@@ -247,8 +252,8 @@ export default function NewsPostClient() {
 
             {/* Back to Top */}
             <motion.div variants={item} className="mt-16 text-center">
-              <button 
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              <button
+                onClick={() => typeof window !== 'undefined' && window.scrollTo({ top: 0, behavior: 'smooth' })}
                 className="text-sm hover:underline"
                 style={{ color: '#7a9088' }}
               >
