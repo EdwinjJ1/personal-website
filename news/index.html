@@ -179,6 +179,31 @@
     }
     .date-btn.active.today::after { background: white; }
 
+    /* Mobile Date Navigation */
+    @media (max-width: 600px) {
+      .date-nav {
+        padding: 12px 16px;
+        gap: 8px;
+      }
+      .date-nav-label {
+        display: none;
+      }
+      .date-btn {
+        padding: 10px 12px;
+        min-width: 48px;
+        min-height: 48px;
+      }
+      .date-nav-dates {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .date-nav-dates::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
     /* Card timestamp */
     .card-time {
       font-size: 12px;
@@ -226,7 +251,7 @@
 
       <!-- Date Navigation -->
       <div class="date-nav">
-        <span class="date-nav-label">📅 Date</span>
+        <span class="date-nav-label" id="monthLabel">Feb 2026</span>
         <div class="date-nav-dates" id="dateNav">
           <!-- Dynamically populated -->
         </div>
@@ -519,13 +544,32 @@
 
     function filter(type) {
       document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
+
+      let visibleCount = 0;
       document.querySelectorAll('.card').forEach(card => {
         const cardDate = card.dataset.date;
         const cardType = card.dataset.type;
         const dateMatch = cardDate === currentDate;
         const typeMatch = type === 'all' || cardType === type;
-        card.style.display = (dateMatch && typeMatch) ? 'block' : 'none';
+        const shouldShow = dateMatch && typeMatch;
+        card.style.display = shouldShow ? 'block' : 'none';
+        if (shouldShow) visibleCount++;
       });
+
+      // Handle empty state
+      const cardsContainer = document.getElementById('cards');
+      let emptyState = document.getElementById('emptyState');
+      if (visibleCount === 0) {
+        if (!emptyState) {
+          emptyState = document.createElement('div');
+          emptyState.id = 'emptyState';
+          emptyState.style.cssText = 'text-align:center;padding:48px;color:var(--fg-muted);font-size:15px;';
+          emptyState.textContent = '📭 No news available for this date';
+          cardsContainer.appendChild(emptyState);
+        }
+      } else if (emptyState) {
+        emptyState.remove();
+      }
     }
 
     function selectDate(date) {
@@ -550,7 +594,14 @@
 
     function initDateNav() {
       const container = document.getElementById('dateNav');
+      const monthLabel = document.getElementById('monthLabel');
       const today = new Date().toISOString().split('T')[0];
+
+      // Update month label based on current selection
+      function updateMonthLabel(date) {
+        const d = new Date(date);
+        monthLabel.textContent = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      }
 
       availableDates.forEach(date => {
         const btn = document.createElement('button');
@@ -561,14 +612,30 @@
         const dayName = date === today ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
         const dayNum = d.getDate();
 
-        btn.innerHTML = `<span style="font-size:11px;display:block">${dayName}</span><span style="font-size:14px">${dayNum}</span>`;
+        // Use textContent for security instead of innerHTML
+        const span1 = document.createElement('span');
+        span1.style.fontSize = '11px';
+        span1.style.display = 'block';
+        span1.textContent = dayName;
+
+        const span2 = document.createElement('span');
+        span2.style.fontSize = '14px';
+        span2.textContent = dayNum;
+
+        btn.appendChild(span1);
+        btn.appendChild(span2);
 
         if (date === today) btn.classList.add('today');
         if (date === currentDate) btn.classList.add('active');
 
-        btn.addEventListener('click', () => selectDate(date));
+        btn.addEventListener('click', () => {
+          selectDate(date);
+          updateMonthLabel(date);
+        });
         container.appendChild(btn);
       });
+
+      updateMonthLabel(currentDate);
     }
 
     // Initialize
