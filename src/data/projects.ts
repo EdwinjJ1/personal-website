@@ -216,6 +216,29 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 104,
+    title: 'Chrono-Map: Sydney Layers',
+    description:
+      'Interactive heritage map showcasing Sydney\'s historical sites, cultural landmarks, and film locations across time periods.',
+    longDescription:
+      'Chrono-Map is a digital heritage platform that helps users explore Sydney\'s transformation over 100+ years. Features include an interactive map with 50+ historic sites, "then and now" photo comparisons, film location tours (including The Matrix), QR code scanning for augmented reality experiences, and curated walking routes. Built with modern geospatial technology to make Sydney\'s cultural history accessible to everyone.',
+    technologies: ['Next.js 16', 'React 19', 'Mapbox GL', 'Tailwind CSS', 'Framer Motion'],
+    category: 'Web Development',
+    featured: true,
+    status: 'Live',
+    liveUrl: 'https://chrono-map-eight.vercel.app/',
+    githubUrl: 'https://github.com/EdwinjJ1/chrono-map',
+    icon: '🗺️',
+    highlights: [
+      '50+ Historical Sites & Landmarks',
+      '"Then & Now" Photo Comparisons',
+      'Film Location Tours',
+      'Interactive Mapbox Integration',
+      'QR Code & AR Experiences',
+      'Curated Walking Routes',
+    ],
+  },
+  {
     id: 10,
     title: 'Discord Bot',
     description:
