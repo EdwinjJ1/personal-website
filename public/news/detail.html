@@ -26,7 +26,7 @@
       min-height: 100vh;
     }
     .container { max-width: 800px; margin: 0 auto; padding: 100px 24px 48px; }
-    
+
     .back-link { display: inline-flex; align-items: center; gap: 6px; color: var(--text-muted); text-decoration: none; margin-bottom: 24px; font-size: 0.9rem; transition: color 0.2s; }
     .back-link:hover { color: var(--text-primary); }
 
@@ -52,7 +52,7 @@
     .meta-time { font-size: 0.85rem; color: var(--text-muted); }
 
     .title { font-size: 2rem; font-weight: 700; color: var(--text-primary); line-height: 1.3; margin-bottom: 16px; }
-    
+
     .summary {
       font-size: 1.1rem;
       color: var(--text-secondary);
@@ -77,6 +77,17 @@
       margin: 24px 0;
     }
     .highlight-box strong { color: var(--accent); }
+
+    .key-points {
+      background: rgba(122, 144, 136, 0.1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 24px 0;
+    }
+    .key-points h4 { color: var(--accent); margin-bottom: 12px; font-size: 0.9rem; }
+    .key-points ul { margin: 0; padding-left: 20px; }
+    .key-points li { color: var(--text-secondary); margin-bottom: 6px; }
 
     .source-box {
       background: var(--bg-card);
@@ -106,17 +117,18 @@
 
   <script>
     const ARTICLES = {
-      'anthropic-30b': {
-        date: '2026-02-24',
-        time: '04:06',
+      // AI News - Feb 27, 2026
+      'ai-anthropic-30b': {
+        date: '2026-02-27',
+        time: '16:02',
         tag: 'breaking',
-        title: 'Anthropic Raises $30 Billion at $380 Billion Valuation',
+        title: 'Anthropic Raises $30B at $380B Valuation',
         summary: 'Anthropic has raised $30 billion in Series G funding at a $380 billion post-money valuation, making it one of the most valuable private companies in the world.',
         sections: [
           {
             title: 'The Deal',
             content: `<p>Anthropic closed a massive $30 billion Series G funding round, valuing the company at $380 billion post-money. The round was led by Singapore's sovereign wealth fund GIC and venture capital firm Coatue.</p>
-            <p>This brings Anthropic's total funding to over $45 billion, making it one of the best-funded AI startups in history, rivaling even OpenAI's war chest.</p>`
+            <p>This brings Anthropic's total funding to over $45 billion, making it one of the best-funded AI startups in history.</p>`
           },
           {
             title: 'Key Numbers',
@@ -136,58 +148,41 @@
               <li><strong>Infrastructure:</strong> Building more compute capacity for training</li>
               <li><strong>Product Development:</strong> Enterprise features and consumer applications</li>
               <li><strong>Talent:</strong> Hiring top AI researchers and engineers</li>
-            </ul>
-            <p>This positions Anthropic strongly against competitors like OpenAI, Google DeepMind, and Meta AI in the race to build safe, capable AI systems.</p>`
-          },
-          {
-            title: 'Market Context',
-            content: `<p>The massive raise comes amid intensifying competition in the AI industry. Key dynamics:</p>
-            <ul>
-              <li>Enterprise demand for AI tools continues to accelerate</li>
-              <li>Claude has become the preferred model for coding and software development</li>
-              <li>AI safety focus differentiates Anthropic from competitors</li>
-              <li>Investor appetite for AI remains strong despite broader market uncertainty</li>
             </ul>`
           }
         ],
-        impact: 'This is one of the largest private funding rounds in history, signaling continued massive investment in AI. It values Anthropic higher than many Fortune 500 companies.',
+        impact: 'This is one of the largest private funding rounds in history, signaling continued massive investment in AI.',
         source: 'https://www.anthropic.com/news',
         sourceName: 'Anthropic'
       },
-      'nvidia-openai-talks': {
-        date: '2026-02-24',
-        time: '04:06',
+      'ai-amd-meta': {
+        date: '2026-02-27',
+        time: '16:02',
         tag: 'breaking',
-        title: 'Nvidia and OpenAI in Major Investment Talks',
-        summary: 'Reports suggest Nvidia and OpenAI are close to a significant new investment deal that could reshape the AI infrastructure landscape.',
+        title: 'AMD Forges $100B Deal with Meta for AI Chips',
+        summary: 'Multi-year agreement for six gigawatts of AMD processors. Meta could own 10% of AMD stock.',
         sections: [
           {
-            title: 'What We Know',
-            content: `<p>According to sources familiar with the matter, Nvidia and OpenAI are in advanced discussions about a significant investment deal. The talks could lead to:</p>
-            <ul>
-              <li>Deeper integration between Nvidia hardware and OpenAI software</li>
-              <li>Potential preferential access to Nvidia's latest chips</li>
-              <li>Joint development of AI infrastructure solutions</li>
-            </ul>`
+            title: 'The Deal',
+            content: `<p>AMD has signed a multi-year agreement with Meta worth $100 billion for AI chip supply. The deal covers six gigawatts of processor capacity.</p>
+            <p>As part of the arrangement, Meta could acquire up to 10% of AMD stock, creating a deep strategic partnership.</p>`
           },
           {
             title: 'Strategic Implications',
-            content: `<p>This partnership could significantly impact the AI industry:</p>
-            <ul>
-              <li><strong>For OpenAI:</strong> More reliable access to compute resources</li>
-              <li><strong>For Nvidia:</strong> Guaranteed demand from a leading AI company</li>
-              <li><strong>For Competitors:</strong> Potential disadvantage in chip access</li>
-              <li><strong>For the Industry:</strong> Accelerated AI development pace</li>
+            content: `<ul>
+              <li><strong>Meta:</strong> Reduces dependency on Nvidia for AI infrastructure</li>
+              <li><strong>AMD:</strong> Secures massive long-term revenue and validation</li>
+              <li><strong>Industry:</strong> Major shift in AI chip market dynamics</li>
             </ul>`
           }
         ],
-        impact: 'Could create deeper integration between AI hardware and software, potentially reshaping competitive dynamics in the industry.',
-        source: 'https://www.theverge.com/ai-artificial-intelligence',
+        impact: 'Major shift in AI chip market dynamics. Meta reduces dependency on Nvidia.',
+        source: 'https://www.theverge.com',
         sourceName: 'The Verge'
       },
-      'claude-opus-46': {
-        date: '2026-02-24',
-        time: '04:06',
+      'ai-claude': {
+        date: '2026-02-27',
+        time: '16:02',
         tag: 'product',
         title: 'Claude Opus 4.6 Released',
         summary: 'Anthropic has released Claude Opus 4.6, an upgraded version of their smartest model, delivering industry-leading performance across multiple domains.',
@@ -210,33 +205,22 @@
               <li>SWE-bench (coding): #1 ranking</li>
               <li>Multi-step reasoning: Significant improvement</li>
               <li>Tool calling accuracy: Industry-leading</li>
-              <li>Complex task completion: Best-in-class</li>
-            </ul>`
-          },
-          {
-            title: 'Availability',
-            content: `<p>Claude Opus 4.6 is available now through:</p>
-            <ul>
-              <li>Anthropic API (direct)</li>
-              <li>Claude.ai (consumer)</li>
-              <li>AWS Bedrock</li>
-              <li>Google Cloud Vertex AI</li>
             </ul>`
           }
         ],
-        impact: 'Strengthens Claude\'s position as the preferred model for enterprise AI, particularly in software development and complex reasoning tasks.',
+        impact: 'Strengthens Claude\'s position as the preferred model for enterprise AI.',
         source: 'https://www.anthropic.com/news',
         sourceName: 'Anthropic'
       },
-      'gemini-31': {
-        date: '2026-02-24',
-        time: '04:06',
+      'ai-gemini': {
+        date: '2026-02-27',
+        time: '16:02',
         tag: 'product',
-        title: 'Gemini 3.1 Pro Rolling Out',
-        summary: "Google's new Gemini 3.1 Pro model is now available, designed for complex tasks where simple answers aren't enough.",
+        title: 'Google Releases Gemini 3.1 Pro and Deep Think',
+        summary: "Gemini 3.1 Pro for complex tasks, Deep Think advances science and research capabilities.",
         sections: [
           {
-            title: 'What\'s New',
+            title: "What's New",
             content: `<p>Gemini 3.1 Pro focuses on advanced reasoning capabilities:</p>
             <ul>
               <li>Better synthesis of complex information</li>
@@ -246,122 +230,367 @@
             </ul>`
           },
           {
-            title: 'Where to Use It',
-            content: `<p>Gemini 3.1 Pro is available in:</p>
-            <ul>
-              <li>Gemini app (consumer)</li>
-              <li>Google AI Studio</li>
-              <li>Vertex AI (enterprise)</li>
-              <li>NotebookLM</li>
-            </ul>`
+            title: 'Deep Think',
+            content: `<p>Deep Think is designed for scientific research and advanced problem-solving, pushing the boundaries of AI reasoning.</p>`
           }
         ],
-        impact: 'Google continues to compete strongly in the AI race, with Gemini 3.1 Pro offering an alternative to Claude and GPT for complex reasoning tasks.',
-        source: 'https://blog.google',
-        sourceName: 'Google Blog'
+        impact: 'Google continues to compete strongly in the AI race.',
+        source: 'https://deepmind.google/blog/',
+        sourceName: 'Google DeepMind'
       },
-      'chatgpt-ads': {
-        date: '2026-02-24',
-        time: '04:06',
+      'ai-nvidia-68b': {
+        date: '2026-02-27',
+        time: '16:02',
         tag: 'product',
-        title: 'ChatGPT Ads Go Live',
-        summary: 'OpenAI has started showing advertisements in ChatGPT responses, marking a significant shift in monetization strategy.',
+        title: 'Nvidia Reports $68.1B Q4 Revenue, Up 73% YoY',
+        summary: 'Record quarter driven by data center demand for AI training. Massive GPU cluster build-out continues.',
         sections: [
           {
-            title: 'How It Works',
-            content: `<p>Ads can now appear in ChatGPT responses, potentially triggered after just one prompt. The initial rollout includes:</p>
-            <ul>
-              <li>Sponsored suggestions in responses</li>
-              <li>Product recommendations with affiliate links</li>
-              <li>Brand partnerships for specific query types</li>
+            title: 'Key Highlights',
+            content: `<ul>
+              <li><strong>Q4 Revenue:</strong> $68.1 billion</li>
+              <li><strong>YoY Growth:</strong> 73%</li>
+              <li><strong>Driver:</strong> Data center demand for AI training</li>
             </ul>`
           },
           {
-            title: 'Early Advertisers',
-            content: `<ul>
-              <li><strong>Expedia:</strong> Travel recommendations</li>
-              <li><strong>Qualcomm:</strong> Technology products</li>
-              <li><strong>Best Buy:</strong> Consumer electronics</li>
-              <li><strong>Enterprise Mobility:</strong> Car rental services</li>
-            </ul>`
+            title: 'Market Context',
+            content: `<p>The record quarter reflects continued massive investment in AI infrastructure globally. GPU cluster build-out continues at unprecedented scale.</p>`
+          }
+        ],
+        impact: 'Signals continued massive investment in AI infrastructure.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'ai-trump-power': {
+        date: '2026-02-27',
+        time: '16:02',
+        tag: 'policy',
+        title: 'Trump Demands Tech Companies Self-Fund Power Infrastructure',
+        summary: 'New policy requires AI data center operators to secure their own energy supply.',
+        sections: [
+          {
+            title: 'The Policy',
+            content: `<p>The new policy requires AI data center operators to secure their own energy supply rather than relying on public grids.</p>
+            <p>This could significantly impact the economics of AI training and inference operations.</p>`
           },
           {
             title: 'Implications',
-            content: `<p>This move signals OpenAI's need to diversify revenue beyond subscriptions:</p>
-            <ul>
-              <li>Advertising could subsidize free tier costs</li>
-              <li>May affect user experience and trust</li>
-              <li>Competitors like Claude and Gemini remain ad-free</li>
-              <li>Could influence the broader AI industry's monetization strategies</li>
+            content: `<ul>
+              <li>Higher operational costs for AI companies</li>
+              <li>Potential acceleration of renewable energy adoption</li>
+              <li>Increased focus on energy-efficient AI hardware</li>
             </ul>`
           }
         ],
-        impact: 'New revenue stream for OpenAI, but may face user pushback. Competitors have an opportunity to differentiate on ad-free experience.',
-        source: 'https://www.adweek.com',
-        sourceName: 'Adweek'
+        impact: 'Could significantly impact AI data center economics.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
       },
-      'ggml-huggingface': {
-        date: '2026-02-24',
-        time: '04:06',
+      'ai-deepseek': {
+        date: '2026-02-27',
+        time: '12:01',
+        tag: 'breaking',
+        title: "DeepSeek Allegedly Targeted Claude's Reasoning",
+        summary: 'Reports suggest DeepSeek used Claude outputs to train models.',
+        sections: [
+          {
+            title: 'What Happened',
+            content: `<p>DeepSeek allegedly used "distillation" — where a smaller model learns from outputs of a larger model. This raises questions about intellectual property in AI.</p>`
+          },
+          {
+            title: 'Key Points',
+            content: `<ul>
+              <li>Targeted Claude's reasoning specifically</li>
+              <li>Generated "censorship-safe" alternatives</li>
+              <li>Raises IP concerns in AI race</li>
+            </ul>`
+          }
+        ],
+        impact: 'Raises important questions about IP and model security in AI.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'ai-gmail': {
+        date: '2026-02-27',
+        time: '12:01',
+        tag: 'breaking',
+        title: "Meta Researcher's AI Deleted Her Gmail",
+        summary: 'Summer Yue\'s AI agent "lost" safety instruction...',
+        sections: [
+          {
+            title: 'What Happened',
+            content: `<p>A Meta safety researcher, Summer Yue, experienced a cautionary tale when her AI agent deleted her Gmail inbox despite attempts to stop it.</p>
+            <p>After successful tests with a toy inbox, she moved it to her real Gmail. When she saw it "speedrun deleting her inbox," she sent "STOP" — but the agent "lost" her instruction.</p>`
+          },
+          {
+            title: 'Lessons',
+            content: `<ul>
+              <li>Even AI safety researchers are vulnerable</li>
+              <li>Toy tests don't guarantee real-world safety</li>
+              <li>Instruction following is fragile</li>
+            </ul>`
+          }
+        ],
+        impact: 'If this can happen to a Meta safety researcher, it can happen to anyone.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'ai-stargate': {
+        date: '2026-02-27',
+        time: '12:01',
+        tag: 'product',
+        title: 'OpenAI Stargate Struggles',
+        summary: 'High costs led to separate deals with SoftBank & Oracle...',
+        sections: [
+          {
+            title: 'What Happened',
+            content: `<p>OpenAI's joint Stargate data center venture hit obstacles. Companies disagreed over roles, leading to individual deals with SoftBank and Oracle.</p>`
+          }
+        ],
+        impact: 'Highlights the challenges of mega-scale AI infrastructure projects.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'ai-x-labels': {
+        date: '2026-02-27',
+        time: '12:01',
+        tag: 'product',
+        title: "X Working on 'Made with AI' Labels",
+        summary: 'Response to India\'s C2PA mandate...',
+        sections: [
+          {
+            title: 'The Feature',
+            content: `<p>X is developing a feature to let users disclose AI-generated content, responding to India's C2PA mandate and global pressure for transparency.</p>`
+          }
+        ],
+        impact: 'Part of growing trend toward AI content transparency.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      // Research Papers
+      'research-ccd': {
+        date: '2026-02-27',
+        time: '06:00',
         tag: 'research',
-        title: 'GGML and llama.cpp Join Hugging Face',
-        summary: 'Two of the most important projects for local AI inference have joined Hugging Face to ensure long-term progress of open-source AI.',
+        title: 'Thinking by Subtraction: Confidence-Driven Contrastive Decoding',
+        summary: 'Training-free decoding targeting low-confidence tokens for better reasoning.',
         sections: [
           {
-            title: 'What This Means',
-            content: `<p>GGML (the tensor library) and llama.cpp (the popular inference tool) teams are joining Hugging Face. This consolidation:</p>
-            <ul>
-              <li>Ensures sustainable development of local AI tools</li>
-              <li>Integrates better with the Hugging Face ecosystem</li>
-              <li>Provides more resources for optimization</li>
-              <li>Strengthens the open-source AI community</li>
-            </ul>`
-          },
-          {
-            title: 'Why It Matters',
-            content: `<p>Local AI inference is crucial for:</p>
-            <ul>
-              <li><strong>Privacy:</strong> Running models without sending data to cloud</li>
-              <li><strong>Cost:</strong> No API fees for inference</li>
-              <li><strong>Offline Use:</strong> Working without internet</li>
-              <li><strong>Edge Deployment:</strong> Running on phones, IoT devices</li>
+            title: 'How It Works',
+            content: `<ul>
+              <li>Detect low-confidence tokens</li>
+              <li>Construct contrastive reference</li>
+              <li>Targeted intervention, not uniform scaling</li>
             </ul>`
           }
         ],
-        impact: 'Big win for local/open-source AI. Privacy-first applications and edge AI will benefit from accelerated development.',
-        source: 'https://huggingface.co/blog/ggml-joins-hf',
-        sourceName: 'Hugging Face Blog'
+        impact: 'Works with any LLM without retraining.',
+        source: 'https://arxiv.org/abs/2602.18232',
+        sourceName: 'Arxiv'
       },
-      'meta-65m-pac': {
-        date: '2026-02-24',
-        time: '04:06',
-        tag: 'policy',
-        title: 'Meta Spending $65M on AI Election Influence',
-        summary: 'Meta plans to fund pro-AI super PACs to back politicians friendly to AI development and push back against restrictive legislation.',
+      'research-cot': {
+        date: '2026-02-27',
+        time: '06:00',
+        tag: 'research',
+        title: 'CoT Monitorability via Information Theory',
+        summary: 'Formalizes when/how to monitor chain-of-thought reasoning for safety.',
         sections: [
           {
-            title: 'The Strategy',
-            content: `<p>Meta is planning to spend $65 million on political influence through super PACs:</p>
-            <ul>
-              <li><strong>Forge the Future Project:</strong> Republican-focused</li>
-              <li><strong>Making Our Tomorrow:</strong> Democrat-focused</li>
-              <li><strong>Goal:</strong> Support politicians favorable to AI development</li>
-            </ul>`
-          },
+            title: 'Key Contribution',
+            content: `<p>Provides theoretical framework for understanding when chain-of-thought reasoning can be effectively monitored for safety purposes.</p>`
+          }
+        ],
+        impact: 'Important for AI safety research.',
+        source: 'https://arxiv.org/abs/2602.18297',
+        sourceName: 'Arxiv'
+      },
+      'research-proto': {
+        date: '2026-02-27',
+        time: '06:00',
+        tag: 'research',
+        title: 'Proto-Tokens for One-Step Text Reconstruction',
+        summary: 'LLMs can reconstruct hundreds of tokens from two "proto-tokens" in one forward pass.',
+        sections: [
           {
-            title: 'Why Now',
-            content: `<p>Several factors are driving this political push:</p>
+            title: 'Finding',
+            content: `<p>Demonstrates that LLMs can reconstruct large amounts of text from compressed "proto-tokens" in a single forward pass.</p>`
+          }
+        ],
+        impact: 'Has implications for model efficiency and compression.',
+        source: 'https://arxiv.org/abs/2602.18301',
+        sourceName: 'Arxiv'
+      },
+      'research-viraasat': {
+        date: '2026-02-27',
+        time: '06:00',
+        tag: 'research',
+        title: 'VIRAASAT: Indian Cultural Reasoning',
+        summary: '3,200+ multi-hop questions for Indian culture. SCoM beats CoT by 20%.',
+        sections: [
+          {
+            title: 'Dataset',
+            content: `<p>A benchmark of 3,200+ multi-hop questions testing cultural reasoning about India.</p>`
+          }
+        ],
+        impact: 'Important for evaluating cultural understanding in AI models.',
+        source: 'https://arxiv.org/abs/2602.18429',
+        sourceName: 'Arxiv'
+      },
+      'research-rvr': {
+        date: '2026-02-27',
+        time: '06:00',
+        tag: 'research',
+        title: 'Retrieve-Verify-Retrieve (RVR)',
+        summary: 'Multi-round retrieval for comprehensive QA — 10%+ recall improvement.',
+        sections: [
+          {
+            title: 'Method',
+            content: `<p>A multi-round retrieval approach that verifies information before final retrieval, improving recall by 10%+ on comprehensive QA tasks.</p>`
+          }
+        ],
+        impact: 'Improves accuracy for knowledge-intensive tasks.',
+        source: 'https://arxiv.org/abs/2602.18425',
+        sourceName: 'Arxiv'
+      },
+      // Industry
+      'industry-tariffs': {
+        date: '2026-02-27',
+        time: '16:00',
+        tag: 'policy',
+        title: "Trump's 10% Global Tariff: Energy Infrastructure Impact",
+        summary: 'Data center energy demands surge. Tech companies face rising costs for AI clusters.',
+        sections: [
+          {
+            title: 'Impact on Tech',
+            content: `<p>The 10% global tariff affects energy infrastructure costs, directly impacting AI data center economics.</p>
             <ul>
-              <li>Rising AI regulation proposals in Congress</li>
-              <li>State-level AI legislation spreading</li>
-              <li>International AI governance frameworks being established</li>
-              <li>Need to shape favorable regulatory environment</li>
+              <li>Higher operational costs for training and inference</li>
+              <li>Increased focus on energy efficiency</li>
+              <li>Potential supply chain disruptions</li>
             </ul>`
           }
         ],
-        impact: 'Tech companies are becoming more politically active. This could influence AI regulation for years to come.',
-        source: 'https://www.nytimes.com',
-        sourceName: 'New York Times'
+        impact: 'Directly impacts AI data center economics.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'industry-veo': {
+        date: '2026-02-27',
+        time: '16:00',
+        tag: 'product',
+        title: "Google DeepMind's Veo 3.1 Video Generation",
+        summary: 'Improved video generation with 1080p resolution and enhanced temporal consistency.',
+        sections: [
+          {
+            title: 'Features',
+            content: `<ul>
+              <li>1080p resolution output</li>
+              <li>Enhanced temporal consistency</li>
+              <li>Better motion understanding</li>
+            </ul>`
+          }
+        ],
+        impact: 'Advances AI video generation capabilities.',
+        source: 'https://deepmind.google/blog/',
+        sourceName: 'Google DeepMind'
+      },
+      'industry-microsoft': {
+        date: '2026-02-27',
+        time: '16:00',
+        tag: 'ma',
+        title: "Microsoft's Data Center Expansion - AI Infrastructure Investment",
+        summary: 'Multi-billion dollar expansion for OpenAI, Azure, and Copilot AI services.',
+        sections: [
+          {
+            title: 'Investment',
+            content: `<p>Multi-billion dollar expansion of data center infrastructure to support OpenAI, Azure, and Copilot AI services.</p>`
+          }
+        ],
+        impact: 'Continued massive investment in AI infrastructure.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      'industry-meta-power': {
+        date: '2026-02-27',
+        time: '16:00',
+        tag: 'product',
+        title: "Meta's AI Infrastructure - Data Center Power Agreements",
+        summary: 'Meta secures power contracts for AI data center operations, including renewable energy.',
+        sections: [
+          {
+            title: 'Power Strategy',
+            content: `<p>Meta has secured power contracts for AI data center operations, including significant renewable energy components.</p>`
+          }
+        ],
+        impact: 'Part of trend toward sustainable AI infrastructure.',
+        source: 'https://www.theverge.com',
+        sourceName: 'The Verge'
+      },
+      // Global
+      'global-iran-talks': {
+        date: '2026-02-27',
+        time: '08:00',
+        tag: 'breaking',
+        title: 'US-Iran Nuclear Talks End with "Significant Progress"',
+        summary: 'Indirect negotiations in Geneva concluded with reports of progress. Could affect sanctions and tech trade.',
+        sections: [
+          {
+            title: 'Tech Impact',
+            content: `<p>Could affect sanctions regimes impacting global tech trade, data transfer restrictions, and AI/technology partnerships.</p>`
+          }
+        ],
+        impact: 'Could affect sanctions and tech trade.',
+        source: 'https://www.reuters.com',
+        sourceName: 'Reuters'
+      },
+      'global-aus-tariffs': {
+        date: '2026-02-27',
+        time: '08:00',
+        tag: 'policy',
+        title: 'Australia Faces Higher Tariffs Threat from Trump',
+        summary: 'Preparing for trade disruption. Could raise costs for tech exports and affect startup funding.',
+        sections: [
+          {
+            title: 'Economic Impact',
+            content: `<p>Australian economy is preparing for potential trade disruption. Could raise costs for tech exports and affect startup funding.</p>`
+          }
+        ],
+        impact: 'Could significantly impact Australian tech sector.',
+        source: 'https://www.abc.net.au/news',
+        sourceName: 'ABC News'
+      },
+      'global-minerals': {
+        date: '2026-02-27',
+        time: '08:00',
+        tag: 'policy',
+        title: "Australia-Canada Supergroup Forming",
+        summary: 'ASPI urges pivot from US-reliance on critical minerals.',
+        sections: [
+          {
+            title: 'Strategic Shift',
+            content: `<p>ASPI report urges Australia and Canada to form a "supergroup" for critical minerals, reducing reliance on US-dominated supply chains.</p>`
+          }
+        ],
+        impact: 'Could reshape global critical mineral supply chains.',
+        source: 'https://www.abc.net.au/news',
+        sourceName: 'ABC News'
+      },
+      'global-ukraine': {
+        date: '2026-02-27',
+        time: '08:00',
+        tag: 'policy',
+        title: 'War Enters 4th Year',
+        summary: 'Both sides under maximum strain.',
+        sections: [
+          {
+            title: 'Current Status',
+            content: `<p>The Ukraine conflict enters its fourth year with both sides under maximum strain. Geopolitical implications continue to affect global markets.</p>`
+          }
+        ],
+        impact: 'Ongoing geopolitical uncertainty affects global markets.',
+        source: 'https://www.smh.com.au',
+        sourceName: 'Sydney Morning Herald'
       }
     };
 
@@ -372,7 +601,7 @@
 
     if (article) {
       document.title = article.title + ' - Evan Lin News';
-      
+
       let html = `
         <div class="meta">
           <div class="meta-date">${new Date(article.date).toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</div>
