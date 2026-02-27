@@ -138,6 +138,57 @@
     @media (max-width: 800px) { .mobile-nav { display: flex; justify-content: space-around; } .main { padding-bottom: 80px; } }
     .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 12px; font-size: 11px; font-weight: 500; color: var(--fg-muted); }
     .mobile-nav-item.active { color: var(--fg); }
+
+    /* Date Navigation */
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .date-nav-label { font-size: 13px; font-weight: 500; color: var(--fg-muted); }
+    .date-nav-dates { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+    .date-btn {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--fg-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .date-btn:hover { background: var(--bg-subtle); border-color: var(--border-strong); }
+    .date-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .date-btn.today { position: relative; }
+    .date-btn.today::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .date-btn.active.today::after { background: white; }
+
+    /* Card timestamp */
+    .card-time {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--fg-subtle);
+      margin-left: auto;
+      padding: 4px 8px;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body>
@@ -173,10 +224,18 @@
         <div class="stat"><span class="stat-value">5</span><span class="stat-label">Global</span></div>
       </div>
 
+      <!-- Date Navigation -->
+      <div class="date-nav">
+        <span class="date-nav-label">📅 Date</span>
+        <div class="date-nav-dates" id="dateNav">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
       <div class="cards" id="cards">
-        
+
         <!-- AI News 08:02 -->
-        <article class="card" data-type="ai">
+        <article class="card" data-type="ai" data-date="2026-02-27" data-time="08:02">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon ai">⚡</div>
@@ -186,6 +245,7 @@
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:02</span>
               <span class="card-badge">4 items</span>
               <span class="card-expand">↓</span>
             </div>
@@ -219,7 +279,7 @@
         </article>
 
         <!-- AI News 04:06 -->
-        <article class="card" data-type="ai">
+        <article class="card" data-type="ai" data-date="2026-02-27" data-time="04:06">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon ai">🤖</div>
@@ -229,6 +289,7 @@
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:06</span>
               <span class="card-badge">7 items</span>
               <span class="card-expand">↓</span>
             </div>
@@ -280,7 +341,7 @@
         </article>
 
         <!-- Research -->
-        <article class="card" data-type="research">
+        <article class="card" data-type="research" data-date="2026-02-27" data-time="06:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon research">📄</div>
@@ -290,6 +351,7 @@
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:00</span>
               <span class="card-badge">5 papers</span>
               <span class="card-expand">↓</span>
             </div>
@@ -329,7 +391,7 @@
         </article>
 
         <!-- Industry -->
-        <article class="card" data-type="industry">
+        <article class="card" data-type="industry" data-date="2026-02-27" data-time="07:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon industry">💊</div>
@@ -339,6 +401,7 @@
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">07:00</span>
               <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
@@ -378,7 +441,7 @@
         </article>
 
         <!-- Global -->
-        <article class="card" data-type="global">
+        <article class="card" data-type="global" data-date="2026-02-27" data-time="05:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon global">🌐</div>
@@ -388,6 +451,7 @@
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">05:00</span>
               <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
@@ -439,6 +503,10 @@
   </nav>
 
   <script>
+    // Available dates (would be populated by backend in production)
+    const availableDates = ['2026-02-27', '2026-02-26', '2026-02-25', '2026-02-24'];
+    let currentDate = '2026-02-27';
+
     function updateTime() {
       const now = new Date();
       document.getElementById('time').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
@@ -448,11 +516,64 @@
     setInterval(updateTime, 1000);
 
     function toggle(header) { header.closest('.card').classList.toggle('expanded'); }
+
     function filter(type) {
       document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
-      document.querySelectorAll('.card').forEach(card => card.style.display = (type === 'all' || card.dataset.type === type) ? 'block' : 'none';
+      document.querySelectorAll('.card').forEach(card => {
+        const cardDate = card.dataset.date;
+        const cardType = card.dataset.type;
+        const dateMatch = cardDate === currentDate;
+        const typeMatch = type === 'all' || cardType === type;
+        card.style.display = (dateMatch && typeMatch) ? 'block' : 'none';
+      });
     }
+
+    function selectDate(date) {
+      currentDate = date;
+      // Update active button
+      document.querySelectorAll('.date-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.date === date);
+      });
+      // Update header title
+      const today = new Date().toISOString().split('T')[0];
+      const titleEl = document.querySelector('.title');
+      if (date === today) {
+        titleEl.textContent = 'Today';
+      } else {
+        const d = new Date(date);
+        titleEl.textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }
+      // Re-filter cards
+      const currentFilter = document.querySelector('.nav-item.active')?.dataset.filter || 'all';
+      filter(currentFilter);
+    }
+
+    function initDateNav() {
+      const container = document.getElementById('dateNav');
+      const today = new Date().toISOString().split('T')[0];
+
+      availableDates.forEach(date => {
+        const btn = document.createElement('button');
+        btn.className = 'date-btn';
+        btn.dataset.date = date;
+
+        const d = new Date(date);
+        const dayName = date === today ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
+        const dayNum = d.getDate();
+
+        btn.innerHTML = `<span style="font-size:11px;display:block">${dayName}</span><span style="font-size:14px">${dayNum}</span>`;
+
+        if (date === today) btn.classList.add('today');
+        if (date === currentDate) btn.classList.add('active');
+
+        btn.addEventListener('click', () => selectDate(date));
+        container.appendChild(btn);
+      });
+    }
+
+    // Initialize
     document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.addEventListener('click', () => filter(el.dataset.filter)));
+    initDateNav();
   </script>
 </body>
 </html>
