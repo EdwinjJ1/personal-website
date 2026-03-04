@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClawBot Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #fafafa;
+      --bg-subtle: #f4f4f5;
+      --fg: #09090b;
+      --fg-muted: #71717a;
+      --fg-subtle: #a1a1aa;
+      --accent: #18181b;
+      --border: rgba(0, 0, 0, 0.06);
+      --border-strong: rgba(0, 0, 0, 0.12);
+      --radius: 12px;
+    }
+    body {
+      font-family: 'Geist', -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+    .app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
+    @media (max-width: 800px) { .app { grid-template-columns: 1fr; } .sidebar { display: none; } }
+    
+    .sidebar {
+      background: var(--bg-subtle);
+      border-right: 1px solid var(--border);
+      padding: 24px 16px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; margin-bottom: 32px; padding: 0 8px; }
+    .logo-mark { width: 28px; height: 28px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+    .logo-mark svg { width: 16px; height: 16px; fill: white; }
+    .logo-text { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
+    
+    .nav-section { margin-bottom: 24px; }
+    .nav-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--fg-subtle); padding: 0 10px; margin-bottom: 8px; }
+    .nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--fg-muted); cursor: pointer; transition: all 0.15s; }
+    .nav-item:hover { background: rgba(0, 0, 0, 0.04); color: var(--fg); }
+    .nav-item.active { background: var(--accent); color: white; }
+    .nav-item .count { margin-left: auto; font-size: 12px; opacity: 0.6; }
+    
+    .main { padding: 32px 48px; max-width: 900px; }
+    @media (max-width: 600px) { .main { padding: 24px 20px; } }
+    
+    .header { margin-bottom: 40px; }
+    .header-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
+    .title { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
+    .time { font-size: 13px; color: var(--fg-muted); font-weight: 500; }
+    .subtitle { font-size: 15px; color: var(--fg-muted); }
+    
+    .stats { display: flex; gap: 24px; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+    .stat { display: flex; flex-direction: column; gap: 4px; }
+    .stat-value { font-size: 32px; font-weight: 700; letter-spacing: -0.03em; }
+    .stat-label { font-size: 13px; color: var(--fg-muted); }
+    
+    .cards { display: flex; flex-direction: column; gap: 16px; }
+    
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: box-shadow 0.2s, border-color 0.2s;
+    }
+    .card:hover { border-color: var(--border-strong); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
+    
+    .card-header {
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      user-select: none;
+    }
+    .card-header:hover { background: var(--bg-subtle); }
+    .card-left { display: flex; align-items: center; gap: 16px; }
+    .card-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+    .card-icon.ai { background: #eff6ff; }
+    .card-icon.research { background: #f5f3ff; }
+    .card-icon.industry { background: #ecfdf5; }
+    .card-icon.global { background: #fff7ed; }
+    .card-title { font-size: 15px; font-weight: 600; margin-bottom: 2px; }
+    .card-meta { font-size: 13px; color: var(--fg-muted); }
+    .card-badge { font-size: 12px; font-weight: 500; color: var(--fg-muted); background: var(--bg-subtle); padding: 4px 10px; border-radius: 6px; }
+    .card-expand { color: var(--fg-subtle); transition: transform 0.2s; }
+    .card.expanded .card-expand { transform: rotate(180deg); }
+    
+    .card-content { border-top: 1px solid var(--border); padding: 8px; display: none; }
+    .card.expanded .card-content { display: block; }
+    
+    .item { padding: 16px; border-radius: 8px; margin-bottom: 4px; display: block; text-decoration: none; color: inherit; }
+    .item:last-child { margin-bottom: 0; }
+    .item:hover { background: var(--bg-subtle); }
+    
+    .item-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .item-tag.breaking { background: #fef2f2; color: #dc2626; }
+    .item-tag.product { background: #ecfdf5; color: #16a34a; }
+    .item-tag.research { background: #f5f3ff; color: #7c3aed; }
+    .item-tag.policy { background: #fff7ed; color: #ea580c; }
+    .item-tag.clinical { background: #eff6ff; color: #2563eb; }
+    .item-tag.ma { background: #fdf4ff; color: #c026d3; }
+    
+    .item-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
+    .item-summary { font-size: 13px; color: var(--fg-muted); line-height: 1.6; }
+    .item-arrow { float: right; color: var(--fg-subtle); margin-top: 8px; }
+    
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid var(--border);
+      padding: 8px 16px;
+      padding-bottom: calc(8px + env(safe-area-inset-bottom));
+      z-index: 100;
+    }
+    @media (max-width: 800px) { .mobile-nav { display: flex; justify-content: space-around; } .main { padding-bottom: 80px; } }
+    .mobile-nav-item { display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 8px 12px; font-size: 11px; font-weight: 500; color: var(--fg-muted); }
+    .mobile-nav-item.active { color: var(--fg); }
+
+    /* Date Navigation */
+    .date-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 16px 20px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .date-nav-label { font-size: 13px; font-weight: 500; color: var(--fg-muted); }
+    .date-nav-dates { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+    .date-btn {
+      padding: 8px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--fg-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .date-btn:hover { background: var(--bg-subtle); border-color: var(--border-strong); }
+    .date-btn.active { background: var(--accent); color: white; border-color: var(--accent); }
+    .date-btn.today { position: relative; }
+    .date-btn.today::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+    .date-btn.active.today::after { background: white; }
+
+    /* Mobile Date Navigation */
+    @media (max-width: 600px) {
+      .date-nav {
+        padding: 12px 16px;
+        gap: 8px;
+      }
+      .date-nav-label {
+        display: none;
+      }
+      .date-btn {
+        padding: 10px 12px;
+        min-width: 48px;
+        min-height: 48px;
+      }
+      .date-nav-dates {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+      }
+      .date-nav-dates::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    /* Card timestamp */
+    .card-time {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--fg-subtle);
+      margin-left: auto;
+      padding: 4px 8px;
+      background: var(--bg-subtle);
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-mark"><svg viewBox="0 0 16 16"><path d="M8 0L0 4v8l8 4 8-4V4L8 0zm0 2.5L13.5 5 8 7.5 2.5 5 8 2.5z"/></svg></div>
+        <span class="logo-text">ClawBot</span>
+      </div>
+      <div class="nav-section">
+        <div class="nav-label">Reports</div>
+        <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
+        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">10</span></div>
+        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">5</span></div>
+        <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">10</span></div>
+        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">4</span></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <div class="header-top">
+          <h1 class="title">Today</h1>
+          <span class="time" id="time">--:--</span>
+        </div>
+        <p class="subtitle" id="date">Loading...</p>
+      </header>
+      
+      <div class="stats">
+        <div class="stat"><span class="stat-value">10</span><span class="stat-label">AI News</span></div>
+        <div class="stat"><span class="stat-value">5</span><span class="stat-label">Research</span></div>
+        <div class="stat"><span class="stat-value">10</span><span class="stat-label">Industry</span></div>
+        <div class="stat"><span class="stat-value">4</span><span class="stat-label">Global</span></div>
+      </div>
+
+      <!-- Date Navigation -->
+      <div class="date-nav">
+        <span class="date-nav-label" id="monthLabel">Feb 2026</span>
+        <div class="date-nav-dates" id="dateNav">
+          <!-- Dynamically populated -->
+        </div>
+      </div>
+
+      <div class="cards" id="cards">
+
+        <!-- AI News 04:01 - Latest -->
+        <article class="card expanded" data-type="ai" data-date="2026-02-28" data-time="04:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Morning</div>
+                <div class="card-meta">Anthropic $30B, Gemini Updates, LLM Biology Research</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=ai-anthropic-30b-2026">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic raises $30B in Series G at $380B valuation</div>
+              <div class="item-summary">Series G led by GIC and Coatue. $14B run-rate revenue growing over 10x annually for past three years.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-nano-banana-2">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google DeepMind releases Nano Banana 2</div>
+              <div class="item-summary">Combines Pro capabilities with lightning-fast speed. Performance-optimized variant of Gemini 3 Pro Image model.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-gemini-31-pro">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google releases Gemini 3.1 Pro for complex tasks</div>
+              <div class="item-summary">Smarter model designed for handling complex tasks. Latest iteration in Google's Gemini model family.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-gemini-music">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Gemini can now create music</div>
+              <div class="item-summary">Google expands Gemini's creative capabilities with music generation. Adds to text, image, and video abilities.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-gemini-deep-think">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Gemini 3 Deep Think advances science and research</div>
+              <div class="item-summary">Specialized model variant focused on advancing science, research, and engineering applications.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-llm-biology-uplift">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Study: LLMs uplift novices 4.16x on biology tasks</div>
+              <div class="item-summary">Novices with LLMs were 4.16x more accurate than internet-only controls. Outperformed experts on 3 of 4 benchmarks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-multi-agent-trading">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Multi-agent LLM trading system shows improved returns</div>
+              <div class="item-summary">Fine-grained task decomposition significantly improves risk-adjusted returns. Japanese stock data used in evaluation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-ggml-hf">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">GGML and llama.cpp join Hugging Face</div>
+              <div class="item-summary">Integration strengthens open-source AI ecosystem and local model deployment capabilities.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-unsloth-free">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Hugging Face offers free AI model training with Unsloth</div>
+              <div class="item-summary">Partnership enables users to train AI models at no cost. Lowers barriers to model fine-tuning.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-openai-safety">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">OpenAI updates safety protocols for law enforcement</div>
+              <div class="item-summary">New protocols governing when to involve law enforcement. Changes follow BC school shooting case.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 12:01 -->
+        <article class="card" data-type="ai" data-date="2026-02-27" data-time="12:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">⚡</div>
+              <div>
+                <div class="card-title">AI News Midday</div>
+                <div class="card-meta">DeepSeek/Claude, Gmail Agent, Stargate</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">12:01</span>
+              <span class="card-badge">4 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=ai-deepseek">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">DeepSeek allegedly targeted Claude's reasoning</div>
+              <div class="item-summary">Reports suggest DeepSeek used Claude outputs to train models...</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-gmail">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Meta researcher's AI deleted her Gmail</div>
+              <div class="item-summary">Summer Yue's AI agent "lost" safety instruction...</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-stargate">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Stargate struggles</div>
+              <div class="item-summary">High costs led to separate deals with SoftBank & Oracle...</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-x-labels">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">X working on 'Made with AI' labels</div>
+              <div class="item-summary">Response to India's C2PA mandate...</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research -->
+        <article class="card expanded" data-type="research" data-date="2026-02-28" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">1MB Dataset, VLM Pragmatics, Medical RL, SeeThrough3D</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2602.23358">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">A Dataset is Worth 1 MB</div>
+              <div class="item-summary">PLADA method transmits only class labels to train new tasks using preloaded reference datasets. Reduces payload to under 1 MB while maintaining high accuracy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2602.23351">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Scale Can't Overcome Pragmatics: VLM Reasoning Gap</div>
+              <div class="item-summary">Reporting bias in training data causes poor VLM reasoning. Scaling alone doesn't fix spatial, temporal, negation, and counting skills.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2602.23363">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">MediX-R1: Open-Ended Medical Reinforcement Learning</div>
+              <div class="item-summary">RL framework for medical MLLMs beyond multiple-choice. Composite reward with LLM-based accuracy judge enables clinical reasoning.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2602.23359">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">SeeThrough3D: Occlusion-Aware 3D Control in Text-to-Image</div>
+              <div class="item-summary">Explicitly models occlusions with translucent 3D box representation. Enables accurate multi-object generation with depth-consistent geometry.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2602.23353">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Semi-Supervised Vision-Language Alignment via Optimal Transport</div>
+              <div class="item-summary">SOTAlign aligns encoders with minimal paired data. Leverages unpaired samples via optimal-transport-based divergence.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Industry - Gaming & Entertainment -->
+        <article class="card expanded" data-type="industry" data-date="2026-02-28" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">🎮</div>
+              <div>
+                <div class="card-title">Gaming & Entertainment</div>
+                <div class="card-meta">Evercade Super Pocket, PS5 Pro Upscaling, Pokémon Champions</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-evercade">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Evercade announces Super Pocket Rare Edition</div>
+              <div class="item-summary">$69.99 Rare-themed handheld with 14 built-in games. Compatible with multi-title cartridges. Launching June.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-ps5-pro">
+              <span class="item-tag product">Product Update</span>
+              <div class="item-title">PS5 Pro receives PSSR upscaling upgrade</div>
+              <div class="item-summary">Improved Spectral Super Resolution rolling out. Quality similar to AMD's FSR 4.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-switch-controller">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Switch 2 Pro controller: Resident Evil edition</div>
+              <div class="item-summary">$99.99 themed controller. Premium pricing raises questions over standard options.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-pokemon-remakes">
+              <span class="item-tag product">Product Launch</span>
+              <div class="item-title">Pokémon FireRed and LeafGreen remakes available</div>
+              <div class="item-summary">GBA titles remade for Switch. Nostalgia play for Nintendo.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-pokemon-champions">
+              <span class="item-tag product">Product Launch</span>
+              <div class="item-title">Pokémon Champions battle royale announced</div>
+              <div class="item-summary">Switch in April, mobile later. First major Pokémon entry beyond RPG format.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Industry - Climate & Energy -->
+        <article class="card" data-type="industry" data-date="2026-02-27" data-time="16:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">⚡</div>
+              <div>
+                <div class="card-title">Climate & Energy</div>
+                <div class="card-meta">Trump Tariffs, Nvidia $68B, Data Center Expansion</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-tariffs">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump's 10% Global Tariff: Energy Infrastructure Impact</div>
+              <div class="item-summary">Data center energy demands surge. Tech companies face rising costs for AI clusters.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-nvidia-68b">
+              <span class="item-tag product">Earnings</span>
+              <div class="item-title">Nvidia's $68.1B Q4 Revenue - Driven by Data Center Demand</div>
+              <div class="item-summary">Record quarter, up 73% YoY. Massive GPU cluster build-out continues.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=ai-gemini">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google DeepMind's Veo 3.1 Video Generation</div>
+              <div class="item-summary">Improved video generation with 1080p resolution and enhanced temporal consistency.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-microsoft">
+              <span class="item-tag ma">Expansion</span>
+              <div class="item-title">Microsoft's Data Center Expansion - AI Infrastructure Investment</div>
+              <div class="item-summary">Multi-billion dollar expansion for OpenAI, Azure, and Copilot AI services.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-meta-power">
+              <span class="item-tag product">Energy</span>
+              <div class="item-title">Meta's AI Infrastructure - Data Center Power Agreements</div>
+              <div class="item-summary">Meta secures power contracts for AI data center operations, including renewable energy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global -->
+        <article class="card" data-type="global" data-date="2026-02-27" data-time="08:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌐</div>
+              <div>
+                <div class="card-title">Global News</div>
+                <div class="card-meta">US-Iran Talks, Australia Tariffs, Geopolitical</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:00</span>
+              <span class="card-badge">4 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=global-iran-talks">
+              <span class="item-tag breaking">GEOPOLITICAL</span>
+              <div class="item-title">US-Iran Nuclear Talks End with "Significant Progress"</div>
+              <div class="item-summary">Indirect negotiations in Geneva concluded with reports of progress. Could affect sanctions and tech trade.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-aus-tariffs">
+              <span class="item-tag policy">AUSTRALIA</span>
+              <div class="item-title">Australia Faces Higher Tariffs Threat from Trump</div>
+              <div class="item-summary">Preparing for trade disruption. Could raise costs for tech exports and affect startup funding.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-minerals">
+              <span class="item-tag policy">Minerals</span>
+              <div class="item-title">Australia-Canada "supergroup" forming</div>
+              <div class="item-summary">ASPI urges pivot from US-reliance...</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-ukraine">
+              <span class="item-tag policy">Ukraine</span>
+              <div class="item-title">War enters 4th year</div>
+              <div class="item-summary">Both sides under maximum strain...</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </main>
+  </div>
+
+  <nav class="mobile-nav">
+    <div class="mobile-nav-item active" data-filter="all"><span>Overview</span></div>
+    <div class="mobile-nav-item" data-filter="ai"><span>AI</span></div>
+    <div class="mobile-nav-item" data-filter="research"><span>Research</span></div>
+    <div class="mobile-nav-item" data-filter="industry"><span>Industry</span></div>
+    <div class="mobile-nav-item" data-filter="global"><span>Global</span></div>
+  </nav>
+
+  <script>
+    // Available dates (would be populated by backend in production)
+    const availableDates = ['2026-02-28', '2026-02-27', '2026-02-26', '2026-02-25', '2026-02-24'];
+    let currentDate = '2026-02-28';
+
+    function updateTime() {
+      const now = new Date();
+      document.getElementById('time').textContent = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false });
+      document.getElementById('date').textContent = now.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    }
+    updateTime();
+    setInterval(updateTime, 1000);
+
+    function toggle(header) { header.closest('.card').classList.toggle('expanded'); }
+
+    function filter(type) {
+      document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.classList.toggle('active', el.dataset.filter === type));
+
+      let visibleCount = 0;
+      document.querySelectorAll('.card').forEach(card => {
+        const cardDate = card.dataset.date;
+        const cardType = card.dataset.type;
+        const dateMatch = cardDate === currentDate;
+        const typeMatch = type === 'all' || cardType === type;
+        const shouldShow = dateMatch && typeMatch;
+        card.style.display = shouldShow ? 'block' : 'none';
+        if (shouldShow) visibleCount++;
+      });
+
+      // Handle empty state
+      const cardsContainer = document.getElementById('cards');
+      let emptyState = document.getElementById('emptyState');
+      if (visibleCount === 0) {
+        if (!emptyState) {
+          emptyState = document.createElement('div');
+          emptyState.id = 'emptyState';
+          emptyState.style.cssText = 'text-align:center;padding:48px;color:var(--fg-muted);font-size:15px;';
+          emptyState.textContent = '📭 No news available for this date';
+          cardsContainer.appendChild(emptyState);
+        }
+      } else if (emptyState) {
+        emptyState.remove();
+      }
+    }
+
+    function selectDate(date) {
+      currentDate = date;
+      // Update active button
+      document.querySelectorAll('.date-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.date === date);
+      });
+      // Update header title
+      const today = new Date().toISOString().split('T')[0];
+      const titleEl = document.querySelector('.title');
+      if (date === today) {
+        titleEl.textContent = 'Today';
+      } else {
+        const d = new Date(date);
+        titleEl.textContent = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }
+      // Re-filter cards
+      const currentFilter = document.querySelector('.nav-item.active')?.dataset.filter || 'all';
+      filter(currentFilter);
+    }
+
+    function initDateNav() {
+      const container = document.getElementById('dateNav');
+      const monthLabel = document.getElementById('monthLabel');
+      const today = new Date().toISOString().split('T')[0];
+
+      // Update month label based on current selection
+      function updateMonthLabel(date) {
+        const d = new Date(date);
+        monthLabel.textContent = d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+      }
+
+      availableDates.forEach(date => {
+        const btn = document.createElement('button');
+        btn.className = 'date-btn';
+        btn.dataset.date = date;
+
+        const d = new Date(date);
+        const dayName = date === today ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
+        const dayNum = d.getDate();
+
+        // Use textContent for security instead of innerHTML
+        const span1 = document.createElement('span');
+        span1.style.fontSize = '11px';
+        span1.style.display = 'block';
+        span1.textContent = dayName;
+
+        const span2 = document.createElement('span');
+        span2.style.fontSize = '14px';
+        span2.textContent = dayNum;
+
+        btn.appendChild(span1);
+        btn.appendChild(span2);
+
+        if (date === today) btn.classList.add('today');
+        if (date === currentDate) btn.classList.add('active');
+
+        btn.addEventListener('click', () => {
+          selectDate(date);
+          updateMonthLabel(date);
+        });
+        container.appendChild(btn);
+      });
+
+      updateMonthLabel(currentDate);
+    }
+
+    // Initialize
+    document.querySelectorAll('.nav-item, .mobile-nav-item').forEach(el => el.addEventListener('click', () => filter(el.dataset.filter)));
+    initDateNav();
+  </script>
+</body>
+</html>
