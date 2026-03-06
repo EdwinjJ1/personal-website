@@ -70,23 +70,23 @@ export const projects: Project[] = [
   },
   {
     id: 103,
-    title: 'Chiron Prompt Enhancer',
+    title: 'Chiron',
     description:
-      'An open-source Claude Code skill that transforms basic prompts into expert-grade specifications and executes them.',
+      'Free and open-source Augment Code alternative. Terminal-first prompt enhancement for Gemini CLI and Claude Code.',
     longDescription:
-      'Chiron Prompt Enhancer is a skill for Claude Code that upgrades underspecified requests into expert-grade specs and then executes the work. It features 7 optimization strategies (Concise, Detailed, Creative, etc.), smart auto-detection, and bilingual support.',
-    technologies: ['Claude Code', 'Python', 'Prompt Engineering', 'Markdown'],
+      'Chiron turns rough requests into repo-aware execution prompts. It scans your repository context, finds relevant files, reads git state, and builds enhanced prompts — all without leaving the terminal. Features include double Ctrl+E enhance-in-place (Augment-style), /chiron slash command integration, and support for both Gemini CLI and Claude Code workflows.',
+    technologies: ['Node.js', 'Gemini CLI', 'Claude Code', 'JavaScript', 'Prompt Engineering'],
     category: 'AI & Automation',
     featured: true,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
     icon: '🏹',
     highlights: [
-      '7 Smart Optimization Strategies',
-      'Auto-detection of Intent',
-      'Bilingual Support (EN/CN)',
-      'Agentic Execution Capability',
-      'Local Prompt History Logging',
+      'Augment-style Double Ctrl+E Enhancement',
+      'Repo-aware Context Scanning',
+      'Gemini CLI + Claude Code Integration',
+      'Git State & Relevant File Detection',
+      'Terminal-first Workflow',
     ],
   },
   {
