@@ -226,10 +226,10 @@
       <div class="nav-section">
         <div class="nav-label">Reports</div>
         <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
-        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">16</span></div>
-        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">1</span></div>
-        <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">10</span></div>
-        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">8</span></div>
+        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">31</span></div>
+        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">15</span></div>
+        <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">15</span></div>
+        <div class="nav-item" data-filter="global"><span>Global</span><span class="count">15</span></div>
       </div>
     </aside>
 
@@ -243,10 +243,10 @@
       </header>
       
       <div class="stats">
-        <div class="stat"><span class="stat-value">22</span><span class="stat-label">AI News</span></div>
-        <div class="stat"><span class="stat-value">1</span><span class="stat-label">Research</span></div>
-        <div class="stat"><span class="stat-value">1</span><span class="stat-label">Industry</span></div>
-        <div class="stat"><span class="stat-value">8</span><span class="stat-label">Global</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">AI News</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Research</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Industry</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Global</span></div>
       </div>
 
       <!-- Date Navigation -->
@@ -260,26 +260,213 @@
       <div class="cards" id="cards">
 
         <!-- Research - Latest -->
-        <article class="card expanded" data-type="research" data-date="2026-03-06" data-time="08:04">
+        <!-- Research - Latest -->
+        <article class="card expanded" data-type="research" data-date="2026-03-09" data-time="00:15">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon research">📄</div>
               <div>
                 <div class="card-title">Arxiv Research</div>
-                <div class="card-meta">No New Papers Since Mar 5 Check</div>
+                <div class="card-meta">Reasoning Theater, Censored LLMs, POET-X, INTRA Fact Checking, Massive Activations</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:04</span>
-              <span class="card-badge">1 item</span>
+              <span class="card-time">00:15</span>
+              <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=arxiv-no-new-20260306">
-              <span class="item-tag status">Status</span>
-              <div class="item-title">No New Arxiv Papers Detected</div>
-              <div class="item-summary">All recent papers on arXiv from Mar 5-6, 2026 timeframe have already been aggregated. No new AI/ML research papers published since last check.</div>
+            <a class="item" href="https://arxiv.org/abs/2603.05465v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought</div>
+              <div class="item-summary">Researchers find evidence of "performative" Chain-of-Thought where models become confident in answers early but continue generating tokens. Probe-guided early exit reduces tokens by up to 80% on MMLU with similar accuracy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05494">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</div>
+              <div class="item-summary">Study uses censored Chinese LLMs (like Qwen3) as natural testbed for studying secret knowledge. Best honesty elicitation techniques transfer to frontier models including DeepSeek R1.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05500">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Memory-efficient LLM Training by Scaling Orthogonal Transformation (POET-X)</div>
+              <div class="item-summary">POET-X enables pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, dramatically lowering hardware barriers while maintaining training stability.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05471">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval</div>
+              <div class="item-summary">INTRA exploits interactions between internal representations for fact-checking without retrieval, achieving SOTA performance with strong generalization across 9 datasets.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05498">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">The Spike, Sparse and Sink: Anatomy of Massive Activations and Attention Sinks</div>
+              <div class="item-summary">Studies Transformer phenomena: massive activations (global) and attention sinks (local) serve distinct functions. Pre-norm configuration identified as key enabler of their co-occurrence.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research - Previous -->
+        <article class="card" data-type="research" data-date="2026-03-08" data-time="16:06">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">POET-X, Reasoning Theater, Censored LLMs, Massive Activations, Sparse Attention, Transformer 3D Inpainting</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:06</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.05500">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Memory-efficient LLM Training by Scaling Orthogonal Transformation (POET-X)</div>
+              <div class="item-summary">POET-X enables pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, dramatically lowering hardware barriers while maintaining stability.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05498">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">The Spike, Sparse and Sink: Anatomy of Massive Activations</div>
+              <div class="item-summary">Investigates co-occurrence of massive activations and attention sinks in Transformers, revealing they serve distinct functions with pre-norm as key enabler.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05494">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</div>
+              <div class="item-summary">Uses censored Chinese LLMs (Qwen3) as natural testbed for honesty elicitation, with techniques transferring to frontier models like DeepSeek R1.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05488">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought</div>
+              <div class="item-summary">Provides evidence of "performative" CoT with final answers decodable far earlier than monitoring, enabling up to 80% token reduction on MMLU.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05451">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Algorithm and Kernel Pipeline Co-Design for Asymmetric Hardware Scaling (FlashAttention-4)</div>
+              <div class="item-summary">FlashAttention-4 optimizes for Blackwell GPUs achieving 1.3× speedup over cuDNN, addressing asymmetric scaling with 1613 TFLOPs/s.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05507">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Transformer-Based Inpainting for Real-Time 3D Streaming</div>
+              <div class="item-summary">Proposes novel multi-view aware transformer network for real-time 3D streaming inpainting, achieving real-time performance in AR/VR applications.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research - Previous -->
+        <article class="card" data-type="research" data-date="2026-03-08" data-time="08:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">POET-X, Reasoning Theater, Censored LLMs, FlashAttention-4, Massive Activations</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:04</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.05500">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Memory-efficient LLM Training by Scaling Orthogonal Transformation (POET-X)</div>
+              <div class="item-summary">POET-X enables pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, dramatically lowering hardware barriers while maintaining stability.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05498">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">The Spike, the Sparse and the Sink: Anatomy of Massive Activations</div>
+              <div class="item-summary">Investigates co-occurrence of massive activations and attention sinks in Transformers, revealing they serve distinct functions with pre-norm as key enabler.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05494">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</div>
+              <div class="item-summary">Uses censored Chinese LLMs (Qwen3) as natural testbed for honesty elicitation, with techniques transferring to frontier models like DeepSeek R1.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05488">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought</div>
+              <div class="item-summary">Provides evidence of "performative" CoT with final answers decodable far earlier than monitoring, enabling up to 80% token reduction on MMLU.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05451">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Algorithm and Kernel Pipeline Co-Design for Asymmetric Hardware Scaling (FlashAttention-4)</div>
+              <div class="item-summary">FlashAttention-4 optimizes for Blackwell GPUs achieving 1.3× speedup over cuDNN, addressing asymmetric scaling with 1613 TFLOPs/s.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research - Previous -->
+        <article class="card" data-type="research" data-date="2026-03-07" data-time="08:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">POET-X, Reasoning Theater, Secret Knowledge, INTRA, Massive Activations</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:00</span>
+              <span class="card-badge">6 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.05500">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Memory-efficient LLM Training by Scaling Orthogonal Transformation (POET-X)</div>
+              <div class="item-summary">POET-X is a scalable, memory-efficient variant that enables pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, dramatically lowering hardware barriers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05488">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Reasoning Theater: Disentangling Model Beliefs from Chain-of-Thought</div>
+              <div class="item-summary">Provides evidence of "performative" CoT where final answers are decodable from activations far earlier than monitoring. Probe-guided early exit reduces tokens by up to 80% on MMLU.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05494">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation</div>
+              <div class="item-summary">Studies censored Chinese LLMs (Qwen3) as a natural testbed for secret knowledge, evaluating elicitation techniques that transfer to frontier models like DeepSeek R1.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05471">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Leveraging LLM Parametric Knowledge for Fact Checking without Retrieval</div>
+              <div class="item-summary">Introduces INTRA, a method exploiting internal representation interactions for fact-checking without retrieval, achieving SOTA performance across 9 datasets.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05498">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">The Spike, Sink, and Sparse: Anatomy of Massive Activations and Attention Sinks</div>
+              <div class="item-summary">Studies two phenomena in Transformer language models, showing their co-occurrence is an architectural artifact. Provides insights into model interpretability and optimization.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05495">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Effective Amortized Optimization Using Inexpensive Labels</div>
+              <div class="item-summary">Proposes framework collecting cheap imperfect labels with supervised pretraining and self-supervised refinement, achieving up to 59x reduction in offline cost across optimization domains.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -297,7 +484,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <span class="card-time">04:05</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-badge">3 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
@@ -320,29 +507,132 @@
               <div class="item-summary">Practical blueprint for evaluating and optimizing multi-agent systems illustrated through production-scale AI grocery assistant with Sub-agent GEPA and MAMuT strategies.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2603.03258">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Inherited Goal Drift: Contextual Pressure Can Undermine Agentic Goals</div>
-              <div class="item-summary">SOTA models robust to adversarial pressure inherit drift when conditioned on prefilled trajectories from weaker agents. Only GPT-5.1 maintained consistent resilience.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2603.03212">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Proactive Real-Time Agentic System Modeling Human State of Mind</div>
-              <div class="item-summary">Real-time agentic system using foundation EXG model and text embeddings, running fully offline on edge with BCI device integration for cognitive and affective engagement.</div>
-              <span class="item-arrow">→</span>
-            </a>
           </div>
         </article>
 
-        <!-- AI News 04:01 - Latest -->
-        <article class="card expanded" data-type="ai" data-date="2026-03-06" data-time="04:01">
+        <!-- AI News 10:01 - No New Developments -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-09" data-time="10:01">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon ai">🤖</div>
               <div>
                 <div class="card-title">AI News Daily</div>
-                <div class="card-meta">Meta WhatsApp, GPT-5.3, Anthropic Pentagon, Wikipedia Hallucinations, OpenAI GitHub</div>
+                <div class="card-meta">No new breaking developments since 08:01 update</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">10:01</span>
+              <span class="card-badge">No updates</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div style="padding: 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; color: white;">
+              <div style="font-weight: 600; margin-bottom: 8px; font-size: 14px;">🔄 Ongoing Storylines</div>
+              <div style="font-size: 12px; color: rgba(255,255,255,0.9); padding: 10px;">
+                All major AI news reported earlier today remains current: Pentagon vs. Anthropic, OpenAI military contract, Claude Sonnet 4.6, Meta WhatsApp EU decision, etc.
+              </div>
+            </div>
+        </article>
+
+        <!-- AI News 08:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-09" data-time="08:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Ongoing: Anthropic Surge, OpenAI Military, Claude Sonnet 4.6, Codex Security</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:01</span>
+              <span class="card-badge">Ongoing</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div style="padding: 20px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 8px; color: white;">
+              <div style="font-weight: 600; margin-bottom: 8px; font-size: 14px;">🔄 Ongoing Storylines</div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; font-size: 12px;">
+                <div style="padding: 10px; background: rgba(255,255,255,0.15); border-radius: 4px;">
+                  <strong style="display: block; margin-bottom: 4px;">Pentagon vs. Anthropic</strong>
+                  Supply chain risk designation driving up demand
+                </div>
+                <div style="padding: 10px; background: rgba(255,255,255,0.15); border-radius: 4px;">
+                  <strong style="display: block; margin-bottom: 4px;">OpenAI Military Contract</strong>
+                  Robotics head resigned over surveillance concerns
+                </div>
+                <div style="padding: 10px; background: rgba(255,255,255,0.15); border-radius: 4px;">
+                  <strong style="display: block; margin-bottom: 4px;">Claude Sonnet 4.6</strong>
+                  Frontier performance shipping at scale
+                </div>
+                <div style="padding: 10px; background: rgba(255,255,255,0.15); border-radius: 4px;">
+                  <strong style="display: block; margin-bottom: 4px;">Codex Security</strong>
+                  AI agent for app vulnerability detection
+                </div>
+              </div>
+            </div>
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Sonnet 4.6 delivers frontier performance at scale</div>
+              <div class="item-summary">Released Feb 17, delivering coding, agents, and professional work improvements while maintaining Sonnet pricing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/887309">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">OpenAI robotics head quits over Pentagon deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned, citing contract lacked protection against warrantless surveillance and lethal autonomy concerns.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/modular-diffusers">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Hugging Face introduces Modular Diffusers</div>
+              <div class="item-summary">Composable building blocks for diffusion pipelines, enabling flexible model architecture and faster development.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 06:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-09" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">No new major developments since 04:01 update</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">No updates</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <div style="padding: 24px; text-align: center; color: var(--fg-muted);">
+              <p style="font-size: 14px;">No new significant AI industry developments detected in this monitoring cycle.</p>
+              <p style="font-size: 13px; margin-top: 12px;">All major stories remain from the 04:01 AM update:</p>
+              <ul style="text-align: left; margin-top: 16px; font-size: 13px; color: var(--fg-muted);">
+                <li>Anthropic usage surge despite Pentagon designation</li>
+                <li>OpenAI robotics head resignation</li>
+                <li>Claude Sonnet 4.6 release</li>
+                <li>Codex Security launch</li>
+                <li>Meta WhatsApp AI chatbot decision</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <!-- AI News 04:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-09" data-time="04:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Anthropic Usage Surge, OpenAI Robotics Resignation, Codex Security, Claude Sonnet 4.6, GPT-5.3 Delay, Meta WhatsApp, Transformers.js v4</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
@@ -352,64 +642,386 @@
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=ai-meta-whatsapp-20260306">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
               <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Meta allows rival AI chatbots on WhatsApp in EU</div>
-              <div class="item-summary">Meta will temporarily allow competing AI chatbots on WhatsApp for the next 12 months to appease EU antitrust regulators, charging a fee for access.</div>
+              <div class="item-title">Anthropic usage surges despite "supply-chain risk" designation</div>
+              <div class="item-summary">Claude is breaking daily signup records in every country where available, topping App Store charts for free and AI apps in dozens of countries including the US, Canada, and much of Europe.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-gpt-53-instant-20260306">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI releases GPT-5.3 Instant with 26.8% fewer hallucinations</div>
-              <div class="item-summary">New model delivers more accurate answers, richer web search context, and significantly reduces unnecessary refusals and moralizing preambles.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-anthropic-ceo-trump-20260306">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/887309">
               <span class="item-tag policy">Policy</span>
-              <div class="item-title">Anthropic CEO says refusal to pander to Trump caused Pentagon blowup</div>
-              <div class="item-summary">CEO Dario Amodei suggested relationship with government soured because "we haven't donated to Trump" and "we haven't given dictator-style praise to Trump."</div>
+              <div class="item-title">OpenAI's head of robotics quits over Pentagon deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned, stating the contract didn't do enough to protect Americans from warrantless surveillance and that granting AI "lethal autonomy without human authorization" deserved more deliberation.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-defense-contractors-anthropic-20260306">
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Anthropic releases Claude Sonnet 4.6</div>
+              <div class="item-summary">Sonnet 4.6 delivers frontier performance across coding, agents, and professional work at scale, representing a significant upgrade to the Claude model family.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI delays ChatGPT's "adult mode"</div>
+              <div class="item-summary">The feature expected to launch this quarter is being postponed to focus on higher-priority work including gains in intelligence, personality improvements, and more proactive experiences.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/codex-security-now-in-research-preview/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI launches Codex Security</div>
+              <div class="item-summary">New research preview AI agent focused on identifying and fixing app security issues, with conditional access available through ChatGPT Pro with Codex subscriptions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.reuters.com/legal/litigation/meta-allow-ai-rivals-whatsapp-bid-stave-off-eu-action-2026-03-05/">
               <span class="item-tag policy">Policy</span>
-              <div class="item-title">Defense contractors pivot away from Anthropic's Claude</div>
-              <div class="item-summary">Companies that do business with the US military are abandoning Anthropic's AI after Defense Secretary designated it a "supply chain risk."</div>
+              <div class="item-title">Meta to temporarily allow rival AI chatbots on WhatsApp in EU</div>
+              <div class="item-summary">In a move to appease European Commission antitrust regulators, Meta will allow general-purpose AI chatbots using WhatsApp Business API in Europe for the next 12 months for a fee.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-wikipedia-hallucinations-20260306">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">AI Wikipedia translations added hallucinated sources</div>
-              <div class="item-summary">Open Knowledge Association's AI translations caused "hallucinations" with incorrect, fabricated, and unrelated sources. Wikipedia editors now restricting access.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="detail.html?id=ai-openai-github-rival-20260306">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
               <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI developing GitHub rival</div>
-              <div class="item-summary">Prompted by GitHub outages, OpenAI in early stages developing its own code repository, potentially competing directly with Microsoft.</div>
+              <div class="item-title">OpenAI developing GitHub competitor</div>
+              <div class="item-summary">Prompted by recent GitHub outages, OpenAI is in early stages of developing its own code repository, with completion still months away.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-hf-modular-diffusers-20260306">
+            <a class="item" href="https://huggingface.co/blog/Photoroom/prx-part3">
               <span class="item-tag research">Research</span>
-              <div class="item-title">Hugging Face releases Modular Diffusers</div>
-              <div class="item-summary">Introduces composable building blocks for diffusion pipelines, enabling more flexible and modular AI model development.</div>
+              <div class="item-title">Hugging Face: Training a Text-to-Image Model in 24 hours</div>
+              <div class="item-summary">Photoroom's PRX Part 3 demonstrates how far the field has evolved with a 24-hour speedrun using 32 H200 GPUs and ~$1500 compute budget.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-kimi-minimax-claw-20260306">
+            <a class="item" href="https://huggingface.co/blog/ggml-joins-hf">
               <span class="item-tag product">Product</span>
-              <div class="item-title">Chinese AI companies Kimi and Minimax launch Claw products</div>
-              <div class="item-summary">Chinese AI companies Kimi and Minimax respectively released their "Claw" product offerings this week, as reported by Machine Intelligence Insights.</div>
+              <div class="item-title">GGML and llama.cpp join Hugging Face ecosystem</div>
+              <div class="item-summary">Major integration to ensure the long-term progress of Local AI, bringing popular local LLM inference frameworks directly to the Hugging Face ecosystem.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-gemini-31-pro-20260306">
+            <a class="item" href="https://huggingface.co/blog/transformersjs-v4">
               <span class="item-tag product">Product</span>
-              <div class="item-title">Google Gemini upgraded to 3.1 Pro version</div>
-              <div class="item-summary">Google's Gemini large language model has been upgraded to version 3.1 Pro, improving capabilities across various benchmarks and use cases.</div>
+              <div class="item-title">Transformers.js v4 Preview available on NPM</div>
+              <div class="item-summary">Hugging Face releases v4 preview of Transformers.js, now available on NPM, enabling JavaScript developers to run transformer models directly in the browser and Node.js.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=ai-anthropic-vercept-20260306">
+          </div>
+        </article>
+
+        <!-- AI News 06:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-08" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily (Previous)</div>
+                <div class="card-meta">Anthropic Pentagon, Codex Security, Claude Sonnet 4.6, GPT-5.3, Meta WhatsApp, Hugging Face Modular Diffusers</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">8 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.anthropic.com/news/where-stand-department-war">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic Designated as "Supply Chain Risk" by Department of War</div>
+              <div class="item-summary">Pentagon designates Anthropic as a national security supply chain risk, but company responds challenging the designation as legally unsound. Defense contractors are reportedly pivoting away from Claude despite Anthropic's clarification.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/codex-security-now-in-research-preview/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Launches Codex Security in Research Preview</div>
+              <div class="item-summary">New application security agent identifies complex vulnerabilities with high confidence, reducing false positives by 50% and noise by 84%. Rolling out to ChatGPT Pro, Enterprise, Business, and Edu customers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Sonnet 4.6: 1M Token Context at Sonnet Pricing</div>
+              <div class="item-summary">Anthropic's most capable Sonnet model delivers frontier-level performance with 1M token context window beta, while maintaining Sonnet 4.5 pricing at $3/$15 per million tokens.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/gpt-5-3-instant/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Releases GPT-5.3 Instant with Reduced Hallucinations</div>
+              <div class="item-summary">Update to ChatGPT's most-used model delivers 26.8% reduction in hallucinations with web access, 19.7% without. Features smoother conversational tone and fewer unnecessary refusals.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.reuters.com/legal/litigation/meta-allow-ai-rivals-whatsapp-bid-stave-off-eu-action-2026-03-05/">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Meta Temporarily Allows Rival AI Chatbots on WhatsApp in EU</div>
+              <div class="item-summary">Meta will allow general-purpose AI chatbots using WhatsApp Business API in Europe for the next 12 months in a bid to stave off EU antitrust action. The move follows previous blocking of competitor chatbots.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/modular-diffusers">
               <span class="item-tag research">Research</span>
-              <div class="item-title">Anthropic acquires visual AI startup Vercept</div>
-              <div class="item-summary">Anthropic acquired visual AI startup Vercept this week, expanding its capabilities in computer vision and multimodal AI systems.</div>
+              <div class="item-title">Hugging Face Introduces Modular Diffusers</div>
+              <div class="item-summary">New framework for diffusion pipelines allows composing reusable blocks instead of writing entire pipelines from scratch. Blocks can be inspected independently, swapped freely, and composed into custom workflows.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/Photoroom/prx-part3">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">PRX: Training Competitive Text-to-Image Model in 24 Hours</div>
+              <div class="item-summary">Photoroom demonstrates how far the field has evolved with a 24-hour speedrun using 32 H200 GPUs and ~$1500 compute budget. Combines x-prediction, pixel-space training, perceptual losses.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/nxp/bringing-robotics-ai-to-embedded-platforms">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Bringing Robotics AI to Embedded Platforms</div>
+              <div class="item-summary">NXP publishes hands-on guide for recording reliable robotic datasets, fine-tuning VLA policies (ACT and SmolVLA), and optimizing for real-time performance on i.MX95.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 22:01 - Latest -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-08" data-time="22:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">DOGE ChatGPT, OpenAI Robotics Resignation, Codex Security, Anthropic Pentagon, Meta WhatsApp</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">22:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.nytimes.com/2026/03/07/arts/humanities-endowment-doge-trump.html?smid=nytcore-ios-share">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">DOGE Used ChatGPT to Cancel National Endowment for Humanities Grants</div>
+              <div class="item-summary">Elon Musk's agency used ChatGPT prompts to cancel NEH grants based on DEI criteria without proper human review or analysis of funded projects.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI's Head of Robotics Quits Over Pentagon Deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned from OpenAI, stating that company's Pentagon contract didn't adequately protect Americans from warrantless surveillance.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/codex-security-now-in-research-preview/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Launches Codex Security in Research Preview</div>
+              <div class="item-summary">New AI agent focused on identifying and fixing app security issues, plus Codex Open Source Fund updates for open source developers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/where-stand-department-war">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic Usage Soars Despite Pentagon "Supply-Chain Risk" Designation</div>
+              <div class="item-summary">Claude has been breaking daily signup records in every country where available since early last week, topping App Store charts globally.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.reuters.com/legal/litigation/meta-allow-ai-rivals-whatsapp-bid-stave-off-eu-action-2026-03-05/">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Meta Temporarily Allows Rival AI Chatbots on WhatsApp in EU</div>
+              <div class="item-summary">Meta will allow general-purpose AI chatbots using WhatsApp Business API in Europe for next 12 months in a bid to stave off EU antitrust action.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Sonnet 4.6 Released with 1M Token Context Window</div>
+              <div class="item-summary">Major upgrade improving coding, computer use, long-context reasoning, and agent planning. Features frontier-level performance at Sonnet pricing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/modular-diffusers">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Hugging Face Introduces Modular Diffusers</div>
+              <div class="item-summary">New framework for diffusion pipelines allows composing reusable blocks instead of writing entire pipelines from scratch, enabling custom workflows.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/Photoroom/prx-part3">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">PRX: Training Competitive Text-to-Image Model in 24 Hours</div>
+              <div class="item-summary">Photoroom demonstrates training a high-quality text-to-image model from scratch in just 24 hours using 32 H200 GPUs and ~$1500 compute budget.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/ggml-joins-hf">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">GGML and llama.cpp Join Hugging Face Ecosystem</div>
+              <div class="item-summary">Popular local AI inference frameworks join HF to ensure long-term progress of Local AI, improving open-source ecosystem integration.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/moe-transformers">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Mixture of Experts (MoEs) in Transformers Research Published</div>
+              <div class="item-summary">Comprehensive research on MoE architecture and optimization techniques enabling efficient scaling of large language models with manageable computational costs.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 16:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-08" data-time="16:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">OpenAI Adult Mode Delay, Codex Security, Anthropic Pentagon, Meta WhatsApp, Claude Sonnet 4.6, Arxiv Research</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:01</span>
+              <span class="card-badge">9 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Delays ChatGPT's "Adult Mode"</div>
+              <div class="item-summary">The feature expected to launch has been postponed to focus on higher-priority work including gains in intelligence, personality improvements, and more proactive experiences.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI's Head of Robotics Quits Over Pentagon Deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned from OpenAI, stating that company's Pentagon contract didn't adequately protect Americans from warrantless surveillance.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/news/827390/doge-is-no-more-and-in-its-wake-only-chaos">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">DOGE Used ChatGPT to Gut National Endowment for the Humanities</div>
+              <div class="item-summary">Elon Musk's short-lived agency used ChatGPT prompts to cancel NEH grants based on DEI criteria without careful analysis.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/codex-security-now-in-research-preview/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Launches Codex Security in Research Preview</div>
+              <div class="item-summary">New AI agent focused on identifying and fixing app security issues, plus Codex Open Source Fund updates.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/where-stand-department-war">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Anthropic Usage Soars Despite Pentagon "Supply-Chain Risk" Designation</div>
+              <div class="item-summary">The designation is driving up demand for Claude, breaking daily signup records and topping App Store charts globally.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Meta Will Temporarily Allow Rival AI Chatbots on WhatsApp in EU</div>
+              <div class="item-summary">Meta announced that for a fee it will support general-purpose AI chatbots using WhatsApp Business API in Europe for next 12 months.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Sonnet 4.6 Released with 1M Token Context Window</div>
+              <div class="item-summary">Major upgrade improving coding, computer use, long-context reasoning, and agent planning. Features frontier-level performance at Sonnet pricing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.05498">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">ArXiv: Study on Massive Activations and Attention Sinks in Transformers</div>
+              <div class="item-summary">New research analyzing two recurring phenomena in Transformer models: massive activations and attention sinks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Defense Contractors Backing Away on Claude After Pentagon Designation</div>
+              <div class="item-summary">Companies doing business with US military are pivoting away from Anthropic's AI after Defense Secretary announced supply chain risk designation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 12:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-08" data-time="12:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">DOGE NEH Cuts, OpenAI Robotics Head Quits, Anthropic Pentagon, Codex Security, Claude Sonnet 4.6</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">12:01</span>
+              <span class="card-badge">2 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.theverge.com/news/827390/doge-is-no-more-and-in-its-wake-only-chaos">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">DOGE Used ChatGPT to Gut National Endowment for the Humanities</div>
+              <div class="item-summary">Elon Musk's short-lived agency reportedly used ChatGPT prompts to cancel NEH grants based on DEI criteria without proper analysis.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI's Head of Robotics Quits Over Pentagon Deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned from OpenAI, stating the company's Pentagon contract didn't adequately protect Americans from warrantless surveillance.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 10:01 - Previous -->
+        <article class="card" data-type="ai" data-date="2026-03-08" data-time="10:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">OpenAI Robotics Head Quits, DOGE NEH Cuts, Anthropic Pentagon, Codex Security, Claude Sonnet 4.6, GPT-5.3</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">10:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI's Head of Robotics Quits Over Pentagon Deal</div>
+              <div class="item-summary">Caitlin Kalinowski resigned from OpenAI, stating the company's Pentagon contract didn't adequately protect Americans from warrantless surveillance and expressing concern about lethal autonomy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/news/827390/doge-is-no-more-and-in-its-wake-only-chaos">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">DOGE Used ChatGPT to Gut National Endowment for the Humanities</div>
+              <div class="item-summary">Elon Musk's agency reportedly used ChatGPT to cancel NEH grants, using a simple prompt asking if grants related to DEI without proper analysis of the actual funded projects.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/where-stand-department-war">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic Designated as "Supply Chain Risk" by Department of War</div>
+              <div class="item-summary">Pentagon designates Anthropic as a national security supply chain risk, but company responds challenging the designation as legally unsound. Defense contractors are reportedly pivoting away from Claude.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/codex-security-now-in-research-preview/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Launches Codex Security in Research Preview</div>
+              <div class="item-summary">New application security agent identifies complex vulnerabilities with high confidence, reducing false positives by 50% and noise by 84%. Rolling out to ChatGPT Pro, Enterprise, Business, and Edu customers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news/claude-sonnet-4-6">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Sonnet 4.6: 1M Token Context at Sonnet Pricing</div>
+              <div class="item-summary">Anthropic's most capable Sonnet model delivers frontier-level performance with 1M token context window beta, while maintaining Sonnet 4.5 pricing at $3/$15 per million tokens.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/gpt-5-3-instant/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">OpenAI Releases GPT-5.3 Instant with Reduced Hallucinations</div>
+              <div class="item-summary">Update to ChatGPT's most-used model delivers 26.8% reduction in hallucinations with web access, 19.7% without. Features smoother conversational tone and fewer unnecessary refusals.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.reuters.com/legal/litigation/meta-allow-ai-rivals-whatsapp-bid-stave-off-eu-action-2026-03-05/">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Meta Temporarily Allows Rival AI Chatbots on WhatsApp in EU</div>
+              <div class="item-summary">Meta will allow general-purpose AI chatbots using WhatsApp Business API in Europe for next 12 months in a bid to stave off EU antitrust action. The move follows previous blocking of competitor chatbots.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://huggingface.co/blog/modular-diffusers">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Hugging Face Introduces Modular Diffusers</div>
+              <div class="item-summary">New framework for diffusion pipelines allows composing reusable blocks instead of writing entire pipelines from scratch. Blocks can be inspected independently, swapped freely, and composed into custom workflows.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1265,7 +1877,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <span class="card-time">20:04</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-badge">6 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
@@ -1436,6 +2048,131 @@
           </div>
         </article>
 
+        <!-- Industry - Fintech & Crypto -->
+        <!-- Industry 12:01 - Latest: Fintech & Crypto -->
+        <article class="card expanded" data-type="industry" data-date="2026-03-09" data-time="12:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">💰</div>
+              <div>
+                <div class="card-title">Fintech & Crypto</div>
+                <div class="card-meta">Bitcoin Oil Volatility, Circle USDC Speed, Trump Cyber Strategy, Latin America Growth</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">12:01</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.coindesk.com/markets/2026/03/08/bitcoin-tumbles-below-usd66-000-as-oil-prices-explode-higher">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Bitcoin tumbles below $66,000 as oil prices explode nearly 20% higher</div>
+              <div class="item-summary">Bitcoin crashed under $66,000 as oil prices surged following Iran war escalation. Conflict creating market uncertainty.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.business/2026/03/07/circle-starts-using-usdc-stablecoin-for-internal-treasury-moves-settling-usd68-million">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Circle moves $68 million in just 30 minutes using USDC for internal payments</div>
+              <div class="item-summary">Stablecoin issuer used its Mint platform for intercompany transfers, replacing bank wires that often take days to settle.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.policy/2026/03/07/trump-cyber-strategy-vows-to-support-the-security-of-cryptocurrencies-and-blockchain">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump's cyber strategy vows to "support security" of cryptocurrencies and blockchain</div>
+              <div class="item-summary">Federal recognition elevates crypto from speculative assets to recognized technology infrastructure requiring protection.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.markets/2026/03/07/latin-america-crypto-user-growth-outpaced-u-s-by-3x-in-2025-report-shows">
+              <span class="item-tag funding">Funding</span>
+              <div class="item-title">Latin America's crypto user growth outpaced U.S. by 3x in 2025</div>
+              <div class="item-summary">Brazil and Argentina leading adoption driven by cross-border payments and stablecoin use. Region emerging as critical growth market.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bloomberg.com/news/articles/2026/03/07/top-wall-street-minds-see-ai-rotation-ahead-as-bitcoin-seeks-role-in-new-cycle">
+              <span class="item-tag ma">Strategy</span>
+              <div class="item-title">Wall Street sees AI rotation ahead as bitcoin seeks role in new cycle</div>
+              <div class="item-summary">Major institutional investors anticipating Bitcoin as beneficiary of post-AI capital rotation, potentially driving institutional inflows.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Industry 06:01 - Previous -->
+        <article class="card" data-type="industry" data-date="2026-03-09" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">💰</div>
+              <div>
+                <div class="card-title">Fintech & Crypto</div>
+                <div class="card-meta">Circle USDC Speed, Kalshi/Polymarket $20B, Tokenized Assets $25B, Coinbase Tax Rules</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">9 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.coindesk.com/business/2026/03/07/circle-starts-using-usdc-stablecoin-for-internal-treasury-moves-settling-usd68-million">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Circle moves $68 million in just 30 minutes using USDC for internal payments</div>
+              <div class="item-summary">Stablecoin issuer demonstrated speed and efficiency of using USDC for treasury operations, replacing bank wires that often take days to settle.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.wsj.com/tech/kalshi-polymarket-seeking-usd20-billion-valuations">
+              <span class="item-tag ma">M&A</span>
+              <div class="item-title">Kalshi, Polymarket seeking $20 billion valuations in fundraising talks</div>
+              <div class="item-summary">Prediction market platforms pursuing significant capital raises as the sector gains mainstream attention. Kalshi valued at $11B, Polymarket at $9B.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/markets/2026/03/08/tokenized-assets-exceed-usd25-billion-after-nearly-quadrupling-in-a-year">
+              <span class="item-tag funding">Funding</span>
+              <div class="item-title">Tokenized assets exceed $25 billion after nearly quadrupling in a year</div>
+              <div class="item-summary">Treasurys, private credit, and commodities driving growth. Most tokenized assets remain isolated from DeFi markets.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/policy/2026/03/07/coinbase-says-new-u-s-tax-reporting-rules-for-crypto-are-wasteful-onerous">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Coinbase says new U.S. tax-reporting rules for crypto are cluttered and confusing</div>
+              <div class="item-summary">IRS's 1099-DA tax form comes with burden of over-reporting. Major exchange pushes back against regulatory complexity.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/business/2026/03/07/bitcoin-purist-jack-dorsey-s-firm-is-reluctantly-giving-in-to-stablecoin-craze">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Jack Dorsey's Block reluctantly giving in to stablecoin craze</div>
+              <div class="item-summary">Bitcoin maximalist capitulating to stablecoin dominance as competitors like Stripe and PayPal add stablecoin options.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/policy/2026/03/07/trump-s-cyber-strategy-vows-to-support-the-security-of-cryptocurrencies-and-blockchain">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump's cyber strategy vows to 'support security' of cryptocurrencies and blockchain</div>
+              <div class="item-summary">Federal government explicitly recognizing crypto security as strategic priority alongside AI and quantum computing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/markets/2026/03/07/latin-america-s-crypto-user-growth-outpaced-u-s-by-3x-in-2025-report-shows">
+              <span class="item-tag funding">Market Data</span>
+              <div class="item-title">Latin America's crypto user growth outpaced U.S. by 3x in 2025</div>
+              <div class="item-summary">Brazil and Argentina leading growth driven by cross-border payments and stablecoin use. Region emerging as key adoption hub.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/news-analysis/2026/03/01/market-structure-state-of-play-state-of-crypto">
+              <span class="item-tag policy">Regulatory</span>
+              <div class="item-title">Hopes rising that Clarity Act may soon see forward motion</div>
+              <div class="item-summary">Regulatory framework for crypto markets may advance after stalled progress. Market participants optimistic about legislative clarity.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bloomberg.com/news/articles/2026-03-07/top-wall-street-minds-see-ai-rotation-ahead-as-bitcoin-seeks-role-in-new-cycle">
+              <span class="item-tag ma">Strategy</span>
+              <div class="item-title">Wall Street sees AI rotation ahead as bitcoin seeks role in new cycle</div>
+              <div class="item-summary">Major institutional investors considering bitcoin and crypto as post-AI rotation targets. Could drive institutional inflows.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
         <!-- Industry - Gaming & Entertainment -->
         <article class="card" data-type="industry" data-date="2026-02-28" data-time="06:01">
           <div class="card-header" onclick="toggle(this)">
@@ -1448,7 +2185,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <span class="card-time">06:01</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-badge">6 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
@@ -1519,26 +2256,195 @@
         </article>
 
         <!-- Industry - Consumer & E-commerce -->
-        <article class="card expanded" data-type="industry" data-date="2026-03-06" data-time="06:01">
+        <!-- Industry - Latest: Fintech & Crypto -->
+        <article class="card expanded" data-type="industry" data-date="2026-03-08" data-time="18:06">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon industry">🌡</div>
+              <div class="card-icon industry">💰</div>
               <div>
-                <div class="card-title">Climate & Energy</div>
-                <div class="card-meta">No New Developments Detected - Access Limited</div>
+                <div class="card-title">Fintech & Crypto</div>
+                <div class="card-meta">Kalshi Valuations, Circle $68M Transfer, Crypto Security Strategy, Coinbase IRS Criticism</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">06:01</span>
-              <span class="card-badge">1 item</span>
+              <span class="card-time">18:06</span>
+              <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=industry-climate-status-20260306">
-              <span class="item-tag status">Status</span>
-              <div class="item-title">No New Climate & Energy Developments Detected</div>
-              <div class="item-summary">Unable to access major news sources due to website access restrictions. Multiple sources implemented bot protection preventing automated data collection.</div>
+            <a class="item" href="detail.html?id=industry-kalshi-20b-20260308">
+              <span class="item-tag ma">M&A</span>
+              <div class="item-title">Kalshi, Polymarket Seeks $20B Valuation</div>
+              <div class="item-summary">Prediction market platforms aiming to double their valuations in fundraising talks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-circle-68m-20260308">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Circle Moves $68M in 30 Minutes via USDC</div>
+              <div class="item-summary">Stablecoin used for instant internal treasury transfers, replacing traditional bank wires.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-crypto-security-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Trump Cyber Strategy Supports Crypto Security</div>
+              <div class="item-summary">Blockchain security elevated to national strategic priority alongside AI and quantum computing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-dorsey-stablecoins-20260308">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Jack Dorsey's Firm Embraces Stablecoins</div>
+              <div class="item-summary">Bitcoin purist pivots to add stablecoin support amid market pressure.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-coinbase-irs-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Coinbase Criticizes IRS 1099-DA Rules</div>
+              <div class="item-summary">New crypto tax reporting rules called wasteful and onerous by exchange.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Industry - Previous: Education & EdTech -->
+        <article class="card" data-type="industry" data-date="2026-03-08" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">📚</div>
+              <div>
+                <div class="card-title">Education & EdTech</div>
+                <div class="card-meta">AI Student Aid, Fake Citations, AI Cheating, Mental Health, Agentic AI, Nutrition, Researcher Union</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">📚</div>
+              <div>
+                <div class="card-title">Education & EdTech</div>
+                <div class="card-meta">AI Student Aid, Fake Citations, AI Cheating, Mental Health, Agentic AI, Nutrition, Researcher Union</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-edtech-student-aid-ai-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Legal Advocacy Group Raises Concern About AI in Federal Student Aid</div>
+              <div class="item-summary">Student Defense using FOIA requests to investigate Trump administration's AI use in student aid programs, fearing inadequate safeguards could compromise student data privacy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-fake-citations-20260308">
+              <span class="item-tag product">Research</span>
+              <div class="item-title">Journal Submissions Riddled With AI-Created Fake Citations</div>
+              <div class="item-summary">Academic journals increasingly plagued by AI-generated fake citations that are nearly impossible to detect, with Springer implementing integrity screening.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-cheating-20260308">
+              <span class="item-tag product">Security</span>
+              <div class="item-title">In-Person Classes Aren't Safe From AI Cheating Boom</div>
+              <div class="item-summary">Study found 45% of points in in-person biology courses can be easily earned through digital cheating methods including AI-powered tools.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-mental-health-20260308">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">With Teens Comfortable Confiding in AI, Should Schools Embrace It for Mental Health Care?</div>
+              <div class="item-summary">Schools using AI platforms such as Alongside to monitor student mental health, flagging potential self-harm or harm to others.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-einstein-20260308">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Agentic AI Can Complete Whole Courses for Students. Now What?</div>
+              <div class="item-summary">22-year-old entrepreneur launched Einstein, an agentic AI tool that connects to Canvas and can watch lectures, write papers, and submit homework automatically.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-nutrition-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">53 Medical Schools Pledge to Expand Nutrition Education Requirements</div>
+              <div class="item-summary">53 medical schools committed to requiring 40 hours of nutrition education for medical students, with HHS launching $5M nutrition education challenge.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-fake-citations-deep-20260308">
+              <span class="item-tag clinical">Research</span>
+              <div class="item-title">Academic Journals Flooded with AI-Generated Fake Citations</div>
+              <div class="item-summary">Editors report surge in AI-generated phantom citations with correct formatting and real authors, creating opportunities for verification tools.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-student-aid-deep-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Legal Group Launches Investigation into AI Use in Federal Student Aid</div>
+              <div class="item-summary">Student Defense submitted 12 FOIA requests to investigate Trump administration's AI use in student aid, examining data sharing and compliance.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-researcher-union-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">NIH Moves to Derecognize Early-Career Researcher Union</div>
+              <div class="item-summary">NIH will no longer recognize union representing early-career researchers, affecting funding distribution and workforce development.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-edtech-middle-east-20260308">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Middle East Crisis Threatens International Branch Campus Expansion</div>
+              <div class="item-summary">Experts warn ongoing crisis could disrupt branch campus plans, forcing universities to reassess operations in the region.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Industry - Previous: Gaming & Entertainment -->
+        <article class="card" data-type="industry" data-date="2026-03-07" data-time="06:02">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">🎮</div>
+              <div>
+                <div class="card-title">Gaming & Entertainment</div>
+                <div class="card-meta">Epic v. Google, Lenovo Legion 7A, Fortnite Returns, Nintendo Switch 2</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:02</span>
+              <span class="card-badge">6 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-epic-google-scotus-20260307">
+              <span class="item-tag legal">Legal</span>
+              <div class="item-title">Epic v. Google Case Withdrawn from Supreme Court</div>
+              <div class="item-summary">Both Epic Games and Google agreed to withdraw the antitrust case, meaning it won't proceed to Supreme Court under Rule 46.1.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-lenovo-legion-7a-20260307">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Lenovo Launches Legion 7A with AMD Strix Halo APU</div>
+              <div class="item-summary">First gaming laptop with integrated AMD Strix Halo APU, featuring 15.3-inch OLED display and Ryzen AI Max Plus 392.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-epic-fortnite-leaker-20260307">
+              <span class="item-tag legal">Legal</span>
+              <div class="item-title">Epic Sues Fortnite Leaker Over NDA Violation</div>
+              <div class="item-summary">Epic filed lawsuit against former contractor Hayden Cohen for leaking collaboration details on X and Discord.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-fortnite-google-play-20260307">
+              <span class="item-tag ma">M&A</span>
+              <div class="item-title">Fortnite Returns to Google Play Globally</div>
+              <div class="item-summary">Ending distribution dispute, Epic's Fortnite is back on Google Play Store worldwide after being unavailable.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-nintendo-switch-2-virtual-boy-20260307">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Nintendo Switch 2 Virtual Boy Lineup Expands</div>
+              <div class="item-summary">Adding Virtual Boy Mario Tennis and Mario Clash to Switch Online + Expansion Pack starting March 10th.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1556,7 +2462,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <span class="card-time">06:04</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-badge">6 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
@@ -1656,63 +2562,242 @@
           </div>
         </article>
 
-        <!-- Global - Latest -->
-        <article class="card expanded" data-type="global" data-date="2026-03-06" data-time="08:00">
+        <!-- Global 16:00 - Latest -->
+        <article class="card expanded" data-type="global" data-date="2026-03-09" data-time="16:00">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon global">🌐</div>
               <div>
                 <div class="card-title">Global News</div>
-                <div class="card-meta">Iran War Escalation, NSW Hate Laws, Oil Price Spike, Trump DHS Change, Nepal Gov Shift, Aussie Troops on US Sub</div>
+                <div class="card-meta">Mojtaba Khamenei Named Iran Leader, Oil Surge, UK Dubai Flights</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:00</span>
-              <span class="card-badge">6 items</span>
+              <span class="card-time">16:00</span>
+              <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="detail.html?id=global-iran-war-20260306">
-              <span class="item-tag breaking">Middle East</span>
-              <div class="item-title">Iran-Israel War Escalates</div>
-              <div class="item-summary">Israel announced it is starting "next phase" of war against Iran, while UAE issued emergency alerts. US submarine sank an Iranian warship in Indian Ocean with a torpedo.</div>
+            <a class="item" href="detail.html?id=global-iran-leader-20260309-1600">
+              <span class="item-tag policy">Middle East</span>
+              <div class="item-title">Iran names Mojtaba Khamenei as supreme leader; oil prices surge above $110</div>
+              <div class="item-summary">Oil prices have surged above $110 a barrel as major energy supply disruptions threaten global markets.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-nsw-hate-laws-20260306">
-              <span class="item-tag policy">Australia</span>
-              <div class="item-title">NSW Passes Hate Group Laws, AI Copyright Warning</div>
-              <div class="item-summary">NSW parliament passed new hate group laws banning Hizb ut-Tahrir. Australian artists issued a warning to government regarding AI-generated art and copyright infringement.</div>
+            <a class="item" href="detail.html?id=global-uk-dubai-flights-20260309-1600">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">UK opens charter flights to Dubai as airlines cancel Middle East flights</div>
+              <div class="item-summary">UK government opened charter flight booking portal after thousands of flights cancelled due to conflict.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-oil-prices-20260306">
-              <span class="item-tag breaking">Global Economy</span>
-              <div class="item-title">Oil Prices Hit Highest Mark Since 2024</div>
-              <div class="item-summary">Experts warn that if oil and gas prices remain elevated due to prolonged Iran conflict, it could make goods and services more expensive globally. ASX set for more pain as Wall Street slumps.</div>
+            <a class="item" href="detail.html?id=global-norway-us-embassy-20260309-1600">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">Norway investigating Oslo US embassy explosion as possible terrorism</div>
+              <div class="item-summary">Blast at US embassy caused minor damage; terrorism motive being considered.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-trump-dhs-20260306">
-              <span class="item-tag policy">North America</span>
-              <div class="item-title">Trump Sacks Homeland Security Chief, Names Replacement</div>
-              <div class="item-summary">US President Donald Trump fired Kirstjen Nielsen as Homeland Security secretary and chose Oklahoma senator Markwayne Mullin as her replacement, described as a "MAGA warrior" by Trump.</div>
+            <a class="item" href="detail.html?id=global-muscat-flights-20260309-1600">
+              <span class="item-tag policy">Middle East</span>
+              <div class="item-title">Muscat airport limits private jet flights as wealthy flee Gulf</div>
+              <div class="item-summary">Muscat airport placed restrictions on private jet flights as wealthy individuals flee Gulf states.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-nepal-pm-20260306">
-              <span class="item-tag policy">Asia</span>
-              <div class="item-title">Nepal Deputy PM Steps Down Ahead of Parliament Move</div>
-              <div class="item-summary">Nepal's Deputy Prime Minister announced the state's new government will have his full cooperation and guidance as it prepares to move parliament to a new capital.</div>
+            <a class="item" href="detail.html?id=global-trump-iran-ground-forces-20260309-1600">
+              <span class="item-tag policy">US Policy</span>
+              <div class="item-title">Trump raises stakes in Iran war by weighing US ground forces deployment</div>
+              <div class="item-summary">Trump considering deployment of US ground forces would significantly escalate military involvement.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-aussie-troops-20260306">
+            <a class="item" href="detail.html?id=global-australia-orwell-20260309-1600">
+              <span class="item-tag policy">Asia Pacific</span>
+              <div class="item-title">Australia-Canada-New Zealand trade pact at Orwell time</div>
+              <div class="item-summary">Australia and Canada announced shared values agreement referencing George Orwell's "1984."</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global 08:00 - Previous -->
+        <article class="card" data-type="global" data-date="2026-03-09" data-time="08:00">
+            <a class="item" href="detail.html?id=global-iran-war-20260309-0800">
+              <span class="item-tag policy">Middle East</span>
+              <div class="item-title">Iran war escalates: Nearly 400 killed in Israeli strikes, oil depots targeted</div>
+              <div class="item-summary">Lebanon reports nearly 400 casualties as Iran continues attacks. Oil depots in Tehran hit overnight, with Kuwaiti high-rise also struck by drones.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-nepal-election-20260309-0800">
+              <span class="item-tag policy">Asia Pacific</span>
+              <div class="item-title">Nepal election: Rapper-turned-politician Balendra Shah wins after government toppled</div>
+              <div class="item-summary">General election follows violent youth-led protests. Balendra Shah heading for victory in significant political transition.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-uk-trump-tension-20260309-0800">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">UK rejects Trump's criticism: "We do not agree on every issue"</div>
+              <div class="item-summary">Foreign Secretary hits back at Trump's criticism of UK response. Starmer and Trump speak for first time since Iran criticism.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-us-embassy-oslo-20260309-0800">
+              <span class="item-tag policy">Americas</span>
+              <div class="item-title">US embassy explosion in Oslo under terrorism investigation</div>
+              <div class="item-summary">Norwegian police investigating blast at US embassy. Terrorism motive being considered as diplomatic facility security concerns rise.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-australia-weather-20260309-0800">
               <span class="item-tag breaking">Australia</span>
-              <div class="item-title">Australian Troops on US Submarine, Health Apology Probe</div>
-              <div class="item-summary">Australian claims its soldiers are on US submarine that sank Iranian warship. NSW health minister faces apology committee over medical misconduct probe. Girls lead exodus from state's public schools.</div>
+              <div class="item-title">Tropical low moves south-east towards Queensland</div>
+              <div class="item-summary">Weather system heading towards south-east Queensland. Authorities monitoring as communities prepare for potential impacts.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="detail.html?id=global-trump-noem-20260306">
+          </div>
+        </article>
+
+        <!-- Global - Previous -->
+        <article class="card" data-type="global" data-date="2026-03-09" data-time="00:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌐</div>
+              <div>
+                <div class="card-title">Global News</div>
+                <div class="card-meta">Trump Iran Policy, Nepal Election, Tornadoes, Cyprus Protests</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">00:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=global-trump-iran-criticism-20260309">
+              <span class="item-tag policy">Middle East</span>
+              <div class="item-title">Trump's Iran Attack Plans Criticized by Western Allies</div>
+              <div class="item-summary">US President Donald Trump continues military strikes despite rising concerns from European allies and UK. Trump has shown little appetite for finding diplomatic off-ramp to conflict.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-iran-invasion-report-20260309">
+              <span class="item-tag policy">Middle East</span>
+              <div class="item-title">US Ground Invasion of Iran May Not Achieve Regime Change: Report</div>
+              <div class="item-summary">New analysis suggests that US military ground invasion plans for Iran may not be sufficient to achieve regime change. Conflict intensifies with mounting casualties.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-nepal-election-20260309">
+              <span class="item-tag breaking">Asia</span>
+              <div class="item-title">Rapper-Politician Balendra Shah Wins Nepal Election</div>
+              <div class="item-summary">Balendra Shah, 35, unseats Nepal's former prime minister with 68,348 votes. First election since youth-led protests toppled government last September.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-tornadoes-michigan-oklahoma-20260309">
+              <span class="item-tag breaking">North America</span>
+              <div class="item-title">At Least Six Killed as Tornadoes Hit Michigan and Oklahoma</div>
+              <div class="item-summary">Severe weather struck multiple states with tornadoes uprooting trees, downing power lines, damaging buildings, and ripping roofs off houses.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-cyprus-bases-protest-20260309">
+              <span class="item-tag breaking">Europe</span>
+              <div class="item-title">British Military Base Protests Erupt in Cyprus After Drone Strike</div>
+              <div class="item-summary">Protests broke out following drone strike that targeted RAF Akrotiri airbase. Demonstrators demand removal of UK military presence with "British Bases Out" slogan.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global - Previous -->
+        <article class="card" data-type="global" data-date="2026-03-08" data-time="16:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌐</div>
+              <div>
+                <div class="card-title">Global News</div>
+                <div class="card-meta">Nepal Election, Australia Gun Policies, Tornadoes, Iran Conflict, Amazon Data Centers</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=global-nepal-election-20260308">
+              <span class="item-tag breaking">Asia</span>
+              <div class="item-title">Rapper-politician Balendra Shah Defeats Nepal's Ex-PM in Landslide</div>
+              <div class="item-summary">Balendra Shah, 35, has unseated former PM with 68,348 votes in Gen Z-led election following social media ban protests.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-australia-gun-20260308">
               <span class="item-tag policy">North America</span>
-              <div class="item-title">Trump Fires Kristen Noem, Faces Immigration Criticism</div>
-              <div class="item-summary">US President Donald Trump announced Oklahoma senator Kristen Noem would take over as Homeland Security secretary, facing criticism over immigration crackdown policies.</div>
+              <div class="item-title">Trump Officials Question Australian Jewish Leader on Gun Policies</div>
+              <div class="item-summary">Trump administration officials asked visiting Australian Jewish leader why Australian Jews aren't armed following Bondi Beach attack.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-tornadoes-20260308">
+              <span class="item-tag breaking">United States</span>
+              <div class="item-title">Tornadoes Kill Six Across Michigan and Oklahoma</div>
+              <div class="item-summary">At least six people have died after tornadoes struck Michigan and Oklahoma, causing infrastructure damage and power outages.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-iran-amazon-datacenters-20260308">
+              <span class="item-tag breaking">Middle East & Global</span>
+              <div class="item-title">Iran Conflict Escalates with Amazon Data Center Strikes</div>
+              <div class="item-summary">Iran has targeted Amazon data centers, disrupting cloud infrastructure. Oracle and OpenAI scrapped Texas expansion deal.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-iran-us-bases-20260308">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Iran Warns It Will Hit US Bases After President's Apology</div>
+              <div class="item-summary">Iran has issued warnings that it will target US military bases across region hours after US president issued an apology.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global - Previous -->
+        <article class="card" data-type="global" data-date="2026-03-08" data-time="08:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌐</div>
+              <div>
+                <div class="card-title">Global News</div>
+                <div class="card-meta">Iran War, US AI Guidelines, Indonesia Social Ban, China Tech Blueprint, Ukraine Robots</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=global-us-iran-strikes-20260307">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">US Launches Major Airstrikes on Iran</div>
+              <div class="item-summary">Israel conducted strikes on Iranian military command bunker while Trump demanded "unconditional surrender" and Pentagon warned attacks would intensify.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-oil-price-spike-20260307">
+              <span class="item-tag breaking">Energy Markets</span>
+              <div class="item-title">Oil Prices Hit Two-Year High as Gulf Supply Risk Grows</div>
+              <div class="item-summary">Qatar warns oil could hit $150/barrel if Iran conflict continues, pushing prices to two-year high.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-us-jobs-february-20260307">
+              <span class="item-tag breaking">USA</span>
+              <div class="item-title">US Economy Unexpectedly Sheds 92,000 Jobs in February</div>
+              <div class="item-summary">Sharp contraction came as a surprise with payrolls down in nearly every sector, signaling potential tech slowdown.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-bond-selloff-20260307">
+              <span class="item-tag breaking">Global Markets</span>
+              <div class="item-title">Global Bonds Suffer One of Worst Routs in Years</div>
+              <div class="item-summary">Bond markets experienced severe selloff amid Iran war escalation and economic uncertainty. BlackRock limited redemptions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-iran-drones-20260307">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Iran Using Low-Cost Drones to Cause Chaos Across Region</div>
+              <div class="item-summary">Iran launched over 2,000 low-cost drones at targets across Middle East. Azerbaijan calls it "act of terror".</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1730,7 +2815,7 @@
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
               <span class="card-time">08:00</span>
-              <span class="card-badge">5 items</span>
+              <span class="card-badge">6 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
