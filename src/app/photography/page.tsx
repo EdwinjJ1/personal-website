@@ -12,10 +12,36 @@ export default function PhotographyPage() {
   const [selectedPhotoIndex, setSelectedPhotoIndex] = useState<number | null>(null);
   const [isZoomed, setIsZoomed] = useState(false);
 
+  // Local persistence for category selection
+  useEffect(() => {
+    const savedCategory = localStorage.getItem('photography-category');
+    if (savedCategory && categories.includes(savedCategory)) {
+      setSelectedCategory(savedCategory);
+    }
+  }, []);
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    localStorage.setItem('photography-category', category);
+  };
+
   // Filter photos based on category
   const filteredPhotos = selectedCategory === 'All'
     ? photos
     : photos.filter(photo => photo.category === selectedCategory);
+
+  // Image preloading logic for lightbox
+  useEffect(() => {
+    if (selectedPhotoIndex !== null) {
+      const nextIndex = (selectedPhotoIndex + 1) % filteredPhotos.length;
+      const prevIndex = (selectedPhotoIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
+      
+      [nextIndex, prevIndex].forEach(index => {
+        const img = new window.Image();
+        img.src = getLightboxUrl(filteredPhotos[index].image);
+      });
+    }
+  }, [selectedPhotoIndex, filteredPhotos]);
 
   // Find the actual index in the full 'photos' array or the filtered list?
   // It's better to navigate within the *filtered* list for the lightbox.
@@ -99,7 +125,7 @@ export default function PhotographyPage() {
             {categories.map((category) => (
               <button
                 key={category}
-                onClick={() => setSelectedCategory(category)}
+                onClick={() => handleCategoryChange(category)}
                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300`}
                 style={
                   selectedCategory === category
@@ -288,6 +314,13 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
                     <div>
+                      <span className="font-medium">Fujifilm GFX 50R</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Medium Format Mirrorless</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                    <div>
                       <span className="font-medium">Panasonic Lumix S9</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Full-frame Mirrorless</span>
                     </div>
@@ -309,7 +342,7 @@ export default function PhotographyPage() {
                 </ul>
               </div>
 
-              {/* Lenses */}
+              {/* L Mount Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
                   <span className="text-2xl">🔭</span> L Mount Lenses
@@ -318,7 +351,14 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
                     <div>
-                      <span className="font-medium">Sigma 20-200mm</span>
+                      <span className="font-medium">Samyang 35-150mm f/2-2.8</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Fast Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 28-200mm</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Superzoom</span>
                     </div>
                   </li>
@@ -327,13 +367,6 @@ export default function PhotographyPage() {
                     <div>
                       <span className="font-medium">Sigma 100-400mm f/5-6.3 DG DN</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto</span>
-                    </div>
-                  </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
-                    <div>
-                      <span className="font-medium">TTArtisan 70mm f/2</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -369,8 +402,15 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
                     <div>
-                      <span className="font-medium">Sigma 24-35mm f/2 Art</span>
+                      <span className="font-medium">Tamron 15-30mm f/2.8 VC USD</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Wide Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Canon 40mm f/2.8 STM</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -383,12 +423,26 @@ export default function PhotographyPage() {
                 </ul>
               </div>
 
-              {/* MFT Lenses */}
+              {/* Special & Vintage Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
-                  <span className="text-2xl">✨</span> MFT Lenses
+                  <span className="text-2xl">✨</span> Specialty & Vintage
                 </h3>
                 <ul className="space-y-3">
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">Takumar 135mm f/3.5</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Vintage Manual</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">Laowa 60mm f/2.8 2:1 Macro</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Specialist</span>
+                    </div>
+                  </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
                     <div>
@@ -398,6 +452,8 @@ export default function PhotographyPage() {
                   </li>
                 </ul>
               </div>
+            </div>
+          </motion.div>
             </div>
           </motion.div>
 
