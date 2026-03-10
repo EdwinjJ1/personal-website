@@ -219,6 +219,138 @@ export const photos: Photo[] = [
     date: '2024-12',
     camera: 'Panasonic Lumix S9',
     settings: '40mm • f/2.0 • 1/6400s • ISO 100'
+  },
+  {
+    id: 20,
+    title: 'Velvet Compression',
+    location: 'Sydney',
+    description: 'Capturing the world through the legendary Takumar 135mm, where compression meets character.',
+    category: 'Street',
+    image: '/images/photography/DSCF9124.jpg',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/500s • ISO 400'
+  },
+  {
+    id: 21,
+    title: "Takumar's Soul",
+    location: 'Sydney',
+    description: 'The GFX 50R reveals the incredible resolve of vintage Takumar glass.',
+    category: 'Portrait',
+    image: '/images/photography/DSCF9138.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/250s • ISO 800'
+  },
+  {
+    id: 22,
+    title: 'GFX Medium Format Depth',
+    location: 'Sydney',
+    description: 'A study in depth and bokeh, rendered by the unique combination of medium format and classic optics.',
+    category: 'Portrait',
+    image: '/images/photography/DSCF9146.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/1000s • ISO 200'
+  },
+  {
+    id: 23,
+    title: 'Chromatic Stillness',
+    location: 'Sydney',
+    description: 'Isolating the essence of the subject with the tight perspective of a 135mm focal length.',
+    category: 'Street',
+    image: '/images/photography/DSCF9148.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/400s • ISO 400'
+  },
+  {
+    id: 24,
+    title: 'The 135mm Perspective',
+    location: 'Sydney',
+    description: 'The subtle color shifts and smooth transitions characteristic of the Takumar series.',
+    category: 'Landscape',
+    image: '/images/photography/DSCF9156.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/800s • ISO 100'
+  },
+  {
+    id: 25,
+    title: 'Vintage Rendering',
+    location: 'Sydney',
+    description: 'Exploring the intersection of digital fidelity and analog soul.',
+    category: 'Portrait',
+    image: '/images/photography/DSCF9161.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/125s • ISO 1600'
+  },
+  {
+    id: 26,
+    title: 'Medium Format Detail',
+    location: 'Sydney',
+    description: 'Every detail preserved by the massive sensor and the surgical precision of the lens.',
+    category: 'Architecture',
+    image: '/images/photography/DSCF9162.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/2000s • ISO 400'
+  },
+  {
+    id: 27,
+    title: 'Soft Bokeh Study',
+    location: 'Sydney',
+    description: 'A moment of stillness, defined by the narrow depth of field.',
+    category: 'Nature',
+    image: '/images/photography/DSCF9170.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/500s • ISO 200'
+  },
+  {
+    id: 28,
+    title: 'Compression and Clarity',
+    location: 'Sydney',
+    description: 'The city compressed into a beautiful tapestry of layers.',
+    category: 'Street',
+    image: '/images/photography/DSCF9172.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/640s • ISO 400'
+  },
+  {
+    id: 29,
+    title: 'The Takumar Look',
+    location: 'Sydney',
+    description: 'Rediscovering the charm of manual focus on a modern medium format body.',
+    category: 'Street',
+    image: '/images/photography/DSCF9183.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/1000s • ISO 200'
+  },
+  {
+    id: 30,
+    title: 'GFX Fidelity',
+    location: 'Sydney',
+    description: 'Where resolution meets rendering, a perfect harmony of old and new.',
+    category: 'Portrait',
+    image: '/images/photography/DSCF9186.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/250s • ISO 800'
+  },
+  {
+    id: 31,
+    title: 'Nostalgic Sharpness',
+    location: 'Sydney',
+    description: 'The unique glow and sharp focus that only vintage Takumar lenses provide.',
+    category: 'Street',
+    image: '/images/photography/DSCF9187.JPG',
+    date: '2026-03-10',
+    camera: 'Fujifilm GFX 50R',
+    settings: '135mm • Takumar f/3.5 • 1/400s • ISO 400'
   }
 ];
 
