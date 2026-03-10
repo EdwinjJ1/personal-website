@@ -389,14 +389,14 @@ export default function PhotographyPage() {
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
                     <div>
                       <span className="font-medium">Canon 16-35mm f/2.8L II USM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom (Gen II)</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
                     <div>
                       <span className="font-medium">Canon 70-200mm f/2.8L II IS USM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom (Gen II)</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
