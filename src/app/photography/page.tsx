@@ -358,6 +358,13 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
                     <div>
+                      <span className="font-medium">Panasonic Lumix S 18-40mm f/4.5-6.3</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Compact Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
                       <span className="font-medium">Sigma 28-200mm</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Superzoom</span>
                     </div>
@@ -367,6 +374,13 @@ export default function PhotographyPage() {
                     <div>
                       <span className="font-medium">Sigma 100-400mm f/5-6.3 DG DN</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                    <div>
+                      <span className="font-medium">TTArtisan 70mm f/2</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -382,7 +396,7 @@ export default function PhotographyPage() {
               {/* EF Mount Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
-                  <span className="text-2xl">🔷</span> Canon EF Lenses
+                  <span className="text-2xl">🔷</span> Canon EF / EF-S Lenses
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -411,6 +425,13 @@ export default function PhotographyPage() {
                     <div>
                       <span className="font-medium">Canon 40mm f/2.8 STM</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Canon EF-S 18-55mm f/3.5-5.6 III</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Standard Zoom</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -452,8 +473,6 @@ export default function PhotographyPage() {
                   </li>
                 </ul>
               </div>
-            </div>
-          </motion.div>
             </div>
           </motion.div>
 
