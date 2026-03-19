@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "news:sync": "node scripts/sync-ai-news.js"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",

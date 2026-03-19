@@ -2,17 +2,20 @@
 
 import Link from 'next/link';
 import BaseCard from './BaseCard';
+import newsData from '@/data/news-data.json';
 
 interface NewsCardProps {
   delay?: number;
 }
 
-const quickHighlights = [
-  { title: 'Anthropic $30B融资', tag: 'BREAKING' as const },
-  { title: 'AMD-Meta $100B交易', tag: 'BREAKING' as const },
-  { title: 'Perplexity Computer发布', tag: 'PRODUCT' as const },
-  { title: 'Gemini手机多步骤任务', tag: 'PRODUCT' as const },
-];
+interface NewsItem {
+  id: string;
+  title: string;
+  tag: 'BREAKING' | 'PRODUCT' | 'RESEARCH' | 'POLICY';
+  date: string;
+  time: string;
+  category: 'ai' | 'research' | 'industry' | 'global';
+}
 
 const tagColors = {
   BREAKING: { bg: '#dc2626', text: '#fff' },
@@ -20,6 +23,19 @@ const tagColors = {
   RESEARCH: { bg: '#16a34a', text: '#fff' },
   POLICY: { bg: '#d97706', text: '#fff' },
 };
+
+const allNews = newsData.news as NewsItem[];
+const latestDate = newsData.availableDates[0]?.value ?? '';
+const latestLabel = newsData.availableDates[0]?.label ?? 'Latest';
+const latestItems = allNews
+  .filter((item) => item.date === latestDate)
+  .sort((left, right) => right.time.localeCompare(left.time) || left.title.localeCompare(right.title));
+const quickHighlights = latestItems.slice(0, 4);
+const stats = [
+  { value: String(newsData.availableDates.length), label: 'Dates', color: '#00d4ff' },
+  { value: String(allNews.length), label: 'Items', color: '#a78bfa' },
+  { value: String(latestItems.length), label: 'Latest', color: '#22c55e' },
+];
 
 export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
   return (
@@ -32,7 +48,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
               News Hub
             </h3>
             <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
-              AI industry news, research papers, and global updates.
+              AI industry news, research papers, and global updates. Latest sync: {latestLabel}.
             </p>
           </div>
           <Link
@@ -46,11 +62,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
 
         {/* Quick Stats */}
         <div className="flex gap-3">
-          {[
-            { value: '13', label: 'Reports', color: '#00d4ff' },
-            { value: '50+', label: 'Items', color: '#a78bfa' },
-            { value: '15', label: 'Papers', color: '#22c55e' },
-          ].map((stat) => (
+          {stats.map((stat) => (
             <div
               key={stat.label}
               className="flex-1 text-center rounded-lg py-2"
@@ -66,7 +78,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
         <div className="flex-1 space-y-2">
           {quickHighlights.map((item) => (
             <div
-              key={item.title}
+              key={item.id}
               className="flex items-center gap-2 rounded-lg border p-2"
               style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
             >
@@ -76,9 +88,17 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
               >
                 {item.tag}
               </span>
-              <span className="text-sm" style={{ color: '#e0d8cc' }}>{item.title}</span>
+              <span className="text-sm truncate" style={{ color: '#e0d8cc' }}>{item.title}</span>
             </div>
           ))}
+          {quickHighlights.length === 0 && (
+            <div
+              className="rounded-lg border p-3 text-sm"
+              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c', color: '#b8b4aa' }}
+            >
+              No synced headlines yet.
+            </div>
+          )}
         </div>
 
         <Link
