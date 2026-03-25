@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import BaseCard from './BaseCard';
 import type { Project, ProjectStatus } from '@/data/projects';
+import ProjectIcon from '@/components/projects/ProjectIcon';
 
 const getStatusStyle = (status: ProjectStatus) => {
   switch (status) {
@@ -70,14 +71,8 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
               className="group flex items-start gap-3 rounded-xl border p-2 transition-all"
               style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)' }}>
-                {project.icon && !project.icon.match(/\p{Emoji}/u) ? (
-                  <span className="text-sm">{project.icon}</span>
-                ) : (
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
-                  </svg>
-                )}
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088' }}>
+                <ProjectIcon icon={project.icon} size={16} />
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between gap-3">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import type { Project, ProjectStatus } from '@/data/projects';
+import ProjectIcon from './ProjectIcon';
 
 const getStatusStyle = (status: ProjectStatus) => {
   switch (status) {
@@ -47,7 +48,7 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
     <li className="rounded-2xl border p-5 transition-all" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(40, 38, 34, 0.8)' }}>
       <div className="flex flex-wrap items-start justify-between gap-3 text-sm" style={{ color: '#b8b4aa' }}>
         <span className="flex items-center gap-2" style={{ color: '#b8b4aa' }}>
-          <span className="text-lg">{project.icon ?? '🚀'}</span>
+          <ProjectIcon icon={project.icon} size={18} />
           {project.category}
         </span>
         <span className="rounded-full border px-3 py-1 text-xs" style={getStatusStyle(project.status)}>

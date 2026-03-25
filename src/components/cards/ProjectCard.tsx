@@ -2,6 +2,7 @@
 
 import BaseCard from './BaseCard';
 import Link from 'next/link';
+import ProjectIcon from '@/components/projects/ProjectIcon';
 
 interface Project {
   title: string;
@@ -35,7 +36,7 @@ export default function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
     <BaseCard delay={delay}>
       <div className="h-full flex flex-col">
         <div className="flex justify-between items-start mb-3">
-          <div className="text-2xl">{project.icon}</div>
+          <div style={{ color: '#7a9088' }}><ProjectIcon icon={project.icon} size={24} /></div>
           <span className={`px-2 py-1 text-xs rounded-full border ${getStatusColor(project.status)}`}>
             {project.status}
           </span>
