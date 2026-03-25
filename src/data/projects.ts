@@ -37,7 +37,7 @@ export const projects: Project[] = [
     status: 'In Development',
     liveUrl: 'https://egotrace.vercel.app/',
     githubUrl: 'https://github.com/EdwinjJ1/calendar',
-    icon: '🧠',
+    icon: 'brain',
     highlights: [
       'Smart Calendar with AI Event Import',
       'Habit Tracking & Gamification',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     status: 'Live',
     liveUrl: 'https://www.promptenhenceraxon.top',
     githubUrl: 'https://github.com/EdwinjJ1/Axon',
-    icon: '💠',
+    icon: 'diamond',
     highlights: [
       'Electron + React + TypeScript Architecture',
       'Secure IPC Communication',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
-    icon: '🏹',
+    icon: 'crosshair',
     highlights: [
       'Augment-style Double Ctrl+E Enhancement',
       'Repo-aware Context Scanning',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'Live',
     liveUrl: 'http://www.preuni.xyz/',
-    icon: '📚',
+    icon: 'book',
     highlights: [
       'Interactive code examples',
       'Bilingual content (EN / CN)',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'In Development',
     githubUrl: '#',
-    icon: '🤖',
+    icon: 'bot',
     highlights: [
       'Five specialised AI agents',
       'Notion + Google Calendar integrations',
@@ -143,7 +143,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'Ongoing',
     githubUrl: '#',
-    icon: '🧠',
+    icon: 'layers',
     highlights: [
       'Image classification experiments',
       'NLP sentiment analysis pipelines',
@@ -164,7 +164,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'Live',
     githubUrl: '#',
-    icon: '💼',
+    icon: 'briefcase',
     highlights: [
       'Next.js App Router architecture',
       'Framer Motion micro-interactions',
@@ -185,7 +185,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/SafeEyes--mac',
-    icon: '👁️',
+    icon: 'eye',
     highlights: [
       'Native macOS integration via AppleScript',
       'Bilingual support (EN / CN)',
@@ -206,7 +206,7 @@ export const projects: Project[] = [
     featured: true,
     status: 'Live',
     githubUrl: '#',
-    icon: '🌍',
+    icon: 'globe',
     highlights: [
       'Analyzed 184 countries with 44 indicators',
       'Composite risk scoring algorithm',
@@ -228,7 +228,7 @@ export const projects: Project[] = [
     status: 'Live',
     liveUrl: 'https://chrono-map-eight.vercel.app/',
     githubUrl: 'https://github.com/EdwinjJ1/chrono-map',
-    icon: '🗺️',
+    icon: 'map',
     highlights: [
       '50+ Historical Sites & Landmarks',
       '"Then & Now" Photo Comparisons',
@@ -250,7 +250,7 @@ export const projects: Project[] = [
     featured: false,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/discord-bot',
-    icon: '🤖',
+    icon: 'message',
     highlights: [
       'Custom command system',
       'Automated moderation tools',

@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/fetch-github-activity.js",
     "build": "next build",
+    "github:fetch": "node scripts/fetch-github-activity.js",
     "start": "next start",
     "lint": "next lint",
     "news:sync": "node scripts/sync-ai-news.js"

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import type { Project, ProjectStatus } from '@/data/projects';
+import ProjectIcon from './ProjectIcon';
 
 const getStatusStyle = (status: ProjectStatus) => {
   switch (status) {
@@ -45,8 +46,8 @@ interface ProjectHighlightCardProps {
 export default function ProjectHighlightCard({ project }: ProjectHighlightCardProps) {
   return (
     <div className="flex h-full flex-col overflow-hidden rounded-2xl border backdrop-blur transition-all" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(40, 38, 34, 0.9)' }}>
-      <div className="flex items-center justify-center text-6xl h-40" style={{ background: 'linear-gradient(to bottom right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', color: 'rgba(122, 144, 136, 0.4)' }}>
-        {project.icon ?? '🚀'}
+      <div className="flex items-center justify-center h-40" style={{ background: 'linear-gradient(to bottom right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', color: 'rgba(122, 144, 136, 0.4)' }}>
+        <ProjectIcon icon={project.icon} size={56} />
       </div>
 
       <div className="flex flex-1 flex-col gap-5 p-6">
