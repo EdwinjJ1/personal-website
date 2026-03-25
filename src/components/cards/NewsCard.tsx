@@ -30,48 +30,44 @@ const latestLabel = newsData.availableDates[0]?.label ?? 'Latest';
 const latestItems = allNews
   .filter((item) => item.date === latestDate)
   .sort((left, right) => right.time.localeCompare(left.time) || left.title.localeCompare(right.title));
-const quickHighlights = latestItems.slice(0, 4);
-const stats = [
-  { value: String(newsData.availableDates.length), label: 'Dates', color: '#00d4ff' },
-  { value: String(allNews.length), label: 'Items', color: '#a78bfa' },
-  { value: String(latestItems.length), label: 'Latest', color: '#22c55e' },
-];
+const quickHighlights = latestItems.slice(0, 3);
 
 export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
   return (
-    <BaseCard size="md" hover={false} delay={delay} className="md:col-span-2 lg:col-span-4">
+    <BaseCard size="md" hover={false} delay={delay} className="md:col-span-2 lg:col-span-6">
       <div className="flex h-full flex-col gap-3">
         <div className="flex items-start justify-between">
           <div>
             <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-              <span className="text-2xl" style={{ color: '#7a9088' }}>🤖</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/>
+              </svg>
               News Hub
             </h3>
-            <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
-              AI industry news, research papers, and global updates. Latest sync: {latestLabel}.
-            </p>
-          </div>
-          <Link
-            href="/news"
-            className="rounded-full border px-3 py-1 text-xs transition-colors hover:border-[#7a9088]"
-            style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
-          >
-            View all
-          </Link>
-        </div>
-
-        {/* Quick Stats */}
-        <div className="flex gap-3">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex-1 text-center rounded-lg py-2"
-              style={{ backgroundColor: '#211e1c' }}
-            >
-              <div className="text-lg font-bold" style={{ color: stat.color }}>{stat.value}</div>
-              <div className="text-xs" style={{ color: '#8a8680' }}>{stat.label}</div>
+            <div className="flex items-center gap-2 mt-1">
+              <p className="text-sm" style={{ color: '#b8b4aa' }}>
+                AI news, research &amp; global updates. Synced {latestLabel}.
+              </p>
             </div>
-          ))}
+          </div>
+          <div className="flex flex-col items-end gap-1.5 shrink-0">
+            <Link
+              href="/news"
+              className="rounded-full border px-3 py-1 text-xs transition-colors hover:border-[#7a9088]"
+              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
+            >
+              View all
+            </Link>
+            <span
+              className="flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium border"
+              style={{ borderColor: 'rgba(122, 144, 136, 0.35)', backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088' }}
+            >
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              Run by Openclaw
+            </span>
+          </div>
         </div>
 
         {/* Highlights */}

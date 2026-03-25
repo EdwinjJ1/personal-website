@@ -9,12 +9,12 @@ import ClientOnlyParticles from '@/components/ClientOnlyParticles';
 // Import modular cards
 import PersonalCard from '@/components/cards/PersonalCard';
 import LocationCard from '@/components/cards/LocationCard';
-import SkillsCard from '@/components/cards/SkillsCard';
 import ActivityCard from '@/components/cards/ActivityCard';
 import MusicCard from '@/components/cards/MusicCard';
 import TechnicalProjectsCard from '@/components/cards/TechnicalProjectsCard';
 import PhotographerCard from '@/components/cards/PhotographerCard';
 import BlogCard from '@/components/cards/BlogCard';
+import NewsCard from '@/components/cards/NewsCard';
 import { projects as projectData } from '@/data/projects';
 
 const orderedProjects = [...projectData.filter((project) => project.featured), ...projectData.filter((project) => !project.featured)];
@@ -35,10 +35,10 @@ export default function Home() {
             {/* Location - Takes 1 column */}
             <LocationCard />
 
-            {/* Skills - Takes 2 columns */}
-            <SkillsCard />
+            {/* News Hub - replaces Tech Stack, takes 6 columns */}
+            <NewsCard delay={0.3} />
 
-            {/* Music Player - Takes 2 columns */}
+            {/* Music Player */}
             <MusicCard />
 
             <PhotographerCard delay={0.7} />

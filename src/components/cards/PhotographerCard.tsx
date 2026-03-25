@@ -16,13 +16,21 @@ const miniSets = [
     title: 'Street Stories',
     subtitle: 'Candid city moments',
     palette: 'from-teal-500/30 via-cyan-500/30 to-teal-400/30',
-    icon: '🌆',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <rect x="3" y="9" width="13" height="13"/><path d="M5 9V7a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M16 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/>
+      </svg>
+    ),
   },
   {
     title: 'Portrait Sessions',
     subtitle: 'Natural light portraits',
     palette: 'from-teal-600/30 via-teal-500/30 to-cyan-500/30',
-    icon: '📸',
+    icon: (
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
+      </svg>
+    ),
   },
 ];
 
@@ -37,7 +45,9 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
         <div className="flex items-start justify-between gap-3">
           <div>
             <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-              <span className="text-2xl" style={{ color: '#7a9088' }}>📷</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+              </svg>
               Photographer Notes
             </h3>
             <p className="text-sm mt-0.5" style={{ color: '#b8b4aa' }}>
@@ -77,7 +87,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
                 background: 'linear-gradient(to bottom right, rgba(122, 144, 136, 0.2), rgba(106, 138, 142, 0.2))'
               }}
             >
-              <p className="text-lg">{set.icon}</p>
+              <div className="mb-0.5">{set.icon}</div>
               <p className="mt-2 text-sm font-semibold" style={{ color: '#e0d8cc' }}>{set.title}</p>
               <p className="text-xs leading-relaxed" style={{ color: '#b8b4aa' }}>{set.subtitle}</p>
             </div>

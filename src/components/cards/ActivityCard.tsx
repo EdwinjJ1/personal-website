@@ -202,7 +202,9 @@ export default function ActivityCard() {
         <div className="h-full">
           <div className="flex justify-between items-center mb-3">
             <h3 className="font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-              <span className="text-teal-400">📊</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+              </svg>
               GitHub Activity
             </h3>
             <span className="text-xs" style={{ color: '#b8b4aa' }}>
@@ -239,7 +241,9 @@ export default function ActivityCard() {
       <div className="h-full">
         <div className="flex justify-between items-center mb-3">
           <h3 className="font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-            <span className="text-teal-400">📊</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+            </svg>
             GitHub Activity
             {isRealData && (
               <span className="text-xs text-green-400 ml-1" title="Live data from GitHub API">●</span>
@@ -252,11 +256,13 @@ export default function ActivityCard() {
             {totalActivity} contributions
             {isRealData && (
               <span
-                className="ml-2"
+                className="ml-2 inline-flex items-center"
                 style={{ color: '#8a8680' }}
                 title={`Base: 362 (historical) + ${realGitHubActivity} (real GitHub activity in last 12 weeks). Heatmap shows simulated data merged with real activity.`}
               >
-                ℹ️
+                <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
               </span>
             )}
           </span>
