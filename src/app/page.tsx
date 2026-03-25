@@ -25,7 +25,7 @@ export default function Home() {
       <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
         <ClientOnlyParticles />
 
-        <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
+        <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-16 md:pt-24 pb-12">
           {/* Modular Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)]">
 
