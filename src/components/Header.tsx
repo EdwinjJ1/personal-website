@@ -177,6 +177,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <motion.header
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b shadow-sm"
       style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', borderColor: 'rgba(114, 110, 102, 0.3)' }}
@@ -218,24 +219,33 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile menu */}
+    </motion.header>
+
+      {/* Mobile menu - full screen overlay, outside header */}
       <div
         ref={mobileMenuRef}
-        className="md:hidden border-t"
-        style={{ backgroundColor: 'rgba(26, 24, 22, 0.97)', borderColor: 'rgba(114, 110, 102, 0.3)' }}
+        className="md:hidden fixed inset-0 z-40"
+        style={{ visibility: 'hidden', opacity: 0 }}
       >
-        <div className="px-6 py-4 space-y-1">
+        {/* Backdrop */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(26, 24, 22, 0.97)' }}
+          onClick={toggleMenu}
+        />
+        {/* Menu content */}
+        <div className="relative z-10 px-8 pt-24 space-y-2">
           {NAV_ITEMS.map(item => (
             <Link
               key={item.href}
               href={item.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={toggleMenu}
               style={{
                 display: 'block',
-                padding: '8px 12px',
-                borderRadius: 8,
+                padding: '12px 16px',
+                borderRadius: 12,
                 fontWeight: 500,
-                fontSize: 15,
+                fontSize: 18,
                 color: pathname === item.href ? '#7a9088' : '#e0d8cc',
                 textDecoration: 'none',
               }}
@@ -245,6 +255,6 @@ export default function Header() {
           ))}
         </div>
       </div>
-    </motion.header>
+    </>
   );
 }
