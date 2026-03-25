@@ -52,7 +52,9 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
       <div className="flex h-full flex-col gap-3.5">
         <div>
           <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-            <span className="text-2xl" style={{ color: '#7a9088' }}>🛠️</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+            </svg>
             Technical Projects
           </h3>
           <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
@@ -68,8 +70,14 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
               className="group flex items-start gap-3 rounded-xl border p-2 transition-all"
               style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
             >
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg text-lg" style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)' }}>
-                {project.icon ?? '🚀'}
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg" style={{ backgroundColor: 'rgba(122, 144, 136, 0.1)' }}>
+                {project.icon && !project.icon.match(/\p{Emoji}/u) ? (
+                  <span className="text-sm">{project.icon}</span>
+                ) : (
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/>
+                  </svg>
+                )}
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between gap-3">

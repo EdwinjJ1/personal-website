@@ -41,9 +41,10 @@ export default function MusicCard() {
           <motion.div
             animate={{ scale: currentTrack.isPlaying ? [1, 1.1, 1] : 1 }}
             transition={{ repeat: Infinity, duration: 0.8 }}
-            className="text-2xl"
           >
-            🎵
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+            </svg>
           </motion.div>
           <div>
             <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>Now Playing</h3>
@@ -62,8 +63,10 @@ export default function MusicCard() {
         <div className="flex-grow">
           <div className="rounded-xl p-3 mb-2.5" style={{ backgroundColor: '#211e1c' }}>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl" style={{ background: 'linear-gradient(to bottom right, #7a9088, #6a8a8e)' }}>
-                {currentTrack.albumArt}
+              <div className="w-12 h-12 rounded-lg flex items-center justify-center" style={{ background: 'linear-gradient(to bottom right, #7a9088, #6a8a8e)' }}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e0d8cc" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+                </svg>
               </div>
               <div className="flex-grow min-w-0">
                 <h4 className="font-medium text-sm truncate" style={{ color: '#e0d8cc' }}>

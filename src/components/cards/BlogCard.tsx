@@ -18,7 +18,9 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
         <div className="flex items-start justify-between">
           <div>
             <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-              <span className="text-2xl" style={{ color: '#7a9088' }}>📝</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
               Latest Writing
             </h3>
             <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
