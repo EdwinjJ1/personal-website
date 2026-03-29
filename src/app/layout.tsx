@@ -12,6 +12,8 @@ export const metadata: Metadata = {
 import Header from '@/components/Header';
 import ClientRouter from '@/components/ClientRouter';
 import Galaxy from '@/components/Galaxy';
+import SplashOrchestrator from '@/components/SplashOrchestrator';
+import GlobalTextCursor from '@/components/GlobalTextCursor';
 
 export default function RootLayout({
   children,
@@ -35,10 +37,13 @@ export default function RootLayout({
           transparent={true}
         />
         <ClientRouter />
-        <Header />
-        <div style={{ position: 'relative', zIndex: 1 }}>
-          {children}
-        </div>
+        <GlobalTextCursor />
+        <SplashOrchestrator>
+          <Header />
+          <div style={{ position: 'relative', zIndex: 1 }}>
+            {children}
+          </div>
+        </SplashOrchestrator>
       </body>
     </html>
   );
