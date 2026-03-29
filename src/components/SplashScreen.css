@@ -1,0 +1,120 @@
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 45;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.splash-radial-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%) scale(0.5);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(122, 144, 136, 0.15) 0%, transparent 70%);
+  opacity: 0;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+.splash-name {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #e0d8cc;
+  will-change: transform, opacity;
+}
+
+.splash-letter-revealed {
+  display: inline-block;
+  color: #e0d8cc;
+  transition: color 0.3s ease;
+}
+
+.splash-letter-encrypted {
+  display: inline-block;
+  color: #7a9088;
+  transition: color 0.3s ease;
+}
+
+.splash-line {
+  height: 1px;
+  margin: 20px auto;
+  background: linear-gradient(90deg, transparent, rgba(122, 144, 136, 0.6), transparent);
+  will-change: width;
+}
+
+.splash-subtitle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1.8em;
+}
+
+.splash-subtitle {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-size: clamp(0.85rem, 2vw, 1.15rem);
+  color: #b8b4aa;
+  letter-spacing: 0.08em;
+}
+
+.splash-cursor {
+  display: inline-block;
+  color: #7a9088;
+  font-weight: 300;
+  margin-left: 2px;
+  opacity: 0;
+}
+
+.splash-cursor.blink {
+  animation: cursorBlink 0.8s step-end infinite;
+}
+
+.splash-skip-hint {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #8a8680;
+  letter-spacing: 0.1em;
+  text-transform: lowercase;
+  opacity: 0;
+  will-change: opacity;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .splash-name {
+    font-size: clamp(2rem, 12vw, 3.5rem);
+    letter-spacing: 0.1em;
+  }
+
+  .splash-subtitle {
+    font-size: clamp(0.7rem, 3vw, 0.95rem);
+  }
+
+  .splash-radial-glow {
+    width: 350px;
+    height: 350px;
+  }
+
+  .splash-skip-hint {
+    bottom: 40px;
+    font-size: 12px;
+  }
+}
