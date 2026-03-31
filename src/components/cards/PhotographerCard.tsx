@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import BaseCard from './BaseCard';
 import Folder from '@/components/Folder';
 import PhotographerFlowingMenu from './PhotographerFlowingMenu';
-import { getAssetPath } from '@/lib/utils';
+import { getThumbnailUrl } from '@/lib/imageUtils';
 
 const menuItems = [
   {
@@ -14,7 +14,7 @@ const menuItems = [
       'P1032761.JPG', 'P1032762.JPG', 'P1032763.JPG',
       'P1033437.JPG', 'P1034905.JPG', 'P1035455.JPG',
       'DSCF9124.jpg', 'DSCF9148.JPG', 'DSCF9172.JPG',
-    ].map(f => getAssetPath(`images/photography/${f}`)),
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
   {
@@ -23,30 +23,30 @@ const menuItems = [
       'P1032794.JPG', 'P1034944.JPG', 'P1035420.JPG',
       'P1035469.JPG', 'DSCF9138.JPG', 'DSCF9146.JPG',
       'DSCF9161.JPG', 'DSCF9186.JPG',
-    ].map(f => getAssetPath(`images/photography/${f}`)),
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
   {
     text: 'Landscape',
     images: [
       'P1033598.JPG', 'P1033646.JPG', 'P1034935.JPG', 'DSCF9156.JPG',
-    ].map(f => getAssetPath(`images/photography/${f}`)),
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
   {
     text: 'Architecture',
     images: [
       'P1033380.JPG', 'P1033392.JPG', 'DSCF9162.JPG',
-    ].map(f => getAssetPath(`images/photography/${f}`)),
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
 ];
 
-// Three representative photos for the folder papers
+// Three representative thumbnails for the folder papers
 const folderPhotos = [
-  getAssetPath('images/photography/P1032794.JPG'),
-  getAssetPath('images/photography/P1033598.JPG'),
-  getAssetPath('images/photography/DSCF9124.jpg'),
+  getThumbnailUrl('/images/photography/P1032794.JPG'),
+  getThumbnailUrl('/images/photography/P1033598.JPG'),
+  getThumbnailUrl('/images/photography/DSCF9124.jpg'),
 ];
 
 interface PhotographerCardProps {
