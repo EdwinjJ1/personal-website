@@ -226,8 +226,8 @@
       <div class="nav-section">
         <div class="nav-label">Reports</div>
         <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
-        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">31</span></div>
-        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">15</span></div>
+        <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">32</span></div>
+        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">16</span></div>
         <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">15</span></div>
         <div class="nav-item" data-filter="global"><span>Global</span><span class="count">15</span></div>
       </div>
@@ -258,6 +258,256 @@
       </div>
 
       <div class="cards" id="cards">
+
+        <!-- Research 16:05 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="research" data-date="2026-03-31" data-time="16:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">ScholScan ICLR 2026, D2Skill Agentic RL, MonitorBench CoT, Entropic RAG, Scaffold Effect</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:05</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.28651">
+              <span class="item-tag research">ICLR 2026</span>
+              <div class="item-title">ScholScan: Benchmarking MLLMs on Scan-Oriented Paper Reasoning</div>
+              <div class="item-summary">1,800 questions across 715 papers. Models must scan entire papers for consistency. RAG yields NO improvement—systematic MLLM deficiencies exposed.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.28716">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">D2Skill: Dynamic Dual-Granularity Skill Bank for Agentic RL</div>
+              <div class="item-summary">Task skills + step skills. +10-20 pts on ALFWorld/WebShop (Qwen2.5-7B). Skills transfer across settings with modest overhead.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.28590">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">MonitorBench: CoT Monitorability Crisis</div>
+              <div class="item-summary">1,514 instances, 19 tasks. NEGATIVE relationship: more capable = less monitorable. Stress-tests: up to 30% monitorability drop.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.28444">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Entropic Claim Resolution: Uncertainty-Driven RAG</div>
+              <div class="item-summary">Paradigm shift: retrieve what's DISCRIMINATIVE, not just relevant. Entropy minimization over competing hypotheses. Decision-theoretic value of information.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.28387">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Scaffold Effect: Clinical VLMs Fabricating Evidence</div>
+              <div class="item-summary">70-80% gains from PROMPT MENTION of MRI, not data. All models fabricate neuroimaging justifications. Preference alignment → random baseline.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research 04:05 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="research" data-date="2026-03-31" data-time="04:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">PAPO Reward Hacking Fix, CADSmith 96% IoU, BeSafe-Bench &lt;40% Safe, Airport KG, AutoB2G</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:05</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.26535">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">PAPO: Process-Aware Policy Optimization Solves Reward Hacking</div>
+              <div class="item-summary">Decouples outcome vs process advantages in RLHF. OlympiadBench 51.3% vs 46.3% ORM. Prevents models exploiting verbosity while accuracy collapses.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26512">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">CADSmith: Multi-Agent CAD with Programmatic Geometric Validation</div>
+              <div class="item-summary">Nested correction loops + OpenCASCADE kernel + VLM judge. 100% execution rate, median IoU 0.81→0.96. RAG-based, no fine-tuning.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25747">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">BeSafe-Bench: Agent Safety Benchmark—Best &lt;40% Safe Completion</div>
+              <div class="item-summary">Functional environments across Web/Mobile/Embodied. 9 risk categories. Strong task performance often means severe safety violations.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26076">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Knowledge Engineering + LLMs for Total Airport Management</div>
+              <div class="item-summary">Scaffolded fusion: KE structures guide LLM prompts. Document-level processing improves non-linear dependency recovery. Traceable extractions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26005">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">AutoB2G: Automated Building-Grid Co-Simulation from Natural Language</div>
+              <div class="item-summary">LLM-driven SOCIA framework. DAG-organized codebase guides LLM. Non-experts get working simulators from text descriptions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research 16:04 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="research" data-date="2026-03-30" data-time="16:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">PAPO Reward Hack Fix, CADSmith 96% IoU, Airport KG, AutoB2G, Agent Safety &lt;40%</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:04</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.26535">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">PAPO: Process-Aware Policy Optimization Solves Reward Hacking</div>
+              <div class="item-summary">Decouples outcome vs process advantage. OlympiadBench 51.3% vs 46.3% ORM. Correctness anchored while reasoning quality differentiates.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26512">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">CADSmith: Multi-Agent CAD with Programmatic Geometric Validation</div>
+              <div class="item-summary">Nested correction loops + OpenCASCADE + VLM judge. 100% execution, median IoU 0.81→0.96. Reliable LLM CAD generation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26076">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Knowledge Engineering + LLMs for Total Airport Management</div>
+              <div class="item-summary">Scaffolded fusion: KE structures guide LLM prompts. Document-level processing improves non-linear dependency recovery. Traceable extractions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.26005">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">AutoB2G: Automated Building-Grid Co-Simulation from Natural Language</div>
+              <div class="item-summary">LLM-driven SOCIA framework. DAG-organized codebase guides LLM. Non-experts get working simulators from text descriptions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25747">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">BeSafe-Bench: Agent Safety Benchmark—Best &lt;40% Safe Completion</div>
+              <div class="item-summary">Functional environments across Web/Mobile/Embodied. 9 risk categories. Strong task performance often means severe safety violations.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research 04:04 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="research" data-date="2026-03-30" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">S2D2 4.7x Diffusion Speedup, WriteBack-RAG Trainable Corpus, WildASR Hallucination, PICon Interrogation, LLM Academic Impact</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.25702">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">S2D2: Fast Decoding for Diffusion LLMs (4.7x Speedup)</div>
+              <div class="item-summary">Training-free self-speculative decoding for block-diffusion LLMs. Same model acts as both drafter and verifier by reducing block size to one. Up to 4.7x faster than AR, no extra training needed.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25737">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">WriteBack-RAG: First Framework to Train RAG Knowledge Base</div>
+              <div class="item-summary">Makes RAG corpus learnable via evidence distillation. Identifies where retrieval succeeds, distills into compact units. +2.14% across all settings with cross-method transfer.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25727">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">WildASR: Voice Agent Hallucination Risk (Alex Smola et al)</div>
+              <div class="item-summary">Multilingual diagnostic benchmark exposing ASR failures. Critical finding: systems hallucinate unspoken content under degraded inputs—safety risk for production voice agents.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25620">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">PICon: Interrogation Framework for Persona Agent Consistency</div>
+              <div class="item-summary">Multi-turn questioning exposes contradictions. Even "highly consistent" persona agents fail human baseline across internal, external, retest consistency. KAIST EDLAB.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25638">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">LLMs Already Changing Academic Writing Patterns</div>
+              <div class="item-summary">arXiv analysis: more "beyond"/"via" in titles, less "the"/"of" in abstracts. Detection remains hard. Real-world LLM usage is heterogeneous and dynamic.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Research 00:25 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="research" data-date="2026-03-30" data-time="00:25">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📄</div>
+              <div>
+                <div class="card-title">Arxiv Research</div>
+                <div class="card-meta">S2D2 4.7x Speedup, WildASR Hallucination Risk, PICon Interrogation, NLAHs, LLM Academic Impact</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">00:25</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2603.25702">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">S2D2: Fast Decoding for Diffusion LLMs (4.7x Speedup)</div>
+              <div class="item-summary">Training-free self-speculative decoding for block-diffusion LLMs. Same model acts as both drafter and verifier. Up to 4.7× faster than AR, no extra training needed.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25727">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">WildASR: Voice Agent Hallucination Risk</div>
+              <div class="item-summary">Multilingual diagnostic benchmark from Alex Smola et al. ASR systems hallucinate unspoken content under degraded inputs—safety risk for production voice agents.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25620">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">PICon: Persona Agents Fail Multi-Turn Interrogation</div>
+              <div class="item-summary">Interrogation-style evaluation framework exposes contradictions. Even "highly consistent" persona agents fail to meet human baseline across internal, external, retest consistency.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25723">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">Natural-Language Agent Harnesses (NLAHs)</div>
+              <div class="item-summary">Externalizes agent harness behavior as editable natural language artifacts. Makes agent control logic portable, comparable, and studyable as a scientific object.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2603.25638">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">LLMs Already Changing Academic Writing Patterns</div>
+              <div class="item-summary">arXiv analysis shows word usage shifts: more "beyond"/"via" in titles, less "the"/"of" in abstracts. Detection remains hard. Real-world LLM usage is heterogeneous.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
         <!-- Research 04:04 - 2026-03-28 (Saturday) -->
         <article class="card expanded" data-type="research" data-date="2026-03-28" data-time="04:04">
@@ -1542,6 +1792,340 @@
               <span class="item-tag research">Paper</span>
               <div class="item-title">Build, Judge, Optimize: Blueprint for Continuous Improvement of Multi-Agent Consumer Assistants</div>
               <div class="item-summary">Practical blueprint for evaluating and optimizing multi-agent systems illustrated through production-scale AI grocery assistant with Sub-agent GEPA and MAMuT strategies.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 04:01 - 2026-03-31 (Tuesday) -->
+        <!-- AI News 08:01 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-31" data-time="08:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Apple Intelligence China Mistake, NRC Gutted, Copilot Cowork Live, TurboQuant 6x</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:01</span>
+              <span class="card-badge">8 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Apple Intelligence Mistakenly Launched in China, Quickly Pulled</div>
+              <div class="item-summary">Chinese users briefly saw Apple Intelligence. Gurman says "error" - already taken offline. China requires Alibaba partnership for AI features. Apple native AI not approved.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Trump Guts NRC as Silicon Valley Pushes Nuclear for Data Centers</div>
+              <div class="item-summary">Nuclear Regulatory Commission lost 400+ staff, largely safety workers. Former chair: "Regulator no longer independent." Tech hyping next-gen reactors for AI energy demand.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/30/copilot-cowork-now-available-in-frontier/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Microsoft Copilot Cowork Live with Claude Integration</div>
+              <div class="item-summary">Frontier Program: Claude for multi-step tasks, Researcher agent, Critique feature (GPT drafts, Claude edits). Full GPT+Claude workflow.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bloomberg.com/news/newsletters/2026-03-29/apple-doubles-down-on-hardware-services-with-revamped-ai-strategy-rare-bonuses-mnbpiwon">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Siri Extensions Could Create AI App Store</div>
+              <div class="item-summary">iOS 27 third-party chatbot marketplace. Siri Extensions will have dedicated App Store section. Apple opening AI to beyond ChatGPT.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://fortune.com/2026/03/26/anthropic-leaked-unreleased-model-exclusive-event-security-issues-cybersecurity-unsecured-data-store/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic "Mythos" Model Leaked via Security Lapse</div>
+              <div class="item-summary">Unsecured data store revealed next model codename plus CEO event details. Security incident at critical AI company.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Google TurboQuant: 6x Memory Reduction with Zero Accuracy Loss</div>
+              <div class="item-summary">New compression algorithm shrinks LLM data storage by 6x without accuracy degradation. Major efficiency breakthrough.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Google AI Search Accused of Disclosing Epstein Survivors' Info</div>
+              <div class="item-summary">Class action lawsuit. Plaintiff says Google failed to remove or block sensitive materials. Trump administration also named.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theinformation.com/newsletters/ai-agenda/apple-can-distill-googles-big-gemini-model">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Has "Complete Access" to Gemini for Model Distillation</div>
+              <div class="item-summary">Apple can use Gemini to train smaller "student" AI models for on-device use. Less computing power than training from scratch.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="ai" data-date="2026-03-31" data-time="04:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Apple AI App Store, Mythos Leaked, TurboQuant 6x, Siri Extensions, Anthropic Court Win</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/30/copilot-cowork-now-available-in-frontier/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Microsoft Copilot Cowork + Claude Integration</div>
+              <div class="item-summary">Frontier Program: Claude for multi-step tasks, Researcher agent for info gathering, Critique feature (GPT drafts, Claude edits). GPT+Claude collaboration workflow.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Siri Extensions Could Create AI App Store</div>
+              <div class="item-summary">iOS 27 will let users install third-party AI chatbots inside Siri with dedicated App Store section. Opening Siri to third-party AI beyond ChatGPT.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://fortune.com/2026/03/26/anthropic-leaked-unreleased-model-exclusive-event-security-issues-cybersecurity-unsecured-data-store/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic "Mythos" Model Leaked via Security Lapse</div>
+              <div class="item-summary">Unsecured data store revealed next model codename plus CEO event details. Security incident at critical AI company.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/openai-to-acquire-astral/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI Acquires Astral (Python Tools uv, Ruff, ty)</div>
+              <div class="item-summary">Makers of core Python dev tools to integrate with Codex. Codex has 2M+ weekly active users, 3x growth this year.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Google TurboQuant: 6x Memory Reduction with Zero Accuracy Loss</div>
+              <div class="item-summary">New compression algorithm shrinks LLM data storage by 6x without accuracy degradation. Major efficiency breakthrough.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://mistral.ai/news/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Mistral Voxtral TTS - Open-Weights Voice Model</div>
+              <div class="item-summary">Frontier text-to-speech, fast and instantly adaptable. 68.4% win rate vs ElevenLabs in blind tests.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://deepmind.google/blog/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Gemini 3.1 Flash Live - Natural Audio AI</div>
+              <div class="item-summary">Making audio AI more natural and reliable. Part of Gemini 3.1 family with Pro, Flash-Lite, Deep Think.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/891377/anthropic-dod-lawsuit">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Judge Lin Rules for Anthropic: "Illegal First Amendment Retaliation"</div>
+              <div class="item-summary">Court rules military supply-chain designation is unconstitutional. Major victory against Trump administration.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Has "Complete Access" to Gemini for Distillation</div>
+              <div class="item-summary">Apple can use Gemini in data centers to train smaller "student" AI models for on-device use via distillation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">GPT-5.4 mini and nano Released</div>
+              <div class="item-summary">mini: 2x faster, approaches full model on SWE-Bench ($0.75/1M). nano: cheapest for classification ($0.20/1M).</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 02:01 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-31" data-time="02:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Copilot Cowork + Claude, Researcher Agent, Critique Feature</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">02:01</span>
+              <span class="card-badge">1 item</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.microsoft.com/en-us/microsoft-365/blog/2026/03/30/copilot-cowork-now-available-in-frontier/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Microsoft Copilot Cowork Launches with Claude Integration</div>
+              <div class="item-summary">Frontier Program release. Claude for multi-step tasks, Researcher agent for info gathering, Critique feature (GPT drafts, Claude edits). GPT+Claude collaboration workflow.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 04:01 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-30" data-time="04:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">GPT-5.4 mini/nano, OpenAI-Astral, Mythos Leaked, TurboQuant 6x, Claude Opus 4.6</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://openai.com/index/openai-to-acquire-astral/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI Acquires Astral (Python Tools uv, Ruff, ty)</div>
+              <div class="item-summary">OpenAI acquires makers of core Python dev tools to integrate with Codex. Codex has 2M+ weekly active users, 3x growth this year.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/introducing-gpt-5-4-mini-and-nano/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">GPT-5.4 mini and nano Released</div>
+              <div class="item-summary">Smaller efficient GPT-5.4 variants. mini: 2x faster, approaches full model on SWE-Bench. nano: cheapest for classification/extraction. mini $0.75/1M input, nano $0.20/1M.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://fortune.com/2026/03/26/anthropic-leaked-unreleased-model-exclusive-event-security-issues-cybersecurity-unsecured-data-store/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic Security Lapse Leaks "Mythos" Model</div>
+              <div class="item-summary">Unsecured data store revealed next Anthropic model codename "Mythos" plus CEO event details. Security incident at critical AI company.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.anthropic.com/news">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Claude Opus 4.6 - Industry-Leading Smartest Model</div>
+              <div class="item-summary">Anthropic upgrades their smartest model across agentic coding, computer use, tool use, search, and finance—often leading by wide margins.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">
+              <span class="item-tag research">Research</span>
+              <div class="item-title">Google TurboQuant: 6x Memory Reduction</div>
+              <div class="item-summary">New compression algorithm shrinks LLM data storage by 6x with zero accuracy loss. Major efficiency breakthrough for AI deployment.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Has "Complete Access" to Gemini for Distillation</div>
+              <div class="item-summary">Apple can use Gemini in data centers to train smaller "student" AI models via distillation for on-device use with less compute.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI in Talks to Buy Fusion Energy from Helion</div>
+              <div class="item-summary">Sam Altman steps down from Helion board as OpenAI enters advanced talks to purchase electricity from nuclear fusion startup.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://mistral.ai/news/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Mistral Voxtral TTS - Open-Weights Voice Model</div>
+              <div class="item-summary">Frontier text-to-speech that's fast, instantly adaptable, produces lifelike speech. 68.4% win rate vs ElevenLabs in blind tests.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/891377/anthropic-dod-lawsuit">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Judge Lin Rules for Anthropic: "Illegal First Amendment Retaliation"</div>
+              <div class="item-summary">Court rules punishing Anthropic with military supply-chain designation is unconstitutional. Major victory against Trump admin.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Intel Arc Pro B70 - AI GPU at $949</div>
+              <div class="item-summary">"Big Battlemage" with 32GB VRAM, 32 Xe2 cores targets AI workloads. Partner cards vary in price.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- AI News 02:01 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="ai" data-date="2026-03-30" data-time="02:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon ai">🤖</div>
+              <div>
+                <div class="card-title">AI News Daily</div>
+                <div class="card-meta">Anthropic Court Win, Mythos Leaked, TurboQuant 6x Memory, Apple-Gemini Distillation, OpenAI Fusion Talks</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">02:01</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Judge Lin Rules for Anthropic: "Illegal First Amendment Retaliation"</div>
+              <div class="item-summary">Court rules punishing Anthropic with military supply-chain designation is unconstitutional. Major victory for AI company against Trump administration.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://fortune.com/2026/03/26/anthropic-leaked-unreleased-model-exclusive-event-security-issues-cybersecurity-unsecured-data-store/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">Anthropic Security Lapse Leaks Next Model "Mythos"</div>
+              <div class="item-summary">Unsecured data store revealed upcoming model codename plus CEO event details. Security incident at critical AI company.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Google TurboQuant: 6x Memory Reduction with Zero Accuracy Loss</div>
+              <div class="item-summary">New compression algorithm shrinks LLM data storage by at least 6x without accuracy degradation. Major efficiency breakthrough.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Apple Has "Complete Access" to Gemini for Model Distillation</div>
+              <div class="item-summary">Apple can use Gemini in data centers to train smaller "student" AI models for on-device use via distillation. Requires less computing power.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI in Advanced Talks to Buy Fusion Energy from Helion</div>
+              <div class="item-summary">Sam Altman steps down from Helion board as OpenAI explores buying nuclear fusion power. Fusion remains scientifically unproven at scale.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://mistral.ai/news">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Mistral Voxtral TTS - Open-Weights Voice Model</div>
+              <div class="item-summary">Frontier text-to-speech model, 68.4% win rate vs ElevenLabs. Fast, instantly adaptable, produces lifelike speech.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Intel Arc Pro B70 - AI GPU at $949</div>
+              <div class="item-summary">Intel's "Big Battlemage" with 32GB VRAM, 32 Xe2 cores targets AI workloads. Partner cards vary in price.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://openai.com/index/openai-to-acquire-astral/">
+              <span class="item-tag breaking">Breaking</span>
+              <div class="item-title">OpenAI Acquires Astral (Python Tools uv, Ruff, ty)</div>
+              <div class="item-summary">Makers of core Python developer tools to integrate with Codex for AI-powered development. Codex has 2M+ weekly active users.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.rollingstone.com/music/music-features/ai-in-music-how-used-now-1235536484/">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">Music Industry's "Don't Ask Don't Tell" AI Policy Exposed</div>
+              <div class="item-summary">>50% of sample-based hip-hop uses AI-generated samples. Producer Young Guru: "More than half" made this way. Nobody admits AI use.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">Google AI Search Sued for Disclosing Epstein Survivors' Data</div>
+              <div class="item-summary">Class action claims AI search tool exposes survivors' personal info. Google "refuses to remove, de-index, or block access."</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -3213,6 +3797,56 @@
           </div>
         </article>
 
+        <!-- Industry 06:01 - Fintech & Crypto (Monday) -->
+        <article class="card expanded" data-type="industry" data-date="2026-03-30" data-time="06:01">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">💰</div>
+              <div>
+                <div class="card-title">Fintech & Crypto</div>
+                <div class="card-meta">Stablecoin Cards 40x SE Asia, CLARITY Act DeFi Impact, Google 2029 Quantum, Strategy BTC Pause</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:01</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.coindesk.com/business/2026/03/29/stablecoin-payments-go-invisible-in-southeast-asia-as-crypto-card-business-surges">
+              <span class="item-tag product">Growth</span>
+              <div class="item-title">Stablecoin Cards Surge 40x in Southeast Asia</div>
+              <div class="item-summary">StraitsX reports 40x transaction volume, 83x card issuance growth (2024-2025). Stablecoin payments going "invisible" in everyday commerce.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/markets/2026/03/29/crypto-s-clarity-act-could-be-a-headwind-for-defi-tokens-ring-fencing-yield-analyst-says">
+              <span class="item-tag policy">Regulation</span>
+              <div class="item-title">CLARITY Act Could Restrict Stablecoin Yields</div>
+              <div class="item-summary">Proposed legislation would ring-fence yield, shifting value to regulated players. Major headwinds for DeFi token economics.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/tech/2026/03/28/watch-out-bitcoin-devs-google-says-post-quantum-migration-needs-to-happen-by-2029">
+              <span class="item-tag research">Quantum</span>
+              <div class="item-title">Google Sets 2029 Post-Quantum Migration Deadline</div>
+              <div class="item-summary">All auth services must migrate to quantum-resistant crypto by 2029. Ethereum ready; Bitcoin response so far: silence.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/markets/2026/03/29/strategy-may-have-paused-bitcoin-accumulation-last-week-ending-a-thirteen-week-buying-streak">
+              <span class="item-tag ma">Strategy</span>
+              <div class="item-title">Strategy (MicroStrategy) Pauses 13-Week BTC Buying Streak</div>
+              <div class="item-summary">Largest corporate BTC holder skipped weekly purchase for first time since December. Potential treasury strategy shift.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.coindesk.com/policy/2026/03/28/washington-sues-kalshi-as-states-ramp-up-legal-pressure-against-prediction-markets">
+              <span class="item-tag policy">Legal</span>
+              <div class="item-title">Washington State Sues Kalshi Prediction Markets</div>
+              <div class="item-summary">AG alleges "gambling products dressed up as prediction markets." State-level pressure mounts despite federal progress.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
         <!-- Industry 06:01 - Education & EdTech (Sunday) -->
         <article class="card expanded" data-type="industry" data-date="2026-03-29" data-time="06:01">
           <div class="card-header" onclick="toggle(this)">
@@ -3696,6 +4330,244 @@
               <span class="item-tag policy">China</span>
               <div class="item-title">China Mourns Death of Controversial Education Influencer</div>
               <div class="item-summary">41-year-old divisive figure was among most prominent edtech voices. Highlights influencer power in Chinese education.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global 16:00 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="global" data-date="2026-03-31" data-time="16:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global Macro</div>
+                <div class="card-meta">Netanyahu Beyond Halfway, Kuwaiti Tanker Dubai, Russian Oil Fires, RBA Reforms, Artemis II Countdown</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.bbc.com/news/live/c8jke9v9xv9t">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Netanyahu: Military Aims "Beyond Halfway"; Kuwaiti Tanker Attacked</div>
+              <div class="item-summary">Israel PM says Iran objectives over 50% complete. Kuwaiti oil tanker attacked in Dubai. Israeli refinery set on fire by missile debris. Energy infrastructure attacks driving fuel prices higher.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/c9qdwpnwzwpo">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">Huge Fires at Russian Oil Facilities After Ukraine Strikes</div>
+              <div class="item-summary">Satellite images show damage to three key Russian oil export facilities near Baltic Sea. Zelensky says allies asked to scale back attacks as energy prices soar.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-31/rba-surcharges-debit-credit-new-reforms-october-2026/106500064">
+              <span class="item-tag policy">Australia</span>
+              <div class="item-title">RBA Announces Debit/Credit Surcharge Reforms for October 2026</div>
+              <div class="item-summary">Reserve Bank unveils payment reforms to reduce card surcharges. Fintech/payment processors affected. eSafety also demands better under-16s enforcement.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-31/nasa-begins-countdown-for-artemis-2-moon-mission/106515256">
+              <span class="item-tag policy">Space</span>
+              <div class="item-title">NASA Begins Countdown for Artemis II Moon Mission</div>
+              <div class="item-summary">First crewed lunar mission since Apollo 17. Four astronauts to orbit the Moon. Space tech sector boost expected. Computing and materials science typically benefit from NASA spinoffs.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/cy4181pkxl2o">
+              <span class="item-tag policy">Australia</span>
+              <div class="item-title">eSafety: Social Media Firms Must Better Enforce Under-16s Ban</div>
+              <div class="item-summary">Watchdog says Facebook, Instagram, Snapchat, TikTok, YouTube compliance concerns. Platforms face regulatory pressure on age verification.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global 08:00 - 2026-03-31 (Tuesday) -->
+        <article class="card expanded" data-type="global" data-date="2026-03-31" data-time="08:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global News</div>
+                <div class="card-meta">Iran War Escalation, Spain Closes Airspace, Myanmar Junta President, Israel Death Penalty, AU Fuel Excise Cut, Social Media Under-16s</div>
+              <span class="card-time">08:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.bbc.com/news/live/cn8dldl0jx9t">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Trump Threatens to "Obliterate" Kharg Island</div>
+              <div class="item-summary">US-Iran war month 2. Spain closes airspace to US war aircraft. Australia cuts fuel excise. soaring petrol prices. First NATO split over the conflict.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/c9wqrdkx8j1e3qo">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">Spain Closes Airspace to US Iran War Aircraft</div>
+              <div class="item-summary">First major NATO split over the war. Denmark denies US use of bases in Andalusia. May impact US defense coordination.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/clyew40w249o">
+              <span class="item-tag policy">Asia</span>
+              <div class="item-title">Myanmar Junta Chief Nominated as President</div>
+              <div class="item-summary">Military leader sanctioned by Western countries becomes president. Signals shifting global alliances affecting sanctions compliance.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/c937gd1vq7xo">
+              <span class="item-tag policy">Israel</span>
+              <div class="item-title">Israel Passes Death Penalty for "Nationalist Killings"</div>
+              <div class="item-summary">Knesset passes law making death penalty the "default sentence" for Palestinians. ESG pressure on Israeli tech sector. Human rights concerns may affect international partnerships.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-31/five-social-media-platforms-under-investigation-under-16s-ban/106513690">
+              <span class="item-tag policy">Australia</span>
+              <div class="item-title">Five Social Media Platforms Under Investigation over Under-16s Ban</div>
+              <div class="item-summary">Major platforms under scrutiny for potential violations of Australia's social media ban for users under 16. Age verification tech companies may see opportunity.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global Macro</div>
+                <div class="card-meta">Trump Obliterate Threat, Spain Closes Airspace, Russian Oil Cuba, Myanmar Junta President, Tech CEOs AI Cuts</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">00:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.bbc.com/news/live/c8jke9v9xv9t">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Trump Threatens to "Obliterate" Iran Energy Facilities</div>
+              <div class="item-summary">Escalation from Kharg Island threat to full energy infrastructure destruction. Israeli refinery set on fire by intercepted missile debris. War intensifying.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/cwy368j1e3lo">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">Spain Closes Airspace to US Iran War Aircraft</div>
+              <div class="item-summary">Major NATO ally denies US use of joint military bases in Andalusia. Transatlantic alliance fracturing over Iran war.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/czrevyx28z2o">
+              <span class="item-tag policy">Americas</span>
+              <div class="item-title">Russian Oil Tanker Reaches Cuba After Trump Loosens Blockade</div>
+              <div class="item-summary">Tanker arrives hours after Trump says "no problem" with it. US-Cuba tensions easing as Russia gains foothold.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/clyew40w249o">
+              <span class="item-tag breaking">Asia</span>
+              <div class="item-title">Myanmar Junta Chief Nominated as President</div>
+              <div class="item-summary">Military leader Min Aung Hlaing (sanctioned by West) now certain to become president. Southeast Asian political crisis deepens.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-30/ai-jobs-cuts-companies-losses-agents-replacement-humans/106491600">
+              <span class="item-tag policy">Tech</span>
+              <div class="item-title">CEOs Blaming AI for Mass Job Cuts</div>
+              <div class="item-summary">Tech leaders using AI as cover for broader restructuring. Australian cost-of-living fueling flexible work demands.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global 16:00 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="global" data-date="2026-03-30" data-time="16:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global Macro</div>
+                <div class="card-meta">Trump Kharg Island Threat, Australia Fuel Tax Cut, US Shutdown 45 Days, Nepal PM Arrested</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:00</span>
+              <span class="card-badge">4 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.bbc.com/news/live/c8jke9v9xv9t">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Trump Considers Seizing Iran's Kharg Island</div>
+              <div class="item-summary">US president says deal could be made "very quickly" but also considering seizing Kharg Island—Iran's main oil export terminal (90% of exports). Ground operations being readied.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-30/fuel-excise-halved-three-months-petrol-diesel/106510432">
+              <span class="item-tag policy">Australia</span>
+              <div class="item-title">Australia Cuts Fuel Excise by 50% for Three Months</div>
+              <div class="item-summary">Federal government halves petrol/diesel tax to ease prices. Victoria/Tasmania already offering free public transport. War-driven inflation relief measure.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/cyv1qpzq5v7o">
+              <span class="item-tag policy">US</span>
+              <div class="item-title">US Shutdown Hits 45 Days; Trump OK with Russian Oil at Cuba</div>
+              <div class="item-summary">Longest shutdown continues. Trump says "no problem" with Russian tanker stationed at Cuba. Federal tech contracts still frozen.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-30/nepal-former-prime-minister-khadga-prasad-oli-arrested/106509788">
+              <span class="item-tag breaking">South Asia</span>
+              <div class="item-title">Nepal Former PM Khadga Prasad Oli Arrested</div>
+              <div class="item-summary">Political crisis in South Asian democracy. Instability affecting IT outsourcing operations in region.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- Global 08:00 - 2026-03-30 (Monday) -->
+        <article class="card expanded" data-type="global" data-date="2026-03-30" data-time="08:00">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global Macro</div>
+                <div class="card-meta">Israel-Iran Escalation, Hormuz Closed, US Shutdown 44 Days, AU Free Transit, Paris Bomb Attempt</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:00</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://www.bbc.com/news/live/cje4x38q8xqt">
+              <span class="item-tag breaking">Middle East</span>
+              <div class="item-title">Israel-Iran War: Strikes on Tehran, Gulf Industrial Sites Hit</div>
+              <div class="item-summary">Israel striking targets across Tehran. Iran hitting aluminum sites in UAE/Bahrain. Strait of Hormuz effectively closed—20% of global oil supply at risk.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/c937n0yxggeo">
+              <span class="item-tag policy">Australia</span>
+              <div class="item-title">Victoria, Tasmania Offer Free Public Transport as Fuel Spikes</div>
+              <div class="item-summary">Iran war pushing petrol prices up. States incentivize commuters to avoid driving. Remote work demand may surge.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/cyv1qpzq5v7o">
+              <span class="item-tag policy">US</span>
+              <div class="item-title">US Government Shutdown Becomes Longest Ever at 44 Days</div>
+              <div class="item-summary">DHS funding lapse causes airport travel chaos. Federal tech contracts frozen. Visa processing backlogs growing.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.bbc.com/news/articles/cd9v234j2v7o">
+              <span class="item-tag breaking">Europe</span>
+              <div class="item-title">Paris Bank of America Bomb Attempt; Three Arrested</div>
+              <div class="item-summary">Anti-terror prosecutor takes over investigation. Financial sector security concerns rising amid Middle East tensions.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://www.abc.net.au/news/2026-03-29/australians-may-be-losing-faith-in-us-alliance-hastie-says/106508216">
+              <span class="item-tag policy">Pacific</span>
+              <div class="item-title">Australians May Be Losing Faith in US Alliance, Hastie Warns</div>
+              <div class="item-summary">Defence minister raises concerns about alliance amid Trump's Iran war. Australia still supports NASA Artemis moon mission.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
