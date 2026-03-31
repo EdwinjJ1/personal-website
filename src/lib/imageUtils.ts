@@ -1,80 +1,61 @@
 /**
- * Image utility functions for Cloudflare R2 CDN
+ * Image utility functions for photography images.
  *
- * This module provides URL construction functions for photography images
- * served from Cloudflare R2 with custom domain (e.g., images.evanlin.site).
+ * Thumbnails: WebP ~600px wide (~30-80KB) — used on homepage, grid views
+ * Lightbox: Full-size originals — used for full-screen viewing
  *
- * Setup:
- * 1. Create Cloudflare R2 bucket and upload photos to /photography/ folder
- * 2. Configure custom domain (optional) or use R2 public URL
- * 3. Set NEXT_PUBLIC_CDN_URL in .env.local
+ * CDN: If NEXT_PUBLIC_CDN_URL is set, URLs point to Cloudflare R2.
+ * Fallback: Local /images/photography/{thumbs/,}{filename}
  */
 
 const CDN_BASE_URL = process.env.NEXT_PUBLIC_CDN_URL || '';
 
 /**
- * Extract filename from image path
- * @example extractFilename('/images/photography/P1032761.JPG') => 'P1032761.JPG'
+ * Extract filename (without extension) and extension from image path.
+ * Handles both forward-slash and backslash paths.
  */
-function extractFilename(imagePath: string): string {
+function parseImagePath(imagePath: string): { name: string; ext: string } {
   const parts = imagePath.split('/');
-  return parts[parts.length - 1] || '';
+  const filename = parts[parts.length - 1] || '';
+  const dotIndex = filename.lastIndexOf('.');
+  if (dotIndex === -1) return { name: filename, ext: '' };
+  return { name: filename.slice(0, dotIndex), ext: filename.slice(dotIndex) };
 }
 
 /**
- * Get CDN URL for thumbnail images (grid view)
- * Currently returns full-size image - consider implementing R2 image transformations
- * for optimized thumbnails in the future.
- *
- * @param imagePath - Original image path from Photo data (e.g., '/images/photography/P1032761.JPG')
- * @returns Full CDN URL for the image
- *
- * @example
- * getThumbnailUrl('/images/photography/P1032761.JPG')
- * // => 'https://images.evanlin.site/photography/P1032761.JPG'
+ * Get URL for thumbnail images (WebP, ~600px wide).
+ * Used for: homepage card, photography grid, flowing menu.
  */
 export function getThumbnailUrl(imagePath: string): string {
+  const { name } = parseImagePath(imagePath);
   if (!CDN_BASE_URL) {
-    // Fallback to local path if CDN not configured
-    return imagePath;
+    return `/images/photography/thumbs/${name}.webp`;
   }
-  const filename = extractFilename(imagePath);
-  return `${CDN_BASE_URL}/photography/${filename}`;
+  return `${CDN_BASE_URL}/photography/thumbs/${name}.webp`;
 }
 
 /**
- * Get CDN URL for lightbox images (full-screen view)
- * Uses full-size images for maximum quality
- *
- * @param imagePath - Original image path from Photo data
- * @returns Full CDN URL for the image
+ * Get URL for lightbox images (full-size original).
+ * Used for: full-screen lightbox view in photography page.
  */
 export function getLightboxUrl(imagePath: string): string {
+  const { name, ext } = parseImagePath(imagePath);
   if (!CDN_BASE_URL) {
-    return imagePath;
+    return `/images/photography/${name}${ext}`;
   }
-  const filename = extractFilename(imagePath);
-  return `${CDN_BASE_URL}/photography/${filename}`;
+  return `${CDN_BASE_URL}/photography/${name}${ext}`;
 }
 
 /**
- * Get CDN URL for original quality images
- * For future use: download link, sharing, or image editing features
- *
- * @param imagePath - Original image path from Photo data
- * @returns Full CDN URL for the image
+ * Get URL for original quality images.
+ * Same as lightbox — kept as separate export for semantic clarity.
  */
 export function getOriginalUrl(imagePath: string): string {
-  if (!CDN_BASE_URL) {
-    return imagePath;
-  }
-  const filename = extractFilename(imagePath);
-  return `${CDN_BASE_URL}/photography/${filename}`;
+  return getLightboxUrl(imagePath);
 }
 
 /**
- * Check if CDN is properly configured
- * Useful for conditional rendering or fallback logic
+ * Check if CDN is properly configured.
  */
 export function isCdnConfigured(): boolean {
   return CDN_BASE_URL.length > 0;
