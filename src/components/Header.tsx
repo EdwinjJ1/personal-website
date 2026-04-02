@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import ScatterText from '@/components/ScatterText';
 
 const NAV_ITEMS = [
   { label: 'News',     href: '/news' },
@@ -187,9 +188,11 @@ export default function Header() {
     >
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <motion.h1 className="text-xl font-bold" style={{ color: '#e0d8cc' }} whileHover={{ scale: 1.05 }}>
-          <Link href="/" style={{ color: '#e0d8cc', textDecoration: 'none' }}>Evan Lin</Link>
-        </motion.h1>
+        <h1 className="text-xl font-bold" style={{ color: '#e0d8cc' }}>
+          <Link href="/" style={{ color: '#e0d8cc', textDecoration: 'none' }}>
+            <ScatterText scatterRadius={30} staggerDelay={0.015}>Evan Lin</ScatterText>
+          </Link>
+        </h1>
 
         {/* Desktop pill nav */}
         <nav className="hidden md:block">

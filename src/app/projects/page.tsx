@@ -8,6 +8,7 @@ import ProjectCategoryFilter from '@/components/projects/ProjectCategoryFilter';
 import ProjectHighlightCard from '@/components/projects/ProjectHighlightCard';
 import ProjectListItem from '@/components/projects/ProjectListItem';
 import GradientText from '@/components/GradientText';
+import ScatterText from '@/components/ScatterText';
 
 const container = {
   hidden: { opacity: 0 },
@@ -42,13 +43,15 @@ export default function ProjectsPage() {
           <motion.div variants={container} initial="hidden" animate="visible" className="max-w-7xl mx-auto">
             <motion.div variants={item} className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6">
-                <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                  animationSpeed={6}
-                  showBorder={false}
-                >
-                  Projects
-                </GradientText>
+                <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent">
+                  <GradientText
+                    colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                    animationSpeed={6}
+                    showBorder={false}
+                  >
+                    Projects
+                  </GradientText>
+                </ScatterText>
               </h1>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: '#b8b4aa' }}>
                 A collection of the products, experiments, and platforms I am building — from AI automation to production-ready
@@ -65,7 +68,9 @@ export default function ProjectsPage() {
             </motion.div>
 
             <motion.section variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>Featured builds</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>Featured builds</ScatterText>
+              </h2>
               <div className="grid gap-8 lg:grid-cols-2">
                 {(featured.length > 0 ? featured : filteredProjects.slice(0, 2)).map((project) => (
                   <ProjectHighlightCard key={project.id} project={project} />
@@ -75,7 +80,9 @@ export default function ProjectsPage() {
 
             <motion.section variants={item}>
               <div className="flex items-center justify-between gap-4 mb-6">
-                <h3 className="text-2xl font-semibold" style={{ color: '#e0d8cc' }}>Project log</h3>
+                <h3 className="text-2xl font-semibold" style={{ color: '#e0d8cc' }}>
+                  <ScatterText as="span" scatterRadius={35} rotationRange={10}>Project log</ScatterText>
+                </h3>
                 <p className="text-sm" style={{ color: '#8a8680' }}>
                   Showing {filteredProjects.length} project{filteredProjects.length === 1 ? '' : 's'} in total
                 </p>

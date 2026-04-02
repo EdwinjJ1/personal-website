@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import type { Project, ProjectStatus } from '@/data/projects';
+import ScatterText from '@/components/ScatterText';
 import ProjectIcon from './ProjectIcon';
 
 const getStatusStyle = (status: ProjectStatus) => {
@@ -56,7 +57,9 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
         </span>
       </div>
 
-      <h3 className="mt-3 text-xl font-semibold" style={{ color: '#e0d8cc' }}>{project.title}</h3>
+      <h3 className="mt-3 text-xl font-semibold" style={{ color: '#e0d8cc' }}>
+        <ScatterText scatterRadius={30} rotationRange={10}>{project.title}</ScatterText>
+      </h3>
       <p className="mt-2 text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{project.description}</p>
 
       <div className="mt-4 flex flex-wrap gap-2 text-xs" style={{ color: '#b8b4aa' }}>

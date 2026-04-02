@@ -2,6 +2,7 @@
 
 import BaseCard from './BaseCard';
 import Link from 'next/link';
+import ScatterText from '@/components/ScatterText';
 import ProjectIcon from '@/components/projects/ProjectIcon';
 
 interface Project {
@@ -43,7 +44,7 @@ export default function ProjectCard({ project, delay = 0 }: ProjectCardProps) {
         </div>
 
         <h3 className="text-gray-50 font-semibold mb-2 text-sm leading-tight">
-          {project.title}
+          <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01}>{project.title}</ScatterText>
         </h3>
 
         <p className="text-gray-400 text-xs mb-3 flex-grow leading-relaxed">

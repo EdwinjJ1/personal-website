@@ -2,7 +2,7 @@
 
 import BaseCard from './BaseCard';
 import Avatar from '../Avatar';
-import FuzzyText from '../FuzzyText';
+import ScatterText from '@/components/ScatterText';
 
 export default function PersonalCard() {
   return (
@@ -12,18 +12,17 @@ export default function PersonalCard() {
           <Avatar size="sm" />
           <div>
             <h1 className="text-2xl font-bold">
-              <FuzzyText
-                baseIntensity={0.08}
-                hoverIntensity={0.25}
-                enableHover={true}
+              <ScatterText
+                scatterRadius={40}
+                rotationRange={20}
+                staggerDelay={0.02}
                 color='#7a9088'
-                fontSize="1.5rem"
               >
                 Evan Lin
-              </FuzzyText>
+              </ScatterText>
             </h1>
             <p className="text-sm" style={{ color: '#7a9088' }}>
-              Computer Science Student
+              <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01} color="#7a9088">Computer Science Student</ScatterText>
             </p>
           </div>
         </div>

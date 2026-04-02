@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
+import ScatterText from '@/components/ScatterText';
 import ClientOnlyParticles from '@/components/ClientOnlyParticles';
 import newsData from '@/data/news-data.json';
 
@@ -153,7 +154,7 @@ export default function NewsPage() {
             <div className="flex items-start justify-between mb-4">
               <div>
                 <h1 className="text-3xl font-bold mb-2" style={{ color: '#e0d8cc' }}>
-                  News Hub
+                  <ScatterText as="span" scatterRadius={45} rotationRange={12}>News Hub</ScatterText>
                 </h1>
                 <p className="text-sm" style={{ color: '#8a8680' }}>
                   AI industry news, research papers, and global updates
@@ -452,7 +453,9 @@ export default function NewsPage() {
                     </div>
                     <span className="text-xs" style={{ color: '#8a8680' }}>{item.time}</span>
                   </div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#e0d8cc' }}>{item.title}</h3>
+                  <h3 className="font-semibold mb-2" style={{ color: '#e0d8cc' }}>
+                    <ScatterText as="span" scatterRadius={25} rotationRange={8} staggerDelay={0.01}>{item.title}</ScatterText>
+                  </h3>
                   <p className="text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{item.summary}</p>
                   <div className="mt-3 pt-3 border-t flex items-center justify-between" style={{ borderColor: 'rgba(114, 110, 102, 0.2)' }}>
                     <span className="text-xs" style={{ color: '#8a8680' }}>{item.source}</span>

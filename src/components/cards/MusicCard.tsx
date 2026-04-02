@@ -2,6 +2,7 @@
 
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
+import ScatterText from '@/components/ScatterText';
 import { useState, useEffect } from 'react';
 
 interface Track {
@@ -47,7 +48,9 @@ export default function MusicCard() {
             </svg>
           </motion.div>
           <div>
-            <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>Now Playing</h3>
+            <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>
+              <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.015}>Now Playing</ScatterText>
+            </h3>
             <div className="flex items-center gap-2">
               <motion.div
                 animate={{ opacity: [1, 0.5, 1] }}
@@ -70,7 +73,7 @@ export default function MusicCard() {
               </div>
               <div className="flex-grow min-w-0">
                 <h4 className="font-medium text-sm truncate" style={{ color: '#e0d8cc' }}>
-                  {currentTrack.title}
+                  <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01}>{currentTrack.title}</ScatterText>
                 </h4>
                 <p className="text-xs truncate" style={{ color: '#b8b4aa' }}>
                   by {currentTrack.artist}

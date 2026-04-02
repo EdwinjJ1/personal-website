@@ -4,6 +4,7 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
+import ScatterText from '@/components/ScatterText';
 import { photos, categories } from '@/data/photography';
 import { getThumbnailUrl, getLightboxUrl } from '@/lib/imageUtils';
 
@@ -106,8 +107,10 @@ export default function PhotographyPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h1 className="text-5xl font-bold mb-4" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
-              Photography Portfolio
+            <h1 className="text-5xl font-bold mb-4">
+              <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                Photography Portfolio
+              </ScatterText>
             </h1>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
               Capturing moments when I trade the keyboard for a camera.
@@ -303,7 +306,7 @@ export default function PhotographyPage() {
             className="mt-16 scroll-mt-24"
           >
             <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: '#e0d8cc' }}>
-              📷 My Gear
+              <ScatterText as="span" scatterRadius={35} rotationRange={10}>📷 My Gear</ScatterText>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Camera Bodies */}
@@ -484,7 +487,9 @@ export default function PhotographyPage() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-16 text-center"
           >
-            <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>Interested in a photoshoot?</h2>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>
+              <ScatterText as="span" scatterRadius={35} rotationRange={10}>Interested in a photoshoot?</ScatterText>
+            </h2>
             <p className="mb-6" style={{ color: '#b8b4aa' }}>
               Available for portrait sessions, event photography, and creative collaborations in Sydney.
             </p>

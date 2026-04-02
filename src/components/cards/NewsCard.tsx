@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import BaseCard from './BaseCard';
+import ScatterText from '@/components/ScatterText';
 import newsData from '@/data/news-data.json';
 
 interface NewsCardProps {
@@ -42,7 +43,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/>
               </svg>
-              News Hub
+              <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>News Hub</ScatterText>
             </h3>
             <div className="flex items-center gap-2 mt-1">
               <p className="text-sm" style={{ color: '#b8b4aa' }}>
@@ -84,7 +85,9 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
               >
                 {item.tag}
               </span>
-              <span className="text-sm truncate" style={{ color: '#e0d8cc' }}>{item.title}</span>
+              <span className="text-sm truncate" style={{ color: '#e0d8cc' }}>
+                <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01}>{item.title}</ScatterText>
+              </span>
             </div>
           ))}
           {quickHighlights.length === 0 && (

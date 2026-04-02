@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
+import ScatterText from '@/components/ScatterText';
 import { getEnglishPosts } from '@/data/blogPosts';
 
 // Get only English posts for display
@@ -37,13 +38,15 @@ export default function BlogPage() {
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6">
-                <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                  animationSpeed={6}
-                  showBorder={false}
-                >
-                  Blog
-                </GradientText>
+                <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent">
+                  <GradientText
+                    colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                    animationSpeed={6}
+                    showBorder={false}
+                  >
+                    Blog
+                  </GradientText>
+                </ScatterText>
               </h1>
               <p className="text-xl max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
                 Thoughts on technology, entrepreneurship, and personal growth.
@@ -53,7 +56,9 @@ export default function BlogPage() {
 
             {/* Featured Posts */}
             <motion.div variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>Featured Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>Featured Posts</ScatterText>
+              </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {posts.filter(post => post.featured).map((post) => (
                   <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -76,7 +81,7 @@ export default function BlogPage() {
                         </div>
 
                         <h3 className="text-2xl font-bold mb-4 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                          {post.title}
+                          <ScatterText as="span" scatterRadius={30} rotationRange={10}>{post.title}</ScatterText>
                         </h3>
 
                         <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
@@ -102,7 +107,9 @@ export default function BlogPage() {
 
             {/* All Posts */}
             <motion.div variants={item}>
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>All Posts</h2>
+              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>All Posts</ScatterText>
+              </h2>
               <div className="space-y-6">
                 {posts.map((post) => (
                   <Link key={post.id} href={`/blog/${post.slug}`}>
@@ -126,7 +133,7 @@ export default function BlogPage() {
                           </div>
 
                           <h3 className="text-xl font-bold mb-2 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                            {post.title}
+                            <ScatterText as="span" scatterRadius={25} rotationRange={8}>{post.title}</ScatterText>
                           </h3>
 
                           <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
@@ -159,7 +166,9 @@ export default function BlogPage() {
             <motion.div variants={item} className="mt-20">
               <div className="rounded-2xl p-8 border" style={{ background: 'linear-gradient(to right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
                 <div className="text-center">
-                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>Stay Updated</h3>
+                  <h3 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>
+                    <ScatterText as="span" scatterRadius={35} rotationRange={10}>Stay Updated</ScatterText>
+                  </h3>
                   <p className="mb-6 max-w-md mx-auto" style={{ color: '#b8b4aa' }}>
                     Get notified when I publish new articles about technology, entrepreneurship, and personal insights.
                   </p>
