@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import BaseCard from './BaseCard';
+import ScatterText from '@/components/ScatterText';
 import type { Project, ProjectStatus } from '@/data/projects';
 import ProjectIcon from '@/components/projects/ProjectIcon';
 
@@ -56,7 +57,7 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
             </svg>
-            Technical Projects
+            <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>Technical Projects</ScatterText>
           </h3>
           <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
             A snapshot of the products I am building right now.
@@ -77,7 +78,7 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
               <div className="flex-1">
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-sm font-semibold transition-colors" style={{ color: '#e0d8cc' }}>
-                    {project.title}
+                    <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01}>{project.title}</ScatterText>
                   </p>
                   <span
                     className="whitespace-nowrap rounded-full px-2.5 py-1 text-[10px] uppercase tracking-wide border"

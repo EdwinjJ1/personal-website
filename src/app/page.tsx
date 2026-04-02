@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
+import ScatterText from '@/components/ScatterText';
 import ClientOnlyParticles from '@/components/ClientOnlyParticles';
 
 // Import modular cards
@@ -64,21 +65,21 @@ export default function Home() {
               className="px-6 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
               style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
             >
-              Learn More About Me
+              <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01}>Learn More About Me</ScatterText>
             </Link>
             <Link
               href="/projects"
               className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
               style={{ borderColor: '#7a9088', color: '#7a9088' }}
             >
-              View All Projects
+              <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01} color="#7a9088">View All Projects</ScatterText>
             </Link>
             <Link
               href="/blog"
               className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
               style={{ borderColor: '#8a8680', color: '#b8b4aa' }}
             >
-              Read My Blog
+              <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01} color="#b8b4aa">Read My Blog</ScatterText>
             </Link>
           </motion.div>
         </div>

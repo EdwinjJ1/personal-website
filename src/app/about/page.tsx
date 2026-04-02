@@ -4,6 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
+import ScatterText from '@/components/ScatterText';
 
 const skills = [
   {
@@ -132,13 +133,15 @@ export default function AboutPage() {
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6">
-                <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                  animationSpeed={6}
-                  showBorder={false}
-                >
-                  About Me
-                </GradientText>
+                <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent">
+                  <GradientText
+                    colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                    animationSpeed={6}
+                    showBorder={false}
+                  >
+                    About Me
+                  </GradientText>
+                </ScatterText>
               </h1>
               <p className="text-xl max-w-3xl mx-auto" style={{ color: '#b8b4aa' }}>
                 A passionate Computer Science student, former startup founder, and aspiring technologist
@@ -151,7 +154,9 @@ export default function AboutPage() {
               <div className="grid lg:grid-cols-3 gap-12 items-start">
                 <div className="lg:col-span-2 space-y-6">
                   <div>
-                    <h2 className="text-3xl font-bold mb-6" style={{ color: '#e0d8cc' }}>My Journey</h2>
+                    <h2 className="text-3xl font-bold mb-6" style={{ color: '#e0d8cc' }}>
+                      <ScatterText as="span" scatterRadius={45} rotationRange={12}>My Journey</ScatterText>
+                    </h2>
                     <div className="space-y-4 leading-relaxed" style={{ color: '#b8b4aa' }}>
                       <p>
                         At 19, I&apos;m a Computer Science student at UNSW Sydney with an unconventional background that combines 
@@ -175,7 +180,9 @@ export default function AboutPage() {
 
                 <div className="space-y-6">
                   <div className="rounded-xl p-6 border" style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}>
-                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>Quick Facts</h3>
+                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>
+                      <ScatterText as="span" scatterRadius={30} rotationRange={10} color="#7a9088">Quick Facts</ScatterText>
+                    </h3>
                     <ul className="space-y-3" style={{ color: '#b8b4aa' }}>
                       <li className="flex items-center">
                         <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: '#7a9088' }}></span>
@@ -201,7 +208,9 @@ export default function AboutPage() {
                   </div>
 
                   <div className="rounded-xl p-6 border" style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}>
-                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>Contact</h3>
+                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>
+                      <ScatterText as="span" scatterRadius={30} rotationRange={10} color="#7a9088">Contact</ScatterText>
+                    </h3>
                     <div className="space-y-3">
                       <a href="mailto:jiaedwin0605@gmail.com" className="flex items-center transition-colors" style={{ color: '#b8b4aa' }}>
                         <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -229,7 +238,9 @@ export default function AboutPage() {
 
             {/* Timeline */}
             <motion.div variants={item} className="mb-20">
-              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>My Timeline</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>My Timeline</ScatterText>
+              </h2>
               <div className="relative">
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full" style={{ background: 'linear-gradient(to bottom, #7a9088, #6a8a8e)' }}></div>
                 <div className="space-y-12">
@@ -247,7 +258,9 @@ export default function AboutPage() {
                             </span>
                             <span className="font-bold" style={{ color: '#7a9088' }}>{event.year}</span>
                           </div>
-                          <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>{event.title}</h3>
+                          <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>
+                            <ScatterText as="span" scatterRadius={30} rotationRange={10}>{event.title}</ScatterText>
+                          </h3>
                           <h4 className="font-semibold mb-2" style={{ color: '#7a9088' }}>{event.organization}</h4>
                           <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>📍 {event.location}</p>
                           <p className="mb-4" style={{ color: '#b8b4aa' }}>{event.description}</p>
@@ -273,7 +286,9 @@ export default function AboutPage() {
 
             {/* Skills */}
             <motion.div variants={item} className="mb-20">
-              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>Skills & Technologies</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>Skills &amp; Technologies</ScatterText>
+              </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {skills.map((skillGroup, index) => (
                   <motion.div
@@ -282,7 +297,9 @@ export default function AboutPage() {
                     className="rounded-xl p-6 border transition-all duration-300"
                     style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
                   >
-                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>{skillGroup.category}</h3>
+                    <h3 className="text-xl font-bold mb-4" style={{ color: '#7a9088' }}>
+                      <ScatterText as="span" scatterRadius={25} rotationRange={8} color="#7a9088">{skillGroup.category}</ScatterText>
+                    </h3>
                     <div className="flex flex-wrap gap-2">
                       {skillGroup.items.map((skill) => (
                         <span
@@ -301,7 +318,9 @@ export default function AboutPage() {
 
             {/* Interests */}
             <motion.div variants={item}>
-              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>Interests & Passions</h2>
+              <h2 className="text-3xl font-bold mb-12 text-center" style={{ color: '#e0d8cc' }}>
+                <ScatterText as="span" scatterRadius={45} rotationRange={12}>Interests &amp; Passions</ScatterText>
+              </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {interests.map((interest, index) => (
                   <motion.div
@@ -311,7 +330,9 @@ export default function AboutPage() {
                     style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
                   >
                     <div className="text-4xl mb-4">{interest.icon}</div>
-                    <h3 className="text-lg font-bold mb-3" style={{ color: '#e0d8cc' }}>{interest.title}</h3>
+                    <h3 className="text-lg font-bold mb-3" style={{ color: '#e0d8cc' }}>
+                      <ScatterText as="span" scatterRadius={25} rotationRange={8}>{interest.title}</ScatterText>
+                    </h3>
                     <p className="text-sm" style={{ color: '#b8b4aa' }}>{interest.description}</p>
                   </motion.div>
                 ))}

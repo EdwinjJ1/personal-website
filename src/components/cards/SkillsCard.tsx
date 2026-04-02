@@ -1,6 +1,7 @@
 'use client';
 
 import BaseCard from './BaseCard';
+import ScatterText from '@/components/ScatterText';
 import { useState } from 'react';
 
 const skills = [
@@ -30,7 +31,7 @@ export default function SkillsCard() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9a8870" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
-            Tech Stack
+            <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>Tech Stack</ScatterText>
           </h3>
           <svg
             width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#8a8680" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"
