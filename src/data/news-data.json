@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T04:17:07.770Z",
+  "lastUpdated": "2026-04-18T06:30:11.161Z",
   "availableDates": [
     {
       "value": "2026-04-18",
@@ -239,6 +239,28 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260418-1600-iran-warns-hormuz-will-not-remain-open-if-blockade-continues",
+      "title": "Iran Warns Hormuz \"Will Not Remain Open\" If Blockade Continues",
+      "summary": "Iran's Parliamentary Speaker: Hormuz stays open only if US blockade ends. Trump demands 100% complete deal, may terminate ceasefire Wednesday. 21 ships turned back. Iran denies uranium handover claim. Morning's oil price plunge could reverse.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-18",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260418-1600-white-house-and-anthropic-hold-productive-mythos-meeting",
+      "title": "White House and Anthropic Hold \"Productive\" Mythos Meeting",
+      "summary": "Direct engagement between US government and Anthropic on offensive AI cybersecurity capabilities. Finance ministers and bankers raised \"serious concerns.\" Government access negotiations accelerating.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-18",
+      "time": "16:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260418-1201-ayn-thor-max-price-hike-100-due-to-memory-crisis",
       "title": "AYN Thor Max Price Hike $100 Due to Memory Crisis",
