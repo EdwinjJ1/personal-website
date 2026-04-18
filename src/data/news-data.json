@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T18:30:10.170Z",
+  "lastUpdated": "2026-04-18T20:30:12.603Z",
   "availableDates": [
     {
       "value": "2026-04-19",
@@ -243,6 +243,17 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260419-0600-no-significant-edtech-developments-detected",
+      "title": "No Significant EdTech Developments Detected",
+      "summary": "Sunday morning scan returned no major Education & EdTech news. Sources (TechCrunch, The Verge, 36Kr) showed no EdTech-specific stories in the last 24 hours. Next deep dive will be Monday's Fintech & Crypto rotation.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "06:00",
+      "category": "industry"
+    },
     {
       "id": "ai-20260419-0400-anthropic-project-glasswing-claude-mythos-preview-for-cybersecur",
       "title": "Anthropic Project Glasswing — Claude Mythos Preview for Cybersecurity",
