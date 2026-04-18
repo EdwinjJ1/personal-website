@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T20:30:12.603Z",
+  "lastUpdated": "2026-04-18T22:30:09.846Z",
   "availableDates": [
     {
       "value": "2026-04-19",
@@ -243,6 +243,61 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260419-0800-iran-closes-strait-of-hormuz-again-ships-attacked-blockade-stand",
+      "title": "🚨 Iran Closes Strait of Hormuz AGAIN — Ships Attacked, Blockade Standoff Intensifies",
+      "summary": "IRGC Navy warns approaching ships \"will be targeted.\" Centcom says 23 ships turned around, claims blockade has \"completely halted\" Iranian economic trade by sea. However BBC Verify tracked at least 4 vessels that crossed the blockade line. Iran's Parliament Speaker Ghalibaf says Strait is \"under control\" of Iran. US-Iran talks gearing up for second round as initial truce expires next week.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260419-0800-french-peacekeeper-killed-in-southern-lebanon-macron-blames-hezb",
+      "title": "French Peacekeeper Killed in Southern Lebanon — Macron Blames Hezbollah",
+      "summary": "A French soldier was killed during Israel-Lebanon ceasefire period. Macron directly blamed Hezbollah, who denies any connection. IDF reports one soldier killed and three injured in southern Lebanon despite 10-day ceasefire that began April 16. Ceasefire described as \"shaky\" with all sides taking a breather.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260419-0800-kyiv-supermarket-mass-shooting-at-least-6-killed-hostages-taken",
+      "title": "Kyiv Supermarket Mass Shooting — At Least 6 Killed, Hostages Taken",
+      "summary": "Gunman opened fire and took hostages inside a supermarket in Kyiv. Attacker was killed after shoot-out with police. No claimed responsibility yet. Occurs amid ongoing Russia-Ukraine conflict context.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260419-0800-pope-says-tyrants-speech-was-not-aimed-at-trump-spat-continues",
+      "title": "Pope Says 'Tyrants' Speech Was NOT Aimed at Trump — Spat Continues",
+      "summary": "Pope Leo XIV says his remarks about \"tyrants\" were misinterpreted after public feud with Trump. Trump depicted himself as Jesus-like figure, drawing unprecedented criticism from evangelical Christian right. Trump now joining marathon Bible reading session.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260419-0800-turkey-school-shooting-9-killed-second-consecutive-day",
+      "title": "Turkey School Shooting — 9 Killed, Second Consecutive Day",
+      "summary": "Mass shooting at Turkish school kills 9, following another school shooting the previous day. Two consecutive days of school attacks represent an unprecedented escalation in Turkey.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "08:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260419-0600-no-significant-edtech-developments-detected",
       "title": "No Significant EdTech Developments Detected",
