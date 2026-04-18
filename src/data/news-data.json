@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-04-18T06:30:11.161Z",
+  "lastUpdated": "2026-04-18T14:30:39.384Z",
   "availableDates": [
+    {
+      "value": "2026-04-19",
+      "label": "April 19, 2026"
+    },
     {
       "value": "2026-04-18",
       "label": "April 18, 2026"
@@ -239,6 +243,28 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260419-0000-iran-closes-strait-of-hormuz-again-attacks-on-vessels-reported",
+      "title": "🚨 IRAN CLOSES STRAIT OF HORMUZ AGAIN — Attacks on Vessels Reported",
+      "summary": "Iran's Supreme National Security Council: US blockade is \"violation of ceasefire.\" IRGC denying vessel access. Tanker SANMAR HERALD and cargo ship JAG ARNAV forced to turn back. Container ship hit by \"unknown projectile\" 25nm off Oman coast. Iran demands transit certificates + service fees. Trump speaking to media — may address situation. Iran \"determined\" to control strait until \"definitive end of war.\"",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260419-0000-melbourne-car-attack-one-dead-man-arrested",
+      "title": "Melbourne Car Attack — One Dead, Man Arrested",
+      "summary": "Car mounted kerb and struck pedestrians in Melbourne CBD. One person dead. Man arrested. Police investigation ongoing.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-19",
+      "time": "00:00",
+      "category": "global"
+    },
     {
       "id": "global-20260418-1600-iran-warns-hormuz-will-not-remain-open-if-blockade-continues",
       "title": "Iran Warns Hormuz \"Will Not Remain Open\" If Blockade Continues",
