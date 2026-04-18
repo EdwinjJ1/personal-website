@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-18T14:30:39.384Z",
+  "lastUpdated": "2026-04-18T18:30:10.170Z",
   "availableDates": [
     {
       "value": "2026-04-19",
@@ -243,6 +243,171 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260419-0400-anthropic-project-glasswing-claude-mythos-preview-for-cybersecur",
+      "title": "Anthropic Project Glasswing — Claude Mythos Preview for Cybersecurity",
+      "summary": "Massive security initiative with Nvidia, Google, AWS, Apple, Microsoft, JPMorgan Chase, Cisco, CrowdStrike, Broadcom, and others. Claude Mythos Preview (most powerful Anthropic model, not publicly released) autonomously flagged thousands of high-severity vulnerabilities \"in every major OS and web browser.\" Anthropic committing $100M in credits + $4M to Linux Foundation and Apache Software Foundation. Also in ongoing discussions with US government.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-anthropic-releases-claude-opus-4-7-claude-design-product",
+      "title": "Anthropic Releases Claude Opus 4.7 + Claude Design Product",
+      "summary": "Two releases: (1) Claude Opus 4.7 — best GA model to date, improved coding, image analysis, instruction following, creativity. Same pricing as Opus 4.6 ($5/$25 per M tokens). Ships with extra cybersecurity safeguards. (2) Claude Design — new Labs product for creating visual work: designs, prototypes, slides, pitch decks. Research preview for paying subscribers, powered by Opus 4.7.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-bernie-sanders-rallies-for-ai-worker-protections",
+      "title": "Bernie Sanders Rallies for AI Worker Protections",
+      "summary": "Sanders joined union leaders to push for AI jobs protections, calling for a pause on data center construction. Warned that within 10 years \"the idea of a manufacturing job will no longer exist\" without intervention.",
+      "tag": "POLICY",
+      "source": "Sanders.Senate",
+      "sourceUrl": "https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-google-in-talks-to-let-pentagon-use-gemini-in-classified-setting",
+      "title": "Google in Talks to Let Pentagon Use Gemini in Classified Settings",
+      "summary": "Google reportedly reversing its military stance — proposed contract language mirrors OpenAI's Pentagon deal for \"all lawful purposes.\" Currently Gemini only approved for unclassified DOD use.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-google-launches-android-ai-agent-skills-knowledge-base",
+      "title": "Google Launches Android AI Agent Skills + Knowledge Base",
+      "summary": "Google released an upgraded Android CLI, new Android skills GitHub repository, and Android Knowledge base to help AI agents perform coding tasks. Making it easier for devs to code with AI agents on Android.",
+      "tag": "PRODUCT",
+      "source": "Github",
+      "sourceUrl": "https://github.com/android/skills",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-hugging-face-transformers-to-mlx-multimodal-sentence-transformer",
+      "title": "Hugging Face: Transformers-to-MLX, Multimodal Sentence Transformers, Waypoint-1.5",
+      "summary": "Notable open-source releases: Transformers-to-MLX PR (46 reactions), Multimodal Embedding & Reranker training with Sentence Transformers, and Waypoint-1.5 — higher-fidelity interactive world models for everyday GPUs. Also Safetensors joining the PyTorch Foundation.",
+      "tag": "RESEARCH",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-naacp-sues-xai-to-block-colossus-2-data-center",
+      "title": "NAACP Sues xAI to Block Colossus 2 Data Center",
+      "summary": "NAACP filed suit against Elon Musk's xAI to block the Colossus 2 data center project outside Memphis, TN. Claims the project operates 27 gas turbines without air permits in violation of the Clean Air Act.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/880042/xai-musk-data-center-pollution-legal-battle",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-openai-agents-sdk-next-evolution-sandbox-execution-model-native-",
+      "title": "OpenAI Agents SDK Next Evolution — Sandbox Execution + Model-Native Harness",
+      "summary": "New Agents SDK features: configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, native sandbox execution (supporting Blaxel, Cloudflare, Daytona, E2B, Modal, Runloop, Vercel), Manifest abstraction for portable workspaces, snapshot/rehydration for durability, and progressive disclosure via Skills/MCP/AGENTS.md. GA via API with standard pricing.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-openai-codex-major-update-can-now-operate-your-computer",
+      "title": "OpenAI Codex Major Update — Can Now Operate Your Computer",
+      "summary": "Codex gets a massive upgrade: background computer use with its own cursor, multi-agent parallel work on macOS, in-app browser, gpt-image-1.5 integration, 90+ new plugins (Atlassian, GitLab, Neon, Remotion, Render, etc.), memory system, scheduled automations, and SSH remote devbox support. Over 3M devs use it weekly.",
+      "tag": "BREAKING",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/codex-for-almost-everything/",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260419-0400-openai-introduces-gpt-rosalind-for-life-sciences",
+      "title": "OpenAI Introduces GPT-Rosalind for Life Sciences",
+      "summary": "A new frontier reasoning model purpose-built for biology, drug discovery, and translational medicine. Outperforms GPT-5.4 on 6/11 LABBench2 tasks. Research preview in ChatGPT, Codex, and API. Partners include Amgen, Moderna, Allen Institute, and Thermo Fisher Scientific. Free Life Sciences plugin with 50+ scientific tools.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-rosalind/",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "research-20260419-0400-a-mechanistic-account-of-attention-sinks-in-gpt-2-one-circuit-br",
+      "title": "A Mechanistic Account of Attention Sinks in GPT-2: One Circuit, Broader Implications",
+      "summary": "Causal intervention study revealing attention sinks arise from interaction between learned query bias, first-layer MLP transformation of positional encoding, and key projection structure. Crucially, each component is individually dispensable — sinks emerge through distinct circuits across architectures.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14722",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260419-0400-conflayers-adaptive-confidence-based-layer-skipping-for-self-spe",
+      "title": "ConfLayers: Adaptive Confidence-based Layer Skipping for Self-Speculative Decoding",
+      "summary": "Dynamic plug-and-play layer skipping for self-speculative decoding. Iteratively computes confidence scores, selects layers to skip via adaptive threshold, avoids training overhead of policy-based methods. Achieves up to 1.4x speedup over vanilla LLM generation across models and datasets.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14612",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260419-0400-corpus2skill-don-t-retrieve-navigate-distilling-enterprise-knowl",
+      "title": "Corpus2Skill: Don't Retrieve, Navigate — Distilling Enterprise Knowledge into Navigable Agent Skills",
+      "summary": "Distills document corpus into hierarchical navigable skill representations instead of flat RAG retrieval. Agent sees how the corpus is organized and can backtrack/combine scattered evidence. Shifts from passive search consumption to active corpus navigation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14206",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260419-0400-geometric-metrics-for-moe-specialization-from-fisher-information",
+      "title": "Geometric Metrics for MoE Specialization: From Fisher Information to Early Failure Detection",
+      "summary": "First rigorous information-geometric framework for Mixture-of-Experts specialization dynamics. Proves standard metrics (cosine similarity, routing entropy) violate parameterization invariance. Introduces Fisher Specialization Index (r=0.91 with downstream perf) and Fisher Heterogeneity Score (predicts training failure at 10% completion, AUC=0.89). Outperforms validation-loss early stopping by 23% with 40x fewer compute cycles.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14500",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260419-0400-heartbeat-driven-autonomous-thinking-activity-scheduling-for-llm",
+      "title": "Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM-based AI systems",
+      "summary": "Proactive cognitive scheduling mechanism mimicking human cognition rhythms. Periodic \"heartbeat\" orchestrates dynamic cognitive modules (Planner, Critic, Recaller, Dreamer). Meta-learning strategy adapts scheduling policy over time. Modules can be added/removed without structural reengineering.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14811",
+      "date": "2026-04-19",
+      "time": "04:00",
+      "category": "research"
+    },
     {
       "id": "global-20260419-0000-iran-closes-strait-of-hormuz-again-attacks-on-vessels-reported",
       "title": "🚨 IRAN CLOSES STRAIT OF HORMUZ AGAIN — Attacks on Vessels Reported",
