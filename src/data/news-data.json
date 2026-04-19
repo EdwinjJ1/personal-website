@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T20:30:12.013Z",
+  "lastUpdated": "2026-04-19T22:30:10.849Z",
   "availableDates": [
     {
       "value": "2026-04-20",
@@ -247,6 +247,61 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260420-0800-64-of-australians-have-personal-info-publicly-visible-on-social-",
+      "title": "64% of Australians Have Personal Info Publicly Visible on Social Media",
+      "summary": "Home Affairs research finds 86% of 19-24yo at high risk — personal info findable in minutes. 57% never review privacy settings. 84,000+ cybercrimes reported in 2024-25. National Cyber Security coordinator warns of identity theft and fraud risks from compiled social media data.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0800-anupoll-australians-less-satisfied-than-during-covid-record-fina",
+      "title": "ANUpoll: Australians Less Satisfied Than During COVID — Record Financial Stress",
+      "summary": "34.9% finding it difficult to live on current income (record). 26.8% worried about losing jobs (pandemic-level). For first time, more Australians dissatisfied than satisfied with country direction. Chalmers budget under pressure from Hormuz fuel crisis. Government considering contingency measures for food supply and essential industries.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0800-australia-japan-sign-20b-mogami-frigate-deal-first-delivery-dece",
+      "title": "Australia-Japan Sign $20B Mogami Frigate Deal — First Delivery December 2029",
+      "summary": "Multi-billion-dollar contract signed aboard Japanese warship in Melbourne. First 3 of 11 frigates built in Japan by Mitsubishi Heavy Industries, remaining 8 at Austal in Perth. Signals deepening \"quasi-alliance\" amid China tensions. Japan relaxing defence export restrictions.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0800-iran-introduces-bill-to-permanently-control-strait-of-hormuz",
+      "title": "Iran Introduces Bill to Permanently Control Strait of Hormuz",
+      "summary": "Senior Iranian lawmaker Ebrahim Azizi tells BBC Tehran will \"never\" cede control. Parliament introducing bill based on constitution article 110 to enshrine IRGC control of vessel passage. Iran sees the strait as a permanent strategic lever, not a temporary bargaining chip. Meanwhile Iran re-closed the strait 24 hours after briefly opening it.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0800-us-extends-russian-oil-sanctions-waiver-until-may-16-zelensky-co",
+      "title": "US Extends Russian Oil Sanctions Waiver Until May 16 — Zelensky Condemns",
+      "summary": "US extended waiver allowing purchase of Russian oil already loaded on vessels. Zelensky says \"every dollar paid for Russian oil is money for the war\" — $10B at stake from 110+ shadow fleet tankers. Meant to ease energy crunch from Iran conflict. Ukraine peace talks effectively on hold.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "08:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260420-0601-ai-captures-80-of-global-vc-funding-crypto-firms-pivot-to-ai-age",
       "title": "AI Captures 80% of Global VC Funding — Crypto Firms Pivot to AI Agents",
