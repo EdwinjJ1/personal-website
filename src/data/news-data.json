@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T14:30:45.174Z",
+  "lastUpdated": "2026-04-19T18:30:12.586Z",
   "availableDates": [
     {
       "value": "2026-04-20",
@@ -247,6 +247,171 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260420-0404-globalsplat-efficient-feed-forward-3d-gaussian-splatting-via-glo",
+      "title": "GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens",
+      "summary": "Introduces \"align first, decode later\" paradigm for 3D Gaussian Splatting. Learns compact global latent scene representations before decoding explicit 3D geometry, achieving competitive novel-view synthesis with only 16K Gaussians (4MB footprint) and 78ms single-pass inference.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.15284",
+      "date": "2026-04-20",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260420-0404-heartbeat-driven-autonomous-thinking-activity-scheduling-for-llm",
+      "title": "Heartbeat-Driven Autonomous Thinking Activity Scheduling for LLM Agents",
+      "summary": "Introduces a periodic \"heartbeat\" mechanism that orchestrates cognitive modules (Planner, Critic, Recaller, Dreamer) proactively rather than reactively. The scheduler learns when to engage specific thinking activities based on temporal patterns and historical context, with meta-learning for continual policy adaptation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.14178",
+      "date": "2026-04-20",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260420-0404-leapalign-post-training-flow-matching-models-at-any-generation-s",
+      "title": "LeapAlign: Post-Training Flow Matching Models at Any Generation Step",
+      "summary": "Novel fine-tuning method that shortens long ODE trajectories into just two steps via \"consecutive leaps,\" enabling direct gradient propagation from reward signals to early generation steps. Solves the memory cost and gradient explosion problem in flow matching alignment. Outperforms GRPO-based and direct-gradient methods on Flux model fine-tuning.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.15311",
+      "date": "2026-04-20",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260420-0404-openmobile-building-open-mobile-agents-with-task-and-trajectory-",
+      "title": "OpenMobile: Building Open Mobile Agents with Task and Trajectory Synthesis",
+      "summary": "Open-source framework for mobile GUI agents with scalable task synthesis and policy-switching trajectory generation. Fine-tuned Qwen3-VL reaches 64.7% on AndroidWorld — far surpassing existing open-data approaches. Includes transparent analysis verifying gains come from broad functionality coverage, not benchmark overfitting.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.15093",
+      "date": "2026-04-20",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260420-0404-signthought-think-in-latent-thoughts-a-new-paradigm-for-gloss-fr",
+      "title": "SignThought: Think in Latent Thoughts — A New Paradigm for Gloss-Free Sign Language Translation",
+      "summary": "Reframes sign language translation as cross-modal reasoning rather than video-to-text conversion. Introduces ordered latent thoughts as explicit middle layer between video and text, plus plan-then-ground decoding. Includes new large-scale gloss-free SLT dataset with stronger context dependencies.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.15301",
+      "date": "2026-04-20",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "ai-20260420-0400-anthropic-launches-claude-design-by-anthropic-labs",
+      "title": "Anthropic launches Claude Design by Anthropic Labs",
+      "summary": "New product powered by Opus 4.7 that lets users collaborate with Claude to create polished visual work: designs, prototypes, slides, one-pagers, and marketing materials. Available in research preview for paying subscribers.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-anthropic-releases-claude-opus-4-7",
+      "title": "Anthropic releases Claude Opus 4.7",
+      "summary": "Anthropic's most powerful publicly available model to date. Improved software engineering, image analysis, instruction following, and \"creativity\" for slides/docs. Ships with additional cybersecurity safeguards compared to Opus 4.6. Early testers include Intuit, Harvey, Replit, Cursor, Notion, Shopify.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/claude-opus-4-7",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-bernie-sanders-rallies-with-labor-leaders-for-ai-protections",
+      "title": "Bernie Sanders rallies with labor leaders for AI protections",
+      "summary": "Union leaders across industries joined Sanders to push for jobs protections as AI evolves. Sanders called for a pause on data center construction and warned that left unchecked, within 10 years \"the idea of a manufacturing job will no longer exist.\" He told oligarchs to \"go to hell.\"",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-google-deepmind-releases-gemma-4-apache-2-licensed-open-multimod",
+      "title": "Google DeepMind releases Gemma 4: Apache 2 licensed open multimodal models",
+      "summary": "Frontier multimodal intelligence supporting image, text, and audio inputs. Available on Hugging Face with support for transformers, llama.cpp, MLX, WebGPU, Rust, and more. Truly open with Apache 2 licenses, including on-device sizes. Hugging Face says they \"struggled to find good fine-tuning examples because they are so good out of the box.\"",
+      "tag": "PRODUCT",
+      "source": "Deepmind",
+      "sourceUrl": "https://deepmind.google/blog/",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-google-deepmind-gemini-3-1-flash-tts-gemini-robotics-er-1-6",
+      "title": "Google DeepMind: Gemini 3.1 Flash TTS, Gemini Robotics-ER 1.6",
+      "summary": "New expressive AI speech model (Gemini 3.1 Flash TTS) and enhanced embodied reasoning for real-world robotics tasks (Gemini Robotics-ER 1.6). Both released in April 2026.",
+      "tag": "PRODUCT",
+      "source": "Deepmind",
+      "sourceUrl": "https://deepmind.google/blog/",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-google-reportedly-in-talks-to-let-pentagon-use-gemini-in-classif",
+      "title": "Google reportedly in talks to let Pentagon use Gemini in classified settings",
+      "summary": "Google is reportedly reversing course on military dealings, negotiating a contract that would allow the DOD to use Gemini in classified environments. Currently, Google's DOD contract only permits unclassified use. Proposed language mirrors OpenAI's Pentagon agreement for \"all lawful purposes.\"",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-openai-agents-sdk-next-evolution-model-native-harness-sandbox-ex",
+      "title": "OpenAI Agents SDK next evolution: model-native harness + sandbox execution",
+      "summary": "New Agents SDK capabilities include configurable memory, sandbox-aware orchestration, Codex-like filesystem tools, and standardized integrations with MCP, Skills, AGENTS.md, shell execution, and apply-patch. Built to align execution with frontier model capabilities.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-openai-codex-major-update-computer-use-image-generation-90-plugi",
+      "title": "OpenAI Codex major update: computer use, image generation, 90+ plugins",
+      "summary": "Codex can now operate your computer alongside you (seeing, clicking, typing with its own cursor), multiple agents work in parallel on Mac, generate images via gpt-image-1.5, includes in-app browser, SSH remote devbox support, and 90+ new plugins (Atlassian Rovo, CircleCI, CodeRabbit, GitLab, Microsoft Suite, Neon, Remotion, Render, etc.). Over 3M developers use it weekly.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/codex-for-almost-everything/",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-openai-introduces-gpt-rosalind-for-life-sciences-research",
+      "title": "OpenAI introduces GPT-Rosalind for life sciences research",
+      "summary": "Frontier reasoning model optimized for biology, drug discovery, and translational medicine. Combines improved tool use with deeper understanding across chemistry, protein engineering, and genomics. Research preview available with a Life Sciences plugin connecting to 50+ scientific tools. Partners: Amgen, Moderna, Allen Institute, Thermo Fisher Scientific.",
+      "tag": "RESEARCH",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-rosalind/",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260420-0400-project-glasswing-anthropic-s-mythos-preview-discovers-vulns-in-",
+      "title": "Project Glasswing: Anthropic's Mythos Preview discovers vulns in every major OS and browser",
+      "summary": "Claude Mythos Preview — Anthropic's most capable model (not publicly released) — flagged thousands of high-severity vulnerabilities autonomously, including some in every major operating system and web browser. Partners include Nvidia, Apple, Google, Microsoft, JPMorgan Chase, AWS, Cisco, CrowdStrike, Broadcom, and Palo Alto Networks. The model developed many exploits entirely autonomously without human steering.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-04-20",
+      "time": "04:00",
+      "category": "ai"
+    },
     {
       "id": "global-20260420-0000-us-negotiators-return-to-pakistan-trump-threatens-to-hit-iran-s-",
       "title": "🚨 US Negotiators Return to Pakistan; Trump Threatens to Hit Iran's Power Plants and Bridges",
