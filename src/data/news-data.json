@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T18:30:12.586Z",
+  "lastUpdated": "2026-04-19T20:30:12.013Z",
   "availableDates": [
     {
       "value": "2026-04-20",
@@ -247,6 +247,61 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260420-0601-ai-captures-80-of-global-vc-funding-crypto-firms-pivot-to-ai-age",
+      "title": "AI Captures 80% of Global VC Funding — Crypto Firms Pivot to AI Agents",
+      "summary": "AI companies raised $242B in Q1 2026 (80% of global VC). Gartner projects $2.52T total AI spending this year. In crypto, 40 cents of every VC dollar went to AI-crypto hybrids in 2025 (up from 18% in 2024). Binance's AI Pro beta sees 45.7% of activity triggered by autonomous agents, not humans.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-0601-alcoa-selling-dormant-smelter-to-bitcoin-miner-nydig",
+      "title": "Alcoa Selling Dormant Smelter to Bitcoin Miner NYDIG",
+      "summary": "Alcoa in advanced talks to sell idle Massena East smelter (closed since 2014) to NYDIG. Site has dedicated substations, transmission lines, and access to NY Power Authority hydropower. Deal expected mid-2026. Follows Century Aluminum selling Kentucky smelter to TeraWulf for HPC/AI campus.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-0601-kelp-dao-exploited-for-292m-2026-s-biggest-crypto-hack",
+      "title": "Kelp DAO Exploited for $292M — 2026's Biggest Crypto Hack",
+      "summary": "Attacker drained 116,500 rsETH (~18% of circulating supply) from Kelp's LayerZero-powered bridge by tricking cross-chain messaging validation. Emergency freezes triggered across Aave, SparkLend, Fluid, Upshift. AAVE token fell 10%. Ethena paused bridges as precaution. Comes after Drift's $285M exploit on April 1.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-0601-meta-reportedly-planning-10-workforce-layoffs-in-may-first-of-tw",
+      "title": "Meta Reportedly Planning 10% Workforce Layoffs in May — First of Two Waves",
+      "summary": "Reuters reports Meta may cut ~8,000 employees (10%) in May, with a second wave later in 2026 potentially reaching 20% total. Follows aggressive AI investment pivot. Shift from social media company to AI-first infrastructure.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-0601-zondacrypto-scandal-poland-pm-links-exchange-to-legislative-inte",
+      "title": "Zondacrypto Scandal: Poland PM Links Exchange to Legislative Interference + 4,500 BTC Lost",
+      "summary": "Poland's prime minister publicly linked Zondacrypto to legislative interference. Exchange disclosed a 4,500 BTC wallet it can't access — private keys linked to former CEO who is now missing. Multiple layers of corporate governance failure.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "06:01",
+      "category": "industry"
+    },
     {
       "id": "research-20260420-0404-globalsplat-efficient-feed-forward-3d-gaussian-splatting-via-glo",
       "title": "GlobalSplat: Efficient Feed-Forward 3D Gaussian Splatting via Global Scene Tokens",
