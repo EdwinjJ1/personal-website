@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-04-18T22:30:09.846Z",
+  "lastUpdated": "2026-04-19T14:30:45.174Z",
   "availableDates": [
+    {
+      "value": "2026-04-20",
+      "label": "April 20, 2026"
+    },
     {
       "value": "2026-04-19",
       "label": "April 19, 2026"
@@ -243,6 +247,72 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260420-0000-us-negotiators-return-to-pakistan-trump-threatens-to-hit-iran-s-",
+      "title": "🚨 US Negotiators Return to Pakistan; Trump Threatens to Hit Iran's Power Plants and Bridges",
+      "summary": "US negotiators heading back for second round of Iran talks as initial truce expires next week. Trump on Truth Social: \"very good conversations\" happening but US will hit Iran's power plants and bridges if no deal reached. Iran's Supreme National Security Council says it's \"currently reviewing\" new US proposals. BBC Verify tracked 4 vessels that crossed the US blockade line despite Centcom claiming \"completely halted\" trade.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0000-harry-and-meghan-s-australia-tour-falls-flat",
+      "title": "Harry and Meghan's Australia Tour Falls Flat",
+      "summary": "Four-day tour by the Sussexes received lukewarm response from Australian public. Notable for lack of public interest despite extensive media coverage.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0000-iran-s-nuclear-program-naval-threat-remain-key-bargaining-chips-",
+      "title": "Iran's Nuclear Program + Naval Threat Remain Key Bargaining Chips — NYT Analysis",
+      "summary": "NYT deep analysis: Iran's nuclear weapon pursuit serves as ultimate deterrent, but its naval capability at Hormuz (small fast boats) is equally potent leverage. US warships taking Iranian threats seriously despite conventional superiority.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0000-trump-signs-executive-order-to-speed-up-psychedelic-drug-treatme",
+      "title": "Trump Signs Executive Order to Speed Up Psychedelic Drug Treatments",
+      "summary": "New executive order expedites review of drugs including ibogaine for treating PTSD, depression, and addiction. Trump said it came to his attention partly through podcaster Joe Rogan's advocacy. Could reshape FDA drug approval pathways.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-0000-zelensky-condemns-us-extension-of-russian-sanctions-waiver",
+      "title": "Zelensky Condemns US Extension of Russian Sanctions Waiver",
+      "summary": "US extended sanctions waiver allowing Russian energy transactions, arguing it's needed to ease supply crunch from Iran war. Zelensky publicly condemned the move, creating tension between Ukraine and its biggest ally. 4 hours ago.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "industry-20260420-0000-no-significant-fintech-developments-weekend-mode",
+      "title": "No Significant Fintech Developments — Weekend Mode",
+      "summary": "TechCrunch Fintech page returned no content (JS-rendered). The Verge, BBC, SMH showed no major Fintech/Crypto news over the weekend. AUD at 4-year high (from yesterday's data) remains the key Fintech indicator to watch — potential RBA rate hike as early as May.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "00:00",
+      "category": "industry"
+    },
     {
       "id": "global-20260419-0800-iran-closes-strait-of-hormuz-again-ships-attacked-blockade-stand",
       "title": "🚨 Iran Closes Strait of Hormuz AGAIN — Ships Attacked, Blockade Standoff Intensifies",
