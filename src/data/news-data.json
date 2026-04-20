@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-19T22:30:10.849Z",
+  "lastUpdated": "2026-04-20T02:30:13.466Z",
   "availableDates": [
     {
       "value": "2026-04-20",
@@ -247,6 +247,39 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260420-1201-aave-loses-6-6b-tvl-in-single-day-kelp-hack-creates-196m-bad-deb",
+      "title": "Aave Loses $6.6B TVL in Single Day — Kelp Hack Creates $196M Bad Debt",
+      "summary": "Depositors fled after attackers deposited stolen rsETH as collateral and borrowed wETH. AAVE token crashed 16% to $92. Umbrella reserve language softened from \"will cover\" to \"explore paths to offset.\" stkAAVE holders may eat the loss. Liquid restaking token risk models failed to price bridge-exploit scenarios.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "12:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-1201-nomura-survey-65-of-institutional-investors-see-crypto-as-vital-",
+      "title": "Nomura Survey: 65% of Institutional Investors See Crypto as Vital Diversifier",
+      "summary": "Survey of 500+ Japanese investment professionals shows positive crypto sentiment rising to 31% (from 25% in 2024). 79% planning exposure within 3 years. Typical allocation 2-5%. 60%+ interested in staking, lending, derivatives, tokenized assets. 63% see stablecoin use cases in treasury/cross-border payments.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "12:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260420-1201-vercel-breached-via-third-party-ai-tool-crypto-developers-scramb",
+      "title": "Vercel Breached via Third-Party AI Tool — Crypto Developers Scramble to Rotate API Keys",
+      "summary": "Web infrastructure giant Vercel disclosed a security breach traced to Context.ai, a third-party AI tool used by an employee. Compromised Google Workspace connection allowed attackers to access internal environments. API keys potentially exposed. BreachForums post claims to sell Vercel data for $2M. Solana DEX Orca rotating all deployment credentials. Vercel says sensitive env vars were not accessed.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "12:01",
+      "category": "industry"
+    },
     {
       "id": "global-20260420-0800-64-of-australians-have-personal-info-publicly-visible-on-social-",
       "title": "64% of Australians Have Personal Info Publicly Visible on Social Media",
