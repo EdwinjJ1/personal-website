@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T18:30:13.819Z",
+  "lastUpdated": "2026-04-20T20:30:13.243Z",
   "availableDates": [
     {
       "value": "2026-04-21",
@@ -251,6 +251,61 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260421-0601-biogen-inks-850m-china-rights-deal-with-tj-biopharma",
+      "title": "Biogen Inks $850M China Rights Deal with TJ Biopharma",
+      "summary": "Biogen signed an $850M biobucks deal with TJ Biopharma (TJ) for China rights to a late-stage immune antibody. Separately, SEC filings revealed Biogen hiked its offer multiple times before agreeing to the $5.6B Apellis acquisition last month.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0601-lilly-bags-second-in-vivo-car-t-company-via-7b-kelonia-deal",
+      "title": "Lilly Bags Second In Vivo CAR-T Company via $7B Kelonia Deal",
+      "summary": "Eli Lilly is acquiring Kelonia Therapeutics for $3.25B upfront + milestone payments totaling up to $7B. Kelonia's lead program is a Phase 1-stage in vivo CAR-T therapy for multiple myeloma. This is Lilly's second in vivo CAR-T acquisition this year, doubling down on the next-generation approach that could eliminate the need for costly ex vivo cell manufacturing.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0601-novo-nordisk-readies-scd-drug-after-phase-3-win-astrazeneca-copd",
+      "title": "Novo Nordisk Readies SCD Drug After Phase 3 Win; AstraZeneca COPD Triumph",
+      "summary": "Novo Nordisk reported positive Phase 3 data for its sickle cell disease drug, acquired via the $11B Forma Therapeutics buyout, positioning for regulatory submission. AstraZeneca's IL-33 inhibitor tozorakimab posted another Phase 3 COPD win, validating the company's long-term bet on the inflammatory pathway.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0601-revolution-medicines-raises-2b-after-pancreatic-cancer-breakthro",
+      "title": "Revolution Medicines Raises $2B After Pancreatic Cancer Breakthrough",
+      "summary": "Revolution Medicines raised $2B (double its initial plan) after reporting that its RAS inhibitor daraxonrasib nearly doubled overall survival in Phase 3 pancreatic cancer vs. standard chemotherapy. Analysts see a $10B+ revenue opportunity. The stock offering included $1.5B in common stock and $500M in convertible notes.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0601-rfk-jr-defends-hhs-record-as-trump-proposes-12-budget-cut",
+      "title": "RFK Jr. Defends HHS Record as Trump Proposes 12% Budget Cut",
+      "summary": "HHS Secretary RFK Jr. testified before Congress defending his tenure amid a proposed $16B (12.5%) discretionary spending cut. The budget includes a $5B NIH cut that would eliminate several research institutes. Some Republican lawmakers expressed concern over the NIH reductions despite backing Kennedy's nutrition and fraud crackdown efforts.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "06:01",
+      "category": "industry"
+    },
     {
       "id": "research-20260421-0404-asmr-bench-auditing-for-sabotage-in-ml-research",
       "title": "ASMR-Bench: Auditing for Sabotage in ML Research",
