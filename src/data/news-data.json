@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T20:30:13.243Z",
+  "lastUpdated": "2026-04-20T22:30:12.348Z",
   "availableDates": [
     {
       "value": "2026-04-21",
@@ -251,6 +251,94 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260421-0801-nsa-reportedly-has-access-to-anthropic-s-mythos-despite-supply-c",
+      "title": "NSA Reportedly Has Access to Anthropic's Mythos Despite Supply-Chain Risk Label",
+      "summary": "The NSA reportedly has access to Anthropic's most powerful unreleased model (Mythos Preview) despite being identified as a supply-chain risk. The White House is also reportedly preparing for access. This comes amid Anthropic's legal battle over the Pentagon's blacklisting.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-21",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0801-pro-trump-ai-influencers-flooding-social-media-ahead-of-midterms",
+      "title": "Pro-Trump AI Influencers Flooding Social Media Ahead of Midterms",
+      "summary": "New York Times found hundreds of fake accounts on Instagram, TikTok, and Facebook using AI-generated avatars to push conservative voter mobilization. Contractors and marketing companies now specialize in deploying AI avatars in bulk at increasingly low prices.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-21",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0801-sergey-brin-orders-deepmind-to-catch-anthropic-in-ai-coding-agen",
+      "title": "Sergey Brin Orders DeepMind to Catch Anthropic in AI Coding Agent Race",
+      "summary": "Google co-founder sent internal memo demanding every Gemini engineer be \"forced to use internal agents for complex, multistep tasks.\" Anthropic's tools have been leading the AI coding race, and Brin sees catching them as a step toward building AI that can improve itself. A \"strike team\" has been formed.",
+      "tag": "PRODUCT",
+      "source": "Theinformation",
+      "sourceUrl": "https://www.theinformation.com/articles/google-creates-strike-team-improve-coding-models",
+      "date": "2026-04-21",
+      "time": "08:01",
+      "category": "ai"
+    },
+    {
+      "id": "global-20260421-0800-7-7-earthquake-off-japan-s-coast-tsunami-warning-issued-second-q",
+      "title": "7.7 Earthquake Off Japan's Coast — Tsunami Warning Issued, Second Quake Feared",
+      "summary": "7.7 magnitude quake struck off Iwate prefecture, triggering 3m tsunami warning and coastal evacuations. JMA warns risk of 8.0+ quake in the next week is \"relatively higher than normal.\" 100 homes lost power, bullet trains affected. No major damage reported. Tsunami warning later lifted.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0800-blue-origin-new-glenn-rocket-grounded-after-satellite-launch-fai",
+      "title": "Blue Origin New Glenn Rocket Grounded After Satellite Launch Failure",
+      "summary": "FAA ordered investigation after New Glenn failed to deliver AST SpaceMobile satellite to proper orbit (insufficient engine thrust). Only the third flight for New Glenn; Blue Origin planned 12 launches this year. AST shares fell 6%. Insurance will cover the satellite loss.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0800-chinese-humanoid-robot-beats-human-half-marathon-world-record",
+      "title": "Chinese Humanoid Robot Beats Human Half-Marathon World Record",
+      "summary": "Honor's humanoid robot completed 21km in 50:26 — 7 minutes faster than the human world record (Kiplimo's 57:00). Massive improvement from last year's winning time of 2:40:42. About 40% navigated autonomously. Part of China's 2026-2030 five-year plan targeting humanoid robot commercialization.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0800-tim-cook-steps-down-as-apple-ceo-john-ternus-named-successor",
+      "title": "Tim Cook Steps Down as Apple CEO — John Ternus Named Successor",
+      "summary": "After 15 years at the helm, Tim Cook will become executive chairman on September 1. John Ternus, 25-year Apple veteran and current SVP of Hardware Engineering (iPhone, iPad, Mac, Apple Silicon transition), takes over. Cook will focus on \"engaging with policymakers around the world.\"",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0800-us-iran-hormuz-blockade-intensifies-peace-talks-uncertain",
+      "title": "US-Iran: Hormuz Blockade Intensifies, Peace Talks Uncertain",
+      "summary": "Trump says US won't lift blockade until a deal is reached. US forces turned away 27 vessels. Iran calls it \"piracy\" and maintains its own Hormuz blockade (nearly 2 months). Temporary ceasefire expires Wednesday. Second round of talks in Islamabad uncertain — JD Vance hasn't left Washington, Iran says \"no plans\" to attend.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "08:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260421-0601-biogen-inks-850m-china-rights-deal-with-tj-biopharma",
       "title": "Biogen Inks $850M China Rights Deal with TJ Biopharma",
