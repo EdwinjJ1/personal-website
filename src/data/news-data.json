@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-04-20T06:30:21.833Z",
+  "lastUpdated": "2026-04-20T14:30:42.200Z",
   "availableDates": [
+    {
+      "value": "2026-04-21",
+      "label": "April 21, 2026"
+    },
     {
       "value": "2026-04-20",
       "label": "April 20, 2026"
@@ -247,6 +251,83 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260421-0001-fda-moving-to-ease-peptide-restrictions-under-rfk-jr-s-maha-push",
+      "title": "FDA Moving to Ease Peptide Restrictions Under RFK Jr.'s MAHA Push",
+      "summary": "FDA scheduling advisory committee meetings to reclassify 12 peptides that Biden admin banned from compounding pharmacies in 2023. Includes BPC-157 (touted by Joe Rogan). RFK Jr. told Rogan he's a \"big fan\" of peptides and has taken them himself. Meetings in July 2026 and Feb 2027. Unusual move — Trump FDA has rarely convened advisory committees.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0001-kailera-therapeutics-nets-625m-in-one-of-biotech-s-biggest-ever-",
+      "title": "Kailera Therapeutics Nets $625M in One of Biotech's Biggest-Ever IPOs",
+      "summary": "Obesity drug startup Kailera priced at $16/share on Nasdaq (ticker: KLRA), far surpassing its $500M target. Founded 2024, backed by Bain Capital, Atlas Venture, Arch Venture. Licensed weight loss drugs from China's Hengrui Pharmaceuticals. Lead drug ribupatide (GLP-1 + GIP dual agonist) showed 18% body weight loss in Phase 3 China trial. Competing with Zepbound and Wegovy.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0001-replimune-cuts-63-staff-after-second-fda-rejection-of-melanoma-d",
+      "title": "Replimune Cuts 63 Staff After Second FDA Rejection of Melanoma Drug",
+      "summary": "FDA rejected oncolytic virus therapy RP1 for melanoma for second time. CEO Sushil Patel disputed FDA's criticisms, called communications \"inconsistent.\" Revolution Medicines raised $2B separately. Biogen-Apellis negotiation details revealed in regulatory filing.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260421-0001-roche-to-start-new-elevidys-study-following-european-setback",
+      "title": "Roche to Start New Elevidys Study Following European Setback",
+      "summary": "Roche's Duchenne muscular dystrophy gene therapy Elevidys (licensed from Sarepta) hit regulatory issues in Europe. Company planning new clinical study to address concerns. Gene therapy for rare diseases continues to face reimbursement and efficacy challenges globally.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "global-20260421-0000-7-7-earthquake-off-northeast-japan-tsunami-warnings-issued-8-0-a",
+      "title": "7.7 Earthquake Off Northeast Japan — Tsunami Warnings Issued, 8.0+ Aftershock Alert",
+      "summary": "7.7 magnitude quake struck off Iwate prefecture at 16:52 JST, depth 10km. Tsunami waves reached 80cm. Japan Meteorological Agency warns of \"relatively higher\" risk of 8.0+ quake in next week. Thousands evacuated. No abnormalities at nuclear facilities (IAEA confirmed). Aftershocks of 5.4, 4.9, 4.5 recorded. Bullet trains affected, 100 homes lost power.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0000-tehran-says-no-plans-for-new-talks-after-us-seizes-cargo-ship",
+      "title": "Tehran Says \"No Plans\" for New Talks After US Seizes Cargo Ship",
+      "summary": "Iran's IRGC vowed retaliation for the \"armed piracy\" of Touska. Second round of talks in Pakistan with Vance/Witkoff/Kushner was supposed to happen Monday — Iran says it won't participate while blockade continues. Ceasefire expires Wednesday. No diplomatic off-ramp visible.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260421-0000-wellington-state-of-emergency-flooding-displaces-thousands",
+      "title": "Wellington State of Emergency — Flooding Displaces Thousands",
+      "summary": "Major flooding hits NZ capital. Vehicles submerged, trees uprooted, houses hit by landslides. State of emergency declared. Significant infrastructure damage expected. Follows pattern of extreme weather events across Pacific.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-21",
+      "time": "00:00",
+      "category": "global"
+    },
     {
       "id": "global-20260420-1600-bbc-finds-pattern-of-insider-trading-suspiciously-timed-to-trump",
       "title": "BBC Finds Pattern of Insider Trading Suspiciously Timed to Trump Announcements",
