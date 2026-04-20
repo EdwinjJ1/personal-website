@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T02:30:13.466Z",
+  "lastUpdated": "2026-04-20T06:30:21.833Z",
   "availableDates": [
     {
       "value": "2026-04-20",
@@ -247,6 +247,39 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260420-1600-bbc-finds-pattern-of-insider-trading-suspiciously-timed-to-trump",
+      "title": "BBC Finds Pattern of Insider Trading Suspiciously Timed to Trump Announcements",
+      "summary": "BBC analysis found consistent spikes in oil, stock, and commodity trades hours or minutes before Trump's major policy announcements — including war declarations and tariff decisions. One example: $millions in oil puts placed 47 minutes before Trump's \"war nearly complete\" interview. Analysts say it bears hallmarks of illegal insider trading.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-1600-project-meridien-gigawatt-scale-ai-data-centre-planned-for-kimbe",
+      "title": "Project Meridien: Gigawatt-Scale AI Data Centre Planned for Kimberley, WA",
+      "summary": "Gingerah Energy JV (Karajarri Traditional Owners 1/3, Fugro, Longreach Capital) plans 240MW initial AI data centre south of Broome, scalable to 1GW — would be Australia's largest. Powered by wind, solar, gas + closed-loop water cooling. Opening projected 2032. Targeting AI training for mining companies and Singaporean clients via subsea fibre.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260420-1600-us-navy-fires-on-iranian-cargo-ship-trump-says-blew-a-hole-in-th",
+      "title": "US Navy Fires on Iranian Cargo Ship — Trump Says \"Blew a Hole in the Engineroom\"",
+      "summary": "US seized Iranian-flagged cargo ship Touska after it tried to pass naval blockade. Iran calls it \"armed piracy\" and vows retaliation. Ceasefire expires Wednesday. Second round of Iran-US talks scheduled in Pakistan with JD Vance, Witkoff, Kushner — but Iran says reports of talks are \"not true\" while blockade continues. Oil prices rising on escalation.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-20",
+      "time": "16:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260420-1201-aave-loses-6-6b-tvl-in-single-day-kelp-hack-creates-196m-bad-deb",
       "title": "Aave Loses $6.6B TVL in Single Day — Kelp Hack Creates $196M Bad Debt",
