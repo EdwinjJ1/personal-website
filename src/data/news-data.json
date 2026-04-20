@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-20T14:30:42.200Z",
+  "lastUpdated": "2026-04-20T18:30:13.819Z",
   "availableDates": [
     {
       "value": "2026-04-21",
@@ -251,6 +251,171 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260421-0404-asmr-bench-auditing-for-sabotage-in-ml-research",
+      "title": "ASMR-Bench: Auditing for Sabotage in ML Research",
+      "summary": "Benchmark for detecting subtle sabotage in ML research codebases — misaligned AI systems could introduce flaws that produce misleading results while evading detection. 9 ML codebases with sabotaged variants. Frontier LLMs and human auditors both struggled: best AUROC only 0.77 (Gemini 3.1 Pro), top-1 fix rate 42%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.16286",
+      "date": "2026-04-21",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260421-0404-march-multi-agent-radiology-clinical-hierarchy-for-ct-report-gen",
+      "title": "MARCH: Multi-Agent Radiology Clinical Hierarchy for CT Report Generation",
+      "summary": "Multi-agent framework emulating radiology department hierarchy: Resident Agent drafts reports, Fellow Agents revise with RAG, Attending Agent orchestrates stance-based consensus discourse to resolve diagnostic discrepancies. Significantly outperforms SOTA on RadGenome-ChestCT in both clinical fidelity and linguistic accuracy.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.16175",
+      "date": "2026-04-21",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260421-0404-medley-bench-scale-buys-evaluation-but-not-control-in-ai-metacog",
+      "title": "MEDLEY-BENCH: Scale Buys Evaluation but Not Control in AI Metacognition",
+      "summary": "Evaluates 35 models from 12 families on behavioral metacognition — monitoring and regulating one's own reasoning under genuine inter-model disagreement. Finds a robust \"evaluation/control dissociation\": evaluation ability scales with model size, but control (actually revising beliefs) does not. All 35 models show evaluation as their weakest relative ability.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.16009",
+      "date": "2026-04-21",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260421-0404-reactbench-topological-reasoning-in-mllms-on-chemical-reaction-d",
+      "title": "ReactBench: Topological Reasoning in MLLMs on Chemical Reaction Diagrams",
+      "summary": "1,618 expert-annotated QA pairs across four hierarchical task dimensions. Reveals >30% performance gap between anchor-based tasks and holistic structural reasoning tasks in 17 MLLMs. Controlled ablations confirm the bottleneck lies in reasoning, not perception — models can see the elements but can't reason about the topology.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.15994",
+      "date": "2026-04-21",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260421-0404-socialgrid-a-benchmark-for-planning-and-social-reasoning-in-embo",
+      "title": "SocialGrid: A Benchmark for Planning and Social Reasoning in Embodied Multi-Agent Systems",
+      "summary": "Among Us-inspired multi-agent environment evaluating LLM agents on planning, task execution, and social reasoning. Even the strongest open model (GPT-OSS-120B) achieves below 60% task completion. Agents fail to detect deception at near-random chance regardless of scale, relying on shallow heuristics instead of accumulating behavioral evidence.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.16022",
+      "date": "2026-04-21",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "ai-20260421-0400-anthropic-launches-claude-design-and-claude-opus-4-7",
+      "title": "Anthropic Launches Claude Design & Claude Opus 4.7",
+      "summary": "Anthropic released Claude Design, a new Anthropic Labs product for creating visual work like designs, prototypes, and slides. Simultaneously dropped Claude Opus 4.7, its most powerful generally-available model to date, with improved coding, image analysis, and instruction-following. Pricing unchanged at $5/$25 per million input/output tokens.",
+      "tag": "PRODUCT",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-bernie-sanders-rallies-for-ai-worker-protections",
+      "title": "Bernie Sanders Rallies for AI Worker Protections",
+      "summary": "Sanders joined labor leaders to push for AI jobs protections, calling for a data center construction moratorium and warning manufacturing jobs could vanish within a decade without intervention.",
+      "tag": "POLICY",
+      "source": "Sanders.Senate",
+      "sourceUrl": "https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-google-reportedly-in-talks-to-let-pentagon-use-gemini-in-classif",
+      "title": "Google Reportedly in Talks to Let Pentagon Use Gemini in Classified Settings",
+      "summary": "Google is reversing its cautious military stance, reportedly negotiating a deal for the Pentagon to use Gemini in classified environments. Contract language mirrors OpenAI's \"all lawful purposes\" agreement, raising questions about autonomous weapons and surveillance guardrails.",
+      "tag": "POLICY",
+      "source": "Theinformation",
+      "sourceUrl": "https://www.theinformation.com/articles/google-pentagon-discuss-classified-ai-deal-company-rebuilds-military-ties",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-hugging-face-nvidia-nemotron-ocr-v2-gemma-4-and-safetensors-join",
+      "title": "Hugging Face: Nvidia Nemotron-OCR-v2, Gemma 4, and Safetensors Joins PyTorch Foundation",
+      "summary": "Notable open-source releases: Nvidia's Nemotron-OCR-v2 (fast multilingual OCR with synthetic data), Google's Gemma 4 (frontier multimodal on-device), and Safetensors officially joining the PyTorch Foundation for long-term governance.",
+      "tag": "RESEARCH",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-judge-blocks-pentagon-s-ban-on-anthropic-first-amendment-retalia",
+      "title": "Judge Blocks Pentagon's Ban on Anthropic — First Amendment Retaliation",
+      "summary": "A federal judge granted Anthropic a preliminary injunction against the Pentagon's supply-chain blacklisting, ruling it was likely illegal First Amendment retaliation for Anthropic's public stance against lethal autonomous weapons and mass surveillance. Final verdict pending.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/902149/anthropic-dod-pentagon-lawsuit-supply-chain-risk-injunction",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-openai-agents-sdk-evolution-native-sandbox-mcp-and-model-native-",
+      "title": "OpenAI Agents SDK Evolution: Native Sandbox, MCP, and Model-Native Harness",
+      "summary": "Major update to Agents SDK with configurable memory, sandbox-aware orchestration, native MCP support, Skills integration, AGENTS.md custom instructions, shell/code execution tools, and portable sandbox environments via Blaxel, Cloudflare, Daytona, E2B, Modal, and more.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/the-next-evolution-of-the-agents-sdk/",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-openai-codex-major-update-background-computer-use-memory-and-90-",
+      "title": "OpenAI Codex Major Update: Background Computer Use, Memory & 90+ Plugins",
+      "summary": "Codex now operates your computer alongside you — seeing, clicking, typing with its own cursor. Multiple agents can work on macOS in parallel. Added in-app browser, gpt-image-1.5 integration, memory for preferences, scheduled automations, 90+ new plugins (Atlassian, GitLab, CircleCI, etc.), and SSH remote devbox support.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/codex-for-almost-everything/",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-openai-introduces-gpt-rosalind-for-life-sciences",
+      "title": "OpenAI Introduces GPT-Rosalind for Life Sciences",
+      "summary": "New frontier reasoning model purpose-built for biology, drug discovery, and translational medicine. Optimized for chemistry, protein engineering, genomics workflows. Available as research preview in ChatGPT, Codex, and API. Partners include Amgen, Moderna, Allen Institute, Thermo Fisher.",
+      "tag": "RESEARCH",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-rosalind/",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-project-glasswing-anthropic-s-cybersecurity-alliance-with-mythos",
+      "title": "Project Glasswing: Anthropic's Cybersecurity Alliance with Mythos Preview",
+      "summary": "Anthropic debuted Claude Mythos Preview, its most powerful unreleased model, as part of Project Glasswing — a cybersecurity partnership with Nvidia, Google, AWS, Apple, Microsoft, JPMorgan Chase, and others. The model found thousands of high-severity vulnerabilities, including bugs in every major OS and browser, entirely autonomously. Anthropic committing $100M in usage credits.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260421-0400-samsung-teases-project-luna-ai-robot",
+      "title": "Samsung Teases Project Luna AI Robot",
+      "summary": "Samsung revealed Project Luna — a round-screen AI robot with a swiveling head, signaling Samsung's push into consumer AI hardware. Details shared via Fast Company exclusive.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-21",
+      "time": "04:00",
+      "category": "ai"
+    },
     {
       "id": "industry-20260421-0001-fda-moving-to-ease-peptide-restrictions-under-rfk-jr-s-maha-push",
       "title": "FDA Moving to Ease Peptide Restrictions Under RFK Jr.'s MAHA Push",
