@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T20:10:14.712Z",
+  "lastUpdated": "2026-04-22T22:14:14.276Z",
   "availableDates": [
     {
       "value": "2026-04-23",
@@ -259,6 +259,83 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260423-0804-openai-chatgpt-images-2-0-a-new-era-of-image-generation",
+      "title": "OpenAI ChatGPT Images 2.0 — \"A New Era of Image Generation\"",
+      "summary": "OpenAI launched ChatGPT Images 2.0, the next generation of its image generation capabilities integrated directly into ChatGPT. Details limited on page.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-chatgpt-images-2-0/",
+      "date": "2026-04-23",
+      "time": "08:04",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0804-pro-trump-ai-influencers-flooding-social-media-ahead-of-midterms",
+      "title": "Pro-Trump AI Influencers Flooding Social Media Ahead of Midterms",
+      "summary": "NYT found hundreds of fake AI-generated accounts on Instagram, TikTok, and Facebook pushing conservative voters to polls. AI avatar creation is becoming cheaper and easier for content farms. Raises questions about AI regulation and election integrity.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-23",
+      "time": "08:04",
+      "category": "ai"
+    },
+    {
+      "id": "global-20260423-0800-florida-ag-investigates-chatgpt-over-fatal-university-shooting",
+      "title": "Florida AG Investigates ChatGPT Over Fatal University Shooting",
+      "summary": "Florida Attorney-General James Uthmeier launched a criminal investigation into whether OpenAI's ChatGPT \"aided or abetted\" the 2025 Florida State University shooting that killed 2 and injured 6. Prosecutors subpoenaed OpenAI for training materials, safety policies, and records on reporting possible crimes. OpenAI says ChatGPT provided only factual public-source responses and did not encourage harm.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-0800-iran-seizes-two-ships-in-strait-of-hormuz-ceasefire-extended-ind",
+      "title": "Iran Seizes Two Ships in Strait of Hormuz; Ceasefire Extended Indefinitely",
+      "summary": "Trump extended the Iran ceasefire indefinitely after Pakistani mediation push. Iran simultaneously seized two cargo ships in the Strait of Hormuz, one \"heavily damaged.\" Iran's top negotiator says reopening Hormuz is \"impossible\" if US blockade continues. Pakistan pushing for Islamabad peace talks but no confirmed date.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-0800-iran-war-taking-toll-on-chinese-manufacturing-costs-up-20",
+      "title": "Iran War Taking Toll on Chinese Manufacturing — Costs Up 20%",
+      "summary": "Despite weathering Trump's tariffs with ~5% GDP growth, the US-Iran war is hitting China's export economy hard. Strait of Hormuz disruptions are driving petrochemical costs up ~20% for manufacturers in Guangdong. Factory orders declining as customers refuse higher prices. BBC reports workers struggling with uncertainty in Foshan and Guangzhou manufacturing hubs.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-0800-mythos-ai-cyber-tool-australian-firms-left-out-of-project-glassw",
+      "title": "Mythos AI Cyber Tool: Australian Firms Left Out of Project Glasswing",
+      "summary": "Anthropic's Claude Mythos — capable of autonomously finding and chaining vulnerabilities across millions of lines of code — is restricted to US firms (Microsoft, Apple, Cisco, Amazon, etc.) under Project Glasswing. Australian banks, power providers, and infrastructure agencies have no access. Former national cyber security adviser Alastair MacGibbon warns AI cyber capabilities are improving at a \"staggering\" rate on a 3-6 week cycle.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-0800-us-navy-declares-australia-ready-to-host-nuclear-subs-today",
+      "title": "US Navy Declares Australia Ready to Host Nuclear Subs \"Today\"",
+      "summary": "Admiral Samuel Paparo (US Indo-Pacific Command) told the Senate that HMAS Stirling is ready for US/UK nuclear subs immediately — ahead of the 2027 AUKUS timeline. Main constraint is industrial capacity: US must increase Virginia-class production from 1.3 to 2+ boats/year. Heritage Foundation remains sceptical — no submarine or arrival date officially named yet.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "08:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260423-0601-google-cloud-next-750m-for-ai-partner-ecosystem",
       "title": "☁️ Google Cloud Next: $750M for AI Partner Ecosystem",
