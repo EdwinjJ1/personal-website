@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T18:06:13.088Z",
+  "lastUpdated": "2026-04-22T20:10:14.712Z",
   "availableDates": [
     {
       "value": "2026-04-23",
@@ -259,6 +259,61 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260423-0601-google-cloud-next-750m-for-ai-partner-ecosystem",
+      "title": "☁️ Google Cloud Next: $750M for AI Partner Ecosystem",
+      "summary": "Google earmarked $750M to help Cloud partners sell AI agents to enterprises. Standout startups: Lovable ($400M ARR vibe-coding) launching enterprise coding agent, Notion ($11B valuation) using Gemini, Gamma ($2.1B valuation) using Nano Banana 2, ComfyUI, and more.",
+      "tag": "PRODUCT",
+      "source": "Techcrunch",
+      "sourceUrl": "https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/",
+      "date": "2026-04-23",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260423-0601-tim-cook-steps-down-as-apple-ceo-john-ternus-takes-over-sept-1",
+      "title": "🍎 Tim Cook Steps Down as Apple CEO — John Ternus Takes Over Sept 1",
+      "summary": "After 15 years at the helm, Tim Cook will become executive chairman. John Ternus (25-year Apple veteran, hardware engineering SVP) succeeds him. Johny Srouji promoted to Chief Hardware Officer. Apple's $4T market cap faces AI strategy questions under new leadership.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech/915213/tim-cook-apple-ceo-stepping-down-john-ternus",
+      "date": "2026-04-23",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260423-0601-threads-launches-live-chats-real-time-community-conversations",
+      "title": "💬 Threads Launches Live Chats — Real-Time Community Conversations",
+      "summary": "Meta is rolling out live chats within Threads Communities, starting with NBA playoff discussions. Users can talk in real-time with other community members. Feature will expand to other Community feeds in coming months.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-04-23",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260423-0601-gmail-ai-overviews-expands-to-business-users-ai-inbox-for-all",
+      "title": "📧 Gmail AI Overviews Expands to Business Users — AI Inbox for All",
+      "summary": "Gmail's AI Inbox (AI-powered to-do list replacing email list) and AI Overviews (search your inbox with AI summaries) are expanding from consumer AI Pro/Ultra subscribers to all Google Workspace business users. All consumer Gmail users now get suggested replies and Help Me Write for free.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/news/857883/google-gmail-ai-inbox-overviews",
+      "date": "2026-04-23",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260423-0601-spacex-signs-cursor-deal-60b-acquisition-option",
+      "title": "🚀 SpaceX Signs Cursor Deal — $60B Acquisition Option",
+      "summary": "SpaceX will partner with Cursor to develop next-gen \"coding and knowledge work AI\" using SpaceX's Colossus supercomputer. Deal includes an option to acquire Cursor for $60B or pay $10B for the work product later this year. Cursor was valued at $29.3B in November 2025.",
+      "tag": "PRODUCT",
+      "source": "Techcrunch",
+      "sourceUrl": "https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/",
+      "date": "2026-04-23",
+      "time": "06:01",
+      "category": "industry"
+    },
     {
       "id": "research-20260423-0405-curiosity-critic-tractable-intrinsic-reward-via-cumulative-predi",
       "title": "Curiosity-Critic: Tractable Intrinsic Reward via Cumulative Prediction Error Improvement",
