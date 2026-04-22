@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T10:25:31.330Z",
+  "lastUpdated": "2026-04-22T12:02:33.265Z",
   "availableDates": [
     {
       "value": "2026-04-22",
@@ -255,6 +255,17 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260422-2200-google-cloud-next-2026-750m-for-ai-agent-partnerships",
+      "title": "Google Cloud Next 2026: $750M for AI Agent Partnerships",
+      "summary": "Google earmarked $750M to help Cloud partners sell AI agents to enterprises. Standout startups: Lovable launching coding agent on Google marketplace ($400M ARR), Notion using Gemini for text/image ($11B valuation), Gamma using Nano Banana 2 ($2.1B valuation), Inferact (vLLM creators) accessing Nvidia GPUs via Google Cloud, ComfyUI offering Nano Banana 2 access.",
+      "tag": "PRODUCT",
+      "source": "Techcrunch",
+      "sourceUrl": "https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/",
+      "date": "2026-04-22",
+      "time": "22:00",
+      "category": "ai"
+    },
     {
       "id": "global-20260422-1600-starmer-jeered-as-mandelson-scandal-escalates",
       "title": "Starmer Jeered as Mandelson Scandal Escalates",
