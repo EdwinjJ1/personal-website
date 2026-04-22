@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-04-22T12:02:33.265Z",
+  "lastUpdated": "2026-04-22T18:06:13.088Z",
   "availableDates": [
+    {
+      "value": "2026-04-23",
+      "label": "April 23, 2026"
+    },
     {
       "value": "2026-04-22",
       "label": "April 22, 2026"
@@ -255,6 +259,171 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260423-0405-curiosity-critic-tractable-intrinsic-reward-via-cumulative-predi",
+      "title": "Curiosity-Critic: Tractable Intrinsic Reward via Cumulative Prediction Error Improvement",
+      "summary": "Introduces an intrinsic reward grounded in improvement of cumulative prediction error, reducing to a tractable per-step form: difference between current error and asymptotic error baseline. A learned critic co-trained alongside the world model estimates this baseline online, effectively separating epistemic (reducible) from aleatoric (irreducible) error. Outperforms prediction-error and visitation-count baselines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.18701",
+      "date": "2026-04-23",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "research-20260423-0405-easyrl-easy-samples-are-all-you-need-self-evolving-llms-via-data",
+      "title": "EasyRL: Easy Samples Are All You Need — Self-Evolving LLMs via Data-Efficient RL",
+      "summary": "Inspired by cognitive learning theory, EasyRL simulates the human learning curve: warm-up on easy labeled data, then progressively tackle harder unlabeled data via divide-and-conquer pseudo-labeling. Uses only 10% of labeled data while consistently outperforming SOTA baselines on math and science benchmarks. Accepted to ACL 2026 Findings.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.18639",
+      "date": "2026-04-23",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "research-20260423-0405-grove-visualizing-distributions-of-language-model-generations",
+      "title": "GROVE: Visualizing Distributions of Language Model Generations",
+      "summary": "Users typically evaluate LLMs via single outputs, missing distributional structure. GROVE represents multiple LM generations as overlapping paths through a text graph, revealing shared structure, branching points, and clusters. Three user studies (N=131) show graph summaries improve structural judgments while direct inspection remains better for details.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.18724",
+      "date": "2026-04-23",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "research-20260423-0405-neural-language-interpreter-gradient-based-program-synthesis-wit",
+      "title": "Neural Language Interpreter — Gradient-Based Program Synthesis with Self-Discovered Languages",
+      "summary": "Bridges symbolic and neural approaches: NLI learns its own discrete programming language end-to-end, discovers primitive operations, and uses a differentiable neural executor. At inference, gradient descent through the executor refines program guesses. Outperforms in-context learning, test-time training, and continuous latent program networks on combinatorial generalization tasks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.18907",
+      "date": "2026-04-23",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "research-20260423-0405-where-fake-citations-are-made-tracing-field-level-hallucination-",
+      "title": "Where Fake Citations Are Made: Tracing Field-Level Hallucination to Specific Neurons",
+      "summary": "Studied citation hallucination across 9 models and 108,000 references. Author names fail most often; reasoning-oriented distillation degrades recall. Hallucination signals don't generalize across academic fields. Identified sparse \"field-specific hallucination neurons\" in Qwen2.5-32B — amplifying them increases hallucination, suppressing them improves accuracy.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.18880",
+      "date": "2026-04-23",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "ai-20260423-0400-anthropic-launches-claude-design-by-anthropic-labs",
+      "title": "Anthropic launches Claude Design by Anthropic Labs",
+      "summary": "Anthropic released Claude Design, a new product powered by Claude Opus 4.7 that lets users collaborate with Claude to create designs, prototypes, pitch decks, marketing materials, and more. Available as a research preview for paying subscribers.",
+      "tag": "PRODUCT",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/claude-design-anthropic-labs",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-anthropic-launches-claude-mythos-preview-autonomous-cybersecurit",
+      "title": "Anthropic launches Claude Mythos Preview — autonomous cybersecurity model",
+      "summary": "Anthropic debuted Claude Mythos Preview, a powerful new AI model that can autonomously find and develop exploits for vulnerabilities in every major OS and browser. Available only to Project Glasswing partners (Google, Amazon, Apple, Microsoft, Nvidia, JPMorgan, Cisco, CrowdStrike, etc.) due to security concerns — not publicly released. Anthropic committing up to $100M in usage credits.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-anthropic-releases-claude-opus-4-7",
+      "title": "Anthropic releases Claude Opus 4.7",
+      "summary": "Anthropic's newest flagship model Claude Opus 4.7 powers the new Claude Design product, representing continued iteration on their frontier model lineup.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/913184/anthropic-claude-opus-4-7-cybersecurity",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-anthropic-s-model-capability-initiative-controversy",
+      "title": "Anthropic's \"Model Capability Initiative\" controversy",
+      "summary": "Reports emerged of a program that records mouse activity, keystrokes, and screenshots for AI training data, raising privacy concerns among users and researchers.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-google-launches-ai-inbox-for-gmail-personalized-to-do-list-from-",
+      "title": "Google launches AI Inbox for Gmail — personalized to-do list from your emails",
+      "summary": "Google unveiled a new AI Inbox view for Gmail that replaces the traditional email list with AI-generated personalized to-dos and topic summaries. Rolling out to trusted testers in the US for consumer accounts first. Gmail AI Overviews also expanding to business users.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/news/857883/google-gmail-ai-inbox-overviews",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-google-restores-hey-google-free-conversation-for-google-home",
+      "title": "Google restores \"Hey Google\"-free conversation for Google Home",
+      "summary": "Google Home users can once again ask follow-up questions to Google's voice assistant without saying \"Hey Google\" every time, without needing a paid subscription. The feature now works with all supported languages and regions.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-openai-introduces-gpt-rosalind-for-life-sciences-research",
+      "title": "OpenAI introduces GPT-Rosalind for life sciences research",
+      "summary": "OpenAI released GPT-Rosalind, a specialized model targeting life sciences research applications. This follows their pattern of domain-specific model releases alongside general-purpose updates.",
+      "tag": "RESEARCH",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/news/",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-openai-introduces-workspace-agents-in-chatgpt",
+      "title": "OpenAI introduces Workspace Agents in ChatGPT",
+      "summary": "OpenAI launched workspace agents in ChatGPT, allowing users to delegate complex multi-step workflows. Simultaneously, OpenAI added WebSocket support to the Responses API for faster agentic workflows, and introduced a Privacy Filter research feature.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/news/",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-openai-scales-codex-to-enterprises-worldwide",
+      "title": "OpenAI scales Codex to enterprises worldwide",
+      "summary": "Following the launch of \"Codex for (almost) everything\" on April 16, OpenAI is now scaling its coding agent Codex to enterprise customers globally, along with the next evolution of the Agents SDK.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/news/",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260423-0400-trump-signals-potential-deal-with-anthropic-for-pentagon-use",
+      "title": "Trump signals potential deal with Anthropic for Pentagon use",
+      "summary": "After a dramatic clash where the Pentagon declared Anthropic a supply chain risk and Trump ordered all federal agencies to stop using Claude, tensions are easing. Trump told CNBC a deal is \"possible\" after Dario Amodei met White House officials to discuss the Mythos model. Amazon also investing up to another $25B in Anthropic.",
+      "tag": "POLICY",
+      "source": "CNBC",
+      "sourceUrl": "https://www.cnbc.com/2026/04/21/trump-anthropic-department-defense-deal.html",
+      "date": "2026-04-23",
+      "time": "04:00",
+      "category": "ai"
+    },
     {
       "id": "ai-20260422-2200-google-cloud-next-2026-750m-for-ai-agent-partnerships",
       "title": "Google Cloud Next 2026: $750M for AI Agent Partnerships",
