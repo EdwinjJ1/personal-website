@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-22T22:14:14.276Z",
+  "lastUpdated": "2026-04-23T00:18:17.376Z",
   "availableDates": [
     {
       "value": "2026-04-23",
@@ -259,6 +259,17 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260423-1001-openai-launches-chatgpt-for-clinicians-free-for-all-verified-med",
+      "title": "OpenAI Launches ChatGPT for Clinicians — Free for All Verified Medical Professionals",
+      "summary": "ChatGPT for Clinicians supports clinical documentation and medical research. Free for verified physicians, NPs, PAs, and pharmacists in the US. Clinician usage has more than doubled YoY, with 72% of US physicians now using AI in practice (up from 48%). Also introducing HealthBench Professional for clinical model evaluation.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/making-chatgpt-better-for-clinicians/",
+      "date": "2026-04-23",
+      "time": "10:01",
+      "category": "ai"
+    },
     {
       "id": "ai-20260423-0804-openai-chatgpt-images-2-0-a-new-era-of-image-generation",
       "title": "OpenAI ChatGPT Images 2.0 — \"A New Era of Image Generation\"",
