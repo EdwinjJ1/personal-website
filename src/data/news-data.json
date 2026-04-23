@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T00:18:17.376Z",
+  "lastUpdated": "2026-04-23T02:23:44.068Z",
   "availableDates": [
     {
       "value": "2026-04-23",
@@ -259,6 +259,28 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260423-1201-google-teases-gemini-powered-siri-upgrade-at-cloud-next",
+      "title": "🍎 Google Teases Gemini-Powered Siri Upgrade at Cloud Next",
+      "summary": "Google Cloud CEO Thomas Kurian showcased a giant Apple logo on stage, boasting about Gemini as Siri's big new customer. The upgraded Siri is still coming \"later this year.\"",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-04-23",
+      "time": "12:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260423-1201-google-75-of-all-new-code-is-ai-generated",
+      "title": "📊 Google: 75% of All New Code is AI-Generated",
+      "summary": "Sundar Pichai revealed at Cloud Next that 75% of Google's new code is AI-generated, up from 50% last fall. Sergey Brin created a \"strike team\" to catch up to Anthropic on AI coding agents — Anthropic writes 70-90% of its code with Claude Code.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/tech",
+      "date": "2026-04-23",
+      "time": "12:01",
+      "category": "industry"
+    },
     {
       "id": "ai-20260423-1001-openai-launches-chatgpt-for-clinicians-free-for-all-verified-med",
       "title": "OpenAI Launches ChatGPT for Clinicians — Free for All Verified Medical Professionals",
