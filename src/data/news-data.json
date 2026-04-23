@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-23T02:23:44.068Z",
+  "lastUpdated": "2026-04-23T06:09:45.140Z",
   "availableDates": [
     {
       "value": "2026-04-23",
@@ -259,6 +259,39 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260423-1600-aukus-submarine-contract-delays-virginia-class-production-at-ris",
+      "title": "AUKUS Submarine Contract Delays — Virginia-Class Production at Risk",
+      "summary": "Critical Block VI construction contract remains unsigned 28 months after Congressional authorization (previous comparable took 20 months). Rep. Joe Courtney warned of \"uncertainty for suppliers and shipbuilders.\" Congressman says \"clearly there are entities or bureaucrats in the Trump administration that are not all in on this goal.\" Australia expects 3+ Virginia-class subs in the 2030s.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-1600-iran-strait-of-hormuz-not-possible-to-reopen-ceasefire-violation",
+      "title": "Iran: Strait of Hormuz \"Not Possible\" to Reopen — Ceasefire Violations",
+      "summary": "Iran's chief negotiator Ghalibaf says US naval blockade of Iranian ports amounts to taking the global economy \"hostage.\" Trump's ceasefire extension is now open-ended with no deadline. White House says Trump is \"satisfied\" with the blockade and \"understands Iran is in a very weak position.\" Iran seized two more cargo ships for \"inspection\" Wednesday. JD Vance still in the US — Pakistan talks not yet begun.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260423-1600-us-navy-secretary-phelan-out-effective-immediately-pentagon-shak",
+      "title": "US Navy Secretary Phelan Out \"Effective Immediately\" — Pentagon Shakeup",
+      "summary": "John Phelan leaving the Navy Secretary post immediately. Undersecretary Hung Cao as acting. Latest in a string of firings — Hegseth has removed 15+ senior military officers since taking over. Phelan was a civilian businessman and major Trump donor, sworn in March 2025. Departure comes amid the Iran war and Hormuz blockade.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-23",
+      "time": "16:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260423-1201-google-teases-gemini-powered-siri-upgrade-at-cloud-next",
       "title": "🍎 Google Teases Gemini-Powered Siri Upgrade at Cloud Next",
