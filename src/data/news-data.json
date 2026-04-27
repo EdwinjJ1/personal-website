@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T18:13:07.313Z",
+  "lastUpdated": "2026-04-27T20:08:09.654Z",
   "availableDates": [
     {
       "value": "2026-04-28",
@@ -279,6 +279,61 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260428-0601-eli-lilly-acquires-ajax-for-clinical-stage-myelofibrosis-therapy",
+      "title": "Eli Lilly Acquires Ajax for Clinical-Stage Myelofibrosis Therapy",
+      "summary": "Lilly continues its near-weekly acquisition spree, buying Ajax for its clinical-stage myelofibrosis treatment. Specific deal terms not yet disclosed. Myelofibrosis is a rare bone marrow disorder with limited treatment options.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0601-erasca-s-ras-targeting-pill-shows-40-tumor-shrinkage-in-pancreat",
+      "title": "Erasca's RAS-Targeting Pill Shows 40% Tumor Shrinkage in Pancreatic Cancer",
+      "summary": "Erasca reported ERAS-0015 shrank tumors in 40% of advanced pancreatic cancer patients and 62% of NSCLC patients in preliminary US/China studies. Compared favorably to Revolution Medicines' daraxonrasib, which recently doubled overall survival in pancreatic cancer.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0601-fda-approves-regeneron-s-otarmeni-first-gene-therapy-for-inherit",
+      "title": "FDA Approves Regeneron's Otarmeni — First Gene Therapy for Inherited Hearing Loss",
+      "summary": "FDA approved Otarmeni (lunsotogene parvec) for children and adults with OTOF-related deafness. In the pivotal trial, 80% of participants achieved moderate-to-normal hearing within 6 months. First therapy approved under FDA's \"national priority\" voucher program, offered at no cost to eligible patients.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0601-trump-executive-order-lifts-psychedelics-biotechs-stocks-surge",
+      "title": "Trump Executive Order Lifts Psychedelics Biotechs — Stocks Surge",
+      "summary": "White House executive order directs FDA to provide \"national priority vouchers\" for psychedelic medicines classified as breakthrough therapies, and opens Right to Try pathway. Enveric Biosciences nearly tripled; other developers saw high single-digit gains. Jefferies called it \"an official stamp of validation to the class.\"",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0601-veradermics-oral-hair-loss-drug-succeeds-in-late-stage-trial",
+      "title": "Veradermics' Oral Hair Loss Drug Succeeds in Late-Stage Trial",
+      "summary": "VDPHL01, an oral pill for hair loss, showed 30-33 new hairs/cm² over 6 months vs 7 for placebo. 79-86% of men reported visible improvement. Oral mechanism differentiates from topical minoxidil and injected treatments.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "06:01",
+      "category": "industry"
+    },
     {
       "id": "research-20260428-0406-agentic-world-modeling-foundations-capabilities-laws-and-beyond",
       "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
