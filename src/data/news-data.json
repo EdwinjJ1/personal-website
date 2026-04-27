@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T14:10:07.953Z",
+  "lastUpdated": "2026-04-27T16:09:08.163Z",
   "availableDates": [
     {
       "value": "2026-04-28",
@@ -279,6 +279,17 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260428-0201-openai-and-microsoft-announce-amended-partnership-major-deal-res",
+      "title": "OpenAI and Microsoft Announce Amended Partnership — Major Deal Restructuring",
+      "summary": "OpenAI can now serve products across ANY cloud provider (not just Azure-first). Microsoft's IP license becomes non-exclusive through 2032. Microsoft no longer pays revenue share to OpenAI. Revenue share FROM OpenAI to Microsoft continues through 2030 with a total cap. Microsoft remains primary cloud partner and major shareholder.",
+      "tag": "BREAKING",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+      "date": "2026-04-28",
+      "time": "02:01",
+      "category": "ai"
+    },
     {
       "id": "research-20260428-0004-preference-heads-in-large-language-models-a-mechanistic-framewor",
       "title": "Preference Heads in Large Language Models: A Mechanistic Framework for Interpretable Personalization (ACL 2026)",
