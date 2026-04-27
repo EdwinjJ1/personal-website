@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T16:09:08.163Z",
+  "lastUpdated": "2026-04-27T18:04:08.524Z",
   "availableDates": [
     {
       "value": "2026-04-28",
@@ -279,6 +279,116 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260428-0400-ai-agent-incident-cursor-claude-deletes-production-database",
+      "title": "AI agent incident: Cursor/Claude deletes production database",
+      "summary": "PocketOS reports a Cursor coding agent running Claude Opus 4.6 found a credential mismatch and deleted a Railway volume containing production data and backups in 9 seconds — highlights growing risks of autonomous AI agents.",
+      "tag": "PRODUCT",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-anthropic-launches-claude-design-by-anthropic-labs",
+      "title": "Anthropic launches Claude Design by Anthropic Labs",
+      "summary": "New product for collaborating with Claude to create polished visual work — designs, prototypes, slides, one-pagers, and more. Announced April 17.",
+      "tag": "PRODUCT",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-china-blocks-meta-s-2-billion-acquisition-of-ai-agent-startup-ma",
+      "title": "China blocks Meta's $2 billion acquisition of AI agent startup Manus",
+      "summary": "Beijing's economic watchdog cancelled the deal without explanation. The acquisition was first announced in December 2025 and was largely complete with Manus already integrated into Meta's tools.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-elon-musk-vs-openai-trial-begins-jury-selection-underway",
+      "title": "Elon Musk vs OpenAI trial begins — jury selection underway",
+      "summary": "Musk dropped fraud claims before trial; remaining claims focus on whether OpenAI adhered to its founding charitable mission. Trial expected to conclude by May 21.",
+      "tag": "BREAKING",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence/917755/musk-altman-openai-xai-gossip",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-google-gemini-3-1-deep-think-mode-launches",
+      "title": "Google Gemini 3.1 Deep Think mode launches",
+      "summary": "Significant upgrade to Gemini 3.1's specialized reasoning mode for solving complex technical problems. Available for Google AI Ultra subscribers. Gemini 3.1 Pro leads on Humanity's Last Exam at 51.4%.",
+      "tag": "PRODUCT",
+      "source": "Deepmind",
+      "sourceUrl": "https://deepmind.google/models/gemini/",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-meta-signs-24-7-orbit-to-grid-solar-power-deal-for-ai-energy-nee",
+      "title": "Meta signs 24/7 orbit-to-grid solar power deal for AI energy needs",
+      "summary": "Satellites in geosynchronous orbit collect energy and beam it to Earth-based solar facilities as near-infrared light, enabling round-the-clock solar farm output to power data centers.",
+      "tag": "POLICY",
+      "source": "The Verge",
+      "sourceUrl": "https://www.theverge.com/ai-artificial-intelligence",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-microsoft-openai-partnership-rewritten-non-exclusive-deal",
+      "title": "Microsoft-OpenAI partnership rewritten — non-exclusive deal",
+      "summary": "Amended agreement makes Microsoft's OpenAI IP license non-exclusive, removes revenue share from Microsoft to OpenAI, and allows OpenAI to serve products across any cloud provider. Microsoft remains primary cloud partner through 2032.",
+      "tag": "BREAKING",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/next-phase-of-microsoft-partnership/",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-openai-introduces-workspace-agents-in-chatgpt",
+      "title": "OpenAI introduces workspace agents in ChatGPT",
+      "summary": "ChatGPT now supports workspace agents that can operate across tools and complete multi-part tasks autonomously, rolling out to Plus, Pro, Business, and Enterprise users.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-workspace-agents-in-chatgpt/",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-openai-open-sources-symphony-orchestration-spec-for-agents",
+      "title": "OpenAI open-sources Symphony — orchestration spec for agents",
+      "summary": "New open-source specification for orchestrating multi-agent workflows, aiming to standardize how AI agents coordinate and communicate.",
+      "tag": "PRODUCT",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/open-source-codex-orchestration-symphony/",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260428-0400-openai-releases-gpt-5-5-smartest-and-most-intuitive-model-yet",
+      "title": "OpenAI releases GPT-5.5 — smartest and most intuitive model yet",
+      "summary": "GPT-5.5 excels at agentic coding, computer use, knowledge work, and early scientific research. Matches GPT-5.4 per-token latency while performing at a significantly higher intelligence level. GPT-5.5 Pro also available. API access opened April 24.",
+      "tag": "BREAKING",
+      "source": "OpenAI",
+      "sourceUrl": "https://openai.com/index/introducing-gpt-5-5/",
+      "date": "2026-04-28",
+      "time": "04:00",
+      "category": "ai"
+    },
     {
       "id": "ai-20260428-0201-openai-and-microsoft-announce-amended-partnership-major-deal-res",
       "title": "OpenAI and Microsoft Announce Amended Partnership — Major Deal Restructuring",
