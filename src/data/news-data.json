@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-04-27T13:08:22.209Z",
+  "lastUpdated": "2026-04-27T14:10:07.953Z",
   "availableDates": [
+    {
+      "value": "2026-04-28",
+      "label": "April 28, 2026"
+    },
     {
       "value": "2026-04-27",
       "label": "April 27, 2026"
@@ -275,6 +279,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260428-0004-preference-heads-in-large-language-models-a-mechanistic-framewor",
+      "title": "Preference Heads in Large Language Models: A Mechanistic Framework for Interpretable Personalization (ACL 2026)",
+      "summary": "Introduces Differential Preference Steering (DPS), a training-free framework that identifies sparse \"Preference Heads\" — attention heads encoding user-specific stylistic and topical preferences. Computes a Preference Contribution Score for each head via causal masking, then amplifies preference-aligned logits during decoding. Consistent gains in personalization fidelity while preserving coherence.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22345",
+      "date": "2026-04-28",
+      "time": "00:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0004-shared-lexical-task-representations-explain-behavioral-variabili",
+      "title": "Shared Lexical Task Representations Explain Behavioral Variability in LLMs",
+      "summary": "Identifies \"lexical task heads\" — attention heads whose outputs literally describe the task — that are shared across different prompting styles (instruction vs few-shot). Behavioral variation between prompts is explained by how strongly these heads are activated. Failures are sometimes due to competing task representations diluting the target task signal.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22027",
+      "date": "2026-04-28",
+      "time": "00:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0004-when-ai-speaks-whose-values-does-it-express-a-cross-cultural-aud",
+      "title": "When AI Speaks, Whose Values Does It Express? A Cross-Cultural Audit of Individualism-Collectivism Bias in LLMs",
+      "summary": "Tested Claude Sonnet 4.5, GPT-5.4, and Gemini 2.5 Flash across 10 countries, 7 languages, 840 scored responses. All three consistently give Western individualist advice even to collectivist societies (mean gap +0.76/5, p<0.001). Gap largest for Nigeria (+1.85) and India (+0.82). Japan is the sole exception where AI over-applies collectivist stereotypes. Claude and GPT show nearly identical bias magnitude; Gemini lower but still significant.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22153",
+      "date": "2026-04-28",
+      "time": "00:04",
+      "category": "research"
+    },
+    {
+      "id": "industry-20260428-0001-covid-19-now-effectively-a-seasonal-respiratory-virus-stat-analy",
+      "title": "Covid-19 Now Effectively a Seasonal Respiratory Virus — STAT Analysis",
+      "summary": "Experts say Covid has become similar to flu/RSV for most people. Virtually everyone now has some immunity. Booster recommendations narrowing to elderly, immunocompromised, and infants. Two consecutive winters with flu, not Covid, as dominant respiratory illness.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0001-motif-neurotech-gets-fda-nod-for-brain-implant-in-a-hat-for-depr",
+      "title": "Motif Neurotech Gets FDA Nod for Brain-Implant-in-a-Hat for Depression",
+      "summary": "FDA approved Motif Neurotech's feasibility trial for a blueberry-sized brain implant activated by a wearable hat for treatment-resistant depression. Uses electrical pulses similar to TMS but in a minimally invasive, daily wearable form factor.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0001-oruka-therapeutics-once-yearly-psoriasis-injection-shows-63-comp",
+      "title": "Oruka Therapeutics: Once-Yearly Psoriasis Injection Shows 63% Complete Clearance",
+      "summary": "ORKA-001 achieved 63% complete skin clearance in mid-stage trial. Updated analysis supports once-yearly injection schedule. Could rival Skyrizi and Bimzelx with fewer injections — major patient compliance advantage.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260428-0001-veradermics-hair-loss-pill-succeeds-in-late-stage-trial",
+      "title": "Veradermics Hair Loss Pill Succeeds in Late-Stage Trial",
+      "summary": "Oral drug VDPHL01 grew 30-33 hairs/cm² over 6 months vs 7 for placebo. 79-86% of men reported visible improvement. First oral hair loss drug to reach late-stage success — could disrupt the $4B+ hair loss market dominated by topical treatments (minoxidil) and oral finasteride.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:01",
+      "category": "industry"
+    },
+    {
+      "id": "global-20260428-0000-coalition-unveils-800m-fuel-security-plan-double-reserves-to-60-",
+      "title": "Coalition Unveils $800M Fuel Security Plan — Double Reserves to 60 Days",
+      "summary": "Angus Taylor announced a plan to double Australia's minimum fuel stockholding obligation to 60 days by 2030, backed by an $800M Australian Fuel Security Facility for 1+ billion litres extra onshore storage. Current reserves: 44 days petrol, 33 days diesel, 30 days jet fuel. Direct response to Iran war and Hormuz Strait disruption.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0000-kim-jong-un-opens-memorial-for-nk-soldiers-killed-in-ukraine-dee",
+      "title": "Kim Jong Un Opens Memorial for NK Soldiers Killed in Ukraine — Deepens Russia Alliance",
+      "summary": "Kim and Russian Defence Minister Belousov unveiled memorial museum in Pyongyang. ~15,000 NK troops sent to Russia, ~2,000 estimated killed. Belousov discussed long-term military co-operation. Putin-Kim mutual defence treaty from June 2024 activated. NK receiving food, money, and technical help in return.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0000-whcd-shooting-suspect-cole-allen-due-in-federal-court-monday",
+      "title": "WHCD Shooting Suspect Cole Allen Due in Federal Court Monday",
+      "summary": "Suspect faces charges of assault of a federal officer and using a firearm during a crime of violence. White House says Trump \"stands by\" Secret Service. Trump told Fox News suspect \"had a lot of hatred in his heart.\" Kerry Kennedy (RFK's daughter) also in attendance during shooting.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "00:00",
+      "category": "global"
+    },
     {
       "id": "ai-20260427-2201-china-blocks-meta-s-2b-acquisition-of-ai-agent-startup-manus",
       "title": "China Blocks Meta's $2B Acquisition of AI Agent Startup Manus",
