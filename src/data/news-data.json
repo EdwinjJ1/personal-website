@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T18:04:08.524Z",
+  "lastUpdated": "2026-04-27T18:13:07.313Z",
   "availableDates": [
     {
       "value": "2026-04-28",
@@ -279,6 +279,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260428-0406-agentic-world-modeling-foundations-capabilities-laws-and-beyond",
+      "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
+      "summary": "Comprehensive survey establishing the field of \"agentic world modeling\" — the ability of AI agents to build internal models of environment dynamics. As AI moves from text generation to goal-directed interaction with the real world, world modeling becomes the central bottleneck for agents that manipulate objects, navigate environments, and plan multi-step actions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22748",
+      "date": "2026-04-28",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0406-how-do-ai-agents-spend-your-money-analyzing-and-predicting-token",
+      "title": "How Do AI Agents Spend Your Money? Analyzing and Predicting Token Consumption in Agentic Coding Tasks",
+      "summary": "First systematic study of token consumption patterns in agentic coding tasks across 8 frontier LLMs on SWE-bench Verified. Finds agentic tasks consume 1000x more tokens than simple code reasoning, with input tokens driving cost. Token usage is highly stochastic (30x variance on same task), and models like Kimi-K2 and Claude Sonnet 4.5 consume 1.5M+ more tokens than GPT-5 for identical tasks. Frontier models systematically underestimate their own token costs.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22750",
+      "date": "2026-04-28",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0406-quantclaw-precision-where-it-matters-for-openclaw",
+      "title": "QuantClaw: Precision Where It Matters for OpenClaw",
+      "summary": "Analyzes quantization sensitivity across diverse agent workflows in OpenClaw, showing precision requirements are highly task-dependent. Proposes QuantClaw, a plug-and-play precision routing plugin that dynamically assigns quantization levels based on task characteristics. Achieves up to 21.4% cost savings and 15.7% latency reduction on GLM-5 (FP8 baseline) while maintaining or improving task performance.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22577",
+      "date": "2026-04-28",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0406-spend-less-fit-better-budget-efficient-scaling-law-fitting-via-a",
+      "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
+      "summary": "Formulates scaling-law fitting as budget-aware sequential experimental design. Proposes an uncertainty-aware method that sequentially allocates experimental budget toward the most informative runs. Consistently outperforms classical baselines and approaches full-set performance using only ~10% of total training budget. Code open-sourced.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22753",
+      "date": "2026-04-28",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260428-0406-thinking-without-words-efficient-latent-reasoning-with-abstract-",
+      "title": "Thinking Without Words: Efficient Latent Reasoning with Abstract Chain-of-Thought",
+      "summary": "Proposes Abstract Chain-of-Thought, a post-training mechanism where LLMs produce short sequences from a reserved vocabulary instead of natural language CoT. Uses policy iteration warm-up (alternating masked SFT and self-distillation) followed by RL optimization. Achieves up to 11.6x fewer reasoning tokens with comparable performance on math, instruction-following, and multi-hop reasoning. An emergent power law distribution over abstract tokens appears naturally.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.22709",
+      "date": "2026-04-28",
+      "time": "04:06",
+      "category": "research"
+    },
     {
       "id": "ai-20260428-0400-ai-agent-incident-cursor-claude-deletes-production-database",
       "title": "AI agent incident: Cursor/Claude deletes production database",
