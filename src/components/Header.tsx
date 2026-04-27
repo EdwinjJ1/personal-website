@@ -9,6 +9,7 @@ import ScatterText from '@/components/ScatterText';
 
 const NAV_ITEMS = [
   { label: 'News',     href: '/news' },
+  { label: 'Friends',  href: '/friends' },
   { label: 'Blog',     href: '/blog' },
   { label: 'Projects', href: '/projects' },
   { label: 'About',    href: '/about' },
