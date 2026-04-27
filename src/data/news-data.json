@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-27T20:08:09.654Z",
+  "lastUpdated": "2026-04-27T22:12:11.060Z",
   "availableDates": [
     {
       "value": "2026-04-28",
@@ -279,6 +279,61 @@
     }
   ],
   "news": [
+    {
+      "id": "global-20260428-0800-abc-column-apple-s-tim-cook-swallowed-by-ai-revolution-ternus-er",
+      "title": "ABC Column: Apple's Tim Cook \"Swallowed\" by AI Revolution — Ternus Era Begins",
+      "summary": "Analysis piece argues Cook's cautious approach to AI and prioritization of privacy became a \"dragging anchor\" in the AI race. Apple's $4T valuation under his 14-year reign, but investors increasingly questioned AI underspending. John Ternus takes over September 1.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0800-australian-cpi-data-drops-tomorrow-oil-crisis-and-iran-war-drivi",
+      "title": "Australian CPI Data Drops Tomorrow — Oil Crisis and Iran War Driving Inflation Uncertainty",
+      "summary": "ABS releases March CPI data on April 28. The Iran war has caused oil price spikes directly affecting petrol costs in Australia. The RBA watches CPI closely for rate decisions. Monthly CPI is more volatile but gives a quicker read on inflation trajectory.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0800-king-charles-meets-trump-at-white-house-first-uk-state-visit-by-",
+      "title": "King Charles Meets Trump at White House — First UK State Visit by Reigning Monarch in Nearly 20 Years",
+      "summary": "King Charles and Queen Camilla officially began the first US state visit by a reigning UK monarch in nearly two decades. The visit comes amid complex US-UK trade dynamics and ongoing tensions over technology regulation.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0800-penny-wong-visits-china-japan-south-korea-navigating-regional-te",
+      "title": "Penny Wong Visits China, Japan, South Korea — Navigating Regional Tensions and Trade",
+      "summary": "Australia's Foreign Minister travels to three key Asian partners this week. China-Japan axis is the most volatile relationship. China remains Australia's largest trading partner despite strategic tensions. The trip comes amid global trade war uncertainty and China's recent blocking of Meta's $2B Manus acquisition.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "08:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260428-0800-trump-shooting-at-white-house-correspondents-dinner-suspect-char",
+      "title": "Trump Shooting at White House Correspondents' Dinner — Suspect Charged with Attempted Assassination",
+      "summary": "Cole Tomas Allen, 31, armed with shotgun, handgun and knives, breached a security checkpoint at the Washington Hilton during the WH Correspondents' Dinner. A federal agent was wounded but is expected to recover. Trump defended Secret Service response; White House Chief of Staff Susie Wiles will review protocols this week.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-28",
+      "time": "08:00",
+      "category": "global"
+    },
     {
       "id": "industry-20260428-0601-eli-lilly-acquires-ajax-for-clinical-stage-myelofibrosis-therapy",
       "title": "Eli Lilly Acquires Ajax for Clinical-Stage Myelofibrosis Therapy",
