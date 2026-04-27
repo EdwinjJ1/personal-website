@@ -73,8 +73,54 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const personJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: 'Evan Lin',
+    alternateName: 'Edwin Jia',
+    url: SITE_URL,
+    image: `${SITE_URL}/profile.jpg`,
+    jobTitle: 'Computer Science Student',
+    description:
+      'Computer Science student at UNSW Sydney, former startup founder, building things in AI and software engineering.',
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'University of New South Wales',
+      url: 'https://www.unsw.edu.au',
+    },
+    knowsAbout: [
+      'Artificial Intelligence',
+      'Machine Learning',
+      'Software Engineering',
+      'Web Development',
+      'Entrepreneurship',
+    ],
+    sameAs: [
+      'https://github.com/EdwinjJ1',
+    ],
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Evan Lin',
+    url: SITE_URL,
+    inLanguage: 'en',
+    author: { '@type': 'Person', name: 'Evan Lin', url: SITE_URL },
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+        />
+      </head>
       <body className={`${inter.className}`} style={{backgroundColor: '#1a1816', color: '#e0d8cc'}} suppressHydrationWarning={true}>
         <Galaxy
           density={1}
