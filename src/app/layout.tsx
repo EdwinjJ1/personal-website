@@ -4,9 +4,62 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const SITE_URL = "https://evanlin.site";
+
 export const metadata: Metadata = {
-  title: "Evan's Portfolio",
-  description: "A personal portfolio website for Evan.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Evan Lin — CS @ UNSW · AI · Builder",
+    template: "%s · Evan Lin",
+  },
+  description:
+    "Personal site of Evan Lin — Computer Science student at UNSW Sydney. Notes, projects, and news on AI, software engineering, and entrepreneurship.",
+  applicationName: "Evan Lin",
+  authors: [{ name: "Evan Lin", url: SITE_URL }],
+  creator: "Evan Lin",
+  keywords: [
+    "Evan Lin",
+    "UNSW",
+    "Computer Science",
+    "AI",
+    "Personal Website",
+    "Portfolio",
+    "Blog",
+  ],
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    siteName: "Evan Lin",
+    title: "Evan Lin — CS @ UNSW · AI · Builder",
+    description:
+      "Personal site of Evan Lin — Computer Science student at UNSW Sydney. Notes, projects, and news on AI, software engineering, and entrepreneurship.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Evan Lin — evanlin.site",
+      },
+    ],
+    locale: "en_AU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Evan Lin — CS @ UNSW · AI · Builder",
+    description:
+      "Personal site of Evan Lin — Computer Science student at UNSW Sydney.",
+    images: ["/og-image.png"],
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icons/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icons/favicon-16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [{ url: "/icons/apple-icon.png", sizes: "180x180" }],
+  },
+  robots: { index: true, follow: true },
 };
 
 import Header from '@/components/Header';
