@@ -1,0 +1,332 @@
+[
+  {
+    "id": "01-evan-walk-sheet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "01-evan-walk-sheet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. A 4x4 sprite sheet of Evan, a modern creator character in dark jacket with warm gold accent, four-direction walking animation frames, each frame centered in a 256px cell, transparent background.",
+    "raw": "/media/pixel/raw/01-evan-walk-sheet.png",
+    "runtime": "/media/pixel/sprites/01-evan-walk-sheet.png",
+    "skipped": true
+  },
+  {
+    "id": "02-evan-idle-sheet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "02-evan-idle-sheet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. A 4x4 sprite sheet of Evan idle poses, same character as walk sheet, neutral confident stance, four directions, centered in 256px cells, transparent background.",
+    "raw": "/media/pixel/raw/02-evan-idle-sheet.png",
+    "runtime": "/media/pixel/sprites/02-evan-idle-sheet.png",
+    "skipped": true
+  },
+  {
+    "id": "03-evan-interact-sheet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "03-evan-interact-sheet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. A 4x4 sprite sheet of Evan interaction poses: pressing terminal, opening cabinet, pointing to sign, holding camera, same outfit, transparent background.",
+    "raw": "/media/pixel/raw/03-evan-interact-sheet.png",
+    "runtime": "/media/pixel/sprites/03-evan-interact-sheet.png",
+    "skipped": true
+  },
+  {
+    "id": "04-evan-sit-sheet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "04-evan-sit-sheet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. A 4x4 sprite sheet of Evan sitting at a studio chair and desk terminal, same character, top-down slight isometric, transparent background.",
+    "raw": "/media/pixel/raw/04-evan-sit-sheet.png",
+    "runtime": "/media/pixel/sprites/04-evan-sit-sheet.png",
+    "skipped": true
+  },
+  {
+    "id": "05-visitor-npc",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "05-visitor-npc.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Single visitor NPC sprite, standing, top-down slight isometric pixel art, dark night-map palette with tiny cyan name-tag glow, transparent background.",
+    "raw": "/media/pixel/raw/05-visitor-npc.png",
+    "runtime": "/media/pixel/sprites/05-visitor-npc.png",
+    "skipped": true
+  },
+  {
+    "id": "06-photographer-npc",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "06-photographer-npc.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Single photographer NPC sprite with camera strap and small softbox glow, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/06-photographer-npc.png",
+    "runtime": "/media/pixel/sprites/06-photographer-npc.png",
+    "skipped": true
+  },
+  {
+    "id": "07-engineer-npc",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "07-engineer-npc.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Single engineer NPC sprite with compact laptop and cyan monitor glow, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/07-engineer-npc.png",
+    "runtime": "/media/pixel/sprites/07-engineer-npc.png",
+    "skipped": true
+  },
+  {
+    "id": "08-arcade-npc",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "08-arcade-npc.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Single arcade host NPC sprite with red accent jacket and game controller, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/08-arcade-npc.png",
+    "runtime": "/media/pixel/sprites/08-arcade-npc.png",
+    "skipped": true
+  },
+  {
+    "id": "09-evan-web-sign",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "09-evan-web-sign.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Large hillside landmark sign spelling exactly E V A N  W E B in big separate white-gold letters, original cinema hillside tribute, with pixel spotlights and dark mountain base, transparent background.",
+    "raw": "/media/pixel/raw/09-evan-web-sign.png",
+    "runtime": "/media/pixel/sprites/09-evan-web-sign.png",
+    "skipped": true
+  },
+  {
+    "id": "10-studio-building",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "10-studio-building.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Right-top studio building exterior for Evan Studio, glass wall, warm interior, visible ultrawide monitor glow, premium creator studio, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/10-studio-building.png",
+    "runtime": "/media/pixel/sprites/10-studio-building.png",
+    "skipped": true
+  },
+  {
+    "id": "11-photo-studio-building",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "11-photo-studio-building.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Left-top photography studio exterior, glass door, softbox glow, small camera sign, premium night map building, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/11-photo-studio-building.png",
+    "runtime": "/media/pixel/sprites/11-photo-studio-building.png",
+    "skipped": true
+  },
+  {
+    "id": "12-arcade-game-zone",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "12-arcade-game-zone.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Lower-left compact interactive game zone building, small arcade entrance, dark metal, restrained red and gold lights, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/12-arcade-game-zone.png",
+    "runtime": "/media/pixel/sprites/12-arcade-game-zone.png",
+    "skipped": true
+  },
+  {
+    "id": "13-tv-tower",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "13-tv-tower.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Lower-right TV broadcast tower landmark with nearby platform, cyan broadcast glow and red beacon lights, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/13-tv-tower.png",
+    "runtime": "/media/pixel/sprites/13-tv-tower.png",
+    "skipped": true
+  },
+  {
+    "id": "14-city-building-a",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "14-city-building-a.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Expandable night city building block A, dark glass, cyan windows, compatible with TV tower district, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/14-city-building-a.png",
+    "runtime": "/media/pixel/sprites/14-city-building-a.png",
+    "skipped": true
+  },
+  {
+    "id": "15-city-building-b",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "15-city-building-b.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Expandable night city building block B, taller dark tower, warm gold window strips, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/15-city-building-b.png",
+    "runtime": "/media/pixel/sprites/15-city-building-b.png",
+    "skipped": true
+  },
+  {
+    "id": "16-city-building-c",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "16-city-building-c.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Expandable night city building block C, low rooftop antenna building, cyan and red details, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/16-city-building-c.png",
+    "runtime": "/media/pixel/sprites/16-city-building-c.png",
+    "skipped": true
+  },
+  {
+    "id": "17-ultrawide-desk",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "17-ultrawide-desk.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Studio interior prop: desk with ultrawide curved monitor, keyboard, chair, cyan monitor light, premium creator setup, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/17-ultrawide-desk.png",
+    "runtime": "/media/pixel/sprites/17-ultrawide-desk.png",
+    "skipped": true
+  },
+  {
+    "id": "18-dry-cabinet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "18-dry-cabinet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Photography prop: glass dry cabinet with camera bodies and lenses, subtle reflections, warm shelf light, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/18-dry-cabinet.png",
+    "runtime": "/media/pixel/sprites/18-dry-cabinet.png",
+    "skipped": true
+  },
+  {
+    "id": "19-lens-cabinet",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "19-lens-cabinet.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Photography prop: compact lens cabinet with labeled shelves, camera accessories, gold/cyan night palette, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/19-lens-cabinet.png",
+    "runtime": "/media/pixel/sprites/19-lens-cabinet.png",
+    "skipped": true
+  },
+  {
+    "id": "20-photo-wall",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "20-photo-wall.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Photography prop: gallery wall with framed photo prints and target board, no readable text, warm gallery light, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/20-photo-wall.png",
+    "runtime": "/media/pixel/sprites/20-photo-wall.png",
+    "skipped": true
+  },
+  {
+    "id": "21-newspaper-stack",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "21-newspaper-stack.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. News prop: stacked newspapers and small glowing tablet, no readable text, dark gold and cyan night palette, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/21-newspaper-stack.png",
+    "runtime": "/media/pixel/sprites/21-newspaper-stack.png",
+    "skipped": true
+  },
+  {
+    "id": "22-openclaw-broadcast-desk",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "22-openclaw-broadcast-desk.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Broadcast prop: OpenClaw news desk with small TV control panels, cyan glow, red beacon detail, no readable text, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/22-openclaw-broadcast-desk.png",
+    "runtime": "/media/pixel/sprites/22-openclaw-broadcast-desk.png",
+    "skipped": true
+  },
+  {
+    "id": "23-arcade-machine",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "23-arcade-machine.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Mini game prop: compact arcade cabinet with red/gold/cyan screen glow, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/23-arcade-machine.png",
+    "runtime": "/media/pixel/sprites/23-arcade-machine.png",
+    "skipped": true
+  },
+  {
+    "id": "24-map-signpost",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "24-map-signpost.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Map prop: small illuminated signpost pointing to studio, photo lab, game zone, and tower, symbolic arrows only, top-down slight isometric pixel art, transparent background.",
+    "raw": "/media/pixel/raw/24-map-signpost.png",
+    "runtime": "/media/pixel/sprites/24-map-signpost.png",
+    "skipped": true
+  },
+  {
+    "id": "25-night-road-tiles",
+    "kind": "tiles",
+    "background": "opaque",
+    "filename": "25-night-road-tiles.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Seamless 1024x1024 pixel tileset texture for night asphalt paths and plaza floor, 32px tile grid feel, charcoal base with subtle gold edge highlights, no text.",
+    "raw": "/media/pixel/raw/25-night-road-tiles.png",
+    "runtime": "/media/pixel/tiles/25-night-road-tiles.png",
+    "skipped": true
+  },
+  {
+    "id": "26-mountain-boundary-tiles",
+    "kind": "tiles",
+    "background": "opaque",
+    "filename": "26-mountain-boundary-tiles.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Seamless 1024x1024 pixel tileset texture for dark hillside, rocky boundary, and sign base terrain, night palette with warm spotlight falloff, no text.",
+    "raw": "/media/pixel/raw/26-mountain-boundary-tiles.png",
+    "runtime": "/media/pixel/tiles/26-mountain-boundary-tiles.png",
+    "skipped": true
+  },
+  {
+    "id": "27-grass-border-tiles",
+    "kind": "tiles",
+    "background": "opaque",
+    "filename": "27-grass-border-tiles.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Seamless 1024x1024 pixel tileset texture for dark grass borders and map edges, small gold light specks, top-down pixel map style, no text.",
+    "raw": "/media/pixel/raw/27-grass-border-tiles.png",
+    "runtime": "/media/pixel/tiles/27-grass-border-tiles.png",
+    "skipped": true
+  },
+  {
+    "id": "28-interior-floor-tiles",
+    "kind": "tiles",
+    "background": "opaque",
+    "filename": "28-interior-floor-tiles.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Seamless 1024x1024 pixel tileset texture for premium studio interior floor, dark walnut and metal panels with cyan monitor reflections, no text.",
+    "raw": "/media/pixel/raw/28-interior-floor-tiles.png",
+    "runtime": "/media/pixel/tiles/28-interior-floor-tiles.png",
+    "skipped": true
+  },
+  {
+    "id": "29-light-shadow-overlay",
+    "kind": "tiles",
+    "background": "transparent",
+    "filename": "29-light-shadow-overlay.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Transparent 1024x1024 pixel-art light and shadow overlay texture: warm spotlights, cyan glows, soft vignette, no objects, no text.",
+    "raw": "/media/pixel/raw/29-light-shadow-overlay.png",
+    "runtime": "/media/pixel/tiles/29-light-shadow-overlay.png",
+    "skipped": true
+  },
+  {
+    "id": "30-pixel-modal-frame",
+    "kind": "ui",
+    "background": "transparent",
+    "filename": "30-pixel-modal-frame.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Pixel UI modal frame for Evan Web panels, black glass center, gold border, cyan corner light, no text, transparent background.",
+    "raw": "/media/pixel/raw/30-pixel-modal-frame.png",
+    "runtime": "/media/pixel/ui/30-pixel-modal-frame.png",
+    "skipped": true
+  },
+  {
+    "id": "31-interaction-prompt-frame",
+    "kind": "ui",
+    "background": "transparent",
+    "filename": "31-interaction-prompt-frame.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Pixel UI interaction prompt frame, compact black translucent center, gold border, cyan highlight, no text, transparent background.",
+    "raw": "/media/pixel/raw/31-interaction-prompt-frame.png",
+    "runtime": "/media/pixel/ui/31-interaction-prompt-frame.png",
+    "skipped": true
+  },
+  {
+    "id": "32-area-nameplate-hud",
+    "kind": "ui",
+    "background": "transparent",
+    "filename": "32-area-nameplate-hud.png",
+    "prompt": "Create original cohesive 2D pixel art for a playable portfolio map called Evan Web. Style: premium night-time top-down / slight isometric pixel game, 32px tile density, crisp hard pixel edges. Palette: charcoal night, warm cinema gold, cyan monitor light, restrained red broadcast beacons. The asset must feel made for the same map as a central hillside sign reading EVAN WEB. No photorealism, no 3D render, no low-resolution rental room interior, no generic flat cartoon vector illustration, no SVG look, no blur, no watermark, no extra text unless explicitly requested. Pixel UI area nameplate HUD frame, dark premium game interface, gold and cyan trim, no text, transparent background.",
+    "raw": "/media/pixel/raw/32-area-nameplate-hud.png",
+    "runtime": "/media/pixel/ui/32-area-nameplate-hud.png",
+    "skipped": true
+  },
+  {
+    "id": "37-beijing-broadcast-district",
+    "kind": "sprites",
+    "background": "transparent",
+    "filename": "37-beijing-broadcast-district.png",
+    "prompt": "Create a transparent PNG sprite asset for a playable website map called Evan Web. Style: premium night-time 2D pixel art, top-down with slight isometric perspective, crisp hard pixel edges, 32px tile density, charcoal night palette, warm lantern gold, cyan monitor/broadcast light, restrained red beacons. Asset content: one cohesive Beijing broadcast district, no UI, no labels, no readable text, transparent background. Upper section has the Great Wall crossing dark mountain ridges. The Great Wall must visually connect downward into a fortified city wall, not directly into Tiananmen. The lower fortified city wall encloses Tiananmen Gate inside it: red walls, golden roof tiles, warm lanterns, wet stone plaza, ceremonial paving, small gates and corner towers. To the right of Tiananmen, leave visible breathing distance connected by the same plaza/road, then place the iconic CCTV Headquarters 'big pants' loop building silhouette, dark glass, cyan windows. Beside the CCTV building include a separate slim TV broadcast tower with red aircraft beacons and cyan signal lights. The whole district should feel like one continuous map object with shared pavement, wall geometry, lighting, and perspective, matching a moody pixel RPG map. Isolated sprite on transparent background, no photorealism, no 3D render, no flat vector, no watermark.",
+    "raw": "/media/pixel/raw/37-beijing-broadcast-district.png",
+    "runtime": "/media/pixel/sprites/37-beijing-broadcast-district.png",
+    "skipped": false
+  }
+]
