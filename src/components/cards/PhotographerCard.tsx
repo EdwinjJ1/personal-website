@@ -12,32 +12,67 @@ const menuItems = [
   {
     text: 'Street',
     images: [
-      'P1032761.JPG', 'P1032762.JPG', 'P1032763.JPG',
-      'P1033437.JPG', 'P1034905.JPG', 'P1035455.JPG',
-      'DSCF9124.jpg', 'DSCF9148.JPG', 'DSCF9172.JPG',
+      'P1032761.JPG', 'P1032763.JPG', 'P1034905.JPG',
+      'P1035457.JPG', 'DSCF9161.JPG', 'DSCF9170.JPG',
+      'DSCF9183.JPG', 'P1063344.JPG',
     ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
   {
     text: 'Portrait',
     images: [
-      'P1032794.JPG', 'P1034944.JPG', 'P1035420.JPG',
-      'P1035469.JPG', 'DSCF9138.JPG', 'DSCF9146.JPG',
-      'DSCF9161.JPG', 'DSCF9186.JPG',
-    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
-    link: '/photography',
-  },
-  {
-    text: 'Landscape',
-    images: [
-      'P1033598.JPG', 'P1033646.JPG', 'P1034935.JPG', 'DSCF9156.JPG',
+      'P1033994.JPG', 'P1034288.JPG', 'P1034416.JPG',
+      'P1034242_(2).jpg', 'P1071517.JPG', 'P1071518.JPG',
+      'P1071562.JPG', 'P1141379.JPG',
     ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
   {
     text: 'Architecture',
     images: [
-      'P1033380.JPG', 'P1033392.JPG', 'DSCF9162.JPG',
+      'P1033380.JPG', 'P1033392.JPG', 'P1034944.JPG',
+      'P1035469.JPG', 'P1035856.JPG', 'P1036367.JPG',
+      'DSCF9162.JPG', 'DSCF9172.JPG',
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
+    link: '/photography',
+  },
+  {
+    text: 'Wildlife',
+    images: [
+      'P1035358.JPG', 'P1049329.JPG', 'P1049431.jpg',
+      'P1052249-Enhanced-NR.jpg', 'P1052330.jpg', 'P1052475.jpg',
+      'P1059821.jpg', 'P1139753.JPG',
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
+    link: '/photography',
+  },
+  {
+    text: 'Landscape',
+    images: [
+      'P1033646.JPG', 'P1034550.jpg', 'P1034572.JPG',
+      'P1050229.JPG', 'P1071573.JPG',
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
+    link: '/photography',
+  },
+  {
+    text: 'Night',
+    images: [
+      'P1032794.JPG', 'P1034037.JPG', 'P1034951.JPG',
+      'P1049662.JPG', 'P1049663.JPG', 'P1140509.JPG',
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
+    link: '/photography',
+  },
+  {
+    text: 'Travel',
+    images: [
+      'P1033598.JPG', 'DSCF9146.JPG', 'P1037178.JPG',
+      'P1048931.JPG', 'P1050029.JPG', 'P1071530.JPG',
+    ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
+    link: '/photography',
+  },
+  {
+    text: 'Nature',
+    images: [
+      'P1033357.JPG', 'P1035455.JPG', 'P1035875.JPG', 'DSC07507.jpg',
     ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
