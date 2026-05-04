@@ -63,3 +63,18 @@ next-env.d.ts
 tmp/
 temp/
 *.tmp
+
+# Photography import staging — large RAW dumps and zips, never commit
+/public/images/photography/download*/
+/public/images/photography/*.zip
+
+# Local scratch / personal notes
+/new_global_card.txt
+/my-game/
+
+# evans-studio nested project
+/evans-studio/node_modules/
+/evans-studio/.next/
+/evans-studio/out/
+/evans-studio/.vercel/
+/evans-studio/*.tsbuildinfo
