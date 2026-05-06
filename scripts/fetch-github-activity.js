@@ -16,8 +16,17 @@ const OUTPUT = path.join(__dirname, '..', 'src', 'data', 'github-activity.json')
 async function fetchContributions() {
   const token = process.env.GITHUB_TOKEN;
   if (!token || token === 'your_github_token_here') {
-    console.error('Error: GITHUB_TOKEN environment variable required');
-    process.exit(1);
+    if (fs.existsSync(OUTPUT)) {
+      console.warn('GITHUB_TOKEN not set — keeping existing github-activity.json');
+      process.exit(0);
+    }
+    console.warn('GITHUB_TOKEN not set and no cached data — writing empty placeholder');
+    fs.writeFileSync(OUTPUT, JSON.stringify({
+      totalContributions: 0,
+      days: [],
+      fetchedAt: new Date().toISOString(),
+    }, null, 2));
+    process.exit(0);
   }
 
   const query = `
