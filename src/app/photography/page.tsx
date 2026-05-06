@@ -26,45 +26,60 @@ export default function PhotographyPage() {
     localStorage.setItem('photography-category', category);
   };
 
-  // Filter photos based on category
-  const filteredPhotos = selectedCategory === 'All'
-    ? photos
-    : photos.filter(photo => photo.category === selectedCategory);
+  // Featured/pinned photo — always shown as a hero tile above the grid
+  // (only when a category that contains it is active, and never inside the grid).
+  const featuredPhoto = photos.find(p => p.featured);
+
+  // Filter photos based on category, excluding featured (it has its own slot).
+  const filteredPhotos = (
+    selectedCategory === 'All'
+      ? photos
+      : photos.filter(photo => photo.category === selectedCategory)
+  ).filter(p => !p.featured);
+
+  // Should the hero be visible for the current category?
+  const showFeatured =
+    !!featuredPhoto &&
+    (selectedCategory === 'All' || featuredPhoto.category === selectedCategory);
+
+  // Lightbox navigates over the visible set: hero (if shown) + grid.
+  const lightboxPhotos = showFeatured && featuredPhoto
+    ? [featuredPhoto, ...filteredPhotos]
+    : filteredPhotos;
 
   // Image preloading logic for lightbox
   useEffect(() => {
-    if (selectedPhotoIndex !== null) {
-      const nextIndex = (selectedPhotoIndex + 1) % filteredPhotos.length;
-      const prevIndex = (selectedPhotoIndex - 1 + filteredPhotos.length) % filteredPhotos.length;
-      
+    if (selectedPhotoIndex !== null && lightboxPhotos.length > 0) {
+      const nextIndex = (selectedPhotoIndex + 1) % lightboxPhotos.length;
+      const prevIndex = (selectedPhotoIndex - 1 + lightboxPhotos.length) % lightboxPhotos.length;
+
       [nextIndex, prevIndex].forEach(index => {
         const img = new window.Image();
-        img.src = getLightboxUrl(filteredPhotos[index].image);
+        img.src = getLightboxUrl(lightboxPhotos[index].image);
       });
     }
-  }, [selectedPhotoIndex, filteredPhotos]);
+  }, [selectedPhotoIndex, lightboxPhotos]);
 
-  // Find the actual index in the full 'photos' array or the filtered list?
-  // It's better to navigate within the *filtered* list for the lightbox.
-  const currentPhoto = selectedPhotoIndex !== null ? filteredPhotos[selectedPhotoIndex] : null;
+  // Lightbox navigates over the visible (hero + grid) set.
+  const currentPhoto = selectedPhotoIndex !== null ? lightboxPhotos[selectedPhotoIndex] : null;
 
   const handleNext = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedPhotoIndex === null) return;
     setSelectedPhotoIndex((prev) =>
-      prev === null || prev === filteredPhotos.length - 1 ? 0 : prev + 1
+      prev === null || prev === lightboxPhotos.length - 1 ? 0 : prev + 1
     );
     setIsZoomed(false);
-  }, [filteredPhotos.length, selectedPhotoIndex]);
+  }, [lightboxPhotos.length, selectedPhotoIndex]);
 
   const handlePrev = useCallback((e?: React.MouseEvent) => {
     e?.stopPropagation();
     if (selectedPhotoIndex === null) return;
     setSelectedPhotoIndex((prev) =>
-      prev === null || prev === 0 ? filteredPhotos.length - 1 : prev - 1
+      prev === null || prev === 0 ? lightboxPhotos.length - 1 : prev - 1
     );
     setIsZoomed(false);
-  }, [filteredPhotos.length, selectedPhotoIndex]);
+  }, [lightboxPhotos.length, selectedPhotoIndex]);
 
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (selectedPhotoIndex === null) return;
@@ -141,42 +156,109 @@ export default function PhotographyPage() {
             ))}
           </motion.div>
 
+          {/* Featured Hero — pinned cover above the grid */}
+          {showFeatured && featuredPhoto && (
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-10"
+            >
+              <div
+                className="group relative w-full overflow-hidden rounded-3xl cursor-pointer"
+                style={{
+                  border: '1px solid rgba(122, 144, 136, 0.35)',
+                  boxShadow: '0 25px 60px -20px rgba(0, 0, 0, 0.7)',
+                }}
+                onClick={() => setSelectedPhotoIndex(0)}
+              >
+                <div className="relative aspect-[16/9] md:aspect-[21/9]">
+                  <Image
+                    src={getLightboxUrl(featuredPhoto.image)}
+                    alt={featuredPhoto.title}
+                    fill
+                    sizes="100vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
+                    priority
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                </div>
+                {/* Pinned ribbon */}
+                <div
+                  className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase"
+                  style={{
+                    background: 'linear-gradient(to right, #7a9088, #6a8a8e)',
+                    color: '#1a1816',
+                  }}
+                >
+                  ★ Featured
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
+                  <h2
+                    className="text-3xl md:text-5xl font-bold mb-2"
+                    style={{ color: '#e0d8cc', textShadow: '0 4px 16px rgba(0,0,0,0.7)' }}
+                  >
+                    {featuredPhoto.title}
+                  </h2>
+                  <p className="text-sm md:text-base max-w-2xl" style={{ color: '#b8b4aa' }}>
+                    {featuredPhoto.description}
+                  </p>
+                  <div className="mt-3 flex items-center gap-2">
+                    <span
+                      className="text-xs px-2 py-1 rounded"
+                      style={{ backgroundColor: 'rgba(122, 144, 136, 0.25)', color: '#7a9088' }}
+                    >
+                      {featuredPhoto.category}
+                    </span>
+                    <span className="text-xs" style={{ color: '#8a8676' }}>
+                      {featuredPhoto.location} · {featuredPhoto.date}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          )}
+
           {/* Photo Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <AnimatePresence mode='popLayout'>
-              {filteredPhotos.map((photo, index) => (
-                <motion.div
-                  layout
-                  key={photo.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.3 }}
-                  className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-neutral-900"
-                  onClick={() => setSelectedPhotoIndex(index)}
-                >
-                  <Image
-                    src={getThumbnailUrl(photo.image)}
-                    alt={photo.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority={index < 4}
-                    loading={index < 4 ? 'eager' : 'lazy'}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>{photo.title}</h3>
-                      <p className="text-sm mb-2" style={{ color: '#b8b4aa' }}>{photo.location}</p>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }}>
-                          {photo.category}
-                        </span>
+              {filteredPhotos.map((photo, index) => {
+                // Lightbox index offset by 1 if the hero occupies index 0.
+                const lightboxIndex = showFeatured ? index + 1 : index;
+                return (
+                  <motion.div
+                    layout
+                    key={photo.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.3 }}
+                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-neutral-900"
+                    onClick={() => setSelectedPhotoIndex(lightboxIndex)}
+                  >
+                    <Image
+                      src={getThumbnailUrl(photo.image)}
+                      alt={photo.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      priority={index < 4}
+                      loading={index < 4 ? 'eager' : 'lazy'}
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6">
+                        <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>{photo.title}</h3>
+                        <p className="text-sm mb-2" style={{ color: '#b8b4aa' }}>{photo.location}</p>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }}>
+                            {photo.category}
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </motion.div>
-              ))}
+                  </motion.div>
+                );
+              })}
             </AnimatePresence>
           </div>
 
