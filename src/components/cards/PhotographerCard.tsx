@@ -56,7 +56,7 @@ const menuItems = [
   {
     text: 'Night',
     images: [
-      'P1032794.JPG', 'P1034037.JPG', 'P1034951.JPG',
+      'P1032794.JPG', 'P1034951.JPG',
       'P1049662.JPG', 'P1049663.JPG', 'P1140509.JPG',
     ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
