@@ -108,7 +108,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
   );
 
   return (
-    <div ref={itemRef} style={{ position: 'relative', flex: 1, overflow: 'hidden', borderTop: '1px solid rgba(114, 110, 102, 0.25)' }}>
+    <div ref={itemRef} style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden', borderTop: '1px solid rgba(114, 110, 102, 0.25)' }}>
       <a
         href={link}
         onMouseEnter={handleMouseEnter}
@@ -121,7 +121,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
       >
         <span style={{ flex: 1, height: 1, background: 'rgba(224,216,204,0.15)', display: 'block', maxWidth: 40 }} />
         <span style={{
-          fontStyle: 'italic', fontWeight: 300, fontSize: '2.4vh',
+          fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(12px, 2vh, 22px)',
           letterSpacing: '0.18em', textTransform: 'uppercase',
           color: '#c8c2b8', fontFamily: 'Georgia, "Times New Roman", serif',
         }}>

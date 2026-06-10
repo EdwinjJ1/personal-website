@@ -26,9 +26,9 @@ export default function Home() {
       <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
         <ClientOnlyParticles />
 
-        <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-16 md:pt-24 pb-12">
-          {/* Modular Grid Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)]">
+        <div className="relative z-10 mx-auto flex w-full max-w-screen-2xl flex-col px-4 pt-16 md:pt-24 lg:pt-20 pb-12 lg:pb-4 lg:h-svh lg:min-h-[680px]">
+          {/* Modular Grid Layout — fills the viewport on desktop (no scroll) */}
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)] lg:flex-1 lg:min-h-0 lg:grid-rows-[minmax(0,1.05fr)_minmax(0,1.3fr)_minmax(0,1fr)]">
 
             {/* Personal Info - Takes 2 columns */}
             <PersonalCard />
@@ -58,25 +58,25 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1 }}
-            className="mt-12 flex flex-wrap justify-center gap-3"
+            className="mt-12 lg:mt-4 flex shrink-0 flex-wrap justify-center gap-3"
           >
             <Link
               href="/about"
-              className="px-6 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
+              className="px-6 py-3 lg:py-2.5 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
               style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
             >
               <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01}>Learn More About Me</ScatterText>
             </Link>
             <Link
               href="/projects"
-              className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
+              className="px-6 py-3 lg:py-2.5 border font-semibold rounded-full transition-all duration-300"
               style={{ borderColor: '#7a9088', color: '#7a9088' }}
             >
               <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01} color="#7a9088">View All Projects</ScatterText>
             </Link>
             <Link
               href="/blog"
-              className="px-6 py-3 border font-semibold rounded-full transition-all duration-300"
+              className="px-6 py-3 lg:py-2.5 border font-semibold rounded-full transition-all duration-300"
               style={{ borderColor: '#8a8680', color: '#b8b4aa' }}
             >
               <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.01} color="#b8b4aa">Read My Blog</ScatterText>

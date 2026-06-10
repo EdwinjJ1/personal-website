@@ -37,7 +37,7 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
           </Link>
         </div>
 
-        <ul className="flex-1 space-y-2.5">
+        <ul className="flex-1 min-h-0 space-y-2.5 overflow-hidden">
           {recentPosts.map((post) => (
             <Link key={post.id} href={`/blog/${post.slug}`}>
               <li
@@ -45,7 +45,7 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
                 style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
               >
                 <div className="flex items-center justify-between gap-3">
-                  <h4 className="text-sm font-semibold line-clamp-2" style={{ color: '#e0d8cc' }}>
+                  <h4 className="text-sm font-semibold line-clamp-1" style={{ color: '#e0d8cc' }}>
                     <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01}>{post.title}</ScatterText>
                   </h4>
                   <span className="text-xs whitespace-nowrap" style={{ color: '#8a8680' }}>
@@ -55,8 +55,8 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
                     })}
                   </span>
                 </div>
-                <p className="mt-2 text-xs line-clamp-2" style={{ color: '#b8b4aa' }}>{post.excerpt}</p>
-                <div className="mt-2 flex items-center justify-between text-[11px]" style={{ color: '#8a8680' }}>
+                <p className="mt-1.5 text-xs line-clamp-1" style={{ color: '#b8b4aa' }}>{post.excerpt}</p>
+                <div className="mt-1.5 flex items-center justify-between text-[11px]" style={{ color: '#8a8680' }}>
                   <span>{post.tags[0] ?? 'Update'}</span>
                   <span>{post.readTime}</span>
                 </div>
@@ -65,16 +65,6 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
           ))}
         </ul>
 
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1 self-start text-xs font-medium transition-colors hover:text-[#6a8a8e]"
-          style={{ color: '#7a9088' }}
-        >
-          Read the blog
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
     </BaseCard>
   );

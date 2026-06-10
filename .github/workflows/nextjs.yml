@@ -75,6 +75,12 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          # API worker for NetEase now-playing + AI card chat (workers/api)
+          # Set in repo Settings → Secrets and variables → Actions → Variables
+          NEXT_PUBLIC_API_BASE: ${{ vars.NEXT_PUBLIC_API_BASE }}
+          NEXT_PUBLIC_CDN_URL: ${{ vars.NEXT_PUBLIC_CDN_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

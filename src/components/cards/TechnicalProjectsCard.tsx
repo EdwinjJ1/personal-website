@@ -64,7 +64,7 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
           </p>
         </div>
 
-        <div className="space-y-2">
+        <div className="flex-1 min-h-0 space-y-2 overflow-hidden">
           {previewProjects.map((project) => (
             <Link
               key={project.id}

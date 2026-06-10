@@ -12,6 +12,32 @@ interface ActivityDay {
   level: number;
 }
 
+// 26 weeks × 7 days — GitHub-style column-per-week heatmap
+const DAYS_SHOWN = 182;
+
+// Eased count-up for the contributions total
+function useCountUp(target: number, duration = 1200): number {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    let raf = 0;
+    const from = value;
+    const startTime = performance.now();
+
+    const step = (now: number) => {
+      const t = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - t, 3);
+      setValue(Math.round(from + (target - from) * eased));
+      if (t < 1) raf = requestAnimationFrame(step);
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [target, duration]);
+
+  return value;
+}
+
 const ACTIVITY_COLORS = [
   'bg-[#312e2a]',
   'bg-teal-900/40',
@@ -47,68 +73,16 @@ function buildGrid(
   return grid;
 }
 
-// Fetch latest public events and merge with static data
-async function fetchLatestEvents(
-  username: string,
-  baseDays: Array<{ date: string; count: number }>
-): Promise<{ days: Array<{ date: string; count: number }>; extraCount: number }> {
-  const dayMap = new Map(baseDays.map(d => [d.date, d.count]));
-  let extraCount = 0;
-
-  for (let page = 1; page <= 3; page++) {
-    const res = await fetch(
-      `https://api.github.com/users/${username}/events/public?per_page=100&page=${page}`,
-      { headers: { Accept: 'application/vnd.github.v3+json' } }
-    );
-    if (!res.ok) break;
-    const events = await res.json();
-    if (events.length === 0) break;
-
-    for (const event of events) {
-      const date = new Date(event.created_at).toISOString().split('T')[0];
-      const current = dayMap.get(date) ?? 0;
-      const eventCount = (dayMap.get(`__events_${date}`) ?? 0) + 1;
-      dayMap.set(`__events_${date}`, eventCount);
-
-      // Only update if events API shows more activity than static data
-      if (eventCount > current) {
-        dayMap.set(date, eventCount);
-        extraCount += eventCount - current;
-      }
-    }
-  }
-
-  // Clean up internal tracking keys
-  const merged = Array.from(dayMap.entries())
-    .filter(([key]) => !key.startsWith('__'))
-    .map(([date, count]) => ({ date, count }))
-    .sort((a, b) => a.date.localeCompare(b.date));
-
-  return { days: merged, extraCount };
-}
-
 export default function ActivityCard() {
   const [mounted, setMounted] = useState(false);
 
   const typedStaticDays = staticData.days as Array<{ date: string; count: number }>;
-  const [days, setDays] = useState<ActivityDay[]>(() => buildGrid(typedStaticDays, 84));
-  const [total, setTotal] = useState(staticData.totalContributions);
+  const [days] = useState<ActivityDay[]>(() => buildGrid(typedStaticDays, DAYS_SHOWN));
+  const total = staticData.totalContributions;
 
   useEffect(() => { setMounted(true); }, []);
 
-  // Try to update with latest public events after mount
-  useEffect(() => {
-    if (!mounted) return;
-
-    fetchLatestEvents('EdwinjJ1', typedStaticDays)
-      .then(({ days: merged, extraCount }) => {
-        setDays(buildGrid(merged, 84));
-        if (extraCount > 0) {
-          setTotal(prev => prev + extraCount);
-        }
-      })
-      .catch(() => { /* keep static data */ });
-  }, [mounted]);
+  const displayTotal = useCountUp(total);
 
   const Header = () => (
     <div className="flex justify-between items-center mb-3">
@@ -119,9 +93,9 @@ export default function ActivityCard() {
         <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>GitHub Activity</ScatterText>
         <span className="text-xs text-green-400 ml-1" title="Real data from GitHub">&#x25CF;</span>
       </h3>
-      <span className="text-xs" style={{ color: '#b8b4aa' }}>
-        {total} contributions
-        <span className="ml-1 text-[10px]" style={{ color: '#8a8680' }}>(this year)</span>
+      <span className="text-xs tabular-nums" style={{ color: '#b8b4aa' }}>
+        {displayTotal} contributions
+        <span className="ml-1 text-[10px]" style={{ color: '#8a8680' }}>(last year)</span>
       </span>
     </div>
   );
@@ -141,11 +115,11 @@ export default function ActivityCard() {
   if (!mounted) {
     return (
       <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
-        <div className="h-full">
+        <div className="flex h-full flex-col">
           <Header />
-          <div className="grid grid-cols-12 gap-[3px] mb-3">
-            {Array.from({ length: 84 }).map((_, i) => (
-              <div key={i} className="aspect-square rounded-sm bg-[#312e2a]" />
+          <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
+            {Array.from({ length: DAYS_SHOWN }).map((_, i) => (
+              <div key={i} className="min-h-[8px] rounded-sm bg-[#312e2a]" />
             ))}
           </div>
           <Legend />
@@ -156,16 +130,22 @@ export default function ActivityCard() {
 
   return (
     <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
-      <div className="h-full">
+      <a
+        href="https://github.com/EdwinjJ1"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="View Evan's GitHub profile"
+        className="flex h-full flex-col"
+      >
         <Header />
-        <div className="grid grid-cols-12 gap-[3px] mb-3">
+        <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
           {days.map((day, index) => (
             <motion.div
               key={day.date}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6 + index * 0.005 }}
-              className={`aspect-square rounded-sm ${ACTIVITY_COLORS[day.level]}
+              transition={{ delay: 0.6 + index * 0.003 }}
+              className={`min-h-[8px] rounded-sm ${ACTIVITY_COLORS[day.level]}
                 hover:ring-1 hover:ring-teal-400 cursor-pointer relative group`}
               title={`${day.count} contributions on ${day.date}`}
             >
@@ -179,7 +159,7 @@ export default function ActivityCard() {
           ))}
         </div>
         <Legend />
-      </div>
+      </a>
     </BaseCard>
   );
 }
