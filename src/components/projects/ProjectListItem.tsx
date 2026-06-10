@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import type { Project, ProjectStatus } from '@/data/projects';
-import ScatterText from '@/components/ScatterText';
 import ProjectIcon from './ProjectIcon';
 
 const getStatusStyle = (status: ProjectStatus) => {
@@ -46,49 +45,37 @@ interface ProjectListItemProps {
 
 export default function ProjectListItem({ project }: ProjectListItemProps) {
   return (
-    <li className="rounded-2xl border p-5 transition-all" style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(40, 38, 34, 0.8)' }}>
-      <div className="flex flex-wrap items-start justify-between gap-3 text-sm" style={{ color: '#b8b4aa' }}>
-        <span className="flex items-center gap-2" style={{ color: '#b8b4aa' }}>
-          <ProjectIcon icon={project.icon} size={18} />
-          {project.category}
-        </span>
-        <span className="rounded-full border px-3 py-1 text-xs" style={getStatusStyle(project.status)}>
-          {project.status}
-        </span>
-      </div>
-
-      <h3 className="mt-3 text-xl font-semibold" style={{ color: '#e0d8cc' }}>
-        <ScatterText scatterRadius={30} rotationRange={10}>{project.title}</ScatterText>
-      </h3>
-      <p className="mt-2 text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{project.description}</p>
-
-      <div className="mt-4 flex flex-wrap gap-2 text-xs" style={{ color: '#b8b4aa' }}>
-        {project.technologies.slice(0, 5).map((tech) => (
-          <span key={`${project.id}-${tech}`} className="rounded-full border px-3 py-1" style={{ borderColor: 'rgba(114, 110, 102, 0.3)' }}>
-            {tech}
+    <li className="showcase-card flex flex-col gap-3 rounded-2xl p-6 sm:flex-row sm:items-center sm:gap-6">
+      <span className="accent-text accent-soft-bg flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
+        <ProjectIcon icon={project.icon} size={22} />
+      </span>
+      <div className="min-w-0 flex-1">
+        <div className="flex flex-wrap items-center gap-3">
+          <h3 className="text-xl font-semibold" style={{ color: '#e0d8cc' }}>{project.title}</h3>
+          <span className="accent-text text-xs font-semibold uppercase tracking-wider">{project.category}</span>
+          <span className="rounded-full border px-2.5 py-0.5 text-xs" style={getStatusStyle(project.status)}>
+            {project.status}
           </span>
-        ))}
-      </div>
-
-      <div className="mt-4 flex items-center justify-between text-sm" style={{ color: '#b8b4aa' }}>
-        <div className="flex flex-wrap gap-2">
-          {project.highlights.slice(0, 2).map((highlight) => (
-            <span key={highlight} className="rounded-full border px-3 py-1 text-xs" style={{ borderColor: 'rgba(114, 110, 102, 0.3)' }}>
-              {highlight}
+        </div>
+        <p className="mt-2 text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{project.description}</p>
+        <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: '#8a8680' }}>
+          {project.technologies.slice(0, 5).map((tech) => (
+            <span key={`${project.id}-${tech}`} className="rounded-md px-2 py-0.5" style={{ backgroundColor: 'rgba(114, 110, 102, 0.15)' }}>
+              {tech}
             </span>
           ))}
         </div>
-        <Link
-          href={project.liveUrl ?? project.githubUrl ?? '/projects'}
-          className="inline-flex items-center gap-2 rounded-full border px-3 py-1 text-xs transition-colors"
-          style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
-        >
-          Learn more
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
+
+      <Link
+        href={project.liveUrl ?? project.githubUrl ?? '/projects'}
+        className="accent-text inline-flex flex-shrink-0 items-center gap-1.5 text-sm font-medium transition-all hover:gap-2.5"
+      >
+        Open
+        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </Link>
     </li>
   );
 }
