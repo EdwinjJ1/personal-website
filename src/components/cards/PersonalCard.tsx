@@ -3,6 +3,7 @@
 import BaseCard from './BaseCard';
 import Avatar from '../Avatar';
 import ScatterText from '@/components/ScatterText';
+import ParticleName from '@/components/ParticleName';
 
 export default function PersonalCard() {
   return (
@@ -11,16 +12,7 @@ export default function PersonalCard() {
         <div className="flex items-center gap-3 mb-3">
           <Avatar size="sm" />
           <div>
-            <h1 className="text-2xl font-bold">
-              <ScatterText
-                scatterRadius={40}
-                rotationRange={20}
-                staggerDelay={0.02}
-                color='#7a9088'
-              >
-                Evan Lin
-              </ScatterText>
-            </h1>
+            <ParticleName text="Evan Lin" fontSize={28} accent="#7a9088" />
             <p className="text-sm" style={{ color: '#7a9088' }}>
               <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01} color="#7a9088">Computer Science Student</ScatterText>
             </p>

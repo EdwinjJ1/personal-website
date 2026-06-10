@@ -72,7 +72,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
         </div>
 
         {/* Highlights */}
-        <div className="flex-1 space-y-2">
+        <div className="flex-1 min-h-0 space-y-2 overflow-hidden">
           {quickHighlights.map((item) => (
             <div
               key={item.id}
@@ -100,16 +100,6 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
           )}
         </div>
 
-        <Link
-          href="/news"
-          className="inline-flex items-center gap-1 self-start text-xs font-medium transition-colors hover:text-[#6a8a8e]"
-          style={{ color: '#7a9088' }}
-        >
-          Read news hub
-          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
       </div>
     </BaseCard>
   );

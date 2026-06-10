@@ -67,6 +67,7 @@ import ClientRouter from '@/components/ClientRouter';
 import Galaxy from '@/components/Galaxy';
 import SplashOrchestrator from '@/components/SplashOrchestrator';
 import GlobalTextCursor from '@/components/GlobalTextCursor';
+import AICard from '@/components/AICard';
 
 export default function RootLayout({
   children,
@@ -142,6 +143,7 @@ export default function RootLayout({
           <div style={{ position: 'relative', zIndex: 1 }}>
             {children}
           </div>
+          <AICard />
         </SplashOrchestrator>
       </body>
     </html>

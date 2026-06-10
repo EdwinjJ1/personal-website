@@ -1,0 +1,25 @@
+# Personal-site API worker: NetEase now-playing proxy + AI card chat.
+#
+# Deploy:
+#   cd workers/api
+#   npx wrangler login
+#   npx wrangler secret put AI_API_KEY        # e.g. Groq key from https://console.groq.com/keys (free tier)
+#   npx wrangler secret put NETEASE_COOKIE    # "MUSIC_U=xxxx" from music.163.com browser cookies
+#   npx wrangler deploy
+#
+# Then set NEXT_PUBLIC_API_BASE to the deployed URL (e.g. https://evanlin-api.<account>.workers.dev
+# or a custom domain like https://api.evanlin.site) in the site build env.
+
+name = "evanlin-api"
+main = "src/index.js"
+compatibility_date = "2026-06-01"
+
+[vars]
+# OpenAI-compatible endpoint — swap freely between free providers
+# (Groq / OpenRouter / Mistral / Cerebras all speak this protocol, see github.com/zebbern/no-cost-ai)
+AI_API_BASE = "https://api.groq.com/openai/v1"
+AI_MODEL = "llama-3.3-70b-versatile"
+# NetEase Cloud Music numeric user id (profile page URL: music.163.com/#/user/home?id=<uid>)
+NETEASE_UID = "1802974667"
+# Comma-separated list of allowed origins
+ALLOWED_ORIGINS = "https://evanlin.site,https://www.evanlin.site,http://localhost:3000,http://localhost:3199"
