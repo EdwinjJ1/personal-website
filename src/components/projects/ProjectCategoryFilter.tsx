@@ -14,7 +14,7 @@ export default function ProjectCategoryFilter({
   const filters = ['All', ...categories];
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-3">
+    <div className="flex flex-wrap items-center gap-2.5">
       {filters.map((category) => {
         const isActive = selectedCategory === category;
         return (
@@ -22,10 +22,12 @@ export default function ProjectCategoryFilter({
             type="button"
             key={category}
             onClick={() => onCategoryChange(category)}
-            className={`rounded-full border px-4 py-2 text-sm transition-colors`}
+            className={`rounded-full border px-4 py-1.5 text-sm transition-all ${
+              isActive ? 'accent-text accent-soft-bg accent-border font-medium' : ''
+            }`}
             style={
               isActive
-                ? { borderColor: '#7a9088', backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }
+                ? undefined
                 : { borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }
             }
           >

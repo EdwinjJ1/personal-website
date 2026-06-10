@@ -33,6 +33,70 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ============================================================
+   PER-PAGE ACCENT SYSTEM
+   每个页面通过 .page-accent--xxx 设一个主调色，
+   下面的工具类自动跟随，复制到其他页只改这一处。
+   ============================================================ */
+:root {
+  --accent: #7a9088;          /* default = sage (home) */
+  --accent-soft: rgba(122, 144, 136, 0.14);
+  --accent-line: rgba(122, 144, 136, 0.35);
+}
+
+.page-accent--orange {  /* Projects */
+  --accent: #e8915b;
+  --accent-soft: rgba(232, 145, 91, 0.14);
+  --accent-line: rgba(232, 145, 91, 0.38);
+}
+.page-accent--cyan {    /* Blog */
+  --accent: #6db4c4;
+  --accent-soft: rgba(109, 180, 196, 0.14);
+  --accent-line: rgba(109, 180, 196, 0.38);
+}
+.page-accent--violet {  /* About */
+  --accent: #a890c8;
+  --accent-soft: rgba(168, 144, 200, 0.14);
+  --accent-line: rgba(168, 144, 200, 0.38);
+}
+
+.accent-text { color: var(--accent); }
+.accent-bg { background-color: var(--accent); }
+.accent-soft-bg { background-color: var(--accent-soft); }
+.accent-border { border-color: var(--accent-line); }
+
+/* Big section index number, sits behind headings */
+.section-index {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.04em;
+  color: var(--accent-soft);
+}
+
+/* Showcase card: large gradient cover + lift-on-hover */
+.showcase-card {
+  background-color: rgba(40, 38, 34, 0.55);
+  border: 1px solid var(--border-color);
+  transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+              border-color 0.35s ease, box-shadow 0.35s ease;
+}
+.showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-line);
+  box-shadow: 0 20px 50px -20px var(--accent-soft);
+}
+.showcase-cover {
+  background:
+    radial-gradient(120% 120% at 0% 0%, var(--accent-soft) 0%, transparent 60%),
+    linear-gradient(135deg, rgba(40, 38, 34, 0.2), rgba(26, 24, 22, 0.6));
+}
+.showcase-card:hover .showcase-cover-icon {
+  transform: scale(1.08) rotate(-3deg);
+  color: var(--accent);
+}
+.showcase-cover-icon {
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), color 0.45s ease;
+}
+
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);

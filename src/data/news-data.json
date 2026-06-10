@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-05-04T13:52:04.719Z",
+  "lastUpdated": "2026-05-13T05:29:13.036Z",
   "availableDates": [
+    {
+      "value": "2026-05-09",
+      "label": "May 9, 2026"
+    },
     {
       "value": "2026-04-28",
       "label": "April 28, 2026"
@@ -279,6 +283,171 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260509-1222-anthropic-forms-enterprise-ai-services-company-with-blackstone-h",
+      "title": "Anthropic forms enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
+      "summary": "A new joint venture backed by major financial firms will deliver enterprise AI services built on Claude. The structure pairs Anthropic's models with capital and distribution from leading private equity and banking partners.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/enterprise-ai-services-company",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-anthropic-launches-claude-agents-for-financial-services",
+      "title": "Anthropic launches Claude Agents for financial services",
+      "summary": "New domain-specific Claude agents tailored to financial services workflows — research, compliance, and analyst tasks. Targets banks, asset managers, and insurers as Anthropic deepens its enterprise vertical strategy.",
+      "tag": "PRODUCT",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/finance-agents",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-anthropic-raises-claude-usage-limits-and-signs-spacex-compute-de",
+      "title": "Anthropic raises Claude usage limits and signs SpaceX compute deal",
+      "summary": "Anthropic announced higher usage limits across Claude tiers alongside a new compute partnership with SpaceX to expand infrastructure capacity. The deal extends Anthropic's compute supply beyond traditional hyperscalers as demand for Claude continues to grow.",
+      "tag": "BREAKING",
+      "source": "Anthropic",
+      "sourceUrl": "https://www.anthropic.com/news/higher-limits-spacex",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-deepmind-expands-alphaevolve-gemini-powered-coding-agent-scaling",
+      "title": "DeepMind expands AlphaEvolve — Gemini-powered coding agent scaling across scientific fields",
+      "summary": "AlphaEvolve, DeepMind's Gemini-powered evolutionary coding agent, is now driving discoveries across multiple scientific disciplines. New report details applications in mathematics, materials science, and algorithm design.",
+      "tag": "RESEARCH",
+      "source": "Deepmind",
+      "sourceUrl": "https://deepmind.google/discover/blog/",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-deepmind-unveils-ai-co-clinician-for-healthcare",
+      "title": "DeepMind unveils AI co-clinician for healthcare",
+      "summary": "An AI co-clinician system designed to support physicians in diagnosis and treatment planning. The work is part of DeepMind's broader push into clinical decision support and frames healthcare as a model for human-AI collaboration.",
+      "tag": "RESEARCH",
+      "source": "Deepmind",
+      "sourceUrl": "https://deepmind.google/discover/blog/",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-google-deepmind-releases-gemma-4-most-capable-open-models-yet",
+      "title": "Google DeepMind releases Gemma 4 — most capable open models yet",
+      "summary": "Gemma 4 is positioned as DeepMind's most powerful family of open-weight models, with significant per-parameter efficiency gains over Gemma 3. Available across multiple sizes for developer and on-device use.",
+      "tag": "PRODUCT",
+      "source": "Google",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-hugging-face-opens-agentic-robotics-appstore-for-10-000-reachy-m",
+      "title": "Hugging Face opens agentic robotics appstore for 10,000 Reachy Mini robots",
+      "summary": "An app marketplace tailored to the Reachy Mini robotics platform, enabling third-party developers to ship agent-powered behaviors to the installed fleet. Marks one of the first scaled marketplaces for embodied agent applications.",
+      "tag": "PRODUCT",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog/clem/reachymini-appstore",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-hugging-face-ai-evals-are-becoming-the-new-compute-bottleneck",
+      "title": "Hugging Face: AI evals are becoming the new compute bottleneck",
+      "summary": "New analysis argues that evaluation infrastructure — not training — is now the dominant compute and engineering cost in frontier AI development. Calls for shared eval primitives and better tooling as model release cycles accelerate.",
+      "tag": "RESEARCH",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog/evaleval/eval-costs-bottleneck",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-mistral-launches-remote-agents-in-vibe-powered-by-mistral-medium",
+      "title": "Mistral launches remote agents in Vibe powered by Mistral Medium 3.5",
+      "summary": "Mistral released Mistral Medium 3.5 alongside remote coding agents in Vibe and a new Work mode in Le Chat designed for complex multi-step tasks. The release positions Mistral as a serious agentic-coding contender against Claude and GPT-5.",
+      "tag": "PRODUCT",
+      "source": "Mistral AI",
+      "sourceUrl": "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260509-1222-qvac-medpsy-sota-medical-and-healthcare-llms-for-edge-devices",
+      "title": "QVAC MedPsy: SOTA medical and healthcare LLMs for edge devices",
+      "summary": "New family of medical and psychiatric language models optimized to run on-device, claiming state-of-the-art quality at edge-deployable sizes. Targets clinical settings where latency, cost, and data privacy preclude cloud inference.",
+      "tag": "PRODUCT",
+      "source": "Hugging Face",
+      "sourceUrl": "https://huggingface.co/blog/qvac/medpsy",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "ai"
+    },
+    {
+      "id": "research-20260509-1222-ai-co-mathematician-accelerating-mathematicians-with-agentic-ai",
+      "title": "AI Co-Mathematician: Accelerating Mathematicians with Agentic AI",
+      "summary": "Presents an agentic AI system that pairs frontier LLMs with formal proof tools to assist working mathematicians on open problems. The system handles literature search, conjecture generation, and proof drafting, with humans steering high-level strategy. Reports case studies where the agent contributed novel lemmas to ongoing research.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2605.06651",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "research"
+    },
+    {
+      "id": "research-20260509-1222-long-context-pre-training-with-lighthouse-attention",
+      "title": "Long Context Pre-Training with Lighthouse Attention",
+      "summary": "Introduces Lighthouse Attention, a hybrid attention pattern designed for long-context pretraining. Combines sparse global beacons with dense local attention to keep training compute tractable while preserving long-range dependencies. Demonstrates improved perplexity and retrieval at 128K+ context.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2605.06554",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "research"
+    },
+    {
+      "id": "research-20260509-1222-teaching-thinking-models-to-reason-with-tools-a-full-pipeline-re",
+      "title": "Teaching Thinking Models to Reason with Tools: A Full-Pipeline Recipe",
+      "summary": "Provides an end-to-end recipe for training reasoning (\"thinking\") models to interleave tool calls within their chain-of-thought. Covers data curation, SFT warm-up, and RL with verifier rewards. Reports significant gains on math, coding, and agentic benchmarks over reasoning-only baselines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2605.06326",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "research"
+    },
+    {
+      "id": "research-20260509-1222-the-structural-origin-of-attention-sink-variance-discrepancy-sup",
+      "title": "The Structural Origin of Attention Sink: Variance Discrepancy, Super Neurons, and Dimension Disparity",
+      "summary": "ICML 2026 paper providing the first rigorous structural account of \"attention sinks\" in transformers. Identifies variance discrepancy across token positions, the emergence of \"super neurons,\" and dimension mismatches as root causes. Proposes targeted interventions that mitigate sinks without harming model quality.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2605.06611",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "research"
+    },
+    {
+      "id": "research-20260509-1222-unipool-a-globally-shared-expert-pool-for-mixture-of-experts",
+      "title": "UniPool: A Globally Shared Expert Pool for Mixture-of-Experts",
+      "summary": "Replaces per-layer expert pools in standard MoE with a single globally shared expert pool that all layers route into. The shared pool improves parameter efficiency and enables cross-layer specialization, with reported gains on language modeling and downstream tasks at matched compute.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2605.06665",
+      "date": "2026-05-09",
+      "time": "12:22",
+      "category": "research"
+    },
     {
       "id": "global-20260428-0800-abc-column-apple-s-tim-cook-swallowed-by-ai-revolution-ternus-er",
       "title": "ABC Column: Apple's Tim Cook \"Swallowed\" by AI Revolution — Ternus Era Begins",

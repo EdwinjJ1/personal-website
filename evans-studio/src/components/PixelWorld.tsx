@@ -82,8 +82,8 @@ const runtimeAssets = {
   newspaper: "/media/pixel/sprites/21-newspaper-stack.png",
   broadcastDesk: "/media/pixel/sprites/22-openclaw-broadcast-desk.png",
   arcadeMachine: "/media/pixel/sprites/23-arcade-machine.png",
-  signpost: "/media/pixel/sprites/24-map-signpost.png",
-  beijingBroadcastDistrict: "/media/pixel/sprites/37-beijing-broadcast-district.png",
+  sydneyHarbour: "/media/pixel/sprites/34-sydney-harbour-thumbnail.png",
+  sydneySeaEdge: "/media/pixel/sprites/35-sydney-sea-edge.png",
   roadTile: "/media/pixel/tiles/25-night-road-tiles.png",
   mountainTile: "/media/pixel/tiles/26-mountain-boundary-tiles.png",
   grassTile: "/media/pixel/tiles/27-grass-border-tiles.png",
@@ -496,7 +496,7 @@ export default function PixelWorld() {
         }
 
         createMap() {
-          this.add.tileSprite(WORLD_WIDTH / 2, WORLD_HEIGHT / 2, WORLD_WIDTH, WORLD_HEIGHT, "roadTile").setAlpha(0.82);
+          this.add.tileSprite(WORLD_WIDTH / 2, WORLD_HEIGHT / 2, WORLD_WIDTH, WORLD_HEIGHT, "roadTile").setAlpha(0.32);
           this.add.tileSprite(WORLD_WIDTH / 2, 120, WORLD_WIDTH, 260, "mountainTile").setAlpha(0.9);
           this.add.tileSprite(WORLD_WIDTH / 2, WORLD_HEIGHT - 120, WORLD_WIDTH, 240, "grassTile").setAlpha(0.62);
 
@@ -508,7 +508,6 @@ export default function PixelWorld() {
           this.add.tileSprite(470, 405, 540, 360, "interiorTile").setAlpha(0.45).setDepth(20);
           this.add.tileSprite(520, 1390, 520, 360, "interiorTile").setAlpha(0.42).setDepth(20);
           this.add.tileSprite(1840, 1400, 560, 390, "interiorTile").setAlpha(0.38).setDepth(20);
-          this.createPlazaInlays();
 
           [
             [410, 520, 0xffd166, 210, 0.22],
@@ -534,12 +533,11 @@ export default function PixelWorld() {
             .setInteractive({ useHandCursor: true })
             .on("pointerdown", () => bridge.openPanel("photo"));
           this.add.image(520, 1350, "arcade").setScale(0.34).setDepth(70);
-          this.add.image(2110, 1515, "cityC").setScale(0.14).setAlpha(0.72).setDepth(48);
-          this.add.image(2245, 1585, "cityB").setScale(0.12).setAlpha(0.58).setDepth(46);
+          this.add.image(2140, 1545, "cityC").setScale(0.12).setAlpha(0.42).setDepth(48);
+          this.add.image(2265, 1600, "cityB").setScale(0.1).setAlpha(0.36).setDepth(46);
 
           this.add.image(1848, 540, "desk").setScale(0.15).setDepth(82);
           this.add.image(590, 1478, "arcadeMachine").setScale(0.14).setDepth(83);
-          this.add.image(1200, 1085, "signpost").setScale(0.12).setDepth(84);
 
           this.add.image(350, 430, "photographer").setScale(0.08).setDepth(92);
           this.add.image(1720, 450, "engineer").setScale(0.08).setDepth(92);
@@ -554,11 +552,7 @@ export default function PixelWorld() {
           this.createLabel(470, 150, "PHOTO LAB", 18, "#ffd166");
           this.createLabel(470, 610, "ENTER", 14, "#fff7db");
           this.createLabel(520, 1140, "GAME ZONE", 18, "#ff5b57");
-          this.createLabel(1840, 1458, "OPENCLAW TOWER", 18, "#67e8f9");
 
-          this.add.rectangle(1120, 925, 18, 360, 0xffd166, 0.3).setAngle(-24).setDepth(15);
-          this.add.rectangle(1280, 925, 18, 360, 0xffd166, 0.3).setAngle(24).setDepth(15);
-          this.add.rectangle(1840, 1250, 16, 420, 0x67e8f9, 0.2).setAngle(-12).setDepth(15);
           this.add.tileSprite(WORLD_WIDTH / 2, WORLD_HEIGHT / 2, WORLD_WIDTH, WORLD_HEIGHT, "lightOverlay").setAlpha(0.24).setDepth(1100);
         }
 
@@ -615,117 +609,47 @@ export default function PixelWorld() {
 
         createDistrictDecor() {
           const lamps: Array<[number, number, number]> = [
-            [990, 610, 0xffd166],
-            [1410, 610, 0xffd166],
-            [990, 1015, 0x67e8f9],
-            [1410, 1015, 0x67e8f9],
-            [300, 675, 0xffd166],
-            [645, 675, 0xffd166],
-            [1645, 650, 0x67e8f9],
-            [2055, 650, 0x67e8f9],
-            [365, 1195, 0xff5b57],
-            [690, 1195, 0xff5b57],
-            [1040, 1188, 0xffd166],
-            [1360, 1188, 0x67e8f9],
-            [1040, 1468, 0x67e8f9],
-            [1360, 1468, 0xffd166],
-            [1650, 1165, 0x67e8f9],
-            [2030, 1165, 0xffd166],
+            [785, 520, 0xffd166],
+            [1615, 520, 0x67e8f9],
+            [785, 952, 0xffd166],
+            [1615, 952, 0x67e8f9],
+            [520, 1325, 0xff5b57],
+            [1880, 1325, 0x67e8f9],
+            [1120, 650, 0xffd166],
+            [1280, 650, 0xffd166],
+            [1120, 1260, 0x67e8f9],
+            [1280, 1260, 0x67e8f9],
           ];
           lamps.forEach(([x, y, color]) => this.createStreetLamp(x, y, color));
 
-          this.createFenceLine(782, 575, 9, "horizontal");
-          this.createFenceLine(1506, 575, 7, "horizontal");
-          this.createFenceLine(248, 665, 9, "horizontal");
-          this.createFenceLine(1608, 710, 10, "horizontal");
-          this.createFenceLine(264, 1198, 8, "horizontal");
-          this.createFenceLine(1600, 1168, 9, "horizontal");
+          this.createFenceLine(800, 594, 7, "horizontal");
+          this.createFenceLine(1506, 594, 6, "horizontal");
+          this.createFenceLine(248, 665, 5, "horizontal");
+          this.createFenceLine(1608, 710, 5, "horizontal");
+          this.createFenceLine(264, 1198, 5, "horizontal");
+          this.createFenceLine(1600, 1168, 5, "horizontal");
 
           [
-            [890, 1072, 72, 0x77ffab],
-            [1510, 1072, 72, 0x77ffab],
             [308, 820, 82, 0xffd166],
             [642, 824, 72, 0x67e8f9],
             [1602, 820, 84, 0x67e8f9],
             [2090, 816, 76, 0xffd166],
             [302, 1558, 88, 0xff5b57],
             [746, 1542, 76, 0xffd166],
-            [1025, 1328, 74, 0xffd166],
-            [1375, 1328, 74, 0x67e8f9],
-            [1000, 1588, 88, 0x67e8f9],
-            [1400, 1588, 88, 0xffd166],
             [1592, 1546, 80, 0x67e8f9],
             [2042, 1588, 86, 0xffd166],
           ].forEach(([x, y, width, color]) => this.createPixelPlanter(x, y, width, color));
 
-          const kiosks: Array<[number, number, string, number]> = [
-            [1668, 572, "BUILD", 0x67e8f9],
-            [1960, 575, "SHIP", 0xffd166],
-            [300, 552, "SHOT", 0xffd166],
-            [642, 552, "RAW", 0x67e8f9],
-            [342, 1508, "PLAY", 0xff5b57],
-            [734, 1500, "COIN", 0xffd166],
-            [1040, 1260, "LOG", 0xffd166],
-            [1360, 1260, "LINK", 0x67e8f9],
-            [1040, 1522, "MAP", 0x67e8f9],
-            [1360, 1522, "SYNC", 0xffd166],
-            [1638, 1490, "LIVE", 0x67e8f9],
-            [1998, 1498, "NEWS", 0xffd166],
+          const busStops: Array<[number, number, string, number]> = [
+            [720, 920, "B1 PHOTO", 0xffd166],
+            [1680, 920, "B2 PROJECT", 0x67e8f9],
+            [720, 1305, "B3 GAME", 0xff5b57],
+            [1680, 1305, "B4 NEWS", 0x77ffab],
           ];
-          kiosks.forEach(([x, y, label, color]) => this.createTerminalKiosk(x, y, label, color));
+          busStops.forEach(([x, y, label, color]) => this.createBusStop(x, y, label, color));
 
-          this.createCableRun([
-            [1660, 565],
-            [1768, 625],
-            [1848, 540],
-            [1988, 622],
-            [2070, 560],
-          ], 0x67e8f9);
-          this.createCableRun([
-            [330, 1470],
-            [455, 1510],
-            [590, 1478],
-            [725, 1518],
-          ], 0xff5b57);
-          this.createCableRun([
-            [1040, 1260],
-            [1138, 1320],
-            [1200, 1435],
-            [1262, 1320],
-            [1360, 1260],
-          ], 0xffd166);
-          this.createCableRun([
-            [1040, 1522],
-            [1130, 1570],
-            [1200, 1618],
-            [1270, 1570],
-            [1360, 1522],
-          ], 0x67e8f9);
-          this.createCableRun([
-            [1626, 1488],
-            [1768, 1420],
-            [1840, 1280],
-            [1995, 1450],
-          ], 0x67e8f9);
-
-          [
-            [858, 825, 0xffd166],
-            [932, 825, 0x67e8f9],
-            [1006, 825, 0xffd166],
-            [1394, 825, 0xffd166],
-            [1468, 825, 0x67e8f9],
-            [1542, 825, 0xffd166],
-            [1160, 638, 0xffd166],
-            [1240, 638, 0xffd166],
-            [1160, 1012, 0x67e8f9],
-            [1240, 1012, 0x67e8f9],
-            [1100, 1180, 0xffd166],
-            [1300, 1180, 0x67e8f9],
-            [1100, 1370, 0x67e8f9],
-            [1300, 1370, 0xffd166],
-            [1100, 1560, 0x67e8f9],
-            [1300, 1560, 0xffd166],
-          ].forEach(([x, y, color]) => this.createGroundMarker(x, y, color));
+          this.createGroundMarker(1200, 950, 0xffd166);
+          this.createGroundMarker(1200, 1320, 0x67e8f9);
         }
 
         createStreetLamp(x: number, y: number, color: number) {
@@ -744,16 +668,15 @@ export default function PixelWorld() {
           }
         }
 
-        createTerminalKiosk(x: number, y: number, label: string, accent: number) {
-          this.add.rectangle(x, y, 64, 50, 0x0a0d11, 0.94).setDepth(74).setStrokeStyle(2, accent, 0.52);
-          this.add.rectangle(x, y - 10, 42, 18, accent, 0.24).setDepth(75);
-          this.add.rectangle(x - 16, y + 14, 8, 8, 0xffd166, 0.82).setDepth(75);
-          this.add.rectangle(x, y + 14, 8, 8, 0x67e8f9, 0.82).setDepth(75);
-          this.add.rectangle(x + 16, y + 14, 8, 8, 0xff5b57, 0.82).setDepth(75);
+        createBusStop(x: number, y: number, label: string, accent: number) {
+          this.add.rectangle(x, y, 124, 42, 0x0a0d11, 0.9).setDepth(74).setStrokeStyle(2, accent, 0.48);
+          this.add.rectangle(x - 48, y + 28, 8, 46, 0x0b0d10, 0.96).setDepth(73);
+          this.add.rectangle(x + 48, y + 28, 8, 46, 0x0b0d10, 0.96).setDepth(73);
+          this.add.rectangle(x, y - 3, 94, 12, accent, 0.2).setDepth(75);
           this.add
-            .text(x, y + 40, label, {
+            .text(x, y, label, {
               fontFamily: "monospace",
-              fontSize: "11px",
+              fontSize: "12px",
               color: "#fff7db",
               stroke: "#000000",
               strokeThickness: 4,
@@ -795,48 +718,75 @@ export default function PixelWorld() {
         }
 
         createCityIdentityCorner() {
-          this.add.image(1810, 1074, "beijingBroadcastDistrict").setScale(0.54).setDepth(78);
-          this.createLightPool(1670, 1125, 0xffd166, 260, 0.12);
-          this.createLightPool(2055, 1110, 0x67e8f9, 260, 0.16);
-          this.createLightPool(2170, 1010, 0x67e8f9, 180, 0.14);
-          this.createLightPool(1810, 1360, 0xffd166, 190, 0.1);
+          this.add.image(2188, 1620, "sydneySeaEdge").setScale(0.54).setAlpha(0.78).setDepth(24);
+          this.add.rectangle(1995, 1428, 430, 170, 0x0a1117, 0.58).setDepth(61).setStrokeStyle(3, 0x67e8f9, 0.16);
+          this.add.image(2012, 1392, "sydneyHarbour").setScale(0.26).setDepth(78);
+          this.createLightPool(1945, 1370, 0xffd166, 150, 0.08);
+          this.createLightPool(2075, 1430, 0x67e8f9, 180, 0.1);
         }
 
         createRoadNetwork() {
           const road = this.add.graphics().setDepth(13);
           const segments = [
-            [1110, 540, 180, 830],
-            [385, 880, 1610, 140],
-            [400, 520, 140, 830],
-            [450, 1240, 1420, 140],
-            [1720, 480, 150, 850],
-            [470, 505, 760, 116],
-            [1765, 505, 230, 116],
+            [1105, 420, 190, 1040],
+            [330, 880, 1740, 155],
+            [395, 470, 845, 125],
+            [1160, 470, 860, 125],
+            [420, 1245, 820, 130],
+            [1160, 1245, 640, 130],
+            [1805, 1328, 230, 100],
+            [395, 530, 155, 830],
+            [1770, 535, 155, 920],
           ];
 
-          road.fillStyle(0x0c1218, 0.78);
+          road.fillStyle(0x0b1117, 0.92);
           segments.forEach(([x, y, width, height]) => {
             road.fillRect(x, y, width, height);
           });
 
-          road.lineStyle(3, 0xf8c35f, 0.16);
+          road.fillStyle(0x121c24, 0.96);
+          road.fillRoundedRect(1058, 835, 284, 250, 18);
+
+          road.lineStyle(2, 0xf8c35f, 0.2);
           segments.forEach(([x, y, width, height]) => {
             road.strokeRect(x, y, width, height);
           });
 
-          road.lineStyle(4, 0xf6e6aa, 0.18);
-          for (let y = 600; y < 1320; y += 110) {
-            road.lineBetween(1198, y, 1198, y + 42);
+          road.lineStyle(4, 0xf6e6aa, 0.22);
+          for (let y = 470; y < 1440; y += 118) {
+            road.lineBetween(1198, y, 1198, y + 48);
           }
-          for (let x = 470; x < 1880; x += 135) {
-            road.lineBetween(x, 950, x + 58, 950);
+          for (let x = 390; x < 2020; x += 142) {
+            road.lineBetween(x, 958, x + 64, 958);
           }
-          for (let y = 560; y < 1260; y += 120) {
+          for (let y = 560; y < 1300; y += 120) {
             road.lineBetween(470, y, 470, y + 48);
+            road.lineBetween(1848, y, 1848, y + 48);
           }
-          for (let y = 560; y < 1260; y += 120) {
-            road.lineBetween(1795, y, 1795, y + 48);
-          }
+
+          road.lineStyle(5, 0x67e8f9, 0.24);
+          road.beginPath();
+          road.moveTo(470, 940);
+          road.lineTo(1200, 940);
+          road.lineTo(1848, 940);
+          road.lineTo(1848, 1328);
+          road.lineTo(1188, 1328);
+          road.lineTo(470, 1320);
+          road.strokePath();
+
+          road.fillStyle(0xffd166, 0.22);
+          [
+            [1180, 870],
+            [1180, 1030],
+            [420, 890],
+            [1788, 890],
+            [420, 1248],
+            [1788, 1248],
+          ].forEach(([x, y]) => {
+            for (let index = 0; index < 5; index += 1) {
+              road.fillRect(x + index * 18, y, 10, 78);
+            }
+          });
         }
 
         createLightPool(x: number, y: number, color: number, radius: number, alpha: number) {
@@ -892,7 +842,7 @@ export default function PixelWorld() {
             [2075, 390, 38, 230],
             [470, 360, 430, 310],
             [520, 1350, 460, 300],
-            [1810, 1085, 820, 470],
+            [2012, 1392, 430, 220],
             [2110, 1515, 240, 200],
             [2245, 1585, 220, 240],
             [1200, 120, WORLD_WIDTH, 130],
@@ -1105,6 +1055,7 @@ export default function PixelWorld() {
       return;
     }
 
+    setActiveInterior(null);
     setActivePanel(panel);
   }, []);
 
@@ -1116,110 +1067,122 @@ export default function PixelWorld() {
     return "";
   }, [activePanel]);
 
+  const isInteriorActive = activeInterior !== null;
+
   return (
     <main className="evan-shell">
       <div ref={gameRef} className="game-stage" />
       <div className="crt-layer" />
 
-      <header className="top-hud">
-        <div className="hud-chip" aria-live="polite">
-          <div className="hud-kicker">EVAN WEB</div>
-          <div className="hud-title">{area}</div>
-        </div>
-        <nav className="hud-nav" aria-label="Map shortcuts">
-          {worldHotspots.map((hotspot) => (
-            <button key={hotspot.id} className="hud-button" onClick={() => openPanel(hotspot.id)}>
-              {hotspot.label}
-            </button>
-          ))}
-        </nav>
-      </header>
-
-      <div className="toast">这是 Evan Web，尽情探索吧。WASD 移动，靠近建筑按 E 互动。</div>
-
-      <section className="world-dashboard" aria-label="World status">
-        <div className="dashboard-kicker">LIVE WORLD</div>
-        <div className="dashboard-title">Evan Studio map</div>
-        <div className="dashboard-stats">
-          {worldStats.map((stat) => (
-            <div key={stat.label}>
-              <span>{stat.label}</span>
-              <strong>{stat.value}</strong>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <aside className="district-rail" aria-label="探索节点状态">
-        <div className="dashboard-kicker">DISTRICTS</div>
-        {worldHotspots.map((hotspot, index) => (
-          <div className={activeHotspot?.id === hotspot.id ? "district-item active" : "district-item"} key={hotspot.id}>
-            <span>{String(index + 1).padStart(2, "0")}</span>
-            <div>
-              <strong>{hotspot.label}</strong>
-              <small>{hotspot.action}</small>
-            </div>
+      {!isInteriorActive && (
+        <header className="top-hud">
+          <div className="hud-chip" aria-live="polite">
+            <div className="hud-kicker">EVAN WEB</div>
+            <div className="hud-title">{area}</div>
           </div>
-        ))}
-      </aside>
+          <nav className="hud-nav" aria-label="Map shortcuts">
+            {worldHotspots.map((hotspot) => (
+              <button key={hotspot.id} className="hud-button" onClick={() => openPanel(hotspot.id)}>
+                {hotspot.label}
+              </button>
+            ))}
+          </nav>
+        </header>
+      )}
 
-      {!introDone && (
+      {!isInteriorActive && <div className="toast">这是 Evan Web，尽情探索吧。WASD 移动，靠近建筑按 E 互动。</div>}
+
+      {!isInteriorActive && (
+        <section className="world-dashboard" aria-label="World status">
+          <div className="dashboard-kicker">LIVE WORLD</div>
+          <div className="dashboard-title">Evan Studio map</div>
+          <div className="dashboard-stats">
+            {worldStats.map((stat) => (
+              <div key={stat.label}>
+                <span>{stat.label}</span>
+                <strong>{stat.value}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {!isInteriorActive && (
+        <aside className="district-rail" aria-label="探索节点状态">
+          <div className="dashboard-kicker">DISTRICTS</div>
+          {worldHotspots.map((hotspot, index) => (
+            <div className={activeHotspot?.id === hotspot.id ? "district-item active" : "district-item"} key={hotspot.id}>
+              <span>{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <strong>{hotspot.label}</strong>
+                <small>{hotspot.action}</small>
+              </div>
+            </div>
+          ))}
+        </aside>
+      )}
+
+      {!introDone && !isInteriorActive && (
         <button className="hud-button skip-intro" onClick={() => skipIntroRef.current()}>
           Skip Intro
         </button>
       )}
 
-      {activeHotspot && !activePanel && (
+      {activeHotspot && !activePanel && !isInteriorActive && (
         <div className="prompt">
           靠近 <strong>{activeHotspot.label}</strong>，按 <strong>E</strong> {activeHotspot.action}
         </div>
       )}
 
-      <div className="mobile-pad" aria-label="Mobile movement controls">
-        <button
-          className="up"
-          onPointerDown={(event) => pressControl("up", event)}
-          onPointerUp={(event) => releaseControl("up", event)}
-          onPointerCancel={(event) => releaseControl("up", event)}
-          onLostPointerCapture={() => setMobileControl("up", false)}
-          onBlur={() => setMobileControl("up", false)}
-        >
-          W
-        </button>
-        <button
-          className="left"
-          onPointerDown={(event) => pressControl("left", event)}
-          onPointerUp={(event) => releaseControl("left", event)}
-          onPointerCancel={(event) => releaseControl("left", event)}
-          onLostPointerCapture={() => setMobileControl("left", false)}
-          onBlur={() => setMobileControl("left", false)}
-        >
-          A
-        </button>
-        <button
-          className="down"
-          onPointerDown={(event) => pressControl("down", event)}
-          onPointerUp={(event) => releaseControl("down", event)}
-          onPointerCancel={(event) => releaseControl("down", event)}
-          onLostPointerCapture={() => setMobileControl("down", false)}
-          onBlur={() => setMobileControl("down", false)}
-        >
-          S
-        </button>
-        <button
-          className="right"
-          onPointerDown={(event) => pressControl("right", event)}
-          onPointerUp={(event) => releaseControl("right", event)}
-          onPointerCancel={(event) => releaseControl("right", event)}
-          onLostPointerCapture={() => setMobileControl("right", false)}
-          onBlur={() => setMobileControl("right", false)}
-        >
-          D
-        </button>
-      </div>
-      <button className="mobile-action" onClick={() => interactRef.current()}>
-        E
-      </button>
+      {!isInteriorActive && (
+        <>
+          <div className="mobile-pad" aria-label="Mobile movement controls">
+            <button
+              className="up"
+              onPointerDown={(event) => pressControl("up", event)}
+              onPointerUp={(event) => releaseControl("up", event)}
+              onPointerCancel={(event) => releaseControl("up", event)}
+              onLostPointerCapture={() => setMobileControl("up", false)}
+              onBlur={() => setMobileControl("up", false)}
+            >
+              W
+            </button>
+            <button
+              className="left"
+              onPointerDown={(event) => pressControl("left", event)}
+              onPointerUp={(event) => releaseControl("left", event)}
+              onPointerCancel={(event) => releaseControl("left", event)}
+              onLostPointerCapture={() => setMobileControl("left", false)}
+              onBlur={() => setMobileControl("left", false)}
+            >
+              A
+            </button>
+            <button
+              className="down"
+              onPointerDown={(event) => pressControl("down", event)}
+              onPointerUp={(event) => releaseControl("down", event)}
+              onPointerCancel={(event) => releaseControl("down", event)}
+              onLostPointerCapture={() => setMobileControl("down", false)}
+              onBlur={() => setMobileControl("down", false)}
+            >
+              S
+            </button>
+            <button
+              className="right"
+              onPointerDown={(event) => pressControl("right", event)}
+              onPointerUp={(event) => releaseControl("right", event)}
+              onPointerCancel={(event) => releaseControl("right", event)}
+              onLostPointerCapture={() => setMobileControl("right", false)}
+              onBlur={() => setMobileControl("right", false)}
+            >
+              D
+            </button>
+          </div>
+          <button className="mobile-action" onClick={() => interactRef.current()}>
+            E
+          </button>
+        </>
+      )}
 
       {activePanel && (
         <PanelOverlay title={panelTitle} panel={activePanel} onClose={() => setActivePanel(null)} />
@@ -1232,6 +1195,7 @@ export default function PixelWorld() {
 
 function PhotoLabInterior({ onBack }: { onBack: () => void }) {
   const roomRef = useRef<HTMLDivElement | null>(null);
+  const inputReadyAtRef = useRef(Date.now() + 450);
   const controlsRef = useRef<PhotoControlState>({
     up: false,
     down: false,
@@ -1598,7 +1562,11 @@ function PhotoLabInterior({ onBack }: { onBack: () => void }) {
             this.add.circle(x, y + height * 0.78, 10, 0x67e8f9, 0.08).setDepth(3);
 
             const zone = this.add.zone(x, y, width + 12, height + 18).setDepth(12).setInteractive({ useHandCursor: true });
-            zone.on("pointerdown", () => this.openAlbumFromFrame(index));
+            zone.on("pointerdown", () => {
+              if (this.acceptsInput()) {
+                this.openAlbumFromFrame(index);
+              }
+            });
 
             this.frameMarkers.push({
               index,
@@ -1662,7 +1630,11 @@ function PhotoLabInterior({ onBack }: { onBack: () => void }) {
             .zone(700, 845, 526, 322)
             .setDepth(612)
             .setInteractive({ useHandCursor: true })
-            .on("pointerdown", () => this.openBookingPanel());
+            .on("pointerdown", () => {
+              if (this.acceptsInput()) {
+                this.openBookingPanel();
+              }
+            });
           this.add.rectangle(700, 1036, 330, 52, 0x090a0b, 0.78).setDepth(1036).setStrokeStyle(2, 0x67e8f9, 0.28);
           this.add
             .text(700, 1027, "预约 SHOT 人像 / 活动", {
@@ -1832,6 +1804,10 @@ function PhotoLabInterior({ onBack }: { onBack: () => void }) {
         }
 
         tryInteract() {
+          if (!this.acceptsInput()) {
+            return;
+          }
+
           if (this.nearestBooking) {
             this.openBookingPanel();
             return;
@@ -1852,6 +1828,10 @@ function PhotoLabInterior({ onBack }: { onBack: () => void }) {
           this.previewImage.setTexture(category.coverSrc ? `photoAlbum-${index}` : "photoAlbum-empty");
           this.selectedTitle.setText(category.wallLabel);
           openAlbum(category.id);
+        }
+
+        acceptsInput() {
+          return Date.now() >= inputReadyAtRef.current;
         }
 
         directionFromVector(vx: number, vy: number): Facing {
@@ -1936,7 +1916,20 @@ function PhotoLabInterior({ onBack }: { onBack: () => void }) {
       <div ref={roomRef} className="photo-game-stage" />
 
       <header className="photo-scene-hud">
-        <button className="hud-button" onClick={onBack}>
+        <button
+          className="hud-button"
+          onPointerDown={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            onBack();
+          }}
+          onClick={(event) => {
+            event.stopPropagation();
+            if (event.detail === 0) {
+              onBack();
+            }
+          }}
+        >
           Back to map
         </button>
         <div className="photo-scene-title">
