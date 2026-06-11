@@ -17,7 +17,7 @@ const QUIPS = [
   '想聊天的话，点上面的气泡呀。',
 ];
 
-const GREETING = '你好，想和我聊点什么？';
+const GREETING = '你好，想了解我点什么？';
 
 export default function MusicChat() {
   const [open, setOpen] = useState(false);
@@ -155,31 +155,40 @@ export default function MusicChat() {
         )}
       </AnimatePresence>
 
-      {/* speech-bubble chat panel, tail pointing at the guy */}
+      {/* oval comic speech bubble — sits over the lamp side so his face stays visible */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: 14, scale: 0.92, transformOrigin: '50% 100%' }}
+            initial={{ opacity: 0, y: 14, scale: 0.85, transformOrigin: '65% 100%' }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 14, scale: 0.92 }}
+            exit={{ opacity: 0, y: 14, scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 320, damping: 26 }}
-            className="absolute bottom-6 left-1/2 z-30 flex w-[min(20rem,84vw)] -translate-x-1/2 flex-col overflow-visible rounded-3xl border"
-            style={{
-              height: 'min(21rem, 58vh)',
-              backgroundColor: 'rgba(33, 30, 28, 0.97)',
-              borderColor: 'rgba(122, 144, 136, 0.45)',
-              boxShadow: '0 14px 40px rgba(0,0,0,0.55)',
-              backdropFilter: 'blur(6px)',
-            }}
+            className="absolute z-30"
+            style={{ left: '-2%', bottom: 2, width: 'min(14.5rem, 72vw)', height: 'min(14rem, 48vh)' }}
           >
-            {/* bubble tail */}
+            {/* comic-bubble tail: two fading dots toward the guy */}
             <span
-              className="absolute -bottom-[7px] left-1/2 h-3.5 w-3.5 -translate-x-1/2 rotate-45 border-b border-r"
-              style={{ backgroundColor: 'rgba(33, 30, 28, 0.97)', borderColor: 'rgba(122, 144, 136, 0.45)' }}
+              className="absolute -bottom-1 right-[18%] h-3.5 w-4 rounded-full border"
+              style={{ backgroundColor: 'rgba(26, 24, 22, 0.84)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
+            />
+            <span
+              className="absolute -bottom-4 right-[12%] h-2 w-2.5 rounded-full border"
+              style={{ backgroundColor: 'rgba(26, 24, 22, 0.84)', borderColor: 'rgba(122, 144, 136, 0.35)' }}
             />
 
+            <div
+              className="flex h-full w-full flex-col overflow-hidden border"
+              style={{
+                borderRadius: '50% 50% 50% 50% / 45% 45% 45% 45%',
+                backgroundColor: 'rgba(40, 38, 34, 0.92)',
+                borderColor: 'rgba(122, 144, 136, 0.7)',
+                boxShadow: '0 0 0 1px rgba(122, 144, 136, 0.2), 0 14px 40px rgba(0,0,0,0.5)',
+                backdropFilter: 'blur(10px)',
+                padding: '1.3rem 2rem 1.2rem',
+              }}
+            >
             {/* header */}
-            <div className="flex items-center justify-between px-4 pb-2 pt-3">
+            <div className="flex items-center justify-between pb-1.5">
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: '#7a9088' }} />
@@ -192,8 +201,8 @@ export default function MusicChat() {
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
-                className="rounded-full p-1 transition-colors hover:bg-white/5"
-                style={{ color: '#8a8680' }}
+                className="rounded-full p-1 transition-colors hover:bg-white/10"
+                style={{ color: '#b8b4aa' }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M18 6 6 18M6 6l12 12" />
@@ -202,7 +211,7 @@ export default function MusicChat() {
             </div>
 
             {/* messages */}
-            <div ref={listRef} className="flex-1 space-y-2.5 overflow-y-auto px-3.5 pb-2">
+            <div ref={listRef} className="flex-1 space-y-2 overflow-y-auto pb-1.5">
               <div className="flex justify-start">
                 <div
                   className="max-w-[85%] rounded-2xl rounded-bl-md px-3 py-1.5 text-xs leading-relaxed"
@@ -247,7 +256,7 @@ export default function MusicChat() {
                 e.preventDefault();
                 send(input);
               }}
-              className="flex items-center gap-2 px-3 pb-3 pt-1"
+              className="flex items-center gap-2 pt-1"
             >
               <input
                 value={input}
@@ -271,6 +280,7 @@ export default function MusicChat() {
                 </svg>
               </button>
             </form>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

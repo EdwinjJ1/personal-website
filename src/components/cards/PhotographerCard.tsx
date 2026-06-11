@@ -168,36 +168,36 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
         }
       `}</style>
 
-      {/* Model draped over the top frame — hover to start the shoot */}
+      {/* Model standing on the top frame — hover and she reaches down to touch it */}
       <button
         type="button"
         onMouseEnter={shoot}
         onClick={shoot}
-        aria-label="Take a photo of the model on the frame"
-        className="absolute left-1/2 z-20 w-[176px] -translate-x-1/2 cursor-pointer border-0 bg-transparent p-0"
-        style={{ top: -54 }}
+        aria-label="The model poses on the card frame"
+        className="absolute left-[36%] z-20 w-[44px] -translate-x-1/2 cursor-pointer border-0 bg-transparent p-0"
+        style={{ top: -148 }}
       >
         <PoseSprite
           idle="/images/sprites/girl-idle.png"
           active="/images/sprites/girl-press.png"
           on={shooting}
-          alt="Model lying on the card frame"
+          alt="Model standing on the card frame"
           className="transition-transform duration-300"
           style={{
-            transform: shooting ? 'translateY(7px) rotate(-1deg)' : 'none',
+            transform: shooting ? 'translateY(11px)' : 'none',
             transitionTimingFunction: 'cubic-bezier(.34,1.56,.64,1)',
             filter: 'drop-shadow(0 6px 8px rgba(0,0,0,0.35))',
           }}
         />
       </button>
 
-      {/* Photographer aiming up at her from inside the card */}
+      {/* Photographer in the empty header corner, aiming up-left at her */}
       <button
         type="button"
         onMouseEnter={shoot}
         onClick={shoot}
         aria-label="Take a photo"
-        className="absolute bottom-9 left-1.5 z-20 w-[52px] cursor-pointer border-0 bg-transparent p-0"
+        className="absolute right-[132px] top-1 z-20 w-[34px] cursor-pointer border-0 bg-transparent p-0"
       >
         <PoseSprite
           idle="/images/sprites/photographer-idle.png"
@@ -206,7 +206,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           alt="Evan taking a photo"
           className="transition-transform duration-200"
           style={{
-            transform: shooting ? 'translateY(4px)' : 'none',
+            transform: shooting ? 'scaleX(-1) translateY(4px)' : 'scaleX(-1)',
             filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.4))',
           }}
         />
@@ -218,7 +218,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           className="pointer-events-none absolute inset-0 z-30 rounded-2xl"
           style={{
             background:
-              'radial-gradient(circle at 18% 72%, rgba(255,252,240,0.95), rgba(255,252,240,0.55) 38%, transparent 72%)',
+              'radial-gradient(circle at 74% 12%, rgba(255,252,240,0.95), rgba(255,252,240,0.55) 38%, transparent 72%)',
             animation: 'cam-flash 0.55s ease-out 0.32s both',
           }}
         />

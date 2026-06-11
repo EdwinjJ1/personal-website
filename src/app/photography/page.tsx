@@ -400,8 +400,8 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
                     <div>
-                      <span className="font-medium">Fujifilm GFX 50R</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Medium Format Mirrorless</span>
+                      <span className="font-medium">Fujifilm GFX 100</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>102MP Medium Format Mirrorless</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
@@ -495,6 +495,27 @@ export default function PhotographyPage() {
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
                     <div>
+                      <span className="font-medium">Canon 17-40mm f/4L USM</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Canon EF 100mm f/2.8 Macro</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Prime</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
+                      <span className="font-medium">Sigma 135mm f/1.8 DG HSM Art</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                    <div>
                       <span className="font-medium">Canon 70-200mm f/2.8L II IS USM</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom (Gen II)</span>
                     </div>
@@ -548,6 +569,13 @@ export default function PhotographyPage() {
                     <div>
                       <span className="font-medium">Laowa 60mm f/2.8 2:1 Macro</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Specialist</span>
+                    </div>
+                  </li>
+                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <div>
+                      <span className="font-medium">Laowa 24mm f/14 Probe</span>
+                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Probe</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
