@@ -3,7 +3,6 @@
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
 import ScatterText from '@/components/ScatterText';
-import MusicPixelScene from './MusicPixelScene';
 import { useState, useEffect } from 'react';
 
 // Pixel-style equalizer — chunky stepped bars, "the band playing live"
@@ -33,39 +32,19 @@ function PixelEqualizer({ live }: { live: boolean }) {
   );
 }
 
-// Line-art headphones draped over the card's top frame
+// Headphones hanging over the card's top frame
 function HangingHeadphones() {
   return (
-    <svg
-      width="58"
-      height="64"
-      viewBox="0 0 58 64"
-      fill="none"
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src="/images/sprites/headphones.png"
+      alt=""
       aria-hidden="true"
-      className="pointer-events-none absolute -top-[22px] right-6 z-10"
-      style={{ transform: 'rotate(8deg)' }}
-    >
-      {/* band hooked over the frame */}
-      <path
-        d="M8 30 C8 10, 50 10, 50 30"
-        stroke="#7a9088"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      />
-      {/* left cup hanging inside the card */}
-      <rect x="3" y="29" width="11" height="15" rx="4" fill="#3a342e" stroke="#7a9088" strokeWidth="2" />
-      <rect x="5.5" y="32" width="6" height="9" rx="2.5" fill="#7a9088" opacity="0.85" />
-      {/* right cup, slightly lower for a draped feel */}
-      <rect x="44" y="33" width="11" height="15" rx="4" fill="#3a342e" stroke="#7a9088" strokeWidth="2" />
-      <rect x="46.5" y="36" width="6" height="9" rx="2.5" fill="#7a9088" opacity="0.85" />
-      {/* cable curling down */}
-      <path
-        d="M49 48 C46 56, 54 56, 51 63"
-        stroke="rgba(122,144,136,0.6)"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
+      width={62}
+      height={65}
+      className="pointer-events-none absolute -top-7 right-5 z-10 w-[62px] select-none"
+      style={{ transform: 'rotate(10deg)', filter: 'drop-shadow(0 5px 8px rgba(0,0,0,0.45))' }}
+    />
   );
 }
 
@@ -139,9 +118,19 @@ export default function MusicCard() {
           </div>
         </div>
 
-        {/* Pixel me, coding on the sofa */}
-        <div className="flex-1 min-h-0 mb-1.5">
-          <MusicPixelScene />
+        {/* Me, coding on the sofa */}
+        <div className="relative flex-1 min-h-0 mb-1.5 overflow-hidden rounded-xl">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/music-scene.webp"
+            alt="Illustration of Evan coding on a sofa with headphones on"
+            className="h-full w-full select-none object-cover object-center"
+          />
+          {/* vignette so the artwork melts into the card background */}
+          <div
+            className="pointer-events-none absolute inset-0 rounded-xl"
+            style={{ boxShadow: 'inset 0 0 26px 14px #282622' }}
+          />
         </div>
 
         {/* The band, playing live */}
