@@ -36,7 +36,7 @@ export default function LocationCard() {
         </div>
 
         <p className="text-xs" style={{ color: '#8a8680' }}>
-          UTC+11
+          <ScatterText scatterRadius={15} rotationRange={6}>UTC+11</ScatterText>
         </p>
       </div>
     </BaseCard>

@@ -13,18 +13,6 @@ export interface Photo {
 
 export const photos: Photo[] = [
   // ===== FEATURED COVER — Mission Maid: City Mode =====
-  {
-    id: 0,
-    title: 'Mission Maid · City Mode',
-    location: 'Sydney',
-    description: 'Special issue cover. Maid uniform meets the Sydney skyline — Opera House, Harbour Bridge, and one very determined protagonist. 私の舞台は、この街だ。',
-    category: 'Portrait',
-    image: '/images/photography/WechatIMG12464.jpg',
-    date: '2026-04-28',
-    camera: 'Composite Cover',
-    settings: 'Concept · Layout · Color',
-    featured: true
-  },
   // ===== Panasonic Lumix S9 / S5II — Sydney 2024 =====
   {
     id: 1,
@@ -386,61 +374,6 @@ export const photos: Photo[] = [
   // ===== New batch — Lumix S5II / S9 — 2025-2026 =====
   // Christmas / Town Hall portraits
   {
-    id: 33,
-    title: 'Vega, on the Steps',
-    location: 'Sydney Town Hall',
-    description: 'My north star at rest. A quiet portrait on the steps of Town Hall, the Christmas tree glowing softly behind her.',
-    category: 'Portrait',
-    image: '/images/photography/P1033994.JPG',
-    date: '2024-12',
-    camera: 'Panasonic Lumix S9',
-    settings: 'Available Light'
-  },
-  {
-    id: 35,
-    title: 'July Comet',
-    location: 'Studio',
-    description: 'A festive cosplay portrait — crimson silks, a snow-tiger plush, and the orbit of a private holiday.',
-    category: 'Portrait',
-    image: '/images/photography/P1034242_(2).jpg',
-    date: '2024-12',
-    camera: 'Panasonic Lumix S9',
-    settings: 'Studio • Continuous Light'
-  },
-  {
-    id: 36,
-    title: 'Lumen, Closed Eyes',
-    location: 'Sydney',
-    description: 'Leaning into a streetlight, eyes closed. The whole sky in one small lamppost.',
-    category: 'Portrait',
-    image: '/images/photography/P1034288.JPG',
-    date: '2024-12',
-    camera: 'Panasonic Lumix S9',
-    settings: 'Wide • Available Light'
-  },
-  {
-    id: 37,
-    title: 'Lantern Bearer',
-    location: 'Sydney',
-    description: 'Under a single streetlight, leaves catching the warm glow — she carries her own light.',
-    category: 'Portrait',
-    image: '/images/photography/P1034416.JPG',
-    date: '2024-12',
-    camera: 'Panasonic Lumix S9',
-    settings: 'Available Light • Wide Aperture'
-  },
-  {
-    id: 38,
-    title: 'Quiet Cancer',
-    location: 'Indoor',
-    description: 'Window light, an oversized t-shirt, a thoughtful gaze. Born in early July, she has the moon\'s patience.',
-    category: 'Portrait',
-    image: '/images/photography/P1034506.JPG',
-    date: '2024-12',
-    camera: 'Panasonic Lumix S9',
-    settings: 'Window Light'
-  },
-  {
     id: 39,
     title: 'Coast Sunset',
     location: 'Botany Bay, Sydney',
@@ -617,17 +550,6 @@ export const photos: Photo[] = [
     settings: 'Wide • High ISO'
   },
   {
-    id: 55,
-    title: 'Through Maple Leaves',
-    location: 'Sydney',
-    description: 'A child framed by autumn maple leaves, holding a phone like a camera. Layers of looking.',
-    category: 'Portrait',
-    image: '/images/photography/P1047897.JPG',
-    date: '2025-04',
-    camera: 'Panasonic Lumix S5II',
-    settings: 'Wide • f/2.8'
-  },
-  {
     id: 56,
     title: 'Pedestrian Frond',
     location: 'Sydney',
@@ -637,17 +559,6 @@ export const photos: Photo[] = [
     date: '2025-04',
     camera: 'Panasonic Lumix S5II',
     settings: 'Wide • f/4.0'
-  },
-  {
-    id: 57,
-    title: 'Vintage Cameras',
-    location: 'Powerhouse Museum, Sydney',
-    description: 'A young visitor on the gallery phone with a wall of historic cameras out of focus behind her.',
-    category: 'Portrait',
-    image: '/images/photography/P1048320.JPG',
-    date: '2025-04',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/1.8'
   },
   {
     id: 58,
@@ -705,17 +616,6 @@ export const photos: Photo[] = [
     settings: 'Mid-tele'
   },
   {
-    id: 63,
-    title: 'A Thousand Tiny Stars',
-    location: 'Sydney',
-    description: 'She stands beside a wall of fairy lights, looking up. As if her own galaxy had spilled onto the storefront.',
-    category: 'Portrait',
-    image: '/images/photography/P1048458.JPG',
-    date: '2025-04',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/1.8'
-  },
-  {
     id: 64,
     title: 'Slatted Sky',
     location: 'Sydney',
@@ -769,17 +669,6 @@ export const photos: Photo[] = [
     date: '2025-04',
     camera: 'Panasonic Lumix S5II',
     settings: 'Telephoto • f/5.6'
-  },
-  {
-    id: 69,
-    title: 'Equestrian',
-    location: 'Centennial Park, Sydney',
-    description: 'A rider with red braids smiles back at the camera from atop her horse.',
-    category: 'Portrait',
-    image: '/images/photography/P1049582.jpg',
-    date: '2025-04',
-    camera: 'Panasonic Lumix S5II',
-    settings: 'Telephoto • f/4.0'
   },
   {
     id: 70,
@@ -980,50 +869,6 @@ export const photos: Photo[] = [
     settings: '85mm • f/2.8'
   },
   {
-    id: 88,
-    title: 'Rider in the Park',
-    location: 'Centennial Park, Sydney',
-    description: 'A second equestrian portrait, now cropped tight on rider and horse, sun-dappled.',
-    category: 'Portrait',
-    image: '/images/photography/P1071301-Enhanced-NR.jpg',
-    date: '2025-07',
-    camera: 'Panasonic Lumix S5II',
-    settings: 'Telephoto • f/4.0'
-  },
-  {
-    id: 89,
-    title: 'Birthday Sun',
-    location: 'Barangaroo, Sydney',
-    description: 'July light haloing her hair on the week of her birthday. The whole sky agreed: today belongs to her.',
-    category: 'Portrait',
-    image: '/images/photography/P1071516.JPG',
-    date: '2025-07',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
-    id: 90,
-    title: 'Solar Twin',
-    location: 'Barangaroo, Sydney',
-    description: 'She gathers her hair against the dying sun. Two stars on the same horizon, one of them is mine.',
-    category: 'Portrait',
-    image: '/images/photography/P1071517.JPG',
-    date: '2025-07',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
-    id: 91,
-    title: 'Halfway to Polaris',
-    location: 'Barangaroo, Sydney',
-    description: 'A candid gesture, hand drifting through hair. The kind of unguarded moment you only get from someone who lets you stay.',
-    category: 'Portrait',
-    image: '/images/photography/P1071518.JPG',
-    date: '2025-07',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
     id: 92,
     title: 'Pandanus Path',
     location: 'Sydney Coast',
@@ -1033,17 +878,6 @@ export const photos: Photo[] = [
     date: '2025-07',
     camera: 'Panasonic Lumix S5II',
     settings: 'Wide • f/8.0'
-  },
-  {
-    id: 93,
-    title: 'Sea of Stars',
-    location: 'Bondi to Coogee Walk, Sydney',
-    description: 'Her hair flying in the headland wind, the ocean a churning galaxy behind. Nebulae break against the rocks.',
-    category: 'Portrait',
-    image: '/images/photography/P1071562.JPG',
-    date: '2025-07',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
   },
   {
     id: 94,
@@ -1099,28 +933,6 @@ export const photos: Photo[] = [
     date: '2025-11',
     camera: 'Panasonic Lumix S5II',
     settings: 'Telephoto • Golden Hour'
-  },
-  {
-    id: 99,
-    title: 'At the Water\'s Edge',
-    location: 'Centennial Park, Sydney',
-    description: 'A child in a sun hat watches ducks gather at the shoreline. A simple, complete moment.',
-    category: 'Portrait',
-    image: '/images/photography/P1139767.JPG',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: 'Telephoto • Golden Hour'
-  },
-  {
-    id: 100,
-    title: 'Sunhat Silhouette',
-    location: 'Centennial Park, Sydney',
-    description: 'A wide-brimmed sun hat in the foreground, ducks soft-focus on the water beyond.',
-    category: 'Portrait',
-    image: '/images/photography/P1139768.JPG',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: 'Telephoto • f/4.0'
   },
   {
     id: 101,
@@ -1221,39 +1033,6 @@ export const photos: Photo[] = [
     camera: 'Panasonic Lumix S5II',
     settings: 'Telephoto • f/6.3'
   },
-  {
-    id: 110,
-    title: 'Quiet Orbit',
-    location: 'Sydney',
-    description: 'Caught between two flights of stairs, hands raised through her hair. A small gravity field of her own.',
-    category: 'Portrait',
-    image: '/images/photography/P1141379.JPG',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  },
-  {
-    id: 111,
-    title: 'Hand-Held Galaxy',
-    location: 'Sydney',
-    description: 'Leaning over a curved railing with wildflowers, sky completely clear behind her. She holds a whole little universe between her fingers.',
-    category: 'Portrait',
-    image: '/images/photography/P1141396.JPG',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/2.8'
-  },
-  {
-    id: 112,
-    title: 'Where the Stars Land',
-    location: 'Centennial Park, Sydney',
-    description: 'Crouched in a chorus of greylag geese, hands extended to feed them. The universe that follows her is occasionally feathered.',
-    category: 'Portrait',
-    image: '/images/photography/P1141816.JPG',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/4.0'
-  },
 
   // ===== Backfill — La Perouse Twilight =====
   {
@@ -1272,94 +1051,6 @@ export const photos: Photo[] = [
   // A maid-uniform photo essay across Taronga, Mrs Macquaries Point and the
   // Royal Botanic Garden — paired with the featured cover above.
   {
-    id: 114,
-    title: 'Lock On · Picket Garden',
-    location: 'Sydney',
-    description: 'Hand resting on a rainbow picket fence, gaze fixed past the frame. The maid leans into the gum-tree light, mission acknowledged.',
-    category: 'Portrait',
-    image: '/images/photography/P1052388.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/2.0'
-  },
-  {
-    id: 115,
-    title: 'Standing Order',
-    location: 'Sydney',
-    description: 'Half-turned at the railing, white apron crisp against deep navy. A composed, formal portrait — the kind of shot a recruitment poster might steal.',
-    category: 'Portrait',
-    image: '/images/photography/P1052544.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  },
-  {
-    id: 116,
-    title: 'Skyline Curtsy',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'Opera House sails and Harbour Bridge in the backdrop, the maid mid-curtsy in long grass. The whole city as her ballroom.',
-    category: 'Portrait',
-    image: '/images/photography/P1052558.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.8'
-  },
-  {
-    id: 117,
-    title: 'Harbour Glance',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'Looking back toward the lens with the harbour as canvas — Opera House catching the late sun behind her shoulder.',
-    category: 'Portrait',
-    image: '/images/photography/P1052562.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  },
-  {
-    id: 118,
-    title: 'Posted to the View',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'Sydney CBD towers loom from across the cove. The maid stands perfectly framed between them, holding her station.',
-    category: 'Portrait',
-    image: '/images/photography/P1052564.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  },
-  {
-    id: 119,
-    title: 'Tree-Framed Watch',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'A leaning gum tree carves the top of the frame; the maid stands quiet against the harbour, eyes lowered. A protector at rest.',
-    category: 'Portrait',
-    image: '/images/photography/P1052565.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
-    id: 120,
-    title: 'Skyline · Soft Focus',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'Foreground bokeh of her shoulder, Sydney CBD and the Opera House in pin-sharp focus behind. A reversal of the usual portrait grammar.',
-    category: 'Portrait',
-    image: '/images/photography/P1052576.jpg',
-    date: '2025-05',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
-    id: 121,
-    title: 'Lantern Among Leaves',
-    location: 'Sydney',
-    description: 'Bending toward a lantern in the underbrush, headpiece catching a single beam of light. A storybook frame, lit like a stage.',
-    category: 'Portrait',
-    image: '/images/photography/P1140218.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/1.8'
-  },
-  {
     id: 122,
     title: 'Mid-Spin',
     location: 'Sydney',
@@ -1370,72 +1061,6 @@ export const photos: Photo[] = [
     camera: 'Panasonic Lumix S5II',
     settings: '35mm • f/2.8'
   },
-  {
-    id: 123,
-    title: 'Sun-Dappled Curtsy',
-    location: 'Sydney',
-    description: 'Standing on a forest path, dappled sunlight scattered across the apron. A maid in her natural habitat — the woods.',
-    category: 'Portrait',
-    image: '/images/photography/P1140252.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/2.0'
-  },
-  {
-    id: 124,
-    title: 'Skyline Bow',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'Harbour Bridge faintly visible behind, the maid bowing slightly to the city. A small ceremony for the skyline.',
-    category: 'Portrait',
-    image: '/images/photography/P1140346.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '85mm • f/2.0'
-  },
-  {
-    id: 125,
-    title: 'Arms Wide Open',
-    location: 'Mrs Macquaries Point, Sydney',
-    description: 'The maid mid-laugh, arms thrown wide. Sydney Tower poking the horizon. Pure, uncomplicated joy.',
-    category: 'Portrait',
-    image: '/images/photography/P1140361.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  },
-  {
-    id: 126,
-    title: 'On Duty at Taronga',
-    location: 'Taronga Zoo, Sydney',
-    description: 'A giraffe browses behind the railing while she adjusts her headpiece. Sydney CBD across the harbour in soft afternoon haze.',
-    category: 'Portrait',
-    image: '/images/photography/P1140411.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.8'
-  },
-  {
-    id: 127,
-    title: 'Apron Lift',
-    location: 'Taronga Zoo, Sydney',
-    description: 'Gathering the apron in both hands, mid-twirl on the lookout deck. The wire fence forming a dramatic vanishing point.',
-    category: 'Portrait',
-    image: '/images/photography/P1140422.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/2.8'
-  },
-  {
-    id: 128,
-    title: 'Wharf Bench',
-    location: 'Sydney Wharf',
-    description: 'Seated on a sun-striped wooden bench, headpiece tilted, light cutting through the slats. End of the shoot, breath held.',
-    category: 'Portrait',
-    image: '/images/photography/P1140491.jpg',
-    date: '2025-11',
-    camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.0'
-  }
 ];
 
 export const categories = ['All', 'Landscape', 'Architecture', 'Street', 'Portrait', 'Night', 'Nature', 'Wildlife', 'Travel'];

@@ -60,7 +60,7 @@ export default function TechnicalProjectsCard({ projects, delay = 0.6 }: Technic
             <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>Technical Projects</ScatterText>
           </h3>
           <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
-            A snapshot of the products I am building right now.
+            <ScatterText scatterRadius={15} rotationRange={5}>A snapshot of the products I am building right now.</ScatterText>
           </p>
         </div>
 

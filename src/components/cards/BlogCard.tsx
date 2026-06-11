@@ -25,7 +25,7 @@ export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
               <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>Latest Writing</ScatterText>
             </h3>
             <p className="text-sm mt-1" style={{ color: '#b8b4aa' }}>
-              Brief notes from my blog on engineering, AI, and creative practice.
+              <ScatterText scatterRadius={15} rotationRange={5}>Brief notes from my blog on engineering, AI, and creative practice.</ScatterText>
             </p>
           </div>
           <Link

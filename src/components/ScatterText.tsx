@@ -34,19 +34,23 @@ interface ScatterTextProps {
 
 // Same feel as ParticleName (the "Evan Lin" canvas signature):
 // instant repulsion from the cursor, friction + spring-back on release.
-const MIN_REPEL_RADIUS = 44;
-const RETURN_EASE = 0.09;
+// The effect arms as the cursor APPROACHES (window-level tracking), not on hover,
+// so letters start moving before the pointer ever touches the text.
+const MIN_REPEL_RADIUS = 40;
+const RETURN_EASE = 0.1;
 const FRICTION = 0.85;
-const FORCE = 2.8;
+const FORCE = 3.4;
 
 const CHAR_STYLE: CSSProperties = {
   display: 'inline-block',
   willChange: 'transform',
 };
 
-const SPACE_STYLE: CSSProperties = {
+// Words are atomic inline-blocks so paragraphs still wrap at word
+// boundaries (adjacent inline-block chars would otherwise allow
+// mid-word line breaks).
+const WORD_STYLE: CSSProperties = {
   display: 'inline-block',
-  width: '0.3em',
 };
 
 function extractText(node: ReactNode): string {
@@ -71,7 +75,6 @@ export default function ScatterText({
   const containerRef = useRef<HTMLElement | null>(null);
 
   const text = useMemo(() => extractText(children), [children]);
-  const chars = useMemo(() => Array.from(text), [text]);
 
   useEffect(() => {
     const el = containerRef.current;
@@ -87,7 +90,8 @@ export default function ScatterText({
 
     let raf = 0;
     let running = false;
-    let inside = false;
+    let near = false;
+    let wasNear = false;
     let mx = -10000;
     let my = -10000;
 
@@ -108,7 +112,7 @@ export default function ScatterText({
         const dy = p.hy + p.y - my;
         const dist = Math.hypot(dx, dy);
 
-        if (inside && dist < radius && dist > 0.01) {
+        if (near && dist < radius && dist > 0.01) {
           const force = ((radius - dist) / radius) * FORCE;
           p.vx += (dx / dist) * force;
           p.vy += (dy / dist) * force;
@@ -127,7 +131,7 @@ export default function ScatterText({
         spans[i].style.transform = `translate3d(${p.x.toFixed(2)}px, ${p.y.toFixed(2)}px, 0) rotate(${rot.toFixed(2)}deg)`;
       });
 
-      if (!inside && energy < 0.4) {
+      if (!near && energy < 0.4) {
         running = false;
         spans.forEach((span) => { span.style.transform = ''; });
         return;
@@ -142,33 +146,32 @@ export default function ScatterText({
       }
     };
 
-    const onEnter = (e: MouseEvent) => {
-      inside = true;
-      cacheHomes();
-      mx = e.clientX;
-      my = e.clientY;
-      start();
-    };
+    // Window-level tracking: the effect kicks in while the cursor is still
+    // approaching, instead of waiting for a hover on the text itself.
     const onMove = (e: MouseEvent) => {
       mx = e.clientX;
       my = e.clientY;
-      start();
-    };
-    const onLeave = () => {
-      inside = false;
-      mx = -10000;
-      my = -10000;
+      const rect = el.getBoundingClientRect();
+      near =
+        mx > rect.left - radius &&
+        mx < rect.right + radius &&
+        my > rect.top - radius &&
+        my < rect.bottom + radius;
+
+      if (near) {
+        // re-measure on each approach — cards may have moved (entry animation,
+        // hover scale, scroll) since the last pass
+        if (!wasNear) cacheHomes();
+        start();
+      }
+      wasNear = near;
     };
 
-    el.addEventListener('mouseenter', onEnter);
-    el.addEventListener('mousemove', onMove);
-    el.addEventListener('mouseleave', onLeave);
+    window.addEventListener('mousemove', onMove, { passive: true });
 
     return () => {
       cancelAnimationFrame(raf);
-      el.removeEventListener('mouseenter', onEnter);
-      el.removeEventListener('mousemove', onMove);
-      el.removeEventListener('mouseleave', onLeave);
+      window.removeEventListener('mousemove', onMove);
     };
   }, [text, scatterRadius, rotationRange]);
 
@@ -177,16 +180,27 @@ export default function ScatterText({
     ...(color ? { color } : {}),
   };
 
-  const renderedChars = chars.map((char, i) => {
-    if (char === ' ') {
-      return <span key={`space-${i}`} style={SPACE_STYLE} />;
-    }
-    return (
-      <span key={`${char}-${i}`} data-scatter-char style={CHAR_STYLE}>
-        {char}
-      </span>
-    );
-  });
+  // Split into words + whitespace; render whitespace as plain text nodes so
+  // line wrapping stays natural for multi-line copy.
+  const renderedContent = useMemo(() => {
+    const tokens = text.split(/(\s+)/);
+    let charIndex = 0;
+    return tokens.map((token, t) => {
+      if (token === '') return null;
+      if (/^\s+$/.test(token)) {
+        return token.replace(/\s/g, ' ').length > 1 ? ' ' : ' ';
+      }
+      return (
+        <span key={`w-${t}`} style={WORD_STYLE}>
+          {Array.from(token).map((char) => (
+            <span key={`c-${charIndex++}`} data-scatter-char style={CHAR_STYLE}>
+              {char}
+            </span>
+          ))}
+        </span>
+      );
+    });
+  }, [text]);
 
   const isStringChild = typeof children === 'string';
   const singleChild = !isStringChild && isValidElement<Record<string, unknown>>(children) ? children : null;
@@ -194,7 +208,7 @@ export default function ScatterText({
   if (isStringChild) {
     return (
       <Component ref={containerRef} className={className} style={mergedStyle}>
-        {renderedChars}
+        {renderedContent}
       </Component>
     );
   }
@@ -204,7 +218,7 @@ export default function ScatterText({
   if (singleChild) {
     return (
       <Component ref={containerRef} className={className} style={mergedStyle}>
-        {cloneElement(singleChild, singleChild.props, renderedChars)}
+        {cloneElement(singleChild, singleChild.props, renderedContent)}
       </Component>
     );
   }
