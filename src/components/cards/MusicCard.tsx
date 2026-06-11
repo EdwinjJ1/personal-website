@@ -68,7 +68,7 @@ export default function MusicCard() {
                 style={{ backgroundColor: '#7a9088' }}
               />
               <span className="text-xs" style={{ color: '#7a9088' }}>
-                {live ? 'NetEase · this week' : 'Live'}
+                <ScatterText scatterRadius={15} rotationRange={6}>{live ? 'NetEase · this week' : 'Live'}</ScatterText>
               </span>
             </div>
           </div>
@@ -112,7 +112,7 @@ export default function MusicCard() {
           <div className="mt-2.5 flex items-center justify-between text-xs" style={{ color: '#8a8680' }}>
             {live && track.playCount ? (
               <>
-                <span className="tabular-nums">{track.playCount} plays this week</span>
+                <span className="tabular-nums"><ScatterText scatterRadius={15} rotationRange={6}>{`${track.playCount} plays this week`}</ScatterText></span>
                 <span className="inline-flex items-end gap-[2px]" aria-hidden="true">
                   {[0.5, 0.9, 0.65, 1, 0.75].map((peak, i) => (
                     <motion.span
@@ -126,7 +126,7 @@ export default function MusicCard() {
                 </span>
               </>
             ) : (
-              <span>What I keep coming back to.</span>
+              <span><ScatterText scatterRadius={15} rotationRange={6}>What I keep coming back to.</ScatterText></span>
             )}
           </div>
         </div>

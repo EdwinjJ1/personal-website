@@ -47,7 +47,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
             </h3>
             <div className="flex items-center gap-2 mt-1">
               <p className="text-sm" style={{ color: '#b8b4aa' }}>
-                AI news, research &amp; global updates. Synced {latestLabel}.
+                <ScatterText scatterRadius={15} rotationRange={5}>{`AI news, research & global updates. Synced ${latestLabel}.`}</ScatterText>
               </p>
             </div>
           </div>

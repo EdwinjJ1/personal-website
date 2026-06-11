@@ -20,10 +20,9 @@ const menuItems = [
   },
   {
     text: 'Portrait',
+    // Trimmed to non-identifying shots while the portrait set is re-curated
     images: [
-      'P1033994.JPG', 'P1034288.JPG', 'P1034416.JPG',
-      'P1034242_(2).jpg', 'P1071517.JPG', 'P1071518.JPG',
-      'P1071562.JPG', 'P1141379.JPG',
+      'P1071596.JPG', 'P1140236.jpg',
     ].map(f => getThumbnailUrl(`/images/photography/${f}`)),
     link: '/photography',
   },
