@@ -3,7 +3,71 @@
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
 import ScatterText from '@/components/ScatterText';
+import MusicPixelScene from './MusicPixelScene';
 import { useState, useEffect } from 'react';
+
+// Pixel-style equalizer — chunky stepped bars, "the band playing live"
+function PixelEqualizer({ live }: { live: boolean }) {
+  const bars = [0.45, 0.8, 0.6, 1, 0.5, 0.9, 0.7, 1, 0.55, 0.85, 0.65, 0.95];
+  return (
+    <div className="flex h-5 items-end justify-center gap-[3px]" aria-hidden="true">
+      <style>{`
+        @keyframes px-eq { 0%, 100% { transform: scaleY(0.25); } 50% { transform: scaleY(1); } }
+        @media (prefers-reduced-motion: reduce) { .px-eq { animation: none !important; } }
+      `}</style>
+      {bars.map((peak, i) => (
+        <span
+          key={i}
+          className="px-eq w-[5px] rounded-[1px] origin-bottom"
+          style={{
+            height: `${peak * 100}%`,
+            backgroundColor: i % 3 === 0 ? '#7a9088' : 'rgba(122, 144, 136, 0.55)',
+            animation: live
+              ? `px-eq ${(0.9 + (i % 5) * 0.18).toFixed(2)}s steps(3, end) ${(i * 0.11).toFixed(2)}s infinite`
+              : 'none',
+            transform: live ? undefined : 'scaleY(0.25)',
+          }}
+        />
+      ))}
+    </div>
+  );
+}
+
+// Line-art headphones draped over the card's top frame
+function HangingHeadphones() {
+  return (
+    <svg
+      width="58"
+      height="64"
+      viewBox="0 0 58 64"
+      fill="none"
+      aria-hidden="true"
+      className="pointer-events-none absolute -top-[22px] right-6 z-10"
+      style={{ transform: 'rotate(8deg)' }}
+    >
+      {/* band hooked over the frame */}
+      <path
+        d="M8 30 C8 10, 50 10, 50 30"
+        stroke="#7a9088"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
+      {/* left cup hanging inside the card */}
+      <rect x="3" y="29" width="11" height="15" rx="4" fill="#3a342e" stroke="#7a9088" strokeWidth="2" />
+      <rect x="5.5" y="32" width="6" height="9" rx="2.5" fill="#7a9088" opacity="0.85" />
+      {/* right cup, slightly lower for a draped feel */}
+      <rect x="44" y="33" width="11" height="15" rx="4" fill="#3a342e" stroke="#7a9088" strokeWidth="2" />
+      <rect x="46.5" y="36" width="6" height="9" rx="2.5" fill="#7a9088" opacity="0.85" />
+      {/* cable curling down */}
+      <path
+        d="M49 48 C46 56, 54 56, 51 63"
+        stroke="rgba(122,144,136,0.6)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
 
 interface Track {
   title: string;
@@ -46,6 +110,7 @@ export default function MusicCard() {
 
   return (
     <BaseCard size="md" delay={0.5} className="lg:col-span-4">
+      <HangingHeadphones />
       <div className="h-full flex flex-col">
         <div className="flex items-center gap-2 mb-3">
           <motion.div
@@ -74,7 +139,17 @@ export default function MusicCard() {
           </div>
         </div>
 
-        <div className="flex flex-1 min-h-0 flex-col justify-center">
+        {/* Pixel me, coding on the sofa */}
+        <div className="flex-1 min-h-0 mb-1.5">
+          <MusicPixelScene />
+        </div>
+
+        {/* The band, playing live */}
+        <div className="mb-2">
+          <PixelEqualizer live={live} />
+        </div>
+
+        <div className="flex flex-col justify-end">
           <div className="rounded-xl p-3" style={{ backgroundColor: '#211e1c' }}>
             <div className="flex items-center gap-3">
               {track.cover ? (
@@ -113,17 +188,7 @@ export default function MusicCard() {
             {live && track.playCount ? (
               <>
                 <span className="tabular-nums"><ScatterText scatterRadius={15} rotationRange={6}>{`${track.playCount} plays this week`}</ScatterText></span>
-                <span className="inline-flex items-end gap-[2px]" aria-hidden="true">
-                  {[0.5, 0.9, 0.65, 1, 0.75].map((peak, i) => (
-                    <motion.span
-                      key={i}
-                      className="w-[3px] rounded-full"
-                      style={{ backgroundColor: '#7a9088', height: 12 }}
-                      animate={{ scaleY: [0.3, peak, 0.3] }}
-                      transition={{ repeat: Infinity, duration: 1.1 + i * 0.13, ease: 'easeInOut' }}
-                    />
-                  ))}
-                </span>
+                <span style={{ color: '#7a9088' }}>♪</span>
               </>
             ) : (
               <span><ScatterText scatterRadius={15} rotationRange={6}>What I keep coming back to.</ScatterText></span>
