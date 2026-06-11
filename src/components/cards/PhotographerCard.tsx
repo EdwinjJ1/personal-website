@@ -168,13 +168,14 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
         }
       `}</style>
 
-      {/* Model draped over the top frame — click her to pose for a shot */}
+      {/* Model draped over the top frame — hover to start the shoot */}
       <button
         type="button"
+        onMouseEnter={shoot}
         onClick={shoot}
         aria-label="Take a photo of the model on the frame"
-        className="absolute left-1/2 z-20 w-[148px] -translate-x-1/2 cursor-pointer border-0 bg-transparent p-0"
-        style={{ top: -62 }}
+        className="absolute left-1/2 z-20 w-[176px] -translate-x-1/2 cursor-pointer border-0 bg-transparent p-0"
+        style={{ top: -54 }}
       >
         <PoseSprite
           idle="/images/sprites/girl-idle.png"
@@ -183,7 +184,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           alt="Model lying on the card frame"
           className="transition-transform duration-300"
           style={{
-            transform: shooting ? 'translateY(9px) rotate(-1.5deg)' : 'none',
+            transform: shooting ? 'translateY(7px) rotate(-1deg)' : 'none',
             transitionTimingFunction: 'cubic-bezier(.34,1.56,.64,1)',
             filter: 'drop-shadow(0 6px 8px rgba(0,0,0,0.35))',
           }}
@@ -193,15 +194,16 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
       {/* Photographer aiming up at her from inside the card */}
       <button
         type="button"
+        onMouseEnter={shoot}
         onClick={shoot}
         aria-label="Take a photo"
-        className="absolute bottom-9 left-1.5 z-20 w-[58px] cursor-pointer border-0 bg-transparent p-0"
+        className="absolute bottom-9 left-1.5 z-20 w-[52px] cursor-pointer border-0 bg-transparent p-0"
       >
         <PoseSprite
           idle="/images/sprites/photographer-idle.png"
           active="/images/sprites/photographer-crouch.png"
           on={shooting}
-          alt="Pixel Evan taking a photo"
+          alt="Evan taking a photo"
           className="transition-transform duration-200"
           style={{
             transform: shooting ? 'translateY(4px)' : 'none',
