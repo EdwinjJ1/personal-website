@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const darkenColor = (hex: string, percent: number): string => {
   let color = hex.startsWith('#') ? hex.slice(1) : hex;
@@ -21,27 +21,33 @@ interface FolderProps {
   // Each item: { content, onClick } — onClick fires when that paper is clicked while open
   items?: { content: React.ReactNode; onClick?: () => void }[];
   className?: string;
+  /** When true, holds the folder open regardless of its own click state */
+  forceOpen?: boolean;
 }
 
-export default function Folder({ color = '#7a9088', size = 1, items = [], className = '' }: FolderProps) {
+export default function Folder({ color = '#7a9088', size = 1, items = [], className = '', forceOpen = false }: FolderProps) {
   const maxItems = 3;
   const papers = [...items.slice(0, maxItems)];
   while (papers.length < maxItems) papers.push({ content: null });
 
-  const [open, setOpen] = useState(false);
+  const [clickedOpen, setClickedOpen] = useState(false);
+  const open = forceOpen || clickedOpen;
   const [paperOffsets, setPaperOffsets] = useState(
     Array.from({ length: maxItems }, () => ({ x: 0, y: 0 }))
   );
+
+  useEffect(() => {
+    if (!open) {
+      setPaperOffsets(Array.from({ length: maxItems }, () => ({ x: 0, y: 0 })));
+    }
+  }, [open, maxItems]);
 
   const folderBackColor = darkenColor(color, 0.08);
   const paperBg = ['#d8d2c8', '#e4dfd6', '#f0ece6'];
 
   const toggleFolder = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setOpen(prev => {
-      if (prev) setPaperOffsets(Array.from({ length: maxItems }, () => ({ x: 0, y: 0 })));
-      return !prev;
-    });
+    setClickedOpen(prev => !prev);
   };
 
   const handlePaperMouseMove = (e: React.MouseEvent, i: number) => {

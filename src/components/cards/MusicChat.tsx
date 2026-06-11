@@ -164,29 +164,30 @@ export default function MusicChat() {
             exit={{ opacity: 0, y: 14, scale: 0.85 }}
             transition={{ type: 'spring', stiffness: 320, damping: 26 }}
             className="absolute z-30"
-            style={{ left: '-2%', bottom: 2, width: 'min(14.5rem, 72vw)', height: 'min(14rem, 48vh)' }}
+            style={{ right: '-2%', bottom: '58%', width: 'min(16.5rem, 74vw)', height: 'min(15rem, 50vh)' }}
           >
-            {/* comic-bubble tail: two fading dots toward the guy */}
+            {/* comic-bubble tail: two fading dots down-left toward the guy */}
             <span
-              className="absolute -bottom-1 right-[18%] h-3.5 w-4 rounded-full border"
-              style={{ backgroundColor: 'rgba(26, 24, 22, 0.84)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
+              className="absolute -bottom-1 left-[20%] h-3.5 w-4 rounded-full border"
+              style={{ backgroundColor: 'rgba(40, 38, 34, 0.92)', borderColor: 'rgba(122, 144, 136, 0.5)' }}
             />
             <span
-              className="absolute -bottom-4 right-[12%] h-2 w-2.5 rounded-full border"
-              style={{ backgroundColor: 'rgba(26, 24, 22, 0.84)', borderColor: 'rgba(122, 144, 136, 0.35)' }}
+              className="absolute -bottom-4 left-[13%] h-2 w-2.5 rounded-full border"
+              style={{ backgroundColor: 'rgba(40, 38, 34, 0.92)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
             />
 
             <div
-              className="flex h-full w-full flex-col overflow-hidden border"
+              className="relative h-full w-full border"
               style={{
-                borderRadius: '50% 50% 50% 50% / 45% 45% 45% 45%',
+                borderRadius: '50%',
                 backgroundColor: 'rgba(40, 38, 34, 0.92)',
                 borderColor: 'rgba(122, 144, 136, 0.7)',
                 boxShadow: '0 0 0 1px rgba(122, 144, 136, 0.2), 0 14px 40px rgba(0,0,0,0.5)',
                 backdropFilter: 'blur(10px)',
-                padding: '1.3rem 2rem 1.2rem',
               }}
             >
+            {/* content lives in the rectangle inscribed in the ellipse — nothing gets sliced */}
+            <div className="absolute left-1/2 top-1/2 flex h-[72%] w-[74%] -translate-x-1/2 -translate-y-1/2 flex-col">
             {/* header */}
             <div className="flex items-center justify-between pb-1.5">
               <div className="flex items-center gap-2">
@@ -280,6 +281,7 @@ export default function MusicChat() {
                 </svg>
               </button>
             </form>
+            </div>
             </div>
           </motion.div>
         )}
