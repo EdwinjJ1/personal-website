@@ -168,36 +168,35 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
         }
       `}</style>
 
-      {/* Model standing on the top frame — hover and she reaches down to touch it */}
+      {/* Model leaning on the folder — click/hover and she strikes a pose while the folder pops open */}
       <button
         type="button"
         onMouseEnter={shoot}
         onClick={shoot}
-        aria-label="The model poses on the card frame"
-        className="absolute left-[36%] z-20 w-[44px] -translate-x-1/2 cursor-pointer border-0 bg-transparent p-0"
-        style={{ top: -148 }}
+        aria-label="The model poses by the folder"
+        className="absolute right-[88px] top-[12px] z-20 w-[56px] cursor-pointer border-0 bg-transparent p-0"
       >
         <PoseSprite
           idle="/images/sprites/girl-idle.png"
           active="/images/sprites/girl-press.png"
           on={shooting}
-          alt="Model standing on the card frame"
+          alt="Model leaning on the photo folder"
           className="transition-transform duration-300"
           style={{
-            transform: shooting ? 'translateY(11px)' : 'none',
+            transform: shooting ? 'translateY(2px)' : 'none',
             transitionTimingFunction: 'cubic-bezier(.34,1.56,.64,1)',
             filter: 'drop-shadow(0 6px 8px rgba(0,0,0,0.35))',
           }}
         />
       </button>
 
-      {/* Photographer in the empty header corner, aiming up-left at her */}
+      {/* Photographer on her left, aiming at her and the folder */}
       <button
         type="button"
         onMouseEnter={shoot}
         onClick={shoot}
         aria-label="Take a photo"
-        className="absolute right-[132px] top-1 z-20 w-[34px] cursor-pointer border-0 bg-transparent p-0"
+        className="absolute right-[196px] top-[18px] z-20 w-[34px] cursor-pointer border-0 bg-transparent p-0"
       >
         <PoseSprite
           idle="/images/sprites/photographer-idle.png"
@@ -206,7 +205,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           alt="Evan taking a photo"
           className="transition-transform duration-200"
           style={{
-            transform: shooting ? 'scaleX(-1) translateY(4px)' : 'scaleX(-1)',
+            transform: shooting ? 'translateY(4px)' : 'none',
             filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.4))',
           }}
         />
@@ -237,6 +236,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           <Folder
             color="#7a9088"
             size={0.75}
+            forceOpen={shooting}
             items={folderPhotos.map((src) => ({
               content: (
                 <div style={{
