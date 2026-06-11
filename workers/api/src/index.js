@@ -3,6 +3,7 @@
  *
  * GET  /now-playing  → NetEase Cloud Music weekly top track (cookie stays server-side)
  * POST /chat         → streaming AI card chat via any OpenAI-compatible free provider
+ * GET  /leetcode     → public LeetCode solve stats + recent accepted submissions
  */
 
 const SYSTEM_PROMPT = `You are the AI business card on Evan Lin's personal website (evanlin.site).
@@ -95,6 +96,86 @@ async function handleNowPlaying(request, env, cors) {
   }
 }
 
+async function handleLeetCode(request, env, cors) {
+  const username = env.LEETCODE_USERNAME;
+  if (!username) {
+    return json({ configured: false }, 200, cors);
+  }
+
+  // LeetCode data changes at most a few times a day — edge-cache for 1 hour
+  const cache = caches.default;
+  const cacheKey = new Request(new URL(request.url).origin + '/leetcode');
+  const cached = await cache.match(cacheKey);
+  if (cached) {
+    const res = new Response(cached.body, cached);
+    Object.entries(cors).forEach(([k, v]) => res.headers.set(k, v));
+    return res;
+  }
+
+  const query = `
+    query($username: String!, $limit: Int!) {
+      matchedUser(username: $username) {
+        submitStatsGlobal {
+          acSubmissionNum { difficulty count }
+        }
+      }
+      recentAcSubmissionList(username: $username, limit: $limit) {
+        id
+        title
+        titleSlug
+        timestamp
+      }
+    }
+  `;
+
+  try {
+    const upstream = await fetch('https://leetcode.com/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Referer': 'https://leetcode.com',
+        'User-Agent':
+          'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36',
+      },
+      body: JSON.stringify({ query, variables: { username, limit: 15 } }),
+    });
+    const data = await upstream.json();
+
+    const stats = data?.data?.matchedUser?.submitStatsGlobal?.acSubmissionNum;
+    if (!Array.isArray(stats)) {
+      return json({ configured: true, solved: null, error: 'user_not_found' }, 200, cors);
+    }
+
+    const byDifficulty = Object.fromEntries(stats.map((s) => [s.difficulty, s.count]));
+    const recent = (data.data.recentAcSubmissionList || []).map((s) => ({
+      title: s.title,
+      slug: s.titleSlug,
+      url: `https://leetcode.com/problems/${s.titleSlug}/`,
+      timestamp: Number(s.timestamp) * 1000,
+    }));
+
+    const body = {
+      configured: true,
+      username,
+      profileUrl: `https://leetcode.com/u/${username}/`,
+      solved: {
+        all: byDifficulty.All ?? 0,
+        easy: byDifficulty.Easy ?? 0,
+        medium: byDifficulty.Medium ?? 0,
+        hard: byDifficulty.Hard ?? 0,
+      },
+      recent,
+    };
+
+    const res = json(body, 200, { ...cors, 'Cache-Control': 'public, max-age=3600' });
+    await cache.put(cacheKey, res.clone());
+    return res;
+  } catch (err) {
+    console.error('leetcode failed:', err);
+    return json({ configured: true, solved: null, error: 'upstream_failed' }, 502, cors);
+  }
+}
+
 async function handleChat(request, env, cors) {
   if (!env.AI_API_KEY) {
     return json({ error: 'not_configured' }, 503, cors);
@@ -166,6 +247,9 @@ export default {
 
     if (url.pathname === '/now-playing' && request.method === 'GET') {
       return handleNowPlaying(request, env, cors);
+    }
+    if (url.pathname === '/leetcode' && request.method === 'GET') {
+      return handleLeetCode(request, env, cors);
     }
     if (url.pathname === '/chat' && request.method === 'POST') {
       return handleChat(request, env, cors);

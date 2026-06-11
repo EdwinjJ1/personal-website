@@ -12,6 +12,15 @@ interface ActivityDay {
   level: number;
 }
 
+interface LeetCodeData {
+  configured: boolean;
+  profileUrl?: string;
+  solved?: { all: number; easy: number; medium: number; hard: number } | null;
+  recent?: Array<{ title: string; slug: string; url: string; timestamp: number }>;
+}
+
+const API_BASE = process.env.NEXT_PUBLIC_API_BASE ?? '';
+
 // 26 weeks × 7 days — GitHub-style column-per-week heatmap
 const DAYS_SHOWN = 182;
 
@@ -75,12 +84,25 @@ function buildGrid(
 
 export default function ActivityCard() {
   const [mounted, setMounted] = useState(false);
+  const [leetcode, setLeetcode] = useState<LeetCodeData | null>(null);
 
   const typedStaticDays = staticData.days as Array<{ date: string; count: number }>;
   const [days] = useState<ActivityDay[]>(() => buildGrid(typedStaticDays, DAYS_SHOWN));
   const total = staticData.totalContributions;
 
   useEffect(() => { setMounted(true); }, []);
+
+  useEffect(() => {
+    if (!API_BASE) return;
+    let cancelled = false;
+    fetch(`${API_BASE}/leetcode`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: LeetCodeData | null) => {
+        if (!cancelled && data?.configured && data.solved) setLeetcode(data);
+      })
+      .catch(() => { /* worker unreachable — just hide the strip */ });
+    return () => { cancelled = true; };
+  }, []);
 
   const displayTotal = useCountUp(total);
 
@@ -100,15 +122,44 @@ export default function ActivityCard() {
     </div>
   );
 
-  const Legend = () => (
-    <div className="flex justify-between items-center text-xs" style={{ color: '#8a8680' }}>
-      <span>Less</span>
-      <div className="flex gap-1">
-        {[0, 1, 2, 3, 4].map(level => (
-          <div key={level} className={`w-2 h-2 rounded-sm ${ACTIVITY_COLORS[level]}`} />
-        ))}
+  const latestSolved = leetcode?.recent?.[0];
+
+  const Footer = () => (
+    <div className="flex justify-between items-center gap-3 text-xs" style={{ color: '#8a8680' }}>
+      <div className="flex items-center gap-1.5 shrink-0">
+        <span>Less</span>
+        <div className="flex gap-1">
+          {[0, 1, 2, 3, 4].map(level => (
+            <div key={level} className={`w-2 h-2 rounded-sm ${ACTIVITY_COLORS[level]}`} />
+          ))}
+        </div>
+        <span>More</span>
       </div>
-      <span>More</span>
+      {leetcode?.solved && (
+        <div className="flex items-center gap-1 min-w-0">
+          <a
+            href={leetcode.profileUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 transition-colors hover:text-[#ffa116]"
+            title={`Easy ${leetcode.solved.easy} · Medium ${leetcode.solved.medium} · Hard ${leetcode.solved.hard}`}
+          >
+            <span style={{ color: '#ffa116' }}>LeetCode</span>{' '}
+            <span className="tabular-nums" style={{ color: '#b8b4aa' }}>{leetcode.solved.all} solved</span>
+          </a>
+          {latestSolved && (
+            <a
+              href={latestSolved.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="truncate transition-colors hover:text-[#e0d8cc]"
+              title={`Latest accepted: ${latestSolved.title}`}
+            >
+              · {latestSolved.title}
+            </a>
+          )}
+        </div>
+      )}
     </div>
   );
 
@@ -122,7 +173,7 @@ export default function ActivityCard() {
               <div key={i} className="min-h-[8px] rounded-sm bg-[#312e2a]" />
             ))}
           </div>
-          <Legend />
+          <Footer />
         </div>
       </BaseCard>
     );
@@ -130,36 +181,38 @@ export default function ActivityCard() {
 
   return (
     <BaseCard size="md" delay={0.4} className="md:col-span-2 lg:col-span-5">
-      <a
-        href="https://github.com/EdwinjJ1"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="View Evan's GitHub profile"
-        className="flex h-full flex-col"
-      >
-        <Header />
-        <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
-          {days.map((day, index) => (
-            <motion.div
-              key={day.date}
-              initial={{ opacity: 0, scale: 0 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.6 + index * 0.003 }}
-              className={`min-h-[8px] rounded-sm ${ACTIVITY_COLORS[day.level]}
-                hover:ring-1 hover:ring-teal-400 cursor-pointer relative group`}
-              title={`${day.count} contributions on ${day.date}`}
-            >
-              <div
-                className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10"
-                style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', color: '#e0d8cc' }}
+      <div className="flex h-full flex-col">
+        <a
+          href="https://github.com/EdwinjJ1"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Evan's GitHub profile"
+          className="flex flex-1 min-h-0 flex-col"
+        >
+          <Header />
+          <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
+            {days.map((day, index) => (
+              <motion.div
+                key={day.date}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.6 + index * 0.003 }}
+                className={`min-h-[8px] rounded-sm ${ACTIVITY_COLORS[day.level]}
+                  hover:ring-1 hover:ring-teal-400 cursor-pointer relative group`}
+                title={`${day.count} contributions on ${day.date}`}
               >
-                {day.count} contributions
-              </div>
-            </motion.div>
-          ))}
-        </div>
-        <Legend />
-      </a>
+                <div
+                  className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10"
+                  style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', color: '#e0d8cc' }}
+                >
+                  {day.count} contributions
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </a>
+        <Footer />
+      </div>
     </BaseCard>
   );
 }
