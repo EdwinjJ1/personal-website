@@ -3,6 +3,7 @@
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
 import ScatterText from '@/components/ScatterText';
+import MusicChat from './MusicChat';
 import { useState, useEffect } from 'react';
 
 // Pixel-style equalizer — chunky stepped bars, "the band playing live"
@@ -118,19 +119,20 @@ export default function MusicCard() {
           </div>
         </div>
 
-        {/* Me, coding on the sofa */}
-        <div className="relative flex-1 min-h-0 mb-1.5 overflow-hidden rounded-xl">
+        {/* Me, coding on the sofa — poke me or open the chat bubble */}
+        <div className="relative flex-1 min-h-0 mb-1.5">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/music-scene.webp"
             alt="Illustration of Evan coding on a sofa with headphones on"
-            className="h-full w-full select-none object-cover object-center"
+            className="h-full w-full select-none rounded-xl object-cover object-center"
           />
           {/* vignette so the artwork melts into the card background */}
           <div
             className="pointer-events-none absolute inset-0 rounded-xl"
             style={{ boxShadow: 'inset 0 0 26px 14px #282622' }}
           />
+          <MusicChat />
         </div>
 
         {/* The band, playing live */}
