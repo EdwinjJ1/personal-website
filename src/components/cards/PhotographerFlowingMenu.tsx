@@ -121,7 +121,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
       >
         <span style={{ flex: 1, height: 1, background: 'rgba(224,216,204,0.15)', display: 'block', maxWidth: 40 }} />
         <span style={{
-          fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(12px, 2vh, 22px)',
+          fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(9px, 1.55vh, 20px)',
           letterSpacing: '0.18em', textTransform: 'uppercase',
           color: '#c8c2b8', fontFamily: 'Georgia, "Times New Roman", serif',
         }}>

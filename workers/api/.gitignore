@@ -1,0 +1,4 @@
+# Cloudflare Worker local secrets
+.dev.vars
+# wrangler local state
+.wrangler/

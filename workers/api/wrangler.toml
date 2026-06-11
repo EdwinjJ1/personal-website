@@ -21,5 +21,7 @@ AI_API_BASE = "https://api.groq.com/openai/v1"
 AI_MODEL = "llama-3.3-70b-versatile"
 # NetEase Cloud Music numeric user id (profile page URL: music.163.com/#/user/home?id=<uid>)
 NETEASE_UID = "1802974667"
+# LeetCode username for the /leetcode solve-stats endpoint (public data, no auth needed)
+LEETCODE_USERNAME = "EdwinJL"
 # Comma-separated list of allowed origins
 ALLOWED_ORIGINS = "https://evanlin.site,https://www.evanlin.site,http://localhost:3000,http://localhost:3199"
