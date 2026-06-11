@@ -26,10 +26,9 @@ export default function Home() {
       <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
         <ClientOnlyParticles />
 
-        <div className="relative z-10 mx-auto flex w-full max-w-[1880px] flex-col px-4 md:px-6 pt-16 md:pt-24 lg:pt-16 pb-12 lg:pb-4 lg:h-svh lg:min-h-[680px] lg:justify-center">
-          {/* Modular Grid Layout — one screen on desktop, height capped so cards
-              don't stretch into empty space on tall windows */}
-          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)] lg:h-[clamp(540px,76svh,840px)] lg:min-h-0 lg:grid-rows-[minmax(0,0.92fr)_minmax(0,1.32fr)_minmax(0,1fr)]">
+        <div className="relative z-10 mx-auto flex w-full flex-col px-4 md:px-8 xl:px-12 pt-16 md:pt-24 lg:pt-16 pb-12 lg:pb-4 lg:h-svh lg:min-h-[680px]">
+          {/* Modular Grid Layout — fills the viewport edge to edge on desktop (no scroll) */}
+          <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)] lg:flex-1 lg:min-h-0 lg:grid-rows-[minmax(0,0.92fr)_minmax(0,1.32fr)_minmax(0,1fr)]">
 
             {/* Personal Info - Takes 2 columns */}
             <PersonalCard />
