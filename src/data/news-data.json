@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-05-13T05:29:13.036Z",
+  "lastUpdated": "2026-06-12T07:50:12.793Z",
   "availableDates": [
+    {
+      "value": "2026-06-12",
+      "label": "June 12, 2026"
+    },
     {
       "value": "2026-05-09",
       "label": "May 9, 2026"
@@ -283,6 +287,116 @@
     }
   ],
   "news": [
+    {
+      "id": "ai-20260612-1749-anthropic-code-with-claude-2026-ai",
+      "title": "Anthropic Code with Claude 2026：智能体推动 AI 工作流新纪元",
+      "summary": "5月6日 Anthropic 在旧金山召开 Code with Claude 2026，重点展示 Claude Code、Developer Platform 及在 GitHub / Vercel 上的集成方案。",
+      "tag": "PRODUCT",
+      "source": "Sohu",
+      "sourceUrl": "https://www.sohu.com/a/1031055633_122066678",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-arxiv-agent",
+      "title": "ArXiv 风向：Agent 可靠性与安全性成焦点",
+      "summary": "本周 ArXiv 提交集中在 agentic system reliability & safety：ProtoAda 等多模态持续学习新工作涌现；针对 MLLM 评判器的视觉偏好偏差被发现并提出纠正方案。",
+      "tag": "RESEARCH",
+      "source": "Github",
+      "sourceUrl": "https://github.com/duanyytop/agents-radar/issues/1428",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-chatgpt-ai",
+      "title": "ChatGPT 史上最大改版：\"AI 只用来聊天的时代结束了\"",
+      "summary": "OpenAI 据报正在重构 ChatGPT 主产品形态，新版不再以聊天窗口为核心，整合 Agent、多模态与第三方应用入口，被官方称为\"史上最大改版\"。",
+      "tag": "BREAKING",
+      "source": "Hd.36kr",
+      "sourceUrl": "https://hd.36kr.com/",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-deepseek-v4-and-kimi-k2-6",
+      "title": "DeepSeek V4 & Kimi K2.6 一周内相继开源",
+      "summary": "4月份 DeepSeek V4 把百万级上下文推理成本压缩至前代 27%；月之暗面随即开源 Kimi K2.6，支持 300 个子 Agent 并行集群协同。两大国产万亿参数模型同步落地。",
+      "tag": "PRODUCT",
+      "source": "So.Html5.Qq",
+      "sourceUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_76669f8950e86452",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-google-gemma-4-12b",
+      "title": "Google Gemma 4 12B 升级：原生多模态 + 长上下文",
+      "summary": "Google DeepMind 推出 Gemma 4 12B 更新版，去掉 encoder 架构，原生支持 audio、vision 与长上下文，为开源端侧多模态部署树立新标杆。",
+      "tag": "PRODUCT",
+      "source": "Prnewsleader",
+      "sourceUrl": "https://prnewsleader.com/",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-google-i-o-2026-gemini-3-5-flash-gpt-5-5",
+      "title": "Google I/O 2026: Gemini 3.5 Flash 免费开放，速度碾压 GPT-5.5",
+      "summary": "5月19-21日 Google I/O 上发布的 Gemini 3.5 Flash 推理速度达 GPT-5.5 的 4倍且对用户免费开放，同时推出 13 项重大更新宣告 Agent 时代开启。",
+      "tag": "PRODUCT",
+      "source": "Blog.Csdn",
+      "sourceUrl": "https://blog.csdn.net/Follow_24/article/details/161546795",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-meta-alexandr-wang",
+      "title": "Meta 新一代模型计划：Alexandr Wang 主导、部分开源",
+      "summary": "4月7日 Meta 证实正筹备新一代模型，AI 负责人 Alexandr Wang 上任后首批成果将\"部分开源\"，核心组件仍保留为专有。",
+      "tag": "PRODUCT",
+      "source": "So.Html5.Qq",
+      "sourceUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_25469d444ab81552",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-openai-amazon-bedrock",
+      "title": "OpenAI 模型登陆 Amazon Bedrock",
+      "summary": "AWS 在 5月宣布扩展与 OpenAI 合作，GPT-5.5 与 Codex 等模型通过 Amazon Bedrock 提供 Limited Preview，企业可通过统一 API 调用。",
+      "tag": "PRODUCT",
+      "source": "Cnblogs",
+      "sourceUrl": "https://www.cnblogs.com/AmazonwebService/p/archive/2026/05/13",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-spacex-and-google-920",
+      "title": "SpaceX & Google 达成 920亿/月算力大单",
+      "summary": "根据6月6日提交的监管文件，Google将从2026年10月到2029年6月每月向SpaceX支付9.2亿美元，租用约11万张NVIDIA GPU及配套CPU/内存。这是迄今为止AI算力租赁领域最大规模的单笔协议。",
+      "tag": "BREAKING",
+      "source": "Finance.Sina.Com",
+      "sourceUrl": "https://finance.sina.com.cn/stock/usstock/c/2026-06-06/doc-iniamhtw2265623.shtml",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
+    {
+      "id": "ai-20260612-1749-xai-grok",
+      "title": "xAI 因 Grok 生成未成年人图像遭集体诉讼",
+      "summary": "多名青少年起诉马斯克 xAI，指控 Grok 生成未成年人的性图像，给 AI 内容管控带来新一轮法律审查压力。",
+      "tag": "POLICY",
+      "source": "So.Html5.Qq",
+      "sourceUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_97269ba9c4913552",
+      "date": "2026-06-12",
+      "time": "17:49",
+      "category": "ai"
+    },
     {
       "id": "ai-20260509-1222-anthropic-forms-enterprise-ai-services-company-with-blackstone-h",
       "title": "Anthropic forms enterprise AI services company with Blackstone, Hellman & Friedman, and Goldman Sachs",
