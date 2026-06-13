@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ScatterText from '@/components/ScatterText';
-import ClientOnlyParticles from '@/components/ClientOnlyParticles';
 import newsData from '@/data/news-data.json';
 
 interface NewsItem {
@@ -141,8 +140,6 @@ export default function NewsPage() {
   return (
     <PageTransition>
       <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
-        <ClientOnlyParticles />
-
         <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
           {/* Header */}
           <motion.div

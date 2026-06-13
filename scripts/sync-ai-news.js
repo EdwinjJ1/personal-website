@@ -7,6 +7,7 @@ const path = require('path');
 const DEFAULT_SOURCE_ROOT = '/Users/edwinj/clawd/canvas';
 const sourceRoot = process.argv[2] ? path.resolve(process.argv[2]) : DEFAULT_SOURCE_ROOT;
 const dataFile = path.join(__dirname, '..', 'src', 'data', 'news-data.json');
+const previewFile = path.join(__dirname, '..', 'src', 'data', 'newsPreview.ts');
 
 const SOURCE_LABELS = [
   ['abc.net.au', 'ABC News Australia'],
@@ -469,6 +470,29 @@ function parseSourceDirectory(config) {
   return { items, replacedKeys };
 }
 
+function writeNewsPreview({ availableDates, news }) {
+  const latestDate = availableDates[0]?.value ?? '';
+  const latestLabel = availableDates[0]?.label ?? 'Latest';
+  const items = news
+    .filter((item) => item.date === latestDate)
+    .sort((left, right) => right.time.localeCompare(left.time) || left.title.localeCompare(right.title))
+    .slice(0, 3)
+    .map(({ id, title, tag, date, time, category }) => ({ id, title, tag, date, time, category }));
+
+  const preview = {
+    latestDate,
+    latestLabel,
+    items,
+  };
+
+  const content = `export const newsPreview = ${JSON.stringify(preview, null, 2)} as const;
+
+export type NewsPreviewItem = (typeof newsPreview.items)[number];
+`;
+
+  fs.writeFileSync(previewFile, content);
+}
+
 function main() {
   if (!fs.existsSync(sourceRoot)) {
     console.error(`Source root not found: ${sourceRoot}`);
@@ -501,10 +525,12 @@ function main() {
   };
 
   fs.writeFileSync(dataFile, `${JSON.stringify(output, null, 2)}\n`);
+  writeNewsPreview(output);
 
   console.log(`Synced ${parsedItems.length} items across ${SOURCE_CONFIGS.length} source directories.`);
   console.log(`Preserved ${preservedNews.length} manually maintained items.`);
   console.log(`Updated ${dataFile}`);
+  console.log(`Updated ${previewFile}`);
 }
 
 main();
