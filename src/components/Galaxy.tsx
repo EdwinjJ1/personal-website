@@ -192,7 +192,19 @@ export default function Galaxy({
     const ctn = containerRef.current;
     if (!ctn) return;
 
-    const renderer = new Renderer({ alpha: transparent, premultipliedAlpha: false });
+    const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const lowPowerViewport = window.matchMedia('(pointer: coarse), (max-width: 768px)').matches;
+    if (shouldReduceMotion || lowPowerViewport) return;
+
+    const renderer = new Renderer({
+      alpha: transparent,
+      premultipliedAlpha: false,
+      dpr: Math.min(window.devicePixelRatio || 1, 1.25),
+      depth: false,
+      stencil: false,
+      antialias: false,
+      powerPreference: 'low-power',
+    });
     const gl = renderer.gl;
 
     if (transparent) {
@@ -203,22 +215,8 @@ export default function Galaxy({
       gl.clearColor(0, 0, 0, 1);
     }
 
-    let program: Program;
-
-    const resize = () => {
-      renderer.setSize(ctn.offsetWidth, ctn.offsetHeight);
-      if (program) {
-        program.uniforms.uResolution.value = new Color(
-          gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height
-        );
-      }
-    };
-
-    window.addEventListener('resize', resize);
-    resize();
-
     const geometry = new Triangle(gl);
-    program = new Program(gl, {
+    const program = new Program(gl, {
       vertex: vertexShader,
       fragment: fragmentShader,
       uniforms: {
@@ -243,11 +241,27 @@ export default function Galaxy({
       },
     });
 
+    const resize = () => {
+      renderer.setSize(ctn.offsetWidth, ctn.offsetHeight);
+      program.uniforms.uResolution.value = new Color(
+        gl.canvas.width, gl.canvas.height, gl.canvas.width / gl.canvas.height
+      );
+    };
+
+    window.addEventListener('resize', resize);
+    resize();
+
     const mesh = new Mesh(gl, { geometry, program });
 
     let rafId: number;
+    let lastFrame = 0;
+    const frameInterval = 1000 / 30;
+
     const update = (t: number) => {
       rafId = requestAnimationFrame(update);
+      if (document.hidden || t - lastFrame < frameInterval) return;
+      lastFrame = t;
+
       program.uniforms.uTime.value = t * 0.001;
       program.uniforms.uStarSpeed.value = (t * 0.001 * starSpeed) / 10.0;
 
@@ -291,7 +305,20 @@ export default function Galaxy({
       if (ctn.contains(gl.canvas)) ctn.removeChild(gl.canvas);
       gl.getExtension('WEBGL_lose_context')?.loseContext();
     };
-  }, []);
+  }, [
+    density,
+    glowIntensity,
+    hueShift,
+    mouseInteraction,
+    mouseRepulsion,
+    repulsionStrength,
+    rotationSpeed,
+    saturation,
+    speed,
+    starSpeed,
+    transparent,
+    twinkleIntensity,
+  ]);
 
   return (
     <div

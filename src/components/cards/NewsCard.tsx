@@ -3,19 +3,10 @@
 import Link from 'next/link';
 import BaseCard from './BaseCard';
 import ScatterText from '@/components/ScatterText';
-import newsData from '@/data/news-data.json';
+import { newsPreview, type NewsPreviewItem } from '@/data/newsPreview';
 
 interface NewsCardProps {
   delay?: number;
-}
-
-interface NewsItem {
-  id: string;
-  title: string;
-  tag: 'BREAKING' | 'PRODUCT' | 'RESEARCH' | 'POLICY';
-  date: string;
-  time: string;
-  category: 'ai' | 'research' | 'industry' | 'global';
 }
 
 const tagColors = {
@@ -25,13 +16,8 @@ const tagColors = {
   POLICY: { bg: '#d97706', text: '#fff' },
 };
 
-const allNews = newsData.news as NewsItem[];
-const latestDate = newsData.availableDates[0]?.value ?? '';
-const latestLabel = newsData.availableDates[0]?.label ?? 'Latest';
-const latestItems = allNews
-  .filter((item) => item.date === latestDate)
-  .sort((left, right) => right.time.localeCompare(left.time) || left.title.localeCompare(right.title));
-const quickHighlights = latestItems.slice(0, 3);
+const latestLabel = newsPreview.latestLabel;
+const quickHighlights: readonly NewsPreviewItem[] = newsPreview.items;
 
 export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
   return (

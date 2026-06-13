@@ -106,7 +106,7 @@ export default function MusicChat() {
         className="absolute inset-0 z-[5] cursor-pointer border-0 bg-transparent p-0"
       />
 
-      {/* floating message-bubble launcher above his head */}
+      {/* floating message-bubble launcher, offset from the face */}
       <motion.button
         type="button"
         onClick={(e) => {
@@ -115,16 +115,16 @@ export default function MusicChat() {
           setQuip(null);
         }}
         aria-label="Chat with Evan"
-        className="absolute left-1/2 top-1 z-10 flex h-8 w-8 -translate-x-1/2 cursor-pointer items-center justify-center rounded-full border"
+        className="absolute right-[18%] top-4 z-10 flex h-8 w-14 cursor-pointer items-center justify-center rounded-[999px] border"
         style={{
           backgroundColor: 'rgba(33, 30, 28, 0.92)',
           borderColor: 'rgba(122, 144, 136, 0.5)',
           color: '#7a9088',
-          boxShadow: '0 3px 10px rgba(0,0,0,0.4)',
+          boxShadow: '0 6px 16px rgba(0,0,0,0.45)',
         }}
         animate={{ y: [0, -4, 0] }}
         transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
-        whileHover={{ scale: 1.15 }}
+        whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.9 }}
       >
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -135,7 +135,7 @@ export default function MusicChat() {
         </svg>
       </motion.button>
 
-      {/* poke quip — a small comic bubble above his head */}
+      {/* poke quip — a small comic bubble offset from his face */}
       <AnimatePresence>
         {quip && (
           <motion.div
@@ -143,51 +143,49 @@ export default function MusicChat() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -6, scale: 0.92 }}
             transition={{ type: 'spring', stiffness: 380, damping: 24 }}
-            className="pointer-events-none absolute left-1/2 top-10 z-20 -translate-x-1/2 whitespace-nowrap rounded-2xl px-3.5 py-2 text-xs font-medium"
+            className="pointer-events-none absolute right-[8%] top-14 z-20 whitespace-nowrap rounded-2xl px-3.5 py-2 text-xs font-medium"
             style={{ backgroundColor: '#e0d8cc', color: '#1a1816', boxShadow: '0 6px 16px rgba(0,0,0,0.4)' }}
           >
             {quip}
             <span
-              className="absolute -bottom-[5px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rotate-45"
+              className="absolute -bottom-[5px] right-8 h-2.5 w-2.5 rotate-45"
               style={{ backgroundColor: '#e0d8cc' }}
             />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* oval comic speech bubble — sits over the lamp side so his face stays visible */}
+      {/* clear oval-style chat window — wide, not circular */}
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: 14, scale: 0.85, transformOrigin: '65% 100%' }}
+            initial={{ opacity: 0, y: 12, scale: 0.92, transformOrigin: '78% 20%' }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 14, scale: 0.85 }}
+            exit={{ opacity: 0, y: 12, scale: 0.92 }}
             transition={{ type: 'spring', stiffness: 320, damping: 26 }}
             className="absolute z-30"
-            style={{ right: '-2%', bottom: '58%', width: 'min(16.5rem, 74vw)', height: 'min(15rem, 50vh)' }}
+            style={{ right: '0.45rem', top: '0.45rem', width: 'min(19rem, 92%)', height: '10.75rem' }}
           >
-            {/* comic-bubble tail: two fading dots down-left toward the guy */}
+            {/* comic-bubble tail: two fading dots toward the guy */}
             <span
-              className="absolute -bottom-1 left-[20%] h-3.5 w-4 rounded-full border"
-              style={{ backgroundColor: 'rgba(40, 38, 34, 0.92)', borderColor: 'rgba(122, 144, 136, 0.5)' }}
+              className="absolute -bottom-2 left-[34%] h-3.5 w-5 rounded-full border"
+              style={{ backgroundColor: 'rgba(40, 38, 34, 0.98)', borderColor: 'rgba(122, 144, 136, 0.5)' }}
             />
             <span
-              className="absolute -bottom-4 left-[13%] h-2 w-2.5 rounded-full border"
-              style={{ backgroundColor: 'rgba(40, 38, 34, 0.92)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
+              className="absolute -bottom-5 left-[27%] h-2 w-3 rounded-full border"
+              style={{ backgroundColor: 'rgba(40, 38, 34, 0.98)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
             />
 
             <div
-              className="relative h-full w-full border"
+              className="relative h-full w-full overflow-hidden border"
               style={{
-                borderRadius: '50%',
-                backgroundColor: 'rgba(40, 38, 34, 0.92)',
+                borderRadius: '999px / 64px',
+                background: 'linear-gradient(145deg, rgba(44, 42, 38, 0.99), rgba(30, 28, 25, 0.99))',
                 borderColor: 'rgba(122, 144, 136, 0.7)',
-                boxShadow: '0 0 0 1px rgba(122, 144, 136, 0.2), 0 14px 40px rgba(0,0,0,0.5)',
-                backdropFilter: 'blur(10px)',
+                boxShadow: '0 0 0 1px rgba(122, 144, 136, 0.22), 0 16px 42px rgba(0,0,0,0.55)',
               }}
             >
-            {/* content lives in the rectangle inscribed in the ellipse — nothing gets sliced */}
-            <div className="absolute left-1/2 top-1/2 flex h-[72%] w-[74%] -translate-x-1/2 -translate-y-1/2 flex-col">
+            <div className="relative z-10 flex h-full w-full flex-col px-6 py-3.5">
             {/* header */}
             <div className="flex items-center justify-between pb-1.5">
               <div className="flex items-center gap-2">

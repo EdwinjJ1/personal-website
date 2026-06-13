@@ -21,11 +21,12 @@ export default function GlobalTextCursor() {
   const lastPointRef = useRef<{ x: number; y: number } | null>(null);
 
   const spacing = 80;
-  const maxPoints = 8;
+  const maxPoints = 5;
 
   useEffect(() => {
     const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    if (!isTouch) setMounted(true);
+    const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!isTouch && !shouldReduceMotion) setMounted(true);
   }, []);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
@@ -83,7 +84,7 @@ export default function GlobalTextCursor() {
       if (Date.now() - lastMoveTimeRef.current > 100) {
         setTrail(prev => (prev.length > 0 ? prev.slice(1) : prev));
       }
-    }, 20);
+    }, 80);
     return () => clearInterval(interval);
   }, [mounted]);
 

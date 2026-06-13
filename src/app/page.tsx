@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ScatterText from '@/components/ScatterText';
-import ClientOnlyParticles from '@/components/ClientOnlyParticles';
 
 // Import modular cards
 import PersonalCard from '@/components/cards/PersonalCard';
@@ -24,8 +23,6 @@ export default function Home() {
   return (
     <PageTransition>
       <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
-        <ClientOnlyParticles />
-
         <div className="relative z-10 mx-auto flex w-full flex-col px-4 md:px-8 xl:px-12 pt-16 md:pt-24 lg:pt-16 pb-12 lg:pb-4 lg:h-svh lg:min-h-[680px]">
           {/* Modular Grid Layout — fills the viewport edge to edge on desktop (no scroll) */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)] lg:flex-1 lg:min-h-0 lg:grid-rows-[minmax(0,0.92fr)_minmax(0,1.32fr)_minmax(0,1fr)]">
