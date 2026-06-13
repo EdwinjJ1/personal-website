@@ -964,6 +964,85 @@
           </div>
         </article>
 
+        <article class="card expanded" data-type="research" data-date="2026-06-13" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🧭 SpatialClaw code-as-action VLM agent, 🦾 Mana dexterous articulated tools (Abbeel), 🧩 RA-RFT reasoning-by-analogy RAG, 🤖 RepWAM representation world action model, 📐 Modality Forcing joint image-depth T2I</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.11926v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌳 Arbor — Generalist Autonomous Research via Hypothesis-Tree Refinement (Renmin / Microsoft, GPT-5.5)</div>
+              <div class="item-summary">Long-lived coordinator + short-lived executors + persistent Hypothesis Tree that carries hypotheses, evidence and lessons across runs. Beats Codex and Claude Code by 2.5x avg held-out gain across 6 real research tasks; 86.36% Any Medal on MLE-Bench Lite with GPT-5.5 — strongest in the comparison.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.12344v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧪 Claw-SWE-Bench — 350-issue multilingual SWE benchmark for OpenClaw-style coding agents</div>
+              <div class="item-summary">Adapter protocol that makes heterogeneous agent harnesses ("claws") comparable under a fixed prompt, runtime budget and patch contract. Adapter design moves Pass@1 from 19.1% to 73.4% on the same GLM-5.1; model and harness each swing Pass@1 by ~28 pp.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.11683v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧭 ReRe — Reason, Then Re-reason: Cross-view revisiting for spatial reasoning (ICML 2026)</div>
+              <div class="item-summary">Training-free, inference-time framework: form a spatial hypothesis from the original video, then verify/revise it by watching a Geometry-to-Video pipeline that renders complementary novel views from predicted 3D. Open-source MLLMs rival proprietary SOTA on VSI-Bench and STI-Bench.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.09076v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 Z-Reward — Reasoning internalized into score distributions for T2I reward models</div>
+              <div class="item-summary">Teacher-student framework: 27B GDSO teacher reasons about rubric-aligned score distributions; 9B RISD student distills the reasoning-conditioned distribution into a compact VLM with no CoT at inference. 89.6% / 88.6% human preference accuracy; +41.3% net human-pref when used as a differentiable T2I reward.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.12412v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🪄 Reroute, Don't Remove — Recoverable visual token routing for VLMs</div>
+              <div class="item-summary">Training-free plug-in that replaces rank-and-remove with recoverable routing: deferred tokens bypass a stage and re-enter the candidate pool at the next decision. Improves grounding under aggressive token reduction on FastV, PDrop, and Nüwa over LLaVA-1.5 and Qwen — same TFLOPs and KV-cache budget.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13673v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧭 SpatialClaw — Code-as-Action VLM Agent for 3D/4D Spatial Reasoning (+11.2 pts SOTA)</div>
+              <div class="item-summary">Training-free VLM agent that uses a stateful Python kernel as its action interface — writes one executable cell per step conditioned on prior observations. Hits 59.9% across 20 spatial reasoning benchmarks, +11.2 over the prior SOTA spatial agent, generalizes across 6 VLM backbones with no fine-tuning.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13677v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🦾 Mana — Dexterous Manipulation of Articulated Tools (Berkeley/Stanford, Abbeel & Liu)</div>
+              <div class="item-summary">Reframes dexterous articulated-tool manipulation as a computer-animation problem. Coarse-to-fine pipeline turns procedurally-generated grasp keyframes into trajectories via motion planning + RL, with &lt;1 minute of human input per tool. Zero-shot sim-to-real across four articulated tools spanning different scales and joint types.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13680v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧩 RA-RFT — Reasoning by Analogy via Retrieval-Augmented RL Fine-Tuning (Rice/Stanford)</div>
+              <div class="item-summary">Replaces semantic-similarity retrieval with "reasoning-aware" retrieval — a retriever trained via gold-relevance distillation surfaces demonstrations by expected reasoning benefit, not surface overlap. Policy is then RL fine-tuned against verifiable outcome rewards. +7.1 / +2.8 pts on AIME 2025 over GRPO for Qwen3-1.7B / 4B, orthogonal to reward design.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13674v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 RepWAM — Representation Visual-Action Tokenizers for World Action Models (Fudan/ByteDance)</div>
+              <div class="item-summary">Argues reconstruction-based video tokenizers are the wrong abstraction for robot control. Trains a representation visual-action tokenizer that maps inputs to aligned visual + latent-action tokens, then pretrains a WAM to jointly model future states and the actions connecting them. A generalist robot policy foundation with semantic action grounding.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13676v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">📐 Modality Forcing — Scalable Joint Image-Depth Generation (CMU/Meta, Ramanan & Johnson)</div>
+              <div class="item-summary">A simple post-training recipe that turns a single DiT into a joint image+depth generator by assigning per-modality noise levels and per-modality decoders. Trains on sparse real-world depth, scales 370M → 3.3B params. 57% relative AbsRel reduction vs prior joint image-depth generative models, competitive with SOTA monocular depth estimators.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
         <article class="card expanded" data-type="research" data-date="2026-04-28" data-time="00:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
@@ -1405,68 +1484,50 @@
           </div>
         </article>
 
-        <article class="card expanded" data-type="industry" data-date="2026-04-28" data-time="00:01">
+        <article class="card expanded" data-type="industry" data-date="2026-06-13" data-time="06:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon industry">🏢</div>
+              <div class="card-icon industry">🎮</div>
               <div>
-                <div class="card-title">Industry Brief: Healthcare &amp; Biotech</div>
-                <div class="card-meta">🧬 Regeneron gene therapy for hearing loss FDA approved, 🎯 Erasca 40% tumor shrinkage pancreatic cancer, 🍄 Trump psychedelics executive order lifts biotechs, 💰 Lilly acquires Ajax, 💊 Veradermics hair loss Phase 3, 🧠 Motif depression hat, 💉 Oruka psoriasis yearly injection, 🦠 Covid now seasonal</div>
+                <div class="card-title">Industry Brief: Gaming &amp; Entertainment</div>
+                <div class="card-meta">⚽ Netflix launches free FIFA World Cup game taking on EA, 🎮 Summer Game Fest 2026 major reveals (Alien: Isolation 2, Control Resonant), 📉 Ubisoft delays profit targets on restructuring, 💰 Damai Entertainment FY26 net profit +94% on IP boom, 🎯 Tencent SPARK 2026 showcases 42 titles with AI tools</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">06:01</span>
-              <span class="card-badge">8 items</span>
+              <span class="card-time">06:04</span>
+              <span class="card-badge">5 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="https://www.biopharmadive.com/news/regeneron-fda-otarmeni-hearing-loss-gene-therapy-voucher/818345/">
+            <a class="item" href="detail.html?id=industry-20260613-netflix-fifa">
               <span class="item-tag product">Product</span>
-              <div class="item-title">🧬 FDA Approves Regeneron's Otarmeni — First Gene Therapy for Inherited Hearing Loss</div>
-              <div class="item-summary">80% of participants achieved moderate-to-normal hearing within 6 months. First therapy approved under FDA's "national priority" voucher program, offered at no cost. Landmark for gene therapy in sensory disorders.</div>
+              <div class="item-title">⚽ Netflix Launches Free FIFA World Cup Game on June 11 — Taking On EA Without a Streaming License</div>
+              <div class="item-summary">Netflix Games released FIFA World Cup: Launch Edition on June 11, 2026 — same day the FIFA World Cup kicks off. Free for all Netflix subscribers, no broadcast rights deal needed. Features 48 national teams, 16 real stadiums, 1,248 players. Direct shot at EA's $70 EA Sports FC franchise.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://www.statnews.com/2026/04/27/erasca-pancreatic-cancer-study-results/">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">🎯 Erasca RAS Pill: 40% Tumor Shrinkage in Pancreatic Cancer, 62% in Lung Cancer</div>
-              <div class="item-summary">ERAS-0015 oral RAS inhibitor compared favorably to Revolution Medicines' daraxonrasib which doubled overall survival. Two oral RAS inhibitors now showing efficacy could transform treatment.</div>
+            <a class="item" href="detail.html?id=industry-20260613-summer-game-fest">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🎮 Summer Game Fest 2026 — Major Reveals: Alien: Isolation 2, Control Resonant, Star Wars Galactic Racer, Onimusha 3</div>
+              <div class="item-summary">Geoff Keighley's June 5–6 showcase at the Dolby Theatre dropped a packed slate: Alien: Isolation 2, Remedy's Control: Resonant (Sept 24), Star Wars: Galactic Racer (Oct 6), PlatinumGames/Paramount's TMNT: The Last Ronin, Bandai Namco's Gundam Rogue Orbit (2027), Onimusha 3, and Hitman Classic Trilogy Remastered.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://www.biopharmadive.com/news/trump-psychedelics-executive-order-mental-health-neuroscience-psychiatry-biotech/818021/">
+            <a class="item" href="detail.html?id=industry-20260613-ubisoft-restructuring">
               <span class="item-tag policy">Policy</span>
-              <div class="item-title">🍄 Trump Executive Order Lifts Psychedelics Biotechs — Enveric Nearly Triples</div>
-              <div class="item-summary">White House directs FDA to provide "national priority vouchers" for psychedelic breakthrough therapies and opens Right to Try pathway. Jefferies called it "official stamp of validation."</div>
+              <div class="item-title">📉 Ubisoft Delays Profit Targets Again — Restructuring Reshapes Game Pipeline</div>
+              <div class="item-summary">Ubisoft pushed back profitability milestones as multi-year restructuring reshapes its release slate. Cost-cutting and project cancellations dominate; multiple franchise dates slipping. Tencent's strategic stake keeps M&A speculation alive every earnings call.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://www.fiercebiotech.com/">
-              <span class="item-tag ma">M&amp;A</span>
-              <div class="item-title">💰 Eli Lilly Acquires Ajax for Clinical-Stage Myelofibrosis Therapy</div>
-              <div class="item-summary">Lilly continues near-weekly acquisition spree. Myelofibrosis is a rare bone marrow disorder with limited treatment options. Signals continued pharma consolidation in rare diseases.</div>
+            <a class="item" href="detail.html?id=industry-20260613-damai-fy26">
+              <span class="item-tag ma">M&A</span>
+              <div class="item-title">💰 Damai Entertainment FY2026 — Revenue ¥8.02B (+20%), Net Profit ¥705M (+94%) on IP Boom</div>
+              <div class="item-summary">Alibaba-affiliated Damai Entertainment (01060.HK) FY26 results: revenue ¥8.02B (+20% YoY), net profit ¥705M (+94%). IP derivatives +60% to ¥2.17B. China concert box office crossed ¥60B in 2025 (+6.4%). Live-entertainment decoupling from consumer slowdown.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://www.statnews.com/2026/04/27/veradermics-hair-loss-drug-succeeds-late-stage-trial/">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">💊 Veradermics Oral Hair Loss Pill Succeeds in Late-Stage Trial</div>
-              <div class="item-summary">VDPHL01 grew 30-33 hairs/cm² over 6 months vs 7 for placebo. 79-86% of men reported improvement. First oral hair loss drug to reach Phase 3 success — could disrupt $4B+ market.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.statnews.com/2026/04/27/motif-neurotech-gets-fda-nod-brain-implant-depression/">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">🧠 Motif Neurotech: FDA Nod for Brain-Implant-in-a-Hat Depression Device</div>
-              <div class="item-summary">Blueberry-sized implant activated by wearable hat for treatment-resistant depression. FDA approved feasibility trial. Non-invasive daily TMS alternative — could reach millions.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.statnews.com/2026/04/27/ourka-psoriasis-inectable-treatment-study/">
-              <span class="item-tag clinical">Clinical</span>
-              <div class="item-title">💉 Oruka: Once-Yearly Psoriasis Injection — 63% Complete Skin Clearance</div>
-              <div class="item-summary">ORKA-001 mid-stage: 63% complete clearance, supports once-yearly dosing. Could rival Skyrizi/Bimzelx with fewer injections. Heading to Phase 3 in $30B+ autoimmune market.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.statnews.com/2026/04/27/is-covid-still-a-thing-expert-analysis-who-needs-vaccine-booster-shot/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">🦠 Covid Now Effectively Seasonal — Experts Say Flu Is Bigger Threat</div>
-              <div class="item-summary">Virtually everyone has immunity now. Booster recommendations narrowing to elderly/immunocompromised. Two winters running: flu, not Covid, dominant. Vaccine demand normalizing.</div>
+            <a class="item" href="detail.html?id=industry-20260613-tencent-spark-2026">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🎯 Tencent SPARK 2026 — 42 Titles Showcased, Path of Exile 2 Goes Free-to-Play on WeGame</div>
+              <div class="item-summary">Tencent's May 27 SPARK 2026: 16 self-developed + 17 published + 9 invested titles. Path of Exile: Descendant goes F2P on WeGame by year-end with built-in AI assistant. Assassin's Creed Black Flag Resynced confirmed for China with full Chinese voice acting.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1812,6 +1873,55 @@
         <!-- Industry - 2026-04-12 Education & EdTech (Sunday) -->
         
 
+
+        <article class="card expanded" data-type="global" data-date="2026-06-13" data-time="06:16">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon global">🌍</div>
+              <div>
+                <div class="card-title">Global Macro</div>
+                <div class="card-meta">🇺🇸🇮🇷 US-Iran peace deal "close" — Hormuz reopens + blockade lifted, 🚀 SpaceX IPOs at $2.2T (Musk = first trillionaire), 🚫 Anthropic pulls Fable 5 + Mythos 5 globally on Trump order, 🎬 DOJ clears $110B Paramount–Warner Bros takeover, 🇨🇭 Switzerland votes Sunday on 10M population cap</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">06:16</span>
+              <span class="card-badge">5 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=global-20260613-iran-deal">
+              <span class="item-tag breaking">US / Iran</span>
+              <div class="item-title">🇺🇸🇮🇷 US-Iran peace deal "close" — Hormuz reopens, blockade lifted, 60-day nuclear clock starts</div>
+              <div class="item-summary">14-point MOU finalising under Pakistani/Qatari mediation. Hormuz reopens and US blockade lifts "more or less immediately," then 60 days of talks on Iran's enriched uranium (destroyed on-site, then removed). No up-front cash — staged reintegration tied to verified performance, including proxy-funding cuts.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-20260613-spacex-ipo">
+              <span class="item-tag policy">US / Markets</span>
+              <div class="item-title">🚀 SpaceX IPOs at $2.2T — Musk becomes the world's first trillionaire; xAI folded in</div>
+              <div class="item-summary">Largest-ever IPO, $75B raised. Listed at $135, opened $150, closed ~$161. Musk at $1.11T net worth. Unprofitable — $9B+ losses 2025–YTD 2026 on heavy AI/orbit-data-center capex. 4,400 staff now millionaires.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-20260613-anthropic-export">
+              <span class="item-tag breaking">US / AI Policy</span>
+              <div class="item-title">🚫 Anthropic pulls Fable 5 + Mythos 5 from every customer after Trump export-control order</div>
+              <div class="item-summary">Frontier models disabled globally "to ensure compliance" after a directive to suspend foreign-national access. Anthropic calls it a "misunderstanding," says it's working to restore. Same day: NY AG subpoenas OpenAI on ads, minors, deep learning, and consumer data.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-20260613-paramount-wbd">
+              <span class="item-tag policy">US / M&amp;A</span>
+              <div class="item-title">🎬 DOJ clears $110B Paramount–Warner Bros Discovery takeover; CA AG + EU/UK still reviewing</div>
+              <div class="item-summary">8-month antitrust review: no competition harm. EU tentative deadline July 7; UK CMA initial decision early August. 1,400+ Hollywood creators signed an open letter opposing. Combined entity owns HBO, CNN, and the broader Warner film/TV library.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=global-20260613-swiss-cap">
+              <span class="item-tag policy">Europe</span>
+              <div class="item-title">🇨🇭 Switzerland votes Sunday on capping population at 10M — labour-market squeeze on tech</div>
+              <div class="item-summary">Referendum would cap population and tighten immigration. Switzerland hosts major Google/Meta/Microsoft/AI-lab R&amp;D. Combined with Anthropic's foreign-access ban, EU AI Act enforcement, and US export controls, the talent + model-access loop for non-US engineers is compounding.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
 
         <article class="card expanded" data-type="global" data-date="2026-04-28" data-time="08:00">
           <div class="card-header" onclick="toggle(this)">
