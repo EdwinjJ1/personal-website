@@ -24,29 +24,32 @@ export default function GlobalTextCursor() {
   const maxPoints = 5;
 
   useEffect(() => {
-    const isTouch = window.matchMedia('(pointer: coarse)').matches;
-    const shouldReduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    if (!isTouch && !shouldReduceMotion) setMounted(true);
+    const canAnimateCursor = window.matchMedia(
+      '(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
+    ).matches;
+    setMounted(canAnimateCursor);
   }, []);
 
   const handleMouseMove = useCallback((e: MouseEvent) => {
     const mouseX = e.clientX;
     const mouseY = e.clientY;
 
-    const createRandom = () => ({
-      randomX: Math.random() * 10 - 5,
-      randomY: Math.random() * 10 - 5,
-      randomRotate: Math.random() * 10 - 5,
-    });
-
     setTrail(prev => {
       const newTrail = [...prev];
       const last = lastPointRef.current;
+      let changed = false;
+
+      const createRandom = () => ({
+        randomX: Math.random() * 10 - 5,
+        randomY: Math.random() * 10 - 5,
+        randomRotate: Math.random() * 10 - 5,
+      });
 
       if (!last) {
         const point = { id: idCounter.current++, x: mouseX, y: mouseY, angle: 0, ...createRandom() };
         newTrail.push(point);
         lastPointRef.current = { x: mouseX, y: mouseY };
+        changed = true;
       } else {
         const dx = mouseX - last.x;
         const dy = mouseY - last.y;
@@ -63,9 +66,11 @@ export default function GlobalTextCursor() {
             newTrail.push({ id: idCounter.current++, x: newX, y: newY, angle, ...createRandom() });
           }
           lastPointRef.current = { x: mouseX, y: mouseY };
+          changed = true;
         }
       }
 
+      if (!changed) return prev;
       return newTrail.length > maxPoints ? newTrail.slice(newTrail.length - maxPoints) : newTrail;
     });
 
