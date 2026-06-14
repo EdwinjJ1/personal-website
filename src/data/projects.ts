@@ -20,10 +20,44 @@ export interface Project {
   githubUrl?: string;
   link?: string;
   icon?: string;
+  tagline?: string;
+  heroImage?: string;
+  logoImage?: string;
+  accent?: string;
+  metrics?: { label: string; value: string }[];
   highlights: string[];
 }
 
 export const projects: Project[] = [
+  {
+    id: 106,
+    title: 'KnowMe Memory MCP',
+    tagline: 'Give every AI the right version of you.',
+    description:
+      'Token-gated personal context server that turns profiles, resumes, notes, and durable facts into permissioned AI memory.',
+    longDescription:
+      'KnowMe MCP is an open-source self-hosted memory engine for Claude, ChatGPT, Cursor, Codex, Gemini, Qwen, and any AI client that can call an MCP endpoint. It distills profile data into structured memories, separates public and private access with tokens, syncs to a Cloudflare Worker MCP server, and closes the loop with clarification questions so memory can be verified instead of silently drifting.',
+    technologies: ['Cloudflare Workers', 'MCP', 'D1', 'Vectorize', 'Workers AI', 'Node.js'],
+    category: 'AI & Automation',
+    featured: true,
+    status: 'In Development',
+    githubUrl: 'https://github.com/EdwinjJ1/memory-mcp',
+    icon: 'network',
+    logoImage: '/images/projects/knowme-logo.png',
+    accent: '#58d9e6',
+    metrics: [
+      { label: 'Token tiers', value: '3' },
+      { label: 'AI clients', value: '6+' },
+      { label: 'Memory tools', value: '8' },
+    ],
+    highlights: [
+      'Public/full/admin token access tiers',
+      'Cloudflare Worker remote MCP server',
+      'Structured memory distillation pipeline',
+      'D1 + Vectorize semantic search',
+      'Self-correcting clarification loop',
+    ],
+  },
   {
     id: 101,
     title: 'EgoTrace',
@@ -33,7 +67,7 @@ export const projects: Project[] = [
       'A modern productivity suite that helps you build better habits, manage your schedule with AI, and understand yourself. Features include a smart calendar with AI import, habit tracking with gamification, team collaboration tools, and personality insights. Built with a modern tech stack including Next.js 15, Prisma, and Capacitor for mobile.',
     technologies: ['Next.js 15', 'React 19', 'Prisma', 'Tailwind CSS', 'Capacitor', 'AI Integration'],
     category: 'AI & Automation',
-    featured: true,
+    featured: false,
     status: 'In Development',
     liveUrl: 'https://egotrace.vercel.app/',
     githubUrl: 'https://github.com/EdwinjJ1/calendar',
@@ -55,7 +89,7 @@ export const projects: Project[] = [
       'Electron + React + TypeScript boilerplate tailored for a prompt engineering desktop assistant. The template separates concerns between main, preload, and renderer processes, enabling plug-and-play AI feature integration. Designed for high performance and scalability.',
     technologies: ['Electron', 'React', 'TypeScript', 'Vite', 'Node.js'],
     category: 'AI & Automation',
-    featured: true,
+    featured: false,
     status: 'Live',
     liveUrl: 'https://www.promptenhenceraxon.top',
     githubUrl: 'https://github.com/EdwinjJ1/Axon',
@@ -70,17 +104,24 @@ export const projects: Project[] = [
   },
   {
     id: 103,
-    title: 'Chiron',
+    title: 'Chiron Prompt Enhancer',
+    tagline: 'Augment-style prompt enhancement, inside the terminal.',
     description:
-      'Free and open-source Augment Code alternative. Terminal-first prompt enhancement for Gemini CLI and Claude Code.',
+      'Free, open-source prompt enhancer that turns rough requests into repo-aware execution prompts for Gemini CLI and Claude Code.',
     longDescription:
-      'Chiron turns rough requests into repo-aware execution prompts. It scans your repository context, finds relevant files, reads git state, and builds enhanced prompts — all without leaving the terminal. Features include double Ctrl+E enhance-in-place (Augment-style), /chiron slash command integration, and support for both Gemini CLI and Claude Code workflows.',
+      'Chiron scans a repository, reads relevant files and git state, then rewrites rough developer requests into scoped execution prompts. It ships as a Gemini CLI slash command, an optional double Ctrl+E overlay, and a reusable Claude Code command, giving terminal-first builders an Augment-like enhancement flow without locking them into a heavyweight IDE agent.',
     technologies: ['Node.js', 'Gemini CLI', 'Claude Code', 'JavaScript', 'Prompt Engineering'],
     category: 'AI & Automation',
     featured: true,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
-    icon: 'crosshair',
+    icon: 'terminal',
+    accent: '#f7a64a',
+    metrics: [
+      { label: 'Shortcut', value: 'Ctrl+E' },
+      { label: 'Modes', value: '6' },
+      { label: 'Cost', value: '$0' },
+    ],
     highlights: [
       'Augment-style Double Ctrl+E Enhancement',
       'Repo-aware Context Scanning',
@@ -90,15 +131,46 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 105,
+    title: 'FinalBoss',
+    tagline: 'Beat any exam with AI.',
+    description:
+      'AI exam-prep workspace that turns notes and past papers into timed mocks, targeted practice, and Socratic tutor feedback.',
+    longDescription:
+      'FinalBoss is a focused AI study product: one workspace per exam, upload or paste notes and past papers, generate mock exams or practice sets, then use an AI tutor to identify weak spots without simply giving away answers. The business model is already mapped with free, basic, and Practice Pro tiers, Stripe subscriptions, Firebase auth, and a campus-first UNSW launch plan.',
+    technologies: ['Next.js 16', 'Firebase', 'Stripe', 'Anthropic', 'Tailwind CSS', 'Judge0'],
+    category: 'Education',
+    featured: true,
+    status: 'In Development',
+    liveUrl: 'https://finalboss.cn/',
+    githubUrl: 'https://github.com/EdwinjJ1/preuni-prexam',
+    icon: 'graduation',
+    logoImage: '/images/projects/finalboss-icon.png',
+    heroImage: '/images/projects/finalboss-home.png',
+    accent: '#f6c63f',
+    metrics: [
+      { label: 'Gross margin', value: '96%' },
+      { label: 'MVP scope', value: '6 wk' },
+      { label: 'Pro plan', value: 'A$39' },
+    ],
+    highlights: [
+      'Exam workspaces with uploaded materials',
+      'Mock and practice generation',
+      'AI grading and weakness feedback',
+      'Socratic tutor for CS/code exams',
+      'Stripe subscription model and campus GTM',
+    ],
+  },
+  {
     id: 1,
-    title: 'UNSW Study Materials Platform',
+    title: 'Study Materials',
     description:
       'Interactive study notes and resources for UNSW Computer Science students with bilingual content and data visualisations.',
     longDescription:
       'A comprehensive educational platform tailored for UNSW Computer Science students. Features interactive code examples, bilingual content (English and Chinese), dynamic data visualisations powered by Chart.js and Plotly.js, and a responsive layout optimised for learning on any device. Earlier iterations also included a donations module powered by Stripe.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'Tailwind CSS', 'Chart.js', 'Plotly.js', 'Stripe'],
     category: 'Education',
-    featured: true,
+    featured: false,
     status: 'Live',
     liveUrl: 'http://www.preuni.xyz/',
     icon: 'book',
@@ -203,7 +275,7 @@ export const projects: Project[] = [
       'Built for UNSW AIP Hackathon, this data-driven platform analyzes 184 countries using World Bank data to identify inequality hotspots. Features composite risk scoring, interactive visualizations with Plotly.js, and recommends targeted AI interventions including offline education kiosks, agricultural advisors, and mobile health assistants for rural communities.',
     technologies: ['Python', 'Flask', 'Pandas', 'Plotly.js', 'Bootstrap 5'],
     category: 'Machine Learning',
-    featured: true,
+    featured: false,
     status: 'Live',
     githubUrl: '#',
     icon: 'globe',
@@ -218,10 +290,11 @@ export const projects: Project[] = [
   {
     id: 104,
     title: 'Chrono-Map: Sydney Layers',
+    tagline: 'One map to understand the story behind every place.',
     description:
       'Interactive heritage map showcasing Sydney\'s historical sites, cultural landmarks, and film locations across time periods.',
     longDescription:
-      'Chrono-Map is a digital heritage platform that helps users explore Sydney\'s transformation over 100+ years. Features include an interactive map with 50+ historic sites, "then and now" photo comparisons, film location tours (including The Matrix), QR code scanning for augmented reality experiences, and curated walking routes. Built with modern geospatial technology to make Sydney\'s cultural history accessible to everyone.',
+      'Chrono-Map is a production-grade place-discovery experience that combines a 3D Mapbox map, editorial storytelling, bilingual content, and then-and-now image comparisons. Sydney is the first content layer, but the data model is designed to scale into more cities, route planning, QR plaques, film-location tours, and cultural institution partnerships.',
     technologies: ['Next.js 16', 'React 19', 'Mapbox GL', 'Tailwind CSS', 'Framer Motion'],
     category: 'Web Development',
     featured: true,
@@ -229,6 +302,13 @@ export const projects: Project[] = [
     liveUrl: 'https://chrono-map-eight.vercel.app/',
     githubUrl: 'https://github.com/EdwinjJ1/chrono-map',
     icon: 'map',
+    heroImage: '/images/projects/chrono-map-preview.png',
+    accent: '#d4af37',
+    metrics: [
+      { label: 'Places', value: '50+' },
+      { label: 'Languages', value: '2' },
+      { label: 'Map mode', value: '3D' },
+    ],
     highlights: [
       '50+ Historical Sites & Landmarks',
       '"Then & Now" Photo Comparisons',

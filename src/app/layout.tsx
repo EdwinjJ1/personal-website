@@ -124,17 +124,18 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className}`} style={{backgroundColor: '#1a1816', color: '#e0d8cc'}} suppressHydrationWarning={true}>
         <Galaxy
-          density={1}
-          speed={0.8}
-          glowIntensity={0.25}
+          density={0.42}
+          speed={0.28}
+          glowIntensity={0.11}
           saturation={0}
           hueShift={160}
-          twinkleIntensity={0.4}
-          rotationSpeed={0.05}
-          mouseInteraction={true}
-          mouseRepulsion={true}
+          twinkleIntensity={0.12}
+          rotationSpeed={0.008}
+          mouseInteraction={false}
+          mouseRepulsion={false}
           repulsionStrength={1.5}
           transparent={true}
+          opacity={0.46}
         />
         <ClientRouter />
         <GlobalTextCursor />

@@ -37,7 +37,7 @@ uniform bool uTransparent;
 
 varying vec2 vUv;
 
-#define NUM_LAYER 4.0
+#define NUM_LAYER 2.0
 #define STAR_COLOR_CUTOFF 0.2
 #define MAT45 mat2(0.7071, -0.7071, 0.7071, 0.7071)
 #define PERIOD 3.0
@@ -166,6 +166,8 @@ interface GalaxyProps {
   mouseRepulsion?: boolean;
   repulsionStrength?: number;
   transparent?: boolean;
+  frameRate?: number;
+  opacity?: number;
 }
 
 export default function Galaxy({
@@ -181,6 +183,8 @@ export default function Galaxy({
   mouseRepulsion = true,
   repulsionStrength = 2,
   transparent = true,
+  frameRate = 30,
+  opacity = 1,
 }: GalaxyProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const targetMouse = useRef({ x: 0.5, y: 0.5 });
@@ -254,13 +258,14 @@ export default function Galaxy({
     const mesh = new Mesh(gl, { geometry, program });
 
     let rafId: number;
-    let lastFrame = 0;
-    const frameInterval = 1000 / 30;
+    let lastRenderTime = -Infinity;
+    let isVisible = !document.hidden;
+    const frameInterval = 1000 / Math.max(1, frameRate);
 
     const update = (t: number) => {
       rafId = requestAnimationFrame(update);
-      if (document.hidden || t - lastFrame < frameInterval) return;
-      lastFrame = t;
+      if (!isVisible || t - lastRenderTime < frameInterval) return;
+      lastRenderTime = t;
 
       program.uniforms.uTime.value = t * 0.001;
       program.uniforms.uStarSpeed.value = (t * 0.001 * starSpeed) / 10.0;
@@ -289,15 +294,21 @@ export default function Galaxy({
     };
 
     const handleMouseLeave = () => { targetActive.current = 0.0; };
+    const handleVisibilityChange = () => {
+      isVisible = !document.hidden;
+      if (isVisible) lastRenderTime = -Infinity;
+    };
 
     if (mouseInteraction) {
-      window.addEventListener('mousemove', handleMouseMove);
+      window.addEventListener('mousemove', handleMouseMove, { passive: true });
       document.addEventListener('mouseleave', handleMouseLeave);
     }
+    document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
       cancelAnimationFrame(rafId);
       window.removeEventListener('resize', resize);
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (mouseInteraction) {
         window.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseleave', handleMouseLeave);
@@ -307,6 +318,7 @@ export default function Galaxy({
     };
   }, [
     density,
+    frameRate,
     glowIntensity,
     hueShift,
     mouseInteraction,
@@ -327,6 +339,7 @@ export default function Galaxy({
         position: 'fixed',
         inset: 0,
         zIndex: 0,
+        opacity,
         pointerEvents: 'none',
       }}
     />

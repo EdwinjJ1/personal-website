@@ -25,6 +25,30 @@ const iconMap: Record<string, (props: { size?: number; className?: string }) => 
       <circle cx="12" cy="12" r="3"/>
     </svg>
   ),
+  network: ({ size = 24, className }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <circle cx="6" cy="7" r="3"/>
+      <circle cx="18" cy="7" r="3"/>
+      <circle cx="12" cy="18" r="3"/>
+      <path d="M8.7 8.6 10.6 15"/>
+      <path d="M15.3 8.6 13.4 15"/>
+      <path d="M9 7h6"/>
+    </svg>
+  ),
+  terminal: ({ size = 24, className }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <rect x="3" y="4" width="18" height="16" rx="2"/>
+      <path d="m7 9 3 3-3 3"/>
+      <path d="M13 15h4"/>
+    </svg>
+  ),
+  graduation: ({ size = 24, className }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M22 10 12 5 2 10l10 5 10-5z"/>
+      <path d="M6 12.5V17c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/>
+      <path d="M22 10v6"/>
+    </svg>
+  ),
   book: ({ size = 24, className }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
