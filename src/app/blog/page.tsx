@@ -6,10 +6,10 @@ import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
 import ScatterText from '@/components/ScatterText';
-import { getEnglishPosts } from '@/data/blogPosts';
+import { getPrimaryPosts } from '@/data/blogPosts';
 
-// Get only English posts for display
-const posts = getEnglishPosts();
+// Get original posts for display without duplicating translations
+const posts = getPrimaryPosts();
 
 const container = {
   hidden: { opacity: 0 },
