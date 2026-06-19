@@ -14,6 +14,100 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 10,
+    slug: 'agent-native-cli-new-development-paradigm',
+    title: "Agent-Native CLI，新的开发范式",
+    excerpt: "每个认真做的产品，都应该有一个 Agent-Native CLI。它不是多一个命令行工具，而是给开发者、CI 和 AI Agent 一层稳定、可组合、可审计的产品操作语言。",
+    content: `今天想聊一个我最近越来越确定的开发范式：每个认真做的产品，都应该有一个 Agent-Native CLI。
+
+过去我们让 AI Agent 测试产品，通常会让它写一个 smoke test 文件，或者临时写一个脚本去调用 API。这个方式能跑，但问题很明显：脚本是一次性的，逻辑分散，下一次别的 Agent 进来，又会重新写一遍。久了以后，repo 里会留下很多临时测试文件，但是没有形成真正的产品能力。现在的 Claude Code 和 Codex，如果让它们写测试的话都是这样的。
+
+Agent-Native CLI 的想法是反过来。
+
+我们不让 Agent 每次临时写脚本，而是给产品本身做一个标准 CLI。这个 CLI 调真实 HTTP API，输出默认是 JSON，错误也是稳定 JSON，进度和日志走 stderr。这样 Agent 可以像 Unix pipeline 一样工作：创建一个 workspace，拿到 id，再添加 material，再启动 generation，再 wait job，最后读取 result，然后清理数据。
+
+这件事的重点不是“有一个命令行工具”。重点是它改变了开发验证的方式。
+
+以前是：
+
+“我写完功能，然后写个临时脚本测一下。”
+
+现在是：
+
+“产品所有关键能力，都沉淀成 CLI 命令。Agent 和人都用同一套命令跑真实流程。”
+
+这会带来几个变化。
+
+第一，测试更真实。因为 CLI 不 import server code，不绕过 API，不直接调数据库。它走的是用户真实会经过的 HTTP boundary。所以它测到的问题更接近生产问题。
+
+第二，Agent 更强。Agent 最擅长的不是点 UI，而是读写结构化数据。CLI 默认 JSON 输出之后，Agent 可以稳定提取 \`.data.id\`，再传给下一条命令。它不需要猜页面状态，也不需要写一次性 glue code。
+
+第三，开发知识会沉淀。每新增一个 API，如果它是一个真实 workflow 的一部分，就应该补一个 CLI command 或 schema mapping。久而久之，这个 CLI 就变成了产品能力地图。\`commands\` 可以列出所有操作，\`schema generation.start\` 可以告诉 Agent 参数、required fields、endpoint 和 example。
+
+第四，失败也变得可理解。比如后台生成任务失败，不应该是 CLI 崩溃，而应该是 \`job wait\` 返回一个稳定的 \`{ ok:false, error }\`。如果是模型额度耗尽，就把后端真实错误暴露出来。这样 Agent 能判断：这是产品 bug，还是外部额度问题。
+
+我觉得这其实是 AI 时代软件工程的一个小转向。
+
+以前我们写 CLI，主要是给人用。现在 CLI 也应该给 Agent 用。给人用，需要 pretty/table；给 Agent 用，需要 JSON/schema/dry-run/stable error。一个好的 Agent-Native CLI 应该同时服务 humans 和 agents。
+
+所以我现在会把它当成项目基础设施：
+
+有 API，就应该有 raw api command。
+
+有核心资源，就应该有 resource command。
+
+有常见业务流程，就应该有 shortcut command。
+
+有异步任务，就必须有 job wait。
+
+有新功能，就更新 CLI schema。
+
+完成任务前，Agent 要用 CLI 跑一遍真实流程。
+
+这不是为了多写工具，而是为了减少临时脚本、减少假测试、减少“看起来成功”的幻觉。
+
+对于大型项目，一个趋势是每个产品都应该有一个专属 CLI。这个 CLI 像飞书 CLI、Vercel CLI、Stripe CLI、Supabase CLI 一样，成为开发者、CI 系统、AI Agent 共同使用的项目控制台。它把产品里的 API、数据流、后台任务、测试流程、部署前验证，都变成稳定、可组合、可审计的命令。
+
+我觉得飞书 CLI 是一个很好的例子。它代表的不是“命令行工具”本身，而是一种产品工程范式。
+
+对于复杂产品来说，Web UI 是给最终用户的，API 是给系统集成的，但开发者和 AI Agent 还需要第三种接口：Project-Native CLI。
+
+这个 CLI 是项目自己的操作语言。
+
+比如我要创建一个 workspace，不应该临时写脚本；我要上传资料，不应该手动点 UI；我要触发一个生成任务，也不应该直接打开数据库改数据。所有这些动作，都应该有稳定命令：
+
+create、add、generate、wait、get、delete。
+
+这样一来，人可以用，CI 可以用，AI Agent 也可以用。
+
+以前 CI 做测试，很多时候是跑单元测试、跑 build、跑 E2E。但以后更重要的是，CI 可以跑真实业务命令：
+
+创建一个真实 workspace；
+
+添加真实数据；
+
+触发真实后台任务；
+
+等待 job 完成；
+
+读取结果；
+
+最后清理数据。
+
+这不是 smoke script，而是产品自己的 CLI workflow。
+
+我认为未来每一个大型项目，都应该有这样一个专属 CLI。它就像项目的驾驶舱，也是 AI Agent 理解和操作项目的协议层。
+
+总结一下：
+
+Agent-Native CLI 是产品给 AI Agent 暴露的一层稳定操作系统。它让 Agent 不再靠猜、不再靠临时脚本，而是用真实命令操作真实产品。`,
+    date: "2026-06-19",
+    readTime: "6 分钟阅读",
+    tags: ["AI Agent", "CLI", "软件工程", "开发范式", "CI"],
+    featured: true,
+    language: 'zh'
+  },
+  {
     id: 8,
     slug: 'reinforcement-learning-ux-evaluation',
     title: "Beyond Traditional HCI: Building AI Agents That Can Evaluate User Experience Through Reinforcement Learning",
@@ -296,8 +390,12 @@ export function getEnglishPosts(): BlogPost[] {
   return blogPosts.filter(post => post.language === 'en');
 }
 
+// Get posts that should appear in public lists without duplicating translations
+export function getPrimaryPosts(): BlogPost[] {
+  return blogPosts.filter(post => post.language === 'en' || !post.translationId);
+}
+
 // Get all posts (for sitemap, etc.)
 export function getAllPosts(): BlogPost[] {
   return blogPosts;
 }
-

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { getEnglishPosts } from '@/data/blogPosts';
+import { getPrimaryPosts } from '@/data/blogPosts';
 import BaseCard from './BaseCard';
 import ScatterText from '@/components/ScatterText';
 
@@ -10,8 +10,8 @@ interface BlogCardProps {
 }
 
 export default function BlogCard({ delay = 0.8 }: BlogCardProps) {
-  // Get only English posts and take the 2 most recent
-  const recentPosts = getEnglishPosts().slice(0, 2);
+  // Get original posts and take the 2 most recent
+  const recentPosts = getPrimaryPosts().slice(0, 2);
 
   return (
     <BaseCard size="md" hover={false} delay={delay} className="md:col-span-2 lg:col-span-7">
