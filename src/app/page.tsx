@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import ScatterText from '@/components/ScatterText';
+import HiddenDoor from '@/components/HiddenDoor';
 
 // Import modular cards
 import PersonalCard from '@/components/cards/PersonalCard';
@@ -80,6 +81,7 @@ export default function Home() {
             </Link>
           </motion.div>
         </div>
+        <HiddenDoor />
       </div>
     </PageTransition>
   );

@@ -68,6 +68,7 @@ import Galaxy from '@/components/Galaxy';
 import SplashOrchestrator from '@/components/SplashOrchestrator';
 import GlobalTextCursor from '@/components/GlobalTextCursor';
 import AICard from '@/components/AICard';
+import KonamiCard from '@/components/KonamiCard';
 
 export default function RootLayout({
   children,
@@ -146,6 +147,7 @@ export default function RootLayout({
           </div>
           <AICard />
         </SplashOrchestrator>
+        <KonamiCard />
       </body>
     </html>
   );

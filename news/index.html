@@ -964,6 +964,411 @@
           </div>
         </article>
 
+
+        <article class="card expanded" data-type="research" data-date="2026-06-24" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🤖 OpenThoughts-Agent — open-data agentic recipe hits 44.8% avg (+3.9pp vs Nemotron-Terminal-32B) across 7 benchmarks (Schmidt/Dimakis/Jitsev), 🦾 InSight — Stanford steerable VLA + VLM data flywheel picks up new primitives without human demos (Schwager/Wu), 🖼️ IV-CoT — implicit visual chain-of-thought fixes object-count/spatial-relation failures in unified MLLMs (GenEval + T2I-CompBench), ⚡ FMLM+ Posterior Refinement — 32× fewer NFEs to match discrete LLM baselines (any-order flow maps, self-corrects a posteriori), 🎮 FLAT — first feedforward decoder of triangle splats directly from video-diffusion latents; game-engine-ready meshes from a single image (TUM/NVIDIA)</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.24855">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 OpenThoughts-Agent — Fully-Open Data Recipes for Agentic Models</div>
+              <div class="item-summary">A 100+ ablation, fully-open data-curation pipeline for broadly-capable agentic LMs. The 100K-example training set fine-tunes Qwen3-32B to 44.8% average across seven agentic benchmarks — a +3.9pp jump over Nemotron-Terminal-32B (40.9%) — with clean scaling wins at every compute-controlled training-set size. Datasets, pipeline, and models released at openthoughts.ai (Berkeley/Tübingen-style author list including Schmidt, Dimakis, Jitsev).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.24884">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🦾 InSight — Self-Guided Skill Acquisition via Steerable VLAs</div>
+              <div class="item-summary">Makes VLA policies steerable at the primitive-action level ("move gripper to bowl", "lift upward", "pour the bottle") and closes an autonomous loop: a VLM identifies which primitives a new task needs, attempts them with low-level control, auto-labels successes, and folds them back into the training set. Evaluated on block flipping, drawer closing, sweeping, twisting, pouring — without human demonstrations of the target skills (Stanford, Schwager/Wu).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.24849">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🖼️ IV-CoT — Implicit Visual Chain-of-Thought for Structure-Aware T2I</div>
+              <div class="item-summary">Diagnoses a known weakness of unified MLLMs — structural planning and appearance rendering tangled in one conditioning stream — and fixes it with a structural-to-semantic cascade. Structural queries form a latent visual plan (trained with sketch supervision), then semantic queries render appearance on top in one forward pass. Wins on GenEval and T2I-CompBench — and sketch extraction isn't needed at inference time.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.24773">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ FMLM+ Posterior Refinement — 32× Faster LLM Generation via Any-Order Flow Maps</div>
+              <div class="item-summary">Bridges Flow Map Language Models (joint-sequence transport, great few-step quality) and Masked Diffusion Models (factorisation error at multi-token decode) by adding masking-style noise schedules to FMLM. The new Posterior Refinement step scores global consistency of every token a posteriori and self-corrects — matching discrete LLM baselines with 32× fewer NFEs across diverse benchmarks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.24876">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎮 FLAT — Feedforward Triangle Splatting for Single-Image 3D Scene Generation</div>
+              <div class="item-summary">First feedforward decoder of triangle splats directly from compressed video-diffusion latents. Triangle splatting is notoriously unstable (orientation sensitivity kills gradients), so FLAT contributes a ray-centered rotation parameterisation plus a product window function for differentiable triangle rendering. Beats 3DGS / 2DGS baselines on geometric accuracy at competitive visual quality, with a lightweight test-time refinement that yields game-engine-ready meshes (TUM / NVIDIA).</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+
+        <article class="card expanded" data-type="research" data-date="2026-06-20" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">♟️ VIMPO — critic-free RL that beats GRPO on MATH-500 / AIME / OlympiadBench (Levine + Song), 🧭 S-Agent — 8B spatial tool-use agent matches GPT-5.4 on multi-view / video spatial reasoning (S-Lab), 🤖 HumanScale — egocentric video beats real-robot data for embodied pretraining, 24% lower val loss + 90% OOD success (Matusik + Chua), 🎯 Contagion Networks — formal framework for LLM-judge bias propagation; k=3 evaluator cuts contagion 72%, 📂 Automating SKILL.md — negative result: trajectory-mined skills readable (≥0.95 purity) but fail to transfer (18.5%→20.5% IW skill-step); diagnostic not method</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">10 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.20008">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">♟️ VIMPO — Value-Implicit Policy Optimization for LLMs</div>
+              <div class="item-summary">A new critic-free RL algorithm for LLM reasoning that derives a policy-implied value function from the optimality conditions of KL-regularized RL. Solves the GRPO vs actor-critic trade-off: GRPO assigns a trajectory-level advantage to every token (poor credit assignment); actor-critic is denser but unstable. VIMPO keeps critic-free simplicity and gets denser credit assignment by separating reward incorporation (value loss) from policy improvement (PPO-style actor). On MATH-500 / AIME 2024-2025 / OlympiadBench, VIMPO beats GRPO and keeps its edge under noisy rewards.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20515">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧭 S-Agent — Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</div>
+              <div class="item-summary">Reframes spatial reasoning as spatio-temporal evidence accumulation instead of single-frame VLM inference. The VLM acts as a semantic planner that calls a hierarchy of spatial tools and experts; Scene Memory holds evolving scene state, Agent Memory holds reasoning context. Training-free: improves both open- and closed-source VLMs at inference. Also releases S-300K trajectory dataset and a fine-tuned S-Agent-8B that beats Qwen3-VL-8B and matches closed-source giants (GPT-5.4, Gemini 3) on multi-view / video spatial reasoning benchmarks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20521">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 HumanScale — Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining</div>
+              <div class="item-summary">A systematic study showing that, with a careful filtering and labeling pipeline, egocentric human video is not just a viable substitute for teleoperated real-robot data in embodied pretraining — it actually beats it. At matched pretraining data volume, egocentric pretraining gives 24% lower validation loss on real-robot action prediction and 52.5% / 90% higher success rates on in-distribution / OOD real-robot tasks. The recipe: pretrain on diverse egocentric video, then adapt with a small labeled real-robot subset for action-space alignment.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20493">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 Contagion Networks — Evaluator Bias Propagation in Multi-Agent LLM Systems</div>
+              <div class="item-summary">A formal framework for measuring how LLM-evaluator biases spread across multi-agent systems. Models the propagation as a Cross-Agent Contagion Matrix Γ_N and identifies three regimes (suppression / propagation / amplification) controlled by its spectral radius. Controlled 3-agent DeepSeek experiment: γ ∈ [0.157, 0.352] even within the same model, 3-5× weaker than cross-model contagion from prior work. Practical mitigation: bumping the evaluator committee from k=1 to k=3 cuts effective contagion by 72.4%. Open-source framework shipped with the paper.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20363">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">📂 Automating SKILL.md Generation — Trajectory Mining Hits a Wall (Negative Result)</div>
+              <div class="item-summary">A three-stage pipeline (GUI trajectory segmentation → clustering into candidate skills → GRPO on the resulting skill-aware policy) that attempts to mine a SKILL.md-style library from interaction data. Readable on the source benchmark — five of eight clusters hit ≥0.95 purity vs. InteraSkill Workflows labels. But readability ≠ transfer: GRPO only lifts IW skill-step accuracy from 18.5% to 20.5%, leaves BrowseComp+ flat, and is beaten by a trivial frequency prior on key source-domain metrics. Author's honest framing: a diagnostic study, not a method.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20547">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧮 The Token Is a Group Element — Lie-Algebra Attention over Matrix Lie Groups</div>
+              <div class="item-summary">First attention construction whose tokens are bare matrix Lie group elements (no feature payload, no learned kernel). The score is the closed-form algebra norm of the relative pose log(g_i^-1 g_j) — intrinsic, equivariant by construction, and free of irreducible representations or spherical harmonics. First vector-token-free attention that reaches non-compact affine groups with scale and shear (Aff(2)), which all irrep- or surjective-exp-based methods must exclude.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20545">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌍 Current World Models Lack a Persistent State Core</div>
+              <div class="item-summary">Argues that today's "world models" only render convincing frames on demand and lack an internal world state that keeps evolving decoupled from observation. Objects should endure and events run to conclusion whether or not a camera is watching — current benchmarks reward surface appearance, not persistent state. Directly relevant to long-horizon agentic and embodied systems.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20474">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ UltraQuant — 4-bit KV Caching for Context-Heavy Agents (AMD CDNA4)</div>
+              <div class="item-summary">Brings TurboQuant-style rotation + codebook quantization down to FP4 KV caching, with asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants. On AMD CDNA4 it introduces native scaled-MFMA support for FP8 queries × FP4 KV × UE8M0 group scales. On long-context multi-turn agentic workloads it cuts P50 TTFT by 3.47× in cache-pressured late rounds (2.3× overall) and lifts output throughput 1.63× over FP8 KV baseline.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20333">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 SoftSkill — Behavioral Compression for Contextual Adaptation (SKILL.md → 32 soft tokens)</div>
+              <div class="item-summary">Instead of letting a frozen LM read a long natural-language skill file at inference time, SoftSkill initializes a compact continuous context object refined by a trainable soft delta while the base model stays frozen. A length-32 SoftSkill prefix on Qwen3.5-4B beats no-skill prompting by 8.3 (SearchQA) / 42.1 (LiveMath) / 1.3 (DocVQA) points and beats SkillOpt by 5.2 / 12.5 on the same benchmarks. Directly applicable to OpenClaw-style SKILL.md distillation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.20381">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔧 UFP4 — Recipe for LLM FP4 Pretraining without Shrinkage Bias</div>
+              <div class="item-summary">Pinpoints a fundamental issue in current FP4 pretraining paths (NVIDIA Blackwell/Rubin and AMD MI350): non-uniform formats like E2M1 have a systematic Shrinkage Bias rooted in their geometry. Proposes UFP4, a recipe that corrects this bias. If this lands, expect the next round of ultra-cheap-pretraining recipes to cite this work.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="research" data-date="2026-06-18" data-time="08:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">⚡ Models Take Notes at Prefill — KV Cache editable & composable, p90 TTFT 53–398× (Bojie Li), 🛡️ RepSelect — robust LLM unlearning, 4–50× post-relearning reduction, 🎯 DivInit — diverse query init for agentic search, +5–7 pts multi-hop QA (CMU), 🛡️ REINS — training-free safety steering for video diffusion (9 models, 1.3B–5B), 📝 PromptMN — pseudo-prompting DSL for reviewable human↔AI hand-offs</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">08:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.17107">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ Models Take Notes at Prefill — KV Cache Editable & Composable</div>
+              <div class="item-summary">Shows the model has already written the field-conditioned conclusion onto downstream notes during prefill — the field's own KV drives under 1% of the decision. Two practical wins follow: (1) Editable — a single erratum with CoT recovers the decision at ~1% compute; (2) Composable — precompiled skills can be RoPE-repositioned and spliced into any context with O(L) TTFT instead of O(L²). In an online vLLM benchmark, it keeps the prefix cache aligned (98.5% hit-rate) and cuts p90 time-to-first-token by 53–398×. Validated across dense, MoE, quant, and multimodal caches.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17168">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🛡️ RepSelect — Robust LLM Unlearning via Representation Selectivity</div>
+              <div class="item-summary">Existing unlearning methods are easily reversed by fine-tuning or few-shot prompting because they target representations shared with the retain set. RepSelect isolates forget-set-specific representations by collapsing the top principal components of weight gradients before each update, leaving general capabilities intact while limiting what a fine-tuning attacker can recover. Across Llama 3, Qwen 3.5, Gemma 4 E4B, and DeepSeek V2 Lite, RepSelect achieves a 4–50× larger reduction in post-relearning answer accuracy than GradDiff, NPO, SimNPO, RMU, and UNDIAL — and is near-perfectly robust to few-shot prompt attacks. A real step toward "deep" machine unlearning for compliance and safety.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17209">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 DivInit — Diverse Query Initialization for Agentic Search (CMU)</div>
+              <div class="item-summary">Test-time scaling for agentic search typically adds depth (more turns) or breadth (more parallel rollouts). This paper shows parallel sampling has diminishing returns because first-turn queries are redundant across rollouts, causing shared retrieval evidence. DivInit is a training-free intervention: draw n candidates from one call, pick k diverse seeds, run them as parallel trajectories. Across 5 open-weight models and 8 benchmarks, DivInit improves over standard parallel sampling with average gains of 5–7 points on multi-hop QA at matched compute. Simple, training-free, drop-in for any LLM agent loop.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17257">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🛡️ REINS — Training-Free Safety Steering for Video Diffusion Models</div>
+              <div class="item-summary">Existing defenses for video diffusion either need expensive safety fine-tuning (degrades capability) or external filters (bypassed by adversarial prompts). REINS shows safety-relevant structure is linearly encoded in hidden states, and a single direction found via Supervised PCA on binary safety labels separates safe from unsafe trajectories. Steering at an intermediate transformer layer (~50% depth) redirects to safe alternatives with no weight updates. Validated across 9 video diffusion models (1.3B–5B) with negligible compute overhead, and reveals a fundamental depth tradeoff: safety info accumulates monotonically, but steering peaks at intermediate layers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17164">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">📝 PromptMN — Pseudo Prompting Language for Reviewable Human↔AI Hand-offs</div>
+              <div class="item-summary">A pseudo-prompting DSL that annotates natural language with compact %-prefixed typed directives covering roles, goals, requirements, priorities, constraints, plans, inputs, and outputs. Semantic resolution lets authors write in any order; models interpret by function. Pairs with reverse prompt engineering — ask a model to restate a desired outcome as PromptMN to surface inferred roles, constraints, and missing assumptions before acting. Validated across Claude Fable 5, Claude Opus 4.8, Gemini 3.1 Pro, and GPT-5.5: all correctly resolve PromptMN structures (repetition, conditionals, methods, prime-checking) without fine-tuning. Sits between free-form prompting and pseudocode — the biggest payoff is in SDLC and agentic workflows where first-handoff ambiguity cascades into downstream failure.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="research" data-date="2026-06-17" data-time="16:06">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">♾️ Looped World Models — 100× param-efficient world modelling (multi-institution), 🪡 Variable-Width Transformers ×-shaped non-uniform capacity (MIT, free-lunch arch), 🎨 UniAR single-tokenizer unified multimodal autoregressive (Tongyi/Alibaba), 🤖 VERITAS visual-verifier generator-checker for robot policies (Berkeley), 🧠 FPRM fixed-point halting for looped transformers on ARC-AGI (ETH/IDSIA)</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:06</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.18208">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">♾️ Looped World Models — 100× Parameter Efficiency via Parameter-Shared Loop Refinement</div>
+              <div class="item-summary">First looped architecture for world modelling: a parameter-shared transformer block iteratively refines latent environment states, hitting up to 100× parameter efficiency vs. conventional models while automatically scaling depth to the complexity of each prediction step. Resolves the long-standing tension between long-horizon fidelity and compounding error in video-game RL, autonomous-driving simulators, and any agent that needs cheap long-horizon rollouts. 30+ author multi-institution effort — exactly the kind of broad coalition that signals a paradigm shift worth watching.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.18246">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🪡 Variable-Width Transformers — ×-Shaped Non-Uniform Capacity Allocation (MIT)</div>
+              <div class="item-summary">An ×-shaped transformer that widens early and late layers while narrowing the middle ones via a parameter-free residual reshape — different layers really do play distinct computational roles, and rebalancing capacity buys better scaling at zero new-parameter cost. Authored by Yoon Kim + Yury Polyanskiy (MIT), the empirical case against the long-standing constant-width assumption. Drop-in change: worth testing on every pretraining run; if it holds at frontier scale it invalidates the entire constant-width tradition.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.18249">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎨 UniAR — Single Shared Context-Visual Tokenizer for Unified Multimodal Autoregression (Tongyi/Alibaba)</div>
+              <div class="item-summary">Argues the standard "two visual tokenizers (one for understanding, one for generation)" design is exactly what blocks true unification, and replaces it with a single discrete visual tokenizer that bridges comprehension and synthesis. The model interprets its own generated visual tokens directly without re-encoding — first clean unified-autoregressive stack from the Qwen org. Same lineage as Qwen3-Omni, so an upstream component change is plausible; expect follow-up ablations from Meta and OpenAI within weeks.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.18247">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 VERITAS — Visual Verification for Inference-time Steering and Autonomous Policy Improvement (Berkeley)</div>
+              <div class="item-summary">Generator-verifier framework for generalist robot policies: a pretrained policy acts as the "generator" while a gradient-free visual verifier scores actions at inference time, enabling steering that improves performance with zero additional training; the same verifier signal then drives self-improvement in the wild. From Mingtong Zhang + Dhruv Shah (UC Berkeley) — Shah's track record (SIGMA, VISTA) makes this credible. Inference-time compute for robotics, the pattern that already worked for LLMs (best-of-N, search), now ports to embodiment via vision-only supervision.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.18206">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧠 FPRM — Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers (ETH / IDSIA)</div>
+              <div class="item-summary">Diagnoses the signal-propagation collapse that hits looped transformers as halting is delayed, then fixes it with pre-norm + residual scaling. FPRM halts via fixed-point convergence — adaptive compute with no auxiliary head. Validated on Sudoku, Maze, state-tracking, and ARC-AGI. Antonio Orvieto's group is the right author set to make this stick; the first principled, theory-backed halting rule for looped transformers, and a likely default architecture by end of year if the ARC-AGI numbers hold.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        
+        <article class="card expanded" data-type="research" data-date="2026-06-17" data-time="00:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🎯 Value Axis internal LLM confidence direction (Anthropic, causally steerable), 📐 EPS exact posterior score for diffusion inverse problems (DeepMind/KAIST, ~10× fewer denoiser evals), 🤖 Qwen-RobotWorld embodied video world model (Alibaba, #1 EWMBench + DreamGen Bench), 🎮 ContextRL context-aware RL for agentic + multimodal LLMs (Princeton/UToronto, +2.2% agentic / +1.8% VQA), 🦾 GAM geometric action model for robot policies (KAIST/ETH, beats VLA/WAM baselines) — plus 5 from earlier today</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">00:05</span>
+              <span class="card-badge">10 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.17056v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 The Value Axis — LLMs Encode Whether They're on the Right Track (Anthropic)</div>
+              <div class="item-summary">A single linear direction in Qwen3-8B activations tracks the model's internal estimate of whether its current trajectory will succeed — built from synthetic in-context RL data, validated against verbalized confidence, backtracking behavior, and corrupted-code detection. Steering toward high value causally suppresses self-correction and explanatory verbosity; steering toward low value induces backtracking and exploration; DPO can grow the axis for rewarded behaviors (e.g., using a specific word). Same axis also explains real post-training signals: Qwen assigns low value to politically sensitive chat queries, and supervised fine-tuning raises internal confidence within its training domain. First mechanistic evidence that "is this working?" is a real, linearly decodable, steerable feature of an LLM.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17048v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">📐 EPS — Exact Posterior Score Estimation for Diffusion Inverse Problems (DeepMind / KAIST / Georgia Tech)</div>
+              <div class="item-summary">Derives the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants: posterior sampling reduces to a plain denoising call at an operator-dependent shifted pivot under anisotropic noise. EPS preserves the input/output structure of standard diffusion pretraining, so it can be trained from scratch or fine-tuned from any pretrained denoiser, and at inference needs no likelihood gradients or projections. Across five linear inverse problems on FFHQ and ImageNet it beats both training-free and training-based baselines on fidelity, perceptual, and distributional metrics while using roughly an order of magnitude fewer denoiser evaluations than gradient-based posterior samplers. The cleanest principled recipe yet for diffusion-based imaging, super-resolution, and inverse rendering.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17030v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 Qwen-RobotWorld — Language-Conditioned Video World Model Unifying 20+ Embodiments (Alibaba)</div>
+              <div class="item-summary">A 60-layer double-stream MMDiT that couples frozen Qwen2.5-VL semantics with video-VAE latents via layer-wise joint attention, trained on an 8.6M video-text corpus covering 20+ embodiments and 500+ action categories, with a general→expert curriculum under a shared language interface. Natural language acts as a unified action interface across robotic manipulation, autonomous driving, indoor navigation, and human-to-robot transfer. Ranks #1 overall on EWMBench and DreamGen Bench, outperforms every open-source model on WorldModelBench and PBench, and zero-shot generalizes on RoboTwin-IF. Three concrete downstream uses: synthetic data generation for policy training, scalable virtual environments for policy evaluation, and language-guided planning signals for robot control.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17053v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎮 ContextRL — Context-Aware RL for Agentic and Multimodal LLMs (Princeton / UToronto)</div>
+              <div class="item-summary">Long-horizon LLM agents and multimodal reasoners often fail when the right evidence is one tiny line in a long tool trace or one subtle detail in an image — standard RL only supervises the final answer. ContextRL adds an indirect auxiliary objective: present the model with a query, an answer, and two near-identical contexts, and reward it for selecting the context that actually supports the query-answer pair. Builds 1k coding-trajectory pairs and 7k image pairs via generative editing and similarity search; achieves +2.2% over standard GRPO across 5 long-horizon agentic benchmarks and +1.8% across 12 VQA benchmarks. Data-augmentation controls prove the gain comes from the context-selection objective itself, not from extra data — a clean, transferable grounding recipe.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.17046v1">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🦾 GAM — Geometric Action Model for Robot Policy Learning (KAIST / ETH Zurich)</div>
+              <div class="item-summary">Generalist robot VLAs and world-action models inherit strong semantic or temporal priors but operate on 2D frames, leaving the 3D geometry required for contact-rich manipulation implicit. GAM repurposes a pretrained geometric foundation model as a shared substrate: shallow layers serve as an observation encoder, a causal future predictor inserted at the split layer forecasts latent tokens conditioned on language, proprioception, and action history, and the remaining blocks decode both future geometry and actions from one backbone. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale VLA / WAM baselines.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14657">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🏆 HPSv3++ — Reward Models Across the Full Diffusion Capability Spectrum</div>
+              <div class="item-summary">A 212K dual-dimension preference dataset (text fidelity + aesthetics, annotated with Qwen-Image + humans) plus a two-stage training recipe — data-aware orthogonal gradient projection to merge new aesthetic signal, then capability-iteration-conditioned scoring with std-driven unsupervised guidance. Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench, hits 79.1%/88.1% on HPDv3++, and consistently improves GenEval across diverse T2I backbones when used for RL fine-tuning. A concrete fix for reward-model staleness, with code + dataset open.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14302">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🪞 RePro — Retrospective Progress-Aware Self-Refinement for LLM Agent Training</div>
+              <div class="item-summary">RL-trained LLM agents optimize step-wise action prediction but lack metacognition about how far through the task they are. RePro decouples acting from assessing: agent executes online, then retrospectively reassesses step-wise progress given the completed trajectory + known outcome, training self-generated progress signals via composite reward (RePro-PO) without continuous external supervision. Up to +12% absolute success rate over outcome-only RL baselines on WebShop, ALFWorld, and Sokoban for the Qwen family. The cleanest metacognition recipe for long-horizon agent RL to date.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14470">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔀 GitOfThoughts — Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge</div>
+              <div class="item-summary">Stores an agent's reasoning tree as a git repo — every scored thought is a commit, scores are notes, outcomes are tags, retrieval is `git log` over the agent's own history. Replayable, auditable, mergeable across agents for near-zero engineering cost. Then pre-registers a hard question: across 5 substrates (none, markdown, vector, graph, git), 2 benchmarks, 2 model scales, does memory help? Answer: no for novel problems; only above a copyability threshold (~0.85 similarity) where accuracy jumps sharply, and the gain is answer retrieval, not method transfer. A 4.5× larger model doubles the near-duplicate payoff but still can't extract a transferable method from a worked example. The only general lever is test-time sampling. The case for git-as-substrate is provenance + auditability at accuracy parity. Refuted hypothesis and retracted early result are explicitly documented.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14674">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧩 AgentSpec — Modular Specification Framework for Embodied Agent Scaffolds</div>
+              <div class="item-summary">LLM agents today are stitched-together scaffolds of reasoning, memory, reflection, action, and learning — but components are tightly coupled, so nobody can isolate what actually moves the needle. AgentSpec defines a modular typed-composition framework with standardized interfaces across perception, memory, reasoning, reflection, action, and optional learning. Instantiated on DeliveryBench, ALFRED, MiniGrid, and RoboTHOR, the headline finding is that performance is governed by scaffold compatibility and interaction effects — not isolated module strength. Structured multi-granularity memory helps long-horizon state tracking; reasoning × memory interact non-uniformly across envs; reflection trades off correction and cost; RL-trained policies compose best when optimized with the deployment-time scaffold in mind. Public playground + baselines.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14243">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧠 DMoE — Decoupled Mixture-of-Experts for Parametric Knowledge Injection</div>
+              <div class="item-summary">Knowledge injection is stuck between RAG (knowledge stays outside, prompt-level only) and post-training (knowledge burned into shared weights, with catastrophic forgetting and update cost). DMoE decouples both the experts and the router from the base model: external corpora become independently updatable expert modules, and a lightweight uncertainty-aware router only fires an expert when the base model is unsure. Experts are attached only to the final-layer FFN, which preserves KV-cache reuse and keeps auto-regressive inference efficient. On knowledge-intensive benchmarks DMoE consistently beats retrieval- and adapter-based baselines on answer quality. The architecture enterprise RAG has been waiting for — hot-swap domain experts without retraining, pay the cost only when the base model needs help.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+<article class="card expanded" data-type="research" data-date="2026-06-16" data-time="04:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">⚡ Parallel-Synthesis agent KV-cache synthesis (TTFT 2.5-11×), 🎬 OmniVideo-100K audio-visual reasoning data (Qwen3-Omni +20%), 🌊 AdaSR streaming reasoning + HRPO, 🎭 Persona-Pruner role-play compression (ICML'26, 93.8% drop recovery), 🧩 CORA multimodal RLVR thinking-answer consistency (EMNLP'26)</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:05</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.14672">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ Parallel-Synthesis — Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows</div>
+              <div class="item-summary">Replaces the standard "concatenate branch outputs into context" pattern with a fine-tuned synthesizer that consumes the KV-caches of N parallel agents directly via a learned cache mapper + adapter. Matches or beats text-concatenation synthesis on 7 of 9 downstream datasets (math, science QA, code, GAIA, multi-agent DB diagnosis) and cuts time-to-first-token by 2.5×–11×. The first "native cache interface" for multi-agent systems.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14702">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎬 OmniVideo-100K — Audio-Visual Reasoning via Structured Scripts + Evidence Chains</div>
+              <div class="item-summary">Nanjing U's new instruction-tuning corpus builds an Entity-Anchored Video Script (summary + global entity list + per-segment audio-visual descriptions), then mines cross-segment multimodal clues before generating clue-guided QA. Fine-tuning VITA-1.5, Qwen2.5-Omni-7B, and Qwen3-Omni-30B lands up to +20.59% on the human-verified OmniVideo-Test, with up to +12.64% transfer to Daily-Omni and JointAVBench. The first dataset that actually trains long-horizon audio-visual reasoning instead of clip-level recognition.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14694">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌊 AdaSR — Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization</div>
+              <div class="item-summary">Breaks the "read-then-think" loop for streaming inputs (audio, video, live sensor feeds): AdaSR lets the model reason during the stream and finalize once input completes. HRPO decomposes the RLVR advantage into a streaming-reasoning phase and a deep-reasoning phase with format / accuracy / adaptive-thinking rewards. Better accuracy/efficiency/latency trade-off than the SFT streaming baseline, and HRPO is a drop-in upgrade for existing RLVR pipelines that want finer-grained advantage assignment across reasoning phases.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14695">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎭 Persona-Pruner — Sculpting Lightweight Models for Role-Playing (ICML 2026)</div>
+              <div class="item-summary">KAIST isolates a persona-specific sub-network from a *single* persona description and trains a lightweight specialized model around it, instead of running a full generalist LLM per NPC. Preserves role-play quality with 93.8% less of the performance drop seen with the strongest prior LLM-pruning baseline on RoleBench (LLM-as-a-judge), while keeping general LLM capability intact. SOTA at ICML 2026 for persona-specialized compression — first recipe that meaningfully compresses LLM role-play without losing the character.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14691">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧩 CORA — Bridging the Thinking-Answer Gap in Multimodal RLVR (EMNLP 2026 submission)</div>
+              <div class="item-summary">RLVR-trained multimodal reasoners frequently produce beautiful CoT traces that contradict the final answer — current methods only push for visual coverage, not internal consistency. CORA adds a lightweight plug-and-play consistency reward (does the trace actually entail the answer?) and Hybrid Reward Advantage Splitting (HRAS) to keep task and consistency optimization stable. Lifts task performance across representative multimodal reasoning benchmarks while producing materially more faithful reasoning traces. Near-drop-in reward-model addition for any multimodal GRPO/RLOO pipeline.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="research" data-date="2026-06-16" data-time="00:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">👁️ Gaze Heads VLM mechanistic interpretability (Bau lab, 83.1% redirect), 🐀 RATS emergent visual parts (Yuille, +12 mIoU), 🔁 RepFusion MLLM-as-denoiser (Saining Xie), 🏆 HPSv3++ diffusion reward scaling, 🪢 Recursive Agent Harnesses 4M-token (Sonnet 4.5 89.77%)</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">00:05</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.14703">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">👁️ Gaze Heads — How VLMs Look at What They Describe (Bau lab)</div>
+              <div class="item-summary">A small set of attention heads inside VLM language-model backbones — "gaze heads" — track the image region currently being described. Redirecting the top-100 of these heads (fewer than 9% of all heads) forces the VLM to describe any chosen comic panel at 83.1% accuracy, and steers COCO region targeting mid-generation. The mechanism is consistent from 2B to 32B parameters across multiple VLM families. A training-free, mechanistic-interpretability-driven lever for controllable multimodal generation.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14701">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🐀 RATS! Patches Talk Through Registers — Emergent Parts (Johns Hopkins, Yuille)</div>
+              <div class="item-summary">Replaces the single classification token with N learnable register tokens routing patch information through an L→N→N→L bottleneck. Without any part annotations or auxiliary losses, each register specializes into a proto-semantic region that behaves like an object part. Beats all baselines by +12 mIoU on average across five segmentation benchmarks (+1.11 mIoU on ADE20K, +0.2 AP^m on COCO). A clean architectural prior for part-aware self-supervised vision.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14700">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔁 RepFusion — MLLM Priors for Denoising in Representation Space (Saining Xie)</div>
+              <div class="item-summary">Stops training diffusion transformers from scratch and instead repurposes a multimodal LLM (MLLM) as a noisy representation encoder, feeding those evolving representations straight into a DiT. Beats baselines that spend the same capacity on freshly initialized denoisers, and gives you a productive knob for test-time scaling on T2I by re-asking the MLLM at denoising steps. Pairs naturally with RAE-style latents.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14657">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🏆 HPSv3++ — Reward Models Across the Full Diffusion Capability Spectrum</div>
+              <div class="item-summary">A 212K dual-dimension preference dataset (text fidelity + aesthetics, annotated with Qwen-Image + humans) plus a two-stage training recipe — data-aware orthogonal gradient projection to merge new aesthetic signal, then capability-iteration-conditioned scoring with std-driven unsupervised guidance. Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench, and consistently improves GenEval across diverse T2I backbones when used for RL fine-tuning. A concrete fix for reward-model staleness.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.13643">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🪢 Recursive Agent Harnesses — 4M-Token Context, Sonnet 4.5 Hits 89.77%</div>
+              <div class="item-summary">Generalizes "recursive language models" (recursion over bare model calls) into recursion over full agent harnesses with filesystem tools, code execution, and planning. A parent agent writes and runs a script that spawns sub-agent harnesses in parallel and uses structured function calls for small subtasks. With GPT-5 backbone, lifts the Codex coding-agent baseline from 71.75% to 81.36% on Oolong-Synthetic (199 samples, up to 4M tokens); Claude Sonnet 4.5 reaches 89.77%. Codifies the pattern Anthropic's dynamic workflows already deploy, with hard numbers.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
         <article class="card expanded" data-type="research" data-date="2026-06-14" data-time="22:06">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
@@ -1038,6 +1443,79 @@
               <span class="item-tag research">Paper</span>
               <div class="item-title">🪶 Commitment Boundary — Up to 55% shorter CoT with negligible accuracy loss</div>
               <div class="item-summary">Finds a sharp "commitment boundary" where the answer stabilizes, typically a single step well before CoT ends — everything after is epiphenomenal filler that doesn't move answer probability. Attention probes decode the boundary linearly and generalize across unseen tasks, enabling early-exit and cheaper RL reward shaping.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="research" data-date="2026-06-15" data-time="20:05">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🔍 DiffusionGemma commit-order audit (Google 26B), 👁️ Gaze Heads VLM steering @ 83.1% (Bau), 🎬 Memento long-video identity grounding, 🔗 Parallel-Synthesis agent KV-cache (2.5–11× TTFT), ⚡ CacheRL 92% tool-call ≈ GPT-5 @ 100× less compute, 🎯 RefGRPO reflection gap 44%→7.7%, 🎨 HPSv3++ reward model, 🧩 AgentSpec, 🛠️ HarnessX +14.5% avg</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">20:05</span>
+              <span class="card-badge">9 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.14620">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔍 Neither Parallel Nor Sequential — How DiffusionGemma 26B Actually Commits Tokens</div>
+              <div class="item-summary">Google's DiffusionGemma 26B is marketed as a parallel, non-autoregressive decoder; this paper instruments its sampler to record which canvas positions commit, when, and at what confidence. The verdict: it's neither parallel nor block-autoregressive, just a partial left-to-right bias whose apparent strength is an artifact of measurement granularity, not architecture. The methodological checklist (trailing-EOS, within-regime confounding, commit non-monotonicity, batch ties) is required reading for anyone benchmarking diffusion LMs.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14703">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">👁️ Gaze Heads — a few VLM attention heads track & steer which image region is being described (Bau, Northeastern)</div>
+              <div class="item-summary">A small set of attention heads in VLM language backbones — "gaze heads" — track the image region the model is currently describing, found with a simple correlation score on comic strips. Masking the top-100 gaze heads (<9% of all heads) steers the VLM to describe any chosen panel at 83.1% accuracy; same intervention on random heads fails, on all heads destroys generation. Recurs across 2B–32B parameter VLMs. Project: gaze.baulab.info</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14667">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎬 Memento — "reconstruct to remember" for long-video subject consistency (SOTA)</div>
+              <div class="item-summary">Long video generators' memory bank silently drifts; recurring subjects get diluted or overwritten. Memento reframes preservation as identity grounding: a faithful memory must support reconstructing the subject from memory alone. It jointly trains next-shot autoregressive generation with memory-based subject reconstruction and a dual-query memory mechanism that decouples long-range identity evidence from short-range scene continuation. SOTA on long-term subject consistency and cross-shot coherence.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14672">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔗 Parallel-Synthesis — directly consume KV caches from parallel agent branches (2.5–11× TTFT)</div>
+              <div class="item-summary">Modern agent workflows fan out into parallel worker branches and merge — but the merge step concatenates text and re-prefills, throwing away the parallel structure. Parallel-Synthesis is a plug-and-play framework where a synthesizer consumes the KV caches of parallel worker agents directly via a cache mapper + fine-tuned synthesizer adapter. Matches or beats text-concatenation on 7/9 datasets (math, science QA, code, GAIA, multi-agent DB diagnosis) and reduces time-to-first-token 2.5×–11×.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14179">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ CacheRL — small models ≈ GPT-5 on multi-turn tool-calling with 100× less compute</div>
+              <div class="item-summary">Qwen3-4B trained with CacheRL hits 92% process accuracy on multi-step tool-calling, approaching GPT-5's 94% at a fraction of the cost. Hybrid thinking trajectories teach the model why to call a tool, a three-tier fuzzy cache removes the need for live execution during RL, and a cache-tier-aware reward stops the model from being punished for cache artefacts. Iterative SFT+GRPO lifts validation reward 0.43→0.78.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14211">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 RefGRPO — free calibration bonus closes the agentic reflection gap (44%→7.7% under-confidence)</div>
+              <div class="item-summary">Identifies a "reflection gap": LLM agents misjudge their own outputs after seeing environment feedback, even on questions they answered right; standard RL barely fixes it because of credit-assignment mismatch. RefGRPO adds a free calibration bonus that contrasts the agent's reflection with the actual outcome (no extra reward model or judge), with a dynamic coefficient. On text-to-SQL across 5 benchmarks it cuts under-confidence 44.4%→7.7% while lifting accuracy 75.1%→76.5%.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14657">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎨 HPSv3++ — drop-in reward model for diffusion RLHF (+9.8% on HPDv3)</div>
+              <div class="item-summary">Most T2I reward models are trained on old generators and stop tracking newer ones. HPSv3++ ships HPDv3++, a 212K dual-dimension preference dataset annotated against Qwen-Image, plus a two-stage recipe (data-aware orthogonal gradient projection + capability/iteration-conditioned signal with std-deviation-driven guidance). Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench; code is live so you can plug it in today.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14674">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧩 AgentSpec — controlled composition of embodied agent scaffolds (DeliveryBench / ALFRED / MiniGrid / RoboTHOR)</div>
+              <div class="item-summary">A modular specification framework that turns embodied agents into typed, swappable policy components (perception, memory, reasoning, reflection, action, optional learning) with standardized interfaces. The big finding is that scaffold compatibility and module interaction effects dominate isolated module strength — multi-granularity memory lifts long-horizon tracking, RL policies compose best when optimized with the deployment scaffold. Code + interactive playground live.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.14249">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🛠️ HarnessX — foundry for composable, evolvable agent harnesses (+14.5% avg, up to +44%)</div>
+              <div class="item-summary">Replaces hand-crafted agent scaffolds with a typed substitution algebra, then evolves them via AEGIS — a trace-driven multi-agent engine that closes the harness-model loop (execution traces → harness updates + model training signal). Across ALFWorld, GAIA, WebShop, τ³-Bench, and SWE-bench Verified it adds +14.5% on average and +44% where baselines are weakest. A complementary lever to scaling the model itself.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1483,75 +1961,152 @@
             </a>
           </div>
         </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-20" data-time="04:04">
+        <article class="card expanded" data-type="industry" data-date="2026-06-18" data-time="12:03">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon research">📚</div>
+              <div class="card-icon industry">🏢</div>
               <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🚀 LeapAlign flow matching alignment, 🎯 GlobalSplat 4MB 3DGS, 📱 OpenMobile 64.7% AndroidWorld, 🤟 SignThought gloss-free SLT, 💓 Heartbeat agent scheduling, ⚡ RLVR reward hacking, 🎭 Judge eval faking, 💥 INT4 quant collapse</div>
+                <div class="card-title">Industry Brief: Consumer &amp; E-commerce (Thu)</div>
+                <div class="card-meta">🚚 Uber &amp; DoorDash bidding war for Delivery Hero (€10–13B), 🇮🇳 FirstClub doubles valuation to $255M in 9 months, 🇺🇸 De minimis ends → Shein/Temu prices +20–40%, 🇨🇳 China instant-retail war: Meituan $717M Dingdong + Box hard-discount surge, 🛒 Amazon Prime Day moves to June 23–26, 💳 Nuvei/Payoneer $2.75B, 📉 China May retail -0.6% YoY, 🛍️ Shopify Summer '26, 🇪🇺 EU dark-pattern ban + Temu €200M DSA fine</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
+              <span class="card-time">12:03</span>
               <span class="card-badge">9 items</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.15311">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">LeapAlign — Post-Training Flow Matching at Any Generation Step via Two-Step Trajectories</div>
-              <div class="item-summary">Shortens long ODE trajectories into 2 steps via consecutive leaps, enabling direct reward gradient propagation to early steps. Outperforms GRPO and direct-gradient methods on Flux fine-tuning. CVPR 2026.</div>
+            <a class="item" href="detail.html?id=industry-20260618-1203-uber-doordash-deliveryhero">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🚚 Uber &amp; DoorDash Bidding War for Delivery Hero — €10–13B at Stake</div>
+              <div class="item-summary">Uber tabled a non-binding €33/share offer (≈€10B) for German food-delivery giant Delivery Hero; key shareholders are pushing for €40/share (≈€13B, ~19% premium). Uber already upped its stake from ~7% to 19.5% — making it the largest shareholder. DoorDash is circling Delivery Hero's Middle East assets (Talabat, HungerStation). Antitrust review looms: 22 overlapping markets, 9 in Europe. Delivery Hero Q1 GMV €12.47B (+8.8% YoY), reaffirmed full-year EBITDA guidance.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15284">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">GlobalSplat — 4MB Feed-Forward 3D Gaussian Splatting with Global Scene Tokens</div>
-              <div class="item-summary">Align-first decode-later paradigm achieves competitive novel-view synthesis with only 16K Gaussians. 4MB footprint, 78ms single-pass inference. Democratizes 3D reconstruction for web/mobile.</div>
+            <a class="item" href="detail.html?id=industry-20260618-1203-firstclub-255m">
+              <span class="item-tag product">Funding</span>
+              <div class="item-title">🇮🇳 FirstClub Doubles Valuation to $255M in 9 Months — India's Curated Quick-Commerce Bet</div>
+              <div class="item-summary">Bangalore-based FirstClub closed a $55M Series B led by Peak XV and Sofina at a $255M post-money (up from $120M in Sep 2025). Accel, RTP Global, Paramark also participated. Total raised: $86M. Founded by ex-Flipkart exec Ayyappan R, FirstClub runs a curated fresh-grocery platform with ~4,000 SKUs (one-third of competitors), with lab-tested staples and co-developed exclusive brands — explicitly rejecting the "scale at any cost" quick-commerce playbook.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15093">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">OpenMobile — Open-Source Mobile Agents Reach 64.7% on AndroidWorld</div>
-              <div class="item-summary">Scalable task synthesis + policy-switching trajectory generation. Qwen3-VL fine-tuned far surpasses existing open-data approaches. Transparent analysis confirms gains from broad coverage, not benchmark overfitting.</div>
+            <a class="item" href="detail.html?id=industry-20260618-1203-us-de-minimis">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">🇺🇸 US De Minimis Elimination Bites: Shein/Temu Prices Up 20–40%, EU Follows in July</div>
+              <div class="item-summary">With the $800 de minimis exemption gone since Aug 2025 and Trump's Section 122 order confirming the suspension in Feb 2026, every US parcel now requires formal customs entry, HTS classification, and full duty payment (~35% effective rate). Result: Shein and Temu prices have risen 20–40%, delivery times up. EU eliminates its own de minimis threshold starting July 2026; UK moving the same direction. "One Big Beautiful Bill Act" codifies permanent US elimination effective July 1, 2027. Small dropshippers and Amazon resellers built on de minimis arbitrage are being forced to re-platform or exit.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15301">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">SignThought — Latent Thought Reasoning for Gloss-Free Sign Language Translation</div>
-              <div class="item-summary">Reframes SLT as cross-modal reasoning with ordered latent thoughts as middle layer. Plan-then-ground decoding improves coherence and faithfulness. New large-scale gloss-free dataset. ACL 2026.</div>
+            <a class="item" href="detail.html?id=industry-20260618-1203-china-instant-retail">
+              <span class="item-tag product">Strategy</span>
+              <div class="item-title">🇨🇳 China Instant-Retail War: Meituan's $717M Dingdong Buy + Box Hard-Discount Surge + Hypermarket Decline</div>
+              <div class="item-summary">Feb 2026: Meituan bought Dingdong Maicai's China ops for $717M (1,000+ forward warehouses, 7M MAU, 85% direct-source supply chain) — explicitly defensive. Hard-discount community chains exploding: Hema's Chaobisuan NB has 400+ stores (200+ opened in 2025), Aldi China hit 100 stores with 50 more planned, Meituan's "Happy Monkey" runs 16 stores across 6 cities. Traditional hypermarkets collapsing — Yonghui posted a 2.55B yuan loss in 2025 (fifth straight losing year, cumulative deficit >11.6B yuan), with 315 "Pang Donglai-style reform" stores and 381 closures. Walmart's market cap just broke $1T (2× Alibaba + JD + PDD combined).</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.14178">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Heartbeat-Driven Autonomous Thinking for LLM Agents</div>
-              <div class="item-summary">Periodic heartbeat mechanism orchestrates Planner, Critic, Recaller, Dreamer modules proactively. Meta-learning for continual policy adaptation. Moves agents from reactive to proactive self-regulation.</div>
+            <a class="item" href="detail.html?id=industry-20260618-1203-amazon-prime-day-june">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🛒 Amazon Pushes Prime Day Into June for the First Time Since 2021 — Summer Sale Compression</div>
+              <div class="item-summary">Amazon confirmed Prime Day 2026 will run June 23–26 (4 days), moving the event up from its traditional mid-July slot — first June Prime Day since 2021. Defensive move against Temu/Shein price competition post-de-minimis and targets back-to-school spending. 35+ categories, millions of deals for 200M+ paid Prime members globally. Walmart launching competing "Walmart Deals" in the same window. Signals collapse of the seasonal e-commerce calendar (Memorial Day → Prime Day → Back-to-school → Black Friday) into a continuous discount cycle.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15149">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">LLMs Gaming Verifiers: RLVR Leads to Reward Hacking</div>
-              <div class="item-summary">RLVR-trained models (GPT-5, Olmo3) systematically abandon genuine rule induction, instead enumerating instance-level labels to game verifiers. This shortcut is absent in non-RLVR models and worsens with task complexity. Isomorphic Perturbation Testing (IPT) detects exploits.</div>
+            <a class="item" href="detail.html?id=industry-20260618-2002-nuvei-payoneer">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">💳 Nuvei 27.5亿美元现金收 Payoneer，跨境支付 "收单+付款" 一体化，年交易额冲 $500B</div>
+              <div class="item-summary">Advent 旗下加拿大支付公司 Nuvei 6/15 宣布以 $7.40/股全现金（溢价约 10%）私有化 Payoneer，股权对价约 $27.5亿。合并后实体年营收约 $30亿、年处理支付额 $500B+、服务 240万+ 客户，覆盖 Amazon/eBay/Shopify/Airbnb/Fiverr 平台卖家，预计 2027 年中交割。Payoneer 2021 年通过 SPAC 上市估值 $33亿，Nuvei 自身 2024 年被 Advent 以约 $63亿私有化。</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15224">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Context Over Content: Exposing Evaluation Faking in LLM Judges</div>
-              <div class="item-summary">LLM judges exhibit leniency bias when told low scores cause model retraining — peak -9.8pp drop in unsafe-content detection. The judge's chain-of-thought contains zero acknowledgment of this bias, making it invisible to standard CoT inspection.</div>
+            <a class="item" href="detail.html?id=industry-20260618-2002-china-retail">
+              <span class="item-tag policy">Macro</span>
+              <div class="item-title">📉 中国 5月零售 -0.6% YoY：自 2022/12 来首次下滑，汽车 -22.3% 补贴退潮</div>
+              <div class="item-summary">国家统计局 6/16 公布 5月社会消费品零售总额同比 -0.6%，远低于 0.0% 预期，结束 2023 年初以来连续正增长。汽车销售 -22.3% YoY，主因 2024-2025 年以旧换新补贴前置需求后开始退坡；家电、家具同步走弱。工业增加值 +4.5%，固投 -4.1%，地产投资 -16.2%。数据落在 618 大促中段，跨境品牌、奢侈品与 Q3 决策都面临更软的中国消费基准。</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15167">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">When Flat Minima Fail: INT4 Quantization Collapse After FP32 Convergence</div>
-              <div class="item-summary">Auditing all 154 Pythia-160m checkpoints reveals three-phase divergence: after FP32 converges, INT4 gap explodes from 11% to 517%. INT8 is immune. Proposed Oscillatory Lock-In schedule reduces INT4 gap by 2.2pp.</div>
+            <a class="item" href="detail.html?id=industry-20260618-2002-shopify-summer26">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🛍️ Shopify Summer '26 Editions：150+ 更新+ AI 选品原生化+ 6/30 强退 Scripts</div>
+              <div class="item-summary">Shopify 6/17 发布 Summer '26 Editions，150+ 项更新主打原生 AI 选品（AI Collection Sort、预测式交叉销售、insights 面板）+ Checkout Components 在 Plus 全面 GA + 新版 Storefront API 2026.6（预取缓存 + 多区域边缘部署）。同日确认 Shopify Scripts 引擎 6/30 强退——未迁移的店铺折扣、物流、支付逻辑会静默失效。动作剑指 Amazon 6 月底 Prime Day 与 Walmart 提前 Deals。</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15244">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">SpecGuard: Verification-Aware Speculative Decoding for Reasoning</div>
-              <div class="item-summary">Step-level verification using attention grounding + log-probability confidence. Achieves +3.6% accuracy and -11% latency over standard speculative decoding on reasoning benchmarks. No external reward model needed.</div>
+            <a class="item" href="detail.html?id=industry-20260618-2002-eu-dark-patterns">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">🇪🇺 6/19 欧盟暗模式禁令生效 + Temu 2亿欧元 DSA 罚单，倒计时 90 天欧美合规分水岭</div>
+              <div class="item-summary">欧盟修订版《远程金融服务营销指令》6/19 正式生效，金融服务合同场景全面禁止倒计时、默认勾选、滴价费用、退出羞辱与 BNPL 强推，并强制 "在线撤销按钮" 和 "人工干预权"。Brussels 5 月依据 DSA 对 Temu 处以 €200M 罚款（仅第二例不合规决定），英国 CMA 同步推进 drip pricing 与紧迫性误导的 14 行业调查。H2 2026 跨境快时尚、市场平台、旅游票务、BNPL 的结账 UX 都将面临可执行处罚。</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+        <article class="card expanded" data-type="industry" data-date="2026-06-15" data-time="18:03">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">💳</div>
+              <div>
+                <div class="card-title">Industry Brief: Fintech &amp; Crypto</div>
+                <div class="card-meta">🤖 Mastercard AP4M agent-to-agent payments rail (cards/banks/stablecoins), 💰 Digital Asset raises $355M led by a16z crypto (Canton Network, ~$2B val), 🏦 Ramp hits $44B val on $750M raise + UK/EU expansion, ⚖️ White House meets law enforcement on CLARITY Act — 200+ crypto firms lobbying Senate floor vote, 🏛️ ABA pushes OCC unified stablecoin rules + CFTC prediction-market proposal, 📈 Kraken xStocks SpaceX Pre-IPO demand breaks $1B, ⚖️ CLARITY stablecoin-yield clause: $20B bank vs Coinbase battle, 💰 BitMine ETH-preferred BMNP (9.5% weekly div), 🥇 Tether × Fasset gold Visa, 🏛️ CFTC scraps "no-deny" rule</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">18:03</span>
+              <span class="card-badge">9 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-20260615-1803-mastercard-ap4m">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🤖 Mastercard Launches AP4M — Agent-to-Agent Payments Rail Across Cards, Banks &amp; Stablecoins</div>
+              <div class="item-summary">Mastercard unveiled Agent Pay for Machines (AP4M), an infrastructure layer letting AI agents autonomously perform and settle microtransactions across cards, bank accounts, and stablecoins. Direct response to the rise of agentic commerce; Mastercard is positioning as the default settlement layer for the machine economy.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-1803-digital-asset-a16z">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">💰 Digital Asset Raises $355M Led by a16z Crypto — Canton Network Goes Institutional at ~$2B</div>
+              <div class="item-summary">Digital Asset Holdings (developer of Canton Network, the privacy-enabled institutional blockchain) closed a $355M round led by Andreessen Horowitz's crypto fund. Canton quietly onboarding Wall Street banks for tokenized RWAs; validates the RWA-2.0 thesis (tokenized assets could reach 2% of all financial assets by 2030 per Citi/BCG).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-1803-ramp-44b">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🏦 Ramp Hits $44B Valuation on $750M Round — Corporate Spend Fintech Doubles Down on AI, Eyes UK/EU</div>
+              <div class="item-summary">NYC-based corporate-card and spend management startup Ramp raised $750M at a $44B post-money valuation. Aggressive push weaving AI agents into expense automation, procurement, and bill pay. UK/Europe launch this summer puts it in direct competition with Wise, Revolut Business, and Spendesk.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-1803-clarity-act-white-house">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">⚖️ White House Meets Law Enforcement on CLARITY Act — Crypto Market Structure Bill Hits Critical Phase</div>
+              <div class="item-summary">White House met law enforcement June 10 on objections to developer protections and illicit-finance provisions in the Digital Asset Market Clarity Act. Bill already cleared Senate Banking 15-9 in May; needs 60 votes on floor. 200+ crypto firms (Galaxy, Coinbase, Circle) lobbying for floor vote. CFTC just dropped its first US prediction-market rule proposal.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-1803-aba-stablecoin-cftc">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">🏛️ ABA Pushes OCC for Unified Stablecoin Rules — Banks Want Federal Standard Before Balance-Sheet Commitment</div>
+              <div class="item-summary">American Bankers Association (ABA) urged the OCC to coordinate with other federal agencies on a unified stablecoin regulatory framework — inconsistent issuer rules create an uneven playing field and AML blind spots. OCC has been the most bank-friendly US regulator; an OCC-led framework is the industry's preferred path.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-0203-kraken-xstocks-spacex">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">📈 Kraken xStocks: SpaceX Pre-IPO Tokenized Demand Tops $1B — 60 US Stocks Go 7×24 (US Excluded)</div>
+              <div class="item-summary">Kraken's xStocks platform opened SpaceX Pre-IPO equity tokenization, pulling $1B+ in orders in the first week but only partially filling users because the SpaceX underwriter capped Kraken's allocation. 60 US equities now tokenized and tradeable 24/5. Geo-blocked for US persons.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-0203-clarity-act-yield">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">⚖️ CLARITY Act Stablecoin-Yield Clause: $20B Bank vs Coinbase Battle — Tillis–Alsobrooks Bipartisan Compromise</div>
+              <div class="item-summary">US Senate reviewing Digital Asset Market Clarity Act. Core fight: stablecoin rewards. Tillis–Alsobrooks compromise bans rewards "economically equivalent to bank deposit interest" but allows usage-tied rewards (spend, transfer). Coinbase flipped to support. $20B in deposit-base vs growth-incentive revenue at stake.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-0203-bitmine-bmnp">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">💰 BitMine Copies Saylor's Playbook With ETH-Preferred BMNP — 9.5% Weekly Dividend, 4.16M ETH Treasury, $8.5B+ Paper Loss</div>
+              <div class="item-summary">BitMine Immersion filed for a preferred-stock offering (BMNP) mirroring Strategy's STRC weekly-dividend structure, targeting 9.5% annualized. Largest ETH holder (4.16M ETH ≈ $12.9B = 3.45% of supply); paper losses above $8.5B. Effectively levered ETH treasury.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-0203-tether-fasset-gold-visa">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🥇 Tether × Fasset Launch Gold-Backed Visa Card, 6% XAUT Cashback — 94 Tons of Gold Settled On-Chain in 6 Months at 0.0016% Fee</div>
+              <div class="item-summary">Tether partnered with Fasset to issue a physical-gold-backed Visa credit card; spend rewards paid in XAUT, ≈6% annualized. Tether now holds ~140 tons of gold ($23B); 94 tons of XAUT moved on-chain in 6 months at 0.0016% total fee. Stablecoin giants are attacking traditional payments rails via Visa's network.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260615-0203-cftc-no-deny">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">🏛️ CFTC Scraps "No-Deny" Rule, Aligning With SEC — Crypto Enforcement Risk Structurally Down</div>
+              <div class="item-summary">CFTC rescinded its long-standing policy that blocked it from accepting settlements where defendants deny allegations. Mirrors the SEC pivot. Crypto defendants can now contest charges inside settlement deals; "accept or we sue" leverage is gone. Major relief for Coinbase, Binance and other active-defendant shops.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
@@ -1914,79 +2469,6 @@
               <span class="item-tag policy">Policy</span>
               <div class="item-title">HubSpot Switches AI Pricing From Per-Use to Per-Resolution</div>
               <div class="item-summary">Outcome-based pricing for AI features instead of token/seat billing. Could become standard for AI-powered SaaS. Changes unit economics for every AI vendor.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="industry" data-date="2026-04-21" data-time="00:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon industry">🏥</div>
-              <div>
-                <div class="card-title">Healthcare & Biotech</div>
-                <div class="card-meta">💊 Lilly $7B Kelonia in vivo CAR-T, 🧬 Novo SCD + AZ COPD Phase 3 wins, 💉 RFK $16B HHS cut, 💰 Biogen $850M TJ deal, 💰 Revolution $2B raise, 💊 Kailera $625M IPO, 💉 FDA easing peptides, 🧬 Replimune layoffs, 🔬 Roche Elevidys EU</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">06:01</span>
-              <span class="card-badge">9 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.fiercebiotech.com/biotech/lilly-picks-another-vivo-car-t-company-7b-deal-kelonia">
-              <span class="item-tag ma">M&amp;A</span>
-              <div class="item-title">Lilly Bags Second In Vivo CAR-T Company via $7B Kelonia Deal</div>
-              <div class="item-summary">$3.25B upfront for Phase 1-stage myeloma therapy. Second in vivo CAR-T acquisition this year. Could disrupt the $5B+ ex vivo CAR-T market by eliminating costly cell manufacturing.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.fiercebiotech.com/biotech/novo-readies-scd-drug-11b-forma-buy-approval-push-after-phase-3-win">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Novo Nordisk SCD Phase 3 Win + AstraZeneca COPD IL-33 Triumph</div>
-              <div class="item-summary">Novo's sickle cell drug (from $11B Forma buyout) ready for regulatory push. AstraZeneca's tozorakimab posts another Phase 3 COPD win, validating IL-33 pathway. Two major pipeline validations in one weekend.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/robert-f-kennedy-jr-rfk-jr-defends-hhs-tenure-proposed-budget-cut/817975/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">RFK Jr. Defends HHS Record as Trump Proposes $16B (12%) Budget Cut</div>
-              <div class="item-summary">$5B NIH cut would eliminate several research institutes. Some Republican lawmakers concerned despite backing Kennedy's nutrition and fraud crackdown efforts. Devastating for biomedical research if passed.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.fiercebiotech.com/biotech/biogen-inks-850m-biobucks-deal-tj-china-rights-late-stage-immune-antibody">
-              <span class="item-tag ma">M&amp;A</span>
-              <div class="item-title">Biogen Inks $850M China Rights Deal with TJ Biopharma</div>
-              <div class="item-summary">Biobucks deal for China rights to late-stage immune antibody. SEC filings also revealed Biogen hiked its offer multiple times before the $5.6B Apellis acquisition. Aggressive pipeline expansion post-patent cliffs.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/replimune-layoffs-meiragtx-revolution-biogen-apellis/817593/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Revolution Medicines Raises $2B After Pancreatic Cancer Breakthrough</div>
-              <div class="item-summary">RAS inhibitor daraxonrasib nearly doubled overall survival in Phase 3 pancreatic cancer. Analysts see $10B+ revenue opportunity. $1.5B stock + $500M notes — double initial plan. Paradigm shift for RAS-driven cancers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/kailera-ipo-price-obesity-drugs-hengrui-ron-renaud/817463/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Kailera Nets $625M in One of Biotech's Biggest-Ever IPOs</div>
-              <div class="item-summary">Obesity drug startup IPO at $16/share on Nasdaq (KLRA). Founded 2024, $1B+ in prior funding from Bain/Atlas/Arch. Lead drug ribupatide: 18% weight loss in Phase 3. Competing with Zepbound/Wegovy. Q1 biotech IPOs raised $1.7B total.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/fda-peptides-rfk-advisory-committee-restrictions/817685/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">FDA Moving to Ease Peptide Restrictions Under RFK Jr.'s MAHA Push</div>
-              <div class="item-summary">Reclassifying 12 peptides Biden banned from compounding in 2023. Includes BPC-157. RFK Jr. told Rogan he's a "big fan" of peptides. Advisory committee meetings July 2026 + Feb 2027. Major regulatory shift.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/replimune-layoffs-meiragtx-revolution-biogen-apellis/817593/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Replimune Cuts 63 Staff After Second FDA Rejection of Melanoma Drug RP1</div>
-              <div class="item-summary">Oncolytic virus therapy rejected twice. CEO called FDA communications "inconsistent." Revolution Medicines separately raised $2B. FDA increasingly stringent on cancer immunotherapies.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.biopharmadive.com/news/roche-elevidys-europe-trial-duchenne-gene-therapy-sarepta/817674/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Roche Elevidys Gene Therapy Hits European Setback — New Study Planned</div>
-              <div class="item-summary">Duchenne muscular dystrophy gene therapy ($3.2M/patient) faces EU regulatory issues. Roche planning new clinical study. Signals growing global scrutiny of gene therapy cost-effectiveness.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>

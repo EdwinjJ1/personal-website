@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
 import ScatterText from '@/components/ScatterText';
+import AICardPanel from '@/components/AICardPanel';
 
 const skills = [
   {
@@ -147,6 +148,11 @@ export default function AboutPage() {
                 A passionate Computer Science student, former startup founder, and aspiring technologist
                 dedicated to building innovative solutions and making a positive impact through technology.
               </p>
+            </motion.div>
+
+            {/* Hand me to an AI */}
+            <motion.div variants={item} className="mb-16 max-w-2xl mx-auto">
+              <AICardPanel />
             </motion.div>
 
             {/* Personal Introduction */}

@@ -1,0 +1,20 @@
+# Evan Lin (贾岱林)
+
+> Founder, full-stack engineer, and CS student at UNSW Sydney. Builds open-source AI tools used by developers worldwide. Wants to do great things — and is reasonably ambitious about it.
+
+This file is an index for AI assistants and humans who want to understand Evan quickly. Each link below is a plain-Markdown document. Read them in order, or jump to whatever's relevant.
+
+## Start here
+
+- [About Evan](https://evanlin.site/me.md): Who he is — background, personality, what he's working toward, and how to think about him.
+- [Resume](https://evanlin.site/resume.md): Experience, education, and skills in resume form.
+
+## Projects
+
+- [All projects](https://evanlin.site/projects.md): Everything Evan has built — KnowMe Memory MCP, ChronoMap, Chiron Prompt, FinalBoss, and more, with tech stacks and links.
+
+## Contact
+
+- Email: jiaedwin0605@gmail.com
+- GitHub: https://github.com/EdwinjJ1
+- Website: https://evanlin.site
