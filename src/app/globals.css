@@ -605,3 +605,1032 @@ input:focus,
 textarea:focus {
   --tw-ring-color: #7a9088;
 }
+
+.hidden-door-button {
+  position: fixed;
+  right: 22px;
+  bottom: 88px;
+  z-index: 39;
+  display: inline-flex;
+  height: 58px;
+  width: 42px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(122, 144, 136, 0.24);
+  border-radius: 8px 8px 4px 4px;
+  color: #8fb0a6;
+  background:
+    linear-gradient(90deg, rgba(11, 10, 9, 0.86), rgba(45, 41, 36, 0.92)),
+    rgba(26, 24, 22, 0.94);
+  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.36), inset 0 0 22px rgba(122, 144, 136, 0.08);
+  cursor: pointer;
+  transform-origin: right center;
+}
+
+.hidden-door-button:focus-visible {
+  outline: 2px solid #7a9088;
+  outline-offset: 4px;
+}
+
+.hidden-door-frame {
+  position: relative;
+  display: block;
+  height: 42px;
+  width: 28px;
+  border: 1px solid rgba(224, 216, 204, 0.16);
+  border-radius: 8px 8px 3px 3px;
+  background:
+    linear-gradient(90deg, rgba(122, 144, 136, 0.12), transparent 16%),
+    linear-gradient(135deg, rgba(40, 38, 34, 0.9), rgba(12, 11, 10, 0.94));
+}
+
+.hidden-door-slit {
+  position: absolute;
+  top: 5px;
+  right: 4px;
+  bottom: 5px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, rgba(143, 176, 166, 0.9), transparent);
+  box-shadow: 0 0 16px rgba(143, 176, 166, 0.42);
+}
+
+.hidden-door-knob {
+  position: absolute;
+  right: 7px;
+  top: 21px;
+  height: 5px;
+  width: 5px;
+  border-radius: 999px;
+  background: #8fb0a6;
+  box-shadow: 0 0 14px rgba(143, 176, 166, 0.45);
+}
+
+.private-gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(8, 8, 7, 0.64);
+  backdrop-filter: blur(10px);
+}
+
+.private-gate-panel {
+  position: relative;
+  width: min(92vw, 420px);
+  overflow: hidden;
+  border: 1px solid rgba(122, 144, 136, 0.26);
+  border-radius: 8px;
+  padding: 28px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(122, 144, 136, 0.16), transparent 36%),
+    linear-gradient(145deg, rgba(40, 38, 34, 0.97), rgba(15, 14, 13, 0.98));
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.52);
+}
+
+.private-gate-panel h2 {
+  margin-top: 18px;
+  color: #e0d8cc;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 900;
+}
+
+.private-gate-panel p {
+  margin-top: 12px;
+  color: #b8b4aa;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.private-gate-key {
+  display: inline-flex;
+  height: 58px;
+  width: 58px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(122, 144, 136, 0.26);
+  border-radius: 8px;
+  color: #8fb0a6;
+  background: rgba(122, 144, 136, 0.08);
+}
+
+.private-gate-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: inline-flex;
+  height: 34px;
+  width: 34px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(224, 216, 204, 0.12);
+  border-radius: 8px;
+  color: #b8b4aa;
+  background: rgba(224, 216, 204, 0.04);
+  cursor: pointer;
+}
+
+.private-gate-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.private-gate-actions button {
+  min-height: 42px;
+  border-radius: 8px;
+  padding: 0 16px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, filter 0.2s ease;
+}
+
+.private-gate-actions button:first-child {
+  border: 1px solid rgba(224, 216, 204, 0.14);
+  color: #b8b4aa;
+  background: rgba(224, 216, 204, 0.04);
+}
+
+.private-gate-actions button:last-child {
+  border: 1px solid transparent;
+  color: #151412;
+  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+}
+
+.private-gate-actions button:hover {
+  filter: brightness(1.08);
+}
+
+.private-shell {
+  min-height: 100vh;
+  padding: 96px 18px 32px;
+  color: #e0d8cc;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(122, 144, 136, 0.11), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgba(232, 145, 91, 0.07), transparent 28%),
+    linear-gradient(180deg, rgba(26, 24, 22, 0.22), rgba(12, 11, 10, 0.52));
+}
+
+.private-lock-panel,
+.private-workspace {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+}
+
+.private-lock-panel {
+  position: relative;
+  display: grid;
+  gap: 24px;
+  max-width: 520px;
+  border: 1px solid rgba(122, 144, 136, 0.22);
+  border-radius: 8px;
+  padding: 28px;
+  background:
+    linear-gradient(90deg, rgba(224, 216, 204, 0.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(224, 216, 204, 0.03) 1px, transparent 1px),
+    linear-gradient(145deg, rgba(40, 38, 34, 0.86), rgba(15, 14, 13, 0.9));
+  background-size: 34px 34px, 34px 34px, auto;
+  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+}
+
+.private-back-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  color: #8fb0a6;
+  font-size: 13px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.private-lock-plate {
+  display: inline-flex;
+  height: 68px;
+  width: 68px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(122, 144, 136, 0.26);
+  border-radius: 8px;
+  color: #8fb0a6;
+  background: rgba(122, 144, 136, 0.08);
+}
+
+.private-lock-copy span,
+.private-workspace-header span {
+  display: block;
+  color: #8a8680;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.private-lock-copy h1,
+.private-workspace-header h1 {
+  margin-top: 8px;
+  color: #e0d8cc;
+  font-size: clamp(34px, 5vw, 58px);
+  line-height: 1;
+  font-weight: 950;
+}
+
+.private-lock-copy p {
+  margin-top: 14px;
+  color: #b8b4aa;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.private-lock-form {
+  display: grid;
+  gap: 14px;
+}
+
+.private-lock-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.private-lock-form label span {
+  color: #8a8680;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.private-lock-form input,
+.private-search input,
+.private-title-input,
+.private-editor textarea,
+.private-editor select {
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  color: #e0d8cc;
+  background: rgba(12, 11, 10, 0.36);
+  outline: none;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.private-lock-form input:focus,
+.private-search:focus-within,
+.private-title-input:focus,
+.private-editor textarea:focus,
+.private-editor select:focus {
+  border-color: rgba(143, 176, 166, 0.72);
+  background: rgba(12, 11, 10, 0.5);
+}
+
+.private-lock-form input {
+  min-height: 48px;
+  padding: 0 14px;
+}
+
+.private-lock-form button {
+  min-height: 48px;
+  border: 0;
+  border-radius: 8px;
+  color: #151412;
+  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.private-lock-form button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.private-lock-error {
+  color: #f0a89a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.private-workspace {
+  display: grid;
+  gap: 18px;
+}
+
+.private-workspace-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.private-workspace-actions,
+.private-workspace-toolbar,
+.private-create-row,
+.private-editor-meta,
+.private-editor-footer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.private-workspace-actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.private-key-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  gap: 10px;
+  align-items: end;
+  border: 1px solid rgba(143, 176, 166, 0.22);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(143, 176, 166, 0.07);
+}
+
+.private-key-form label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.private-key-form label span {
+  color: #8a8680;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.private-key-form input {
+  min-height: 38px;
+  min-width: 0;
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  padding: 0 11px;
+  color: #e0d8cc;
+  background: rgba(12, 11, 10, 0.34);
+  outline: none;
+}
+
+.private-key-form input:focus {
+  border-color: rgba(143, 176, 166, 0.72);
+}
+
+.private-key-form button {
+  min-height: 38px;
+  border: 0;
+  border-radius: 8px;
+  padding: 0 13px;
+  color: #151412;
+  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.private-key-form button:disabled {
+  cursor: wait;
+  opacity: 0.62;
+}
+
+.private-key-message {
+  margin-top: -6px;
+  color: #b8b4aa;
+  font-size: 13px;
+}
+
+.private-workspace-actions button,
+.private-create-row button,
+.private-editor-meta button {
+  min-height: 38px;
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #c9c2b7;
+  background: rgba(224, 216, 204, 0.05);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.private-workspace-actions button:hover,
+.private-create-row button:hover,
+.private-editor-meta button:hover {
+  border-color: rgba(143, 176, 166, 0.46);
+  color: #e0d8cc;
+  background: rgba(143, 176, 166, 0.1);
+}
+
+.private-workspace-toolbar {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border: 1px solid rgba(224, 216, 204, 0.09);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(18, 17, 16, 0.42);
+}
+
+.private-segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.private-segmented button {
+  min-height: 34px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 0 11px;
+  color: #9f9a90;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.private-segmented button.is-active {
+  border-color: rgba(143, 176, 166, 0.36);
+  color: #e0d8cc;
+  background: rgba(143, 176, 166, 0.12);
+}
+
+.private-search {
+  display: flex;
+  min-height: 38px;
+  width: min(100%, 260px);
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  padding: 0 11px;
+  color: #8a8680;
+  background: rgba(12, 11, 10, 0.28);
+}
+
+.private-search input {
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.private-create-row {
+  flex-wrap: wrap;
+}
+
+.private-create-row button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.private-create-row button span {
+  color: #8fb0a6;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.private-workspace-grid {
+  display: grid;
+  grid-template-columns: minmax(230px, 300px) minmax(0, 1fr);
+  gap: 16px;
+  min-height: 560px;
+}
+
+.private-entry-list,
+.private-editor {
+  overflow: hidden;
+  border: 1px solid rgba(224, 216, 204, 0.11);
+  border-radius: 8px;
+  background: rgba(18, 17, 16, 0.5);
+}
+
+.private-entry-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.private-entry-list button {
+  display: grid;
+  gap: 7px;
+  width: 100%;
+  border: 1px solid rgba(224, 216, 204, 0.08);
+  border-radius: 8px;
+  padding: 12px;
+  color: inherit;
+  background: rgba(224, 216, 204, 0.035);
+  text-align: left;
+  cursor: pointer;
+}
+
+.private-entry-list button.is-active {
+  border-color: rgba(143, 176, 166, 0.48);
+  background: rgba(143, 176, 166, 0.11);
+}
+
+.private-entry-list button span {
+  color: #8fb0a6;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.private-entry-list button strong {
+  overflow: hidden;
+  color: #e0d8cc;
+  font-size: 15px;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.private-entry-list button small,
+.private-editor-footer {
+  color: #8a8680;
+  font-size: 11px;
+}
+
+.private-empty-list,
+.private-empty-editor {
+  display: grid;
+  min-height: 220px;
+  place-items: center;
+  color: #8a8680;
+  text-align: center;
+}
+
+.private-editor {
+  min-width: 0;
+}
+
+.private-editor-inner {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto auto minmax(280px, 1fr) auto;
+  gap: 14px;
+  padding: 16px;
+}
+
+.private-editor-meta {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.private-editor select {
+  min-height: 36px;
+  padding: 0 10px;
+  color-scheme: dark;
+}
+
+.private-title-input {
+  width: 100%;
+  min-height: 54px;
+  padding: 0 14px;
+  font-size: clamp(24px, 4vw, 42px);
+  line-height: 1.1;
+  font-weight: 950;
+}
+
+.private-editor textarea {
+  width: 100%;
+  min-height: 300px;
+  resize: vertical;
+  padding: 16px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.private-editor-footer {
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(224, 216, 204, 0.09);
+  padding-top: 12px;
+}
+
+.private-empty-editor {
+  height: 100%;
+  padding: 24px;
+}
+
+.private-empty-editor h2 {
+  color: #e0d8cc;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.private-empty-editor p {
+  margin-top: 8px;
+  color: #8a8680;
+}
+
+.private-calendar {
+  overflow: hidden;
+  border: 1px solid rgba(224, 216, 204, 0.11);
+  border-radius: 8px;
+  padding: 16px;
+  background:
+    radial-gradient(circle at 100% 0%, rgba(143, 176, 166, 0.1), transparent 32%),
+    rgba(18, 17, 16, 0.5);
+}
+
+.private-calendar-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgba(224, 216, 204, 0.09);
+  padding-bottom: 14px;
+}
+
+.private-calendar-header span,
+.private-calendar-panel-header span,
+.private-schedule-form label span {
+  display: block;
+  color: #8a8680;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.private-calendar-header h2 {
+  margin-top: 6px;
+  color: #e0d8cc;
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 950;
+}
+
+.private-calendar-controls {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.private-calendar-controls strong {
+  min-width: 156px;
+  color: #e0d8cc;
+  font-size: 14px;
+  text-align: center;
+}
+
+.private-calendar-controls button,
+.private-schedule-form button,
+.private-schedule-item-actions button {
+  min-height: 34px;
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  padding: 0 11px;
+  color: #c9c2b7;
+  background: rgba(224, 216, 204, 0.05);
+  font-size: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.private-calendar-controls button:hover,
+.private-schedule-form button:hover,
+.private-schedule-item-actions button:hover {
+  border-color: rgba(143, 176, 166, 0.48);
+  color: #e0d8cc;
+  background: rgba(143, 176, 166, 0.1);
+}
+
+.private-calendar-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.private-calendar-board,
+.private-calendar-panel {
+  min-width: 0;
+}
+
+.private-calendar-weekdays,
+.private-calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.private-calendar-weekdays {
+  margin-bottom: 6px;
+}
+
+.private-calendar-weekdays span {
+  color: #8a8680;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.private-calendar-grid button {
+  position: relative;
+  display: grid;
+  min-height: 72px;
+  align-content: start;
+  justify-items: start;
+  border: 1px solid rgba(224, 216, 204, 0.09);
+  border-radius: 8px;
+  padding: 9px;
+  color: #d5cec3;
+  background: rgba(224, 216, 204, 0.035);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.private-calendar-grid button:hover {
+  border-color: rgba(143, 176, 166, 0.38);
+  background: rgba(143, 176, 166, 0.08);
+}
+
+.private-calendar-grid button.is-muted {
+  color: #615d56;
+  background: rgba(224, 216, 204, 0.02);
+}
+
+.private-calendar-grid button.is-selected {
+  border-color: rgba(143, 176, 166, 0.72);
+  color: #f2eadf;
+  background: rgba(143, 176, 166, 0.14);
+}
+
+.private-calendar-grid button.is-today span {
+  color: #8fb0a6;
+}
+
+.private-calendar-grid button small {
+  position: absolute;
+  right: 8px;
+  bottom: 7px;
+  display: inline-flex;
+  min-width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  color: #151412;
+  background: #8fb0a6;
+  font-size: 11px;
+  font-weight: 950;
+}
+
+.private-calendar-panel {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  border: 1px solid rgba(224, 216, 204, 0.09);
+  border-radius: 8px;
+  padding: 14px;
+  background: rgba(12, 11, 10, 0.22);
+}
+
+.private-calendar-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.private-calendar-panel-header strong {
+  color: #e0d8cc;
+  font-size: 17px;
+}
+
+.private-schedule-form {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  border: 1px solid rgba(224, 216, 204, 0.09);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(224, 216, 204, 0.035);
+}
+
+.private-schedule-form label {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+}
+
+.private-schedule-title-field,
+.private-schedule-note-field {
+  grid-column: 1 / -1;
+}
+
+.private-schedule-form input,
+.private-schedule-form select,
+.private-schedule-form textarea {
+  min-width: 0;
+  width: 100%;
+  border: 1px solid rgba(224, 216, 204, 0.13);
+  border-radius: 8px;
+  color: #e0d8cc;
+  background: rgba(12, 11, 10, 0.34);
+  outline: none;
+}
+
+.private-schedule-form input,
+.private-schedule-form select {
+  min-height: 38px;
+  padding: 0 11px;
+  color-scheme: dark;
+}
+
+.private-schedule-form textarea {
+  min-height: 74px;
+  resize: vertical;
+  padding: 10px 11px;
+  line-height: 1.55;
+}
+
+.private-schedule-form input:focus,
+.private-schedule-form select:focus,
+.private-schedule-form textarea:focus {
+  border-color: rgba(143, 176, 166, 0.72);
+}
+
+.private-schedule-form button {
+  grid-column: 1 / -1;
+  color: #151412;
+  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+}
+
+.private-schedule-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.48;
+}
+
+.private-schedule-list {
+  display: grid;
+  gap: 10px;
+}
+
+.private-schedule-empty {
+  display: grid;
+  min-height: 92px;
+  place-items: center;
+  border: 1px dashed rgba(224, 216, 204, 0.12);
+  border-radius: 8px;
+  color: #8a8680;
+  font-size: 13px;
+}
+
+.private-schedule-list article {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid rgba(224, 216, 204, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  background: rgba(224, 216, 204, 0.035);
+}
+
+.private-schedule-list article.is-done {
+  opacity: 0.62;
+}
+
+.private-schedule-list article.is-done h3 {
+  text-decoration: line-through;
+}
+
+.private-schedule-list article span {
+  display: block;
+  color: #8fb0a6;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.private-schedule-list article h3 {
+  margin-top: 5px;
+  color: #e0d8cc;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 900;
+}
+
+.private-schedule-list article small {
+  display: block;
+  margin-top: 5px;
+  color: #8a8680;
+  font-size: 11px;
+}
+
+.private-schedule-list article p {
+  margin-top: 8px;
+  color: #b8b4aa;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.private-schedule-item-actions {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  gap: 7px;
+  justify-content: flex-end;
+}
+
+@media (max-width: 760px) {
+  .hidden-door-button {
+    right: 18px;
+    bottom: 84px;
+  }
+
+  .private-shell {
+    padding: 82px 12px 24px;
+  }
+
+  .private-lock-panel {
+    padding: 22px;
+  }
+
+  .private-workspace-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .private-workspace-actions {
+    justify-content: flex-start;
+  }
+
+  .private-key-form {
+    grid-template-columns: 1fr;
+  }
+
+  .private-search {
+    width: 100%;
+  }
+
+  .private-workspace-grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .private-entry-list {
+    max-height: 260px;
+  }
+
+  .private-editor-inner {
+    grid-template-rows: auto auto minmax(320px, 1fr) auto;
+  }
+
+  .private-calendar {
+    padding: 12px;
+  }
+
+  .private-calendar-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .private-calendar-controls {
+    justify-content: flex-start;
+  }
+
+  .private-calendar-controls strong {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .private-calendar-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .private-calendar-weekdays,
+  .private-calendar-grid {
+    gap: 4px;
+  }
+
+  .private-calendar-grid button {
+    min-height: 54px;
+    padding: 7px;
+  }
+
+  .private-schedule-form {
+    grid-template-columns: 1fr;
+  }
+
+  .private-schedule-list article {
+    flex-direction: column;
+  }
+
+  .private-schedule-item-actions {
+    justify-content: flex-start;
+  }
+}

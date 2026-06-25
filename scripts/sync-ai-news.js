@@ -89,6 +89,50 @@ function normalizeTitle(value) {
   return value.toLowerCase().replace(/[^a-z0-9]+/g, '');
 }
 
+// Stronger normalization for cross-day dedup.
+// Strips version punctuation, leading tags like [BREAKING], common filler words,
+// and quote variants so e.g. "Introducing Claude Fable 5" and "Anthropic releases
+// Claude Fable 5" collapse to the same key.
+function normalizeTitleStrong(value) {
+  return normalizeTitle(value)
+    .replace(/[\u2018\u2019\u201c\u201d]/g, '')
+    .replace(/\b(introducing|announces|announce|releases|release|launches|launch|unveils|unveil|new|just|now|official|officially)\b/g, '')
+    .replace(/\b(the|a|an)\b/g, '')
+    .replace(/(released|launched|announced|introduced|unveiled)$/, '')
+    .slice(0, 60);
+}
+
+function itemSignature(item) {
+  // Combine category + normalized title + source so we don't merge
+  // legitimately distinct stories (e.g. "X raises $1B" from Reuters vs TechCrunch).
+  const sourceKey = (item.source || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+  return `${item.category}::${normalizeTitleStrong(item.title)}::${sourceKey}`;
+}
+
+function isNewer(left, right) {
+  return (
+    left.date.localeCompare(right.date) > 0 ||
+    (left.date === right.date && (left.time || '').localeCompare(right.time || '') > 0)
+  );
+}
+
+// Drop earlier occurrences of duplicate stories; keep the newest.
+// Scoped to same category + source + day so we keep multi-outlet coverage
+// of the same event while killing cron re-runs that re-ingest the same
+// article from the same outlet.
+function dedupeBySignature(items) {
+  const bySig = new Map();
+  for (const item of items) {
+    const sourceKey = (item.source || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+    const sig = `${item.category}::${item.date}::${sourceKey}::${normalizeTitleStrong(item.title)}`;
+    const existing = bySig.get(sig);
+    if (!existing || isNewer(item, existing)) {
+      bySig.set(sig, item);
+    }
+  }
+  return [...bySig.values()];
+}
+
 function normalizeSourceText(value) {
   return value.replace(/^source:\s*/i, '').trim();
 }
@@ -510,7 +554,16 @@ function main() {
   const replacedKeys = new Set(parsedBySource.flatMap((entry) => [...entry.replacedKeys]));
 
   const preservedNews = (existingData.news || []).filter((item) => !replacedKeys.has(`${item.category}:${item.date}`));
-  const news = [...parsedItems, ...preservedNews].sort(sortNews);
+
+  // Cross-day dedup: merge parsed + preserved, then keep newest per signature.
+  const merged = [...parsedItems, ...preservedNews];
+  const beforeCount = merged.length;
+  // Dedup inside each source directory first, then again on the merged set
+  // (preserved items may still carry cron-redundant duplicates).
+  const deduped = dedupeBySignature(merged);
+  const removedDupes = beforeCount - deduped.length;
+
+  const news = deduped.sort(sortNews);
   const availableDates = [...new Set(news.map((item) => item.date))]
     .sort((left, right) => right.localeCompare(left))
     .map((date) => ({
@@ -529,6 +582,8 @@ function main() {
 
   console.log(`Synced ${parsedItems.length} items across ${SOURCE_CONFIGS.length} source directories.`);
   console.log(`Preserved ${preservedNews.length} manually maintained items.`);
+  console.log(`Dropped ${removedDupes} cross-day duplicates.`);
+  console.log(`Final: ${news.length} unique items.`);
   console.log(`Updated ${dataFile}`);
   console.log(`Updated ${previewFile}`);
 }
