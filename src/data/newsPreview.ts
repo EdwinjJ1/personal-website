@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-06-25",
-  "latestLabel": "June 25, 2026",
+  "latestDate": "2026-06-27",
+  "latestLabel": "June 27, 2026",
   "items": [
     {
-      "id": "research-20260625-0407-learning-action-priors-for-cross-embodiment-robot-manipulation",
-      "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
+      "id": "research-20260627-0000-ask-solve-generate-self-evolving-unified-multimodal-understandin",
+      "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
       "tag": "RESEARCH",
-      "date": "2026-06-25",
-      "time": "04:07",
+      "date": "2026-06-27",
+      "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260625-0407-model-forensics-investigating-whether-concerning-behavior-reflec",
-      "title": "Model Forensics: Investigating Whether Concerning Behavior Reflects Misalignment",
+      "id": "research-20260627-0000-danceopd-on-policy-generative-field-distillation",
+      "title": "DanceOPD: On-Policy Generative Field Distillation",
       "tag": "RESEARCH",
-      "date": "2026-06-25",
-      "time": "04:07",
+      "date": "2026-06-27",
+      "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260625-0407-neglected-free-lunch-from-post-training-progress-advantage-for-l",
-      "title": "Neglected Free Lunch from Post-training: Progress Advantage for LLM Agents",
+      "id": "research-20260627-0000-don-t-settle-at-the-mode-mitigating-diversity-collapse-in-pretra",
+      "title": "Don't Settle at the Mode! Mitigating Diversity Collapse in Pretrained Flow Models via Feature Self-Guidance",
       "tag": "RESEARCH",
-      "date": "2026-06-25",
-      "time": "04:07",
+      "date": "2026-06-27",
+      "time": "00:00",
       "category": "research"
     }
   ]

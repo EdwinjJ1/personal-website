@@ -965,6 +965,105 @@
         </article>
 
 
+        <article class="card expanded" data-type="research" data-date="2026-06-27" data-time="02:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🧊 PhysiFormer — Vedaldi @ Oxford: diffusion transformer learns 3D physics in world-coordinate mesh space, no ad-hoc inductive biases, beats AR baselines on rigidity + momentum, 🎯 RiVER — RLVR without ground-truth answers; Qwen3-8B / GLM-Z1-9B +8.9% / +9.4% ALE; transfers to LiveCodeBench +2.4%, USACO +3.5%, 🌐 Ask-Solve-Generate — fully self-evolving unified LMM, same framework across BLIP3o / BAGEL / VARGPT-v1.1; BAGEL +3.5% MMMU, GenEval 82→85%, 💃 DanceOPD — Tat-Seng Chua @ NUS: on-policy generative field distillation composes T2I + local + global editing without the usual quality tax, 🎨 Don't Settle at the Mode — ECCV 2026: training-free feature self-guidance fixes flow-model diversity collapse, plug-and-play, no reward model</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">02:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.27364">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧊 PhysiFormer — Diffusion Transformer Learns 3D Physics in World Space (Vedaldi @ Oxford)</div>
+              <div class="item-summary">Diffusion transformer predicts 3D object motion directly on world-coordinate meshes instead of view-dependent pixel space. Given initial vertex positions/velocities and material type (rigid or elastic), it samples full future vertex trajectories as a single denoising process — no ad-hoc latent spaces, hard-coded rigidity priors, or explicit causality constraints. Factorised time/space/object attention gives permutation-invariant multi-object reasoning without per-object encodings. Trained on 100k+ trajectories, generalises to mixed materials, unseen real-world geometries, and larger object counts. Substantially outperforms autoregressive baselines on trajectory accuracy, rigidity preservation, and momentum-based consistency (Yiming Chen, Yushi Lan, Andrea Vedaldi).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27369">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 RiVER — RLVR Without Ground-Truth Solutions Improves LLMs</div>
+              <div class="item-summary">RLVR typically needs ground-truth answers to assign rewards, which limits it to problems with a known solution. RiVER (Ranking-induced VERifiable) trains on score-based optimisation tasks (AtCoder Heuristic Contest) using deterministic execution feedback as continuous-valued supervision, and identifies two failure modes in naïve group-relative RL on continuous rewards — scale dominance and frequency dominance — that calibrated reward shaping fixes. Improves Qwen3-8B and GLM-Z1-9B-0414 by 8.9% and 9.4% on ALE-Bench rating rank, and despite training exclusively on score-based tasks without ground truth, transfers positively to exact-solution benchmarks (LiveCodeBench +2.4%, USACO +3.5%) where raw-execution-score baselines fail to transfer (Yingyu Lin, Qiyue Gao, Nikki Lijing Kuang, et al.).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27376">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌐 Ask, Solve, Generate — Self-Evolving Unified LMM, Architecture-Agnostic</div>
+              <div class="item-summary">Most unified LMMs that support both visual understanding and image generation still need curated human supervision (annotations, preference labels, external reward models). Proposes a fully self-evolving training framework with three internal roles — Proposer, Solver, Generator — using only self-derived consistency signals. Introduces Solver Token Entropy (STE), a token-level prediction-uncertainty difficulty signal that stays useful when sample-level consistency collapses, and a multi-scale internal evaluation scheme combining QA-fidelity scoring with cycle-consistent captioning. The same framework applies unchanged to BLIP3o, BAGEL, and VARGPT-v1.1; on BAGEL gives +3.5% absolute MMMU and pushes GenEval 82% → 85%. Code and models public (Ritesh Thawkar, Shravan Venkatraman, Omkar Thawakar, et al.).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27377">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">💃 DanceOPD — On-Policy Generative Field Distillation for Unified Flow Models (Chua @ NUS)</div>
+              <div class="item-summary">Modern image generation wants a single model that unifies T2I + local editing + global editing — but these capabilities rarely align and editing tends to degrade T2I quality. DanceOPD is an on-policy generative field distillation framework for flow-matching models that routes each sample to one capability field, queries one low-noise student-induced state, and trains with a simple velocity-MSE objective. Each capability source is a velocity field over a shared flow state space, and learning from fields queried on the student's own rollout states composes expert capabilities without the usual interference — absorbing operator-defined fields like CFG for free. Consistent gains in target capabilities while preserving anchor T2I quality (Wei Zhou, Xiongwei Zhu, Zelin Xu, ..., Tat-Seng Chua).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27371">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎨 Don't Settle at the Mode — Training-Free Diversity Fix for Flow Models (ECCV 2026)</div>
+              <div class="item-summary">Flow models collapse to mode-like outputs when asked for multiple samples under the same conditioning. Existing fixes (latent guidance, external reward-model sample selection) are limited or expensive. Introduces a training-free self-guidance mechanism that disperses the flow model's internal features during batch generation, plus a manifold-regularisation step that projects dispersed features back onto the data manifold — diverse outputs without losing alignment. Drop-in for pretrained flow models with marginal inference cost; validated on multi-step and few-step T2I, depth-to-image, and reference-image generation. Accepted at ECCV 2026 (Pradhaan S. Bhat, Rishubh Parihar, Abhijnya Bhat, et al.).</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="card expanded" data-type="research" data-date="2026-06-26" data-time="04:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🎯 Co-Failure Ceiling — single-author proof caps any router / vote / MoA at 1−β over 67 frontier models (Josef Chen), 🌀 MMBench2 — 427h / 210-task world-model benchmark names 3 hallucination modes (perceptual / action-marginalized / scene-diverging) + lightweight data-centric mitigations (Hansen, Wang @ UCSD), 🧬 Autoregressive Boltzmann Generators — Bengio / Bose / Tong @ Mila abandon the flow-based paradigm for molecular sampling, 🧮 GEQ ≡ Blackwell Approachability — Jordan + Tibshirani prove algorithmic equivalence of the three-way regret / approachability / GEQ family, 🩻 CORTEX — first structured-reasoning benchmark for 3D chest-CT MLLMs with traceable finding→conclusion chain (MBZUAI, Salman Khan)</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">04:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.27288">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 Co-Failure Ceiling — A Hard Theoretical Limit on Multi-Model LLM Systems</div>
+              <div class="item-summary">Single-author proof that for any policy whose output is a single member-model answer, accuracy cannot exceed 1 − β, where β is the rate at which every model in the pool is wrong on the same query. Across 67 frontier models from 21 providers, a Clopper-Pearson bound on β gives a finite-sample certificate on the largest gain any router / vote / cascade can deliver — and the usual pairwise-error-correlation (ρ) diagnostic is shown to be uninformative for β (Josef Chen).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27326">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌀 MMBench2 — World-Model Hallucination Is Predictable and Preventable</div>
+              <div class="item-summary">Releases a 427-hour, 210-task visual world-modeling benchmark with ground-truth actions, rewards, and live simulators, and trains a 350M-parameter world model on it. Names three distinct hallucination modes (perceptual, action-marginalized, scene-diverging), each anchored to a different stage of the pipeline, and gives three lightweight data-centric signals that both predict and mitigate them. Interactive paper, code, dataset, and models all public (Nicklas Hansen, Xiaolong Wang @ UC San Diego).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27361">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧬 Autoregressive Boltzmann Generators (ArBG) — Sampling Molecules Without Flows</div>
+              <div class="item-summary">Boltsmann Generators (BGs) have been dominated by normalizing flows, which either lose expressivity from strict-invertibility constraints (discrete time) or pay ruinous likelihood-evaluation cost (continuous time). ArBG drops the flow-based paradigm and uses an autoregressive factorization to sidestep both, with theoretical results on topological and geometric expressivity that flows provably cannot match (Rehman, Tan, Bengio, Bose, Tong @ Mila / Université de Montréal).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27315">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧮 Gradient Equilibrium ≡ Blackwell Approachability (Algorithmically)</div>
+              <div class="item-summary">Gradient Equilibrium (GEQ) is a recently introduced online-optimization framework that abstracts problems like online conformal prediction. Proves that GEQ and Blackwell approachability are algorithmically equivalent — either can be solved with no asymptotic loss given a black-box oracle for the other — and combined with prior equivalences this yields a clean three-way correspondence: regret ↔ approachability ↔ GEQ. Michael I. Jordan + Ryan J. Tibshirani on the author list signals the "this will appear in JACM" tier (Lee, Haghtalab, Jordan, Tibshirani @ UC Berkeley / CMU).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.27264">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🩻 CORTEX — Structured-Reasoning Benchmark for Trustworthy 3D Chest-CT MLLMs</div>
+              <div class="item-summary">First benchmark that scores structured, traceable reasoning on 3D chest CT — pairing volumetric scans with patient history, expert-curated reasoning chains, and a protocol that audits the link between finding and conclusion (instead of just final-answer accuracy on free-form text). Includes a trustworthy-3D-MLLM training recipe that improves over free-form baselines on the benchmark. Authoritative author list (Salman Khan @ MBZUAI).</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+
         <article class="card expanded" data-type="research" data-date="2026-06-24" data-time="04:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
@@ -1369,599 +1468,6 @@
           </div>
         </article>
 
-        <article class="card expanded" data-type="research" data-date="2026-06-14" data-time="22:06">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🌳 Arbor Hypothesis-Tree autonomous research (Microsoft/ByteDance, +2.5× Codex), 🎯 APPO fine-grained agentic-RL credit (Xiangxiang Chu), 🔍 ModSleuth LLM dependency-graph audit (Sewon Min), 🧱 RACES composable RL envs, 🎞️ NKR 100× long-video latency cut, 🧠 Agents-K1 KG, 🔁 Reasoning = Pattern Matching, 🧪 AgentBeats AAA, 🛠️ HyperTool, 🪶 Commitment-Boundary CoT</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">22:06</span>
-              <span class="card-badge">10 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.11926v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌳 Arbor — Hypothesis-Tree Refinement for generalist autonomous research (Microsoft/ByteDance)</div>
-              <div class="item-summary">Long-lived coordinator + short-lived executors drive a persistent Hypothesis Tree that links hypotheses, artifacts, evidence, and distilled insights across runs. Beats Codex/Claude Code by 2.5× on six real research tasks; 86.36% Any Medal on MLE-Bench Lite with GPT-5.5. Co-authored by Lijuan Wang, Zhicheng Dou, Linjie Li — the architectural template the field is converging on.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.12384v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 APPO — Fine-grained decision-point credit for agentic RL (Xiangxiang Chu et al.)</div>
-              <div class="item-summary">Replaces coarse tool-call credit assignment with a Branching Score (token uncertainty × policy-induced likelihood gain) + procedure-level advantage scaling. +4 points on average across 13 agentic-RL benchmarks while keeping tool-call counts efficient and rollouts interpretable. Drop-in upgrade for GRPO/RLOO pipelines.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.12385v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔍 ModSleuth — Recursive agentic audit of invisible LLM dependencies (Sewon Min)</div>
-              <div class="item-summary">Agentic system that recursively reconstructs LLM training-pipeline dependency graphs from public artifacts. Recovers 1,060 source-verified dependencies across 4 model releases, exposing multi-hop license obligations, train/eval coupling, and doc inconsistencies. Critical infrastructure for EU AI Act provenance and license audits.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.12373v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧱 RACES — Recursive composition of verifiable RL environments (LEGO-brick envs)</div>
-              <div class="item-summary">Treats 300 verifiable envs as composable building blocks with SEQUENTIAL / PARALLEL / SORT / SELECT operators; auto-fuses when codomain matches next domain. +3.1 pts on DeepSeek-R1-Distill-Qwen-14B and Qwen3-14B 58.8→61.1 on six held-out benchmarks. Reusable recipe for infinite reasoning-RL curricula.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.11913v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎞️ NKR — Neural Knowledge Representations: 100× faster long-video understanding</div>
-              <div class="item-summary">Distills a long video into a small set of additional VLM weights via Agentic Knowledge Distillation. At inference, mount the lightweight NKR onto a frozen VLM — no re-encoding. Matches SOTA on LVBench while cutting end-to-end latency by >100×. "Knowledge as weights" is the natural next step beyond KV-cache compression.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13669v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 Agents-K1 — Agent-native scientific knowledge graphs (Bo Zhang & Lei Bai et al.)</div>
-              <div class="item-summary">End-to-end pipeline that turns raw papers into agent-native KGs: multimodal parser (entities/evidence/claims/method lineages), 4B extractor trained with GRPO + rule-based reward, and a tri-source graphanything CLI unifying web search, multimodal graph retrieval, and cross-document traversal. Already produced Scholar-KG over 2.46M papers (1M-paper subset released).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13607v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔁 Reasoning as Pattern Matching — LLMs and humans share the same attention-head mechanism</div>
-              <div class="item-summary">Tests 25 LLMs and humans on identical everyday causal-reasoning tasks; finds near-identical error patterns, including humans failing on irrelevant prompt details. Identifies attention heads implementing pattern-matching that also predict human failures — narrows the "LLMs reason differently from humans" gap.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13608v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧪 AgentBeats — Agentified Agent Assessment via A2A + MCP (29 authors, 5-month field study)</div>
-              <div class="item-summary">Proposes "Agentified Agent Assessment": judges are themselves agents, all participants communicate only via standardized A2A (task mgmt) + MCP (tools) — separating assessment logic from agent implementation. Validated with 298 judge agents across 12 categories + 467 subject agents from independent teams, plus a controlled coding-agent case study.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13663v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🛠️ HyperTool — Code-block MCP tool calls (Qwen3-32B 15.7% → 35.3% on MCP-Universe)</div>
-              <div class="item-summary">Replaces step-wise atomic tool calls with a single executable code block that invokes existing MCP tools, manipulates values, and passes intermediates locally — folding deterministic sub-routines into one outer model-visible call. Trajectory synthesis verified in real MCP envs; beats GPT-OSS and Kimi-k2.5 on average.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13603v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🪶 Commitment Boundary — Up to 55% shorter CoT with negligible accuracy loss</div>
-              <div class="item-summary">Finds a sharp "commitment boundary" where the answer stabilizes, typically a single step well before CoT ends — everything after is epiphenomenal filler that doesn't move answer probability. Attention probes decode the boundary linearly and generalize across unseen tasks, enabling early-exit and cheaper RL reward shaping.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-06-15" data-time="20:05">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🔍 DiffusionGemma commit-order audit (Google 26B), 👁️ Gaze Heads VLM steering @ 83.1% (Bau), 🎬 Memento long-video identity grounding, 🔗 Parallel-Synthesis agent KV-cache (2.5–11× TTFT), ⚡ CacheRL 92% tool-call ≈ GPT-5 @ 100× less compute, 🎯 RefGRPO reflection gap 44%→7.7%, 🎨 HPSv3++ reward model, 🧩 AgentSpec, 🛠️ HarnessX +14.5% avg</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">20:05</span>
-              <span class="card-badge">9 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.14620">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔍 Neither Parallel Nor Sequential — How DiffusionGemma 26B Actually Commits Tokens</div>
-              <div class="item-summary">Google's DiffusionGemma 26B is marketed as a parallel, non-autoregressive decoder; this paper instruments its sampler to record which canvas positions commit, when, and at what confidence. The verdict: it's neither parallel nor block-autoregressive, just a partial left-to-right bias whose apparent strength is an artifact of measurement granularity, not architecture. The methodological checklist (trailing-EOS, within-regime confounding, commit non-monotonicity, batch ties) is required reading for anyone benchmarking diffusion LMs.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14703">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">👁️ Gaze Heads — a few VLM attention heads track & steer which image region is being described (Bau, Northeastern)</div>
-              <div class="item-summary">A small set of attention heads in VLM language backbones — "gaze heads" — track the image region the model is currently describing, found with a simple correlation score on comic strips. Masking the top-100 gaze heads (<9% of all heads) steers the VLM to describe any chosen panel at 83.1% accuracy; same intervention on random heads fails, on all heads destroys generation. Recurs across 2B–32B parameter VLMs. Project: gaze.baulab.info</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14667">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎬 Memento — "reconstruct to remember" for long-video subject consistency (SOTA)</div>
-              <div class="item-summary">Long video generators' memory bank silently drifts; recurring subjects get diluted or overwritten. Memento reframes preservation as identity grounding: a faithful memory must support reconstructing the subject from memory alone. It jointly trains next-shot autoregressive generation with memory-based subject reconstruction and a dual-query memory mechanism that decouples long-range identity evidence from short-range scene continuation. SOTA on long-term subject consistency and cross-shot coherence.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14672">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔗 Parallel-Synthesis — directly consume KV caches from parallel agent branches (2.5–11× TTFT)</div>
-              <div class="item-summary">Modern agent workflows fan out into parallel worker branches and merge — but the merge step concatenates text and re-prefills, throwing away the parallel structure. Parallel-Synthesis is a plug-and-play framework where a synthesizer consumes the KV caches of parallel worker agents directly via a cache mapper + fine-tuned synthesizer adapter. Matches or beats text-concatenation on 7/9 datasets (math, science QA, code, GAIA, multi-agent DB diagnosis) and reduces time-to-first-token 2.5×–11×.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14179">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ CacheRL — small models ≈ GPT-5 on multi-turn tool-calling with 100× less compute</div>
-              <div class="item-summary">Qwen3-4B trained with CacheRL hits 92% process accuracy on multi-step tool-calling, approaching GPT-5's 94% at a fraction of the cost. Hybrid thinking trajectories teach the model why to call a tool, a three-tier fuzzy cache removes the need for live execution during RL, and a cache-tier-aware reward stops the model from being punished for cache artefacts. Iterative SFT+GRPO lifts validation reward 0.43→0.78.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14211">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 RefGRPO — free calibration bonus closes the agentic reflection gap (44%→7.7% under-confidence)</div>
-              <div class="item-summary">Identifies a "reflection gap": LLM agents misjudge their own outputs after seeing environment feedback, even on questions they answered right; standard RL barely fixes it because of credit-assignment mismatch. RefGRPO adds a free calibration bonus that contrasts the agent's reflection with the actual outcome (no extra reward model or judge), with a dynamic coefficient. On text-to-SQL across 5 benchmarks it cuts under-confidence 44.4%→7.7% while lifting accuracy 75.1%→76.5%.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14657">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎨 HPSv3++ — drop-in reward model for diffusion RLHF (+9.8% on HPDv3)</div>
-              <div class="item-summary">Most T2I reward models are trained on old generators and stop tracking newer ones. HPSv3++ ships HPDv3++, a 212K dual-dimension preference dataset annotated against Qwen-Image, plus a two-stage recipe (data-aware orthogonal gradient projection + capability/iteration-conditioned signal with std-deviation-driven guidance). Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench; code is live so you can plug it in today.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14674">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧩 AgentSpec — controlled composition of embodied agent scaffolds (DeliveryBench / ALFRED / MiniGrid / RoboTHOR)</div>
-              <div class="item-summary">A modular specification framework that turns embodied agents into typed, swappable policy components (perception, memory, reasoning, reflection, action, optional learning) with standardized interfaces. The big finding is that scaffold compatibility and module interaction effects dominate isolated module strength — multi-granularity memory lifts long-horizon tracking, RL policies compose best when optimized with the deployment scaffold. Code + interactive playground live.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14249">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🛠️ HarnessX — foundry for composable, evolvable agent harnesses (+14.5% avg, up to +44%)</div>
-              <div class="item-summary">Replaces hand-crafted agent scaffolds with a typed substitution algebra, then evolves them via AEGIS — a trace-driven multi-agent engine that closes the harness-model loop (execution traces → harness updates + model training signal). Across ALFWorld, GAIA, WebShop, τ³-Bench, and SWE-bench Verified it adds +14.5% on average and +44% where baselines are weakest. A complementary lever to scaling the model itself.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-06-13" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🔁 Recursive Agent Harnesses (RAH), 🧠 EvoArena + EvoMem dynamic-environment agents, 🧪 EurekAgent environment engineering, 🖼️ InterleaveThinker interleaved T2I, 🦾 Mana dexterous articulated tools (Abbeel)</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.13643">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔁 Recursive Agent Harnesses — Parallel subagent spawn from one executable script</div>
-              <div class="item-summary">Names and validates RAH: the recursive unit is a full agent harness (filesystem, code exec, planning), not a bare model call. Parent agent writes a script that spawns subagent harnesses in parallel; Codex baseline lifted from 71.75% → 81.36% on Oolong-Synthetic (4M tokens) with GPT-5, with Claude Sonnet 4.5 it climbs further. Cross-pollinates Anthropic dynamic workflows and RLM-style recursion.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13681">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 EvoArena + EvoMem — Benchmark & patch-based memory for dynamic-environment LLM agents</div>
-              <div class="item-summary">EvoArena models environment drift as progressive updates across terminal, software, and social-preference domains — current agents score only 39.6% avg. EvoMem records memory as structured patch histories; +1.5% on EvoArena and +6.1% / +4.8% on GAIA / LoCoMo, with multi-step chains +3.7%.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13662">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧪 EurekAgent — Environment engineering, not workflow design, is the bottleneck for autonomous science</div>
-              <div class="item-summary">Tsinghua/Galaxy argues the bottleneck for autonomous scientific discovery has shifted from agent workflows to environment engineering. EurekAgent engineers four axes (permissions, artifacts, budgets, human oversight) and already outperforms human-designed baselines on metric-driven discovery tasks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13679">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🖼️ InterleaveThinker — Planner+Critic multi-agent pipeline for interleaved text-image generation</div>
-              <div class="item-summary">Two-agent loop bolted onto existing image generators: planner organizes the text-image sequence, critic catches drift and rewrites the next instruction. Trained on Planner-SFT-80k + Critic-SFT-112k + Critic-RL-13k. First strong interleaved-generation behavior for off-the-shelf UMMs — much cheaper than retraining the generator.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13677">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🦾 Mana — Dexterous Manipulation of Articulated Tools (Berkeley/Stanford, Abbeel & Liu)</div>
-              <div class="item-summary">Reframes dexterous articulated-tool manipulation as a computer-animation problem. Coarse-to-fine pipeline turns procedurally-generated grasp keyframes into trajectories via motion planning + RL, with &lt;1 minute of human input per tool. Zero-shot sim-to-real across four articulated tools spanning different scales and joint types.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13673v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧭 SpatialClaw — Code-as-Action VLM Agent for 3D/4D Spatial Reasoning (+11.2 pts SOTA)</div>
-              <div class="item-summary">Training-free VLM agent that uses a stateful Python kernel as its action interface — writes one executable cell per step conditioned on prior observations. Hits 59.9% across 20 spatial reasoning benchmarks, +11.2 over the prior SOTA spatial agent, generalizes across 6 VLM backbones with no fine-tuning.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13680v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧩 RA-RFT — Reasoning by Analogy via Retrieval-Augmented RL Fine-Tuning (Rice/Stanford)</div>
-              <div class="item-summary">Replaces semantic-similarity retrieval with "reasoning-aware" retrieval — a retriever trained via gold-relevance distillation surfaces demonstrations by expected reasoning benefit, not surface overlap. Policy is then RL fine-tuned against verifiable outcome rewards. +7.1 / +2.8 pts on AIME 2025 over GRPO for Qwen3-1.7B / 4B, orthogonal to reward design.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13674v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 RepWAM — Representation Visual-Action Tokenizers for World Action Models (Fudan/ByteDance)</div>
-              <div class="item-summary">Argues reconstruction-based video tokenizers are the wrong abstraction for robot control. Trains a representation visual-action tokenizer that maps inputs to aligned visual + latent-action tokens, then pretrains a WAM to jointly model future states and the actions connecting them. A generalist robot policy foundation with semantic action grounding.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13676v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📐 Modality Forcing — Scalable Joint Image-Depth Generation (CMU/Meta, Ramanan & Johnson)</div>
-              <div class="item-summary">A simple post-training recipe that turns a single DiT into a joint image+depth generator by assigning per-modality noise levels and per-modality decoders. Trains on sparse real-world depth, scales 370M → 3.3B params. 57% relative AbsRel reduction vs prior joint image-depth generative models, competitive with SOTA monocular depth estimators.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-28" data-time="00:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🦞 QuantClaw dynamic precision routing for OpenClaw, 🌍 Agentic World Modeling survey, 💰 AI agent token economics, 🧠 Abstract CoT — 11.6x fewer reasoning tokens, 📊 Budget-efficient scaling laws, 🌍 Cross-cultural AI bias audit, 🧠 Lexical Task Heads, 👤 Preference Heads</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:06</span>
-              <span class="card-badge">8 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.22577">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🦞 QuantClaw: Dynamic Precision Routing for Autonomous Agent Systems</div>
-              <div class="item-summary">Analyzes quantization sensitivity across OpenClaw workflows and proposes dynamic precision routing — lightweight tasks get lower-cost configs, demanding workloads keep higher precision. 21.4% cost savings, 15.7% latency reduction on GLM-5.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22748">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌍 Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond</div>
-              <div class="item-summary">Comprehensive 40+ author survey establishing "agentic world modeling" as a field — how AI agents build internal models of environment dynamics for goal-directed interaction. Central bottleneck for next-gen autonomous systems.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22750">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">💰 How Do AI Agents Spend Your Money? Token Consumption in Agentic Coding</div>
-              <div class="item-summary">First systematic study across 8 frontier LLMs on SWE-bench: agentic tasks consume 1000x more tokens than code reasoning. Kimi-K2 and Claude Sonnet 4.5 use 1.5M+ more tokens than GPT-5. Higher spend ≠ higher accuracy.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22709">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 Thinking Without Words: Abstract Chain-of-Thought — 11.6x Fewer Reasoning Tokens</div>
-              <div class="item-summary">LLMs produce short sequences from a reserved vocabulary instead of natural language CoT. Policy iteration warm-up + RL optimization. Emergent power law distribution over abstract tokens. IBM Research.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22753">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📊 Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting</div>
-              <div class="item-summary">Formulates scaling-law fitting as sequential experimental design. Uncertainty-aware method approaches full-set performance using only ~10% of training budget. Open-source code available.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22153">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌍 Cross-Cultural Audit: AI Systems Export Western Individualist Values (+0.76/5 bias gap)</div>
-              <div class="item-summary">Tested Claude 4.5, GPT-5.4, Gemini 2.5 across 10 countries, 7 languages, 840 responses. All three give Western individualist advice even to collectivist societies. Gap largest for Nigeria (+1.85) and India (+0.82). Open data released.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22027">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 Lexical Task Heads Explain Why Prompts Matter — Mechanistic Interpretability</div>
-              <div class="item-summary">Identifies attention heads that literally describe the task, shared across prompt styles. Behavioral variation = activation strength of these heads. Failures = competing task representations. Clearest picture yet of prompt sensitivity mechanics.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.22345">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">👤 Preference Heads: Training-Free Personalization via Causal Attention Analysis (ACL 2026)</div>
-              <div class="item-summary">DPS framework identifies sparse attention heads encoding user preferences via causal masking. Amplifies preference-aligned logits during decoding. Consistent personalization gains without fine-tuning — directly applicable to production.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-27" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🔧 Tool Attention 95% MCP token reduction, 🗣️ DiffMAS latent multi-agent communication, 🧠 Reasoning Skills distillation cuts tokens boosts accuracy, 📋 AI Risk statistical certification for EU AI Act</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">4 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.21816">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔧 Tool Attention Is All You Need — 95% MCP Token Reduction</div>
-              <div class="item-summary">Middleware that generalizes self-attention to gated attention over tools. Combines intent schema overlap scoring + lazy schema loading to cut per-turn tool tokens from 47.3k to 2.4k in 120-tool benchmark. Critical for scaling production agentic systems.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21794">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🗣️ DiffMAS: End-to-End Latent Communication for Multi-Agent Systems</div>
-              <div class="item-summary">Replaces fixed text protocols between agents with learnable latent communication via KV caches. 26.7% on AIME24, 20.2% on GPQA-Diamond. Under review at COLM 2026 — could unlock more efficient multi-agent reasoning.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21764">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 Thinking with Reasoning Skills: Fewer Tokens, More Accuracy (ACL 2026)</div>
-              <div class="item-summary">Distills reusable reasoning skills from deliberation, retrieves them at inference to avoid redundant chain-of-thought. Significantly reduces tokens while improving accuracy on coding and math — slashes inference costs for reasoning models.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21854">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📋 Bounding the Black Box: Statistical Certification for AI Risk Regulation</div>
-              <div class="item-summary">Aviation-inspired two-stage framework to verify AI safety for EU AI Act compliance. RoMA/gRoMA tools compute auditable failure rate bounds without model internals. Bridges the gap between regulation and engineering practice.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-26" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🧮 MathDuels self-play LLM math benchmark, 👁️ HalluScope prompt-induced LVLM hallucinations, 🔄 LoRA Redux for large models, 🔬 Agentic AI for science workflows, ⚡ GiVA 8× rank reduction for vector adaptation</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.21916">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧮 MathDuels: Evaluating LLMs as Problem Posers and Solvers</div>
-              <div class="item-summary">Self-play benchmark where LLMs author AND solve math problems. Uses Rasch model to jointly estimate solver ability and problem difficulty across 19 frontier models. Reveals that authoring and solving capabilities are partially decoupled — benchmark difficulty co-evolves with model strength, preventing ceiling effects.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21911">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">👁️ When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs</div>
-              <div class="item-summary">HalluScope benchmark isolates hallucination causes in vision-language models. Finds hallucinations stem from textual priors in instructions, not vision backbone limits. HalluVL-DPO fix reduces prompt-induced hallucinations via preference optimization while preserving other capabilities.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21905">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔄 Low-Rank Adaptation Redux for Large Models</div>
-              <div class="item-summary">Comprehensive re-examination of LoRA for parameter-efficient fine-tuning as models scale beyond 100B params. Revisits theoretical foundations and proposes practical improvements to the now-standard PEFT technique used across the entire open-source ecosystem.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21910">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔬 From Research Question to Scientific Workflow: Agentic AI for Science</div>
-              <div class="item-summary">Three-layer agentic architecture translates natural-language research questions into reproducible scientific workflow DAGs. Achieves 83% intent accuracy, 92% data transfer reduction, LLM overhead under $0.001/query — production-viable AI-driven science automation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21901">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ GiVA: Gradient-Informed Vector Adaptation (AISTATS 2026)</div>
-              <div class="item-summary">Gradient-based initialization for vector-based model adaptation. Matches LoRA training speed while achieving 8× rank reduction vs existing vector methods. Cheaper, faster fine-tuning at the same quality — next evolution beyond LoRA for PEFT.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-24" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🤖 LLaDA2.0-Uni unified multimodal diffusion, ⚡ Stream-CQSA billion-token exact attention, 💻 Parallel-SFT cross-language code RL, 🎚️ ParetoSlider multi-objective diffusion, 🧠 OMIBench Olympiad multi-image reasoning</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">5 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.21931">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Seeing Fast and Slow: Learning the Flow of Time in Videos</div>
-              <div class="item-summary">Self-supervised models learn time as a visual concept — detecting speed changes, estimating playback speed, and enabling speed-conditioned video generation and temporal super-resolution. Curates the largest slow-motion dataset from wild sources.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21911">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">When Prompts Override Vision: Prompt-Induced Hallucinations in LVLMs</div>
-              <div class="item-summary">HalluScope benchmark reveals LVLM hallucinations largely stem from textual priors in instructions, not vision limitations. HalluVL-DPO fixes this via preference optimization while preserving visual capabilities.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21916">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">MathDuels: Evaluating LLMs as Problem Posers and Solvers</div>
-              <div class="item-summary">Self-play benchmark where 19 frontier models both author and solve math problems. Reveals authoring and solving capabilities are partially decoupled; difficulty co-evolves with model strength — no ceiling.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21905">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Low-Rank Adaptation Redux for Large Models</div>
-              <div class="item-summary">Comprehensive LoRA survey through signal processing lens. Bridges adapter designs with classical low-rank modeling: SVD factorization, rank-augmentation, gauge-invariant optimization, and full lifecycle applications.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.21910">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Agentic AI for Science Automation: Research Question to Workflow</div>
-              <div class="item-summary">Three-layer architecture confines LLM non-determinism to intent extraction while guaranteeing reproducible scientific workflows. 83% accuracy, $0.001/query cost on 1000 Genomes pipeline.</div>
-              <span class="item-arrow">→</span>
-            </a>
-
-            <a class="item" href="https://arxiv.org/abs/2604.20796">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">LLaDA2.0-Uni — Unified Multimodal Understanding and Generation with Diffusion LLM</div>
-              <div class="item-summary">Unified discrete diffusion LLM (ByteDance/Inclusion AI) that natively supports both multimodal understanding AND generation. MoE-based backbone with SigLIP-VQ visual tokenizer. Matches specialized VLMs on understanding while excelling at image generation/editing.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.20819">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Stream-CQSA — Exact Attention Over Billion-Token Sequences on a Single GPU</div>
-              <div class="item-summary">CQS Divide decomposes exact self-attention into independent subsequence computations via cyclic quorum sets theory. No approximation error — enables streaming exact attention at arbitrary sequence lengths within any memory budget.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.20835">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Parallel-SFT — Improving Zero-Shot Cross-Language Transfer for Code RL (Meta FAIR)</div>
-              <div class="item-summary">RL training in one programming language fails to transfer to others. Parallel-SFT incorporates functionally equivalent code in multiple languages into SFT data, creating a functionality-centric latent space that enables better cross-language RL generalization.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.20816">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">ParetoSlider — Multi-Objective RL for Continuous Reward Control in Diffusion Models</div>
-              <div class="item-summary">Trains a single diffusion model to approximate the entire Pareto front. Users navigate optimal trade-offs at inference time via continuous preference weights — one model, multiple quality profiles. Tested on SD3.5, FluxKontext, LTX-2.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.20806">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">OMIBench — Olympiad-Level Multi-Image Reasoning: Gemini-3-Pro Only 50% (ACL 2026)</div>
-              <div class="item-summary">Benchmark for reasoning across multiple images in biology, chemistry, math, physics Olympiads. Even the strongest LVLMs struggle — exposes critical weakness in cross-image synthesis that current single-image benchmarks miss entirely.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <!-- Research - 2026-04-18 -->
-        <article class="card expanded" data-type="research" data-date="2026-04-23" data-time="04:05">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🧪 EasyRL: 10% data outperforms SOTA (ACL 2026), 🧠 Neural Language Interpreter self-discovers programs (ICLR 2026), 🎯 Curiosity-Critic unifies exploration, 🔍 Hallucination neurons traced to field, 📊 GROVE visualizes LM distributions, 🧠 Logical reasoning steering +11pp, 📐 Edge-of-stability theory, ⚡ FASTER fast RL, ⚡ Sessa power-law memory</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:05</span>
-              <span class="card-badge">10 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.18639">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">EasyRL: Easy Samples Are All You Need — Self-Evolving LLMs via Data-Efficient RL (ACL 2026)</div>
-              <div class="item-summary">Uses only 10% of labeled data to outperform SOTA baselines. Progressive difficulty curriculum inspired by cognitive learning theory — warm-up on easy data, then divide-and-conquer on harder unlabeled data.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.18907">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Neural Language Interpreter — Self-Discovers Symbolic Programs End-to-End (ICLR 2026)</div>
-              <div class="item-summary">Learns its own discrete programming language with a differentiable neural executor. Gradient descent at inference refines programs. Outperforms in-context learning and test-time training on combinatorial tasks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.18701">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Curiosity-Critic: Unifies Decades of Exploration Research Under One Framework</div>
-              <div class="item-summary">Intrinsic reward grounded in cumulative prediction error improvement. A learned critic separates epistemic from aleatoric error online, making world-model RL agents more sample-efficient.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.18880">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Where Fake Citations Are Made — Tracing Hallucination to Field-Specific Neurons</div>
-              <div class="item-summary">Studied 9 models and 108K references. Found sparse hallucination neurons in Qwen2.5-32B — suppressing them improves accuracy. Lightweight neuron-level approach to citation hallucination mitigation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.18724">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">GROVE: Visualizing Distributions of Language Model Generations</div>
-              <div class="item-summary">Interactive visualization showing multiple LM generations as overlapping paths through a text graph. 3 user studies show graph summaries improve structural diversity judgments while direct inspection is better for details.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.19716">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Steering LLM Logical Reasoning via NL + Symbolic Alignment (ACL 2026)</div>
-              <div class="item-summary">Discovers shared "logical subspace" in LLMs. Training-free steering via Canonical Correlation Analysis. +11pp on logical reasoning benchmarks with good OOD generalization.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.19740">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Generalization at the Edge of Stability — Fractal Attractors & Sharpness Dimension</div>
-              <div class="item-summary">Optimizers as random dynamical systems converging to fractal attractors. Proves generalization bounds based on complete Hessian spectrum. New insights into grokking phenomenon.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.19730">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">FASTER: Value-Guided Sampling for Fast RL (Chelsea Finn, Dorsa Sadigh)</div>
-              <div class="item-summary">Same performance as sampling-based test-time scaling but substantially less compute. Traces performance gain back to earlier denoising. Works with pretrained VLAs.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.19667">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">Chat2Workflow: NL→Executable Workflows Benchmark (Dify/Coze Deployable)</div>
-              <div class="item-summary">SOTA LLMs capture intent but struggle with correct executable workflows. Agentic framework +5.34% resolve rate. Large real-world gap exposes limits of current agentic planning.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.18576">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">BLF — Agentic Forecasting Beats GPT-5 and Grok 4.20 on ForecastBench</div>
-              <div class="item-summary">Bayesian linguistic belief states + hierarchical multi-trial aggregation + calibration. Outperforms all top public methods including GPT-5, Grok 4.20, and Cassi. Structured belief state alone is as impactful as web search access.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="research" data-date="2026-04-21" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🔍 ASMR-Bench sabotage detection, 🧠 MEDLEY-BENCH metacognition gap, 🎮 SocialGrid social reasoning agents, 🏥 MARCH multi-agent radiology, ⚗️ ReactBench topological reasoning MLLMs</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">5 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2604.16286">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">ASMR-Bench — Auditing for Sabotage in ML Research</div>
-              <div class="item-summary">Benchmark for detecting subtle sabotage in ML codebases. Frontier LLMs and human auditors both struggle: best AUROC only 0.77 (Gemini 3.1 Pro), top-1 fix rate 42%. As AI automates research, undetectable sabotage is a critical blind spot.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.16009">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">MEDLEY-BENCH — Scale Buys Evaluation but Not Control in AI Metacognition</div>
-              <div class="item-summary">35 models from 12 families tested on behavioral metacognition. Evaluation ability scales with size, but control (actually revising beliefs) does not. All 35 models show evaluation as weakest relative ability — a systematic knowing/doing gap.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.16022">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">SocialGrid — Planning and Social Reasoning in Embodied Multi-Agent Systems</div>
-              <div class="item-summary">Among Us-inspired benchmark. Even strongest open model (GPT-OSS-120B) below 60% task completion. Agents fail to detect deception at near-random chance, relying on shallow heuristics instead of accumulating behavioral evidence.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.16175">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">MARCH — Multi-Agent Radiology Clinical Hierarchy for CT Report Generation (ACL 2026)</div>
-              <div class="item-summary">Emulates radiology department hierarchy: Resident drafts, Fellows revise with RAG, Attending orchestrates consensus discourse. Significantly outperforms SOTA on RadGenome-ChestCT. Shows organizational structures reduce hallucinations.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2604.15994">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">ReactBench — Topological Reasoning in MLLMs on Chemical Reaction Diagrams</div>
-              <div class="item-summary">17 MLLMs tested: >30% gap between anchor-based and holistic structural reasoning. Ablations confirm bottleneck is reasoning, not perception — models see the elements but can't reason about topology.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-        <article class="card expanded" data-type="industry" data-date="2026-06-18" data-time="12:03">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
               <div class="card-icon industry">🏢</div>

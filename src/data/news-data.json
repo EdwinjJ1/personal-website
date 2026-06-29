@@ -1,6 +1,14 @@
 {
-  "lastUpdated": "2026-06-25T04:36:14.758Z",
+  "lastUpdated": "2026-06-28T16:07:41.975Z",
   "availableDates": [
+    {
+      "value": "2026-06-27",
+      "label": "June 27, 2026"
+    },
+    {
+      "value": "2026-06-26",
+      "label": "June 26, 2026"
+    },
     {
       "value": "2026-06-25",
       "label": "June 25, 2026"
@@ -328,6 +336,116 @@
   ],
   "news": [
     {
+      "id": "research-20260627-0000-ask-solve-generate-self-evolving-unified-multimodal-understandin",
+      "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
+      "summary": "Most unified large multimodal models (LMMs) that support both visual understanding and image generation still require curated human supervision (annotations, preference labels, or external reward models) to improve. The paper proposes a fully self-evolving training framework with three internal roles — a Proposer that generates visual questions, a Solver that answers and evaluates them, and a Generator that synthesises images — and uses only self-derived consistency signals for training. To stabilise learning, the authors introduce Solver Token Entropy (STE), a continuous difficulty signal based on token-level prediction uncertainty that remains useful even when sample-level consistency becomes unreliable, plus a multi-scale internal evaluation scheme for image generation that combines QA-fidelity scoring with cycle-consistent captioning. The framework is architecture-agnostic: the same role decomposition, reward logic, and training schedule apply unchanged to diffusion-based BLIP3o, rectified-flow BAGEL, and autoregressive VARGPT-v1.1. On BAGEL it gives +3.5% absolute on MMMU and pushes GenEval image-generation performance from 82% to 85%, with consistent improvements across eight understanding metrics. Code and models are public.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27376",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260627-0000-danceopd-on-policy-generative-field-distillation",
+      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "summary": "Modern image generation demands a single model that unifies text-to-image, local editing, and global editing — but these capabilities rarely align naturally and often conflict (e.g. editing degrades T2I quality; local and global editing interfere). DanceOPD is an on-policy generative field distillation framework for flow-matching models that routes each sample to one capability field, queries one low-noise student-induced state, and trains with a simple velocity-MSE objective. By defining each capability source as a velocity field over a shared flow state space and learning from fields queried on the student's own rollout states, DanceOPD composes expert capabilities without the interference patterns that plague multi-task distillation, and absorbs operator-defined fields such as classifier-free guidance for free. Experiments cover T2I, editing, realism-field absorption, and CFG absorption, with consistent gains in target capabilities while preserving anchor generation quality.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27377",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260627-0000-don-t-settle-at-the-mode-mitigating-diversity-collapse-in-pretra",
+      "title": "Don't Settle at the Mode! Mitigating Diversity Collapse in Pretrained Flow Models via Feature Self-Guidance",
+      "summary": "State-of-the-art flow models generate stunning images from text or image prompts, but they suffer from diversity collapse when asked to produce multiple samples under the same conditioning. Existing fixes either rely on latent guidance (limited effectiveness) or on sample selection by an external reward model (heavy inference-time overhead). The paper introduces a training-free self-guidance mechanism that disperses the flow model's internal features during batch generation, plus a manifold-regularisation step that projects the dispersed features back onto the data manifold, ensuring diverse generation without sacrificing alignment. The method integrates as a plug-and-play module into pretrained flow models with only marginal inference cost and is shown to improve diversity while preserving fidelity across multi-step and few-step text-to-image, depth-to-image, and reference-image generation settings. Accepted at ECCV 2026.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27371",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260627-0000-physiformer-learning-to-simulate-mechanics-in-world-space",
+      "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
+      "summary": "A diffusion transformer that predicts 3D object motion directly on world-coordinate meshes instead of in view-dependent pixel space. Given initial vertex positions/velocities and material type (rigid or elastic), it samples full future vertex trajectories as a single denoising process — without ad-hoc latent spaces, hard-coded rigidity priors, or explicit causality constraints. The model factorises attention over time, space, and objects, giving permutation-invariant multi-object reasoning without per-object encodings, and the probabilistic formulation produces diverse plausible futures when initial conditions are ambiguous. Trained on 100k+ simulated trajectories, it generalises to mixed materials, unseen real-world geometries, and larger object counts, substantially outperforming autoregressive baselines on trajectory accuracy, rigidity preservation, and momentum-based consistency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27364",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260627-0000-reinforcement-learning-without-ground-truth-solutions-can-improv",
+      "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+      "summary": "RL with verifiable rewards (RLVR) has become the standard recipe for post-training reasoning LLMs, but it requires a ground-truth answer to assign rewards, which limits it to problems with a known solution. RiVER (Ranking-induced VERifiable) drops that requirement and trains LLMs on score-based optimisation tasks (AtCoder Heuristic Contest) using deterministic execution feedback as continuous-valued supervision. The paper identifies two failure modes in naïvely applying group-relative RL to continuous rewards — scale dominance (uncalibrated magnitudes across instances distort updates) and frequency dominance (repeatedly sampled weak solutions outweigh rare-but-strong ones) — and addresses both with calibrated reward shaping that uses instance-wise comparisons and emphasises top-ranked solvers while keeping bounded feedback for other valid solutions. RiVER improves Qwen3-8B and GLM-Z1-9B-0414 by 8.9% and 9.4% on ALE-Bench rating rank, and despite training exclusively on score-based tasks without ground truth, transfers positively to exact-solution benchmarks (LiveCodeBench +2.4%, USACO +3.5%), where raw-execution-score baselines fail to transfer.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27369",
+      "date": "2026-06-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260626-0000-autoregressive-boltzmann-generators",
+      "title": "Autoregressive Boltzmann Generators",
+      "summary": "Boltzmann Generators (BGs) sample equilibrium molecular configurations by combining a generative model with exact likelihoods + importance sampling. To date they have been dominated by normalizing flows, which either lose expressivity from strict-invertibility constraints (discrete time) or pay ruinous likelihood-evaluation cost (continuous time). Autoregressive Boltzmann Generators (ArBG) abandon the flow-based paradigm entirely and use an autoregressive factorization to sidestep both problems, with theoretical results on topological and geometric expressivity that flows provably cannot match.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27361",
+      "date": "2026-06-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260626-0000-blackwell-approachability-and-gradient-equilibrium-are-equivalen",
+      "title": "Blackwell Approachability and Gradient Equilibrium are Equivalent",
+      "summary": "Gradient Equilibrium (GEQ) is a recently introduced online-optimization framework that generalizes first-order stationarity from offline optimization and already abstracts problems like online conformal prediction. While GEQ had been shown to be *incomparable* in objective to regret minimization, this paper proves the two are algorithmically equivalent: any Blackwell-approachability problem can be solved with no asymptotic loss using a black-box GEQ oracle, and vice versa. Combined with prior equivalences between Blackwell approachability and online learning, this gives a clean three-way correspondence (regret ↔ approachability ↔ GEQ).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27315",
+      "date": "2026-06-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260626-0000-cortex-a-structured-reasoning-benchmark-for-trustworthy-3d-chest",
+      "title": "CORTEX: A Structured Reasoning Benchmark for Trustworthy 3D Chest CT MLLMs",
+      "summary": "Reasoning in 3D medical-imaging MLLMs is currently judged by free-form text + final-answer accuracy, which hides the chain of evidence that links a finding to a diagnosis. CORTEX (Clinically Organized Reasoning and sTructured EXplanations) is the first benchmark that scores *structured, traceable* reasoning on 3D chest CT, pairing volumetric scans with patient history, expert-curated reasoning chains, and a protocol that audits the link between finding and conclusion. The work also proposes a trustworthy-3D-MLLM training recipe that improves over free-form-reasoning baselines on the benchmark.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27264",
+      "date": "2026-06-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260626-0000-hallucination-in-world-models-is-predictable-and-preventable",
+      "title": "Hallucination in World Models is Predictable and Preventable",
+      "summary": "A diagnostic paper on action-controllable generative world models. The authors release MMBench2 (427 hours, 210 tasks, ground-truth actions + rewards + live simulators) and train a 350M-parameter world model on it. They identify three distinct hallucination modes — *perceptual*, *action-marginalized*, and *scene-diverging* — each anchored to a different stage of the rollout pipeline, and develop three lightweight data-centric signals that predict where the model will hallucinate and guide targeted mitigation. The interactive paper, code, dataset, and models are all public.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27326",
+      "date": "2026-06-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260626-0000-when-does-combining-language-models-help-a-co-failure-ceiling-on",
+      "title": "When Does Combining Language Models Help? A Co-Failure Ceiling on Routing, Voting, and Mixture-of-Agents Across 67 Frontier Models",
+      "summary": "A theoretical and empirical limit on multi-model LLM systems. The author proves that for any policy whose output is a single member-model answer, accuracy is capped at 1 − β, where β is the rate at which *every* model in the pool is wrong on the same query. Across 67 frontier models from 21 providers, a Clopper-Pearson bound on β gives a finite-sample certificate on the largest gain any router, vote, or cascade can deliver before a router is even trained — and the ordinary pairwise-error-correlation diagnostic (ρ) is shown to be uninformative for β, since error laws with identical marginals and pairwise correlations can have very different all-wrong rates.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.27288",
+      "date": "2026-06-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
       "id": "research-20260625-0407-learning-action-priors-for-cross-embodiment-robot-manipulation",
       "title": "Learning Action Priors for Cross-embodiment Robot Manipulation",
       "summary": "A two-stage training recipe for Vision-Language-Action models: first pretrain the action module on unconditioned action trajectories with a lightweight flow-matching encoder-decoder (no vision, no language) so it learns temporal motion structure, then transfer that motion prior into VLA training via decoder reuse and latent distillation. The same encoder doubles as a compact history compressor that summarizes state-action history into a single temporal context token.",
@@ -372,12 +490,56 @@
       "category": "research"
     },
     {
+      "id": "research-20260625-0000-a-specialized-reasoning-llm-for-accelerating-rare-disease-diagno",
+      "title": "A specialized reasoning LLM for accelerating rare disease diagnosis — RaDaR (randomized AI physician assistance trial)",
+      "summary": "RaDaR is a reasoning-specialized LLM fine-tuned for rare-disease differential diagnosis, evaluated in a randomized physician-assistance trial rather than a static benchmark. The work bundles open-source model release, a curated clinically grounded knowledge corpus, and an RCT-style deployment protocol measuring diagnostic accuracy and time-to-diagnosis against clinicians without AI assistance.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.24510",
+      "date": "2026-06-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
       "id": "research-20260625-0000-autodata-an-agentic-data-scientist-to-create-high-quality-synthe",
       "title": "Autodata: An Agentic Data Scientist to Create High Quality Synthetic Data",
       "summary": "Treats synthetic data generation as a meta-optimization problem: train an AI agent to act as a data scientist, then meta-optimize the data-scientist agent itself (Agentic Self-Instruct). Beats classical synthetic-data pipelines on CS research tasks, legal reasoning, and math-object reasoning — and meta-optimizing the data scientist gives an even larger uplift than the data it produces.",
       "tag": "RESEARCH",
       "source": "arXiv",
       "sourceUrl": "https://arxiv.org/abs/2606.25996",
+      "date": "2026-06-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260625-0000-critique-of-agent-model",
+      "title": "Critique of Agent Model",
+      "summary": "A position paper from MBZUAI / CMU's Eric Xing that finally tries to pin down what \"agent\" means in the LLM era. The authors split systems into agentic (competence from engineered scaffolds) vs agentive (capability arising endogenously) along five dimensions — goal, identity, decision-making, self-regulation, learning — and propose a Goal-Identity-Configurator (GIC) architecture that combines hierarchical goal decomposition, identity evolution, simulative reasoning over a separately trained world model, learned self-regulation, and self-directed learning from real + simulated experience.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.23991",
+      "date": "2026-06-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260625-0000-curvature-guided-mixing-cgm-for-mllm-adaptation",
+      "title": "Curvature-Guided Mixing (CGM) for MLLM Adaptation",
+      "summary": "A theoretically grounded model-merging method that solves the catastrophic-forgetting problem when fine-tuning Multimodal LLMs (LLaVA-1.5, Qwen2.5-VL). CGM uses a second-order Hessian approximation of the loss landscape to derive a closed-form \"soft mixing\" ratio that blends pre-trained and fine-tuned weights based on relative task curvatures; a hard-mixing variant (CGM†) does sparse parameter selection with a curvature-aware score. Code released for ECCV 2026.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.24963",
+      "date": "2026-06-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260625-0000-dense-supervision-is-not-enough-the-readout-blind-spot-in-looped",
+      "title": "Dense Supervision Is Not Enough: The Readout Blind Spot in Looped Language Models",
+      "summary": "Looped transformers (hidden state is fed back as input) sound great for adaptive compute, but Sharma & Tu (Tu Vu is at Google DeepMind / previously Qwen team) show a sharp failure mode: dense per-loop cross-entropy through RMSNorm/LayerNorm readouts does NOT control the recurrent scale, because the readout is scale-invariant while the residual recurrence still propagates that scale. Their 44M and 129M models without inter-loop normalization explode to hidden-state norms in the thousands/tens-of-thousands; scale-visible readouts or explicit norm penalties keep norms in the tens, and scale-removing recurrence is the complementary architectural fix.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.24898",
       "date": "2026-06-25",
       "time": "00:00",
       "category": "research"
@@ -400,6 +562,17 @@
       "tag": "RESEARCH",
       "source": "arXiv",
       "sourceUrl": "https://arxiv.org/abs/2606.26083",
+      "date": "2026-06-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260625-0000-rift-bench-dynamic-red-teaming-for-agentic-ai-systems",
+      "title": "RIFT-Bench: Dynamic Red-teaming For Agentic AI Systems",
+      "summary": "A graph-representation-driven framework for red-teaming agentic LLMs that operates in two automated phases: Discovery extracts the system's structural graph from logs, and Scanning deploys adaptive adversarial probes across diverse attack vectors to produce a unified security report. They benchmarked 45 heterogeneous agentic systems and show the approach generalizes across architectures, and can also evaluate mitigations directly.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.23927",
       "date": "2026-06-25",
       "time": "00:00",
       "category": "research"
