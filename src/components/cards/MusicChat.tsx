@@ -180,7 +180,7 @@ export default function MusicChat() {
               className="relative h-full w-full overflow-hidden border"
               style={{
                 borderRadius: '999px / 64px',
-                background: 'linear-gradient(145deg, rgb(var(--p-shadow) / calc(0.99 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.99 * var(--p-shadow-strength))))',
+                background: 'linear-gradient(145deg, rgb(var(--p-surface-0)), rgb(var(--p-surface-1)))',
                 borderColor: 'rgb(var(--p-sage) / 0.7)',
                 boxShadow: '0 0 0 1px rgb(var(--p-sage) / 0.22), 0 16px 42px rgb(var(--p-shadow) / calc(0.55 * var(--p-shadow-strength)))',
               }}

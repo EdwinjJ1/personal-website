@@ -308,7 +308,7 @@ export default function NewsPage() {
                                 ? 'rgb(var(--p-surface-3))'
                                 : cell.isAvailable
                                   ? 'rgb(var(--p-surface-3) / 0.75)'
-                                  : 'rgb(var(--p-shadow) / calc(0.28 * var(--p-shadow-strength)))',
+                                  : 'rgb(var(--p-surface-4) / 0.6)',
                               color: cell.isAvailable ? 'rgb(var(--p-ink))' : 'rgb(var(--p-ink-dim))',
                               opacity: cell.date ? 1 : 0.35,
                             }}
