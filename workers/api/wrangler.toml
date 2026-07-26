@@ -24,4 +24,6 @@ NETEASE_UID = "1802974667"
 # LeetCode username for the /leetcode solve-stats endpoint (public data, no auth needed)
 LEETCODE_USERNAME = "EdwinJL"
 # Comma-separated list of allowed origins
-ALLOWED_ORIGINS = "https://evanlin.site,https://www.evanlin.site,http://localhost:3000,http://localhost:3199"
+# Production origins. Any localhost port is allowed automatically, so the
+# dev server can move without this list going stale.
+ALLOWED_ORIGINS = "https://evanlin.site,https://www.evanlin.site"
