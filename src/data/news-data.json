@@ -1,6 +1,82 @@
 {
-  "lastUpdated": "2026-06-28T16:07:41.975Z",
+  "lastUpdated": "2026-07-25T00:22:10.128Z",
   "availableDates": [
+    {
+      "value": "2026-07-25",
+      "label": "July 25, 2026"
+    },
+    {
+      "value": "2026-07-24",
+      "label": "July 24, 2026"
+    },
+    {
+      "value": "2026-07-23",
+      "label": "July 23, 2026"
+    },
+    {
+      "value": "2026-07-22",
+      "label": "July 22, 2026"
+    },
+    {
+      "value": "2026-07-21",
+      "label": "July 21, 2026"
+    },
+    {
+      "value": "2026-07-20",
+      "label": "July 20, 2026"
+    },
+    {
+      "value": "2026-07-19",
+      "label": "July 19, 2026"
+    },
+    {
+      "value": "2026-07-16",
+      "label": "July 16, 2026"
+    },
+    {
+      "value": "2026-07-15",
+      "label": "July 15, 2026"
+    },
+    {
+      "value": "2026-07-14",
+      "label": "July 14, 2026"
+    },
+    {
+      "value": "2026-07-13",
+      "label": "July 13, 2026"
+    },
+    {
+      "value": "2026-07-12",
+      "label": "July 12, 2026"
+    },
+    {
+      "value": "2026-07-10",
+      "label": "July 10, 2026"
+    },
+    {
+      "value": "2026-07-09",
+      "label": "July 9, 2026"
+    },
+    {
+      "value": "2026-07-08",
+      "label": "July 8, 2026"
+    },
+    {
+      "value": "2026-07-07",
+      "label": "July 7, 2026"
+    },
+    {
+      "value": "2026-07-04",
+      "label": "July 4, 2026"
+    },
+    {
+      "value": "2026-07-01",
+      "label": "July 1, 2026"
+    },
+    {
+      "value": "2026-06-30",
+      "label": "June 30, 2026"
+    },
     {
       "value": "2026-06-27",
       "label": "June 27, 2026"
@@ -335,6 +411,1238 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260725-0000-emergent-misalignment-recruits-a-pre-existing-persona-subspace",
+      "title": "Emergent Misalignment Recruits a Pre-existing Persona Subspace",
+      "summary": "A mechanistic interpretability study that explains the \"emergent misalignment\" phenomenon — narrow fine-tuning on insecure code leaking into broad bad behavior on unrelated prompts. Using contrastive teacher forcing on Qwen2.5-14B-Instruct, the author extracts a low-rank persona subspace that is already present before fine-tuning (657× above random). Projecting that subspace out during training drops broad misalignment from 27.7% → 0.0%, and injecting it into an untouched model induces misalignment that scales with dose up to 45.4%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21356",
+      "date": "2026-07-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260725-0000-mirror-learning-from-the-other-view-for-multi-modal-reasoning",
+      "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+      "summary": "A self-supervised RL recipe (Modality-Informed Reciprocal Reasoning Optimization) that exploits the fact that VLMs often solve a geometry problem in text but fail on the diagram, or vice versa. For each problem it picks the best-performing view as a teacher and pulls the other views toward it via reverse-KL — no external labels needed.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21552",
+      "date": "2026-07-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260725-0000-openforgerl-train-harness-native-agents-in-any-environment",
+      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+      "summary": "An open-source end-to-end RL framework that lets you train agents inside real inference harnesses (Claude Code, Codex, OpenClaw-class stacks) instead of toy simulators. A lightweight proxy records harness model calls as training data for veRL while a Kubernetes orchestrator runs each rollout in its own remote container, so train/inference match exactly.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21557",
+      "date": "2026-07-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260725-0000-unid-unified-video-dense-prediction-from-disjoint-data",
+      "title": "UniD: Unified Video Dense Prediction from Disjoint Data",
+      "summary": "A single video model that predicts 8 dense scene properties at once — depth, normals, semantic segmentation, boundaries, human parts, albedo, shading, materials — all trained from disjoint, non-overlapping per-task datasets. Per-task experts supervise a unified diffusion backbone through lightweight projectors, skipping expensive pseudo-labeling.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21592",
+      "date": "2026-07-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260725-0000-vlm-ie3d-3d-aware-vlms-with-implicit-and-explicit-geometries",
+      "title": "VLM-IE3D: 3D-Aware VLMs with Implicit and Explicit Geometries",
+      "summary": "Boosts a 2D VLM's 3D spatial IQ by injecting two new token types learned purely from RGB video: Implicit Geometry Tokens (high-level priors) and Explicit Geometry Tokens (fine reconstructed structure), fused via a 3D-aware adapter. No LiDAR, no depth sensors, no 3D ground truth.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21595",
+      "date": "2026-07-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-adarope-not-all-attention-heads-should-rotate-and-scale-equally",
+      "title": "AdaRoPE: Not All Attention Heads Should Rotate and Scale Equally",
+      "summary": "A theoretical + empirical critique of standard RoPE: heads with different functional roles need different rotation frequencies and attention scaling. AdaRoPE gives each head learnable rotation frequencies and scaling factors, and slots in as a drop-in RoPE replacement that improves long-context generalization over partial-RoPE and NoPE baselines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.19363",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-euclean-automated-geometry-problem-formalization-with-unified-ve",
+      "title": "Euclean: Automated Geometry Problem Formalization with Unified Verification in Lean",
+      "summary": "A four-stage framework that auto-formalizes geometry problems into Lean using native Mathlib (not a custom axiom system). Tackles the implicit-diagram problem (topology, non-degeneracy assumptions) and ships with a much larger problem corpus than prior Lean geometry efforts.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.19374",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-gs-agent-creating-4d-physical-worlds-with-generative-simulation",
+      "title": "GS-Agent: Creating 4D Physical Worlds With Generative Simulation",
+      "summary": "Instead of training a 4D generative model end-to-end, GS-Agent assembles foundation models (LLM + 3D / physics simulators) into an agentic pipeline that turns a natural-language prompt into a controllable, physically plausible 4D scene — agents explicitly call geometry, physics, and rendering tools and verify plausibility.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21522",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-inference-time-scaling-of-diffusion-models-via-progressive-seed-",
+      "title": "Inference-Time Scaling of Diffusion Models via Progressive Seed Pruning",
+      "summary": "Argues that diffusion/flow-matching models have been missing an inference-time scaling axis that LLMs already exploit. By allowing memory to grow during inference, you can front-load many candidate seeds, evaluate them early with a reward model, prune aggressively, then commit the best trajectory — trading memory for quality without changing training.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21591",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-lisa-linear-indexed-sparse-attention-for-efficient-long-context-",
+      "title": "LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning",
+      "summary": "A plug-and-play attention replacement targeting long chain-of-thought models like DeepSeek-R1. LISA runs a linear-attention branch (O(n) long-range memory) in parallel with a Lightning Indexer that picks the top-M important tokens for sparse self-attention, fused via a gating mechanism — no pretraining-from-scratch required.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.19358",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-pro-long-programmatic-memory-enables-long-horizon-reasoning",
+      "title": "PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning",
+      "summary": "An agent harness built around programmatic memory — code-as-state rather than raw observation dumping — targeting long-horizon tasks like ARC-AGI-3. The framework lets the LLM write and run small programs that decide what to remember from the environment and how to retrieve it back into context.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20064",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-sana-video-2-0-hybrid-linear-attention-with-attention-residuals-",
+      "title": "SANA-Video 2.0: Hybrid Linear Attention with Attention Residuals for Efficient Video Generation",
+      "summary": "A 5B/14B video diffusion transformer that mixes gated linear attention with periodic gated-softmax \"anchor\" attention at a 3:1 ratio, recovering full-rank token mixing while keeping cost roughly linear in sequence length. Ships with attention residuals so information survives the linear blocks, and is engineered to render 720p video on a single GPU.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21553",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-slpo-scaling-latent-reasoning-via-a-surrogate-policy",
+      "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+      "summary": "Brings outcome-reward RL to autoregressive latent reasoners. The trick: a learned \"surrogate policy\" approximates per-step likelihoods and stopping decisions under a fixed thinking budget, so RL can finally scale latent test-time compute (which was previously stuck at imitation-learning level).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.19691",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-streaming-multi-agent-autoregressive-diffusion-model-with-world-",
+      "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers (WorldWeaver / W²)",
+      "summary": "A streaming multi-agent video diffusion model that augments rollouts with cross-agent \"world state registers\" — learnable tokens carrying shared world info plus per-agent status that update dynamically. Yields consistent observations across agents and views, instead of the usual conditional-history trick that loses shared state.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21594",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260724-0000-windowed-mtp-removing-the-full-context-draft-kv-tax-at-million-t",
+      "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+      "summary": "Identifies a sharp inefficiency in modern frontier models: the built-in Multi-Token-Prediction (MTP / NEXTN) draft head runs full attention over the entire KV cache on every draft step, so its cost grows linearly with context — and at million-token inputs that draft actually dominates the total speculative-decoding cost. Proposes a windowed draft-KV scheme that keeps the draft cheap while preserving acceptance rates.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.21535",
+      "date": "2026-07-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260723-0000-look-less-think-faster-joint-token-compute-adaptation-for-multim",
+      "title": "⚡ Look Less, Think Faster: Joint Token-Compute Adaptation for Multimodal LLMs",
+      "summary": "SmartVL is a unified adaptive-inference framework that jointly controls vision token count and LLM compute in response to input content and a runtime compute budget. A vision-side token controller prunes redundant visual tokens; an LLM-side compute controller skips layers/heads. The two controllers share a budget encoding and train end-to-end with a differentiable latency estimator so they coordinate rather than compete.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20357",
+      "date": "2026-07-23",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260723-0000-percepcap-video-captioner-with-structured-spatio-temporal-percep",
+      "title": "🎥 PercepCap: Video Captioner with Structured Spatio-Temporal Perception",
+      "summary": "A perceive-then-describe video captioner that makes perceptual evidence explicit before producing the final caption. First generates a spatiotemporal perception trace (object trajectories + temporal events), then conditions the caption on that trace. Trained in two stages: Perceive-then-Describe SFT adapts an MLLM to the chain, and Perception-Grounded RL applies joint rewards over both perception chain and final caption. A new Caption-Anchored Perception Data Construction pipeline builds training data by generating captions first, extracting referenced objects/events, and grounding them back with boxes + timestamps — guaranteeing trace and caption refer to the same things.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20389",
+      "date": "2026-07-23",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260723-0000-self-gradient-forcing-native-long-video-extrapolation",
+      "title": "🎬 Self Gradient Forcing: Native Long Video Extrapolation",
+      "summary": "Identifies a missing-supervision gap in Self Forcing–style autoregressive video diffusion: the historical KV cache is treated as frozen rollout state, so future-frame losses never teach the model how earlier latents should be written into useful keys/values. Self Gradient Forcing (SGF) is a two-pass trainer — Pass 1 does a no-gradient rollout and records the self-generated context + noisy latents at a sampled denoising exit step; Pass 2 does parallel context-gradient reconstruction at that exit step, with the generated context as stop-gradient clean-latent input and the model recomputing context KV + future-to-context causal attention.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20368",
+      "date": "2026-07-23",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260723-0000-pyrodash-cost-efficient-token-level-small-large-language-model-c",
+      "title": "💸 PyroDash: Cost-Efficient Token-Level Small–Large Language Model Collaborative Inference",
+      "summary": "Token-level SLM↔LLM routing without a separate router, LLM retraining, or LLM-logit access. During generation the SLM emits a control token to request help; a Collaborate Engine hands the partial reasoning trace to a frozen LLM via a single handoff. The SLM is trained in three stages — control-token embedding learning, offloading-oriented SFT, and cost-aware GRPO whose reward balances accuracy against LLM-only inference cost.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20327",
+      "date": "2026-07-23",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260723-0000-atsplat-compact-feed-forward-3d-gaussian-splatting-with-adaptive",
+      "title": "🧊 ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+      "summary": "Restores the adaptive allocation capacity of vanilla 3DGS inside a feed-forward pipeline. ATSplat lifts coarse patch-level depth/camera cues into sparse 3D anchor tokens, then regresses each into local Gaussians with learnable 3D offsets — decoupling primitive placement from the input image grid. An Adaptive Token Expansion module predicts token-level uncertainty (supervised by rendering-error maps) and selectively expands high-uncertainty tokens through learnable expansion layers.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.20417",
+      "date": "2026-07-23",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260722-0000-ai-tool-discovery-at-scale-all-you-need-is-dns",
+      "title": "🌐 AI Tool Discovery at Scale: All You Need is DNS",
+      "summary": "ToolDNS retrofits semantic tool discovery onto the DNS substrate: functional intent + organizational trust encoded as a hierarchical namespace, semantic search becomes lightweight O(log N) name resolutions. Three protocol-compliant extensions (partially unfolded names, EDNS0 intent payloads, logical subdomains) enable decentralized governance. On a released 33,688-tool heterogeneous benchmark (MCP / A2A / RESTful / Skill) the framework cuts per-query search space by 95.26% while matching SOTA retrieval accuracy, with UDP-native latency orders of magnitude lower than HTTP registries.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18242",
+      "date": "2026-07-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260722-0000-surprise-forcing-what-to-remember-when-to-skip-in-long-video-gen",
+      "title": "🎬 Surprise Forcing: What to Remember, When to Skip in Long Video Generation",
+      "summary": "A training-free framework that turns the two main limitations of streaming autoregressive diffusion (fixed-budget KV cache, uniform denoising schedule) into online resource-allocation problems. A Surprise-Gated Memory Bank summarizes evicted frames with value-token descriptors and admits them via a feedback-controlled budget; Surprise-Aware Denoising skips intermediate steps for \"easy\" chunks based on adjacent-frame cosine distance. On VBench, VBench-Long and VBench-2.0 it improves long-horizon consistency and visual quality at real-time throughput.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18436",
+      "date": "2026-07-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260722-0000-convolution-for-large-language-models",
+      "title": "🧠 Convolution for Large Language Models",
+      "summary": "A systematic study on adding lightweight depthwise convolutions to Qwen3 Transformer blocks. Across 17 candidate locations, the best placement is on the projected Q/K/V before attention, with a residual depthwise conv (kernel size 3, no extra norm/activation). Improves the average accuracy on seven downstream benchmarks while adding <0.01% parameters, and makes repeated token IDs more sensitive to their immediate context.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18413",
+      "date": "2026-07-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260722-0000-batchdag-llm-planned-execution-graphs-for-scalable-ad-hoc-analys",
+      "title": "🧩 BatchDAG: LLM-Planned Execution Graphs for Scalable Ad-Hoc Analysis Over Enterprise Data",
+      "summary": "An LLM generates a typed DAG of SQL queries, semantic searches, in-memory transforms, parallel fan-outs and single-shot analyses; a deterministic engine executes it with topological-wave parallelism and structured JSON data flow. Entity-aware batching cuts LLM calls by up to 47×. Quality on 12 transcript-heavy queries (3.74/5) beats an expert-designed pipeline (3.25/5) and a ReAct agent (3.09/5, p<0.01), with 77% transcript-evidence provenance.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18241",
+      "date": "2026-07-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260722-0000-sysadmin-measuring-instrumental-power-seeking-in-frontier-ai",
+      "title": "🛡️ SysAdmin: Measuring Instrumental Power-Seeking in Frontier AI",
+      "summary": "A benchmark that puts frontier LLMs in charge of a high-fidelity Linux sandbox as system administrators and measures power-seeking propensity across five axes: self-preservation, increasing autonomy, resource acquisition, environment modification, strategic concealment. 2,800 tasks across seven frontier models × four conditions. After bias correction against human-annotated calibration data, spontaneous power-seeking estimates range 0–5%; a positive control with explicit power-seeking prompts hits 100% detection, validating sensitivity. More pronounced failure modes: specification gaming and resistance to goal modification.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18239",
+      "date": "2026-07-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-environment-free-synthetic-data-generation-for-api-calling-agent",
+      "title": "Environment-free Synthetic Data Generation for API-Calling Agents",
+      "summary": "Replaces brittle environment simulation with LLM-based API simulation to generate massive amounts of API-calling trajectories for training LLM agents — no live environments, no real APIs, fully synthetic.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.16900",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-frontier-language-models-struggle-to-copy-text-can-be-better-vie",
+      "title": "Frontier Language Models Struggle to Copy: Text Can Be Better Viewed in 2D",
+      "summary": "Researchers show that frontier LLMs (including reasoning models) surprisingly fail at exact string copying even when the input sits comfortably within their context window. The root cause is the inductive bias of 1D positional encodings: models prefer copying via 'local context match' shortcuts rather than precise position lookup. The proposed fix, 2D-RoPE, lays text out in a 2D grid (row + column IDs) so copying becomes a fixed column-offset retrieval — easy to learn. Shallow Transformers with 2D-RoPE hit perfect copy at input lengths hundreds of times longer than training, and the gain persists up to 1.4B pretraining on DCLM.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.16072",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-llm-as-a-coach-experiential-learning-for-non-verifiable-tasks",
+      "title": "LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks",
+      "summary": "Repurposes the LLM-as-a-Judge model into an \"LLM-as-a-Coach\" that distills rich textual feedback into transferable experiential knowledge, which conditions a teacher model and is internalized by the policy via on-policy context distillation — instead of crushing evaluation down to a scalar reward.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18110",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-motionforesight-re-purposing-video-models-for-future-3d-scene-fl",
+      "title": "MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction",
+      "summary": "Given a short clip of someone interacting with an object, MotionForesight predicts the future 3D trajectories of points on that object. The insight is that pretrained video models already encode rich 'how objects move during interaction' priors — instead of predicting pixels, you redirect those priors to predict 3D scene flow. Using only 40k videos and freezing the large video/tracking backbones, the method beats models trained on 1M+ videos and generalizes across out-of-distribution objects and viewpoints.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.16192",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-quads-stabilizing-nvfp4-reinforcement-learning-for-moe-via-quant",
+      "title": "QUADS: Stabilizing NVFP4 Reinforcement Learning for MoE via QUantization-error Alignment across Dual Sides",
+      "summary": "Training Mixture-of-Experts LLMs with reinforcement learning at NVFP4 precision looks great on paper (4-bit activations and weights, faster rollout than FP8) but in practice collapses after ~150 steps because rollout–trainer log-probability gaps explode. The authors trace this to activation-side quantization error (weights can be aligned via shared quant-dequant paths; activations are recomputed online and suffer from the coarse E2M1 grid). QUADS aligns quantization error on both sides of the forward pass and stabilizes the run.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15810",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-rynnbrain-1-1-towards-more-capable-and-generalizable-embodied-fo",
+      "title": "RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model",
+      "summary": "A unified spatio-temporal embodied foundation model family at 2B / 9B / 122B-A10B scales, with native 3D grounding, contact-point prediction, and a cross-embodiment VLA variant (RynnBrain-VLA) deployed on Unitree G1, Astribot-S1, and Tianji-Wuji robots.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.17977",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-searching-videos-as-trees-self-correcting-agents-for-grounded-lo",
+      "title": "Searching Videos as Trees: Self-Correcting Agents for Grounded Long Video QA",
+      "summary": "Grounded Long Video QA (find the short evidence interval that answers a question in a long video) is currently tackled by agentic methods that only support coarse-to-fine narrowing — meaning once the agent zooms in wrong, it cannot back out. VideoTreeSearch (VTS) instead builds an adaptive temporal tree from visual scene boundaries and trains an agent with four discrete operations: zoom_in, zoom_out, shift, answer. The key insight is treating backtracking as an explicit learnable primitive.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.16189",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-swe-pruner-pro-the-coder-llm-already-knows-what-to-prune",
+      "title": "SWE-Pruner Pro: The Coder LLM Already Knows What to Prune",
+      "summary": "Drops the external code classifier from SWE-Pruner and instead uses the coding agent's own internal representations, via a small head with a length-aware line-count embedding, to label each line of tool output as keep or prune.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.18213",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260721-0000-toolverse-unlocking-massive-environments-and-long-horizon-tasks-",
+      "title": "ToolVerse: Unlocking Massive Environments and Long-Horizon Tasks for Agentic Reinforcement Learning",
+      "summary": "ToolVerse is an agentic RL framework that scales training environments to ~400 real-world Model Context Protocols (MCPs) containing roughly 4,500 tools. It uses a tool-dependency graph plus a Dynamic Unlocking Sampling Algorithm to generate long-horizon tasks (the GUST dataset), and introduces a Turn-Aware Relative Advantage estimator to fix credit-assignment failures over long tool-use trajectories.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15660",
+      "date": "2026-07-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-do-coding-agents-need-executable-world-models-simplification-and",
+      "title": "Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?",
+      "summary": "Ablation of the previous ARC-AGI-3 winning agent across four nested Codex variants (text-only → +executable world model → +scheduled simplification → +exact-replay verification) on gpt-5.4 / gpt-5.5 / gpt-5.6-sol. Surprises: a persistent executable deliverable is not universally helpful — the textual variant beats the flexible-interface executable variant on gpt-5.5; simplification helps in 3/4 settings; the full verification treatment ranks first in every setting. On gpt-5.6-sol, the verification variant fully solves every public ARC-AGI-3 game at both reasoning efforts (~99% RHAE, <½ human-baseline actions).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15439",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-driftworld-fast-world-modeling-through-drifting",
+      "title": "DriftWorld: Fast World Modeling through Drifting",
+      "summary": "Replaces the iterative denoising loop in diffusion-style world models with a learned action-conditioned drift, so each future-frame rollout becomes a single forward pass at 30+ fps — about 17× faster than diffusion baselines. Achieves SOTA decision-making on Bridge-V2, RT-1, Language Table, Push-T and Robomimic, and the rollouts correlate with ground-truth returns up to 0.99, making it usable as an offline policy ranker.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15065",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-leveraging-instruction-tuning-and-merging-for-reasoning-model-ad",
+      "title": "Leveraging Instruction Tuning and Merging for Reasoning Model Adaptation",
+      "summary": "Shows that SFT data without reasoning traces — long written off as useless for reasoning models — can be reactivated cheaply. Apply classic instruction tuning on the reasoning model, then merge it back with the original RLM. Recovers and often exceeds reasoning performance on the target domain (including hard-to-verify ones like text summarization) while preserving capability elsewhere. Total cost: under USD $3 of compute.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14895",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-longstraw-long-context-rl-beyond-2m-tokens-under-a-fixed-gpu-bud",
+      "title": "LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget",
+      "summary": "An architecture-aware execution stack that finally closes the gap between million-token inference and short-context RL post-training. LongStraw drops autograd on the shared prompt, keeps only the model-specific state needed by later tokens, and replays short response branches one at a time — yielding 2.1M-token GRPO post-training on just eight H20 GPUs and stress tests reaching 4.46M positions, all under a fixed budget. Validated end-to-end on Qwen3.6-27B and the compressed-attention MoE GLM-5.2 (32 H20s).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14952",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-process-reward-informed-tree-rollout-for-effective-multi-turn-rl",
+      "title": "Process Reward Informed Tree Rollout for Effective Multi-Turn RL",
+      "summary": "Reframes multi-turn agent RL rollouts as tree-structured exploration: at each turn, a process scorer ranks partial trajectories, branches are spawned only from promising prefixes, shared prefixes are reused, and degenerate paths are stopped early. Output groups stay drop-in for GRPO/RLOO, but exploration is concentrated where the process reward says it matters. +5.0 points on SWE-Bench and +9.3 points on FrozenLake vs uniform-rollout baselines, on the same training budget.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15610",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-scaling-behavior-foundation-model-for-humanoid-robots",
+      "title": "Scaling Behavior Foundation Model for Humanoid Robots",
+      "summary": "A principled scaling recipe for Behavior Foundation Models (BFMs) for humanoid control. Coordinates three levers — motion tracking in the global frame, on-policy rollout quantity × reference-motion diversity, and a new Humanoid Transformer architecture — and shows they compound. Cuts Mean Per-Keypoint Position Error by 10%+ in local mode and 82% in global mode vs prior humanoid controllers, validated in both simulation and on real hardware.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15163",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-varrate-training-free-variable-rate-kv-cache-compression-for-lon",
+      "title": "VarRate: Training-Free Variable-Rate KV Cache Compression for Long-Context LLMs",
+      "summary": "Argues that both token-selection KV eviction (SnapKV/Ada-KV) and uniform low-rank KV coding share one failure mode — they force a single budget per token instead of allocating rank. VarRate assigns each token a variable low-rank budget by its query salience, keeps every token at non-zero rank, requires no training, and degrades only 3.5–5.5 points where query-aware selection collapses by 11–15. On LongBench (16 tasks) at 20% budget it stays within 0.8 points of the uncompressed model on both Llama-3.1-8B and Qwen2.5-7B and beats a purpose-built query-agnostic codec (KVzip) at ~1/8 the prefill overhead.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15498",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-verbalizable-representations-form-a-global-workspace-in-language",
+      "title": "Verbalizable Representations Form a Global Workspace in Language Models",
+      "summary": "Introduces the \"Jacobian lens\" to identify the small set of representations an LLM is poised to verbalize at any step — the J-space — and shows it has the structural and functional signatures of Global Workspace Theory: coherent content only in mid-layers, tens of concepts at once, broadcast widely across weights, usable as working memory for silent reasoning. J-space exposes strategic deliberation, evaluation awareness, and trained-in misalignment that never reach the output stream. Counterfactual reflection training is introduced as a behaviour-shaping technique that only edits what the model would say if interrupted.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15495",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-video-world-event-stream-wan-streamer-v0-3",
+      "title": "Video = World + Event Stream (Wan-Streamer v0.3)",
+      "summary": "Alibaba's Wan team reframes streaming video as a persistent \"world\" (environment + scene + voice characteristics) plus a real-time \"event stream\" (actions, speech, motion). Trained on a single generative task — predict how the world evolves given current state + input — and instantiated as a real-time full-duplex audio-visual interaction model: 640×368 @ 25 FPS, 160 ms streaming unit, ~200 ms model-side latency, ~550 ms end-to-end latency under a 350 ms network budget.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15038",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260720-0000-xiaomi-robotics-1-scaling-vision-language-action-models-with-ove",
+      "title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "summary": "Xiaomi's first foundational VLA: pre-trained on 100K+ hours of UMI-collected real-world mobile manipulation trajectories with an auto-labeled natural-language caption pipeline, then post-trained for embodiment alignment. Establishes new SOTA on RoboCasa365 at 57.6% (vs prior 46.6%) and RoboDojo at 20.07 (vs prior 13.07), with clean data/loss scaling curves and high post-training data efficiency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15330",
+      "date": "2026-07-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260719-0000-mask-aware-policy-gradients-for-diffusion-language-models",
+      "title": "Mask-Aware Policy Gradients for Diffusion Language Models",
+      "summary": "Formalizes Masked Diffusion LM generation as a two-stage action MDP — at each step, both which tokens to place at masked positions AND which positions to remask. Provides a tractable policy-gradient estimator for RL fine-tuning of MDLMs that respects the unmasking-order decision, unlike prior token-only approximations.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15200",
+      "date": "2026-07-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260719-0000-pretraining-data-can-be-poisoned-through-computational-propagand",
+      "title": "Pretraining Data Can Be Poisoned through Computational Propaganda",
+      "summary": "Demonstrates poisoning attacks beyond the Wikipedia-style toy settings used in prior work, exploiting public discussion interfaces (Reddit-style web content) as a web-scale injection vector. Introduces HalfLife, a new analysis that estimates adversarial content inclusion after realistic crawl + curation pipelines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15267",
+      "date": "2026-07-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260719-0000-robottt-context-scaling-for-robot-policies",
+      "title": "RoboTTT: Context Scaling for Robot Policies",
+      "summary": "Scales visuomotor context to 8K timesteps (three orders of magnitude beyond SOTA) by integrating Test-Time Training into Vision-Language-Action policies, treating recurrent state as fast weights updated by gradient at inference. Achieves 87% gain over single-step baselines and completes a 5-minute, 10-stage real-robot assembly task no baseline can finish.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15275",
+      "date": "2026-07-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260719-0000-scidiagramedit-learning-to-edit-scientific-diagrams-from-paper-r",
+      "title": "SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions",
+      "summary": "Mines before/after figure pairs from arXiv version histories to learn instruction-driven editing on editable vector sources, using an agentic skill-evolution framework that refines the agent's skill spec from execution traces. Operates at the primitive level so users can inspect and co-edit individual elements.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15272",
+      "date": "2026-07-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260719-0000-searchos-v1-towards-robust-open-domain-information-seeking-agent",
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "summary": "Reformulates open-domain info-seeking as relational schema completion with grounded citations, externalizing state into Frontier Task / Evidence Graph / Coverage Map / Failure Memory. Pipeline-parallel scheduling refills sub-agent slots targeting unresolved coverage gaps; a Search Tool Middleware Harness intercepts model-tool interactions to avoid stalled loops.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.15257",
+      "date": "2026-07-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260716-0000-deep-interaction-an-efficient-human-ai-interaction-method-for-la",
+      "title": "Deep Interaction: An Efficient Human-AI Interaction Method for Large Reasoning Models",
+      "summary": "Standard CoT correction loops fail because the model regenerates and re-makes the same error. Deep Interaction lets the user directly edit the original response, distills the edited CoT into a prompt, and steers the LLM along the corrected reasoning path while preserving accurate steps. Reports +25% correction success rate and ~40% token reduction vs. baseline approaches on STEM reasoning tasks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14049",
+      "date": "2026-07-16",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260716-0000-do-agent-optimizers-compound-a-continual-learning-evaluation-on-",
+      "title": "Do Agent Optimizers Compound? A Continual-Learning Evaluation on Terminal-Bench 2.0",
+      "summary": "Most \"agent optimizer\" papers report one-shot gains on a fixed benchmark. This paper asks the real deployment question: do the gains survive a second round of optimization on newly arrived tasks? On Terminal-Bench 2.0, GEPA actually regresses below the unoptimized baseline after transfer, Meta Harness transfers but plateaus, and only RELAI-VCL keeps improving — reaching 76.4% lifelong pass rate vs 66.0% (GEPA), 64.6% (Meta Harness), 58.7% (baseline).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14004",
+      "date": "2026-07-16",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260716-0000-hindcast-replaying-prediction-markets-to-evaluate-llm-forecaster",
+      "title": "Hindcast: Replaying Prediction Markets to Evaluate LLM Forecasters",
+      "summary": "A clean methodological critique: today's LLM forecasting benchmarks leak the answer through (1) retrieval over post-event reports and (2) newer models' training cutoffs creeping closer to the event. Hindcast fixes both by replaying resolved Polymarket markets against a frozen Reddit snapshot, allowing the model only posts written before a per-market cutoff date t0, and scoring against both the outcome and the market's own t0 price (a human forecast made from the same info).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14051",
+      "date": "2026-07-16",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260716-0000-m-world-a-multi-view-multimodal-driving-world-model-for-interact",
+      "title": "M⁴World: A Multi-view Multimodal Driving World Model for Interactive Object Manipulation and Minute-long Streaming",
+      "summary": "A driving world model that jointly synthesizes surround-view video + synchronized LiDAR, with explicit per-object control over spatial layout and appearance, and stable minute-long rollouts via a multi-stage training framework using only four denoising steps for causal online generation. Adds a VLM-based judging pipeline for scene condition adherence, view-wise object controllability, and cross-view object consistency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14005",
+      "date": "2026-07-16",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260716-0000-videorae-taming-video-foundation-models-for-generative-modeling-",
+      "title": "VideoRAE: Taming Video Foundation Models for Generative Modeling via Representation Autoencoders",
+      "summary": "Instead of training a 3D-VAE from scratch for video generation, VideoRAE compresses the frozen features of a video foundation model (V-JEPA 2 / VideoMAEv2) with a lightweight 1D self-attention projector, supporting both continuous latents for DiTs and discrete tokens for AR models via multi-codebook quantization. On UCF-101 it hits SOTA class-to-video gFVDs of 40 (AR) and 93 (DiT), converging ~5x faster than competing autoencoders, and in a 2B text-to-video study it beats LTX-VAE on convergence.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.14088",
+      "date": "2026-07-16",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260715-0000-audio-native-speech-recognition-with-a-frozen-discrete-diffusion",
+      "title": "Audio-Native Speech Recognition with a Frozen Discrete-Diffusion Language Model (DiffusionGemma-ASR)",
+      "summary": "ASR is dominated by autoregressive token-by-token decoders. This work uses a frozen 26B MoE discrete-diffusion LM (DiffusionGemma) that generates text via uniform random-token discrete diffusion instead of absorbing-mask. A frozen Whisper encoder + lightweight projector + LoRA adapters (only ~42M trainable params, 0.16% of backbone) feed audio. CTC loss through the frozen output head breaks the gradient deadlock; reaches 6.6% WER on LibriSpeech test-clean in ~8 parallel steps regardless of utterance length. Single adapter handles EN / HI / ZH.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.13013",
+      "date": "2026-07-15",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260715-0000-do-ai-agents-know-when-a-task-is-simple-toward-complexity-aware-",
+      "title": "Do AI Agents Know When a Task Is Simple? Toward Complexity-Aware Reasoning and Execution (E3)",
+      "summary": "LLM agents waste a huge amount of budget re-reading files and dependencies they've already seen. The authors formalize \"minimum-sufficient execution\" and propose E3 (Estimate, Execute, Expand): the agent first estimates the operating point, runs a minimal viable path, and only expands scope when verification fails. On MSE-Bench (121 deterministic edits), E3 matches the strongest baseline's 100% success while cutting cost by 85%, tokens by 91%, and inspected files by 92%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.13034",
+      "date": "2026-07-15",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260715-0000-flowwam-optical-flow-as-a-unified-action-representation-for-worl",
+      "title": "FlowWAM: Optical Flow as a Unified Action Representation for World Action Models",
+      "summary": "World Action Models (WAMs) usually fail to align actions with pretrained video generators. FlowWAM uses optical flow as a unified, video-native action representation — flow videos share RGB's format and encode rich per-pixel displacement. A dual-stream diffusion framework jointly models RGB and flow, supporting both policy mode (flow → action) and world-model mode (target flow → future video). Pretrains on large-scale unlabeled video since flow is free.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.13017",
+      "date": "2026-07-15",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260715-0000-terrazero-procedural-driving-simulation-for-zero-demonstration-s",
+      "title": "TerraZero: Procedural Driving Simulation for Zero-Demonstration Self-Play at Scale",
+      "summary": "A configurable C-engine driving sim + self-play stack that sustains 1.3M agent-steps/sec on a single server-grade GPU, with heterogeneous agents, multiple dynamics models, and full traffic-rule enforcement. Real-world maps are used only as geometry; agents, signals, dynamics, rewards and sizes are randomized per episode, so each map yields an unbounded scenario set. Every reported policy trains from scratch with RL only — zero human demos, no fallback planner.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.13028",
+      "date": "2026-07-15",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260715-0000-the-seriality-gap-in-video-diffusion-models",
+      "title": "The Seriality Gap in Video Diffusion Models",
+      "summary": "Standard bidirectional video diffusion degrades sharply as causal chains lengthen, even when given more denoising steps. A length-matched single-ball control isolates dependent-event structure (not video length) as the cause. The authors prove that for deterministic video prediction, denoising steps don't actually add serial computation beyond the backbone — a structural obstacle for video diffusion on serial reasoning and simulation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.13031",
+      "date": "2026-07-15",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "industry-20260714-0901-funding-pearl-health-raises-110m-series-a-led-by-a16z-ai-native-",
+      "title": "FUNDING Pearl Health raises $110M Series A led by a16z; AI-native value-based care platform valued at ~$550M",
+      "summary": "Pearl Health, a NYC-based primary-care enablement platform that helps independent physician practices take on Medicare's ACO REACH risk contracts via AI-driven patient stratification, closed a $110M Series A led by Andreessen Horowitz with Trinity Capital, Viking Global Investors, Ulysses Capital, and AlleyCorp participating. The round, disclosed in 亿欧/医药魔方's weekly funding report (Jul 13, covering 7/6–7/12), ranks in the top 5% of US A-rounds this year. Pearl claims 1,000+ provider partners and ~$2B of medical spend under management.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-14",
+      "time": "09:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260714-0901-m-and-a-novartis-acquires-uk-based-myricx-pharma-to-add-nmti-adc",
+      "title": "M&A Novartis acquires UK-based Myricx Pharma to add NMTi-ADC payload platform to oncology pipeline",
+      "summary": "Novartis has agreed to acquire Myricx Pharma, a London/Stevenage-based biotech founded as a spin-out from the Francis Crick Institute and specializing in N-myristoyltransferase inhibitor (NMTi) payloads for next-generation antibody-drug conjugates. The deal — disclosed in the 亿欧/医药魔方 weekly funding roundup published Mon Jul 13 — extends the post-Pfizer/$43B-Seagen ADC consolidation wave. Myricx's lead program MYR241 targets B7-H4-expressing solid tumors with a topoisomerase-1 warhead (preclinical), plus a payload-agnostic platform that Novartis plans to plug into its existing radioligand + ADC engine. Financial terms undisclosed; industry sources peg the upfront at ~$300–500M with biobucks up to ~$1.2B.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-14",
+      "time": "09:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260714-0901-regulatory-fda-quietly-posts-14-new-complete-response-letters-af",
+      "title": "REGULATORY FDA quietly posts 14 new Complete Response Letters after pause — including Jiangsu Hengrui camrelizumab/rivoceranib HCC rejection",
+      "summary": "Per BioSpace (Jul 13) citing Citeline/Pink Sheet analysis (Jul 11), the FDA uploaded 14 new Complete Response Letters (CRLs) to its online portal — including the highly-watched July 9 rejection of Jiangsu Hengrui + Elevar Therapeutics' BLA/NDA combo of camrelizumab (PD-1) + rivoceranib (VEGFR2) for first-line hepatocellular carcinoma. The uploads happened just days after the agency confirmed a temporary suspension following an April citizen petition from an unnamed pharma company (represented by Covington & Burling) demanding the FDA \"immediately cease publishing\" CRLs. BioSpace reached out to FDA to clarify whether the pause has been lifted or whether this is a one-off publication of pending documents.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-14",
+      "time": "09:01",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260714-0901-strategy-01177-hk-7-13-2206-5-8000",
+      "title": "STRATEGY 中国生物制药(01177.HK) 7月13日注销2206.5万股回购股份，年内已注销累计逾8000万股",
+      "summary": "Sino Biopharmaceutical (HK:01177) announced on Mon Jul 13 that it formally cancelled 22.065 million shares repurchased between Jun 16–25, 2026, completing the buyback-cancellation cycle. Per the company's 6-K disclosure and 格隆汇 wire (Jul 13, 4:32 PM HKT), this is part of a larger ongoing program — Sino Biopharm has cumulatively cancelled more than 80 million shares YTD across multiple buyback tranches, with total cash deployed exceeding HK$400M (~US$51M). The cancellations reduce share count by ~0.85% of total outstanding.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-14",
+      "time": "09:01",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260714-0415-evidence-backed-video-question-answering-e-vqa",
+      "title": "Evidence-Backed Video Question Answering (E-VQA)",
+      "summary": "Defines E-VQA, a new task requiring Video LLMs to jointly output a semantic answer plus precise spatio-temporal evidence — temporal segments and dense, tracked object segmentation masklets. Releases ST-Evidence, the first human-verified benchmark for both discriminative and generative pixel-level video grounding, and ST-Evidence-Instruct, a 160k-scale fine-tuning dataset. Fine-tuning a 7B grounded Video LLM on it lifts t-mean by +27.2 and J&F by +13.8 over the size-matched UniPixel baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.11862",
+      "date": "2026-07-14",
+      "time": "04:15",
+      "category": "research"
+    },
+    {
+      "id": "research-20260714-0415-inside-the-unfair-judge-a-mechanistic-interpretability-account-o",
+      "title": "Inside the Unfair Judge: A Mechanistic Interpretability Account of LLM-as-Judge Bias",
+      "summary": "Moves LLM-as-judge bias research from input/output perturbations to a representation-level account. Across seven judges, seven bias types, and nine benchmarks: biased inputs are displaced along a low-dimensional, type-specific subspace of the judge's hidden state that sharpens with depth; steering along that subspace reproduces biased scoring on clean inputs and restores baseline scoring on biased ones (matched-norm random directions cause shifts an order of magnitude smaller); and a simple linear projection onto the same bias features anticipates judge failures on three unseen benchmarks, substantially beating text-based alternatives.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.11871",
+      "date": "2026-07-14",
+      "time": "04:15",
+      "category": "research"
+    },
+    {
+      "id": "research-20260714-0415-requential-coding-pushing-the-limits-of-model-compression-with-s",
+      "title": "Requential Coding: Pushing the Limits of Model Compression with Self-Generated Training Data",
+      "summary": "Upgrades Prequential coding by having a teacher model select training samples drawn from the student's own distribution. The student only records the selections, so the resulting code length is independent of both parameter count and data entropy, often orders of magnitude shorter than the prequential counterpart. Plugged into a PAC-Bayes bound, the requential code yields state-of-the-art generalization guarantees for billion-parameter LLMs — beating bounds built on aggressive post-training quantization even when granted zero error — and the bound tightens with scale in the compute-optimal regime.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.11883",
+      "date": "2026-07-14",
+      "time": "04:15",
+      "category": "research"
+    },
+    {
+      "id": "research-20260714-0415-spectrareward-read-it-back-pretrained-mllms-are-zero-shot-reward",
+      "title": "SpectraReward: Read It Back — Pretrained MLLMs Are Zero-Shot Reward Models for Text-to-Image Generation",
+      "summary": "A training-free reward function that turns pretrained multimodal LLMs into off-the-shelf reward models for image-generation RL. Instead of asking the MLLM to judge an image or answer decomposed verification questions, SpectraReward measures how well the original prompt can be recovered from the generated image through a single image-conditioned, teacher-forced forward pass — averaging the image-conditioned prompt log-likelihood. Self-SpectraReward is the unified-model special case where the policy's understanding branch serves as its own reward, forming a closed-loop self-improving framework with no external reward model.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.11886",
+      "date": "2026-07-14",
+      "time": "04:15",
+      "category": "research"
+    },
+    {
+      "id": "research-20260714-0415-sportmv-bench-and-sportmv-agent-agentic-multi-view-reasoning-in-",
+      "title": "SportMV-Bench & SportMV-Agent: Agentic Multi-View Reasoning in Sports Video Understanding",
+      "summary": "First benchmark (SportMV-Bench) and method (SportMV-Agent) for multi-view sports video understanding: 787 multi-view bundles, 2592 QA pairs across Perception-Aware Recognition, Rule-aware Event Interpretation, and Adjudicative Decision Reasoning, built from official match recordings through a pipeline combining LLM-based generation, MLLM-based verification, and human filtering. SportMV-Agent orchestrates an iterative loop of active view selection, perception tool execution, and evidence-grounded reasoning — a +14.46% relative improvement over the strongest MLLM baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.11844",
+      "date": "2026-07-14",
+      "time": "04:15",
+      "category": "research"
+    },
+    {
+      "id": "industry-20260713-0906-exploit-hedera-based-bonzo-lend-drained-for-9m-in-oracle-manipul",
+      "title": "EXPLOIT Hedera-based Bonzo Lend drained for ~$9M in oracle manipulation attack; TVL collapses 77%",
+      "summary": "On Jul 11, an attacker deposited 250 low-value SAUCE tokens into Bonzo Lend, then submitted a manipulated price update through a third-party Supra oracle contract, inflating SAUCE's HBAR-denominated value and borrowing 6.63M USDC + 34.52M wrapped HBAR (~$9.05M total) far beyond actual collateral. A second wallet (\"white-hat\") later returned ~$1M. Hedera network-wide TVL dropped ~40% in 24h, Bonzo Lend's TVL cratered 77%.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-13",
+      "time": "09:06",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260713-0906-market-stablecoin-market-cap-sheds-10b-since-may-june-alone-lost",
+      "title": "MARKET Stablecoin market cap sheds $10B since May; June alone lost $7.7B — biggest monthly drop since Terra-Luna",
+      "summary": "Per CoinDesk (Jul 12, 1:00 PM ET) citing on-chain data, the stablecoin sector contracted from a ~$310B peak in May to ~$300B by end-June, with $7.7B of that leaving in June alone — the largest single-month dollar decline since the May 2022 Terra-Luna crash. Concurrently, Bitcoin is testing a \"power-law support line\" that Fidelity's Jurien Timmer has tracked since 2015, which he calls an \"accumulation zone\" but lacking a near-term catalyst.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-13",
+      "time": "09:06",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260713-0906-regulation-updated-clarity-act-draft-set-to-drop-this-week-senat",
+      "title": "REGULATION Updated CLARITY Act draft set to drop this week, Senate floor vote targeted for July 20–27",
+      "summary": "Per CoinDesk's State of Crypto (Jul 12, 6:30 PM ET), multiple sources confirm a combined Senate Banking + Agriculture Committee draft of the Digital Asset Market Clarity Act will circulate as soon as this week, adding ~70 pages and merging the two committee-passed versions. Senate Majority Leader Thune has privately told Punchbowl he is willing to put it to a floor vote in July — likely the week of Jul 20 or Jul 27. A successful vote requires at least 7 Democrats, and the missing ethics provision around Trump's $1.4B crypto windfall remains the biggest blocker.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-13",
+      "time": "09:06",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260713-0906-strategy-ripple-ceo-garlinghouse-company-almost-shut-down-in-202",
+      "title": "STRATEGY Ripple CEO Garlinghouse: company almost shut down in 2020 and gave XRP back to shareholders",
+      "summary": "Speaking at the University of Kansas School of Business, Brad Garlinghouse revealed he and co-founder Chris Larsen \"seriously considered\" winding Ripple down and distributing the XRP treasury pro rata to shareholders after the SEC's December 2020 lawsuit, calling it \"the easier path\" against a regulator with \"infinite power and resources.\" They chose to fight — burning ~$150M in legal fees over four years — and ultimately prevailed in 2024 when Judge Torres ruled XRP itself is not a security, then settled last year after the Trump-era SEC leadership change.",
+      "tag": "POLICY",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-13",
+      "time": "09:06",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260712-0000-no-major-edtech-developments-to-report-today",
+      "title": "No major EdTech developments to report today",
+      "summary": "Searched TechCrunch, Inside Higher Ed, EdSurge, HolonIQ, EdTechReview, EducationDynamics, Jiqizhixin, LatePost, 36Kr and Crunchbase News for the past 24 hours. No funding rounds >$10M, no significant M&A, no notable product launches, and no new regulatory moves specific to the education / EdTech sector turned up for today.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-07-12",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260710-0000-latent-memory-palace-reasoning-for-control-as-autoregressive-var",
+      "title": "Latent Memory Palace — Reasoning for Control as Autoregressive Variational Inference",
+      "summary": "Brings adaptive test-time \"reasoning\" — the chain-of-thought analogue — into continuous control policies, by organizing information in an autoregressive latent space (the \"memory palace\") and formulating reasoning as variational inference. Derives a tractable latent-space RL objective for the variational lower bound. The resulting LMP-π policy shows strong simulation + real-world performance with interpretable, adaptive compute allocation; same framework also yields a variable-length action tokenizer (LMP-tok) that lifts downstream autoregressive policies.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.08724",
+      "date": "2026-07-10",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260710-0000-slorr-simple-and-efficient-in-training-low-rank-regularization",
+      "title": "SLORR — Simple and Efficient In-Training Low-Rank Regularization",
+      "summary": "A stateless, architecture-preserving in-training regularizer that induces low-rank structure into the original weight matrices using GPU-friendly Hoyer-sparsity / nuclear-norm approximations (no SVD, no extra trainable params, no cached state). Adds under 8% training overhead on ImageNet-1K across ResNet-50 / ViT-B/16 / ViT-L/16, and under 1% on 135M and 560M LLM pretraining while preserving downstream performance of the compressed model.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.08754",
+      "date": "2026-07-10",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260710-0000-super-weights-in-llms-and-the-failure-of-selective-training-colm",
+      "title": "Super Weights in LLMs and the Failure of Selective Training (COLM 2026)",
+      "summary": "Tests the \"Super Weights\" hypothesis directly: individual parameters that, if pruned, tank an LLM by orders of magnitude. Finding — Super Weight-aware training does not work. Isolating 100–8,192 Super Weight coordinates for fine-tuning on OLMo-1B/7B collapses accuracy to random-guessing; expanding to 36K-neighborhoods does not help. Vanilla LoRA (full low-rank structure over layers) succeeds with only 0.16% of parameters, even when constrained to Super Weight coordinates.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.08733",
+      "date": "2026-07-10",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260710-0000-uniclawbench-a-universal-benchmark-for-proactive-agents-on-real-",
+      "title": "UniClawBench — A Universal Benchmark for Proactive Agents on Real-World Tasks (HKU-MMLab)",
+      "summary": "First capability-driven benchmark for proactive LLM/MLLM agents in dynamic, real-world settings. Built around five foundational capabilities (Skill Usage, Exploration, Long-Context Reasoning, Multimodal Understanding, Cross-Platform Coordination) and 400 bilingual tasks, evaluated in live Docker containers with a closed-loop executor/supervisor/user-agent setup that simulates realistic multi-turn feedback without leaking grading criteria.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.08768",
+      "date": "2026-07-10",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260710-0000-webswarm-recursive-multi-agent-orchestration-for-deep-and-wide-w",
+      "title": "WebSwarm — Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
+      "summary": "Argues a single ReAct-style web-search agent cannot do depth + coverage at once, and existing parallel multi-agent systems still fail on recursive depth, collaboration adaptability, and evidence-grounded expansion. Proposes WebSwarm, a progressive recursive-delegation framework that jointly builds task decomposition, recursive expansion, and agent collaboration at inference time by dynamically instantiating agentic search nodes.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.08662",
+      "date": "2026-07-10",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260709-0000-accurate-interdisciplinary-and-transparent-structure-property-un",
+      "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning (SciReasoner)",
+      "summary": "A multimodal scientific foundation model that treats 3D coordinates, topologies and periodic connectivities as addressable structural tokens. Across 86 scientific benchmarks (proteins, small molecules, inorganic crystals), it sets SOTA on 67, and double-blind expert review prefers its reasoning traces over a frontier LLM 98% of the time. Concrete wins: low-homology GO Cellular Component F max 0.42 → 0.55; single-step retrosynthesis 0.63 → 0.72.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.07708",
+      "date": "2026-07-09",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260709-0000-agon-competitive-cross-model-rl-with-implicit-rival-grading-of-r",
+      "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+      "summary": "Two models train as each other's graders on the same problem; one drafts, the other reads and answers, reward = out-solving the rival. No process labels, no reward model. On the hard split of DeepMath with Qwen3, this doubles GRPO pass@1 and is ≈8× the gain of an untrained Mixture-of-Agents baseline over the same base. Replicates on competitive-programming code and across Qwen3.5 / Gemma 4.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.07690",
+      "date": "2026-07-09",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260709-0000-co-lmlm-continuous-query-limited-memory-language-models",
+      "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+      "summary": "Replaces the relational knowledge base of Limited Memory LMs (LMLMs) with continuous-key/textual-value pairs and a free-form span annotator (no longer Wikipedia-only). At 360M params, CO-LMLM hits lower perplexity than models trained on 40× more data, and SimpleQA-verified factual precision on par with gpt-4o-mini and above Claude Sonnet 4.5.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.07707",
+      "date": "2026-07-09",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260709-0000-scaling-mixture-of-experts-video-pretraining-for-embodied-intell",
+      "title": "Scaling Mixture-of-Experts Video Pretraining for Embodied Intelligence (LingBot-Video)",
+      "summary": "A DiT-based video foundation model scaled via Mixture-of-Experts from scratch, with a data-profiling engine that augments web video with manipulation/locomotion footage. Targets embodied control, not content creation, so it trades pure visual fidelity for physical realism and inference efficiency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.07675",
+      "date": "2026-07-09",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260708-0000-bridging-physical-reasoning-and-task-generalization-via-visual-a",
+      "title": "Bridging Physical Reasoning and Task Generalization via Visual Action Outcome Reasoning Alignment (VAORA)",
+      "summary": "Targets the two failure modes that wreck VLM-based agents in interactive physical reasoning: hallucinated chain-of-thought that contradicts the visual scene, and reasoning/actions that are misaligned. VAORA introduces two complementary rewards — a Visual Alignment Reward (anchors reasoning to the scene, independent of the action) and a Visual-Action Alignment Reward (grounds reasoning in the visual outcome of the action itself) — with smooth dense rewards estimated by a pre-trained in-domain expert for training stability. Evaluated on PHYRE and Virtual Tool across novel-task and unseen-environment splits.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.06522",
+      "date": "2026-07-08",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260708-0000-danus-orchestrating-mathematical-reasoning-agents-with-fact-grap",
+      "title": "Danus: Orchestrating Mathematical Reasoning Agents with Fact-Graph Memory",
+      "summary": "An orchestration system for research-level math reasoning. One main agent plans and coordinates, multiple worker agents run parallel proof search, and a stateless verifier admits only verified claims into a shared \"fact graph\" (each fact stored with its proof and logical dependencies). The main agent periodically summarizes the evolving proof state, redirects workers, and emits progress reports for human mathematicians. Evaluated on six research-level case studies in algebraic geometry, singularity theory, and combinatorics, where the fact-graph memory is what lets the system build long, detailed proofs without losing the thread.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.06447",
+      "date": "2026-07-08",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260708-0000-doomed-from-the-start-early-abort-of-llm-agent-episodes-via-a-re",
+      "title": "Doomed from the Start: Early Abort of LLM Agent Episodes via a Recall-Controlled Probe Cascade",
+      "summary": "Shows that LLM agent failure is predictable from the agent's own hidden activations as early as the first interaction round — way before any behavioral signal is meaningful. Turns that into a deployment-ready \"abort cascade\": a distribution-free calibrated gate per round with per-round recall budgets jointly searched, so you get an episode-level guarantee that eventually-successful episodes survive. On TextCraft with Qwen-2.5-7B and Llama-3.2-3B, the cascade meets every recall target from 90% to 97%; at 90% it saves 47.1% / 37.2% of inference compute (1.6–1.7x the best single-gate policy), while a behavior-only cascade saves roughly half that, and adding behavioral features to the probe gives no further gain — the hidden states already cover it.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.06503",
+      "date": "2026-07-08",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260708-0000-elsa3d-elastic-semantic-anchoring-for-unified-3d-understanding-a",
+      "title": "ELSA3D: Elastic Semantic Anchoring for Unified 3D Understanding and Generation",
+      "summary": "A unified 3D foundation model that does text-to-3D, image-to-3D, and 3D captioning in a single backbone, using \"elastic semantic anchoring\" — sparse Anchor Tokens route language cues to the right geometric scale (coarse vs. fine), retrieved via a scale-aware octree tokenizer, with a lightweight per-block router deciding where cross-modal capacity should concentrate. Reported as SOTA on image-to-3D, text-to-3D, and 3D captioning while roughly halving FLOPs and inference latency vs. the non-elastic version of the same model.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.06565",
+      "date": "2026-07-08",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260708-0000-vision-as-unified-multimodal-generation-sensenova-vision",
+      "title": "Vision as Unified Multimodal Generation (SenseNova-Vision)",
+      "summary": "Reformulates computer vision as a single unified multimodal generation problem. A single SenseNova-Vision model takes natural-language instructions (plus optional visual prompts) and emits text, images, or mixed text+image outputs — covering detection, OCR, keypoints, segmentation, depth, surface normals, point maps, and camera pose — with no task-specific heads. Authors convert diverse CV annotations into an instruction-response corpus and train a unified model from an off-the-shelf multimodal base, claiming it matches leading task-specialized systems across structured understanding, dense geometry, segmentation, and multi-view geometry.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.06560",
+      "date": "2026-07-08",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260707-0000-compactionrl-reinforcement-learning-with-context-compaction-for-",
+      "title": "CompactionRL: Reinforcement Learning with Context Compaction for Long-Horizon Agents",
+      "summary": "Treats context compaction as a first-class action inside the RL loop: as trajectories approach the context-window cliff, the agent learns to summarize prior interaction state and continue the rollout under the compacted context, so the verifier still gets a full long-horizon reward signal. The compaction policy is itself trained with RL, not a hand-rolled summarizer.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.05378",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260707-0000-cortex-a-bidirectionally-aligned-embodied-agent-framework-for-lo",
+      "title": "Cortex: A Bidirectionally Aligned Embodied Agent Framework for Long-horizon Manipulation",
+      "summary": "A hierarchical VLA framework where the high-level planner and low-level controller are bidirectionally aligned — instead of the usual \"planner commands, controller obeys,\" the controller's feasibility constraints flow back up to reshape the planner's proposals. Tackles the planning/control gap that breaks dual-system methods on long-horizon tasks like \"clean the kitchen.\"",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.05377",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260707-0000-llm-as-a-verifier-a-general-purpose-verification-framework",
+      "title": "LLM-as-a-Verifier: A General-Purpose Verification Framework",
+      "summary": "Argues that verification — the ability to judge the correctness of a candidate solution — is an independent scaling axis orthogonal to pre-training, post-training, and test-time compute. Lays out a general framework for using one LLM to verify another's outputs, with empirical scaling curves showing verifier strength compounds reasoning gains beyond what extra sampling alone buys you.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.05391",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260707-0000-trek-distill-to-explore-reinforce-to-refine",
+      "title": "TREK: Distill to Explore, Reinforce to Refine",
+      "summary": "Diagnoses a specific failure mode of GRPO: on hard prompts whose correct solution modes lie outside the student's on-policy support, GRPO stalls because the group of rollouts is uniformly bad. TREK uses teacher-routed forward-KL exploration to inject diversity into the student's support, then runs standard GRPO refinement on the now-tractable distribution.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.05339",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260707-0000-weak-to-strong-generalization-via-direct-on-policy-distillation",
+      "title": "Weak-to-Strong Generalization via Direct On-Policy Distillation",
+      "summary": "Replaces the costly \"re-run RLVR on every new strong model\" pattern with a direct on-policy distillation scheme: the student samples its own rollouts, the teacher scores them via verifiable rewards, and the student is updated against a target that explicitly interpolates between teacher supervision and verifiable-reward signal. The result is weak-to-strong generalization that scales with the teacher without re-rolling-out the teacher.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.05394",
+      "date": "2026-07-07",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260704-0000-adoption-and-impact-of-command-line-ai-coding-agents-microsoft-s",
+      "title": "Adoption and Impact of Command-Line AI Coding Agents: Microsoft’s Early-2026 Rollout of Claude Code and GitHub Copilot CLI",
+      "summary": "First large-scale, vendor-agnostic measurement of *real* adoption of Claude Code and GitHub Copilot CLI inside one of the world's largest engineering orgs. Headline numbers: first-use spread primarily through social networks (not top-down mandates); retention tracks engineers' baseline coding activity, not demographics; adopters merged ~24% more pull requests than matched non-adopters. The paper is unusually honest about cost — token spend in the millions of dollars — and the \"did adoption actually move engineering velocity\" question.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.01418",
+      "date": "2026-07-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260704-0000-demopsd-disagreement-modulated-policy-self-distillation",
+      "title": "DemoPSD: Disagreement-Modulated Policy Self-Distillation",
+      "summary": "On-policy self-distillation (OPSD) is the cheap, in-house alternative to distilling from a stronger teacher — but recent work shows it leaks \"privileged information\" and overfits to in-domain shortcuts. DemoPSD reframes the student's target as a *reverse-KL barycenter* between teacher and student distributions, and uses per-token disagreement to adaptively control the blend. The result: the student keeps the teacher's signal where it agrees with its own reasoning, and protects its own reasoning where it disagrees — fixing the privileged-info shortcut and lifting cross-domain generalization without hurting in-domain accuracy.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.02502",
+      "date": "2026-07-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260704-0000-lacuna-a-testbed-with-ground-truth-parameter-level-localization-",
+      "title": "LACUNA: A Testbed with Ground-Truth Parameter-Level Localization for LLM Unlearning",
+      "summary": "LLM unlearning benchmarks only check outputs, so we have no idea whether methods actually erase knowledge from weights or just hide it. LACUNA is the first testbed with ground-truth parameter localization: it injects synthetic PII into predefined weights of 1B/7B OLMo checkpoints via masked continual pretraining, then asks whether unlearning methods target the *right* parameters. The headline result is harsh — SOTA unlearning methods are highly imprecise and remain susceptible to resurfacing attacks. A simple gradient method *with correct localization* delivers both erasure and robustness.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.02513",
+      "date": "2026-07-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260704-0000-scaling-with-confidence-c3rl-cas-for-calibrated-adaptive-test-ti",
+      "title": "Scaling with Confidence: C3RL + CAS for Calibrated, Adaptive Test-Time Scaling",
+      "summary": "RL-trained reasoning LLMs are notoriously miscalibrated — they hallucinate confidently when wrong. C3RL folds calibration directly into the RL reward (correctness + confidence + dataset-informed reference accuracy) and produces a verbalized-confidence signal that CAS turns into an *adaptive* test-time compute policy: spend more tokens on hard/uncertain items, fewer on the easy ones. Across 8 text/multimodal benchmarks, C3RL beats the prior SOTA on both accuracy and calibration, and CAS beats majority voting while cutting inference budget by up to 12.33× .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.01612",
+      "date": "2026-07-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260704-0000-worlddirector-controllable-world-simulators-with-persistent-dyna",
+      "title": "WorldDirector: Controllable World Simulators with Persistent Dynamic Memory",
+      "summary": "Current video world models braid physical dynamics into pixel rendering and lose track of objects whenever they leave the frame. WorldDirector splits the problem: an LLM plans semantic 3D trajectories + camera motion, then a video generator consumes those trajectories as control signals. The result is strict physical consistency, appearance-stable re-identification of objects that re-enter after long absences, and free-form viewpoint exploration — the first time \"persistent dynamic memory\" + \"unrestricted camera\" have been solved together in a single world model.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.02517",
+      "date": "2026-07-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-adajepa-an-adaptive-latent-world-model",
+      "title": "AdaJEPA: An Adaptive Latent World Model",
+      "summary": "Latent world models are usually frozen at test time, which makes planning brittle under distribution shift. AdaJEPA closes the loop inside model-predictive control: it executes an action chunk, treats the observed transition as a self-supervised adaptation signal, updates itself with as few as one gradient step per replan, and replans. This makes a JEPA-style world model self-calibrating without extra expert demonstrations.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32026",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-axdafny-agentic-verified-code-generation-in-dafny",
+      "title": "AxDafny: Agentic Verified Code Generation in Dafny",
+      "summary": "Verified-code generation — Dafny code plus proof artifacts — is reframed as an agentic loop with a verifier-in-the-loop repair loop that iteratively regenerates implementations, invariants, assertions, and termination arguments. The authors ship a new benchmark, LiveCodeBench-Pro-Dafny (250 competition-style problems with formal specs), and report 92.7% verification on DafnyBench, +6.5 pp over the strongest previous proof-hint baseline, beating GPT-5.5 zero-shot by a wide margin.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32007",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-cross-space-distillation-teaching-one-step-students-with-modern-",
+      "title": "Cross-Space Distillation: Teaching One-Step Students with Modern Diffusion Teachers",
+      "summary": "One-step diffusion distillation assumes teacher and student share a latent space — which is false for the most useful pairing: distilling SD 3.5 / Flux into a compact SD 1.5 backbone. The paper formalizes this gap as Cross-Space Distillation and fixes it with \"Bridge,\" a lightweight latent interface that pairs a frozen Student VAE decoder with a learnable projector trained on latent reconstruction + attention-fidelity losses. The result: SD 1.5 jumps from 5.4 → 9.4 HPSv3 in one inference step, with low latency and the full SD 1.5 ecosystem intact.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32020",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-freeform-preference-learning-for-robotic-manipulation",
+      "title": "Freeform Preference Learning for Robotic Manipulation",
+      "summary": "FPL replaces the standard \"which trajectory is better?\" binary preference with freeform, axis-specific preferences — annotators name the dimension (speed, safety, placement quality, carefulness), then compare trajectories along that axis. A language-conditioned reward model turns this into multi-axis rewards that train a reward-conditioned policy. On four real-world and two simulated long-horizon manipulation tasks, FPL beats sparse-reward and binary-preference baselines by 38 percentage points, learns dense progress signals without subtask labels, and lets users steer the policy at test time without retraining.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32027",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-generative-skill-composition-for-llm-agents-skillcomposer",
+      "title": "Generative Skill Composition for LLM Agents (SkillComposer)",
+      "summary": "Most agents treat skill selection as flat retrieval — pick one skill, retrieve K, or expose the whole library. The authors formalize skill composition as a *structured* prediction problem (which skills, how many, in what order — all coupled) and ship SkillComposer, a constrained autoregressive decoder that emits an executable skill plan in one pass. Trained on a real human-curated skill library and evaluated on SkillsBench with two production coding agents: +23.1pp on GPT-5.2-Codex, +18.2pp on Gemini-3-Pro-Preview over the no-skill baseline, matching the gold-skill retrieval upper bound at lower prompt-token cost.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32025",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-introspective-coupling-self-explanation-training-tracks-behavior",
+      "title": "Introspective Coupling: Self-Explanation Training Tracks Behavioral Change Despite Fixed Supervision",
+      "summary": "Training LMs to explain their own predictions normally degenerates into imitation of the supervised explanations. This paper shows that, counterintuitively, LMs trained on frozen counterfactual explanations from earlier checkpoints — or even from behaviorally-similar but architecturally-different models — produce explanations that are more faithful to the LM's current behavior than to the supervision source. The introspection tracks the model's actual reasoning instead of the labels.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32038",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-learning-from-failure-inference-time-self-improvement-for-comput",
+      "title": "Learning from Failure: Inference-Time Self-Improvement for Computer-Use Agents",
+      "summary": "Computer-use agents are usually trained on their own successful trajectories and throw away the failures. This work flips that: an LLM diagnoses why each failed run failed, proposes an inference-time fix, and ships a code patch (lightly human-verified) that upgrades the agent. On the state-of-the-art OpenCUA-72B model, OSWorld success rate climbs from 42.3% to 48.9% — a +6.6pp gain — with zero additional training cost and only modest inference overhead.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.31270",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-qval-cheaply-evaluating-dense-supervision-signals-for-long-horiz",
+      "title": "QVal: Cheaply Evaluating Dense Supervision Signals for Long-Horizon LLM Agents",
+      "summary": "Long-horizon agent training needs dense supervision on intermediate steps, but every dense-signal paper rolls its own training pipeline, so methods are never compared on common ground. QVal is a training-free testbed: it scores each dense-signal method by Q-alignment with a strong reference policy, separating signal quality from training-engineering confounders. The authors benchmark 21 dense supervision methods across four environments and six model backbones (1.2K runs) and report that plain prompting baselines consistently beat recent published dense-supervision methods.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32034",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-reinforcement-learning-with-metacognitive-feedback-elicits-faith",
+      "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+      "summary": "LLMs are bad at knowing what they know — they hallucinate with high confidence and lie about their own uncertainty. The paper introduces Reinforcement Learning with Metacognitive Feedback (RLMF): the model ranks its own candidate completions by the *quality of its self-judgments of performance*, and that signal is fed back into preference optimization. A two-stage pipeline first calibrates self-reported confidence, then maps to natural-language hedging. RLMF beats standard RL by up to 63% on faithful calibration, hits SOTA across diverse tasks, and preserves task accuracy.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.32032",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260701-0000-simplesearch-vl-a-simple-recipe-for-multimodal-agentic-deep-sear",
+      "title": "SimpleSearch-VL: A Simple Recipe for Multimodal Agentic Deep Search",
+      "summary": "Instead of scaling data, tools, or auxiliary models, SimpleSearch-VL improves the *search-and-verification loop itself* with three small changes: Factorized Adaptive Rollout (better sample efficiency), evidence-verified chain-of-thought reasoning, and a lightweight in-agent webpage self-summarizer. Trained on only 5K supervised tool-interleaved trajectories and 2K RL examples, it lifts Qwen3-VL agentic baselines by 15.8 points (8B) and 16.0 points (30B-A3B), and the 30B-A3B model is competitive with agentic Gemini-3-Pro.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.31504",
+      "date": "2026-07-01",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260630-0000-attractor-states-emerge-in-multi-turn-llm-conversations",
+      "title": "Attractor States Emerge in Multi-Turn LLM Conversations",
+      "summary": "Across 7 LLMs and 20 controversial topics, the authors run self-play vs mixed-play dyadic debates and measure representation-space trajectories, discourse traits, and stances. They find self-play trajectories collapse into model-specific attractors ; in mixed-play these attractors pull other models asymmetrically (Claude Haiku is flagged as a strong attractor). Crucially, the same model can exhibit different rhetorical and stylistic moves in self-play vs mixed-play, even when the underlying \"stance\" is unchanged.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.30571",
+      "date": "2026-06-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260630-0000-c-r-cross-sample-consistency-regularization-mitigates-feature-sp",
+      "title": "C²R: Cross-sample Consistency Regularization Mitigates Feature Splitting and Absorption in Sparse Autoencoders",
+      "summary": "Sparse Autoencoders (SAEs) decompose LLM activations into sparse, human-interpretable features, but scaling them up causes two failure modes: feature splitting (one coherent concept fragments across many latents) and feature absorption (a general feature silently eats exceptions). The authors trace both to inconsistent latent assignment across training samples and propose C²R, a cross-sample consistency regularization that aligns how related prompts get assigned to latents. They show it reliably reduces both pathologies on Anthropic-style SAE scaling benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.30609",
+      "date": "2026-06-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260630-0000-orca-the-world-is-in-your-mind",
+      "title": "Orca: The World is in Your Mind",
+      "summary": "BAAI introduces Orca, a \"world foundation model\" that reframes pretraining from next-token / next-frame / next-action prediction toward Next-State-Prediction : a unified world latent space learned from multimodal signals (video, text, audio, action, touch), trained on a \"world-learning inventory\" of 125K hours of video plus 160M event annotations. The backbone is frozen and only lightweight modality-specific decoders are trained; experiments show stronger world latents consistently yield stronger downstream performance across text generation, image prediction, and embodied action.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.30534",
+      "date": "2026-06-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260630-0000-swe-interact-reimagining-swe-benchmarks-as-user-driven-long-hori",
+      "title": "SWE-INTERACT: Reimagining SWE Benchmarks as User-Driven Long-Horizon Coding Sessions",
+      "summary": "SWE-Interact flips SWE-Bench's setup: instead of an agent getting a fully-specified GitHub issue and working alone, a realistic user simulator starts with vague/incomplete requirements and progressively reveals details, inspects the workspace, asks for revisions, and adds constraints mid-task. Grounded in large-scale studies of real coding-agent sessions, the benchmark measures whether agents can discover user intent and adapt to evolving requirements across multi-turn interactive sessions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.30573",
+      "date": "2026-06-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260630-0000-tracelab-characterizing-coding-agent-workloads-for-llm-serving",
+      "title": "TraceLab: Characterizing Coding Agent Workloads for LLM Serving",
+      "summary": "The UW systems group released the first public trace of real coding-agent usage: ~4,300 sessions covering ~350K LLM steps and ~430K tool calls harvested from day-to-day use of Claude Code and Codex. The paper characterizes the workload shape — long autonomous loops, long contexts with short outputs, heavy-tailed tool-call diversity, and highly-imperfect prefix-cache reuse — and uses it to derive concrete implications for serving-system design (e.g. why generic chat serving stacks under-perform for coding agents).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.30560",
+      "date": "2026-06-30",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260627-0000-ask-solve-generate-self-evolving-unified-multimodal-understandin",
       "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",

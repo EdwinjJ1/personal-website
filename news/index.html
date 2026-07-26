@@ -258,6 +258,84 @@
       </div>
 
       <div class="cards" id="cards">
+        <article class="card expanded" data-type="research" data-date="2026-07-24" data-time="02:33">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🌀 AdaRoPE — heads need different rotation frequencies/scaling for long-context, learnable per-head variant beats partial-RoPE/NoPE, ⚡ LISA — drop-in Linear-Indexed Sparse Attention for long CoT (O(n²) → O(n)+top-M sparse), 🧠 PRO-LONG — programmatic memory for long-horizon agents, code-as-state replaces raw observation dumping, 🌀 SLPO — outcome-reward RL finally works on autoregressive latent reasoners via a surrogate policy, 📐 Euclean — Lean + native Mathlib auto-formalization for geometry, bridges the algebra/geometry split</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">02:33</span>
+              <span class="card-badge">10 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2607.19363">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌀 AdaRoPE: Not All Attention Heads Should Rotate and Scale Equally</div>
+              <div class="item-summary">A theoretical + empirical critique of standard RoPE: heads with different functional roles need different rotation frequencies and attention scaling. AdaRoPE gives each head learnable rotation frequencies and scaling factors, and slots in as a drop-in RoPE replacement that improves long-context generalization over partial-RoPE and NoPE baselines. Cheap architectural change for any RoPE-based LLM; potentially free wins on long-context retrieval/QA without retraining from scratch.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.19358">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚡ LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning</div>
+              <div class="item-summary">A plug-and-play attention replacement targeting long chain-of-thought models like DeepSeek-R1. LISA runs a linear-attention branch (O(n) long-range memory) in parallel with a Lightning Indexer that picks the top-M important tokens for sparse self-attention, fused via a gating mechanism — no pretraining-from-scratch required. Directly attacks the O(n²) cost wall that's limiting long-CoT deployment; if speedups hold, could halve inference cost for reasoning-heavy workloads.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.20064">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧠 PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning</div>
+              <div class="item-summary">An agent harness built around programmatic memory — code-as-state rather than raw observation dumping — targeting long-horizon tasks like ARC-AGI-3. The framework lets the LLM write and run small programs that decide what to remember from the environment and how to retrieve it back into context. Addresses the 'save-everything-and-hope' anti-pattern plaguing current agent designs, with results specifically on the ARC-AGI benchmark family.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.19691">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌀 SLPO: Scaling Latent Reasoning via a Surrogate Policy</div>
+              <div class="item-summary">Brings outcome-reward RL to autoregressive latent reasoners. The trick: a learned 'surrogate policy' approximates per-step likelihoods and stopping decisions under a fixed thinking budget, so RL can finally scale latent test-time compute (which was previously stuck at imitation-learning level). Unlocks outcome-reward RL for latent reasoning — a credible path to o1-style test-time scaling without the token-decoding tax.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.19374">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">📐 Euclean: Automated Geometry Problem Formalization with Unified Verification in Lean</div>
+              <div class="item-summary">A four-stage framework that auto-formalizes geometry problems into Lean using native Mathlib (not a custom axiom system). Tackles the implicit-diagram problem (topology, non-degeneracy assumptions) and ships with a much larger problem corpus than prior Lean geometry efforts. Bridges the algebra/geometry split in formal math — foundation for an IMO-level unified reasoner.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.17977">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🤖 RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model</div>
+              <div class="item-summary">Alibaba DAMO / Hupan Lab's unified spatio-temporal embodied foundation model family at 2B / 9B / 122B-A10B scales — native 3D grounding, contact-point prediction, plus a cross-embodiment VLA variant (RynnBrain-VLA) deployed on Unitree G1, Astribot-S1, and Tianji-Wuji. The 122B-A10B variant claims SOTA over proprietary and open-source models on VSI-Bench, MMSI, and RefSpatial-Bench; real-robot experiments show RynnBrain-initialized policies beat Qwen-based and generalist VLA baselines, with joint multi-task + multi-embodiment training improving process scores.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.16900">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🍎 Environment-free Synthetic Data Generation for API-Calling Agents</div>
+              <div class="item-summary">Apple's take on the API-agent data wall: replace brittle live-environment simulation with LLM-based API simulation, so you can generate massive amounts of API-calling trajectories for training tool-use agents without ever spinning up a real backend. With Apple ML heavyweights (Toshev, Tuzel, Vemulapalli, Chowdhury, Hsieh) on the byline, the recipe is likely destined to inform Apple Intelligence / on-device agent training.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.18110">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧑‍🏫 LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks</div>
+              <div class="item-summary">Microsoft Research turns the LLM-as-a-Judge into an LLM-as-a-Coach: instead of crushing evaluation down to a scalar reward (the root cause of reward hacking on open-ended tasks), the coach distills rich textual feedback into transferable experiential knowledge that conditions a teacher and is internalized by the policy via on-policy context distillation. Across two policy families, EL consistently beats rubric-based RL on held-out and unseen open-ended tasks, with better out-of-distribution generalization and less reward hacking. Code at aka.ms/el-code.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.18213">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">✂️ SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</div>
+              <div class="item-summary">ByteDance drops the external code classifier from SWE-Pruner and instead uses the coding agent's own internal representations, via a small head with a length-aware line-count embedding, to label each line of tool output as keep or prune. Saves up to 39% of prompt + completion tokens while preserving task quality, and additionally bumps SWE-Bench Verified by +3.8% on MiMo-V2-Flash — essentially free wins on cost, latency, and accuracy for long-horizon coding agents.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.16192">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎬 MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction</div>
+              <div class="item-summary">Given a short clip of someone interacting with an object, MotionForesight predicts the future 3D trajectories of points on that object. The insight is that pretrained video models already encode rich 'how objects move during interaction' priors — instead of predicting pixels, you redirect those priors to predict 3D scene flow. Using only 40k videos and freezing the large video/tracking backbones, the method beats models trained on 1M+ videos and generalizes across out-of-distribution objects and viewpoints.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            </div>
+        </article>
 
         <article class="card expanded" data-type="ai" data-date="2026-04-28" data-time="04:00">
           <div class="card-header" onclick="toggle(this)">
@@ -959,6 +1037,136 @@
               <span class="item-tag breaking">Breaking</span>
               <div class="item-title">Sora Head Bill Peebles + VP of AI for Science Depart OpenAI</div>
               <div class="item-summary">Two key AI leaders leaving OpenAI amid rapid organizational changes. Peebles led video generation (Sora); VP AI for Science oversaw GPT-Rosalind. Signals potential instability in frontier AI teams.</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+
+        <article class="card expanded" data-type="research" data-date="2026-07-04" data-time="02:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🎯 C3RL + CAS — Yang et al.: RL reward folds in calibration; beats SOTA on accuracy + calibration, adaptive test-time scaling cuts inference budget up to 12.33×, 🌍 WorldDirector — Wang et al.: LLM-orchestrated 3D trajectories + camera + video generator → persistent object identity + unrestricted viewpoint in video world models, 🛡️ LACUNA — Boglioni, Siva Reddy, Mosbach et al. (Mila / McMaster): first unlearning benchmark with ground-truth parameter localization; SOTA unlearning methods fail the test, a simple gradient method with correct localization fixes it, 🏢 Claude Code / Copilot CLI at Microsoft — MSR rollout study, tens of thousands of engineers, adopters merge +24% PRs vs. matched non-adopters, first-use spreads via social networks, ⚙️ DemoPSD — Li et al.: reverse-KL barycentric + disagreement-modulated on-policy self-distillation fixes privileged-information leakage in OPSD</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">02:04</span>
+              <span class="card-badge">5 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2607.01612">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 C3RL + CAS — Calibrated LLMs + Adaptive Test-Time Scaling (12.33× Compute Reduction)</div>
+              <div class="item-summary">RL-trained reasoning LLMs hallucinate confidently when wrong. C3RL folds calibration directly into the RL reward (correctness + confidence + dataset-informed reference accuracy) and produces a verbalized-confidence signal that CAS turns into an adaptive test-time compute policy: spend more tokens on hard/uncertain items, fewer on the easy ones. Across 8 text/multimodal benchmarks, C3RL beats the prior SOTA on both accuracy and calibration, and CAS beats majority voting while cutting inference budget by up to 12.33× (Xuqing Yang, Yi Yuan, Shanzhe Lei, Xuhong Wang).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.02517">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌍 WorldDirector — Controllable World Simulators with Persistent Dynamic Object Memory</div>
+              <div class="item-summary">Current video world models braid physical dynamics into pixel rendering and lose track of objects whenever they leave the frame. WorldDirector splits the problem: an LLM plans semantic 3D trajectories + camera motion, then a video generator consumes those trajectories as control signals. The result is strict physical consistency, appearance-stable re-identification of objects that re-enter after long absences, and free-form viewpoint exploration — the first time persistent dynamic memory + unrestricted camera have been solved together in a single world model (Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.02513">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🛡️ LACUNA — Parameter-Level LLM Unlearning Testbed Shows SOTA Methods Are Mostly Theatre (Mila / McMaster)</div>
+              <div class="item-summary">LLM unlearning benchmarks only check outputs, so we have no idea whether methods actually erase knowledge from weights or just hide it. LACUNA is the first testbed with ground-truth parameter localization: it injects synthetic PII into predefined weights of 1B/7B OLMo checkpoints via masked continual pretraining, then asks whether unlearning methods target the right parameters. Headline: SOTA unlearning methods are highly imprecise and remain susceptible to resurfacing attacks. A simple gradient method with correct localization delivers both erasure and robustness (Matteo Boglioni, Thibault Rousset, Siva Reddy, Marius Mosbach, Verna Dankers).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.01418">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🏢 Microsoft Early-2026 Rollout of Claude Code and GitHub Copilot CLI — Adopters Merge +24% More PRs</div>
+              <div class="item-summary">First large-scale, vendor-agnostic measurement of real adoption of Claude Code and GitHub Copilot CLI inside one of the world's largest engineering orgs. Headline numbers: first-use spread primarily through social networks (not top-down mandates); retention tracks engineers' baseline coding activity, not demographics; adopters merged ~24% more pull requests than matched non-adopters. Unusually honest about cost — token spend in the millions of dollars — and the "did adoption actually move engineering velocity" question. The closest thing the industry has to a controlled trial of agentic CLI coding tools at enterprise scale (Microsoft Research).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2607.02502">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">⚙️ DemoPSD — Disagreement-Modulated Policy Self-Distillation Fixes Privileged-Info Leakage</div>
+              <div class="item-summary">On-policy self-distillation (OPSD) is the cheap, in-house alternative to distilling from a stronger teacher — but recent work shows it leaks "privileged information" and overfits to in-domain shortcuts. DemoPSD reframes the student's target as a reverse-KL barycenter between teacher and student distributions, and uses per-token disagreement to adaptively control the blend. Result: the student keeps the teacher's signal where it agrees with its own reasoning, and protects its own reasoning where it disagrees — fixing the privileged-info shortcut and lifting cross-domain generalization without hurting in-domain accuracy (Yunhe Li, Hao Shi, Wenhao Liu, Mengzhe Ruan, Hanxu Hou).</div>
+              <span class="item-arrow">→</span>
+            </a>
+          </div>
+        </article>
+
+
+        <article class="card expanded" data-type="research" data-date="2026-07-01" data-time="16:04">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon research">📚</div>
+              <div>
+                <div class="card-title">Research Highlights</div>
+                <div class="card-meta">🎯 SkillComposer — Tianlong Chen et al.: structured skill-sequence prediction +23.1pp on GPT-5.2-Codex, +18.2pp on Gemini-3-Pro-Preview, matches gold-skill upper bound at lower token cost, 🖱️ Learning from Failure — Stanford (Schmidt, Yeung-Levy, Yuhui Zhang): failure-driven self-improvement on OpenCUA-72B lifts OSWorld 42.3% → 48.9% with zero training, 🔍 SimpleSearch-VL — Chunhua Shen et al.: +15.8/+16.0 on Qwen3-VL agentic baselines with 5K SFT + 2K RL; 30B-A3B matches agentic Gemini-3-Pro, 🧠 RLMF — Arman Cohan et al.: RL with metacognitive feedback beats standard RL by up to 63% on faithful calibration, preserves accuracy, 🎨 Cross-Space Distillation — Metaxas/Patel @ Rutgers DIMES: "Bridge" interface distills SD 3.5 / Flux into SD 1.5 across latent spaces, HPSv3 5.4 → 9.4 in one step</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">16:04</span>
+              <span class="card-badge">10 papers</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="https://arxiv.org/abs/2606.32025">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎯 SkillComposer — Structured Skill-Sequence Prediction Lifts Coding Agents by +23pp on Codex / +18pp on Gemini-3-Pro</div>
+              <div class="item-summary">Most agents treat skill selection as flat retrieval — pick one skill, retrieve K, or expose the whole library. SkillComposer formalizes skill composition as a structured prediction problem (which skills, how many, in what order — all coupled) and uses a constrained autoregressive decoder to emit an executable skill plan in one pass. Trained on a real human-curated skill library, evaluated on SkillsBench with two production coding agents: +23.1pp on GPT-5.2-Codex, +18.2pp on Gemini-3-Pro-Preview over the no-skill baseline, matching the gold-skill retrieval upper bound at lower prompt-token cost (Xinyu Zhao, Zhen Tan, Vaishnav Tadiparthi, Nakul Agarwal, Kwonjoon Lee, Ehsan Moradi Pari, Hossein Nourkhiz Mahjoub, Tianlong Chen).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.31270">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🖱️ Learning from Failure — Failure-Driven Inference-Time Self-Improvement for Computer-Use Agents (Stanford)</div>
+              <div class="item-summary">Computer-use agents are usually trained on their own successful trajectories and throw away the failures. This work flips that: an LLM diagnoses why each failed run failed, proposes an inference-time fix, and ships a code patch (lightly human-verified) that upgrades the agent. On the state-of-the-art OpenCUA-72B model, OSWorld success rate climbs from 42.3% to 48.9% — a +6.6pp gain — with zero additional training cost and only modest inference overhead (Xueqiao Sun, Xiaohan Wang, Ludwig Schmidt, Serena Yeung-Levy, Yuhui Zhang).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.31504">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🔍 SimpleSearch-VL — A "Simple Recipe" for Multimodal Agentic Deep Search (Chunhua Shen et al.)</div>
+              <div class="item-summary">Instead of scaling data, tools, or auxiliary models, SimpleSearch-VL improves the search-and-verification loop itself with three small changes: Factorized Adaptive Rollout (better sample efficiency), evidence-verified chain-of-thought reasoning, and a lightweight in-agent webpage self-summarizer. Trained on only 5K supervised tool-interleaved trajectories and 2K RL examples, it lifts Qwen3-VL agentic baselines by 15.8 points (8B) and 16.0 points (30B-A3B), and the 30B-A3B model is competitive with agentic Gemini-3-Pro (Ming Dai, Zhihong Lu, Jinjie Gu, Jiedong Zhuang, Yefeng Liu, Wankou Yang, Jian Wang, Chunhua Shen).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32032">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧠 RLMF — Reinforcement Learning with Metacognitive Feedback Fixes LLM Calibration (Arman Cohan et al.)</div>
+              <div class="item-summary">LLMs hallucinate with high confidence and lie about their own uncertainty. RLMF refines completion rankings during preference optimization by the quality of the model's self-judgments of performance, then maps to natural-language hedging. Beats standard RL by up to 63% on faithful calibration, hits SOTA across diverse tasks, and preserves task accuracy — a clean recipe for teaching LLMs to express what they actually know (Gabrielle Kaili-May Liu, Avi Caciularu, Gal Yona, Idan Szpektor, Arman Cohan).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32020">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🎨 Cross-Space Distillation — "Bridge" Interface Distills SD 3.5 / Flux into SD 1.5 in One Step (Rutgers DIMES)</div>
+              <div class="item-summary">One-step diffusion distillation assumes teacher and student share a latent space — false for the most useful pairing: distilling SD 3.5 / Flux into a compact SD 1.5 backbone. The paper formalizes this gap as Cross-Space Distillation and fixes it with Bridge, a lightweight latent interface that pairs a frozen Student VAE decoder with a learnable projector. Result: SD 1.5 jumps from 5.4 → 9.4 HPSv3 in one inference step, with low latency and the full SD 1.5 ecosystem (LoRAs, ControlNets) intact (Anh Nguyen, Ngan Nguyen, ..., Dimitris Metaxas, Vishal M. Patel, Anh Tran).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32026">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🌍 AdaJEPA — A Self-Adaptive Latent World Model from LeCun &amp; Ren (NYU / FAIR)</div>
+              <div class="item-summary">Latent world models are usually frozen at test time, which makes planning brittle under distribution shift. AdaJEPA closes the loop inside model-predictive control: it executes an action chunk, treats the observed transition as a self-supervised adaptation signal, updates itself with as few as one gradient step per replan, and replans. Across a range of goal-reaching tasks the closed-loop update substantially improves planning success, making a JEPA-style world model self-calibrating without extra expert demonstrations (Ying Wang, Oumayma Bounou, Yann LeCun, Mengye Ren).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32007">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🛡️ AxDafny — Agentic Verified Code Generation in Dafny with a New 250-Problem Benchmark</div>
+              <div class="item-summary">Reframes verified-code generation — Dafny code plus proof artifacts — as an agentic loop with a verifier-in-the-loop repair that iteratively regenerates implementations, invariants, assertions, and termination arguments. Ships LiveCodeBench-Pro-Dafny (250 competition-style problems with formal specs and verifier harness) and reports 92.7% verification on DafnyBench (+6.5pp over the strongest previous proof-hint baseline) and a wide margin over GPT-5.5 zero-shot on the new benchmark (Benjamin Breen, Austin Letson, Borja Requena Pozo, Leopoldo Sarra).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32027">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🦾 Freeform Preference Learning — Steerable Robot Policies from Multi-Axis Preferences (Chelsea Finn @ Stanford)</div>
+              <div class="item-summary">FPL replaces the standard "which trajectory is better?" binary preference with axis-specific preferences — annotators name a dimension (speed, safety, placement quality, carefulness) and compare along that axis. A language-conditioned reward model turns this into multi-axis rewards that train a reward-conditioned policy. Across four real-world and two simulated long-horizon manipulation tasks, FPL beats sparse-reward and binary-preference baselines by 38 percentage points, learns dense progress signals without subtask labels, and lets users steer the policy at test time without retraining (Marcel Torne, Anubha Mahajan, Abhijnya Bhat, Chelsea Finn).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32034">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🧪 QVal — A Training-Free Testbed That Benchmarks 21 Dense-Supervision Methods on Common Ground (Bethge @ Tübingen)</div>
+              <div class="item-summary">Long-horizon agent training needs dense supervision on intermediate steps, but every dense-signal paper rolls its own training pipeline, so methods are never compared on common ground. QVal is a training-free testbed: it scores each dense-signal method by Q-alignment with a strong reference policy, separating signal quality from training-engineering confounders. Across 21 methods × 4 environments × 6 backbones (1.2K runs), plain prompting baselines consistently beat recent published dense-supervision methods — a strong negative signal for the field (Sergio Hernández-Gutiérrez, Matteo Merler, Ilze Amanda Auzina, Joschka Strüber, Ameya Prabhu, Matthias Bethge).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="https://arxiv.org/abs/2606.32038">
+              <span class="item-tag research">Paper</span>
+              <div class="item-title">🪞 Introspective Coupling — Self-Explanation Training Tracks Behavior Even with Frozen Supervision (MIT)</div>
+              <div class="item-summary">Training LMs to explain their own predictions normally degenerates into imitation of the supervised explanations. This paper shows, counterintuitively, that LMs trained on frozen counterfactual explanations from earlier checkpoints — or even from behaviorally-similar but architecturally-different models — produce explanations that are more faithful to the LM's current behavior than to the supervision source. The introspection tracks the model's actual reasoning instead of the labels, opening a cheaper path to faithful self-explanation (Zifan Carl Guo, Laura Ruis, Jacob Andreas, Belinda Z. Li).</div>
               <span class="item-arrow">→</span>
             </a>
           </div>

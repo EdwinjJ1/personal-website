@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-06-27",
-  "latestLabel": "June 27, 2026",
+  "latestDate": "2026-07-25",
+  "latestLabel": "July 25, 2026",
   "items": [
     {
-      "id": "research-20260627-0000-ask-solve-generate-self-evolving-unified-multimodal-understandin",
-      "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
+      "id": "research-20260725-0000-emergent-misalignment-recruits-a-pre-existing-persona-subspace",
+      "title": "Emergent Misalignment Recruits a Pre-existing Persona Subspace",
       "tag": "RESEARCH",
-      "date": "2026-06-27",
+      "date": "2026-07-25",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260627-0000-danceopd-on-policy-generative-field-distillation",
-      "title": "DanceOPD: On-Policy Generative Field Distillation",
+      "id": "research-20260725-0000-mirror-learning-from-the-other-view-for-multi-modal-reasoning",
+      "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
       "tag": "RESEARCH",
-      "date": "2026-06-27",
+      "date": "2026-07-25",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260627-0000-don-t-settle-at-the-mode-mitigating-diversity-collapse-in-pretra",
-      "title": "Don't Settle at the Mode! Mitigating Diversity Collapse in Pretrained Flow Models via Feature Self-Guidance",
+      "id": "research-20260725-0000-openforgerl-train-harness-native-agents-in-any-environment",
+      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
       "tag": "RESEARCH",
-      "date": "2026-06-27",
+      "date": "2026-07-25",
       "time": "00:00",
       "category": "research"
     }
