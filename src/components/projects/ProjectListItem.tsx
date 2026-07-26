@@ -1,43 +1,9 @@
 'use client';
 
 import Link from 'next/link';
-import type { Project, ProjectStatus } from '@/data/projects';
+import type { Project } from '@/data/projects';
 import ProjectIcon from './ProjectIcon';
-
-const getStatusStyle = (status: ProjectStatus) => {
-  switch (status) {
-    case 'Live':
-      return {
-        borderColor: 'rgba(45, 212, 191, 0.3)',
-        backgroundColor: 'rgba(20, 184, 166, 0.15)',
-        color: '#5eead4'
-      };
-    case 'In Development':
-      return {
-        borderColor: 'rgba(251, 191, 36, 0.3)',
-        backgroundColor: 'rgba(245, 158, 11, 0.15)',
-        color: '#fbbf24'
-      };
-    case 'Ongoing':
-      return {
-        borderColor: 'rgba(96, 165, 250, 0.3)',
-        backgroundColor: 'rgba(59, 130, 246, 0.15)',
-        color: '#93c5fd'
-      };
-    case 'Archived':
-      return {
-        borderColor: 'rgba(148, 163, 184, 0.3)',
-        backgroundColor: 'rgba(100, 116, 139, 0.15)',
-        color: '#94a3b8'
-      };
-    default:
-      return {
-        borderColor: 'rgba(114, 110, 102, 0.3)',
-        backgroundColor: 'rgba(74, 70, 64, 0.15)',
-        color: '#b8b4aa'
-      };
-  }
-};
+import { getStatusStyle } from '@/lib/statusStyles';
 
 interface ProjectListItemProps {
   project: Project;

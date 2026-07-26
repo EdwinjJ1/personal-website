@@ -158,7 +158,7 @@ html {
 }
 
 .project-feature-card {
-  --project-accent: #e8915b;
+  --project-accent: var(--color-sage);
   position: relative;
   overflow: hidden;
   border-radius: 8px;
@@ -500,7 +500,7 @@ html {
   border-radius: 7px;
   padding: 8px 9px;
   color: #191817;
-  background: rgba(246, 198, 63, 0.88);
+  background: rgb(143 176 166 / 0.88);
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
@@ -515,14 +515,14 @@ html {
   position: absolute;
   left: calc(50% + (var(--i) - 1) * 78px);
   top: calc(46% + (var(--i) - 1) * -42px);
-  border: 1px solid rgba(88, 217, 230, 0.32);
+  border: 1px solid rgb(106 138 142 / 0.45);
   border-radius: 999px;
   padding: 6px 9px;
-  color: #d8fbff;
+  color: #cfe4de;
   background: rgba(4, 18, 22, 0.72);
   font-size: 11px;
   font-weight: 800;
-  box-shadow: 0 0 24px rgba(88, 217, 230, 0.14);
+  box-shadow: 0 0 24px rgb(106 138 142 / 0.18);
 }
 
 .project-map-scan {
@@ -530,8 +530,8 @@ html {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.18), transparent),
-    linear-gradient(0deg, rgba(212, 175, 55, 0.11) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgb(173 195 187 / 0.16), transparent),
+    linear-gradient(0deg, rgb(173 195 187 / 0.10) 1px, transparent 1px);
   background-size: 180px 100%, 100% 36px;
   mix-blend-mode: multiply;
 }
@@ -541,8 +541,8 @@ html {
   width: 9px;
   height: 9px;
   border-radius: 999px;
-  border: 2px solid rgba(212, 175, 55, 0.86);
-  box-shadow: 0 0 28px rgba(212, 175, 55, 0.5);
+  border: 2px solid rgb(173 195 187 / 0.8);
+  box-shadow: 0 0 28px rgb(173 195 187 / 0.45);
 }
 
 .project-map-scan span:nth-child(1) { left: 22%; top: 34%; }
@@ -612,7 +612,7 @@ html {
 .project-page-shell {
   position: relative;
   background:
-    radial-gradient(circle at 18% 12%, rgba(232, 145, 91, 0.09), transparent 28%),
+    radial-gradient(circle at 18% 12%, rgb(122 144 136 / 0.09), transparent 28%),
     radial-gradient(circle at 78% 6%, rgba(122, 144, 136, 0.08), transparent 26%),
     linear-gradient(180deg, rgba(10, 9, 8, 0.78), rgba(26, 24, 22, 0.92) 42%, rgba(14, 13, 12, 0.94));
 }
@@ -934,7 +934,7 @@ textarea:focus {
   color: #e0d8cc;
   background:
     radial-gradient(circle at 12% 10%, rgba(122, 144, 136, 0.11), transparent 28%),
-    radial-gradient(circle at 85% 18%, rgba(232, 145, 91, 0.07), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgb(122 144 136 / 0.07), transparent 28%),
     linear-gradient(180deg, rgba(26, 24, 22, 0.22), rgba(12, 11, 10, 0.52));
 }
 

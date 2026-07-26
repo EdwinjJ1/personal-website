@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import newsData from '@/data/news-data.json';
+import { ALL_CATEGORY, NEWS_CATEGORIES, TAG_ACCENTS, chipStyle } from '@/lib/categoryStyles';
 
 interface NewsItem {
   id: string;
@@ -25,21 +26,11 @@ interface CalendarCell {
 }
 
 const categories = [
-  { value: 'all', label: 'All', color: '#7a9088' },
-  { value: 'ai', label: 'AI News', color: '#00d4ff' },
-  { value: 'research', label: 'Research', color: '#a78bfa' },
-  { value: 'industry', label: 'Industry', color: '#22c55e' },
-  { value: 'global', label: 'Global', color: '#f59e0b' },
+  ALL_CATEGORY,
+  ...Object.entries(NEWS_CATEGORIES).map(([value, { label, color }]) => ({ value, label, color })),
 ];
 
 const calendarCategories = categories.filter((category) => category.value !== 'all');
-
-const tagColors = {
-  BREAKING: { bg: '#dc2626', text: '#fff' },
-  PRODUCT: { bg: '#2563eb', text: '#fff' },
-  RESEARCH: { bg: '#16a34a', text: '#fff' },
-  POLICY: { bg: '#d97706', text: '#fff' },
-};
 
 const weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
@@ -435,8 +426,8 @@ export default function NewsPage() {
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <span
-                        className="text-xs px-2 py-0.5 rounded font-medium"
-                        style={{ backgroundColor: tagColors[item.tag].bg, color: tagColors[item.tag].text }}
+                        className="text-xs px-2 py-0.5 rounded border font-medium"
+                        style={chipStyle(TAG_ACCENTS[item.tag] ?? ALL_CATEGORY.color)}
                       >
                         {item.tag}
                       </span>
