@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 import ScatterText from '@/components/ScatterText';
+import GradientText from '@/components/GradientText';
 import { photos, categories } from '@/data/photography';
 import { getThumbnailUrl, getLightboxUrl } from '@/lib/imageUtils';
 
@@ -123,9 +124,13 @@ export default function PhotographyPage() {
             className="text-center mb-12"
           >
             <h1 className="text-5xl font-bold mb-4">
-              <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent" style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <GradientText
+                colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                animationSpeed={6}
+                showBorder={false}
+              >
                 Photography Portfolio
-              </ScatterText>
+              </GradientText>
             </h1>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
               Capturing moments when I trade the keyboard for a camera.

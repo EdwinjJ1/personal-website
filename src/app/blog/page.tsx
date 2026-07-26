@@ -38,15 +38,13 @@ export default function BlogPage() {
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
               <h1 className="text-5xl font-bold mb-6">
-                <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent">
-                  <GradientText
-                    colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                    animationSpeed={6}
-                    showBorder={false}
-                  >
-                    Blog
-                  </GradientText>
-                </ScatterText>
+                <GradientText
+                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                  animationSpeed={6}
+                  showBorder={false}
+                >
+                  Blog
+                </GradientText>
               </h1>
               <p className="text-xl max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
                 Thoughts on technology, entrepreneurship, and personal growth.
