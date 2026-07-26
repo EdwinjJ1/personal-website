@@ -7,7 +7,7 @@ import { useParams } from 'next/navigation';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
 import { getNewsBySlug, getAllNews } from '@/data/newsPosts';
-import { NEWS_CATEGORIES } from '@/lib/categoryStyles';
+import { NEWS_CATEGORIES, TAG_ACCENTS, chipStyle } from '@/lib/categoryStyles';
 
 const container = {
   hidden: { opacity: 0 },
@@ -92,8 +92,10 @@ export default function NewsPostClient() {
                   {config.label}
                 </span>
                 {post.breaking && (
-                  <span className="px-3 py-1 text-sm font-bold rounded-full animate-pulse" 
-                    style={{ background: 'linear-gradient(to right, #dc2626, #b91c1c)', color: '#fff' }}>
+                  <span
+                    className="px-3 py-1 text-sm font-bold rounded-full border"
+                    style={chipStyle(TAG_ACCENTS.BREAKING)}
+                  >
                     BREAKING
                   </span>
                 )}
