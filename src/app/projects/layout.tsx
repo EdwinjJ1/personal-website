@@ -3,12 +3,12 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Projects',
   description:
-    "Selected projects by Evan Lin — AI experiments, side projects, and tools built during CS studies and beyond.",
+    "Current products by Evan Lin — AI workflows, personal energy planning, camera research, education, and developer tools.",
   alternates: { canonical: '/projects' },
   openGraph: {
     title: 'Projects · Evan Lin',
     description:
-      'Selected projects — AI experiments, side projects, and tools.',
+      'Current products — AI workflows, personal energy planning, camera research, education, and developer tools.',
     url: '/projects',
   },
 };

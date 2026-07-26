@@ -9,21 +9,39 @@ interface ProjectFlagshipShowcaseProps {
 }
 
 function getInspectorProfile(project: Project) {
+  if (project.title === 'Roundtable') {
+    return {
+      mode: 'workflow control plane',
+      thesis: 'Makes multi-agent delivery visible, repeatable, and reviewable.',
+      signal: 'goal -> agent squad -> review gate',
+      angle: 'A persistent operating layer for local AI coding work.',
+    };
+  }
+
+  if (project.title === 'Akeso') {
+    return {
+      mode: 'personal energy coach',
+      thesis: 'Plans important work around the energy a person has today.',
+      signal: 'check-in -> energy map -> day plan',
+      angle: 'A calmer, more practical way to make daily planning personal.',
+    };
+  }
+
+  if (project.title.startsWith('LensDex')) {
+    return {
+      mode: 'gear research system',
+      thesis: 'Turns fragmented camera research into a trusted comparison flow.',
+      signal: 'specs + prices + reviews',
+      angle: 'A bilingual product database for clearer photography decisions.',
+    };
+  }
+
   if (project.title === 'FinalBoss') {
     return {
       mode: 'exam engine',
       thesis: 'A paid study workspace, not a content archive.',
       signal: 'materials -> mock -> feedback',
       angle: 'Education SaaS with a campus-first GTM.',
-    };
-  }
-
-  if (project.title.includes('Memory')) {
-    return {
-      mode: 'identity layer',
-      thesis: 'Personal context as portable AI infrastructure.',
-      signal: 'public/private token split',
-      angle: 'Open-core MCP engine with hosted product path.',
     };
   }
 

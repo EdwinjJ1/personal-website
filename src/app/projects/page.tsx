@@ -34,7 +34,7 @@ export default function ProjectsPage() {
   const liveCount = projects.filter((p) => p.status === 'Live').length;
   const flagshipCount = projects.filter((p) => p.featured).length;
 
-  const flagshipOrder = ['FinalBoss', 'KnowMe Memory MCP', 'Chrono-Map: Sydney Layers', 'Chiron Prompt Enhancer'];
+  const flagshipOrder = ['Roundtable', 'Akeso', 'LensDex (镜库)', 'FinalBoss', 'Chrono-Map: Sydney Layers', 'Chiron Prompt Enhancer'];
   const highlight = featured.length > 0
     ? [...featured].sort((a, b) => {
         const aIndex = flagshipOrder.indexOf(a.title);
@@ -61,8 +61,8 @@ export default function ProjectsPage() {
                 <span className="accent-text">real leverage.</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>
-                Four flagship builds at the top: personal AI memory, prompt enhancement,
-                story-rich maps, and AI exam prep. The rest of the archive stays below.
+                A focused set of products across AI workflows, energy-aware planning, camera research,
+                maps, education, and developer tools. Older experiments have been retired from view.
               </p>
 
               {/* Stat strip */}
@@ -97,7 +97,7 @@ export default function ProjectsPage() {
                   <h2 className="text-2xl font-bold tracking-tight">Flagship builds</h2>
                 </div>
                 <p className="max-w-md text-sm leading-relaxed" style={{ color: 'rgb(var(--p-ink-dim))' }}>
-                  Ordered for recruiters, collaborators, and investors: strongest product signal first.
+                  Ordered around the work that is active now: current products first, then the wider catalogue.
                 </p>
               </div>
               <ProjectFlagshipShowcase projects={highlight} />
