@@ -4,7 +4,6 @@ import React, { useState, useCallback, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
-import ScatterText from '@/components/ScatterText';
 import GradientText from '@/components/GradientText';
 import { photos, categories } from '@/data/photography';
 import { getThumbnailUrl, getLightboxUrl } from '@/lib/imageUtils';
@@ -393,7 +392,7 @@ export default function PhotographyPage() {
             className="mt-16 scroll-mt-24"
           >
             <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: '#e0d8cc' }}>
-              <ScatterText as="span" scatterRadius={35} rotationRange={10}>📷 My Gear</ScatterText>
+              📷 My Gear
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Camera Bodies */}
@@ -603,7 +602,7 @@ export default function PhotographyPage() {
             className="mt-16 text-center"
           >
             <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>
-              <ScatterText as="span" scatterRadius={35} rotationRange={10}>Interested in a photoshoot?</ScatterText>
+              Interested in a photoshoot?
             </h2>
             <p className="mb-6" style={{ color: '#b8b4aa' }}>
               Available for portrait sessions, event photography, and creative collaborations in Sydney.

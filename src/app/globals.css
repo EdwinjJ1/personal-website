@@ -80,6 +80,39 @@ html {
 }
 
 /* ============================================================
+   ENTRANCE ANIMATIONS
+   CSS rather than JS so content is never gated on an animation
+   frame — a backgrounded tab throttles rAF, which used to leave
+   pages and cards stuck at opacity 0.
+   ============================================================ */
+/* Entry animations are opt-in: the element is visible by default and only
+   animates once the document is actually being looked at. Browsers pause
+   animations in a backgrounded tab, and anything that starts at opacity 0
+   would otherwise stay blank there. `data-visible` is set by
+   MotionSafety once the document reports itself visible. */
+@keyframes enterUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+[data-visible='true'] .page-enter {
+  animation: enterUp 0.25s ease-out;
+}
+
+[data-visible='true'] .card-enter {
+  animation: enterUp 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .card-enter {
+    animation: none;
+  }
+}
+
+/* ============================================================
    ACCENT — one sage accent for the whole site.
    ============================================================ */
 :root {

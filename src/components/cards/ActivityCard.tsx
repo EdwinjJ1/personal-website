@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
-import ScatterText from '@/components/ScatterText';
 import staticData from '@/data/github-activity.json';
 
 interface ActivityDay {
@@ -112,7 +111,7 @@ export default function ActivityCard() {
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
         </svg>
-        <ScatterText scatterRadius={25} rotationRange={10} staggerDelay={0.015}>GitHub Activity</ScatterText>
+        GitHub Activity
         <span className="text-xs text-green-400 ml-1" title="Real data from GitHub">&#x25CF;</span>
       </h3>
       <span className="text-xs tabular-nums" style={{ color: '#b8b4aa' }}>

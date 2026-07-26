@@ -2,8 +2,6 @@
 
 import BaseCard from './BaseCard';
 import Avatar from '../Avatar';
-import ScatterText from '@/components/ScatterText';
-import ParticleName from '@/components/ParticleName';
 
 export default function PersonalCard() {
   return (
@@ -12,23 +10,19 @@ export default function PersonalCard() {
         <div className="flex items-center gap-3 mb-3">
           <Avatar size="sm" />
           <div>
-            <ParticleName text="Evan Lin" fontSize={28} accent="#7a9088" />
-            <p className="text-sm" style={{ color: '#7a9088' }}>
-              <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01} color="#7a9088">Computer Science Student</ScatterText>
-            </p>
+            <p className="text-2xl font-black tracking-tight text-ink">Evan Lin</p>
+            <p className="text-sm text-sage">Computer Science Student</p>
           </div>
         </div>
 
-        <p className="text-sm leading-relaxed flex-grow" style={{ color: '#b8b4aa' }}>
-          <ScatterText scatterRadius={15} rotationRange={5}>
-            19-year-old CS student at UNSW Sydney with a passion for AI and innovation. Former startup founder turned student, dedicated to building technology that makes a meaningful impact.
-          </ScatterText>
+        <p className="text-sm leading-relaxed flex-grow text-ink-mid">
+          19-year-old CS student at UNSW Sydney with a passion for AI and
+          innovation. Former startup founder turned student, dedicated to
+          building technology that makes a meaningful impact.
         </p>
 
         <div className="flex gap-2 mt-3">
-          <span className="px-3 py-1 text-xs rounded-full border" style={{ backgroundColor: 'rgba(122, 144, 136, 0.15)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
-            <ScatterText scatterRadius={15} rotationRange={6}>Available for work</ScatterText>
-          </span>
+          <span className="badge">Available for work</span>
         </div>
       </div>
     </BaseCard>
