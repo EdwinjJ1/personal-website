@@ -1,32 +1,78 @@
 @import "tailwindcss";
 
+/* ============================================================
+   DESIGN TOKENS
+   Single source of truth for the sage palette. Exposed to
+   Tailwind as utilities (text-sage, bg-surface-3, border-line…).
+   ============================================================ */
+@theme static {
+  /* sage accent family */
+  --color-sage: #7a9088;
+  --color-sage-bright: #8fb0a6;
+  --color-sage-mist: #adc3bb;
+  --color-sage-deep: #5f7a72;
+  --color-teal: #6a8a8e;
+
+  /* warm charcoal surfaces */
+  --color-surface-0: #121110;
+  --color-surface-1: #1a1816;
+  --color-surface-2: #211e1c;
+  --color-surface-3: #282622;
+  --color-surface-4: #312e2a;
+
+  /* ink */
+  --color-ink: #e0d8cc;
+  --color-ink-mid: #b8b4aa;
+  --color-ink-dim: #8a8680;
+
+  /* lines */
+  --color-line: rgb(114 110 102 / 0.3);
+  --color-line-strong: rgb(122 144 136 / 0.5);
+
+  /* status — distinguishable without leaving the palette */
+  --color-status-live: #8fb0a6;
+  --color-status-dev: #c9a86a;
+  --color-status-planned: #8a8680;
+}
+
+/* Font stacks. Declared on <body> rather than :root because that is
+   where next/font puts --font-inter / --font-jetbrains, and a custom
+   property cannot read a value defined on a descendant. Kept outside
+   @theme because Tailwind prunes theme vars no utility references. */
+body {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+/* Legacy aliases — kept so files not yet swept keep rendering
+   correctly. New code should use the tokens above. */
 :root {
-  --bg-primary: #1a1816;
-  --bg-card: #282622;
-  --text-primary: #e0d8cc;
-  --text-secondary: #b8b4aa;
-  --text-tertiary: #8a8680;
-  --bg-hover: #312e2a;
-  --bg-subtle: #211e1c;
-  --accent-primary: #7a9088;
-  --accent-secondary: #6a8a8e;
-  --border-color: rgba(114, 110, 102, 0.3);
-  --border-hover: rgba(122, 144, 136, 0.5);
+  --bg-primary: var(--color-surface-1);
+  --bg-card: var(--color-surface-3);
+  --text-primary: var(--color-ink);
+  --text-secondary: var(--color-ink-mid);
+  --text-tertiary: var(--color-ink-dim);
+  --bg-hover: var(--color-surface-4);
+  --bg-subtle: var(--color-surface-2);
+  --accent-primary: var(--color-sage);
+  --accent-secondary: var(--color-teal);
+  --border-color: var(--color-line);
+  --border-hover: var(--color-line-strong);
 }
 
 .glass-card {
-  background: rgba(40, 38, 34, 0.7) !important;
+  background: color-mix(in srgb, var(--color-surface-3) 70%, transparent) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(122, 144, 136, 0.15) !important;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(122 144 136 / 0.15) !important;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 0.1);
 }
 
 /* Hover effect for glass card */
 .glass-card:hover {
-  background: rgba(49, 46, 42, 0.8) !important;
-  border-color: rgba(122, 144, 136, 0.4) !important;
-  box-shadow: 0 10px 40px -10px rgba(122, 144, 136, 0.2);
+  background: color-mix(in srgb, var(--color-surface-4) 80%, transparent) !important;
+  border-color: rgb(122 144 136 / 0.4) !important;
+  box-shadow: 0 10px 40px -10px rgb(122 144 136 / 0.2);
 }
 
 html {
@@ -34,30 +80,12 @@ html {
 }
 
 /* ============================================================
-   PER-PAGE ACCENT SYSTEM
-   每个页面通过 .page-accent--xxx 设一个主调色，
-   下面的工具类自动跟随，复制到其他页只改这一处。
+   ACCENT — one sage accent for the whole site.
    ============================================================ */
 :root {
-  --accent: #7a9088;          /* default = sage (home) */
-  --accent-soft: rgba(122, 144, 136, 0.14);
-  --accent-line: rgba(122, 144, 136, 0.35);
-}
-
-.page-accent--orange {  /* Projects */
-  --accent: #e8915b;
-  --accent-soft: rgba(232, 145, 91, 0.14);
-  --accent-line: rgba(232, 145, 91, 0.38);
-}
-.page-accent--cyan {    /* Blog */
-  --accent: #6db4c4;
-  --accent-soft: rgba(109, 180, 196, 0.14);
-  --accent-line: rgba(109, 180, 196, 0.38);
-}
-.page-accent--violet {  /* About */
-  --accent: #a890c8;
-  --accent-soft: rgba(168, 144, 200, 0.14);
-  --accent-line: rgba(168, 144, 200, 0.38);
+  --accent: var(--color-sage);
+  --accent-soft: rgb(122 144 136 / 0.14);
+  --accent-line: rgb(122 144 136 / 0.35);
 }
 
 .accent-text { color: var(--accent); }
@@ -202,7 +230,7 @@ html {
   flex: 0 0 auto;
   padding: 0 10px;
   color: #8a8680;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -299,7 +327,7 @@ html {
 
 .project-inspector-title span {
   color: var(--project-accent);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-family: var(--font-mono);
   font-size: 12px;
   font-weight: 800;
 }
@@ -580,6 +608,108 @@ body {
   color: var(--text-primary);
 }
 
+/* ============================================================
+   TYPOGRAPHY SCALE
+   The editorial hierarchy the Projects page established, made
+   available site-wide.
+   ============================================================ */
+.type-eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-sage);
+}
+
+.type-h1 {
+  font-size: clamp(2.5rem, 6vw, 3.75rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--color-ink);
+}
+
+.type-h2 {
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+/* Keep Tailwind's font-mono on the same stack as var(--font-mono). */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.type-mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-dim);
+}
+
+/* ============================================================
+   COMPONENT RECIPES — buttons and badges
+   ============================================================ */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.625rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  transition: transform 0.2s ease, background-color 0.2s ease,
+    border-color 0.2s ease, color 0.2s ease;
+}
+.btn-pill:hover { transform: translateY(-1px); }
+
+.btn-primary {
+  background: linear-gradient(to right, var(--color-sage), var(--color-teal));
+  color: var(--color-surface-1);
+}
+.btn-primary:hover {
+  background: linear-gradient(to right, var(--color-sage-bright), var(--color-sage));
+}
+
+.btn-secondary {
+  border: 1px solid var(--color-sage);
+  color: var(--color-sage);
+}
+.btn-secondary:hover {
+  background-color: var(--accent-soft);
+  color: var(--color-sage-bright);
+  border-color: var(--color-sage-bright);
+}
+
+.btn-ghost {
+  border: 1px solid var(--color-line);
+  color: var(--color-ink-mid);
+}
+.btn-ghost:hover {
+  border-color: var(--color-line-strong);
+  color: var(--color-ink);
+}
+
+/* One badge shape for status, category and tag chips.
+   Callers set --badge-accent; the fill and border derive from it. */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  border-radius: 9999px;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--badge-accent, var(--color-sage));
+  background-color: color-mix(in srgb, var(--badge-accent, var(--color-sage)) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--badge-accent, var(--color-sage)) 35%, transparent);
+}
+
 /* Custom text color utilities */
 .text-primary {
   color: var(--text-primary);
@@ -603,7 +733,7 @@ textarea::placeholder {
 /* Focus ring colors */
 input:focus,
 textarea:focus {
-  --tw-ring-color: #7a9088;
+  --tw-ring-color: var(--color-sage);
 }
 
 .hidden-door-button {
