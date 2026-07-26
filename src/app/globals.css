@@ -70,18 +70,18 @@
   --p-sage-deep: 41 63 57;
   --p-teal: 68 100 105;
 
-  /* Warm greige, NOT paper-white. Every step carries a little sage so
-     the accent sits in the same family as the neutrals, and the page
-     ground stays clearly darker than the card face — that gap is what
-     makes cards read as lifted. The ramp inverts (0 = furthest back,
-     4 = hover) so the semantics survive the flip.
+  /* Warm beige, NOT paper-white. Each step keeps a real red>green>blue
+     spread (roughly +12 on the blue channel) so the ground reads as
+     cream rather than grey, and the page stays clearly darker than the
+     card face — that gap is what makes cards read as lifted. The ramp
+     inverts (0 = furthest back, 4 = hover) so semantics survive the flip.
 
      0/1 are the page. 2/3 are the card face. 4 is hover/inset. */
-  --p-surface-0: 228 226 219;
-  --p-surface-1: 236 234 227;
-  --p-surface-2: 246 245 240;
-  --p-surface-3: 250 249 245;
-  --p-surface-4: 233 231 223;
+  --p-surface-0: 231 225 210;
+  --p-surface-1: 239 233 219;
+  --p-surface-2: 249 245 235;
+  --p-surface-3: 252 249 241;
+  --p-surface-4: 236 229 214;
 
   --p-ink: 38 42 40;
   --p-ink-mid: 92 98 94;
@@ -104,6 +104,12 @@
 
   /* Light-mode sage is darker, so accent fills need light text on top. */
   --p-on-accent: 252 250 246;
+
+  /* Backdrop wash only — never text. --p-teal is an accent dark enough
+     for labels, which turns muddy when spread thin over beige, so the
+     ambient gradient gets its own high-key tint. */
+  --p-wash-teal: 150 205 205;
+  --p-wash-sage: 168 200 186;
 }
 
 @theme static {
@@ -180,20 +186,23 @@ body {
    Light mode keeps that logic — surface-3 card on a surface-1 page —
    and adds a soft warm shadow plus a top highlight, so the card feels
    like a physical layer rather than a lighter rectangle. */
+/* Left slightly translucent so the teal backdrop tints through the card
+   face. Opaque cards would mask the gradient entirely and the wash would
+   only survive in the page margins. */
 .theme-light .glass-card {
-  background: rgb(var(--p-surface-3) / 0.92) !important;
+  background: rgb(var(--p-surface-3) / 0.82) !important;
   border-color: rgb(var(--p-line) / 0.45) !important;
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.7),
+    inset 0 1px 0 rgb(255 255 255 / 0.75),
     0 1px 2px rgb(var(--p-shadow) / 0.05),
     0 10px 28px -14px rgb(var(--p-shadow) / 0.14);
 }
 
 .theme-light .glass-card:hover {
-  background: rgb(var(--p-surface-3)) !important;
+  background: rgb(var(--p-surface-3) / 0.94) !important;
   border-color: rgb(var(--p-sage) / 0.45) !important;
   box-shadow:
-    inset 0 1px 0 rgb(255 255 255 / 0.8),
+    inset 0 1px 0 rgb(255 255 255 / 0.85),
     0 2px 4px rgb(var(--p-shadow) / 0.06),
     0 18px 44px -18px rgb(var(--p-sage) / 0.3);
 }
@@ -775,8 +784,10 @@ body {
 /* ============================================================
    AMBIENT BACKDROP (light mode)
    Stands in for the WebGL starfield, which only reads as
-   atmosphere on a dark ground. Two wide, very low-opacity sage
-   blooms — enough to keep the page from looking like flat paper.
+   atmosphere on a dark ground. A pale teal wash drifts across the
+   warm beige base — the cool/warm contrast is what stops the page
+   reading as flat card stock. Kept fixed so it behaves like a
+   backdrop rather than scrolling with the content.
    ============================================================ */
 .site-bloom {
   position: fixed;
@@ -784,23 +795,37 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
-    /* Sage wash top-left and a cooler teal top-right give the ground
-       some direction, so it does not read as flat grey card stock. */
+    /* Main event: a broad teal sweep across the upper right. The origin
+       stays just inside the viewport — pushed off-canvas, only the faint
+       tail would show and the wash reads as nothing at all. */
     radial-gradient(
-      70% 55% at 8% -5%,
-      rgb(var(--p-sage) / 0.16) 0%,
+      120% 90% at 78% 12%,
+      rgb(var(--p-wash-teal) / 0.85) 0%,
+      rgb(var(--p-wash-teal) / 0.45) 30%,
+      rgb(var(--p-wash-teal) / 0.14) 55%,
+      transparent 78%
+    ),
+    /* A cooler pool bottom-left keeps the teal from feeling stuck to one
+       corner and gives the diagonal something to resolve into. */
+    radial-gradient(
+      90% 70% at 6% 92%,
+      rgb(var(--p-wash-teal) / 0.5) 0%,
+      rgb(var(--p-wash-teal) / 0.18) 42%,
+      transparent 72%
+    ),
+    /* Sage bridges the two so the teal belongs to the palette rather
+       than sitting on top of it as a separate colour. */
+    radial-gradient(
+      75% 65% at 24% 22%,
+      rgb(var(--p-wash-sage) / 0.42) 0%,
       transparent 66%
     ),
-    radial-gradient(
-      60% 50% at 96% 4%,
-      rgb(var(--p-teal) / 0.11) 0%,
-      transparent 68%
-    ),
-    /* A slow vertical settle keeps the lower half from going pure flat. */
+    /* A slow vertical settle keeps the mid-page from going pure flat. */
     linear-gradient(
-      180deg,
+      170deg,
       transparent 0%,
-      rgb(var(--p-shadow) / 0.03) 100%
+      transparent 55%,
+      rgb(var(--p-shadow) / 0.025) 100%
     );
 }
 
