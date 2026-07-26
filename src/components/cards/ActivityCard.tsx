@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import BaseCard from './BaseCard';
-import { motion } from 'framer-motion';
 import staticData from '@/data/github-activity.json';
 
 interface ActivityDay {
@@ -47,11 +46,11 @@ function useCountUp(target: number, duration = 1200): number {
 }
 
 const ACTIVITY_COLORS = [
-  'bg-[#312e2a]',
-  'bg-teal-900/40',
-  'bg-teal-700/60',
-  'bg-teal-500/80',
-  'bg-teal-400',
+  'bg-surface-4',
+  'bg-sage-deep/35',
+  'bg-sage-deep/70',
+  'bg-sage/85',
+  'bg-sage-bright',
 ];
 
 function toLevel(count: number): number {
@@ -107,16 +106,16 @@ export default function ActivityCard() {
 
   const Header = () => (
     <div className="flex justify-between items-center mb-3">
-      <h3 className="font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dd4bf" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <h3 className="font-semibold flex items-center gap-2 text-ink">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" className="text-sage" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
           <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
         </svg>
         GitHub Activity
-        <span className="text-xs text-green-400 ml-1" title="Real data from GitHub">&#x25CF;</span>
+        <span className="text-xs text-sage-bright ml-1" title="Real data from GitHub">&#x25CF;</span>
       </h3>
-      <span className="text-xs tabular-nums" style={{ color: '#b8b4aa' }}>
+      <span className="text-xs tabular-nums text-ink-mid">
         {displayTotal} contributions
-        <span className="ml-1 text-[10px]" style={{ color: '#8a8680' }}>(last year)</span>
+        <span className="ml-1 text-[10px] text-ink-dim">(last year)</span>
       </span>
     </div>
   );
@@ -140,11 +139,11 @@ export default function ActivityCard() {
             href={leetcode.profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="shrink-0 transition-colors hover:text-[#ffa116]"
+            className="shrink-0 transition-colors"
             title={`Easy ${leetcode.solved.easy} · Medium ${leetcode.solved.medium} · Hard ${leetcode.solved.hard}`}
           >
-            <span style={{ color: '#ffa116' }}>LeetCode</span>{' '}
-            <span className="tabular-nums" style={{ color: '#b8b4aa' }}>{leetcode.solved.all} solved</span>
+            <span className="text-status-dev">LeetCode</span>{' '}
+            <span className="tabular-nums text-ink-mid">{leetcode.solved.all} solved</span>
           </a>
           {latestSolved && (
             <a
@@ -190,14 +189,13 @@ export default function ActivityCard() {
         >
           <Header />
           <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
-            {days.map((day, index) => (
-              <motion.div
+            {/* Static tiles: a year of contributions is ~365 nodes, and one
+                staggered tween each cost more than the effect was worth. */}
+            {days.map((day) => (
+              <div
                 key={day.date}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.6 + index * 0.003 }}
                 className={`min-h-[8px] rounded-sm ${ACTIVITY_COLORS[day.level]}
-                  hover:ring-1 hover:ring-teal-400 cursor-pointer relative group`}
+                  hover:ring-1 hover:ring-sage cursor-pointer relative group`}
                 title={`${day.count} contributions on ${day.date}`}
               >
                 <div
@@ -206,7 +204,7 @@ export default function ActivityCard() {
                 >
                   {day.count} contributions
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </a>
