@@ -5,7 +5,6 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
-import ScatterText from '@/components/ScatterText';
 import { friends, type Friend } from '@/data/friends';
 
 const RING_CAPACITY = [6, 10, 14];
@@ -189,15 +188,13 @@ export default function FriendsPage() {
             className="text-center mb-6"
           >
             <h1 className="text-5xl font-bold mb-4">
-              <ScatterText as="span" scatterRadius={60} rotationRange={15} color="transparent">
-                <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
-                  animationSpeed={6}
-                  showBorder={false}
-                >
-                  Friends
-                </GradientText>
-              </ScatterText>
+              <GradientText
+                colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                animationSpeed={6}
+                showBorder={false}
+              >
+                Friends
+              </GradientText>
             </h1>
             <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
               A constellation of friends and fellow travellers. Hover to learn more, click to visit.
