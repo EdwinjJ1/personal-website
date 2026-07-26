@@ -255,7 +255,7 @@ html {
   transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 .showcase-card:hover {
-  background-color: rgb(var(--p-shadow) / calc(0.72 * var(--p-shadow-strength)));
+  background-color: rgb(var(--p-surface-1));
   border-color: var(--accent-line);
   box-shadow: 0 18px 48px -28px var(--accent);
 }
@@ -323,7 +323,7 @@ html {
   padding: 24px;
   background:
     radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--project-accent) 20%, transparent), transparent 35%),
-    linear-gradient(135deg, rgb(var(--p-shadow) / calc(0.96 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
+    linear-gradient(135deg, rgb(var(--p-surface-0)), rgb(var(--p-surface-0)));
 }
 
 .project-icon-badge {
@@ -426,7 +426,7 @@ html {
   padding: 18px;
   background:
     radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--project-accent) 18%, transparent), transparent 42%),
-    linear-gradient(145deg, rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
+    linear-gradient(145deg, rgb(var(--p-surface-0)), rgb(var(--p-surface-0)));
   box-shadow: 0 24px 70px -54px var(--project-accent);
 }
 
@@ -634,7 +634,7 @@ html {
   border-radius: 999px;
   padding: 6px 9px;
   color: #cfe4de;
-  background: rgb(var(--p-shadow) / calc(0.72 * var(--p-shadow-strength)));
+  background: rgb(var(--p-surface-1));
   font-size: 11px;
   font-weight: 800;
   box-shadow: 0 0 24px rgb(var(--p-teal) / 0.18);
@@ -672,7 +672,7 @@ html {
   padding: 22px;
   background:
     radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--project-accent) 20%, transparent), transparent 32%),
-    linear-gradient(135deg, rgb(var(--p-shadow) / calc(0.96 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
+    linear-gradient(135deg, rgb(var(--p-surface-0)), rgb(var(--p-surface-0)));
 }
 
 .project-pipeline-node {
@@ -1003,7 +1003,7 @@ textarea:focus {
   border-radius: 8px 8px 4px 4px;
   color: rgb(var(--p-sage-bright));
   background:
-    linear-gradient(90deg, rgb(var(--p-shadow) / calc(0.86 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength)))),
+    linear-gradient(90deg, rgb(var(--p-surface-1)), rgb(var(--p-surface-0))),
     rgb(var(--p-surface-1) / 0.94);
   box-shadow: 0 16px 44px rgb(var(--p-shadow) / calc(0.36 * var(--p-shadow-strength))), inset 0 0 22px rgb(var(--p-sage) / 0.08);
   cursor: pointer;
@@ -1024,7 +1024,7 @@ textarea:focus {
   border-radius: 8px 8px 3px 3px;
   background:
     linear-gradient(90deg, rgb(var(--p-sage) / 0.12), transparent 16%),
-    linear-gradient(135deg, rgb(var(--p-surface-3) / 0.9), rgb(var(--p-shadow) / calc(0.94 * var(--p-shadow-strength))));
+    linear-gradient(135deg, rgb(var(--p-surface-3) / 0.9), rgb(var(--p-surface-0)));
 }
 
 .hidden-door-slit {
@@ -1068,8 +1068,8 @@ textarea:focus {
   padding: 28px;
   background:
     radial-gradient(circle at 20% 0%, rgb(var(--p-sage) / 0.16), transparent 36%),
-    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.97), rgb(var(--p-shadow) / calc(0.98 * var(--p-shadow-strength))));
-  box-shadow: 0 28px 90px rgb(var(--p-shadow) / calc(0.52 * var(--p-shadow-strength)));
+    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.97), rgb(var(--p-surface-0)));
+  box-shadow: 0 28px 90px rgb(var(--p-surface-2));
 }
 
 .private-gate-panel h2 {
@@ -1155,7 +1155,7 @@ textarea:focus {
   background:
     radial-gradient(circle at 12% 10%, rgb(var(--p-sage) / 0.11), transparent 28%),
     radial-gradient(circle at 85% 18%, rgb(var(--p-sage) / 0.07), transparent 28%),
-    linear-gradient(180deg, rgb(var(--p-surface-1) / 0.22), rgb(var(--p-shadow) / calc(0.52 * var(--p-shadow-strength))));
+    linear-gradient(180deg, rgb(var(--p-surface-1) / 0.22), rgb(var(--p-surface-2)));
 }
 
 .private-lock-panel,
@@ -1175,7 +1175,7 @@ textarea:focus {
   background:
     linear-gradient(90deg, rgb(var(--p-ink) / 0.035) 1px, transparent 1px),
     linear-gradient(0deg, rgb(var(--p-ink) / 0.03) 1px, transparent 1px),
-    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.86), rgb(var(--p-shadow) / calc(0.9 * var(--p-shadow-strength))));
+    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.86), rgb(var(--p-surface-0)));
   background-size: 34px 34px, 34px 34px, auto;
   box-shadow: 0 28px 90px rgb(var(--p-shadow) / calc(0.34 * var(--p-shadow-strength)));
 }
@@ -1264,7 +1264,7 @@ textarea:focus {
 .private-editor textarea:focus,
 .private-editor select:focus {
   border-color: rgb(var(--p-sage-bright) / 0.72);
-  background: rgb(var(--p-shadow) / calc(0.5 * var(--p-shadow-strength)));
+  background: rgb(var(--p-surface-2));
 }
 
 .private-lock-form input {
