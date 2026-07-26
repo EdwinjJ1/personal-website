@@ -5,34 +5,116 @@
    Single source of truth for the sage palette. Exposed to
    Tailwind as utilities (text-sage, bg-surface-3, border-line…).
    ============================================================ */
+/* ------------------------------------------------------------
+   Theme palettes.
+
+   Every colour is defined twice — once per theme — as a raw `--p-*`
+   channel triplet, then read through @theme below. Triplets rather
+   than hex so component code can build translucent variants with
+   `rgb(var(--p-ink) / 0.4)` and have those follow the theme too.
+
+   `.theme-dark` / `.theme-light` are stamped on <html> by the inline
+   script in layout.tsx; the bare :root block doubles as the dark
+   default so a no-JS visitor still gets a coherent page.
+   ------------------------------------------------------------ */
+:root,
+.theme-dark {
+  color-scheme: dark;
+
+  --p-sage: 122 144 136;
+  --p-sage-bright: 143 176 166;
+  --p-sage-mist: 173 195 187;
+  --p-sage-deep: 95 122 114;
+  --p-teal: 106 138 142;
+
+  /* warm charcoal, darkest first */
+  --p-surface-0: 18 17 16;
+  --p-surface-1: 26 24 22;
+  --p-surface-2: 33 30 28;
+  --p-surface-3: 40 38 34;
+  --p-surface-4: 49 46 42;
+
+  --p-ink: 224 216 204;
+  --p-ink-mid: 184 180 170;
+  --p-ink-dim: 138 134 128;
+
+  --p-line: 114 110 102;
+  --p-line-alpha: 0.3;
+  --p-line-strong-alpha: 0.5;
+
+  --p-status-dev: 201 168 106;
+
+  /* Fills layered *over* a surface. On dark that means lifting with
+     ink; on light it means deepening with the shadow colour — so a
+     component's `rgb(var(--p-raise) / 0.05)` reads correctly in both. */
+  --p-raise: 224 216 204;
+  --p-shadow: 0 0 0;
+  --p-shadow-strength: 1;
+}
+
+.theme-light {
+  color-scheme: light;
+
+  /* Sage darkens in light mode — dark-theme #7a9088 only clears ~3:1
+     on a bone-white ground, which fails for body copy. */
+  --p-sage: 79 107 98;
+  --p-sage-bright: 62 89 81;
+  --p-sage-mist: 108 136 126;
+  --p-sage-deep: 45 68 61;
+  --p-teal: 74 106 110;
+
+  /* Warm bone/paper. The ramp inverts so surface-0 stays "furthest
+     back" and surface-4 stays "hover" — semantics hold, direction
+     flips. 2 and 3 are the lifted card face. */
+  --p-surface-0: 250 248 243;
+  --p-surface-1: 247 244 238;
+  --p-surface-2: 255 253 248;
+  --p-surface-3: 255 253 248;
+  --p-surface-4: 239 234 225;
+
+  --p-ink: 42 39 37;
+  --p-ink-mid: 107 101 92;
+  --p-ink-dim: 138 130 118;
+
+  --p-line: 160 150 136;
+  --p-line-alpha: 0.36;
+  --p-line-strong-alpha: 0.55;
+
+  --p-status-dev: 150 112 32;
+
+  --p-raise: 42 39 37;
+  --p-shadow: 60 50 38;
+  --p-shadow-strength: 0.5;
+}
+
 @theme static {
   /* sage accent family */
-  --color-sage: #7a9088;
-  --color-sage-bright: #8fb0a6;
-  --color-sage-mist: #adc3bb;
-  --color-sage-deep: #5f7a72;
-  --color-teal: #6a8a8e;
+  --color-sage: rgb(var(--p-sage));
+  --color-sage-bright: rgb(var(--p-sage-bright));
+  --color-sage-mist: rgb(var(--p-sage-mist));
+  --color-sage-deep: rgb(var(--p-sage-deep));
+  --color-teal: rgb(var(--p-teal));
 
-  /* warm charcoal surfaces */
-  --color-surface-0: #121110;
-  --color-surface-1: #1a1816;
-  --color-surface-2: #211e1c;
-  --color-surface-3: #282622;
-  --color-surface-4: #312e2a;
+  /* surfaces, back-to-front */
+  --color-surface-0: rgb(var(--p-surface-0));
+  --color-surface-1: rgb(var(--p-surface-1));
+  --color-surface-2: rgb(var(--p-surface-2));
+  --color-surface-3: rgb(var(--p-surface-3));
+  --color-surface-4: rgb(var(--p-surface-4));
 
   /* ink */
-  --color-ink: #e0d8cc;
-  --color-ink-mid: #b8b4aa;
-  --color-ink-dim: #8a8680;
+  --color-ink: rgb(var(--p-ink));
+  --color-ink-mid: rgb(var(--p-ink-mid));
+  --color-ink-dim: rgb(var(--p-ink-dim));
 
   /* lines */
-  --color-line: rgb(114 110 102 / 0.3);
-  --color-line-strong: rgb(122 144 136 / 0.5);
+  --color-line: rgb(var(--p-line) / var(--p-line-alpha));
+  --color-line-strong: rgb(var(--p-sage) / var(--p-line-strong-alpha));
 
   /* status — distinguishable without leaving the palette */
-  --color-status-live: #8fb0a6;
-  --color-status-dev: #c9a86a;
-  --color-status-planned: #8a8680;
+  --color-status-live: rgb(var(--p-sage-bright));
+  --color-status-dev: rgb(var(--p-status-dev));
+  --color-status-planned: rgb(var(--p-ink-dim));
 }
 
 /* Font stacks. Declared on <body> rather than :root because that is
@@ -639,6 +721,77 @@ html {
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+}
+
+/* ============================================================
+   AMBIENT BACKDROP (light mode)
+   Stands in for the WebGL starfield, which only reads as
+   atmosphere on a dark ground. Two wide, very low-opacity sage
+   blooms — enough to keep the page from looking like flat paper.
+   ============================================================ */
+.site-bloom {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      60% 50% at 12% 0%,
+      rgb(var(--p-sage) / 0.1) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      55% 45% at 92% 8%,
+      rgb(var(--p-teal) / 0.07) 0%,
+      transparent 72%
+    );
+}
+
+/* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 34px;
+  flex-shrink: 0;
+  border-radius: 9999px;
+  border: 1px solid var(--color-line);
+  background: rgb(var(--p-raise) / 0.05);
+  color: var(--color-ink-mid);
+  cursor: pointer;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--color-line-strong);
+  color: var(--color-sage);
+  background: rgb(var(--p-sage) / 0.12);
+}
+
+.theme-toggle-glyph {
+  display: inline-flex;
+  /* Fades the glyph in after hydration resolves the theme, so the
+     button does not pop between an empty and filled state. */
+  animation: themeGlyphIn 0.2s ease-out;
+}
+
+@keyframes themeGlyphIn {
+  from {
+    opacity: 0;
+    transform: rotate(-25deg) scale(0.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-glyph {
+    animation: none;
+  }
 }
 
 /* ============================================================

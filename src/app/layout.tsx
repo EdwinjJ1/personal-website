@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { THEME_SCRIPT } from "@/lib/theme";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
 
 import Header from '@/components/Header';
 import ClientRouter from '@/components/ClientRouter';
-import Galaxy from '@/components/Galaxy';
+import SiteBackdrop from '@/components/SiteBackdrop';
 import SplashOrchestrator from '@/components/SplashOrchestrator';
 import MotionSafety from '@/components/MotionSafety';
 import AICard from '@/components/AICard';
@@ -115,6 +116,9 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Must stay first in <head>: stamps the theme class on <html>
+            before paint so light-mode visitors never flash dark. */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
@@ -128,20 +132,7 @@ export default function RootLayout({
         className={`${inter.className} ${inter.variable} ${jetbrainsMono.variable}`}
         suppressHydrationWarning={true}
       >
-        <Galaxy
-          density={0.42}
-          speed={0.28}
-          glowIntensity={0.14}
-          saturation={0.3}
-          hueShift={160}
-          twinkleIntensity={0.12}
-          rotationSpeed={0.008}
-          mouseInteraction={false}
-          mouseRepulsion={false}
-          repulsionStrength={1.5}
-          transparent={true}
-          opacity={0.38}
-        />
+        <SiteBackdrop />
         <ClientRouter />
         <MotionSafety>
           <SplashOrchestrator>
