@@ -238,7 +238,7 @@ export default function PhotographyPage() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.9 }}
                     transition={{ duration: 0.3 }}
-                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-neutral-900"
+                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-surface-4"
                     onClick={() => setSelectedPhotoIndex(lightboxIndex)}
                   >
                     <Image

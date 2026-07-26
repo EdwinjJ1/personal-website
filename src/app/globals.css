@@ -43,6 +43,7 @@
   --p-line-strong-alpha: 0.5;
 
   --p-status-dev: 201 168 106;
+  --p-status-ok: 74 190 118;
 
   /* Fills layered *over* a surface. On dark that means lifting with
      ink; on light it means deepening with the shadow colour — so a
@@ -63,7 +64,9 @@
      on a light ground, which fails for body copy. */
   --p-sage: 74 102 93;
   --p-sage-bright: 58 84 76;
-  --p-sage-mist: 104 132 122;
+  /* "mist" is the palest sage on dark, but it is used for chip and label
+     text, so on light it has to darken past AA rather than stay pale. */
+  --p-sage-mist: 82 108 99;
   --p-sage-deep: 41 63 57;
   --p-teal: 68 100 105;
 
@@ -82,13 +85,18 @@
 
   --p-ink: 38 42 40;
   --p-ink-mid: 92 98 94;
-  --p-ink-dim: 130 134 129;
+  /* Clears 4.5:1 against the surface-1 page ground. The dark theme can
+     afford a dimmer tertiary because it sits on near-black; on a light
+     ground the same lightness drops under AA for the small text this
+     token carries (timestamps, meta labels, captions). */
+  --p-ink-dim: 100 105 99;
 
   --p-line: 142 146 138;
   --p-line-alpha: 0.42;
   --p-line-strong-alpha: 0.6;
 
   --p-status-dev: 141 104 28;
+  --p-status-ok: 26 122 63;
 
   --p-raise: 42 39 37;
   --p-shadow: 60 50 38;

@@ -90,7 +90,7 @@ export default function AICard() {
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
-                className="rounded-full p-1 transition-colors hover:bg-white/5"
+                className="rounded-full p-1 transition-colors hover:bg-[rgb(var(--p-raise)/0.07)]"
                 style={{ color: 'rgb(var(--p-ink-dim))' }}
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
