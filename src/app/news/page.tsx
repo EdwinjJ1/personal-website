@@ -179,7 +179,7 @@ export default function NewsPage() {
                   <span className="font-semibold" style={{ color: 'rgb(var(--p-ink))' }}>Powered by ClawdBot</span>
                   <span 
                     className="text-xs px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)', color: '#22c55e' }}
+                    style={{ backgroundColor: 'rgb(var(--p-status-ok) / 0.16)', color: 'rgb(var(--p-status-ok))' }}
                   >
                     Active
                   </span>

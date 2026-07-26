@@ -18,7 +18,7 @@ const Avatar = ({ size = 'md', className = '' }: AvatarProps) => {
   return (
     <div className={`relative ${sizeClasses[size]} mx-auto ${className}`}>
       <div className="w-full h-full rounded-full bg-gradient-to-r from-teal-400 to-cyan-400 p-1">
-        <div className="w-full h-full rounded-full overflow-hidden bg-gray-900">
+        <div className="w-full h-full rounded-full overflow-hidden bg-surface-4">
           <img
             src={`${basePath}/profile.jpg`}
             alt="Evan Lin"

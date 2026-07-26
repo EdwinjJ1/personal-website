@@ -200,7 +200,7 @@ export default function MusicChat() {
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
-                className="rounded-full p-1 transition-colors hover:bg-white/10"
+                className="rounded-full p-1 transition-colors hover:bg-[rgb(var(--p-raise)/0.1)]"
                 style={{ color: 'rgb(var(--p-ink-mid))' }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
