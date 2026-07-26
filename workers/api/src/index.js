@@ -21,9 +21,20 @@ Never invent facts beyond the above. If asked something unrelated to you or your
 const MAX_MESSAGES = 12;
 const MAX_CONTENT_LENGTH = 2000;
 
+/** Any localhost port counts as local development. */
+function isLocalhost(origin) {
+  try {
+    const { hostname } = new URL(origin);
+    return hostname === 'localhost' || hostname === '127.0.0.1';
+  } catch {
+    return false;
+  }
+}
+
 function corsHeaders(origin, env) {
   const allowed = (env.ALLOWED_ORIGINS || '').split(',').map((s) => s.trim());
-  const allowOrigin = allowed.includes(origin) ? origin : allowed[0] || '*';
+  const permitted = allowed.includes(origin) || isLocalhost(origin);
+  const allowOrigin = permitted ? origin : allowed[0] || '*';
   return {
     'Access-Control-Allow-Origin': allowOrigin,
     'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
