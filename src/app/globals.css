@@ -50,6 +50,10 @@
   --p-raise: 224 216 204;
   --p-shadow: 0 0 0;
   --p-shadow-strength: 1;
+
+  /* Text/icons sitting on a filled sage button. Sage stays mid-tone in
+     both themes, so this stays dark in both — it does not invert. */
+  --p-on-accent: 21 20 18;
 }
 
 .theme-light {
@@ -85,6 +89,9 @@
   --p-raise: 42 39 37;
   --p-shadow: 60 50 38;
   --p-shadow-strength: 0.5;
+
+  /* Light-mode sage is darker, so accent fills need light text on top. */
+  --p-on-accent: 252 250 246;
 }
 
 @theme static {
@@ -146,15 +153,15 @@ body {
   background: color-mix(in srgb, var(--color-surface-3) 70%, transparent) !important;
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgb(122 144 136 / 0.15) !important;
-  box-shadow: 0 4px 30px rgb(0 0 0 / 0.1);
+  border: 1px solid rgb(var(--p-sage) / 0.15) !important;
+  box-shadow: 0 4px 30px rgb(var(--p-shadow) / calc(0.1 * var(--p-shadow-strength)));
 }
 
 /* Hover effect for glass card */
 .glass-card:hover {
   background: color-mix(in srgb, var(--color-surface-4) 80%, transparent) !important;
-  border-color: rgb(122 144 136 / 0.4) !important;
-  box-shadow: 0 10px 40px -10px rgb(122 144 136 / 0.2);
+  border-color: rgb(var(--p-sage) / 0.4) !important;
+  box-shadow: 0 10px 40px -10px rgb(var(--p-sage) / 0.2);
 }
 
 html {
@@ -199,8 +206,8 @@ html {
    ============================================================ */
 :root {
   --accent: var(--color-sage);
-  --accent-soft: rgb(122 144 136 / 0.14);
-  --accent-line: rgb(122 144 136 / 0.35);
+  --accent-soft: rgb(var(--p-sage) / 0.14);
+  --accent-line: rgb(var(--p-sage) / 0.35);
 }
 
 .accent-text { color: var(--accent); }
@@ -217,19 +224,19 @@ html {
 
 /* Showcase card: large gradient cover + lift-on-hover */
 .showcase-card {
-  background-color: rgba(40, 38, 34, 0.58);
+  background-color: rgb(var(--p-surface-3) / 0.58);
   border: 1px solid var(--border-color);
   transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
 }
 .showcase-card:hover {
-  background-color: rgba(44, 41, 37, 0.72);
+  background-color: rgb(var(--p-shadow) / calc(0.72 * var(--p-shadow-strength)));
   border-color: var(--accent-line);
   box-shadow: 0 18px 48px -28px var(--accent);
 }
 .showcase-cover {
   background:
     radial-gradient(120% 120% at 0% 0%, var(--accent-soft) 0%, transparent 60%),
-    linear-gradient(135deg, rgba(40, 38, 34, 0.2), rgba(26, 24, 22, 0.6));
+    linear-gradient(135deg, rgb(var(--p-surface-3) / 0.2), rgb(var(--p-surface-1) / 0.6));
 }
 .showcase-card:hover .showcase-cover-icon {
   transform: scale(1.08) rotate(-3deg);
@@ -244,10 +251,10 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
-  border: 1px solid rgba(224, 216, 204, 0.14);
+  border: 1px solid rgb(var(--p-ink) / 0.14);
   background:
     radial-gradient(circle at 15% 0%, color-mix(in srgb, var(--project-accent) 22%, transparent), transparent 34%),
-    linear-gradient(145deg, rgba(40, 38, 34, 0.82), rgba(18, 17, 16, 0.92));
+    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.82), rgb(var(--p-surface-0) / 0.92));
   box-shadow: 0 24px 80px -54px var(--project-accent);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
 }
@@ -258,15 +265,15 @@ html {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(224, 216, 204, 0.055) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(224, 216, 204, 0.04) 1px, transparent 1px);
+    linear-gradient(90deg, rgb(var(--p-ink) / 0.055) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(var(--p-ink) / 0.04) 1px, transparent 1px);
   background-size: 34px 34px;
   mask-image: linear-gradient(to bottom, black, transparent 78%);
   opacity: 0.42;
 }
 
 .project-feature-card:hover {
-  border-color: color-mix(in srgb, var(--project-accent) 56%, rgba(224, 216, 204, 0.2));
+  border-color: color-mix(in srgb, var(--project-accent) 56%, rgb(var(--p-ink) / 0.2));
   box-shadow: 0 26px 86px -48px var(--project-accent);
 }
 
@@ -282,7 +289,7 @@ html {
 .project-visual {
   background:
     radial-gradient(circle at 50% 0%, color-mix(in srgb, var(--project-accent) 24%, transparent), transparent 48%),
-    #161412;
+    rgb(var(--p-surface-0));
 }
 
 .project-terminal {
@@ -290,7 +297,7 @@ html {
   padding: 24px;
   background:
     radial-gradient(circle at 80% 20%, color-mix(in srgb, var(--project-accent) 20%, transparent), transparent 35%),
-    linear-gradient(135deg, rgba(8, 8, 8, 0.96), rgba(28, 25, 23, 0.92));
+    linear-gradient(135deg, rgb(var(--p-shadow) / calc(0.96 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
 }
 
 .project-icon-badge {
@@ -301,9 +308,9 @@ html {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: 1px solid color-mix(in srgb, var(--project-accent) 42%, rgba(224, 216, 204, 0.14));
+  border: 1px solid color-mix(in srgb, var(--project-accent) 42%, rgb(var(--p-ink) / 0.14));
   color: var(--project-accent);
-  background: color-mix(in srgb, var(--project-accent) 12%, rgba(26, 24, 22, 0.8));
+  background: color-mix(in srgb, var(--project-accent) 12%, rgb(var(--p-surface-1) / 0.8));
 }
 
 .project-primary-link {
@@ -312,7 +319,7 @@ html {
   gap: 8px;
   border-radius: 8px;
   padding: 9px 12px;
-  color: #161412;
+  color: rgb(var(--p-surface-0));
   background: var(--project-accent);
   font-size: 0.875rem;
   font-weight: 700;
@@ -333,18 +340,18 @@ html {
   align-items: center;
   gap: 8px;
   overflow-x: auto;
-  border: 1px solid rgba(224, 216, 204, 0.12);
+  border: 1px solid rgb(var(--p-ink) / 0.12);
   border-radius: 8px;
   padding: 8px;
   background:
-    linear-gradient(90deg, rgba(26, 24, 22, 0.86), rgba(18, 17, 16, 0.7)),
-    rgba(26, 24, 22, 0.68);
+    linear-gradient(90deg, rgb(var(--p-surface-1) / 0.86), rgb(var(--p-surface-0) / 0.7)),
+    rgb(var(--p-surface-1) / 0.68);
 }
 
 .project-command-label {
   flex: 0 0 auto;
   padding: 0 10px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-family: var(--font-mono);
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -354,11 +361,11 @@ html {
 .project-command-deck button {
   flex: 0 0 auto;
   min-height: 34px;
-  border: 1px solid rgba(224, 216, 204, 0.12);
+  border: 1px solid rgb(var(--p-ink) / 0.12);
   border-radius: 7px;
   padding: 0 12px;
-  color: #b8b4aa;
-  background: rgba(224, 216, 204, 0.045);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.045);
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
@@ -367,9 +374,9 @@ html {
 
 .project-command-deck button:hover,
 .project-command-deck button.is-active {
-  border-color: color-mix(in srgb, var(--project-accent) 55%, rgba(224, 216, 204, 0.16));
-  color: #f2eadf;
-  background: color-mix(in srgb, var(--project-accent) 14%, rgba(224, 216, 204, 0.05));
+  border-color: color-mix(in srgb, var(--project-accent) 55%, rgb(var(--p-ink) / 0.16));
+  color: rgb(var(--p-ink));
+  background: color-mix(in srgb, var(--project-accent) 14%, rgb(var(--p-ink) / 0.05));
 }
 
 .project-showcase-layout {
@@ -388,12 +395,12 @@ html {
   position: sticky;
   top: 92px;
   overflow: hidden;
-  border: 1px solid color-mix(in srgb, var(--project-accent) 30%, rgba(224, 216, 204, 0.12));
+  border: 1px solid color-mix(in srgb, var(--project-accent) 30%, rgb(var(--p-ink) / 0.12));
   border-radius: 8px;
   padding: 18px;
   background:
     radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--project-accent) 18%, transparent), transparent 42%),
-    linear-gradient(145deg, rgba(20, 19, 18, 0.92), rgba(12, 11, 10, 0.92));
+    linear-gradient(145deg, rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
   box-shadow: 0 24px 70px -54px var(--project-accent);
 }
 
@@ -403,8 +410,8 @@ html {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(224, 216, 204, 0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(224, 216, 204, 0.035) 1px, transparent 1px);
+    linear-gradient(90deg, rgb(var(--p-ink) / 0.04) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(var(--p-ink) / 0.035) 1px, transparent 1px);
   background-size: 28px 28px;
   mask-image: linear-gradient(to bottom, black, transparent 80%);
   opacity: 0.5;
@@ -420,9 +427,9 @@ html {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  border-bottom: 1px solid rgba(224, 216, 204, 0.12);
+  border-bottom: 1px solid rgb(var(--p-ink) / 0.12);
   padding-bottom: 12px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.16em;
@@ -448,7 +455,7 @@ html {
 }
 
 .project-inspector-title h3 {
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 24px;
   line-height: 1.05;
   font-weight: 900;
@@ -456,7 +463,7 @@ html {
 
 .project-inspector > p {
   margin-top: 14px;
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 13px;
   line-height: 1.7;
 }
@@ -465,10 +472,10 @@ html {
 .project-inspector-stack,
 .project-inspector-angle {
   margin-top: 16px;
-  border: 1px solid rgba(224, 216, 204, 0.1);
+  border: 1px solid rgb(var(--p-ink) / 0.1);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(224, 216, 204, 0.045);
+  background: rgb(var(--p-ink) / 0.045);
 }
 
 .project-inspector-signal span,
@@ -476,7 +483,7 @@ html {
 .project-inspector-angle span {
   display: block;
   margin-bottom: 8px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.16em;
@@ -494,15 +501,15 @@ html {
   gap: 1px;
   overflow: hidden;
   margin-top: 16px;
-  border: 1px solid rgba(224, 216, 204, 0.1);
+  border: 1px solid rgb(var(--p-ink) / 0.1);
   border-radius: 8px;
-  background: rgba(224, 216, 204, 0.1);
+  background: rgb(var(--p-ink) / 0.1);
 }
 
 .project-inspector-metrics div {
   min-width: 0;
   padding: 10px 8px;
-  background: rgba(18, 17, 16, 0.86);
+  background: rgb(var(--p-surface-0) / 0.86);
 }
 
 .project-inspector-metrics strong {
@@ -516,7 +523,7 @@ html {
 .project-inspector-metrics span {
   display: block;
   margin-top: 6px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 9px;
   line-height: 1.25;
   text-transform: uppercase;
@@ -529,16 +536,16 @@ html {
 }
 
 .project-inspector-stack code {
-  border: 1px solid rgba(224, 216, 204, 0.1);
+  border: 1px solid rgb(var(--p-ink) / 0.1);
   border-radius: 5px;
   padding: 4px 6px;
-  color: #c9c2b7;
-  background: rgba(0, 0, 0, 0.18);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-shadow) / calc(0.18 * var(--p-shadow-strength)));
   font-size: 11px;
 }
 
 .project-inspector-angle p {
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 12px;
   line-height: 1.6;
 }
@@ -563,7 +570,7 @@ html {
 }
 
 .project-feature-card--active {
-  border-color: color-mix(in srgb, var(--project-accent) 64%, rgba(224, 216, 204, 0.18));
+  border-color: color-mix(in srgb, var(--project-accent) 64%, rgb(var(--p-ink) / 0.18));
   box-shadow: 0 28px 90px -44px var(--project-accent);
 }
 
@@ -578,11 +585,11 @@ html {
 }
 
 .project-flow-strip span {
-  border: 1px solid rgba(20, 20, 20, 0.14);
+  border: 1px solid rgb(var(--p-shadow) / calc(0.14 * var(--p-shadow-strength)));
   border-radius: 7px;
   padding: 8px 9px;
-  color: #191817;
-  background: rgb(143 176 166 / 0.88);
+  color: rgb(var(--p-on-accent));
+  background: rgb(var(--p-sage-bright) / 0.88);
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
@@ -597,14 +604,14 @@ html {
   position: absolute;
   left: calc(50% + (var(--i) - 1) * 78px);
   top: calc(46% + (var(--i) - 1) * -42px);
-  border: 1px solid rgb(106 138 142 / 0.45);
+  border: 1px solid rgb(var(--p-teal) / 0.45);
   border-radius: 999px;
   padding: 6px 9px;
   color: #cfe4de;
-  background: rgba(4, 18, 22, 0.72);
+  background: rgb(var(--p-shadow) / calc(0.72 * var(--p-shadow-strength)));
   font-size: 11px;
   font-weight: 800;
-  box-shadow: 0 0 24px rgb(106 138 142 / 0.18);
+  box-shadow: 0 0 24px rgb(var(--p-teal) / 0.18);
 }
 
 .project-map-scan {
@@ -612,8 +619,8 @@ html {
   inset: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, transparent, rgb(173 195 187 / 0.16), transparent),
-    linear-gradient(0deg, rgb(173 195 187 / 0.10) 1px, transparent 1px);
+    linear-gradient(90deg, transparent, rgb(var(--p-sage-mist) / 0.16), transparent),
+    linear-gradient(0deg, rgb(var(--p-sage-mist) / 0.10) 1px, transparent 1px);
   background-size: 180px 100%, 100% 36px;
   mix-blend-mode: multiply;
 }
@@ -623,8 +630,8 @@ html {
   width: 9px;
   height: 9px;
   border-radius: 999px;
-  border: 2px solid rgb(173 195 187 / 0.8);
-  box-shadow: 0 0 28px rgb(173 195 187 / 0.45);
+  border: 2px solid rgb(var(--p-sage-mist) / 0.8);
+  box-shadow: 0 0 28px rgb(var(--p-sage-mist) / 0.45);
 }
 
 .project-map-scan span:nth-child(1) { left: 22%; top: 34%; }
@@ -639,19 +646,19 @@ html {
   padding: 22px;
   background:
     radial-gradient(circle at 85% 10%, color-mix(in srgb, var(--project-accent) 20%, transparent), transparent 32%),
-    linear-gradient(135deg, rgba(8, 8, 8, 0.96), rgba(28, 25, 23, 0.92));
+    linear-gradient(135deg, rgb(var(--p-shadow) / calc(0.96 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength))));
 }
 
 .project-pipeline-node {
-  border: 1px solid rgba(224, 216, 204, 0.12);
+  border: 1px solid rgb(var(--p-ink) / 0.12);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgb(var(--p-shadow) / calc(0.2 * var(--p-shadow-strength)));
 }
 
 .project-pipeline-node span {
   display: block;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -661,13 +668,13 @@ html {
 .project-pipeline-node strong {
   display: block;
   margin-top: 6px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 13px;
 }
 
 .project-pipeline-node--hot {
-  border-color: color-mix(in srgb, var(--project-accent) 45%, rgba(224, 216, 204, 0.14));
-  background: color-mix(in srgb, var(--project-accent) 12%, rgba(0, 0, 0, 0.2));
+  border-color: color-mix(in srgb, var(--project-accent) 45%, rgb(var(--p-ink) / 0.14));
+  background: color-mix(in srgb, var(--project-accent) 12%, rgb(var(--p-shadow) / calc(0.2 * var(--p-shadow-strength))));
 }
 
 .project-pipeline-flow {
@@ -694,9 +701,9 @@ html {
 .project-page-shell {
   position: relative;
   background:
-    radial-gradient(circle at 18% 12%, rgb(122 144 136 / 0.09), transparent 28%),
-    radial-gradient(circle at 78% 6%, rgba(122, 144, 136, 0.08), transparent 26%),
-    linear-gradient(180deg, rgba(10, 9, 8, 0.78), rgba(26, 24, 22, 0.92) 42%, rgba(14, 13, 12, 0.94));
+    radial-gradient(circle at 18% 12%, rgb(var(--p-sage) / 0.09), transparent 28%),
+    radial-gradient(circle at 78% 6%, rgb(var(--p-sage) / 0.08), transparent 26%),
+    linear-gradient(180deg, rgb(var(--p-shadow) / calc(0.78 * var(--p-shadow-strength))), rgb(var(--p-surface-1) / 0.92) 42%, rgb(var(--p-shadow) / calc(0.94 * var(--p-shadow-strength))));
 }
 
 .project-page-shell::before {
@@ -706,8 +713,8 @@ html {
   z-index: 0;
   pointer-events: none;
   background:
-    linear-gradient(90deg, rgba(224, 216, 204, 0.025) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(224, 216, 204, 0.02) 1px, transparent 1px);
+    linear-gradient(90deg, rgb(var(--p-ink) / 0.025) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(var(--p-ink) / 0.02) 1px, transparent 1px);
   background-size: 72px 72px;
   mask-image: linear-gradient(to bottom, black, transparent 72%);
   opacity: 0.5;
@@ -932,19 +939,19 @@ textarea:focus {
   width: 42px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(122, 144, 136, 0.24);
+  border: 1px solid rgb(var(--p-sage) / 0.24);
   border-radius: 8px 8px 4px 4px;
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
   background:
-    linear-gradient(90deg, rgba(11, 10, 9, 0.86), rgba(45, 41, 36, 0.92)),
-    rgba(26, 24, 22, 0.94);
-  box-shadow: 0 16px 44px rgba(0, 0, 0, 0.36), inset 0 0 22px rgba(122, 144, 136, 0.08);
+    linear-gradient(90deg, rgb(var(--p-shadow) / calc(0.86 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength)))),
+    rgb(var(--p-surface-1) / 0.94);
+  box-shadow: 0 16px 44px rgb(var(--p-shadow) / calc(0.36 * var(--p-shadow-strength))), inset 0 0 22px rgb(var(--p-sage) / 0.08);
   cursor: pointer;
   transform-origin: right center;
 }
 
 .hidden-door-button:focus-visible {
-  outline: 2px solid #7a9088;
+  outline: 2px solid rgb(var(--p-sage));
   outline-offset: 4px;
 }
 
@@ -953,11 +960,11 @@ textarea:focus {
   display: block;
   height: 42px;
   width: 28px;
-  border: 1px solid rgba(224, 216, 204, 0.16);
+  border: 1px solid rgb(var(--p-ink) / 0.16);
   border-radius: 8px 8px 3px 3px;
   background:
-    linear-gradient(90deg, rgba(122, 144, 136, 0.12), transparent 16%),
-    linear-gradient(135deg, rgba(40, 38, 34, 0.9), rgba(12, 11, 10, 0.94));
+    linear-gradient(90deg, rgb(var(--p-sage) / 0.12), transparent 16%),
+    linear-gradient(135deg, rgb(var(--p-surface-3) / 0.9), rgb(var(--p-shadow) / calc(0.94 * var(--p-shadow-strength))));
 }
 
 .hidden-door-slit {
@@ -966,8 +973,8 @@ textarea:focus {
   right: 4px;
   bottom: 5px;
   width: 1px;
-  background: linear-gradient(to bottom, transparent, rgba(143, 176, 166, 0.9), transparent);
-  box-shadow: 0 0 16px rgba(143, 176, 166, 0.42);
+  background: linear-gradient(to bottom, transparent, rgb(var(--p-sage-bright) / 0.9), transparent);
+  box-shadow: 0 0 16px rgb(var(--p-sage-bright) / 0.42);
 }
 
 .hidden-door-knob {
@@ -977,8 +984,8 @@ textarea:focus {
   height: 5px;
   width: 5px;
   border-radius: 999px;
-  background: #8fb0a6;
-  box-shadow: 0 0 14px rgba(143, 176, 166, 0.45);
+  background: rgb(var(--p-sage-bright));
+  box-shadow: 0 0 14px rgb(var(--p-sage-bright) / 0.45);
 }
 
 .private-gate-overlay {
@@ -988,7 +995,7 @@ textarea:focus {
   display: grid;
   place-items: center;
   padding: 20px;
-  background: rgba(8, 8, 7, 0.64);
+  background: rgb(var(--p-shadow) / calc(0.64 * var(--p-shadow-strength)));
   backdrop-filter: blur(10px);
 }
 
@@ -996,18 +1003,18 @@ textarea:focus {
   position: relative;
   width: min(92vw, 420px);
   overflow: hidden;
-  border: 1px solid rgba(122, 144, 136, 0.26);
+  border: 1px solid rgb(var(--p-sage) / 0.26);
   border-radius: 8px;
   padding: 28px;
   background:
-    radial-gradient(circle at 20% 0%, rgba(122, 144, 136, 0.16), transparent 36%),
-    linear-gradient(145deg, rgba(40, 38, 34, 0.97), rgba(15, 14, 13, 0.98));
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.52);
+    radial-gradient(circle at 20% 0%, rgb(var(--p-sage) / 0.16), transparent 36%),
+    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.97), rgb(var(--p-shadow) / calc(0.98 * var(--p-shadow-strength))));
+  box-shadow: 0 28px 90px rgb(var(--p-shadow) / calc(0.52 * var(--p-shadow-strength)));
 }
 
 .private-gate-panel h2 {
   margin-top: 18px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 28px;
   line-height: 1.1;
   font-weight: 900;
@@ -1015,7 +1022,7 @@ textarea:focus {
 
 .private-gate-panel p {
   margin-top: 12px;
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 14px;
   line-height: 1.75;
 }
@@ -1026,10 +1033,10 @@ textarea:focus {
   width: 58px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(122, 144, 136, 0.26);
+  border: 1px solid rgb(var(--p-sage) / 0.26);
   border-radius: 8px;
-  color: #8fb0a6;
-  background: rgba(122, 144, 136, 0.08);
+  color: rgb(var(--p-sage-bright));
+  background: rgb(var(--p-sage) / 0.08);
 }
 
 .private-gate-close {
@@ -1041,10 +1048,10 @@ textarea:focus {
   width: 34px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(224, 216, 204, 0.12);
+  border: 1px solid rgb(var(--p-ink) / 0.12);
   border-radius: 8px;
-  color: #b8b4aa;
-  background: rgba(224, 216, 204, 0.04);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.04);
   cursor: pointer;
 }
 
@@ -1066,15 +1073,15 @@ textarea:focus {
 }
 
 .private-gate-actions button:first-child {
-  border: 1px solid rgba(224, 216, 204, 0.14);
-  color: #b8b4aa;
-  background: rgba(224, 216, 204, 0.04);
+  border: 1px solid rgb(var(--p-ink) / 0.14);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.04);
 }
 
 .private-gate-actions button:last-child {
   border: 1px solid transparent;
-  color: #151412;
-  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  color: rgb(var(--p-on-accent));
+  background: linear-gradient(to right, rgb(var(--p-sage-bright)), rgb(var(--p-teal)));
 }
 
 .private-gate-actions button:hover {
@@ -1084,11 +1091,11 @@ textarea:focus {
 .private-shell {
   min-height: 100vh;
   padding: 96px 18px 32px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   background:
-    radial-gradient(circle at 12% 10%, rgba(122, 144, 136, 0.11), transparent 28%),
-    radial-gradient(circle at 85% 18%, rgb(122 144 136 / 0.07), transparent 28%),
-    linear-gradient(180deg, rgba(26, 24, 22, 0.22), rgba(12, 11, 10, 0.52));
+    radial-gradient(circle at 12% 10%, rgb(var(--p-sage) / 0.11), transparent 28%),
+    radial-gradient(circle at 85% 18%, rgb(var(--p-sage) / 0.07), transparent 28%),
+    linear-gradient(180deg, rgb(var(--p-surface-1) / 0.22), rgb(var(--p-shadow) / calc(0.52 * var(--p-shadow-strength))));
 }
 
 .private-lock-panel,
@@ -1102,15 +1109,15 @@ textarea:focus {
   display: grid;
   gap: 24px;
   max-width: 520px;
-  border: 1px solid rgba(122, 144, 136, 0.22);
+  border: 1px solid rgb(var(--p-sage) / 0.22);
   border-radius: 8px;
   padding: 28px;
   background:
-    linear-gradient(90deg, rgba(224, 216, 204, 0.035) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(224, 216, 204, 0.03) 1px, transparent 1px),
-    linear-gradient(145deg, rgba(40, 38, 34, 0.86), rgba(15, 14, 13, 0.9));
+    linear-gradient(90deg, rgb(var(--p-ink) / 0.035) 1px, transparent 1px),
+    linear-gradient(0deg, rgb(var(--p-ink) / 0.03) 1px, transparent 1px),
+    linear-gradient(145deg, rgb(var(--p-surface-3) / 0.86), rgb(var(--p-shadow) / calc(0.9 * var(--p-shadow-strength))));
   background-size: 34px 34px, 34px 34px, auto;
-  box-shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+  box-shadow: 0 28px 90px rgb(var(--p-shadow) / calc(0.34 * var(--p-shadow-strength)));
 }
 
 .private-back-link {
@@ -1118,7 +1125,7 @@ textarea:focus {
   width: fit-content;
   align-items: center;
   gap: 8px;
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
   font-size: 13px;
   font-weight: 800;
   text-decoration: none;
@@ -1130,16 +1137,16 @@ textarea:focus {
   width: 68px;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(122, 144, 136, 0.26);
+  border: 1px solid rgb(var(--p-sage) / 0.26);
   border-radius: 8px;
-  color: #8fb0a6;
-  background: rgba(122, 144, 136, 0.08);
+  color: rgb(var(--p-sage-bright));
+  background: rgb(var(--p-sage) / 0.08);
 }
 
 .private-lock-copy span,
 .private-workspace-header span {
   display: block;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.18em;
@@ -1149,7 +1156,7 @@ textarea:focus {
 .private-lock-copy h1,
 .private-workspace-header h1 {
   margin-top: 8px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: clamp(34px, 5vw, 58px);
   line-height: 1;
   font-weight: 950;
@@ -1157,7 +1164,7 @@ textarea:focus {
 
 .private-lock-copy p {
   margin-top: 14px;
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 14px;
   line-height: 1.75;
 }
@@ -1173,7 +1180,7 @@ textarea:focus {
 }
 
 .private-lock-form label span {
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 12px;
   font-weight: 800;
 }
@@ -1183,10 +1190,10 @@ textarea:focus {
 .private-title-input,
 .private-editor textarea,
 .private-editor select {
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
-  color: #e0d8cc;
-  background: rgba(12, 11, 10, 0.36);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-shadow) / calc(0.36 * var(--p-shadow-strength)));
   outline: none;
   transition: border-color 0.2s ease, background-color 0.2s ease;
 }
@@ -1196,8 +1203,8 @@ textarea:focus {
 .private-title-input:focus,
 .private-editor textarea:focus,
 .private-editor select:focus {
-  border-color: rgba(143, 176, 166, 0.72);
-  background: rgba(12, 11, 10, 0.5);
+  border-color: rgb(var(--p-sage-bright) / 0.72);
+  background: rgb(var(--p-shadow) / calc(0.5 * var(--p-shadow-strength)));
 }
 
 .private-lock-form input {
@@ -1209,8 +1216,8 @@ textarea:focus {
   min-height: 48px;
   border: 0;
   border-radius: 8px;
-  color: #151412;
-  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  color: rgb(var(--p-on-accent));
+  background: linear-gradient(to right, rgb(var(--p-sage-bright)), rgb(var(--p-teal)));
   font-weight: 900;
   cursor: pointer;
 }
@@ -1258,10 +1265,10 @@ textarea:focus {
   grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
   gap: 10px;
   align-items: end;
-  border: 1px solid rgba(143, 176, 166, 0.22);
+  border: 1px solid rgb(var(--p-sage-bright) / 0.22);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(143, 176, 166, 0.07);
+  background: rgb(var(--p-sage-bright) / 0.07);
 }
 
 .private-key-form label {
@@ -1271,7 +1278,7 @@ textarea:focus {
 }
 
 .private-key-form label span {
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 11px;
   font-weight: 900;
   letter-spacing: 0.12em;
@@ -1281,16 +1288,16 @@ textarea:focus {
 .private-key-form input {
   min-height: 38px;
   min-width: 0;
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
   padding: 0 11px;
-  color: #e0d8cc;
-  background: rgba(12, 11, 10, 0.34);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-shadow) / calc(0.34 * var(--p-shadow-strength)));
   outline: none;
 }
 
 .private-key-form input:focus {
-  border-color: rgba(143, 176, 166, 0.72);
+  border-color: rgb(var(--p-sage-bright) / 0.72);
 }
 
 .private-key-form button {
@@ -1298,8 +1305,8 @@ textarea:focus {
   border: 0;
   border-radius: 8px;
   padding: 0 13px;
-  color: #151412;
-  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  color: rgb(var(--p-on-accent));
+  background: linear-gradient(to right, rgb(var(--p-sage-bright)), rgb(var(--p-teal)));
   font-size: 13px;
   font-weight: 900;
   cursor: pointer;
@@ -1312,7 +1319,7 @@ textarea:focus {
 
 .private-key-message {
   margin-top: -6px;
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 13px;
 }
 
@@ -1320,11 +1327,11 @@ textarea:focus {
 .private-create-row button,
 .private-editor-meta button {
   min-height: 38px;
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
   padding: 0 12px;
-  color: #c9c2b7;
-  background: rgba(224, 216, 204, 0.05);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.05);
   font-size: 13px;
   font-weight: 800;
   cursor: pointer;
@@ -1334,18 +1341,18 @@ textarea:focus {
 .private-workspace-actions button:hover,
 .private-create-row button:hover,
 .private-editor-meta button:hover {
-  border-color: rgba(143, 176, 166, 0.46);
-  color: #e0d8cc;
-  background: rgba(143, 176, 166, 0.1);
+  border-color: rgb(var(--p-sage-bright) / 0.46);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-sage-bright) / 0.1);
 }
 
 .private-workspace-toolbar {
   justify-content: space-between;
   flex-wrap: wrap;
-  border: 1px solid rgba(224, 216, 204, 0.09);
+  border: 1px solid rgb(var(--p-ink) / 0.09);
   border-radius: 8px;
   padding: 10px;
-  background: rgba(18, 17, 16, 0.42);
+  background: rgb(var(--p-surface-0) / 0.42);
 }
 
 .private-segmented {
@@ -1359,7 +1366,7 @@ textarea:focus {
   border: 1px solid transparent;
   border-radius: 7px;
   padding: 0 11px;
-  color: #9f9a90;
+  color: rgb(var(--p-ink-dim));
   background: transparent;
   font-size: 12px;
   font-weight: 900;
@@ -1367,9 +1374,9 @@ textarea:focus {
 }
 
 .private-segmented button.is-active {
-  border-color: rgba(143, 176, 166, 0.36);
-  color: #e0d8cc;
-  background: rgba(143, 176, 166, 0.12);
+  border-color: rgb(var(--p-sage-bright) / 0.36);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-sage-bright) / 0.12);
 }
 
 .private-search {
@@ -1378,11 +1385,11 @@ textarea:focus {
   width: min(100%, 260px);
   align-items: center;
   gap: 8px;
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
   padding: 0 11px;
-  color: #8a8680;
-  background: rgba(12, 11, 10, 0.28);
+  color: rgb(var(--p-ink-dim));
+  background: rgb(var(--p-shadow) / calc(0.28 * var(--p-shadow-strength)));
 }
 
 .private-search input {
@@ -1404,7 +1411,7 @@ textarea:focus {
 }
 
 .private-create-row button span {
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
   font-size: 18px;
   line-height: 1;
 }
@@ -1419,9 +1426,9 @@ textarea:focus {
 .private-entry-list,
 .private-editor {
   overflow: hidden;
-  border: 1px solid rgba(224, 216, 204, 0.11);
+  border: 1px solid rgb(var(--p-ink) / 0.11);
   border-radius: 8px;
-  background: rgba(18, 17, 16, 0.5);
+  background: rgb(var(--p-surface-0) / 0.5);
 }
 
 .private-entry-list {
@@ -1436,22 +1443,22 @@ textarea:focus {
   display: grid;
   gap: 7px;
   width: 100%;
-  border: 1px solid rgba(224, 216, 204, 0.08);
+  border: 1px solid rgb(var(--p-ink) / 0.08);
   border-radius: 8px;
   padding: 12px;
   color: inherit;
-  background: rgba(224, 216, 204, 0.035);
+  background: rgb(var(--p-ink) / 0.035);
   text-align: left;
   cursor: pointer;
 }
 
 .private-entry-list button.is-active {
-  border-color: rgba(143, 176, 166, 0.48);
-  background: rgba(143, 176, 166, 0.11);
+  border-color: rgb(var(--p-sage-bright) / 0.48);
+  background: rgb(var(--p-sage-bright) / 0.11);
 }
 
 .private-entry-list button span {
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -1460,7 +1467,7 @@ textarea:focus {
 
 .private-entry-list button strong {
   overflow: hidden;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 15px;
   line-height: 1.25;
   text-overflow: ellipsis;
@@ -1469,7 +1476,7 @@ textarea:focus {
 
 .private-entry-list button small,
 .private-editor-footer {
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 11px;
 }
 
@@ -1478,7 +1485,7 @@ textarea:focus {
   display: grid;
   min-height: 220px;
   place-items: center;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   text-align: center;
 }
 
@@ -1526,7 +1533,7 @@ textarea:focus {
 .private-editor-footer {
   justify-content: space-between;
   flex-wrap: wrap;
-  border-top: 1px solid rgba(224, 216, 204, 0.09);
+  border-top: 1px solid rgb(var(--p-ink) / 0.09);
   padding-top: 12px;
 }
 
@@ -1536,24 +1543,24 @@ textarea:focus {
 }
 
 .private-empty-editor h2 {
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 28px;
   font-weight: 900;
 }
 
 .private-empty-editor p {
   margin-top: 8px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
 }
 
 .private-calendar {
   overflow: hidden;
-  border: 1px solid rgba(224, 216, 204, 0.11);
+  border: 1px solid rgb(var(--p-ink) / 0.11);
   border-radius: 8px;
   padding: 16px;
   background:
-    radial-gradient(circle at 100% 0%, rgba(143, 176, 166, 0.1), transparent 32%),
-    rgba(18, 17, 16, 0.5);
+    radial-gradient(circle at 100% 0%, rgb(var(--p-sage-bright) / 0.1), transparent 32%),
+    rgb(var(--p-surface-0) / 0.5);
 }
 
 .private-calendar-header {
@@ -1561,7 +1568,7 @@ textarea:focus {
   align-items: end;
   justify-content: space-between;
   gap: 16px;
-  border-bottom: 1px solid rgba(224, 216, 204, 0.09);
+  border-bottom: 1px solid rgb(var(--p-ink) / 0.09);
   padding-bottom: 14px;
 }
 
@@ -1569,7 +1576,7 @@ textarea:focus {
 .private-calendar-panel-header span,
 .private-schedule-form label span {
   display: block;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.16em;
@@ -1578,7 +1585,7 @@ textarea:focus {
 
 .private-calendar-header h2 {
   margin-top: 6px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 30px;
   line-height: 1;
   font-weight: 950;
@@ -1594,7 +1601,7 @@ textarea:focus {
 
 .private-calendar-controls strong {
   min-width: 156px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 14px;
   text-align: center;
 }
@@ -1603,11 +1610,11 @@ textarea:focus {
 .private-schedule-form button,
 .private-schedule-item-actions button {
   min-height: 34px;
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
   padding: 0 11px;
-  color: #c9c2b7;
-  background: rgba(224, 216, 204, 0.05);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.05);
   font-size: 12px;
   font-weight: 900;
   cursor: pointer;
@@ -1617,9 +1624,9 @@ textarea:focus {
 .private-calendar-controls button:hover,
 .private-schedule-form button:hover,
 .private-schedule-item-actions button:hover {
-  border-color: rgba(143, 176, 166, 0.48);
-  color: #e0d8cc;
-  background: rgba(143, 176, 166, 0.1);
+  border-color: rgb(var(--p-sage-bright) / 0.48);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-sage-bright) / 0.1);
 }
 
 .private-calendar-layout {
@@ -1646,7 +1653,7 @@ textarea:focus {
 }
 
 .private-calendar-weekdays span {
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 10px;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -1660,33 +1667,33 @@ textarea:focus {
   min-height: 72px;
   align-content: start;
   justify-items: start;
-  border: 1px solid rgba(224, 216, 204, 0.09);
+  border: 1px solid rgb(var(--p-ink) / 0.09);
   border-radius: 8px;
   padding: 9px;
-  color: #d5cec3;
-  background: rgba(224, 216, 204, 0.035);
+  color: rgb(var(--p-ink-mid));
+  background: rgb(var(--p-ink) / 0.035);
   cursor: pointer;
   transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .private-calendar-grid button:hover {
-  border-color: rgba(143, 176, 166, 0.38);
-  background: rgba(143, 176, 166, 0.08);
+  border-color: rgb(var(--p-sage-bright) / 0.38);
+  background: rgb(var(--p-sage-bright) / 0.08);
 }
 
 .private-calendar-grid button.is-muted {
-  color: #615d56;
-  background: rgba(224, 216, 204, 0.02);
+  color: rgb(var(--p-ink-dim));
+  background: rgb(var(--p-ink) / 0.02);
 }
 
 .private-calendar-grid button.is-selected {
-  border-color: rgba(143, 176, 166, 0.72);
-  color: #f2eadf;
-  background: rgba(143, 176, 166, 0.14);
+  border-color: rgb(var(--p-sage-bright) / 0.72);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-sage-bright) / 0.14);
 }
 
 .private-calendar-grid button.is-today span {
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
 }
 
 .private-calendar-grid button small {
@@ -1699,8 +1706,8 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  color: #151412;
-  background: #8fb0a6;
+  color: rgb(var(--p-on-accent));
+  background: rgb(var(--p-sage-bright));
   font-size: 11px;
   font-weight: 950;
 }
@@ -1709,10 +1716,10 @@ textarea:focus {
   display: grid;
   align-content: start;
   gap: 14px;
-  border: 1px solid rgba(224, 216, 204, 0.09);
+  border: 1px solid rgb(var(--p-ink) / 0.09);
   border-radius: 8px;
   padding: 14px;
-  background: rgba(12, 11, 10, 0.22);
+  background: rgb(var(--p-shadow) / calc(0.22 * var(--p-shadow-strength)));
 }
 
 .private-calendar-panel-header {
@@ -1723,7 +1730,7 @@ textarea:focus {
 }
 
 .private-calendar-panel-header strong {
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 17px;
 }
 
@@ -1731,10 +1738,10 @@ textarea:focus {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
-  border: 1px solid rgba(224, 216, 204, 0.09);
+  border: 1px solid rgb(var(--p-ink) / 0.09);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(224, 216, 204, 0.035);
+  background: rgb(var(--p-ink) / 0.035);
 }
 
 .private-schedule-form label {
@@ -1753,10 +1760,10 @@ textarea:focus {
 .private-schedule-form textarea {
   min-width: 0;
   width: 100%;
-  border: 1px solid rgba(224, 216, 204, 0.13);
+  border: 1px solid rgb(var(--p-ink) / 0.13);
   border-radius: 8px;
-  color: #e0d8cc;
-  background: rgba(12, 11, 10, 0.34);
+  color: rgb(var(--p-ink));
+  background: rgb(var(--p-shadow) / calc(0.34 * var(--p-shadow-strength)));
   outline: none;
 }
 
@@ -1777,13 +1784,13 @@ textarea:focus {
 .private-schedule-form input:focus,
 .private-schedule-form select:focus,
 .private-schedule-form textarea:focus {
-  border-color: rgba(143, 176, 166, 0.72);
+  border-color: rgb(var(--p-sage-bright) / 0.72);
 }
 
 .private-schedule-form button {
   grid-column: 1 / -1;
-  color: #151412;
-  background: linear-gradient(to right, #8fb0a6, #6a8a8e);
+  color: rgb(var(--p-on-accent));
+  background: linear-gradient(to right, rgb(var(--p-sage-bright)), rgb(var(--p-teal)));
 }
 
 .private-schedule-form button:disabled {
@@ -1800,9 +1807,9 @@ textarea:focus {
   display: grid;
   min-height: 92px;
   place-items: center;
-  border: 1px dashed rgba(224, 216, 204, 0.12);
+  border: 1px dashed rgb(var(--p-ink) / 0.12);
   border-radius: 8px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 13px;
 }
 
@@ -1811,10 +1818,10 @@ textarea:focus {
   align-items: flex-start;
   justify-content: space-between;
   gap: 12px;
-  border: 1px solid rgba(224, 216, 204, 0.1);
+  border: 1px solid rgb(var(--p-ink) / 0.1);
   border-radius: 8px;
   padding: 12px;
-  background: rgba(224, 216, 204, 0.035);
+  background: rgb(var(--p-ink) / 0.035);
 }
 
 .private-schedule-list article.is-done {
@@ -1827,14 +1834,14 @@ textarea:focus {
 
 .private-schedule-list article span {
   display: block;
-  color: #8fb0a6;
+  color: rgb(var(--p-sage-bright));
   font-size: 11px;
   font-weight: 900;
 }
 
 .private-schedule-list article h3 {
   margin-top: 5px;
-  color: #e0d8cc;
+  color: rgb(var(--p-ink));
   font-size: 16px;
   line-height: 1.25;
   font-weight: 900;
@@ -1843,13 +1850,13 @@ textarea:focus {
 .private-schedule-list article small {
   display: block;
   margin-top: 5px;
-  color: #8a8680;
+  color: rgb(var(--p-ink-dim));
   font-size: 11px;
 }
 
 .private-schedule-list article p {
   margin-top: 8px;
-  color: #b8b4aa;
+  color: rgb(var(--p-ink-mid));
   font-size: 13px;
   line-height: 1.55;
 }

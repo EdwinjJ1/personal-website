@@ -8,8 +8,8 @@ type CopyKind = 'full' | 'link';
 
 const cardStyle = {
   background:
-    'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))',
-  borderColor: 'rgba(114, 110, 102, 0.3)',
+    'linear-gradient(to bottom right, rgb(var(--p-surface-3) / 0.6), rgb(var(--p-surface-2) / 0.5), rgb(var(--p-surface-3) / 0.6))',
+  borderColor: 'rgb(var(--p-line) / 0.3)',
 };
 
 async function copyToClipboard(text: string): Promise<boolean> {
@@ -66,12 +66,12 @@ export default function AICardPanel({ compact = false }: AICardPanelProps) {
     >
       <div className="flex items-center gap-2 mb-3">
         <span className="text-2xl">🤖</span>
-        <h3 className="text-xl font-bold" style={{ color: '#7a9088' }}>
+        <h3 className="text-xl font-bold" style={{ color: 'rgb(var(--p-sage))' }}>
           Hand me to an AI
         </h3>
       </div>
 
-      <p className="text-sm leading-relaxed mb-5" style={{ color: '#b8b4aa' }}>
+      <p className="text-sm leading-relaxed mb-5" style={{ color: 'rgb(var(--p-ink-mid))' }}>
         Want an AI to actually know me? Copy one of these into ChatGPT, Claude, or any
         assistant — it&apos;ll get my background, projects, and resume in one shot.
       </p>
@@ -82,9 +82,9 @@ export default function AICardPanel({ compact = false }: AICardPanelProps) {
           onClick={() => handleCopy('full')}
           className="flex-1 px-4 py-2.5 rounded-lg border text-sm font-semibold transition-colors"
           style={{
-            backgroundColor: copied === 'full' ? 'rgba(122, 144, 136, 0.3)' : 'rgba(122, 144, 136, 0.15)',
-            color: '#e0d8cc',
-            borderColor: 'rgba(122, 144, 136, 0.4)',
+            backgroundColor: copied === 'full' ? 'rgb(var(--p-sage) / 0.3)' : 'rgb(var(--p-sage) / 0.15)',
+            color: 'rgb(var(--p-ink))',
+            borderColor: 'rgb(var(--p-sage) / 0.4)',
           }}
         >
           {copied === 'full' ? '✓ Copied' : '📋 Copy full brief'}
@@ -95,9 +95,9 @@ export default function AICardPanel({ compact = false }: AICardPanelProps) {
           onClick={() => handleCopy('link')}
           className="flex-1 px-4 py-2.5 rounded-lg border text-sm font-semibold transition-colors"
           style={{
-            backgroundColor: copied === 'link' ? 'rgba(122, 144, 136, 0.3)' : 'transparent',
-            color: '#b8b4aa',
-            borderColor: 'rgba(114, 110, 102, 0.4)',
+            backgroundColor: copied === 'link' ? 'rgb(var(--p-sage) / 0.3)' : 'transparent',
+            color: 'rgb(var(--p-ink-mid))',
+            borderColor: 'rgb(var(--p-line) / 0.4)',
           }}
         >
           {copied === 'link' ? '✓ Copied' : '🔗 Copy links'}
@@ -107,7 +107,7 @@ export default function AICardPanel({ compact = false }: AICardPanelProps) {
       {failed && (
         <p className="text-xs mt-3" style={{ color: '#c98a7a' }}>
           Couldn&apos;t copy automatically — select the text manually, or just share{' '}
-          <span style={{ color: '#7a9088' }}>{AI_CARD_URL}</span>.
+          <span style={{ color: 'rgb(var(--p-sage))' }}>{AI_CARD_URL}</span>.
         </p>
       )}
 
@@ -117,10 +117,10 @@ export default function AICardPanel({ compact = false }: AICardPanelProps) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
           className="text-xs mt-5"
-          style={{ color: '#8a857b' }}
+          style={{ color: 'rgb(var(--p-ink-dim))' }}
         >
           Tip: web-connected AIs can also just read{' '}
-          <span style={{ color: '#7a9088' }}>evanlin.site/llms.txt</span> on their own.
+          <span style={{ color: 'rgb(var(--p-sage))' }}>evanlin.site/llms.txt</span> on their own.
         </motion.p>
       )}
     </div>

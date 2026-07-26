@@ -67,7 +67,7 @@ export default function ProjectFlagshipShowcase({ projects }: ProjectFlagshipSho
             data-project-command={getCommandId(project)}
             className={project.id === activeProject.id ? 'is-active' : undefined}
             onClick={() => setActiveId(project.id)}
-            style={{ '--project-accent': project.accent ?? '#7a9088' } as React.CSSProperties}
+            style={{ '--project-accent': project.accent ?? 'rgb(var(--p-sage))' } as React.CSSProperties}
           >
             {project.title.replace(': Sydney Layers', '').replace(' Prompt Enhancer', '')}
           </button>
@@ -89,7 +89,7 @@ export default function ProjectFlagshipShowcase({ projects }: ProjectFlagshipSho
 
         <aside
           className="project-inspector"
-          style={{ '--project-accent': activeProject.accent ?? '#7a9088' } as React.CSSProperties}
+          style={{ '--project-accent': activeProject.accent ?? 'rgb(var(--p-sage))' } as React.CSSProperties}
           aria-live="polite"
         >
           <div className="project-inspector-header">

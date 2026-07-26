@@ -33,10 +33,10 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
   if (!currentPost) {
     return (
       <PageTransition>
-        <div className="min-h-screen pt-20 flex items-center justify-center" style={{ color: '#e0d8cc' }}>
+        <div className="min-h-screen pt-20 flex items-center justify-center" style={{ color: 'rgb(var(--p-ink))' }}>
           <div className="text-center">
             <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
-            <Link href="/blog" className="text-[#7a9088] hover:underline">
+            <Link href="/blog" className="text-sage hover:underline">
               ← Back to Blog
             </Link>
           </div>
@@ -58,7 +58,7 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
 
   return (
     <PageTransition>
-      <div className="min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
+      <div className="min-h-screen pt-20" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="container mx-auto px-6 py-12">
           <motion.div
             variants={container}
@@ -70,8 +70,8 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
             <motion.div variants={item} className="mb-8">
               <Link 
                 href="/blog" 
-                className="inline-flex items-center gap-2 text-sm transition-colors hover:text-[#7a9088]"
-                style={{ color: '#b8b4aa' }}
+                className="inline-flex items-center gap-2 text-sm transition-colors hover:text-sage"
+                style={{ color: 'rgb(var(--p-ink-mid))' }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -89,9 +89,9 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
                     onClick={toggleLanguage}
                     className="inline-flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-300 hover:scale-105"
                     style={{ 
-                      backgroundColor: 'rgba(122, 144, 136, 0.1)', 
-                      borderColor: 'rgba(122, 144, 136, 0.3)',
-                      color: '#7a9088'
+                      backgroundColor: 'rgb(var(--p-sage) / 0.1)', 
+                      borderColor: 'rgb(var(--p-sage) / 0.3)',
+                      color: 'rgb(var(--p-sage))'
                     }}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -109,9 +109,9 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
                     key={tag}
                     className="px-3 py-1 text-sm rounded-full border"
                     style={{ 
-                      backgroundColor: 'rgba(122, 144, 136, 0.15)', 
-                      color: '#7a9088', 
-                      borderColor: 'rgba(122, 144, 136, 0.3)' 
+                      backgroundColor: 'rgb(var(--p-sage) / 0.15)', 
+                      color: 'rgb(var(--p-sage))', 
+                      borderColor: 'rgb(var(--p-sage) / 0.3)' 
                     }}
                   >
                     {tag}
@@ -120,12 +120,12 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
               </div>
 
               {/* Title */}
-              <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: '#e0d8cc' }}>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6" style={{ color: 'rgb(var(--p-ink))' }}>
                 {currentPost.title}
               </h1>
 
               {/* Meta Info */}
-              <div className="flex items-center gap-4 mb-8 text-sm" style={{ color: '#8a8680' }}>
+              <div className="flex items-center gap-4 mb-8 text-sm" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                 <time dateTime={currentPost.date}>
                   {new Date(currentPost.date).toLocaleDateString(
                     currentPost.language === 'en' ? 'en-US' : 'zh-CN',
@@ -141,39 +141,39 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px mb-12" style={{ backgroundColor: 'rgba(114, 110, 102, 0.3)' }} />
+              <div className="w-full h-px mb-12" style={{ backgroundColor: 'rgb(var(--p-line) / 0.3)' }} />
 
               {/* Content */}
               <div 
                 className="prose prose-invert prose-lg max-w-none"
-                style={{ color: '#e0d8cc' }}
+                style={{ color: 'rgb(var(--p-ink))' }}
               >
                 {currentPost.content.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="mb-6 leading-relaxed" style={{ color: '#b8b4aa' }}>
+                  <p key={index} className="mb-6 leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                     {paragraph}
                   </p>
                 ))}
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px my-12" style={{ backgroundColor: 'rgba(114, 110, 102, 0.3)' }} />
+              <div className="w-full h-px my-12" style={{ backgroundColor: 'rgb(var(--p-line) / 0.3)' }} />
 
               {/* Author Info */}
               <div className="rounded-xl p-6 border" style={{ 
-                background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', 
-                borderColor: 'rgba(114, 110, 102, 0.3)' 
+                background: 'linear-gradient(to bottom right, rgb(var(--p-surface-3) / 0.6), rgb(var(--p-surface-2) / 0.5), rgb(var(--p-surface-3) / 0.6))', 
+                borderColor: 'rgb(var(--p-line) / 0.3)' 
               }}>
                 <div className="flex items-start gap-4">
                   <div className="w-16 h-16 rounded-full flex items-center justify-center text-2xl" style={{ 
-                    background: 'linear-gradient(to right, #7a9088, #6a8a8e)' 
+                    background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))' 
                   }}>
                     👨‍💻
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold mb-2" style={{ color: '#e0d8cc' }}>
+                    <h3 className="text-lg font-bold mb-2" style={{ color: 'rgb(var(--p-ink))' }}>
                       Evanlin
                     </h3>
-                    <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
+                    <p className="text-sm mb-3" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                       {currentPost.language === 'en'
                         ? 'Interested in AI and its future.'
                         : '对AI感兴趣。'
@@ -182,16 +182,16 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
                     <div className="flex gap-3">
                       <a 
                         href="mailto:jiaedwin0605@gmail.com" 
-                        className="text-sm transition-colors hover:text-[#7a9088]"
-                        style={{ color: '#8a8680' }}
+                        className="text-sm transition-colors hover:text-sage"
+                        style={{ color: 'rgb(var(--p-ink-dim))' }}
                       >
                         {currentPost.language === 'en' ? 'Contact' : '联系我'}
                       </a>
-                      <span style={{ color: '#8a8680' }}>•</span>
+                      <span style={{ color: 'rgb(var(--p-ink-dim))' }}>•</span>
                       <Link 
                         href="/about" 
-                        className="text-sm transition-colors hover:text-[#7a9088]"
-                        style={{ color: '#8a8680' }}
+                        className="text-sm transition-colors hover:text-sage"
+                        style={{ color: 'rgb(var(--p-ink-dim))' }}
                       >
                         {currentPost.language === 'en' ? 'About Me' : '关于我'}
                       </Link>
@@ -206,7 +206,7 @@ export default function BlogPostClient({ slug }: BlogPostClientProps) {
               <Link
                 href="/blog"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
+                style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-ink))' }}
               >
                 {currentPost.language === 'en' ? 'View All Posts' : '查看所有文章'}
               </Link>

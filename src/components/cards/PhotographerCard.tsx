@@ -184,7 +184,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           style={{
             transform: shooting ? 'translateY(2px)' : 'none',
             transitionTimingFunction: 'cubic-bezier(.34,1.56,.64,1)',
-            filter: 'drop-shadow(0 6px 8px rgba(0,0,0,0.35))',
+            filter: 'drop-shadow(0 6px 8px rgb(var(--p-shadow) / calc(0.35 * var(--p-shadow-strength))))',
           }}
         />
       </button>
@@ -205,7 +205,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           className="transition-transform duration-200"
           style={{
             transform: shooting ? 'translateY(4px)' : 'none',
-            filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.4))',
+            filter: 'drop-shadow(0 4px 6px rgb(var(--p-shadow) / calc(0.4 * var(--p-shadow-strength))))',
           }}
         />
       </button>
@@ -225,15 +225,15 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
       <div className="flex h-full flex-col gap-3.5">
         {/* Header */}
         <div className="flex items-start justify-between gap-3">
-          <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: 'rgb(var(--p-ink))' }}>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--p-sage))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
             </svg>
             Photographer Notes
           </h3>
           {/* Folder replaces "Side Project" badge — click a photo to go to /photography */}
           <Folder
-            color="#7a9088"
+            color="rgb(var(--p-sage))"
             size={0.75}
             forceOpen={shooting}
             items={folderPhotos.map((src) => ({
@@ -259,7 +259,7 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           <a
             href="mailto:jiaedwin0605@gmail.com"
             className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 font-semibold transition-transform hover:scale-105"
-            style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
+            style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-ink))' }}
           >
             Book a shoot
             <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -267,13 +267,13 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
             </svg>
           </a>
           <div className="flex items-center gap-4">
-            <Link href="/photography#gear" className="inline-flex items-center gap-1 transition-colors hover:opacity-80" style={{ color: '#b8b4aa' }}>
+            <Link href="/photography#gear" className="inline-flex items-center gap-1 transition-colors hover:opacity-80" style={{ color: 'rgb(var(--p-ink-mid))' }}>
               Gear List
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-            <Link href="/photography" className="inline-flex items-center gap-1 transition-colors" style={{ color: '#b8b4aa' }}>
+            <Link href="/photography" className="inline-flex items-center gap-1 transition-colors" style={{ color: 'rgb(var(--p-ink-mid))' }}>
               View Portfolio
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

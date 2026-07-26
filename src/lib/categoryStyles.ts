@@ -5,22 +5,22 @@
  * the sage palette rather than by hue-cycling through a rainbow.
  */
 export const NEWS_CATEGORIES = {
-  ai: { label: 'AI News', color: '#8fb0a6', icon: '🤖' },
-  research: { label: 'Research', color: '#adc3bb', icon: '📚' },
-  industry: { label: 'Industry', color: '#c9a86a', icon: '🏢' },
-  global: { label: 'Global', color: '#6a8a8e', icon: '🌍' },
+  ai: { label: 'AI News', color: 'rgb(var(--p-sage-bright))', icon: '🤖' },
+  research: { label: 'Research', color: 'rgb(var(--p-sage-mist))', icon: '📚' },
+  industry: { label: 'Industry', color: 'rgb(var(--p-status-dev))', icon: '🏢' },
+  global: { label: 'Global', color: 'rgb(var(--p-teal))', icon: '🌍' },
 } as const;
 
 export type NewsCategory = keyof typeof NEWS_CATEGORIES;
 
-export const ALL_CATEGORY = { value: 'all', label: 'All', color: '#7a9088' };
+export const ALL_CATEGORY = { value: 'all', label: 'All', color: 'rgb(var(--p-sage))' };
 
 /** Tag chips reuse the category accents so a story reads as one object. */
 export const TAG_ACCENTS: Record<string, string> = {
-  BREAKING: '#c9a86a',
-  PRODUCT: '#6a8a8e',
-  RESEARCH: '#adc3bb',
-  POLICY: '#8a8680',
+  BREAKING: 'rgb(var(--p-status-dev))',
+  PRODUCT: 'rgb(var(--p-teal))',
+  RESEARCH: 'rgb(var(--p-sage-mist))',
+  POLICY: 'rgb(var(--p-ink-dim))',
 };
 
 export function getCategoryColor(category: string): string {

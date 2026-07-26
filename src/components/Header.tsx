@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
+import ThemeToggle from '@/components/ThemeToggle';
 
 const NAV_ITEMS = [
   { label: 'News',        href: '/news' },
@@ -105,8 +106,8 @@ function PillItem({
           borderRadius: 9999,
           overflow: 'hidden',
           textDecoration: 'none',
-          background: active ? '#7a9088' : 'transparent',
-          color: active ? '#1a1816' : '#e0d8cc',
+          background: active ? 'rgb(var(--p-sage))' : 'transparent',
+          color: active ? 'rgb(var(--p-on-accent))' : 'rgb(var(--p-ink))',
           fontWeight: 500,
           fontSize: 14,
           transition: 'background 0.2s',
@@ -121,15 +122,15 @@ function PillItem({
             position: 'absolute',
             left: '50%',
             borderRadius: '50%',
-            background: '#7a9088',
+            background: 'rgb(var(--p-sage))',
             pointerEvents: 'none',
             zIndex: 0,
           }}
         />
         {/* Label stack */}
         <span style={{ position: 'relative', zIndex: 1, overflow: 'hidden', height: '1.2em', display: 'flex', flexDirection: 'column' }}>
-          <span className="pill-label" style={{ display: 'block', color: active ? '#1a1816' : '#e0d8cc' }}>{label}</span>
-          <span className="pill-label-hover" aria-hidden="true" style={{ display: 'block', position: 'absolute', color: '#1a1816' }}>{label}</span>
+          <span className="pill-label" style={{ display: 'block', color: active ? 'rgb(var(--p-on-accent))' : 'rgb(var(--p-ink))' }}>{label}</span>
+          <span className="pill-label-hover" aria-hidden="true" style={{ display: 'block', position: 'absolute', color: 'rgb(var(--p-on-accent))' }}>{label}</span>
         </span>
       </Link>
     </li>
@@ -182,21 +183,21 @@ export default function Header() {
     <>
     <motion.header
       className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b shadow-sm"
-      style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', borderColor: 'rgba(114, 110, 102, 0.3)' }}
+      style={{ backgroundColor: 'rgb(var(--p-surface-1) / 0.95)', borderColor: 'rgb(var(--p-line) / 0.3)' }}
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
     >
       <div className="container mx-auto px-6 py-3 flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-xl font-bold" style={{ color: '#e0d8cc' }}>
-          <Link href="/" style={{ color: '#e0d8cc', textDecoration: 'none' }}>
+        <h1 className="text-xl font-bold" style={{ color: 'rgb(var(--p-ink))' }}>
+          <Link href="/" style={{ color: 'rgb(var(--p-ink))', textDecoration: 'none' }}>
             Evan Lin
           </Link>
         </h1>
 
         {/* Desktop pill nav */}
-        <nav className="hidden md:block">
+        <nav className="hidden md:flex md:items-center md:gap-3">
           <ul style={{ display: 'flex', alignItems: 'center', gap: 4, listStyle: 'none', margin: 0, padding: 0 }}>
             {NAV_ITEMS.map(item => (
               <PillItem
@@ -208,19 +209,23 @@ export default function Header() {
               />
             ))}
           </ul>
+          <ThemeToggle />
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
+        {/* Mobile: theme toggle sits beside the hamburger */}
+        <div className="md:hidden flex items-center gap-1">
+          <ThemeToggle />
+          <button
           ref={hamburgerRef}
-          className="md:hidden p-2 flex flex-col gap-1.5 justify-center"
-          style={{ color: '#e0d8cc', background: 'none', border: 'none', cursor: 'pointer' }}
+          className="p-2 flex flex-col gap-1.5 justify-center"
+          style={{ color: 'rgb(var(--p-ink))', background: 'none', border: 'none', cursor: 'pointer' }}
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <span className="h-line" style={{ display: 'block', width: 22, height: 2, background: '#e0d8cc', borderRadius: 2, transformOrigin: 'center' }} />
-          <span className="h-line" style={{ display: 'block', width: 22, height: 2, background: '#e0d8cc', borderRadius: 2, transformOrigin: 'center' }} />
-        </button>
+            <span className="h-line" style={{ display: 'block', width: 22, height: 2, background: 'rgb(var(--p-ink))', borderRadius: 2, transformOrigin: 'center' }} />
+            <span className="h-line" style={{ display: 'block', width: 22, height: 2, background: 'rgb(var(--p-ink))', borderRadius: 2, transformOrigin: 'center' }} />
+          </button>
+        </div>
       </div>
 
     </motion.header>
@@ -234,7 +239,7 @@ export default function Header() {
         {/* Backdrop */}
         <div
           className="absolute inset-0"
-          style={{ backgroundColor: 'rgba(26, 24, 22, 0.97)' }}
+          style={{ backgroundColor: 'rgb(var(--p-surface-1) / 0.97)' }}
           onClick={toggleMenu}
         />
         {/* Menu content */}
@@ -250,7 +255,7 @@ export default function Header() {
                 borderRadius: 12,
                 fontWeight: 500,
                 fontSize: 18,
-                color: pathname === item.href ? '#7a9088' : '#e0d8cc',
+                color: pathname === item.href ? 'rgb(var(--p-sage))' : 'rgb(var(--p-ink))',
                 textDecoration: 'none',
               }}
             >

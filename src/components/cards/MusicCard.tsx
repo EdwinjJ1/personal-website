@@ -20,7 +20,7 @@ function PixelEqualizer({ live }: { live: boolean }) {
           className="px-eq w-[5px] rounded-[1px] origin-bottom"
           style={{
             height: `${peak * 100}%`,
-            backgroundColor: i % 3 === 0 ? '#7a9088' : 'rgba(122, 144, 136, 0.55)',
+            backgroundColor: i % 3 === 0 ? 'rgb(var(--p-sage))' : 'rgb(var(--p-sage) / 0.55)',
             animation: live
               ? `px-eq ${(0.9 + (i % 5) * 0.18).toFixed(2)}s steps(3, end) ${(i * 0.11).toFixed(2)}s infinite`
               : 'none',
@@ -44,7 +44,7 @@ function HangingHeadphones() {
       width={62}
       height={65}
       className="pointer-events-none absolute -top-7 left-6 z-10 w-[62px] select-none"
-      style={{ transform: 'rotate(10deg)', filter: 'drop-shadow(0 5px 8px rgba(0,0,0,0.45))' }}
+      style={{ transform: 'rotate(10deg)', filter: 'drop-shadow(0 5px 8px rgb(var(--p-shadow) / calc(0.45 * var(--p-shadow-strength))))' }}
     />
   );
 }
@@ -231,12 +231,12 @@ export default function MusicCard() {
             animate={isPlaying ? { scale: [1, 1.1, 1] } : { scale: 1 }}
             transition={{ repeat: Infinity, duration: 0.8 }}
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--p-sage))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
             </svg>
           </motion.div>
           <div>
-            <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>
+            <h3 className="font-semibold text-sm" style={{ color: 'rgb(var(--p-ink))' }}>
               On Repeat
             </h3>
             <div className="flex items-center gap-2">
@@ -244,9 +244,9 @@ export default function MusicCard() {
                 animate={{ opacity: [1, 0.5, 1] }}
                 transition={{ repeat: Infinity, duration: 1 }}
                 className="w-2 h-2 rounded-full"
-                style={{ backgroundColor: '#7a9088' }}
+                style={{ backgroundColor: 'rgb(var(--p-sage))' }}
               />
-              <span className="text-xs" style={{ color: '#7a9088' }}>
+              <span className="text-xs" style={{ color: 'rgb(var(--p-sage))' }}>
                 {isPlaying ? 'Playing · soft loop' : live ? 'NetEase · this week' : 'Tap to play'}
               </span>
             </div>
@@ -265,7 +265,7 @@ export default function MusicCard() {
             <div className="pointer-events-none absolute inset-0 overflow-hidden rounded-xl">
               <div
                 className="radio-scan absolute inset-y-0 w-1/2"
-                style={{ background: 'linear-gradient(90deg, transparent, rgba(224, 216, 204, 0.08), transparent)', animation: 'radio-scan 2.4s linear infinite' }}
+                style={{ background: 'linear-gradient(90deg, transparent, rgb(var(--p-ink) / 0.08), transparent)', animation: 'radio-scan 2.4s linear infinite' }}
               />
             </div>
           )}
@@ -290,8 +290,8 @@ export default function MusicCard() {
             onClick={togglePlayback}
             aria-label={isPlaying ? `Pause ${track.title}` : `Play ${track.title}`}
             aria-pressed={isPlaying}
-            className="group w-full rounded-xl p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-[#7a9088]/60"
-            style={{ backgroundColor: '#211e1c', boxShadow: isPlaying ? '0 0 0 1px rgba(122, 144, 136, 0.35)' : undefined }}
+            className="group w-full rounded-xl p-3 text-left transition focus:outline-none focus:ring-2 focus:ring-sage/60"
+            style={{ backgroundColor: 'rgb(var(--p-surface-2))', boxShadow: isPlaying ? '0 0 0 1px rgb(var(--p-sage) / 0.35)' : undefined }}
           >
             <div className="flex items-center gap-3">
               {track.cover ? (
@@ -308,49 +308,49 @@ export default function MusicCard() {
                       height={48}
                       loading="lazy"
                       className="h-12 w-12 object-cover"
-                      style={{ border: '1px solid rgba(122, 144, 136, 0.25)' }}
+                      style={{ border: '1px solid rgb(var(--p-sage) / 0.25)' }}
                     />
                   </div>
-                  {isPlaying && <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full" style={{ backgroundColor: '#211e1c', border: '1px solid rgba(224, 216, 204, 0.55)' }} />}
+                  {isPlaying && <span className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-surface-2))', border: '1px solid rgb(var(--p-ink) / 0.55)' }} />}
                 </div>
               ) : (
                 <div
                   className={`w-12 h-12 rounded-lg flex shrink-0 items-center justify-center ${isPlaying ? 'radio-spin' : ''}`}
                   style={{
-                    background: 'linear-gradient(to bottom right, #7a9088, #6a8a8e)',
+                    background: 'linear-gradient(to bottom right, rgb(var(--p-sage)), rgb(var(--p-teal)))',
                     animation: isPlaying ? 'radio-spin 5.5s linear infinite' : undefined,
                   }}
                 >
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e0d8cc" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--p-ink))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
                   </svg>
                 </div>
               )}
               <div className="flex-grow min-w-0">
-                <h4 className="font-medium text-sm truncate" style={{ color: '#e0d8cc' }}>
+                <h4 className="font-medium text-sm truncate" style={{ color: 'rgb(var(--p-ink))' }}>
                   {track.title}
                 </h4>
-                <p className="text-xs truncate" style={{ color: '#b8b4aa' }}>
+                <p className="text-xs truncate" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                   by {track.artist}
                 </p>
-                <p className="text-xs truncate" style={{ color: '#8a8680' }}>
+                <p className="text-xs truncate" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                   {track.album}
                 </p>
               </div>
               <span
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition group-hover:scale-105"
-                style={{ color: '#e0d8cc', backgroundColor: isPlaying ? '#7a9088' : 'rgba(122, 144, 136, 0.18)' }}
+                style={{ color: 'rgb(var(--p-ink))', backgroundColor: isPlaying ? 'rgb(var(--p-sage))' : 'rgb(var(--p-sage) / 0.18)' }}
               >
                 <PlayIcon playing={isPlaying} />
               </span>
             </div>
           </button>
 
-          <div className="mt-2.5 flex items-center justify-between text-xs" style={{ color: '#8a8680' }}>
+          <div className="mt-2.5 flex items-center justify-between text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
             {live && track.playCount ? (
               <>
                 <span className="tabular-nums">{`${track.playCount} plays this week`}</span>
-                <span style={{ color: '#7a9088' }}>♪</span>
+                <span style={{ color: 'rgb(var(--p-sage))' }}>♪</span>
               </>
             ) : (
               <span>What I keep coming back to.</span>

@@ -25,7 +25,7 @@ interface FolderProps {
   forceOpen?: boolean;
 }
 
-export default function Folder({ color = '#7a9088', size = 1, items = [], className = '', forceOpen = false }: FolderProps) {
+export default function Folder({ color = 'rgb(var(--p-sage))', size = 1, items = [], className = '', forceOpen = false }: FolderProps) {
   const maxItems = 3;
   const papers = [...items.slice(0, maxItems)];
   while (papers.length < maxItems) papers.push({ content: null });

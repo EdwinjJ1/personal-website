@@ -96,9 +96,9 @@ function FriendNode({
           marginTop: -28,
           borderRadius: '50%',
           overflow: 'hidden',
-          border: '2px solid rgba(122, 144, 136, 0.6)',
-          boxShadow: '0 0 20px rgba(122, 144, 136, 0.4), inset 0 0 10px rgba(0,0,0,0.3)',
-          background: '#1a1816',
+          border: '2px solid rgb(var(--p-sage) / 0.6)',
+          boxShadow: '0 0 20px rgb(var(--p-sage) / 0.4), inset 0 0 10px rgb(var(--p-shadow) / calc(0.3 * var(--p-shadow-strength)))',
+          background: 'rgb(var(--p-surface-1))',
           cursor: 'pointer',
           animation: `orbit-counter-${friend.ring} ${duration}s linear infinite`,
           transition: 'transform 0.3s, box-shadow 0.3s, border-color 0.3s',
@@ -157,8 +157,8 @@ export default function FriendsPage() {
 
         .orbit-node:hover {
           transform: scale(1.25);
-          border-color: #e0d8cc !important;
-          box-shadow: 0 0 30px rgba(224, 216, 204, 0.7), 0 0 60px rgba(122, 144, 136, 0.5) !important;
+          border-color: rgb(var(--p-ink)) !important;
+          box-shadow: 0 0 30px rgb(var(--p-ink) / 0.7), 0 0 60px rgb(var(--p-sage) / 0.5) !important;
           z-index: 5;
         }
 
@@ -166,19 +166,19 @@ export default function FriendsPage() {
           position: absolute;
           top: 50%;
           left: 50%;
-          border: 1px dashed rgba(122, 144, 136, 0.18);
+          border: 1px dashed rgb(var(--p-sage) / 0.18);
           border-radius: 50%;
           transform: translate(-50%, -50%);
           pointer-events: none;
         }
 
         @keyframes center-pulse {
-          0%, 100% { box-shadow: 0 0 30px rgba(122, 144, 136, 0.5), 0 0 60px rgba(122, 144, 136, 0.25); }
-          50%      { box-shadow: 0 0 50px rgba(122, 144, 136, 0.8), 0 0 90px rgba(122, 144, 136, 0.4); }
+          0%, 100% { box-shadow: 0 0 30px rgb(var(--p-sage) / 0.5), 0 0 60px rgb(var(--p-sage) / 0.25); }
+          50%      { box-shadow: 0 0 50px rgb(var(--p-sage) / 0.8), 0 0 90px rgb(var(--p-sage) / 0.4); }
         }
       `}</style>
 
-      <div className="min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
+      <div className="min-h-screen pt-20" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="container mx-auto px-6 py-8">
           {/* Header */}
           <motion.div
@@ -190,14 +190,14 @@ export default function FriendsPage() {
             <p className="type-eyebrow mb-3">Good company</p>
             <h1 className="type-h1 mb-4">
               <GradientText
-                colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                colors={['rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))']}
                 animationSpeed={6}
                 showBorder={false}
               >
                 Friends
               </GradientText>
             </h1>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgb(var(--p-ink-mid))' }}>
               A constellation of friends and fellow travellers. Hover to learn more, click to visit.
             </p>
           </motion.div>
@@ -253,7 +253,7 @@ export default function FriendsPage() {
                   borderRadius: '50%',
                   overflow: 'hidden',
                   border: '3px solid #7a9088',
-                  background: '#1a1816',
+                  background: 'rgb(var(--p-surface-1))',
                   animation: 'center-pulse 3s ease-in-out infinite',
                   margin: '0 auto',
                 }}
@@ -273,7 +273,7 @@ export default function FriendsPage() {
                   fontSize: 14,
                   fontWeight: 600,
                   letterSpacing: '0.1em',
-                  color: '#e0d8cc',
+                  color: 'rgb(var(--p-ink))',
                   textTransform: 'uppercase',
                 }}
               >
@@ -330,9 +330,9 @@ export default function FriendsPage() {
                   maxWidth: 320,
                   padding: '14px 16px',
                   borderRadius: 12,
-                  background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.98), rgba(33, 30, 28, 0.98))',
-                  border: '1px solid rgba(122, 144, 136, 0.5)',
-                  boxShadow: '0 12px 40px rgba(0,0,0,0.6), 0 0 30px rgba(122, 144, 136, 0.25)',
+                  background: 'linear-gradient(to bottom right, rgb(var(--p-surface-3) / 0.98), rgb(var(--p-surface-2) / 0.98))',
+                  border: '1px solid rgb(var(--p-sage) / 0.5)',
+                  boxShadow: '0 12px 40px rgb(var(--p-shadow) / calc(0.6 * var(--p-shadow-strength))), 0 0 30px rgb(var(--p-sage) / 0.25)',
                   backdropFilter: 'blur(8px)',
                 }}
               >
@@ -343,9 +343,9 @@ export default function FriendsPage() {
                       height: 36,
                       borderRadius: '50%',
                       overflow: 'hidden',
-                      border: '1px solid rgba(122, 144, 136, 0.6)',
+                      border: '1px solid rgb(var(--p-sage) / 0.6)',
                       flexShrink: 0,
-                      background: '#1a1816',
+                      background: 'rgb(var(--p-surface-1))',
                     }}
                   >
                     <img
@@ -357,15 +357,15 @@ export default function FriendsPage() {
                     />
                   </div>
                   <div style={{ minWidth: 0 }}>
-                    <div style={{ fontWeight: 600, fontSize: 14, color: '#e0d8cc', lineHeight: 1.3 }}>
+                    <div style={{ fontWeight: 600, fontSize: 14, color: 'rgb(var(--p-ink))', lineHeight: 1.3 }}>
                       {hovered.friend.name}
                     </div>
-                    <div style={{ fontSize: 11, color: '#7a9088', marginTop: 2, wordBreak: 'break-all' }}>
+                    <div style={{ fontSize: 11, color: 'rgb(var(--p-sage))', marginTop: 2, wordBreak: 'break-all' }}>
                       {hovered.friend.link.replace(/^https?:\/\//, '').replace(/\/$/, '')}
                     </div>
                   </div>
                 </div>
-                <div style={{ fontSize: 13, color: '#b8b4aa', lineHeight: 1.5 }}>
+                <div style={{ fontSize: 13, color: 'rgb(var(--p-ink-mid))', lineHeight: 1.5 }}>
                   {hovered.friend.desc}
                 </div>
               </motion.div>
@@ -378,10 +378,10 @@ export default function FriendsPage() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-center mt-4"
-            style={{ color: '#726e66', fontSize: 13 }}
+            style={{ color: 'rgb(var(--p-ink-dim))', fontSize: 13 }}
           >
             Want to exchange links? Reach out via the{' '}
-            <a href="/about" style={{ color: '#7a9088', textDecoration: 'underline' }}>
+            <a href="/about" style={{ color: 'rgb(var(--p-sage))', textDecoration: 'underline' }}>
               About
             </a>{' '}
             page.

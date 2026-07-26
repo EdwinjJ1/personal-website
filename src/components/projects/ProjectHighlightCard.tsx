@@ -47,7 +47,7 @@ function VisualPanel({ project, isLead }: { project: Project; isLead: boolean })
           className="h-full w-full object-cover"
           loading={isLead ? 'eager' : 'lazy'}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#161412] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-surface-0 via-transparent to-transparent" />
         {isFinalBoss ? (
           <div className="project-flow-strip" aria-hidden>
             <span>materials</span>
@@ -94,7 +94,7 @@ function VisualPanel({ project, isLead }: { project: Project; isLead: boolean })
 
 export default function ProjectHighlightCard({ project, index = 0, active = false, onActivate }: ProjectHighlightCardProps) {
   const isLead = index === 0;
-  const accent = project.accent ?? '#7a9088';
+  const accent = project.accent ?? 'rgb(var(--p-sage))';
   const style = { '--project-accent': accent } as CSSProperties;
   const articleClass = isLead
     ? 'project-feature-card group lg:col-span-6 lg:grid lg:grid-cols-[0.96fr_1.04fr]'
@@ -134,7 +134,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em]" style={{ color: accent }}>
                 {String(index + 1).padStart(2, '0')} / Flagship
               </span>
-              <h3 className={isLead ? 'mt-1 text-3xl font-black leading-tight tracking-tight md:text-4xl' : 'mt-1 text-2xl font-bold tracking-tight'} style={{ color: '#e0d8cc' }}>
+              <h3 className={isLead ? 'mt-1 text-3xl font-black leading-tight tracking-tight md:text-4xl' : 'mt-1 text-2xl font-bold tracking-tight'} style={{ color: 'rgb(var(--p-ink))' }}>
                 {project.title}
               </h3>
             </div>
@@ -144,18 +144,18 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
           </span>
         </div>
 
-        <p className={isLead ? 'max-w-2xl text-lg leading-relaxed' : 'text-sm leading-relaxed'} style={{ color: '#c9c2b7' }}>
+        <p className={isLead ? 'max-w-2xl text-lg leading-relaxed' : 'text-sm leading-relaxed'} style={{ color: 'rgb(var(--p-ink-mid))' }}>
           {project.tagline ?? project.description}
         </p>
 
         {project.metrics ? (
-          <div className="grid grid-cols-3 gap-px overflow-hidden rounded-lg border" style={{ borderColor: 'rgba(224,216,204,0.12)', backgroundColor: 'rgba(224,216,204,0.12)' }}>
+          <div className="grid grid-cols-3 gap-px overflow-hidden rounded-lg border" style={{ borderColor: 'rgb(var(--p-ink) / 0.12)', backgroundColor: 'rgb(var(--p-ink) / 0.12)' }}>
             {project.metrics.map((metric) => (
-              <div key={`${project.id}-${metric.label}`} className="px-3 py-3" style={{ backgroundColor: 'rgba(26,24,22,0.78)' }}>
+              <div key={`${project.id}-${metric.label}`} className="px-3 py-3" style={{ backgroundColor: 'rgb(var(--p-surface-1) / 0.78)' }}>
                 <div className={isLead ? 'text-2xl font-black tabular-nums' : 'text-xl font-black tabular-nums'} style={{ color: accent }}>
                   {metric.value}
                 </div>
-                <div className="mt-1 text-[10px] uppercase tracking-[0.14em]" style={{ color: '#8a8680' }}>
+                <div className="mt-1 text-[10px] uppercase tracking-[0.14em]" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                   {metric.label}
                 </div>
               </div>
@@ -163,7 +163,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
           </div>
         ) : null}
 
-        <p className={isLead ? 'line-clamp-4 text-sm leading-relaxed' : 'line-clamp-3 text-sm leading-relaxed'} style={{ color: '#b8b4aa' }}>
+        <p className={isLead ? 'line-clamp-4 text-sm leading-relaxed' : 'line-clamp-3 text-sm leading-relaxed'} style={{ color: 'rgb(var(--p-ink-mid))' }}>
           {project.longDescription}
         </p>
 
@@ -172,7 +172,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
             <span
               key={`${project.id}-${tech}`}
               className="rounded-md border px-2.5 py-1 font-medium"
-              style={{ borderColor: 'rgba(224,216,204,0.1)', backgroundColor: 'rgba(224,216,204,0.06)', color: '#b8b4aa' }}
+              style={{ borderColor: 'rgb(var(--p-ink) / 0.1)', backgroundColor: 'rgb(var(--p-ink) / 0.06)', color: 'rgb(var(--p-ink-mid))' }}
             >
               {tech}
             </span>
@@ -200,7 +200,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-sm transition-colors hover:opacity-80"
-              style={{ color: '#9f9a92' }}
+              style={{ color: 'rgb(var(--p-ink-dim))' }}
               onFocus={() => onActivate?.(project)}
             >
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
@@ -210,7 +210,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
             </a>
           ) : null}
           {!project.liveUrl && !project.githubUrl ? (
-            <Link href="/about" className="text-sm" style={{ color: '#8a8680' }}>
+            <Link href="/about" className="text-sm" style={{ color: 'rgb(var(--p-ink-dim))' }}>
               Learn more
             </Link>
           ) : null}

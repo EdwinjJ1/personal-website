@@ -123,7 +123,7 @@ export default function ActivityCard() {
   const latestSolved = leetcode?.recent?.[0];
 
   const Footer = () => (
-    <div className="flex justify-between items-center gap-3 text-xs" style={{ color: '#8a8680' }}>
+    <div className="flex justify-between items-center gap-3 text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
       <div className="flex items-center gap-1.5 shrink-0">
         <span>Less</span>
         <div className="flex gap-1">
@@ -150,7 +150,7 @@ export default function ActivityCard() {
               href={latestSolved.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="truncate transition-colors hover:text-[#e0d8cc]"
+              className="truncate transition-colors hover:text-ink"
               title={`Latest accepted: ${latestSolved.title}`}
             >
               · {latestSolved.title}
@@ -168,7 +168,7 @@ export default function ActivityCard() {
           <Header />
           <div className="grid flex-1 min-h-0 grid-flow-col grid-rows-7 gap-[3px] mb-3 auto-cols-fr">
             {Array.from({ length: DAYS_SHOWN }).map((_, i) => (
-              <div key={i} className="min-h-[8px] rounded-sm bg-[#312e2a]" />
+              <div key={i} className="min-h-[8px] rounded-sm bg-surface-4" />
             ))}
           </div>
           <Footer />
@@ -200,7 +200,7 @@ export default function ActivityCard() {
               >
                 <div
                   className="absolute -top-8 left-1/2 transform -translate-x-1/2 text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap z-10"
-                  style={{ backgroundColor: 'rgba(26, 24, 22, 0.95)', color: '#e0d8cc' }}
+                  style={{ backgroundColor: 'rgb(var(--p-surface-1) / 0.95)', color: 'rgb(var(--p-ink))' }}
                 >
                   {day.count} contributions
                 </div>

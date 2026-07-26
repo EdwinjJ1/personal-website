@@ -117,10 +117,10 @@ export default function MusicChat() {
         aria-label="Chat with Evan"
         className="absolute right-[18%] top-4 z-10 flex h-8 w-14 cursor-pointer items-center justify-center rounded-[999px] border"
         style={{
-          backgroundColor: 'rgba(33, 30, 28, 0.92)',
-          borderColor: 'rgba(122, 144, 136, 0.5)',
-          color: '#7a9088',
-          boxShadow: '0 6px 16px rgba(0,0,0,0.45)',
+          backgroundColor: 'rgb(var(--p-surface-2) / 0.92)',
+          borderColor: 'rgb(var(--p-sage) / 0.5)',
+          color: 'rgb(var(--p-sage))',
+          boxShadow: '0 6px 16px rgb(var(--p-shadow) / calc(0.45 * var(--p-shadow-strength)))',
         }}
         animate={{ y: [0, -4, 0] }}
         transition={{ repeat: Infinity, duration: 2.2, ease: 'easeInOut' }}
@@ -144,12 +144,12 @@ export default function MusicChat() {
             exit={{ opacity: 0, y: -6, scale: 0.92 }}
             transition={{ type: 'spring', stiffness: 380, damping: 24 }}
             className="pointer-events-none absolute right-[8%] top-14 z-20 whitespace-nowrap rounded-2xl px-3.5 py-2 text-xs font-medium"
-            style={{ backgroundColor: '#e0d8cc', color: '#1a1816', boxShadow: '0 6px 16px rgba(0,0,0,0.4)' }}
+            style={{ backgroundColor: 'rgb(var(--p-ink))', color: 'rgb(var(--p-surface-1))', boxShadow: '0 6px 16px rgb(var(--p-shadow) / calc(0.4 * var(--p-shadow-strength)))' }}
           >
             {quip}
             <span
               className="absolute -bottom-[5px] right-8 h-2.5 w-2.5 rotate-45"
-              style={{ backgroundColor: '#e0d8cc' }}
+              style={{ backgroundColor: 'rgb(var(--p-ink))' }}
             />
           </motion.div>
         )}
@@ -169,20 +169,20 @@ export default function MusicChat() {
             {/* comic-bubble tail: two fading dots toward the guy */}
             <span
               className="absolute -bottom-2 left-[34%] h-3.5 w-5 rounded-full border"
-              style={{ backgroundColor: 'rgba(40, 38, 34, 0.98)', borderColor: 'rgba(122, 144, 136, 0.5)' }}
+              style={{ backgroundColor: 'rgb(var(--p-surface-3) / 0.98)', borderColor: 'rgb(var(--p-sage) / 0.5)' }}
             />
             <span
               className="absolute -bottom-5 left-[27%] h-2 w-3 rounded-full border"
-              style={{ backgroundColor: 'rgba(40, 38, 34, 0.98)', borderColor: 'rgba(122, 144, 136, 0.4)' }}
+              style={{ backgroundColor: 'rgb(var(--p-surface-3) / 0.98)', borderColor: 'rgb(var(--p-sage) / 0.4)' }}
             />
 
             <div
               className="relative h-full w-full overflow-hidden border"
               style={{
                 borderRadius: '999px / 64px',
-                background: 'linear-gradient(145deg, rgba(44, 42, 38, 0.99), rgba(30, 28, 25, 0.99))',
-                borderColor: 'rgba(122, 144, 136, 0.7)',
-                boxShadow: '0 0 0 1px rgba(122, 144, 136, 0.22), 0 16px 42px rgba(0,0,0,0.55)',
+                background: 'linear-gradient(145deg, rgb(var(--p-shadow) / calc(0.99 * var(--p-shadow-strength))), rgb(var(--p-shadow) / calc(0.99 * var(--p-shadow-strength))))',
+                borderColor: 'rgb(var(--p-sage) / 0.7)',
+                boxShadow: '0 0 0 1px rgb(var(--p-sage) / 0.22), 0 16px 42px rgb(var(--p-shadow) / calc(0.55 * var(--p-shadow-strength)))',
               }}
             >
             <div className="relative z-10 flex h-full w-full flex-col px-6 py-3.5">
@@ -190,10 +190,10 @@ export default function MusicChat() {
             <div className="flex items-center justify-between pb-1.5">
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: '#7a9088' }} />
-                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: '#7a9088' }} />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: 'rgb(var(--p-sage))' }} />
+                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }} />
                 </span>
-                <span className="text-xs font-semibold" style={{ color: '#e0d8cc' }}>
+                <span className="text-xs font-semibold" style={{ color: 'rgb(var(--p-ink))' }}>
                   Evan
                 </span>
               </div>
@@ -201,7 +201,7 @@ export default function MusicChat() {
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
                 className="rounded-full p-1 transition-colors hover:bg-white/10"
-                style={{ color: '#b8b4aa' }}
+                style={{ color: 'rgb(var(--p-ink-mid))' }}
               >
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M18 6 6 18M6 6l12 12" />
@@ -214,7 +214,7 @@ export default function MusicChat() {
               <div className="flex justify-start">
                 <div
                   className="max-w-[85%] rounded-2xl rounded-bl-md px-3 py-1.5 text-xs leading-relaxed"
-                  style={{ backgroundColor: '#2e2b27', color: '#e0d8cc' }}
+                  style={{ backgroundColor: 'rgb(var(--p-surface-4))', color: 'rgb(var(--p-ink))' }}
                 >
                   {GREETING}
                 </div>
@@ -227,8 +227,8 @@ export default function MusicChat() {
                     }`}
                     style={
                       m.role === 'user'
-                        ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#1a1816' }
-                        : { backgroundColor: '#2e2b27', color: '#e0d8cc' }
+                        ? { background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-surface-1))' }
+                        : { backgroundColor: 'rgb(var(--p-surface-4))', color: 'rgb(var(--p-ink))' }
                     }
                   >
                     {m.content || (
@@ -237,7 +237,7 @@ export default function MusicChat() {
                           <motion.span
                             key={d}
                             className="h-1 w-1 rounded-full"
-                            style={{ backgroundColor: '#7a9088' }}
+                            style={{ backgroundColor: 'rgb(var(--p-sage))' }}
                             animate={{ opacity: [0.25, 1, 0.25] }}
                             transition={{ repeat: Infinity, duration: 1, delay: d * 0.18 }}
                           />
@@ -263,15 +263,15 @@ export default function MusicChat() {
                 placeholder="说点什么…"
                 aria-label="Chat with Evan"
                 maxLength={500}
-                className="min-w-0 flex-1 rounded-full border bg-transparent px-3 py-1.5 text-xs outline-none transition-colors focus:border-[#7a9088]"
-                style={{ borderColor: 'rgba(114, 110, 102, 0.35)', color: '#e0d8cc' }}
+                className="min-w-0 flex-1 rounded-full border bg-transparent px-3 py-1.5 text-xs outline-none transition-colors focus:border-sage"
+                style={{ borderColor: 'rgb(var(--p-line) / 0.35)', color: 'rgb(var(--p-ink))' }}
               />
               <button
                 type="submit"
                 disabled={busy || input.trim().length === 0}
                 aria-label="Send"
                 className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition-transform hover:scale-105 disabled:opacity-40"
-                style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#1a1816' }}
+                style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-surface-1))' }}
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m22 2-7 20-4-9-9-4Z" />
