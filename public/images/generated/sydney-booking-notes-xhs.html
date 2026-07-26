@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>悉尼约拍说明</title>
+    <style>
+      :root {
+        --paper: #fbf8ef;
+        --ink: #26312d;
+        --muted: #65726c;
+        --sage: #78988b;
+        --sage-light: #dce9e3;
+        --blue: #dcecf4;
+        --gold: #c49d55;
+        --line: #d7ddd5;
+        --white: #fffdf8;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #e9ece7;
+        color: var(--ink);
+        font-family: "PingFang SC", "Hiragino Sans GB", "STHeiti", "Microsoft YaHei", Arial, sans-serif;
+      }
+
+      .poster {
+        position: relative;
+        width: 1080px;
+        min-height: 1920px;
+        margin: 0 auto;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 8% 6%, rgba(220, 236, 244, 0.98) 0 210px, transparent 211px),
+          radial-gradient(circle at 92% 11%, rgba(244, 219, 204, 0.88) 0 235px, transparent 236px),
+          radial-gradient(circle at 6% 83%, rgba(220, 233, 227, 0.98) 0 300px, transparent 301px),
+          linear-gradient(180deg, #fffdf8 0%, var(--paper) 100%);
+        padding: 72px 78px 64px;
+      }
+
+      .poster::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.28;
+        background-image:
+          radial-gradient(#8a948d 0.7px, transparent 0.8px),
+          radial-gradient(#ffffff 0.7px, transparent 0.8px);
+        background-position: 0 0, 7px 11px;
+        background-size: 18px 18px;
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .kicker {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 16px;
+        color: var(--sage);
+        font-size: 25px;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .kicker::after {
+        content: "";
+        flex: 1;
+        height: 2px;
+        background: var(--line);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: 86px;
+        line-height: 1.02;
+        letter-spacing: 0;
+      }
+
+      .subtitle {
+        margin-top: 18px;
+        color: var(--sage);
+        font-size: 40px;
+        font-weight: 700;
+      }
+
+      .intro {
+        margin-top: 40px;
+        padding: 34px 36px;
+        border: 2px solid rgba(120, 152, 139, 0.45);
+        border-radius: 30px;
+        background: rgba(255, 253, 248, 0.86);
+        box-shadow: 0 16px 36px rgba(64, 82, 73, 0.08);
+      }
+
+      .intro p {
+        margin: 0;
+        color: #3b4742;
+        font-size: 30px;
+        line-height: 1.72;
+      }
+
+      .tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .tag {
+        padding: 8px 20px;
+        border-radius: 999px;
+        background: var(--sage-light);
+        color: #365348;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .tag:nth-child(2) {
+        background: var(--blue);
+      }
+
+      .tag:nth-child(3) {
+        background: #f1dfc4;
+      }
+
+      .section {
+        margin-top: 32px;
+        padding: 30px 34px;
+        border: 2px solid rgba(120, 152, 139, 0.38);
+        border-radius: 28px;
+        background: rgba(255, 253, 248, 0.91);
+      }
+
+      .section-title {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        margin-bottom: 22px;
+        font-size: 38px;
+        font-weight: 800;
+      }
+
+      .dot {
+        width: 15px;
+        height: 15px;
+        border-radius: 999px;
+        background: var(--sage);
+      }
+
+      .split {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .mini {
+        padding: 22px 24px;
+        border-radius: 24px;
+        background: #f7f4ea;
+        border: 1px solid rgba(196, 157, 85, 0.24);
+      }
+
+      .mini strong {
+        display: block;
+        margin-bottom: 10px;
+        color: #2f3a35;
+        font-size: 28px;
+      }
+
+      .mini span {
+        color: var(--muted);
+        font-size: 25px;
+        line-height: 1.5;
+      }
+
+      .info-table {
+        display: grid;
+        gap: 12px;
+      }
+
+      .row {
+        display: grid;
+        grid-template-columns: 170px 1fr 1fr;
+        gap: 14px;
+        align-items: stretch;
+      }
+
+      .cell {
+        min-height: 82px;
+        padding: 16px 18px;
+        border-radius: 18px;
+        background: rgba(247, 244, 234, 0.95);
+        color: var(--muted);
+        font-size: 24px;
+        line-height: 1.45;
+      }
+
+      .cell:first-child {
+        display: flex;
+        align-items: center;
+        color: #2f3a35;
+        font-size: 26px;
+        font-weight: 800;
+        background: var(--sage-light);
+      }
+
+      .head .cell {
+        min-height: 56px;
+        padding: 12px 18px;
+        background: #49695c;
+        color: #fffdf8;
+        font-size: 24px;
+        font-weight: 800;
+      }
+
+      .note {
+        margin-top: 30px;
+        padding: 26px 32px;
+        border-radius: 999px;
+        background: #49695c;
+        color: #fffdf8;
+        font-size: 27px;
+        line-height: 1.45;
+        text-align: center;
+      }
+
+      .footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 26px;
+        color: var(--gold);
+        font-size: 23px;
+        font-weight: 700;
+      }
+
+      .footer::before,
+      .footer::after {
+        content: "";
+        width: 190px;
+        height: 3px;
+        background: rgba(196, 157, 85, 0.65);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="poster">
+      <div class="content">
+        <div class="kicker">SYDNEY PHOTO BOOKING NOTES</div>
+        <h1>悉尼约拍说明</h1>
+        <div class="subtitle">悉尼男摄 · 06 · UNSW CS · 三年摄影经验</div>
+
+        <section class="intro">
+          <p>
+            平时主要拍人像、Cos、日常写真、街拍和活动记录。拍摄时会帮忙看光线、找角度、做构图，也会引导动作；
+            不太会摆动作也没关系，我们会按你的气质、服装和想要的感觉，一起设计适合你的拍摄方向。
+          </p>
+          <div class="tags">
+            <span class="tag">会构图</span>
+            <span class="tag">会引导</span>
+            <span class="tag">阳光开朗</span>
+            <span class="tag">风格可沟通</span>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title"><span class="dot"></span>基本信息</div>
+          <div class="split">
+            <div class="mini">
+              <strong>设备</strong>
+              <span>Fujifilm GFX 100 / Panasonic Lumix S5II / Olympus E-M1</span>
+            </div>
+            <div class="mini">
+              <strong>地点</strong>
+              <span>悉尼市区、UNSW、海边、公园、街区、漫展现场都可商量</span>
+            </div>
+            <div class="mini">
+              <strong>预约</strong>
+              <span>直接私信我，先沟通风格、时间和地点</span>
+            </div>
+            <div class="mini">
+              <strong>合作方式</strong>
+              <span>互勉版可免费共创；付费版 20 AUD 定金，39 AUD / hour</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-title"><span class="dot"></span>约拍前请提前说明</div>
+          <div class="info-table">
+            <div class="row head">
+              <div class="cell">项目</div>
+              <div class="cell">需要提前说明</div>
+              <div class="cell">备注</div>
+            </div>
+            <div class="row">
+              <div class="cell">拍摄类型</div>
+              <div class="cell">人像 / Cos / 日常 / 情侣 / 活动 / 漫展</div>
+              <div class="cell">方便提前判断设备和拍摄节奏</div>
+            </div>
+            <div class="row">
+              <div class="cell">风格方向</div>
+              <div class="cell">可以发喜欢的参考图、妆造、穿搭、场景图</div>
+              <div class="cell">不知道怎么拍也没关系，我会帮你设计</div>
+            </div>
+            <div class="row">
+              <div class="cell">个人照片</div>
+              <div class="cell">建议发 2-3 张清晰日常照</div>
+              <div class="cell">方便判断适合的角度、光线和构图</div>
+            </div>
+            <div class="row">
+              <div class="cell">时间安排</div>
+              <div class="cell">希望拍摄日期、开始时间、预计时长</div>
+              <div class="cell">以最终确认时间为准</div>
+            </div>
+            <div class="row">
+              <div class="cell">拍摄地点</div>
+              <div class="cell">想去的区域或场景偏好</div>
+              <div class="cell">地点都可商量，也可以我来推荐</div>
+            </div>
+            <div class="row">
+              <div class="cell">费用方式</div>
+              <div class="cell">互勉 / 付费拍摄</div>
+              <div class="cell">付费版：20 AUD 定金，39 AUD / hour</div>
+            </div>
+            <div class="row">
+              <div class="cell">额外费用</div>
+              <div class="cell">交通、门票、场地费、道具费</div>
+              <div class="cell">原则上各自承担，特殊情况提前说清楚</div>
+            </div>
+            <div class="row">
+              <div class="cell">妆造服装</div>
+              <div class="cell">是否已准备妆造、服装、道具</div>
+              <div class="cell">建议提前整理好，拍摄会更顺</div>
+            </div>
+            <div class="row">
+              <div class="cell">现场配合</div>
+              <div class="cell">是否需要动作引导、表情引导</div>
+              <div class="cell">我会帮忙引导，不用担心不会摆</div>
+            </div>
+            <div class="row">
+              <div class="cell">出片用途</div>
+              <div class="cell">自用 / 小红书 / 作品集 / 商用</div>
+              <div class="cell">商用或特殊用途需要提前说明</div>
+            </div>
+            <div class="row">
+              <div class="cell">预约方式</div>
+              <div class="cell">直接私信沟通</div>
+              <div class="cell">确认时间后请尽量准时到达</div>
+            </div>
+          </div>
+        </section>
+
+        <div class="note">
+          希望拍摄是一次轻松、舒服、互相尊重的合作。有想法可以直接私信我，我们一起把它拍出来。
+        </div>
+        <div class="footer"><span>SYDNEY PHOTO</span></div>
+      </div>
+    </main>
+  </body>
+</html>
