@@ -1,6 +1,6 @@
 'use client';
 
-import type { CSSProperties } from 'react';
+import { Fragment, type CSSProperties } from 'react';
 import Link from 'next/link';
 import type { Project } from '@/data/projects';
 import ProjectIcon from './ProjectIcon';
@@ -13,23 +13,52 @@ interface ProjectHighlightCardProps {
   onActivate?: (project: Project) => void;
 }
 
-function PromptPipelinePreview() {
+function getPipelineSteps(project: Project) {
+  if (project.title === 'Roundtable') {
+    return [
+      ['mission', 'clear goal'],
+      ['agent squad', 'parallel work'],
+      ['review gate', 'traceable delivery'],
+    ] as const;
+  }
+
+  if (project.title === 'Akeso') {
+    return [
+      ['check-in', 'your day today'],
+      ['energy map', 'clear timing'],
+      ['day plan', 'doable next steps'],
+    ] as const;
+  }
+
+  if (project.title.startsWith('LensDex')) {
+    return [
+      ['gear brief', 'camera or lens'],
+      ['real context', 'specs + prices'],
+      ['confident pick', 'compare clearly'],
+    ] as const;
+  }
+
+  return [
+    ['rough request', 'fix login bug'],
+    ['repo context', 'auth, git state, risk'],
+    ['execution prompt', 'scoped files + verification'],
+  ] as const;
+}
+
+function ProjectPipelinePreview({ project }: { project: Project }) {
+  const steps = getPipelineSteps(project);
+
   return (
     <div className="project-pipeline h-full">
-      <div className="project-pipeline-node">
-        <span>rough request</span>
-        <strong>fix login bug</strong>
-      </div>
-      <div className="project-pipeline-flow" aria-hidden />
-      <div className="project-pipeline-node">
-        <span>repo context</span>
-        <strong>auth, git state, risk</strong>
-      </div>
-      <div className="project-pipeline-flow" aria-hidden />
-      <div className="project-pipeline-node project-pipeline-node--hot">
-        <span>execution prompt</span>
-        <strong>scoped files + verification</strong>
-      </div>
+      {steps.map(([label, value], index) => (
+        <Fragment key={label}>
+          <div className={`project-pipeline-node${index === steps.length - 1 ? ' project-pipeline-node--hot' : ''}`}>
+            <span>{label}</span>
+            <strong>{value}</strong>
+          </div>
+          {index < steps.length - 1 ? <div className="project-pipeline-flow" aria-hidden /> : null}
+        </Fragment>
+      ))}
     </div>
   );
 }
@@ -89,7 +118,7 @@ function VisualPanel({ project, isLead }: { project: Project; isLead: boolean })
     );
   }
 
-  return <PromptPipelinePreview />;
+  return <ProjectPipelinePreview project={project} />;
 }
 
 export default function ProjectHighlightCard({ project, index = 0, active = false, onActivate }: ProjectHighlightCardProps) {
@@ -188,7 +217,7 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
               className="project-primary-link"
               onFocus={() => onActivate?.(project)}
             >
-              View product
+              {project.linkLabel ?? 'View product'}
               <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>

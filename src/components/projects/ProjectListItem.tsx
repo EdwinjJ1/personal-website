@@ -37,7 +37,7 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
         href={project.liveUrl ?? project.githubUrl ?? '/projects'}
         className="accent-text inline-flex flex-shrink-0 items-center gap-1.5 text-sm font-medium transition-all hover:gap-2.5"
       >
-        Open
+        {project.linkLabel ?? 'Open'}
         <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
