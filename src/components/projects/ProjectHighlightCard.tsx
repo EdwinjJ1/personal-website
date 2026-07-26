@@ -13,7 +13,7 @@ interface ProjectHighlightCardProps {
   onActivate?: (project: Project) => void;
 }
 
-function PromptPipelinePreview({ project }: { project: Project }) {
+function PromptPipelinePreview() {
   return (
     <div className="project-pipeline h-full">
       <div className="project-pipeline-node">
@@ -89,7 +89,7 @@ function VisualPanel({ project, isLead }: { project: Project; isLead: boolean })
     );
   }
 
-  return <PromptPipelinePreview project={project} />;
+  return <PromptPipelinePreview />;
 }
 
 export default function ProjectHighlightCard({ project, index = 0, active = false, onActivate }: ProjectHighlightCardProps) {
