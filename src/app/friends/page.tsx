@@ -187,7 +187,8 @@ export default function FriendsPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-6"
           >
-            <h1 className="text-5xl font-bold mb-4">
+            <p className="type-eyebrow mb-3">Good company</p>
+            <h1 className="type-h1 mb-4">
               <GradientText
                 colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
                 animationSpeed={6}
