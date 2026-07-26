@@ -8,6 +8,10 @@ interface BaseCardProps {
   className?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   hover?: boolean;
+  glass?: boolean;
+  /** Ignored. Staggered entry needed an animation fill-mode that left
+   *  cards blank whenever the browser paused animations. Kept so the
+   *  existing call sites don't all have to change. */
   delay?: number;
 }
 
@@ -25,9 +29,8 @@ export default function BaseCard({
   className = '',
   size = 'sm',
   hover = true,
-  delay = 0,
   glass = false,
-}: BaseCardProps & { glass?: boolean }) {
+}: BaseCardProps) {
   const tiltRef = useRef<HTMLDivElement>(null);
   const spotRef = useRef<HTMLDivElement>(null);
   const [canHover, setCanHover] = useState(false);
@@ -62,30 +65,26 @@ export default function BaseCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, delay }}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
         perspective: '900px',
         ...(glass ? {} : {
-          backgroundColor: '#282622',
-          borderColor: 'rgba(114, 110, 102, 0.3)'
+          backgroundColor: 'var(--color-surface-3)',
+          borderColor: 'var(--color-line)',
         }),
       }}
       className={`
-        relative
+        relative rounded-2xl p-5 card-enter
         ${sizeClasses[size]}
-        ${glass ? 'glass-card' : 'backdrop-blur-sm rounded-2xl p-5 border'}
-        ${!glass ? 'rounded-2xl p-5' : 'rounded-2xl p-5'}
+        ${glass ? 'glass-card' : 'backdrop-blur-sm border'}
         ${hover ? 'transition-all duration-300' : ''}
         ${className}
       `}
       whileHover={hover ? {
         scale: 1.02,
         y: -4,
-        ...(glass ? {} : { borderColor: 'rgba(122, 144, 136, 0.5)' })
+        ...(glass ? {} : { borderColor: 'rgb(122 144 136 / 0.5)' })
       } : {}}
     >
       <div

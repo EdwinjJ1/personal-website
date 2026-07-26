@@ -2,7 +2,6 @@
 
 import BaseCard from './BaseCard';
 import { motion } from 'framer-motion';
-import ScatterText from '@/components/ScatterText';
 import MusicChat from './MusicChat';
 import { useState, useEffect, useRef, useCallback } from 'react';
 
@@ -254,7 +253,7 @@ export default function MusicCard() {
           </motion.div>
           <div>
             <h3 className="font-semibold text-sm" style={{ color: '#e0d8cc' }}>
-              <ScatterText scatterRadius={20} rotationRange={8} staggerDelay={0.015}>On Repeat</ScatterText>
+              On Repeat
             </h3>
             <div className="flex items-center gap-2">
               <motion.div
@@ -264,7 +263,7 @@ export default function MusicCard() {
                 style={{ backgroundColor: '#7a9088' }}
               />
               <span className="text-xs" style={{ color: '#7a9088' }}>
-                <ScatterText scatterRadius={15} rotationRange={6}>{isPlaying ? 'Playing · soft loop' : live ? 'NetEase · this week' : 'Tap to play'}</ScatterText>
+                {isPlaying ? 'Playing · soft loop' : live ? 'NetEase · this week' : 'Tap to play'}
               </span>
             </div>
           </div>
@@ -364,7 +363,7 @@ export default function MusicCard() {
               )}
               <div className="flex-grow min-w-0">
                 <h4 className="font-medium text-sm truncate" style={{ color: '#e0d8cc' }}>
-                  <ScatterText scatterRadius={15} rotationRange={6} staggerDelay={0.01}>{track.title}</ScatterText>
+                  {track.title}
                 </h4>
                 <p className="text-xs truncate" style={{ color: '#b8b4aa' }}>
                   by {track.artist}
@@ -391,11 +390,11 @@ export default function MusicCard() {
           <div className="mt-2.5 flex items-center justify-between text-xs" style={{ color: '#8a8680' }}>
             {live && track.playCount ? (
               <>
-                <span className="tabular-nums"><ScatterText scatterRadius={15} rotationRange={6}>{`${track.playCount} plays this week`}</ScatterText></span>
+                <span className="tabular-nums">{`${track.playCount} plays this week`}</span>
                 <span style={{ color: '#7a9088' }}>♪</span>
               </>
             ) : (
-              <span><ScatterText scatterRadius={15} rotationRange={6}>What I keep coming back to.</ScatterText></span>
+              <span>What I keep coming back to.</span>
             )}
           </div>
         </div>

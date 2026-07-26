@@ -67,7 +67,7 @@ import Header from '@/components/Header';
 import ClientRouter from '@/components/ClientRouter';
 import Galaxy from '@/components/Galaxy';
 import SplashOrchestrator from '@/components/SplashOrchestrator';
-import GlobalTextCursor from '@/components/GlobalTextCursor';
+import MotionSafety from '@/components/MotionSafety';
 import AICard from '@/components/AICard';
 import KonamiCard from '@/components/KonamiCard';
 
@@ -131,8 +131,8 @@ export default function RootLayout({
         <Galaxy
           density={0.42}
           speed={0.28}
-          glowIntensity={0.11}
-          saturation={0}
+          glowIntensity={0.14}
+          saturation={0.3}
           hueShift={160}
           twinkleIntensity={0.12}
           rotationSpeed={0.008}
@@ -140,18 +140,19 @@ export default function RootLayout({
           mouseRepulsion={false}
           repulsionStrength={1.5}
           transparent={true}
-          opacity={0.46}
+          opacity={0.38}
         />
         <ClientRouter />
-        <GlobalTextCursor />
-        <SplashOrchestrator>
-          <Header />
-          <div style={{ position: 'relative', zIndex: 1 }}>
-            {children}
-          </div>
-          <AICard />
-        </SplashOrchestrator>
-        <KonamiCard />
+        <MotionSafety>
+          <SplashOrchestrator>
+            <Header />
+            <div style={{ position: 'relative', zIndex: 1 }}>
+              {children}
+            </div>
+            <AICard />
+          </SplashOrchestrator>
+          <KonamiCard />
+        </MotionSafety>
       </body>
     </html>
   );

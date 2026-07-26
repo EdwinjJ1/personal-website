@@ -1,12 +1,30 @@
+/* The whole intro is CSS-driven: no JS timeline gates the fade-out, so a
+   throttled rAF (background tab) can never leave the overlay stuck on top.
+   The overlay animates itself to opacity 0 / pointer-events none. */
+
 .splash-overlay {
   position: fixed;
   inset: 0;
-  z-index: 45;
+  z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   outline: none;
+  background: var(--color-surface-1);
+  animation: splashOut 0.45s ease-in 1.5s forwards;
+}
+
+.splash-overlay.is-leaving {
+  animation: splashOut 0.35s ease-in forwards;
+}
+
+@keyframes splashOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .splash-radial-glow {
@@ -15,68 +33,63 @@
   left: 50%;
   width: 600px;
   height: 600px;
-  transform: translate(-50%, -50%) scale(0.5);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(122, 144, 136, 0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgb(122 144 136 / 0.18) 0%, transparent 70%);
+  transform: translate(-50%, -50%) scale(0.6);
   opacity: 0;
-  will-change: transform, opacity;
   pointer-events: none;
+  animation: glowBloom 1.1s ease-out forwards;
+}
+
+@keyframes glowBloom {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 .splash-name {
   display: flex;
   justify-content: center;
-  gap: 0;
   font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 800;
-  letter-spacing: 0.15em;
-  color: #e0d8cc;
-  will-change: transform, opacity;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  color: var(--color-ink);
 }
 
-.splash-letter-revealed {
+.splash-letter {
   display: inline-block;
-  color: #e0d8cc;
-  transition: color 0.3s ease;
+  opacity: 0;
+  transform: translateY(0.18em);
+  animation: letterIn 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
 
-.splash-letter-encrypted {
-  display: inline-block;
-  color: #7a9088;
-  transition: color 0.3s ease;
+@keyframes letterIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .splash-line {
   height: 1px;
+  width: 0;
   margin: 20px auto;
-  background: linear-gradient(90deg, transparent, rgba(122, 144, 136, 0.6), transparent);
-  will-change: width;
+  background: linear-gradient(90deg, transparent, rgb(122 144 136 / 0.6), transparent);
+  animation: lineDraw 0.6s ease-in-out 0.55s forwards;
 }
 
-.splash-subtitle-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 1.8em;
+@keyframes lineDraw {
+  to { width: 140px; }
 }
 
 .splash-subtitle {
   font-family: var(--font-mono);
   font-size: clamp(0.85rem, 2vw, 1.15rem);
-  color: #b8b4aa;
+  color: var(--color-ink-mid);
   letter-spacing: 0.08em;
-}
-
-.splash-cursor {
-  display: inline-block;
-  color: #7a9088;
-  font-weight: 300;
-  margin-left: 2px;
   opacity: 0;
-}
-
-.splash-cursor.blink {
-  animation: cursorBlink 0.8s step-end infinite;
+  animation: fadeIn 0.5s ease-out 0.75s forwards;
 }
 
 .splash-skip-hint {
@@ -85,19 +98,31 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 13px;
-  color: #8a8680;
+  color: var(--color-ink-dim);
   letter-spacing: 0.1em;
   text-transform: lowercase;
   opacity: 0;
-  will-change: opacity;
+  animation: fadeIn 0.5s ease-out 1s forwards;
 }
 
-@keyframes cursorBlink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
-/* Mobile */
+/* Anyone who asked for less motion never sees the splash at all
+   (useSplashState bails), but belt and braces if it ever renders. */
+@media (prefers-reduced-motion: reduce) {
+  .splash-overlay,
+  .splash-radial-glow,
+  .splash-letter,
+  .splash-line,
+  .splash-subtitle,
+  .splash-skip-hint {
+    animation-duration: 0.01ms;
+    animation-delay: 0ms;
+  }
+}
+
 @media (max-width: 768px) {
   .splash-name {
     font-size: clamp(2rem, 12vw, 3.5rem);

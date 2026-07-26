@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
-import ScatterText from '@/components/ScatterText';
 import { getPrimaryPosts } from '@/data/blogPosts';
 
 // Get original posts for display without duplicating translations
@@ -55,7 +54,7 @@ export default function BlogPage() {
             {/* Featured Posts */}
             <motion.div variants={item} className="mb-16">
               <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
-                <ScatterText as="span" scatterRadius={45} rotationRange={12}>Featured Posts</ScatterText>
+                Featured Posts
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {posts.filter(post => post.featured).map((post) => (
@@ -79,7 +78,7 @@ export default function BlogPage() {
                         </div>
 
                         <h3 className="text-2xl font-bold mb-4 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                          <ScatterText as="span" scatterRadius={30} rotationRange={10}>{post.title}</ScatterText>
+                          {post.title}
                         </h3>
 
                         <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
@@ -106,7 +105,7 @@ export default function BlogPage() {
             {/* All Posts */}
             <motion.div variants={item}>
               <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
-                <ScatterText as="span" scatterRadius={45} rotationRange={12}>All Posts</ScatterText>
+                All Posts
               </h2>
               <div className="space-y-6">
                 {posts.map((post) => (
@@ -131,7 +130,7 @@ export default function BlogPage() {
                           </div>
 
                           <h3 className="text-xl font-bold mb-2 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
-                            <ScatterText as="span" scatterRadius={25} rotationRange={8}>{post.title}</ScatterText>
+                            {post.title}
                           </h3>
 
                           <p className="text-sm mb-3" style={{ color: '#b8b4aa' }}>
@@ -165,7 +164,7 @@ export default function BlogPage() {
               <div className="rounded-2xl p-8 border" style={{ background: 'linear-gradient(to right, rgba(122, 144, 136, 0.1), rgba(106, 138, 142, 0.1))', borderColor: 'rgba(122, 144, 136, 0.3)' }}>
                 <div className="text-center">
                   <h3 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>
-                    <ScatterText as="span" scatterRadius={35} rotationRange={10}>Stay Updated</ScatterText>
+                    Stay Updated
                   </h3>
                   <p className="mb-6 max-w-md mx-auto" style={{ color: '#b8b4aa' }}>
                     Get notified when I publish new articles about technology, entrepreneurship, and personal insights.

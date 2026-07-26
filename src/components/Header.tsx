@@ -5,7 +5,6 @@ import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import gsap from 'gsap';
-import ScatterText from '@/components/ScatterText';
 
 const NAV_ITEMS = [
   { label: 'News',        href: '/news' },
@@ -192,7 +191,7 @@ export default function Header() {
         {/* Logo */}
         <h1 className="text-xl font-bold" style={{ color: '#e0d8cc' }}>
           <Link href="/" style={{ color: '#e0d8cc', textDecoration: 'none' }}>
-            <ScatterText scatterRadius={30} staggerDelay={0.015}>Evan Lin</ScatterText>
+            Evan Lin
           </Link>
         </h1>
 
