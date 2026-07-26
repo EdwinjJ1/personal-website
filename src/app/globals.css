@@ -60,31 +60,35 @@
   color-scheme: light;
 
   /* Sage darkens in light mode — dark-theme #7a9088 only clears ~3:1
-     on a bone-white ground, which fails for body copy. */
-  --p-sage: 79 107 98;
-  --p-sage-bright: 62 89 81;
-  --p-sage-mist: 108 136 126;
-  --p-sage-deep: 45 68 61;
-  --p-teal: 74 106 110;
+     on a light ground, which fails for body copy. */
+  --p-sage: 74 102 93;
+  --p-sage-bright: 58 84 76;
+  --p-sage-mist: 104 132 122;
+  --p-sage-deep: 41 63 57;
+  --p-teal: 68 100 105;
 
-  /* Warm bone/paper. The ramp inverts so surface-0 stays "furthest
-     back" and surface-4 stays "hover" — semantics hold, direction
-     flips. 2 and 3 are the lifted card face. */
-  --p-surface-0: 250 248 243;
-  --p-surface-1: 247 244 238;
-  --p-surface-2: 255 253 248;
-  --p-surface-3: 255 253 248;
-  --p-surface-4: 239 234 225;
+  /* Warm greige, NOT paper-white. Every step carries a little sage so
+     the accent sits in the same family as the neutrals, and the page
+     ground stays clearly darker than the card face — that gap is what
+     makes cards read as lifted. The ramp inverts (0 = furthest back,
+     4 = hover) so the semantics survive the flip.
 
-  --p-ink: 42 39 37;
-  --p-ink-mid: 107 101 92;
-  --p-ink-dim: 138 130 118;
+     0/1 are the page. 2/3 are the card face. 4 is hover/inset. */
+  --p-surface-0: 228 226 219;
+  --p-surface-1: 236 234 227;
+  --p-surface-2: 246 245 240;
+  --p-surface-3: 250 249 245;
+  --p-surface-4: 233 231 223;
 
-  --p-line: 160 150 136;
-  --p-line-alpha: 0.36;
-  --p-line-strong-alpha: 0.55;
+  --p-ink: 38 42 40;
+  --p-ink-mid: 92 98 94;
+  --p-ink-dim: 130 134 129;
 
-  --p-status-dev: 150 112 32;
+  --p-line: 142 146 138;
+  --p-line-alpha: 0.42;
+  --p-line-strong-alpha: 0.6;
+
+  --p-status-dev: 141 104 28;
 
   --p-raise: 42 39 37;
   --p-shadow: 60 50 38;
@@ -162,6 +166,28 @@ body {
   background: color-mix(in srgb, var(--color-surface-4) 80%, transparent) !important;
   border-color: rgb(var(--p-sage) / 0.4) !important;
   box-shadow: 0 10px 40px -10px rgb(var(--p-sage) / 0.2);
+}
+
+/* On dark, a card reads as lifted because it is lighter than the page.
+   Light mode keeps that logic — surface-3 card on a surface-1 page —
+   and adds a soft warm shadow plus a top highlight, so the card feels
+   like a physical layer rather than a lighter rectangle. */
+.theme-light .glass-card {
+  background: rgb(var(--p-surface-3) / 0.92) !important;
+  border-color: rgb(var(--p-line) / 0.45) !important;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.7),
+    0 1px 2px rgb(var(--p-shadow) / 0.05),
+    0 10px 28px -14px rgb(var(--p-shadow) / 0.14);
+}
+
+.theme-light .glass-card:hover {
+  background: rgb(var(--p-surface-3)) !important;
+  border-color: rgb(var(--p-sage) / 0.45) !important;
+  box-shadow:
+    inset 0 1px 0 rgb(255 255 255 / 0.8),
+    0 2px 4px rgb(var(--p-shadow) / 0.06),
+    0 18px 44px -18px rgb(var(--p-sage) / 0.3);
 }
 
 html {
@@ -319,7 +345,7 @@ html {
   gap: 8px;
   border-radius: 8px;
   padding: 9px 12px;
-  color: rgb(var(--p-surface-0));
+  color: rgb(var(--p-on-accent));
   background: var(--project-accent);
   font-size: 0.875rem;
   font-weight: 700;
@@ -698,12 +724,20 @@ html {
   50% { opacity: 1; }
 }
 
+/* The vertical wash is the page's own ground, not a shadow — it has to
+   track the surface ramp so it lightens in light mode rather than
+   veiling the page in warm brown. */
 .project-page-shell {
   position: relative;
   background:
     radial-gradient(circle at 18% 12%, rgb(var(--p-sage) / 0.09), transparent 28%),
     radial-gradient(circle at 78% 6%, rgb(var(--p-sage) / 0.08), transparent 26%),
-    linear-gradient(180deg, rgb(var(--p-shadow) / calc(0.78 * var(--p-shadow-strength))), rgb(var(--p-surface-1) / 0.92) 42%, rgb(var(--p-shadow) / calc(0.94 * var(--p-shadow-strength))));
+    linear-gradient(
+      180deg,
+      rgb(var(--p-surface-0)),
+      rgb(var(--p-surface-1)) 42%,
+      rgb(var(--p-surface-0))
+    );
 }
 
 .project-page-shell::before {
@@ -742,16 +776,42 @@ body {
   z-index: 0;
   pointer-events: none;
   background:
+    /* Sage wash top-left and a cooler teal top-right give the ground
+       some direction, so it does not read as flat grey card stock. */
     radial-gradient(
-      60% 50% at 12% 0%,
-      rgb(var(--p-sage) / 0.1) 0%,
-      transparent 70%
+      70% 55% at 8% -5%,
+      rgb(var(--p-sage) / 0.16) 0%,
+      transparent 66%
     ),
     radial-gradient(
-      55% 45% at 92% 8%,
-      rgb(var(--p-teal) / 0.07) 0%,
-      transparent 72%
+      60% 50% at 96% 4%,
+      rgb(var(--p-teal) / 0.11) 0%,
+      transparent 68%
+    ),
+    /* A slow vertical settle keeps the lower half from going pure flat. */
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      rgb(var(--p-shadow) / 0.03) 100%
     );
+}
+
+/* ============================================================
+   SITE HEADER
+   A translucent bar needs a visible bottom edge. On dark the
+   surface contrast carries it; on light, near-white over
+   near-white does not, so the border firms up and a low shadow
+   lifts the bar off the page.
+   ============================================================ */
+.site-header {
+  background-color: rgb(var(--p-surface-1) / 0.95);
+  border-color: var(--color-line);
+}
+
+.theme-light .site-header {
+  background-color: rgb(var(--p-surface-1) / 0.86);
+  border-color: rgb(var(--p-line) / 0.55);
+  box-shadow: 0 1px 4px rgb(var(--p-shadow) / 0.06);
 }
 
 /* ============================================================
@@ -862,7 +922,7 @@ body {
 
 .btn-primary {
   background: linear-gradient(to right, var(--color-sage), var(--color-teal));
-  color: var(--color-surface-1);
+  color: rgb(var(--p-on-accent));
 }
 .btn-primary:hover {
   background: linear-gradient(to right, var(--color-sage-bright), var(--color-sage));

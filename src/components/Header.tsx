@@ -182,8 +182,7 @@ export default function Header() {
   return (
     <>
     <motion.header
-      className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b shadow-sm"
-      style={{ backgroundColor: 'rgb(var(--p-surface-1) / 0.95)', borderColor: 'rgb(var(--p-line) / 0.3)' }}
+      className="site-header fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, delay: 0.5 }}
