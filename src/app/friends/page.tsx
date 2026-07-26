@@ -296,6 +296,23 @@ export default function FriendsPage() {
               ))
             )}
 
+            {/* With only a handful of links, the empty outer rings read as
+                missing rather than as room to grow — so say so. */}
+            {friends.length < 4 && (
+              <p
+                className="type-mono-label"
+                style={{
+                  position: 'absolute',
+                  bottom: 12,
+                  left: '50%',
+                  transform: 'translateX(-50%)',
+                  whiteSpace: 'nowrap',
+                }}
+              >
+                constellation, still growing
+              </p>
+            )}
+
             {/* Hover card (fixed-position tooltip following the node) */}
             {hovered && (
               <motion.div

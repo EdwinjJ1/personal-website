@@ -12,7 +12,7 @@ export default function LocationCard() {
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute left-4 top-8 h-px w-16 bg-gradient-to-r from-transparent via-[#7a9088]/45 to-transparent" />
-        <div className="absolute right-5 top-12 h-px w-12 bg-gradient-to-r from-transparent via-[#b8a06a]/35 to-transparent" />
+        <div className="absolute right-5 top-12 h-px w-12 bg-gradient-to-r from-transparent via-[#7a9088]/35 to-transparent" />
         <div className="absolute inset-x-8 top-14 h-20 bg-[radial-gradient(ellipse_at_center,rgba(122,144,136,0.15),transparent_66%)] opacity-80 transition-opacity duration-500 group-hover:opacity-50" />
       </div>
 
@@ -43,19 +43,19 @@ export default function LocationCard() {
           <div className="absolute inset-x-0 top-0 transition-all duration-500 ease-out group-hover:-translate-y-2 group-hover:opacity-0">
             <p className="mb-1 text-[10px] font-semibold uppercase text-[#8a8680]">Based in</p>
             <div className="mb-1 flex items-center justify-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#9ab1aa]" />
+              <span className="h-2 w-2 rounded-full bg-[#8fb0a6]" />
               <h3 className="text-lg font-semibold leading-none text-[#e0d8cc]">Sydney, Australia</h3>
             </div>
             <p className="text-xs font-medium text-[#8a8680]">UTC+10/11</p>
           </div>
 
           <div className="absolute inset-x-0 top-0 translate-y-2 opacity-0 transition-all duration-500 ease-out group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="mb-1 text-[10px] font-semibold uppercase text-[#b38b5a]">Also based in</p>
+            <p className="mb-1 text-[10px] font-semibold uppercase text-[#c9a86a]">Also based in</p>
             <div className="mb-1 flex items-center justify-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-[#c59a5e]" />
-              <h3 className="text-lg font-semibold leading-none text-[#f0ded0]">Beijing, China</h3>
+              <span className="h-2 w-2 rounded-full bg-[#c9a86a]" />
+              <h3 className="text-lg font-semibold leading-none text-[#e0d8cc]">Beijing, China</h3>
             </div>
-            <p className="text-xs font-medium text-[#9f958a]">UTC+8</p>
+            <p className="text-xs font-medium text-[#8a8680]">UTC+8</p>
           </div>
         </div>
       </div>
