@@ -153,7 +153,7 @@ export default function PhotographyPage() {
                 style={
                   selectedCategory === category
                     ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }
-                    : { backgroundColor: '#282622', color: '#b8b4aa' }
+                    : { backgroundColor: 'var(--color-surface-3)', color: '#b8b4aa' }
                 }
               >
                 {category}
@@ -397,7 +397,7 @@ export default function PhotographyPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Camera Bodies */}
-              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
                   <span className="text-2xl">🎥</span> Camera Bodies
                 </h3>
@@ -434,7 +434,7 @@ export default function PhotographyPage() {
               </div>
 
               {/* L Mount Lenses */}
-              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
                   <span className="text-2xl">🔭</span> L Mount Lenses
                 </h3>
@@ -485,7 +485,7 @@ export default function PhotographyPage() {
               </div>
 
               {/* EF Mount Lenses */}
-              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
                   <span className="text-2xl">🔷</span> Canon EF / EF-S Lenses
                 </h3>
@@ -557,34 +557,34 @@ export default function PhotographyPage() {
               </div>
 
               {/* Special & Vintage Lenses */}
-              <div className="p-6 rounded-2xl" style={{ backgroundColor: '#282622', border: '1px solid #3a3832' }}>
+              <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
                 <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
                   <span className="text-2xl">✨</span> Specialty & Vintage
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Takumar 135mm f/3.5</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Vintage Manual</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Laowa 60mm f/2.8 2:1 Macro</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Specialist</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Laowa 24mm f/14 Probe</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Probe</span>
                     </div>
                   </li>
                   <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#9a8866' }}></span>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Shenguang 24mm f/6.3</span>
                       <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Manual Wide</span>

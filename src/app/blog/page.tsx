@@ -54,39 +54,34 @@ export default function BlogPage() {
 
             {/* Featured Posts */}
             <motion.div variants={item} className="mb-16">
-              <h2 className="text-3xl font-bold mb-8" style={{ color: '#e0d8cc' }}>
-                Featured Posts
-              </h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <h2 className="type-h2 mb-8">Featured Posts</h2>
+              {/* h-full down the chain so the columns match height — the
+                  cards used to end wherever their text did, leaving a hole. */}
+              <div className="grid md:grid-cols-2 gap-8 items-stretch">
                 {posts.filter(post => post.featured).map((post) => (
-                  <Link key={post.id} href={`/blog/${post.slug}`}>
+                  <Link key={post.id} href={`/blog/${post.slug}`} className="h-full">
                     <motion.article
                       variants={item}
-                      className="rounded-xl overflow-hidden border transition-all duration-300 group cursor-pointer hover:scale-[1.02]"
-                      style={{ background: 'linear-gradient(to bottom right, rgba(40, 38, 34, 0.6), rgba(33, 30, 28, 0.5), rgba(40, 38, 34, 0.6))', borderColor: 'rgba(114, 110, 102, 0.3)' }}
+                      className="flex h-full flex-col rounded-xl overflow-hidden border border-line bg-surface-3/60 transition-all duration-300 group cursor-pointer hover:scale-[1.02] hover:border-line-strong"
                     >
-                      <div className="p-8">
+                      <div className="flex h-full flex-col p-8">
                         <div className="flex flex-wrap gap-2 mb-4">
                           {post.tags.map((tag) => (
-                            <span
-                              key={tag}
-                              className="px-3 py-1 text-sm rounded-full border"
-                              style={{ backgroundColor: 'rgba(122, 144, 136, 0.15)', color: '#7a9088', borderColor: 'rgba(122, 144, 136, 0.3)' }}
-                            >
+                            <span key={tag} className="badge">
                               {tag}
                             </span>
                           ))}
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-4 transition-colors group-hover:text-[#7a9088]" style={{ color: '#e0d8cc' }}>
+                        <h3 className="text-2xl font-bold mb-4 text-ink transition-colors group-hover:text-sage">
                           {post.title}
                         </h3>
 
-                        <p className="mb-6 line-clamp-3" style={{ color: '#b8b4aa' }}>
+                        <p className="mb-6 line-clamp-3 text-ink-mid">
                           {post.excerpt}
                         </p>
 
-                        <div className="flex justify-between items-center text-sm" style={{ color: '#8a8680' }}>
+                        <div className="mt-auto flex justify-between items-center text-sm text-ink-dim">
                           <time dateTime={post.date}>
                             {new Date(post.date).toLocaleDateString('en-US', {
                               year: 'numeric',

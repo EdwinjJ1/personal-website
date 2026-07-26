@@ -33,6 +33,7 @@ function PixelEqualizer({ live }: { live: boolean }) {
 }
 
 // Headphones hanging over the card's top frame
+/** Hangs off the card's top-left; the chat bubble owns the top-right. */
 function HangingHeadphones() {
   return (
     // eslint-disable-next-line @next/next/no-img-element
@@ -42,7 +43,7 @@ function HangingHeadphones() {
       aria-hidden="true"
       width={62}
       height={65}
-      className="pointer-events-none absolute -top-7 right-5 z-10 w-[62px] select-none"
+      className="pointer-events-none absolute -top-7 left-6 z-10 w-[62px] select-none"
       style={{ transform: 'rotate(10deg)', filter: 'drop-shadow(0 5px 8px rgba(0,0,0,0.45))' }}
     />
   );
@@ -89,8 +90,6 @@ export default function MusicCard() {
   const [track, setTrack] = useState<Track>(FALLBACK_TRACK);
   const [live, setLive] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const progressRef = useRef(0);
   const audioRef = useRef<{
     context: AudioContext | null;
     master: GainNode | null;
@@ -209,21 +208,6 @@ export default function MusicCard() {
   }, [isPlaying, startRadioLoop, stopRadioLoop]);
 
   useEffect(() => {
-    progressRef.current = progress;
-  }, [progress]);
-
-  useEffect(() => {
-    if (!isPlaying) return;
-
-    const startedAt = window.performance.now() - progressRef.current * 1800;
-    const timer = window.setInterval(() => {
-      setProgress(((window.performance.now() - startedAt) / 1800) % 1);
-    }, 80);
-
-    return () => window.clearInterval(timer);
-  }, [isPlaying]);
-
-  useEffect(() => {
     return () => {
       stopRadioLoop();
       void audioRef.current.context?.close();
@@ -271,12 +255,6 @@ export default function MusicCard() {
 
         {/* Me, coding on the sofa — poke me or open the chat bubble */}
         <div className="relative flex-1 min-h-0 mb-1.5">
-          {isPlaying && (
-            <div
-              className="radio-glow pointer-events-none absolute inset-4 z-[1] rounded-full blur-2xl"
-              style={{ background: 'radial-gradient(circle, rgba(122, 144, 136, 0.34), transparent 68%)', animation: 'radio-glow 1.8s ease-in-out infinite' }}
-            />
-          )}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/music-scene.webp"
@@ -296,21 +274,8 @@ export default function MusicCard() {
             className="pointer-events-none absolute inset-0 rounded-xl"
             style={{ boxShadow: 'inset 0 0 26px 14px #282622' }}
           />
-          <button
-            type="button"
-            onClick={togglePlayback}
-            aria-label={isPlaying ? 'Pause music loop' : 'Play music loop'}
-            aria-pressed={isPlaying}
-            className="absolute bottom-4 left-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border transition hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#7a9088]/60"
-            style={{
-              color: '#e0d8cc',
-              backgroundColor: isPlaying ? 'rgba(122, 144, 136, 0.88)' : 'rgba(33, 30, 28, 0.78)',
-              borderColor: isPlaying ? 'rgba(224, 216, 204, 0.28)' : 'rgba(122, 144, 136, 0.38)',
-              boxShadow: isPlaying ? '0 0 22px rgba(122, 144, 136, 0.45)' : '0 10px 24px rgba(0,0,0,0.28)',
-            }}
-          >
-            <PlayIcon playing={isPlaying} />
-          </button>
+          {/* Playback is triggered from the track row below — a second
+              button here just crowded the artwork's other three circles. */}
           <MusicChat />
         </div>
 
@@ -378,12 +343,6 @@ export default function MusicCard() {
               >
                 <PlayIcon playing={isPlaying} />
               </span>
-            </div>
-            <div className="mt-3 h-1 overflow-hidden rounded-full" style={{ backgroundColor: 'rgba(122, 144, 136, 0.18)' }}>
-              <div
-                className="h-full rounded-full transition-[width] duration-100"
-                style={{ width: `${Math.max(progress * 100, isPlaying ? 4 : 0)}%`, background: 'linear-gradient(90deg, #7a9088, #c9b98f)' }}
-              />
             </div>
           </button>
 
