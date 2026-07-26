@@ -140,10 +140,9 @@ export default function NewsPage() {
           >
             <div className="flex items-start justify-between mb-4">
               <div>
-                <h1 className="text-3xl font-bold mb-2" style={{ color: '#e0d8cc' }}>
-                  News Hub
-                </h1>
-                <p className="text-sm" style={{ color: '#8a8680' }}>
+                <p className="type-eyebrow mb-2">Tracking the field</p>
+                <h1 className="type-h1 mb-2">News Hub</h1>
+                <p className="text-sm text-ink-dim">
                   AI industry news, research papers, and global updates
                 </p>
               </div>

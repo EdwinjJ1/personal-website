@@ -36,7 +36,8 @@ export default function BlogPage() {
           >
             {/* Header */}
             <motion.div variants={item} className="text-center mb-16">
-              <h1 className="text-5xl font-bold mb-6">
+              <p className="type-eyebrow mb-3">Notes and essays</p>
+              <h1 className="type-h1 mb-6">
                 <GradientText
                   colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
                   animationSpeed={6}
