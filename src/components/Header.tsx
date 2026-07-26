@@ -8,11 +8,12 @@ import gsap from 'gsap';
 import ScatterText from '@/components/ScatterText';
 
 const NAV_ITEMS = [
-  { label: 'News',     href: '/news' },
-  { label: 'Friends',  href: '/friends' },
-  { label: 'Blog',     href: '/blog' },
-  { label: 'Projects', href: '/projects' },
-  { label: 'About',    href: '/about' },
+  { label: 'News',        href: '/news' },
+  { label: 'Friends',     href: '/friends' },
+  { label: 'Blog',        href: '/blog' },
+  { label: 'Photography', href: '/photography' },
+  { label: 'Projects',    href: '/projects' },
+  { label: 'About',       href: '/about' },
 ];
 
 // Pill hover animation — one circle per nav item
