@@ -11,7 +11,7 @@ import AICardPanel from '@/components/AICardPanel';
 export default function LuckyNumberPage() {
   return (
     <PageTransition>
-      <div className="min-h-screen pt-24 pb-16" style={{ color: '#e0d8cc' }}>
+      <div className="min-h-screen pt-24 pb-16" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -27,17 +27,17 @@ export default function LuckyNumberPage() {
                 className="text-7xl font-bold mb-4"
               >
                 <GradientText
-                  colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                  colors={['rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))']}
                   animationSpeed={6}
                   showBorder={false}
                 >
                   74
                 </GradientText>
               </motion.div>
-              <h1 className="text-2xl font-bold mb-2" style={{ color: '#e0d8cc' }}>
+              <h1 className="text-2xl font-bold mb-2" style={{ color: 'rgb(var(--p-ink))' }}>
                 You found the lucky number.
               </h1>
-              <p className="text-base" style={{ color: '#b8b4aa' }}>
+              <p className="text-base" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                 This is Evan&apos;s AI business card. Hand it to any assistant and it&apos;ll
                 know who he is.
               </p>
@@ -49,7 +49,7 @@ export default function LuckyNumberPage() {
               <Link
                 href="/about"
                 className="text-sm transition-colors"
-                style={{ color: '#7a9088' }}
+                style={{ color: 'rgb(var(--p-sage))' }}
               >
                 ← Read the human version
               </Link>

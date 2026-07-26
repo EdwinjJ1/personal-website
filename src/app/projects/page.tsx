@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
   return (
     <PageTransition>
-      <div className="project-page-shell min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
+      <div className="project-page-shell min-h-screen pt-20" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="mx-auto max-w-6xl px-6 py-10">
           <motion.div variants={container} initial="hidden" animate="visible">
 
@@ -60,13 +60,13 @@ export default function ProjectsPage() {
                 <br />
                 <span className="accent-text">real leverage.</span>
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed" style={{ color: '#b8b4aa' }}>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                 Four flagship builds at the top: personal AI memory, prompt enhancement,
                 story-rich maps, and AI exam prep. The rest of the archive stays below.
               </p>
 
               {/* Stat strip */}
-              <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t pt-6" style={{ borderColor: 'rgba(114,110,102,0.25)' }}>
+              <div className="mt-10 flex flex-wrap gap-x-10 gap-y-4 border-t pt-6" style={{ borderColor: 'rgb(var(--p-line) / 0.25)' }}>
                 {[
                   { n: flagshipCount, label: 'Flagships' },
                   { n: liveCount, label: 'Live now' },
@@ -74,7 +74,7 @@ export default function ProjectsPage() {
                 ].map((stat) => (
                   <div key={stat.label}>
                     <div className="accent-text text-3xl font-bold tabular-nums">{stat.n}</div>
-                    <div className="text-xs uppercase tracking-wider" style={{ color: '#8a8680' }}>{stat.label}</div>
+                    <div className="text-xs uppercase tracking-wider" style={{ color: 'rgb(var(--p-ink-dim))' }}>{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -96,7 +96,7 @@ export default function ProjectsPage() {
                 <span className="accent-text text-sm font-semibold tabular-nums">/ 01</span>
                   <h2 className="text-2xl font-bold tracking-tight">Flagship builds</h2>
                 </div>
-                <p className="max-w-md text-sm leading-relaxed" style={{ color: '#8a8680' }}>
+                <p className="max-w-md text-sm leading-relaxed" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                   Ordered for recruiters, collaborators, and investors: strongest product signal first.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
                     <span className="accent-text text-sm font-semibold tabular-nums">/ 02</span>
                     <h2 className="text-2xl font-bold tracking-tight">Everything else</h2>
                   </div>
-                  <span className="text-sm" style={{ color: '#8a8680' }}>
+                  <span className="text-sm" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                     {filteredProjects.length} total
                   </span>
                 </div>

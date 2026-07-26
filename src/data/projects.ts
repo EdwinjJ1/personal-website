@@ -44,7 +44,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/EdwinjJ1/memory-mcp',
     icon: 'network',
     logoImage: '/images/projects/knowme-logo.png',
-    accent: '#8fb0a6',
+    accent: 'rgb(var(--p-sage-bright))',
     metrics: [
       { label: 'Token tiers', value: '3' },
       { label: 'AI clients', value: '6+' },
@@ -116,7 +116,7 @@ export const projects: Project[] = [
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
     icon: 'terminal',
-    accent: '#c9a86a',
+    accent: 'rgb(var(--p-status-dev))',
     metrics: [
       { label: 'Shortcut', value: 'Ctrl+E' },
       { label: 'Modes', value: '6' },
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     icon: 'graduation',
     logoImage: '/images/projects/finalboss-icon.png',
     heroImage: '/images/projects/finalboss-home.png',
-    accent: '#adc3bb',
+    accent: 'rgb(var(--p-sage-mist))',
     metrics: [
       { label: 'Gross margin', value: '96%' },
       { label: 'MVP scope', value: '6 wk' },
@@ -303,7 +303,7 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/EdwinjJ1/chrono-map',
     icon: 'map',
     heroImage: '/images/projects/chrono-map-preview.png',
-    accent: '#6a8a8e',
+    accent: 'rgb(var(--p-teal))',
     metrics: [
       { label: 'Places', value: '50+' },
       { label: 'Languages', value: '2' },

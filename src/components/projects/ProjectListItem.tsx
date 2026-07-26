@@ -17,16 +17,16 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
       </span>
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-3">
-          <h3 className="text-xl font-semibold" style={{ color: '#e0d8cc' }}>{project.title}</h3>
+          <h3 className="text-xl font-semibold" style={{ color: 'rgb(var(--p-ink))' }}>{project.title}</h3>
           <span className="accent-text text-xs font-semibold uppercase tracking-wider">{project.category}</span>
           <span className="rounded-full border px-2.5 py-0.5 text-xs" style={getStatusStyle(project.status)}>
             {project.status}
           </span>
         </div>
-        <p className="mt-2 text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{project.description}</p>
-        <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: '#8a8680' }}>
+        <p className="mt-2 text-sm leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>{project.description}</p>
+        <div className="mt-3 flex flex-wrap gap-2 text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
           {project.technologies.slice(0, 5).map((tech) => (
-            <span key={`${project.id}-${tech}`} className="rounded-md px-2 py-0.5" style={{ backgroundColor: 'rgba(114, 110, 102, 0.15)' }}>
+            <span key={`${project.id}-${tech}`} className="rounded-md px-2 py-0.5" style={{ backgroundColor: 'rgb(var(--p-line) / 0.15)' }}>
               {tech}
             </span>
           ))}

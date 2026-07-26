@@ -72,7 +72,7 @@ export default function KonamiCard() {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
           className="fixed inset-0 z-[100] flex items-center justify-center p-4"
-          style={{ background: 'rgba(15, 14, 12, 0.78)', backdropFilter: 'blur(4px)' }}
+          style={{ background: 'rgb(var(--p-shadow) / calc(0.78 * var(--p-shadow-strength)))', backdropFilter: 'blur(4px)' }}
           onClick={close}
         >
           <motion.div
@@ -84,7 +84,7 @@ export default function KonamiCard() {
             onClick={(e) => e.stopPropagation()}
           >
             <div className="text-center mb-4">
-              <p className="text-sm" style={{ color: '#7a9088' }}>
+              <p className="text-sm" style={{ color: 'rgb(var(--p-sage))' }}>
                 Lucky number 74 — nice.
               </p>
             </div>
@@ -96,7 +96,7 @@ export default function KonamiCard() {
                 href="/74"
                 onClick={close}
                 className="text-xs transition-colors"
-                style={{ color: '#7a9088' }}
+                style={{ color: 'rgb(var(--p-sage))' }}
               >
                 Open as a page →
               </Link>
@@ -104,7 +104,7 @@ export default function KonamiCard() {
                 type="button"
                 onClick={close}
                 className="text-xs transition-colors"
-                style={{ color: '#8a857b' }}
+                style={{ color: 'rgb(var(--p-ink-dim))' }}
               >
                 Close (Esc)
               </button>

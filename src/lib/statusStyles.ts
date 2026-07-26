@@ -7,13 +7,13 @@ import type { CSSProperties } from 'react';
  * the brightest sage, in-development a warm sand, the rest neutral.
  */
 const STATUS_ACCENTS: Record<string, string> = {
-  Live: '#8fb0a6',
-  'In Development': '#c9a86a',
-  Ongoing: '#6a8a8e',
-  Archived: '#8a8680',
+  Live: 'rgb(var(--p-sage-bright))',
+  'In Development': 'rgb(var(--p-status-dev))',
+  Ongoing: 'rgb(var(--p-teal))',
+  Archived: 'rgb(var(--p-ink-dim))',
 };
 
-const FALLBACK_ACCENT = '#b8b4aa';
+const FALLBACK_ACCENT = 'rgb(var(--p-ink-mid))';
 
 export function getStatusStyle(status: string): CSSProperties {
   const accent = STATUS_ACCENTS[status] ?? FALLBACK_ACCENT;

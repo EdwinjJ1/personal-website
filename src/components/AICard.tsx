@@ -78,20 +78,20 @@ export default function AICard() {
             {/* Header */}
             <div
               className="flex items-center justify-between border-b px-4 py-3"
-              style={{ borderColor: 'rgba(122, 144, 136, 0.2)' }}
+              style={{ borderColor: 'rgb(var(--p-sage) / 0.2)' }}
             >
               <div className="flex items-center gap-2">
                 <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: '#7a9088' }} />
-                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: '#7a9088' }} />
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full opacity-60" style={{ backgroundColor: 'rgb(var(--p-sage))' }} />
+                  <span className="relative inline-flex h-2 w-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }} />
                 </span>
-                <span className="text-sm font-semibold" style={{ color: '#e0d8cc' }}>Evan · AI Card</span>
+                <span className="text-sm font-semibold" style={{ color: 'rgb(var(--p-ink))' }}>Evan · AI Card</span>
               </div>
               <button
                 onClick={() => setOpen(false)}
                 aria-label="Close chat"
                 className="rounded-full p-1 transition-colors hover:bg-white/5"
-                style={{ color: '#8a8680' }}
+                style={{ color: 'rgb(var(--p-ink-dim))' }}
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
                   <path d="M18 6 6 18M6 6l12 12" />
@@ -103,7 +103,7 @@ export default function AICard() {
             <div ref={listRef} className="flex-1 space-y-3 overflow-y-auto px-4 py-3">
               {messages.length === 0 && (
                 <div className="space-y-3">
-                  <p className="text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                     Hi! I&apos;m the AI on Evan&apos;s card — ask me anything about his projects, skills, or photography. 中文也可以。
                   </p>
                   <div className="flex flex-col items-start gap-2">
@@ -111,8 +111,8 @@ export default function AICard() {
                       <button
                         key={s}
                         onClick={() => send(s)}
-                        className="rounded-full border px-3 py-1.5 text-left text-xs transition-colors hover:border-[#7a9088]"
-                        style={{ borderColor: 'rgba(114, 110, 102, 0.35)', color: '#b8b4aa' }}
+                        className="rounded-full border px-3 py-1.5 text-left text-xs transition-colors hover:border-sage"
+                        style={{ borderColor: 'rgb(var(--p-line) / 0.35)', color: 'rgb(var(--p-ink-mid))' }}
                       >
                         {s}
                       </button>
@@ -127,8 +127,8 @@ export default function AICard() {
                     className="max-w-[85%] whitespace-pre-wrap rounded-2xl px-3 py-2 text-sm leading-relaxed"
                     style={
                       m.role === 'user'
-                        ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#1a1816' }
-                        : { backgroundColor: '#211e1c', color: '#e0d8cc', border: '1px solid rgba(114, 110, 102, 0.3)' }
+                        ? { background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-surface-1))' }
+                        : { backgroundColor: 'rgb(var(--p-surface-2))', color: 'rgb(var(--p-ink))', border: '1px solid rgb(var(--p-line) / 0.3)' }
                     }
                   >
                     {m.content || (
@@ -137,7 +137,7 @@ export default function AICard() {
                           <motion.span
                             key={d}
                             className="h-1.5 w-1.5 rounded-full"
-                            style={{ backgroundColor: '#7a9088' }}
+                            style={{ backgroundColor: 'rgb(var(--p-sage))' }}
                             animate={{ opacity: [0.25, 1, 0.25] }}
                             transition={{ repeat: Infinity, duration: 1, delay: d * 0.18 }}
                           />
@@ -156,7 +156,7 @@ export default function AICard() {
                 send(input);
               }}
               className="flex items-center gap-2 border-t px-3 py-3"
-              style={{ borderColor: 'rgba(122, 144, 136, 0.2)' }}
+              style={{ borderColor: 'rgb(var(--p-sage) / 0.2)' }}
             >
               <input
                 value={input}
@@ -164,15 +164,15 @@ export default function AICard() {
                 placeholder="Ask about Evan…"
                 aria-label="Ask about Evan"
                 maxLength={500}
-                className="min-w-0 flex-1 rounded-full border bg-transparent px-3.5 py-2 text-sm outline-none transition-colors focus:border-[#7a9088]"
-                style={{ borderColor: 'rgba(114, 110, 102, 0.35)', color: '#e0d8cc' }}
+                className="min-w-0 flex-1 rounded-full border bg-transparent px-3.5 py-2 text-sm outline-none transition-colors focus:border-sage"
+                style={{ borderColor: 'rgb(var(--p-line) / 0.35)', color: 'rgb(var(--p-ink))' }}
               />
               <button
                 type="submit"
                 disabled={busy || input.trim().length === 0}
                 aria-label="Send"
                 className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full transition-transform hover:scale-105 disabled:opacity-40"
-                style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#1a1816' }}
+                style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-surface-1))' }}
               >
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" />
@@ -190,7 +190,7 @@ export default function AICard() {
         whileTap={{ scale: 0.94 }}
         aria-label={open ? 'Close AI card' : 'Open AI card — ask about Evan'}
         className="glass-card flex h-12 w-12 items-center justify-center rounded-full"
-        style={{ color: '#7a9088' }}
+        style={{ color: 'rgb(var(--p-sage))' }}
       >
         {open ? (
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">

@@ -18,14 +18,14 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
       <div className="flex h-full flex-col gap-3">
         <div className="flex items-start justify-between">
           <div>
-            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: '#e0d8cc' }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#7a9088" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <h3 className="text-lg font-semibold flex items-center gap-2" style={{ color: 'rgb(var(--p-ink))' }}>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgb(var(--p-sage))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1"/>
               </svg>
               News Hub
             </h3>
             <div className="flex items-center gap-2 mt-1">
-              <p className="text-sm" style={{ color: '#b8b4aa' }}>
+              <p className="text-sm" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                 {`AI news, research & global updates. Synced ${latestLabel}.`}
               </p>
             </div>
@@ -33,14 +33,14 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
           <div className="flex flex-col items-end gap-1.5 shrink-0">
             <Link
               href="/news"
-              className="rounded-full border px-3 py-1 text-xs transition-colors hover:border-[#7a9088]"
-              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
+              className="rounded-full border px-3 py-1 text-xs transition-colors hover:border-sage"
+              style={{ borderColor: 'rgb(var(--p-line) / 0.3)', color: 'rgb(var(--p-ink-mid))' }}
             >
               View all
             </Link>
             <span
               className="flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-medium border"
-              style={{ borderColor: 'rgba(122, 144, 136, 0.35)', backgroundColor: 'rgba(122, 144, 136, 0.1)', color: '#7a9088' }}
+              style={{ borderColor: 'rgb(var(--p-sage) / 0.35)', backgroundColor: 'rgb(var(--p-sage) / 0.1)', color: 'rgb(var(--p-sage))' }}
             >
               <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
@@ -71,7 +71,7 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
           {quickHighlights.length === 0 && (
             <div
               className="rounded-lg border p-3 text-sm"
-              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c', color: '#b8b4aa' }}
+              style={{ borderColor: 'rgb(var(--p-line) / 0.3)', backgroundColor: 'rgb(var(--p-surface-2))', color: 'rgb(var(--p-ink-mid))' }}
             >
               No synced headlines yet.
             </div>

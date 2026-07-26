@@ -113,7 +113,7 @@ export default function PhotographyPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen py-24 px-4" style={{ backgroundColor: '#1a1816', color: '#e0d8cc' }}>
+      <div className="min-h-screen py-24 px-4" style={{ backgroundColor: 'rgb(var(--p-surface-1))', color: 'rgb(var(--p-ink))' }}>
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
@@ -125,14 +125,14 @@ export default function PhotographyPage() {
             <p className="type-eyebrow mb-3">Through the lens</p>
             <h1 className="type-h1 mb-4">
               <GradientText
-                colors={['#7a9088', '#6a8a8e', '#7a9088', '#6a8a8e', '#7a9088']}
+                colors={['rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))', 'rgb(var(--p-teal))', 'rgb(var(--p-sage))']}
                 animationSpeed={6}
                 showBorder={false}
               >
                 Photography Portfolio
               </GradientText>
             </h1>
-            <p className="text-lg max-w-2xl mx-auto" style={{ color: '#b8b4aa' }}>
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgb(var(--p-ink-mid))' }}>
               Capturing moments when I trade the keyboard for a camera.
               Exploring Sydney through light, composition, and storytelling.
             </p>
@@ -152,8 +152,8 @@ export default function PhotographyPage() {
                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300`}
                 style={
                   selectedCategory === category
-                    ? { background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }
-                    : { backgroundColor: 'var(--color-surface-3)', color: '#b8b4aa' }
+                    ? { background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-ink))' }
+                    : { backgroundColor: 'var(--color-surface-3)', color: 'rgb(var(--p-ink-mid))' }
                 }
               >
                 {category}
@@ -172,8 +172,8 @@ export default function PhotographyPage() {
               <div
                 className="group relative w-full overflow-hidden rounded-3xl cursor-pointer"
                 style={{
-                  border: '1px solid rgba(122, 144, 136, 0.35)',
-                  boxShadow: '0 25px 60px -20px rgba(0, 0, 0, 0.7)',
+                  border: '1px solid rgb(var(--p-sage) / 0.35)',
+                  boxShadow: '0 25px 60px -20px rgb(var(--p-shadow) / calc(0.7 * var(--p-shadow-strength)))',
                 }}
                 onClick={() => setSelectedPhotoIndex(0)}
               >
@@ -192,8 +192,8 @@ export default function PhotographyPage() {
                 <div
                   className="absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold tracking-widest uppercase"
                   style={{
-                    background: 'linear-gradient(to right, #7a9088, #6a8a8e)',
-                    color: '#1a1816',
+                    background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))',
+                    color: 'rgb(var(--p-surface-1))',
                   }}
                 >
                   ★ Featured
@@ -201,21 +201,21 @@ export default function PhotographyPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
                   <h2
                     className="text-3xl md:text-5xl font-bold mb-2"
-                    style={{ color: '#e0d8cc', textShadow: '0 4px 16px rgba(0,0,0,0.7)' }}
+                    style={{ color: 'rgb(var(--p-ink))', textShadow: '0 4px 16px rgb(var(--p-shadow) / calc(0.7 * var(--p-shadow-strength)))' }}
                   >
                     {featuredPhoto.title}
                   </h2>
-                  <p className="text-sm md:text-base max-w-2xl" style={{ color: '#b8b4aa' }}>
+                  <p className="text-sm md:text-base max-w-2xl" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                     {featuredPhoto.description}
                   </p>
                   <div className="mt-3 flex items-center gap-2">
                     <span
                       className="text-xs px-2 py-1 rounded"
-                      style={{ backgroundColor: 'rgba(122, 144, 136, 0.25)', color: '#7a9088' }}
+                      style={{ backgroundColor: 'rgb(var(--p-sage) / 0.25)', color: 'rgb(var(--p-sage))' }}
                     >
                       {featuredPhoto.category}
                     </span>
-                    <span className="text-xs" style={{ color: '#8a8676' }}>
+                    <span className="text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                       {featuredPhoto.location} · {featuredPhoto.date}
                     </span>
                   </div>
@@ -252,10 +252,10 @@ export default function PhotographyPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-bold mb-1" style={{ color: '#e0d8cc' }}>{photo.title}</h3>
-                        <p className="text-sm mb-2" style={{ color: '#b8b4aa' }}>{photo.location}</p>
+                        <h3 className="text-xl font-bold mb-1" style={{ color: 'rgb(var(--p-ink))' }}>{photo.title}</h3>
+                        <p className="text-sm mb-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>{photo.location}</p>
                         <div className="flex items-center gap-2">
-                          <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgba(122, 144, 136, 0.2)', color: '#7a9088' }}>
+                          <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgb(var(--p-sage) / 0.2)', color: 'rgb(var(--p-sage))' }}>
                             {photo.category}
                           </span>
                         </div>
@@ -392,42 +392,42 @@ export default function PhotographyPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-16 scroll-mt-24"
           >
-            <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: '#e0d8cc' }}>
+            <h2 className="text-2xl font-bold mb-6 text-center" style={{ color: 'rgb(var(--p-ink))' }}>
               📷 My Gear
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {/* Camera Bodies */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'rgb(var(--p-sage))' }}>
                   <span className="text-2xl">🎥</span> Camera Bodies
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }}></span>
                     <div>
                       <span className="font-medium">Fujifilm GFX 100</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>102MP Medium Format Mirrorless</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>102MP Medium Format Mirrorless</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }}></span>
                     <div>
                       <span className="font-medium">Panasonic Lumix S9</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Full-frame Mirrorless</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Full-frame Mirrorless</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }}></span>
                     <div>
                       <span className="font-medium">Panasonic Lumix S5II</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Full-frame Mirrorless</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Full-frame Mirrorless</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#7a9088' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-sage))' }}></span>
                     <div>
                       <span className="font-medium">Olympus OM-D E-M1 Mark III</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>MFT Mirrorless</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>MFT Mirrorless</span>
                     </div>
                   </li>
                 </ul>
@@ -435,50 +435,50 @@ export default function PhotographyPage() {
 
               {/* L Mount Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'rgb(var(--p-sage))' }}>
                   <span className="text-2xl">🔭</span> L Mount Lenses
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">Samyang 35-150mm f/2-2.8</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Fast Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Fast Zoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">Panasonic Lumix S 18-40mm f/4.5-6.3</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Compact Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Compact Zoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">Sigma 28-200mm</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Superzoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Superzoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">Sigma 100-400mm f/5-6.3 DG DN</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Telephoto</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">TTArtisan 70mm f/2</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Portrait Prime</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#6a8a8e' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-teal))' }}></span>
                     <div>
                       <span className="font-medium">TTArtisan 40mm f/2</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Pancake</span>
                     </div>
                   </li>
                 </ul>
@@ -486,71 +486,71 @@ export default function PhotographyPage() {
 
               {/* EF Mount Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'rgb(var(--p-sage))' }}>
                   <span className="text-2xl">🔷</span> Canon EF / EF-S Lenses
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon 16-35mm f/2.8L II USM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom (Gen II)</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Ultra-wide Zoom (Gen II)</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon 17-40mm f/4L USM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Ultra-wide Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Ultra-wide Zoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon EF 100mm f/2.8 Macro</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Prime</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Macro Prime</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Sigma 135mm f/1.8 DG HSM Art</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Portrait Prime</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon 70-200mm f/2.8L II IS USM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Telephoto Zoom (Gen II)</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Telephoto Zoom (Gen II)</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Tamron 15-30mm f/2.8 VC USD</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Wide Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Wide Zoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon 40mm f/2.8 STM</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Pancake</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Pancake</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Canon EF-S 18-55mm f/3.5-5.6 III</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Standard Zoom</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Standard Zoom</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
-                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: '#c4a35a' }}></span>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
+                    <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'rgb(var(--p-status-dev))' }}></span>
                     <div>
                       <span className="font-medium">Sigma 50mm f/1.4 Art</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Portrait Prime</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Portrait Prime</span>
                     </div>
                   </li>
                 </ul>
@@ -558,36 +558,36 @@ export default function PhotographyPage() {
 
               {/* Special & Vintage Lenses */}
               <div className="p-6 rounded-2xl" style={{ backgroundColor: 'var(--color-surface-3)', border: '1px solid var(--color-line)' }}>
-                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: '#7a9088' }}>
+                <h3 className="text-lg font-semibold mb-4 flex items-center gap-2" style={{ color: 'rgb(var(--p-sage))' }}>
                   <span className="text-2xl">✨</span> Specialty & Vintage
                 </h3>
                 <ul className="space-y-3">
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Takumar 135mm f/3.5</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Vintage Manual</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Vintage Manual</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Laowa 60mm f/2.8 2:1 Macro</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Specialist</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Macro Specialist</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Laowa 24mm f/14 Probe</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Macro Probe</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Macro Probe</span>
                     </div>
                   </li>
-                  <li className="flex items-center gap-3" style={{ color: '#e0d8cc' }}>
+                  <li className="flex items-center gap-3" style={{ color: 'rgb(var(--p-ink))' }}>
                     <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-sage)' }}></span>
                     <div>
                       <span className="font-medium">Shenguang 24mm f/6.3</span>
-                      <span className="text-sm ml-2" style={{ color: '#b8b4aa' }}>Manual Wide</span>
+                      <span className="text-sm ml-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>Manual Wide</span>
                     </div>
                   </li>
                 </ul>
@@ -602,16 +602,16 @@ export default function PhotographyPage() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="mt-16 text-center"
           >
-            <h2 className="text-2xl font-bold mb-4" style={{ color: '#e0d8cc' }}>
+            <h2 className="text-2xl font-bold mb-4" style={{ color: 'rgb(var(--p-ink))' }}>
               Interested in a photoshoot?
             </h2>
-            <p className="mb-6" style={{ color: '#b8b4aa' }}>
+            <p className="mb-6" style={{ color: 'rgb(var(--p-ink-mid))' }}>
               Available for portrait sessions, event photography, and creative collaborations in Sydney.
             </p>
             <a
               href="mailto:jiaedwin0605@gmail.com"
               className="inline-block px-8 py-3 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
-              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
+              style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-ink))' }}
             >
               Get in Touch
             </a>

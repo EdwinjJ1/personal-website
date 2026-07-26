@@ -88,7 +88,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
             margin: '8px 6px',
             borderRadius: 8,
             overflow: 'hidden',
-            border: '1px solid rgba(122, 144, 136, 0.25)',
+            border: '1px solid rgb(var(--p-sage) / 0.25)',
           }}
         >
           {loaded && (
@@ -108,7 +108,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
   );
 
   return (
-    <div ref={itemRef} style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden', borderTop: '1px solid rgba(114, 110, 102, 0.25)' }}>
+    <div ref={itemRef} style={{ position: 'relative', flex: 1, minHeight: 0, overflow: 'hidden', borderTop: '1px solid rgb(var(--p-line) / 0.25)' }}>
       <a
         href={link}
         onMouseEnter={handleMouseEnter}
@@ -119,15 +119,15 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
           textDecoration: 'none', whiteSpace: 'nowrap', zIndex: 1, gap: '0.5em',
         }}
       >
-        <span style={{ flex: 1, height: 1, background: 'rgba(224,216,204,0.15)', display: 'block', maxWidth: 40 }} />
+        <span style={{ flex: 1, height: 1, background: 'rgb(var(--p-ink) / 0.15)', display: 'block', maxWidth: 40 }} />
         <span style={{
           fontStyle: 'italic', fontWeight: 300, fontSize: 'clamp(9px, 1.55vh, 20px)',
           letterSpacing: '0.18em', textTransform: 'uppercase',
-          color: '#c8c2b8', fontFamily: 'Georgia, "Times New Roman", serif',
+          color: 'rgb(var(--p-ink-mid))', fontFamily: 'Georgia, "Times New Roman", serif',
         }}>
           {text}
         </span>
-        <span style={{ flex: 1, height: 1, background: 'rgba(224,216,204,0.15)', display: 'block', maxWidth: 40 }} />
+        <span style={{ flex: 1, height: 1, background: 'rgb(var(--p-ink) / 0.15)', display: 'block', maxWidth: 40 }} />
       </a>
 
       <div
@@ -135,7 +135,7 @@ function MenuItem({ text, images, link, speed }: MenuItemProps) {
         style={{
           position: 'absolute', inset: 0, overflow: 'hidden',
           pointerEvents: 'none', transform: 'translateY(101%)',
-          backgroundColor: 'rgba(10, 12, 15, 0.92)', backdropFilter: 'blur(2px)',
+          backgroundColor: 'rgb(var(--p-shadow) / calc(0.92 * var(--p-shadow-strength)))', backdropFilter: 'blur(2px)',
         }}
       >
         <div style={{ height: '100%', width: '100%', overflow: 'hidden' }}>
@@ -164,7 +164,7 @@ export default function PhotographerFlowingMenu({ items, speed = 14 }: Photograp
       width: '100%', flex: 1, minHeight: 0,
       display: 'flex', flexDirection: 'column',
       borderRadius: '1rem', overflow: 'hidden',
-      border: '1px solid rgba(114, 110, 102, 0.25)',
+      border: '1px solid rgb(var(--p-line) / 0.25)',
     }}>
       {items.map((item, i) => (
         <MenuItem key={i} {...item} speed={speed} />

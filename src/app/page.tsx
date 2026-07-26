@@ -22,7 +22,7 @@ const orderedProjects = [...projectData.filter((project) => project.featured), .
 export default function Home() {
   return (
     <PageTransition>
-      <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
+      <div className="min-h-screen" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="relative z-10 mx-auto flex w-full flex-col px-4 md:px-8 xl:px-12 pt-16 md:pt-24 lg:pt-16 pb-12 lg:pb-4 lg:h-svh lg:min-h-[680px]">
           {/* Modular Grid Layout — fills the viewport edge to edge on desktop (no scroll) */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-3 auto-rows-[minmax(150px,_auto)] lg:flex-1 lg:min-h-0 lg:grid-rows-[minmax(0,0.92fr)_minmax(0,1.32fr)_minmax(0,1fr)]">
@@ -60,21 +60,21 @@ export default function Home() {
             <Link
               href="/about"
               className="px-6 py-3 lg:py-2.5 font-semibold rounded-full transform hover:scale-105 transition-all duration-300"
-              style={{ background: 'linear-gradient(to right, #7a9088, #6a8a8e)', color: '#e0d8cc' }}
+              style={{ background: 'linear-gradient(to right, rgb(var(--p-sage)), rgb(var(--p-teal)))', color: 'rgb(var(--p-ink))' }}
             >
               Learn More About Me
             </Link>
             <Link
               href="/projects"
               className="px-6 py-3 lg:py-2.5 border font-semibold rounded-full transition-all duration-300"
-              style={{ borderColor: '#7a9088', color: '#7a9088' }}
+              style={{ borderColor: 'rgb(var(--p-sage))', color: 'rgb(var(--p-sage))' }}
             >
               View All Projects
             </Link>
             <Link
               href="/blog"
               className="px-6 py-3 lg:py-2.5 border font-semibold rounded-full transition-all duration-300"
-              style={{ borderColor: '#8a8680', color: '#b8b4aa' }}
+              style={{ borderColor: 'rgb(var(--p-ink-dim))', color: 'rgb(var(--p-ink-mid))' }}
             >
               Read My Blog
             </Link>

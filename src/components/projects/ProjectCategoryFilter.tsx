@@ -28,7 +28,7 @@ export default function ProjectCategoryFilter({
             style={
               isActive
                 ? undefined
-                : { borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }
+                : { borderColor: 'rgb(var(--p-line) / 0.3)', color: 'rgb(var(--p-ink-mid))' }
             }
           >
             {category}

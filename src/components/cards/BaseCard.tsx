@@ -54,7 +54,7 @@ export default function BaseCard({
     if (spotRef.current) {
       spotRef.current.style.opacity = '1';
       spotRef.current.style.background =
-        `radial-gradient(240px circle at ${(px * 100).toFixed(1)}% ${(py * 100).toFixed(1)}%, rgba(122, 144, 136, 0.12), transparent 65%)`;
+        `radial-gradient(240px circle at ${(px * 100).toFixed(1)}% ${(py * 100).toFixed(1)}%, rgb(var(--p-sage) / 0.12), transparent 65%)`;
     }
   }, [canHover]);
 
@@ -84,7 +84,7 @@ export default function BaseCard({
       whileHover={hover ? {
         scale: 1.02,
         y: -4,
-        ...(glass ? {} : { borderColor: 'rgb(122 144 136 / 0.5)' })
+        ...(glass ? {} : { borderColor: 'rgb(var(--p-sage) / 0.5)' })
       } : {}}
     >
       <div

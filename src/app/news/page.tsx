@@ -129,7 +129,7 @@ export default function NewsPage() {
 
   return (
     <PageTransition>
-      <div className="min-h-screen" style={{ color: '#e0d8cc' }}>
+      <div className="min-h-screen" style={{ color: 'rgb(var(--p-ink))' }}>
         <div className="relative z-10 mx-auto w-full max-w-screen-2xl px-4 pt-24 pb-12">
           {/* Header */}
           <motion.div
@@ -148,8 +148,8 @@ export default function NewsPage() {
               </div>
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all hover:border-[#7a9088]"
-                style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#7a9088' }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-all hover:border-sage"
+                style={{ borderColor: 'rgb(var(--p-line) / 0.3)', color: 'rgb(var(--p-sage))' }}
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -164,19 +164,19 @@ export default function NewsPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
               className="rounded-xl border p-4 mb-6 flex items-center gap-4"
-              style={{ borderColor: 'rgba(122, 144, 136, 0.3)', backgroundColor: '#211e1c' }}
+              style={{ borderColor: 'rgb(var(--p-sage) / 0.3)', backgroundColor: 'rgb(var(--p-surface-2))' }}
             >
               <div 
                 className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
-                style={{ backgroundColor: '#282622' }}
+                style={{ backgroundColor: 'rgb(var(--p-surface-3))' }}
               >
-                <svg className="w-5 h-5" style={{ color: '#7a9088' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5" style={{ color: 'rgb(var(--p-sage))' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-1">
-                  <span className="font-semibold" style={{ color: '#e0d8cc' }}>Powered by ClawdBot</span>
+                  <span className="font-semibold" style={{ color: 'rgb(var(--p-ink))' }}>Powered by ClawdBot</span>
                   <span 
                     className="text-xs px-2 py-0.5 rounded-full"
                     style={{ backgroundColor: 'rgba(34, 197, 94, 0.2)', color: '#22c55e' }}
@@ -184,21 +184,21 @@ export default function NewsPage() {
                     Active
                   </span>
                 </div>
-                <p className="text-xs" style={{ color: '#8a8680' }}>
+                <p className="text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                   24/7 automated news assistant. Pulls updates every 2 hours from Anthropic, DeepMind, arXiv, The Verge, and more.
                 </p>
               </div>
-              <div className="hidden md:flex items-center gap-4 text-xs" style={{ color: '#8a8680' }}>
+              <div className="hidden md:flex items-center gap-4 text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                 <div className="text-center">
-                  <div className="font-semibold" style={{ color: '#7a9088' }}>4</div>
+                  <div className="font-semibold" style={{ color: 'rgb(var(--p-sage))' }}>4</div>
                   <div>Categories</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-semibold" style={{ color: '#7a9088' }}>2h</div>
+                  <div className="font-semibold" style={{ color: 'rgb(var(--p-sage))' }}>2h</div>
                   <div>Interval</div>
                 </div>
                 <div className="text-center">
-                  <div className="font-semibold" style={{ color: '#7a9088' }}>24/7</div>
+                  <div className="font-semibold" style={{ color: 'rgb(var(--p-sage))' }}>24/7</div>
                   <div>Uptime</div>
                 </div>
               </div>
@@ -208,7 +208,7 @@ export default function NewsPage() {
             {availableDates.length > 1 && (
               <div
                 className="rounded-2xl border p-3.5 mb-6"
-                style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: 'rgba(33, 30, 28, 0.92)' }}
+                style={{ borderColor: 'rgb(var(--p-line) / 0.3)', backgroundColor: 'rgb(var(--p-surface-2) / 0.92)' }}
               >
                 <div className="flex flex-wrap items-center gap-2 mb-3">
                   {monthKeys.map((monthKey) => (
@@ -217,9 +217,9 @@ export default function NewsPage() {
                       onClick={() => selectMonth(monthKey)}
                       className="px-3 py-1.5 rounded-full border text-sm transition-all"
                       style={{
-                        borderColor: visibleMonth === monthKey ? '#7a9088' : 'rgba(114, 110, 102, 0.3)',
-                        backgroundColor: visibleMonth === monthKey ? '#282622' : 'transparent',
-                        color: visibleMonth === monthKey ? '#e0d8cc' : '#8a8680',
+                        borderColor: visibleMonth === monthKey ? 'rgb(var(--p-sage))' : 'rgb(var(--p-line) / 0.3)',
+                        backgroundColor: visibleMonth === monthKey ? 'rgb(var(--p-surface-3))' : 'transparent',
+                        color: visibleMonth === monthKey ? 'rgb(var(--p-ink))' : 'rgb(var(--p-ink-dim))',
                       }}
                     >
                       {formatMonthLabel(monthKey)}
@@ -231,10 +231,10 @@ export default function NewsPage() {
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <div className="min-w-0">
-                        <p className="text-[10px] uppercase tracking-[0.24em]" style={{ color: '#7a9088' }}>
+                        <p className="text-[10px] uppercase tracking-[0.24em]" style={{ color: 'rgb(var(--p-sage))' }}>
                           Calendar View
                         </p>
-                        <h2 className="text-lg font-semibold mt-1" style={{ color: '#e0d8cc' }}>
+                        <h2 className="text-lg font-semibold mt-1" style={{ color: 'rgb(var(--p-ink))' }}>
                           {formatMonthLabel(visibleMonth)}
                         </h2>
                       </div>
@@ -249,7 +249,7 @@ export default function NewsPage() {
                           }}
                           disabled={visibleMonthIndex === monthKeys.length - 1}
                           className="w-8 h-8 rounded-full border transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-                          style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
+                          style={{ borderColor: 'rgb(var(--p-line) / 0.3)', color: 'rgb(var(--p-ink-mid))' }}
                           aria-label="Show older month"
                         >
                           <span aria-hidden="true">←</span>
@@ -263,7 +263,7 @@ export default function NewsPage() {
                           }}
                           disabled={visibleMonthIndex <= 0}
                           className="w-8 h-8 rounded-full border transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-                          style={{ borderColor: 'rgba(114, 110, 102, 0.3)', color: '#b8b4aa' }}
+                          style={{ borderColor: 'rgb(var(--p-line) / 0.3)', color: 'rgb(var(--p-ink-mid))' }}
                           aria-label="Show newer month"
                         >
                           <span aria-hidden="true">→</span>
@@ -276,7 +276,7 @@ export default function NewsPage() {
                         <div
                           key={day}
                           className="pb-1.5 text-center text-[10px] font-medium uppercase tracking-[0.18em]"
-                          style={{ color: '#8a8680' }}
+                          style={{ color: 'rgb(var(--p-ink-dim))' }}
                         >
                           {day}
                         </div>
@@ -303,13 +303,13 @@ export default function NewsPage() {
                             disabled={!cell.isAvailable}
                             className="min-h-[56px] rounded-xl border px-2 py-1.5 text-left transition-all disabled:cursor-default"
                             style={{
-                              borderColor: isSelected ? '#7a9088' : 'rgba(114, 110, 102, 0.18)',
+                              borderColor: isSelected ? 'rgb(var(--p-sage))' : 'rgb(var(--p-line) / 0.18)',
                               backgroundColor: isSelected
-                                ? '#282622'
+                                ? 'rgb(var(--p-surface-3))'
                                 : cell.isAvailable
-                                  ? 'rgba(40, 38, 34, 0.75)'
-                                  : 'rgba(24, 22, 20, 0.28)',
-                              color: cell.isAvailable ? '#e0d8cc' : '#5f5b56',
+                                  ? 'rgb(var(--p-surface-3) / 0.75)'
+                                  : 'rgb(var(--p-shadow) / calc(0.28 * var(--p-shadow-strength)))',
+                              color: cell.isAvailable ? 'rgb(var(--p-ink))' : 'rgb(var(--p-ink-dim))',
                               opacity: cell.date ? 1 : 0.35,
                             }}
                           >
@@ -321,8 +321,8 @@ export default function NewsPage() {
                                     <span
                                       className="text-[10px] px-1.5 py-0.5 rounded-full"
                                       style={{
-                                        backgroundColor: isSelected ? 'rgba(122, 144, 136, 0.22)' : 'rgba(122, 144, 136, 0.12)',
-                                        color: isSelected ? '#d8f3ea' : '#7a9088',
+                                        backgroundColor: isSelected ? 'rgb(var(--p-sage) / 0.22)' : 'rgb(var(--p-sage) / 0.12)',
+                                        color: isSelected ? '#d8f3ea' : 'rgb(var(--p-sage))',
                                       }}
                                     >
                                       {itemCount}
@@ -337,7 +337,7 @@ export default function NewsPage() {
                                         key={category.value}
                                         className="h-1.5 flex-1 rounded-full"
                                         style={{
-                                          backgroundColor: categoryCounts[category.value] > 0 ? category.color : 'rgba(114, 110, 102, 0.22)',
+                                          backgroundColor: categoryCounts[category.value] > 0 ? category.color : 'rgb(var(--p-line) / 0.22)',
                                           opacity: categoryCounts[category.value] > 0 ? 1 : 0.5,
                                         }}
                                         title={`${category.label}: ${categoryCounts[category.value] || 0}`}
@@ -355,15 +355,15 @@ export default function NewsPage() {
 
                   <div
                     className="lg:w-[224px] rounded-2xl border p-3"
-                    style={{ borderColor: 'rgba(114, 110, 102, 0.25)', backgroundColor: '#282622' }}
+                    style={{ borderColor: 'rgb(var(--p-line) / 0.25)', backgroundColor: 'rgb(var(--p-surface-3))' }}
                   >
-                    <p className="text-[10px] uppercase tracking-[0.24em]" style={{ color: '#7a9088' }}>
+                    <p className="text-[10px] uppercase tracking-[0.24em]" style={{ color: 'rgb(var(--p-sage))' }}>
                       Selected Day
                     </p>
-                    <h3 className="text-base font-semibold mt-1.5" style={{ color: '#e0d8cc' }}>
+                    <h3 className="text-base font-semibold mt-1.5" style={{ color: 'rgb(var(--p-ink))' }}>
                       {selectedDateLabel}
                     </h3>
-                    <p className="text-xs mt-1.5" style={{ color: '#b8b4aa' }}>
+                    <p className="text-xs mt-1.5" style={{ color: 'rgb(var(--p-ink-mid))' }}>
                       {stats.total} stories available for this day.
                     </p>
 
@@ -372,11 +372,11 @@ export default function NewsPage() {
                         <div
                           key={cat.value}
                           className="rounded-xl border px-3 py-2 flex items-center justify-between gap-3"
-                          style={{ borderColor: 'rgba(114, 110, 102, 0.2)', backgroundColor: '#211e1c' }}
+                          style={{ borderColor: 'rgb(var(--p-line) / 0.2)', backgroundColor: 'rgb(var(--p-surface-2))' }}
                         >
                           <div className="flex items-center gap-2 min-w-0">
                             <span className="w-2 h-2 rounded-full" style={{ backgroundColor: cat.color }} />
-                            <div className="text-xs truncate" style={{ color: '#8a8680' }}>{cat.label}</div>
+                            <div className="text-xs truncate" style={{ color: 'rgb(var(--p-ink-dim))' }}>{cat.label}</div>
                           </div>
                           <div className="text-sm font-semibold shrink-0" style={{ color: cat.color }}>
                             {stats[cat.value as keyof typeof stats]}
@@ -385,8 +385,8 @@ export default function NewsPage() {
                       ))}
                     </div>
 
-                    <div className="mt-3 pt-3 border-t" style={{ borderColor: 'rgba(114, 110, 102, 0.2)' }}>
-                      <p className="text-[11px]" style={{ color: '#8a8680' }}>
+                    <div className="mt-3 pt-3 border-t" style={{ borderColor: 'rgb(var(--p-line) / 0.2)' }}>
+                      <p className="text-[11px]" style={{ color: 'rgb(var(--p-ink-dim))' }}>
                         {visibleMonthDates.length} tracked days. Recent synced dates are mostly AI because the source folder is `ai-news`.
                       </p>
                     </div>
@@ -403,9 +403,9 @@ export default function NewsPage() {
                   onClick={() => setSelectedCategory(cat.value)}
                   className="px-3 py-1.5 rounded-lg border transition-all text-sm"
                   style={{
-                    borderColor: selectedCategory === cat.value ? cat.color : 'rgba(114, 110, 102, 0.3)',
-                    backgroundColor: selectedCategory === cat.value ? '#282622' : 'transparent',
-                    color: selectedCategory === cat.value ? cat.color : '#8a8680'
+                    borderColor: selectedCategory === cat.value ? cat.color : 'rgb(var(--p-line) / 0.3)',
+                    backgroundColor: selectedCategory === cat.value ? 'rgb(var(--p-surface-3))' : 'transparent',
+                    color: selectedCategory === cat.value ? cat.color : 'rgb(var(--p-ink-dim))'
                   }}
                 >
                   {cat.label}
@@ -432,27 +432,27 @@ export default function NewsPage() {
                       </span>
                       <span
                         className="text-xs px-2 py-0.5 rounded"
-                        style={{ backgroundColor: 'rgba(114, 110, 102, 0.2)', color: '#b8b4aa' }}
+                        style={{ backgroundColor: 'rgb(var(--p-line) / 0.2)', color: 'rgb(var(--p-ink-mid))' }}
                       >
                         {categories.find(c => c.value === item.category)?.label}
                       </span>
                     </div>
-                    <span className="text-xs" style={{ color: '#8a8680' }}>{item.time}</span>
+                    <span className="text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>{item.time}</span>
                   </div>
-                  <h3 className="font-semibold mb-2" style={{ color: '#e0d8cc' }}>
+                  <h3 className="font-semibold mb-2" style={{ color: 'rgb(var(--p-ink))' }}>
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-relaxed" style={{ color: '#b8b4aa' }}>{item.summary}</p>
-                  <div className="mt-3 pt-3 border-t flex items-center justify-between" style={{ borderColor: 'rgba(114, 110, 102, 0.2)' }}>
-                    <span className="text-xs" style={{ color: '#8a8680' }}>{item.source}</span>
+                  <p className="text-sm leading-relaxed" style={{ color: 'rgb(var(--p-ink-mid))' }}>{item.summary}</p>
+                  <div className="mt-3 pt-3 border-t flex items-center justify-between" style={{ borderColor: 'rgb(var(--p-line) / 0.2)' }}>
+                    <span className="text-xs" style={{ color: 'rgb(var(--p-ink-dim))' }}>{item.source}</span>
                     {item.sourceUrl ? (
-                      <svg className="w-4 h-4" style={{ color: '#7a9088' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" style={{ color: 'rgb(var(--p-sage))' }} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     ) : (
                       <span
                         className="text-[10px] px-2 py-0.5 rounded-full"
-                        style={{ backgroundColor: 'rgba(114, 110, 102, 0.2)', color: '#8a8680' }}
+                        style={{ backgroundColor: 'rgb(var(--p-line) / 0.2)', color: 'rgb(var(--p-ink-dim))' }}
                       >
                         No link
                       </span>
@@ -471,8 +471,8 @@ export default function NewsPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: i * 0.03 }}
-                    className="rounded-xl border p-5 transition-all hover:border-[#7a9088] block"
-                    style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#282622' }}
+                    className="rounded-xl border p-5 transition-all hover:border-sage block"
+                    style={{ borderColor: 'rgb(var(--p-line) / 0.3)', backgroundColor: 'rgb(var(--p-surface-3))' }}
                   >
                     {cardContent}
                   </motion.a>
@@ -486,7 +486,7 @@ export default function NewsPage() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: i * 0.03 }}
                   className="rounded-xl border p-5"
-                  style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#282622' }}
+                  style={{ borderColor: 'rgb(var(--p-line) / 0.3)', backgroundColor: 'rgb(var(--p-surface-3))' }}
                 >
                   {cardContent}
                 </motion.div>
@@ -500,7 +500,7 @@ export default function NewsPage() {
               animate={{ opacity: 1 }}
               className="text-center py-20"
             >
-              <p style={{ color: '#8a8680' }}>No news available for this date and category.</p>
+              <p style={{ color: 'rgb(var(--p-ink-dim))' }}>No news available for this date and category.</p>
             </motion.div>
           )}
 
@@ -510,7 +510,7 @@ export default function NewsPage() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="mt-12 text-center text-sm"
-            style={{ color: '#8a8680' }}
+            style={{ color: 'rgb(var(--p-ink-dim))' }}
           >
             <p>Generated by ClawdBot | Last updated: {newsData.lastUpdated}</p>
           </motion.footer>
