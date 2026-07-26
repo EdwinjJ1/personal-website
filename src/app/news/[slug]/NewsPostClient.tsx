@@ -7,6 +7,7 @@ import { useParams } from 'next/navigation';
 import PageTransition from '@/components/PageTransition';
 import GradientText from '@/components/GradientText';
 import { getNewsBySlug, getAllNews } from '@/data/newsPosts';
+import { NEWS_CATEGORIES } from '@/lib/categoryStyles';
 
 const container = {
   hidden: { opacity: 0 },
@@ -21,12 +22,7 @@ const item = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
 };
 
-const categoryConfig = {
-  ai: { label: 'AI News', color: '#7a9088', icon: '🤖' },
-  research: { label: 'Research', color: '#6a8a8e', icon: '📚' },
-  industry: { label: 'Industry', color: '#8a7a6a', icon: '🏢' },
-  global: { label: 'Global', color: '#7a6a8a', icon: '🌍' }
-};
+const categoryConfig = NEWS_CATEGORIES;
 
 export default function NewsPostClient() {
   const params = useParams();

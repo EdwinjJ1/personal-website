@@ -3,17 +3,11 @@
 import Link from 'next/link';
 import BaseCard from './BaseCard';
 import { newsPreview, type NewsPreviewItem } from '@/data/newsPreview';
+import { ALL_CATEGORY, TAG_ACCENTS, chipStyle } from '@/lib/categoryStyles';
 
 interface NewsCardProps {
   delay?: number;
 }
-
-const tagColors = {
-  BREAKING: { bg: '#dc2626', text: '#fff' },
-  PRODUCT: { bg: '#2563eb', text: '#fff' },
-  RESEARCH: { bg: '#16a34a', text: '#fff' },
-  POLICY: { bg: '#d97706', text: '#fff' },
-};
 
 const latestLabel = newsPreview.latestLabel;
 const quickHighlights: readonly NewsPreviewItem[] = newsPreview.items;
@@ -61,16 +55,15 @@ export default function NewsCard({ delay = 0.9 }: NewsCardProps) {
           {quickHighlights.map((item) => (
             <div
               key={item.id}
-              className="flex items-center gap-2 rounded-lg border p-2"
-              style={{ borderColor: 'rgba(114, 110, 102, 0.3)', backgroundColor: '#211e1c' }}
+              className="flex items-center gap-2 rounded-lg border border-line bg-surface-2 p-2"
             >
               <span
-                className="text-[10px] px-1.5 py-0.5 rounded font-medium"
-                style={{ backgroundColor: tagColors[item.tag].bg, color: tagColors[item.tag].text }}
+                className="text-[10px] px-1.5 py-0.5 rounded border font-medium"
+                style={chipStyle(TAG_ACCENTS[item.tag] ?? ALL_CATEGORY.color)}
               >
                 {item.tag}
               </span>
-              <span className="text-sm truncate" style={{ color: '#e0d8cc' }}>
+              <span className="text-sm truncate text-ink">
                 {item.title}
               </span>
             </div>

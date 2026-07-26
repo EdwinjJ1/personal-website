@@ -46,7 +46,7 @@ export default function ProjectsPage() {
 
   return (
     <PageTransition>
-      <div className="page-accent--orange project-page-shell min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
+      <div className="project-page-shell min-h-screen pt-20" style={{ color: '#e0d8cc' }}>
         <div className="mx-auto max-w-6xl px-6 py-10">
           <motion.div variants={container} initial="hidden" animate="visible">
 

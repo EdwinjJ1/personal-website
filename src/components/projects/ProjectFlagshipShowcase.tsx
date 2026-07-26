@@ -67,7 +67,7 @@ export default function ProjectFlagshipShowcase({ projects }: ProjectFlagshipSho
             data-project-command={getCommandId(project)}
             className={project.id === activeProject.id ? 'is-active' : undefined}
             onClick={() => setActiveId(project.id)}
-            style={{ '--project-accent': project.accent ?? '#e8915b' } as React.CSSProperties}
+            style={{ '--project-accent': project.accent ?? '#7a9088' } as React.CSSProperties}
           >
             {project.title.replace(': Sydney Layers', '').replace(' Prompt Enhancer', '')}
           </button>
@@ -89,7 +89,7 @@ export default function ProjectFlagshipShowcase({ projects }: ProjectFlagshipSho
 
         <aside
           className="project-inspector"
-          style={{ '--project-accent': activeProject.accent ?? '#e8915b' } as React.CSSProperties}
+          style={{ '--project-accent': activeProject.accent ?? '#7a9088' } as React.CSSProperties}
           aria-live="polite"
         >
           <div className="project-inspector-header">
@@ -109,14 +109,8 @@ export default function ProjectFlagshipShowcase({ projects }: ProjectFlagshipSho
             <strong>{profile.signal}</strong>
           </div>
 
-          <div className="project-inspector-metrics">
-            {(activeProject.metrics ?? []).map((metric) => (
-              <div key={`${activeProject.id}-${metric.label}`}>
-                <strong>{metric.value}</strong>
-                <span>{metric.label}</span>
-              </div>
-            ))}
-          </div>
+          {/* Metrics live on the card itself; repeating them here made the
+              inspector read as a duplicate rather than a companion. */}
 
           <div className="project-inspector-stack">
             <span>stack</span>
