@@ -50,12 +50,13 @@ Completed coursework: COMP1511, COMP1531, COMP2041, COMP2521, MATH1081, MATH1131
 
 ## Selected Projects
 
-- **KnowMe Memory MCP** — Token-gated personal context server that turns profiles and notes into permissioned AI memory. (github.com/EdwinjJ1/memory-mcp)
+- **Roundtable** — Visual workflow and governance layer that turns AI coding sessions into reusable, reviewable workflows. (github.com/EdwinjJ1/roundtable)
+- **Akeso** — Personal energy coach that turns a short daily check-in into an explainable energy-aware plan. (akeso-showcase.vercel.app)
+- **LensDex / 镜库** — Bilingual camera and lens database with specifications, price context, rankings, and reviews. (github.com/EdwinjJ1/cameraweb)
 - **Chiron Prompt** — Open-source prompt optimization tool for terminal-first developers. (github.com/EdwinjJ1/chiron-prompt)
 - **ChronoMap** — Interactive heritage map; one map to understand the story behind every place. (chronomap.site)
 - **FinalBoss** — AI exam-prep workspace that turns notes and past papers into mocks and Socratic tutoring.
 - **3D Print Skill for Claude** — Searches real hardware specs before generating manifold-safe 3D models. (github.com/EdwinjJ1/3d-print-skill)
-- **SafeEyes for macOS** — Native eye-strain reduction tool with bilingual notifications. (github.com/EdwinjJ1/SafeEyes--mac)
 
 See the full list at https://evanlin.site/projects.md
 
