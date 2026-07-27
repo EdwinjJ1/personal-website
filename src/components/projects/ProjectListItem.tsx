@@ -13,7 +13,15 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
   return (
     <li className="showcase-card flex flex-col gap-3 rounded-2xl p-6 sm:flex-row sm:items-center sm:gap-6">
       <span className="accent-text accent-soft-bg flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
-        <ProjectIcon icon={project.icon} size={22} />
+        {project.logoImage ? (
+          <img
+            src={project.logoImage}
+            alt={`${project.title} icon`}
+            className="h-9 w-9 rounded-lg object-cover"
+          />
+        ) : (
+          <ProjectIcon icon={project.icon} size={22} />
+        )}
       </span>
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-3">
