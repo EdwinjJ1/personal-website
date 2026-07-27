@@ -48,6 +48,15 @@ const iconMap: Record<string, (props: { size?: number; className?: string }) => 
       <path d="M13 15h4"/>
     </svg>
   ),
+  chiron: ({ size = 24, className }) => (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M4 19 18.5 4.5"/>
+      <path d="m14.5 4.5 4 0 0 4"/>
+      <path d="M5 7.5c2.4.1 4.6 1.1 6.2 2.8"/>
+      <path d="M4.5 12c2.6.2 4.8 1.3 6.3 3.1"/>
+      <path d="M8 18.5 4.5 15"/>
+    </svg>
+  ),
   graduation: ({ size = 24, className }) => (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <path d="M22 10 12 5 2 10l10 5 10-5z"/>

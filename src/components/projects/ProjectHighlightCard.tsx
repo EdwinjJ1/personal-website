@@ -157,7 +157,15 @@ export default function ProjectHighlightCard({ project, index = 0, active = fals
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="project-icon-badge">
-              <ProjectIcon icon={project.icon} size={20} />
+              {project.logoImage ? (
+                <img
+                  src={project.logoImage}
+                  alt={`${project.title} icon`}
+                  className="h-6 w-6 rounded-md object-cover"
+                />
+              ) : (
+                <ProjectIcon icon={project.icon} size={20} />
+              )}
             </span>
             <div>
               <span className="text-[11px] font-semibold uppercase tracking-[0.2em]" style={{ color: accent }}>

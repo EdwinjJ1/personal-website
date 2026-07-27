@@ -42,6 +42,8 @@ export const projects: Project[] = [
     status: 'In Development',
     githubUrl: 'https://github.com/EdwinjJ1/roundtable',
     icon: 'network',
+    logoImage: '/images/projects/roundtable-logo.png',
+    heroImage: '/images/projects/roundtable-workbench.png',
     accent: 'rgb(var(--p-teal))',
     metrics: [
       { label: 'Agent roles', value: '6+' },
@@ -72,6 +74,8 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/EdwinjJ1/akeso',
     linkLabel: 'View showcase',
     icon: 'brain',
+    logoImage: '/images/projects/akeso-icon.png',
+    heroImage: '/images/projects/akeso-app-cover.png',
     accent: 'rgb(var(--p-sage-bright))',
     metrics: [
       { label: 'Daily check-in', value: '20 sec' },
@@ -100,6 +104,8 @@ export const projects: Project[] = [
     status: 'In Development',
     githubUrl: 'https://github.com/EdwinjJ1/cameraweb',
     icon: 'camera',
+    logoImage: '/images/projects/lensdex-logo.png',
+    heroImage: '/images/projects/lensdex-cover.png',
     accent: 'rgb(var(--p-status-dev))',
     metrics: [
       { label: 'Languages', value: '2' },
@@ -189,7 +195,8 @@ export const projects: Project[] = [
     featured: true,
     status: 'Live',
     githubUrl: 'https://github.com/EdwinjJ1/chiron-prompt',
-    icon: 'terminal',
+    icon: 'chiron',
+    heroImage: '/images/projects/chiron-repository.png',
     accent: 'rgb(var(--p-status-dev))',
     metrics: [
       { label: 'Shortcut', value: 'Ctrl+E' },
