@@ -1,66 +1,91 @@
-# Evan Lin — Projects
+# Evan Lin — Active Projects
 
-An overview of what I've built. Most of it is AI tooling for developers, plus a few full products. Featured projects have their own deep-dive docs linked below.
+An overview of the products I am actively building and maintaining. The list prioritises current work across AI workflows, personal planning, creator tools, education, and developer experience.
 
 ---
 
 ## Featured
 
-### KnowMe Memory MCP — *Give every AI the right version of you*
-Token-gated personal context server that turns profiles, resumes, notes, and durable facts into permissioned AI memory. Self-hosted memory engine for Claude, ChatGPT, Cursor, Codex, Gemini, and any MCP-capable AI client. Public/full/admin token tiers, Cloudflare Worker MCP server, D1 + Vectorize semantic search, and a self-correcting clarification loop.
-**Stack:** Cloudflare Workers · MCP · D1 · Vectorize · Workers AI · Node.js
-**Status:** In development · [GitHub](https://github.com/EdwinjJ1/memory-mcp)
+### Roundtable — *Turn AI coding sessions into reusable, reviewable workflows*
 
-### ChronoMap — *One map to understand the story behind every place*
-Production-grade place-discovery experience combining a 3D Mapbox map, editorial storytelling, bilingual content, and then-and-now image comparisons. Sydney is the first content layer; the data model scales into more cities, film-location tours, and cultural partnerships. 50+ historical sites.
-**Stack:** Next.js 16 · React 19 · Mapbox GL · Tailwind CSS · Framer Motion
-**Status:** Live · [Site](https://chronomap.site) · [GitHub](https://github.com/EdwinjJ1/chrono-map)
+A visual workflow and governance layer for local AI coding agents. It turns a goal into a dependency-aware plan, coordinates specialist agents, and retains artifacts, handoffs, review state, safety checks, and repair loops in one inspectable history.
 
-### Chiron Prompt — *Augment-style prompt enhancement, inside the terminal*
-Free, open-source prompt enhancer that scans a repo, reads relevant files and git state, then rewrites rough requests into scoped execution prompts for Gemini CLI and Claude Code. Ships as a slash command and a double-Ctrl+E overlay.
-**Stack:** Node.js · Gemini CLI · Claude Code · JavaScript
-**Status:** Live · [GitHub](https://github.com/EdwinjJ1/chiron-prompt)
+**Stack:** Next.js 15 · TypeScript · tRPC · NextAuth · PostgreSQL · Vitest
+
+**Status:** In development · [GitHub](https://github.com/EdwinjJ1/roundtable)
+
+### Akeso — *Plan around the energy you actually have*
+
+A personal energy coach that converts a short daily check-in into an explainable energy map, an energy-aware plan for today, and practical nutrition guidance. The public showcase is live; the companion mobile app is still in development.
+
+**Stack:** Expo · React Native · TypeScript · Express · Supabase · Zod
+
+**Status:** In development · [Showcase](https://akeso-showcase.vercel.app) · [GitHub](https://github.com/EdwinjJ1/akeso)
+
+### LensDex / 镜库 — *A clearer way to choose camera gear*
+
+A bilingual camera and lens research database with real specifications, separate new and used price reference ranges, transparent editorial rankings, ratings, reviews, and comparison paths.
+
+**Stack:** Next.js 15 · TypeScript · Prisma · PostgreSQL · Tailwind CSS · Playwright
+
+**Status:** In development · [GitHub](https://github.com/EdwinjJ1/cameraweb)
 
 ### FinalBoss — *Beat any exam with AI*
-AI exam-prep workspace: one workspace per exam, upload notes and past papers, generate mock exams or practice sets, then use a Socratic AI tutor that finds weak spots without just handing over answers. Free/basic/Pro tiers, Stripe subscriptions, campus-first UNSW launch.
+
+AI exam-prep workspace: create an exam workspace, upload notes and past papers, generate mock exams or practice sets, then use a Socratic AI tutor that finds weak spots without simply giving answers away.
+
 **Stack:** Next.js 16 · Firebase · Stripe · Anthropic · Judge0
+
 **Status:** In development · [Site](https://finalboss.cn) · [GitHub](https://github.com/EdwinjJ1/preuni-prexam)
+
+### ChronoMap — *One map to understand the story behind every place*
+
+Place-discovery experience combining a 3D Mapbox map, editorial storytelling, bilingual content, and then-and-now image comparisons. Sydney is the first layer in a system designed to scale city by city.
+
+**Stack:** Next.js 16 · React 19 · Mapbox GL · Tailwind CSS · Framer Motion
+
+**Status:** Live · [Site](https://chrono-map-eight.vercel.app) · [GitHub](https://github.com/EdwinjJ1/chrono-map)
+
+### Chiron Prompt — *Augment-style prompt enhancement, inside the terminal*
+
+Free, open-source prompt enhancer that scans a repository, reads relevant files and git state, then rewrites rough developer requests into scoped execution prompts for Gemini CLI and Claude Code.
+
+**Stack:** Node.js · Gemini CLI · Claude Code · JavaScript
+
+**Status:** Live · [GitHub](https://github.com/EdwinjJ1/chiron-prompt)
 
 ---
 
-## Other projects
+## Other active projects
 
 ### EgoTrace
-AI-powered second brain and smart calendar for habit building, time management, and team collaboration. Smart calendar with AI import, gamified habit tracking, cross-platform via Capacitor.
+
+AI-powered second brain and smart calendar for habit building, time management, and team collaboration. Includes AI calendar import, gamified habits, and cross-platform delivery.
+
 **Stack:** Next.js 15 · React 19 · Prisma · Capacitor · Tailwind CSS
+
 **Status:** In development · [Site](https://egotrace.vercel.app) · [GitHub](https://github.com/EdwinjJ1/calendar)
 
-### Axon
-Electron + React + TypeScript boilerplate for building prompt-engineering desktop assistants. Clean separation of main/preload/renderer, secure IPC, production-ready build pipeline.
-**Stack:** Electron · React · TypeScript · Vite
-**Status:** Live · [Site](https://www.promptenhenceraxon.top) · [GitHub](https://github.com/EdwinjJ1/Axon)
-
 ### 3D Print Skill for Claude
-A Claude skill that searches real hardware specs before generating manifold-safe 3D models for Bambu Studio / PrusaSlicer.
+
+A Claude skill that searches real hardware specifications before generating manifold-safe 3D models for Bambu Studio and PrusaSlicer.
+
 **Status:** Live · [GitHub](https://github.com/EdwinjJ1/3d-print-skill)
 
-### SafeEyes for macOS
-Native macOS eye-strain reminder with customizable breaks, bilingual (EN/CN) notifications, and three launch modes. Zero external dependencies.
-**Stack:** Python · AppleScript · macOS
-**Status:** Live · [GitHub](https://github.com/EdwinjJ1/SafeEyes--mac)
-
 ### Study Materials (PreUni)
-Interactive study platform for UNSW CS students with bilingual content and data visualisations. Earlier iterations had paying subscribers via Stripe.
+
+Interactive study platform for UNSW Computer Science students with bilingual content and data visualisations.
+
 **Stack:** JavaScript · Tailwind CSS · Chart.js · Plotly.js · Stripe
+
 **Status:** Live · [Site](http://www.preuni.xyz)
 
-### AI Equity Radar
-UNSW AIP Hackathon project. Analyzes 184 countries using World Bank data to identify inequality hotspots, with composite risk scoring and recommended AI interventions.
-**Stack:** Python · Flask · Pandas · Plotly.js
-
 ### Discord Bot
-Feature-rich Discord bot with custom commands, automated moderation, role management, and robust logging.
+
+Discord bot with custom commands, moderation tools, role management, and community interaction features.
+
 **Stack:** Node.js · discord.js
+
 **Status:** Live · [GitHub](https://github.com/EdwinjJ1/discord-bot)
 
 ---

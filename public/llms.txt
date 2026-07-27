@@ -11,7 +11,7 @@ This file is an index for AI assistants and humans who want to understand Evan q
 
 ## Projects
 
-- [All projects](https://evanlin.site/projects.md): Everything Evan has built — KnowMe Memory MCP, ChronoMap, Chiron Prompt, FinalBoss, and more, with tech stacks and links.
+- [All projects](https://evanlin.site/projects.md): Evan's active portfolio — Roundtable, Akeso, LensDex, ChronoMap, Chiron Prompt, FinalBoss, and more, with tech stacks and links.
 
 ## Contact
 
