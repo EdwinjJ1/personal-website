@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-07-25",
-  "latestLabel": "July 25, 2026",
+  "latestDate": "2026-07-28",
+  "latestLabel": "July 28, 2026",
   "items": [
     {
-      "id": "research-20260725-0000-emergent-misalignment-recruits-a-pre-existing-persona-subspace",
-      "title": "Emergent Misalignment Recruits a Pre-existing Persona Subspace",
+      "id": "research-20260728-0000-a-roadmap-to-impactful-pluralistic-alignment-research",
+      "title": "A Roadmap to Impactful Pluralistic Alignment Research",
       "tag": "RESEARCH",
-      "date": "2026-07-25",
+      "date": "2026-07-28",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260725-0000-mirror-learning-from-the-other-view-for-multi-modal-reasoning",
-      "title": "MIRROR: Learning from the Other View for Multi-Modal Reasoning",
+      "id": "research-20260728-0000-nanbeige4-2-3b-unlocking-agentic-capabilities-in-a-compact-model",
+      "title": "Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model",
       "tag": "RESEARCH",
-      "date": "2026-07-25",
+      "date": "2026-07-28",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260725-0000-openforgerl-train-harness-native-agents-in-any-environment",
-      "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+      "id": "research-20260728-0000-on-the-identifiability-of-controlled-world-models",
+      "title": "On the Identifiability of Controlled World Models",
       "tag": "RESEARCH",
-      "date": "2026-07-25",
+      "date": "2026-07-28",
       "time": "00:00",
       "category": "research"
     }

@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-07-25T00:22:10.128Z",
+  "lastUpdated": "2026-07-28T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-07-28",
+      "label": "July 28, 2026"
+    },
     {
       "value": "2026-07-25",
       "label": "July 25, 2026"
@@ -411,6 +415,105 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260728-0000-mmoe-modernizing-diffusion-transformers-with-efficient-expert-de",
+      "title": "🎨 MMOE — Modernizing Diffusion Transformers with Efficient Expert Design",
+      "summary": "Applies the LLM scaling-efficiency playbook — routed experts, shared/lightweight experts, gate-residual routing, attention-residual information reuse — to SiT-style diffusion transformers. Trained on a single 8×H100 node for 400k steps at batch 256 (accessible budget) and reaches lower FID at every recorded checkpoint than dense and intermediate sparse baselines, with the best quality/cost balance among sparse variants.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24665",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-kimi-k3-open-frontier-intelligence-moonshot-ai",
+      "title": "🦞 Kimi K3: Open Frontier Intelligence (Moonshot AI)",
+      "summary": "Moonshot releases Kimi K3, a 2.8T-parameter Mixture-of-Experts LLM with 104B active parameters, native vision, and a 1M-token context window. Built on Kimi Delta Attention (KDA) + Attention Residuals and Stable LatentMoE that activates 16 of 896 routed experts per token, claiming ~2.5× better scaling efficiency than K2. Post-training pushes RL across general / agentic / coding plus multiple reasoning-effort levels.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24653",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-efficiency-matters-in-autonomous-research-yang-and-cao",
+      "title": "🧪 Efficiency Matters in Autonomous Research (Yang & Cao)",
+      "summary": "Argues that autonomous-research (AR) systems should be evaluated on search efficiency , not just final outcome quality — proposes the AUC of the Pareto frontier over quality-vs-evaluation-budget as a metric. Compares hill climbing, beam search, tree search, and evolutionary search across 12 systems-optimization tasks and shows no single search structure is consistently best. Introduces fluid search , a portfolio-bandit adaptive procedure that dynamically allocates budget across a forest of search processes, matching a per-task oracle across the suite.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24647",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-appa-agentic-permissions-policy-algebra-for-taint-confinement-in",
+      "title": "🛡️ APPA — Agentic Permissions Policy Algebra for Taint Confinement in LLM Agents",
+      "summary": "Solves the usability bottleneck of dynamic Information-Flow Control (IFC) for LLM agents: traditional taint tracking permanently taints the primary context on any unvetted read, neutering downstream utility. APPA prospectively evaluates label descents before data acquisition (producing Authorize/Accept remedy plans) and spawns a label-seeded child trajectory that absorbs label descent locally, letting a trusted sanitizer return a bounded derivative to the unchanged parent. Two-monoid model over security labels + shared event log; formally proves parent-label preservation and merge confinement.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24625",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-a-roadmap-to-impactful-pluralistic-alignment-research",
+      "title": "A Roadmap to Impactful Pluralistic Alignment Research",
+      "summary": "A blunt audit-and-recommendations paper on pluralistic value alignment. The authors checked the public behavior docs and evaluations of frontier labs and found that none name pluralism as a goal, and no production model is explicitly trained or tested for it — even though that's the stated motivation. They argue the field has three structural problems: (1) justifications are still normative or speculative instead of empirical, (2) the community hasn't agreed on when pluralistic behavior is warranted or what it actually looks like, and (3) current methods trade off against other LLM desiderata in ways that aren't measured, and existing metrics aren't \"hill-climbable\" for production.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.22305",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-nanbeige4-2-3b-unlocking-agentic-capabilities-in-a-compact-model",
+      "title": "Nanbeige4.2-3B: Unlocking Agentic Capabilities in a Compact Model",
+      "summary": "A 3B non-embedding-parameter general agentic model trained from scratch on 28T tokens. The interesting design choices: a Looped Transformer that reuses the layer stack for extra capacity without adding parameters; SFT trajectory construction that mixes real-world deployment with large-scale synthesis; and a mixed-mode RLHF stack combining Think/Non-Think response RL, length-controlled reasoning RL, and agentic RL with outcome + process rewards. The authors claim it beats Qwen3.5-9B and Gemma4-12B on diverse agentic benchmarks while staying competitive on reasoning and alignment.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.22083",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-on-the-identifiability-of-controlled-world-models",
+      "title": "On the Identifiability of Controlled World Models",
+      "summary": "The first identifiability theory for action-conditioned JEPA-style world models under nonlinear observations. The paper splits the problem into two coupled conditions: (1) representation identifiability , which needs a spectral separation property in the latent space, and (2) transition identifiability , which needs non-degenerate variation of the conditional action. When both hold, minimizing the LeJEPA-style predictive loss recovers the true latent states and controlled dynamics up to orthogonal transformation. They also derive a bound showing transition prediction error is inversely proportional to the spectral separation margin, and characterize how counterfactual prediction error amplifies with the weakest action-excitation margin.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.22430",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-skill-self-play-pushing-the-frontier-of-llm-capability-with-co-e",
+      "title": "Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills",
+      "summary": "A co-evolutionary post-training framework that closes the gap between \"narrow but verifiable\" and \"broad but reward-noisy\" self-play. A proposer generates tasks conditioned on dynamically sampled skills, a solver explores solutions, and a skill controller curates a growing skill library from execution feedback — all orchestrated by one RL loop. The trick is to treat skills as the middle layer: each one gives deep, testable execution inside a scenario, while dynamic routing across skills keeps the task distribution open-ended.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.22529",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260728-0000-twins-learn-to-predict-unified-representations-with-focal-loss",
+      "title": "Twins: Learn to Predict Unified Representations with Focal Loss",
+      "summary": "A single continuous token space for unified multimodal models that doesn't blow up sequence length: ViT and VAE features are channel-concatenated on the same token grid, so attention cost is unchanged. The authors identify a sharp optimization imbalance — the Diffusion Transformer fits the ViT branch easily but chokes on the VAE latent distribution because of frequency bias, intrinsic dimensionality mismatch, and condition-aligned vs condition-independent uncertainty. They fix it with a focal regression objective adapted to flow matching that upweights large-error VAE dimensions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.22531",
+      "date": "2026-07-28",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260725-0000-emergent-misalignment-recruits-a-pre-existing-persona-subspace",
       "title": "Emergent Misalignment Recruits a Pre-existing Persona Subspace",
