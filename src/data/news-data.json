@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-07-28T13:59:00.000Z",
+  "lastUpdated": "2026-07-29T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-07-29",
+      "label": "July 29, 2026"
+    },
     {
       "value": "2026-07-28",
       "label": "July 28, 2026"
@@ -415,6 +419,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260729-0000-self-speculating-agent-predict-your-next-tool-call-via-joint-age",
+      "title": "⚡ Self-Speculating Agent: Predict Your Next Tool Call via Joint Agent-Speculator RL",
+      "summary": "Tool-call speculation hides agent latency by predicting and pre-executing the next tool call, but external draft speculators drift from the deployed agent's behavior. The paper observes that the target agent itself is already a strong next-call predictor and proposes a single model that runs in two modes — agent mode (solves tasks) and speculator mode (predicts the next tool call from a partial trajectory) — sharing the prefix KV cache. A joint agent-speculator RL procedure derives speculation targets from the agent's own rollouts and alternates the two updates. Hit@1 on next tool call jumps 44.1 → 61.2 for Qwen3-4B and 48.9 → 66.3 for Qwen3.5-4B, while agent task success is preserved.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.25816",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-rethinking-classifier-free-guidance-in-on-policy-diffusion-disti",
+      "title": "🌀 Rethinking Classifier-Free Guidance in On-Policy Diffusion Distillation",
+      "summary": "On-policy distillation (OPD) for diffusion models has been naively extending velocity matching to the CFG-composed prediction, but the paper shows that objective is under-identified — positive- and negative-branch errors can cancel in the guided output. Through two contrasting cases, the authors show when naive matching works (shared negative conditioning) and when it breaks (privileged info in the teacher's negative branch), then propose a branch-aware formulation that fixes the failure mode.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24731",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-modus-decoder-only-any-to-any-multimodal-icml-2026-apple-epfl",
+      "title": "🌐 MODUS: Decoder-Only Any-to-Any Multimodal (ICML 2026, Apple × EPFL)",
+      "summary": "Most any-to-any multimodal stacks are encoder-decoder or diffusion models trained from scratch with modality-specific heads / losses / task pipelines. MODUS does it with a single decoder-only Transformer that treats every modality symmetrically: any modality can be input, output, or both, with no special-case heads. Because every modality is both input and output of the same model, MODUS enables chained generation through intermediate modalities (e.g. image → text → 3D) and cross-modal self-verification (the model scores its own outputs by generating another modality as a consistency check). The paper reports scientific-domain use cases (ecology, astronomy) and is accepted to ICML 2026.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.25948",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-dreamstyle3d-efficient-3d-stylized-asset-generation-via-dual-att",
+      "title": "🎨 DreamStyle3D: Efficient 3D Stylized Asset Generation via Dual-Attention Disentanglement",
+      "summary": "DreamStyle3D is a native 3D stylization framework that explicitly disentangles geometry and style through a Decoupled Dual Cross-Attention mechanism, avoiding the indirect 2D-to-3D pipelines most prior work relies on. The lightweight training recipe keeps style fidelity and geometric consistency together while staying efficient enough for production asset generation — relevant for gaming, animation, and VR workflows.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24721",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-wonder-video-world-model-done-better-real-time-camera-controllab",
+      "title": "🎬 Wonder: Video World Model Done Better (real-time, camera-controllable)",
+      "summary": "Wonder is a general-purpose video world model that turns an image (or a conditional video) into a playable world the user can navigate in real time with the camera — exploring unseen regions, revisiting earlier views, and maintaining coherent geometry / appearance / dynamics across minute-scale rollouts. It co-designs three pieces: (1) a dense-coordinate-field camera conditioning that lets the model interpret camera motion directly as visual evidence, (2) a sparse-attention memory module that retrieves from a growing context at fixed inference cost regardless of horizon length, and (3) rectified self-forcing-style distillation that preserves control fidelity and long-term memory from the teacher. Result: 16 FPS diverse video generation, with video-conditioned re-shooting of existing scenes as a free bonus.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.26037",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-feature-effect-geometry-analysis-fega-sparse-autoencoders-encode",
+      "title": "🔬 Feature-Effect Geometry Analysis (FEGA): Sparse Autoencoders Encode Both Concepts and Functions",
+      "summary": "The paper challenges the assumption that SAE features are reusable \"concept directions.\" FEGA studies the geometry of logit changes produced by ablating the same active feature across many contexts, and finds that consistent one-dimensional effects are rare — most features behave as functions over the input geometry rather than static directions. That helps explain why SAE steering is brittle across prompts and why activation-based feature selection often misses the features that actually change the output.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24645",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-r-reactive-real-time-flow-policies-cmu",
+      "title": "🤖 πR²: Reactive Real-time Flow Policies (CMU)",
+      "summary": "Action-chunking flow policies built on large backbones are powerful but open-loop: the policy cannot react to new observations mid-chunk. Replanning every tick would fix that, except the perception + multi-step denoising pipeline is too slow. πR² fixes both axes. It splits conditioning into a fast proprioception channel (fresh every tick) and an asynchronously refreshed slow vision-language channel, so the policy reacts to proprioception within a chunk while tolerating stale vision. A latency-adaptive flow schedule treats in-flight actions as inpainting conditioning and emits actions in one denoising step per call, letting a single trained model adapt to varying hardware latency. Finetuned on top of GR00T-N1.7 and deployed on a real xArm6 + XHand platform, πR² replans ~4× faster (~25 Hz on an A5000, fresh observation every 40 ms) and improves success by up to +23 % sim / +30 % real over the strongest baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.26055",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-care-confidence-adaptive-routing-for-mixture-of-experts-lora",
+      "title": "🧠 CARE: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
+      "summary": "MoE-LoRA routes every token to a fixed top-k, which over-spends compute on easy tokens and under-serves hard ones. CARE observes that the router's output distribution is itself a per-token uncertainty signal — peaked mass means confident, flat means ambiguous — and admits experts in a nucleus fashion: keep activating experts in decreasing router weight until cumulative mass crosses a threshold (with a small extension when the admitted experts disagree). A budget thermostat calibrates the threshold so the average number of active experts matches any target. Drop-in, single-forward-pass, no extra parameters. Across LLaMA-3.1-8B and Qwen2.5-7B on eight commonsense benchmarks plus math / code / knowledge, CARE improves over fixed top-k MoE-LoRA at matched compute and matches fixed k=4 while activating fewer experts on average; the same signals also help OOD detection over MSP / entropy / multi-pass proxies.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.26052",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-eviction-as-estimation-a-fixed-lag-smoothing-view-of-test-time-m",
+      "title": "🧠 Eviction as Estimation: A Fixed-Lag Smoothing View of Test-Time Memory — and When Measuring Beats Accumulating",
+      "summary": "The paper re-positions KV-cache eviction as estimation of a hidden reuse signal: whether a stored token will be needed again. It places existing heuristics (StreamingLLM, H2O, SnapKV) on a single axis — commit lag H — and shows the missing regime is fixed-lag smoothing, where the cache waits a bounded number of steps before deciding to keep or evict. That regime dominates naive accumulation on long-context benchmarks because it lets the model \"measure then decide\" rather than committing at H=0.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24667",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260729-0000-dataorchestra-learning-to-orchestrate-per-example-curation-of-pr",
+      "title": "🧹 DataOrchestra: Learning to Orchestrate Per-Example Curation of Pretraining Data",
+      "summary": "DataOrchestra reframes pretraining data cleaning as a learnable, per-example decision problem. A single orchestrator picks the right operation (drop, pass-through, or clean) for each chunk and, when cleaning, selects the tools and writes the LLM rewrite instructions — meaning the same pipeline can mix programmatic edits and model rewrites based on what each example actually needs. The authors pretrain 0.5B–7B models from scratch on web data processed by their orchestrator and show consistent downstream gains over fixed corpus-level recipes.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.24717",
+      "date": "2026-07-29",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260728-0000-mmoe-modernizing-diffusion-transformers-with-efficient-expert-de",
       "title": "🎨 MMOE — Modernizing Diffusion Transformers with Efficient Expert Design",
