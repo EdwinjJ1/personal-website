@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-07-29T13:59:00.000Z",
+  "lastUpdated": "2026-07-30T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-07-30",
+      "label": "July 30, 2026"
+    },
     {
       "value": "2026-07-29",
       "label": "July 29, 2026"
@@ -419,6 +423,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260730-0000-inferscale-gpu-native-kv-injection-for-personalized-llm-serving",
+      "title": "⚡ InferScale: GPU-Native KV Injection for Personalized LLM Serving",
+      "summary": "Persistent personalized context (Mem0 / MemGPT / Zep-style memory profiles, long chat histories) is re-prefilled into every request, so TTFT balloons with the retrieval budget even though the underlying memory is reused. InferScale stores each memory fact's KV representation directly on the GPU alongside a semantic embedding, retrieves relevant facts at serving time, and injects the cached KV into vLLM's paged cache via the KV-connector interface — no engine modifications, no fine-tuning. The technical lift is Chunked RoPE (store keys pre-rotation, apply serving-time positions during injection) plus Context-Window Encoding to recover cross-fact context.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27090",
+      "date": "2026-07-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260730-0000-freqforcing-autoregressive-long-video-generation-via-spectral-se",
+      "title": "🎬 FreqForcing: Autoregressive Long Video Generation via Spectral Self-Anchoring",
+      "summary": "Autoregressive video diffusion collapses over long rollouts — color drift, motion stagnation, eventual visual breakdown. The paper characterizes this from the frequency domain: error accumulation is a pronounced energy drift in the low-frequency bands , which is exactly what attention sinks partially correct but cannot fix. FreqForcing is a training-free Spectral Self-Anchoring scheme that uses low-frequency components of anchor attention to maintain long-horizon visual stability while preserving dynamic motion through high-frequency components of local attention. Extends a Self-Forcing checkpoint trained on 5 s clips to two-minute generation — 24× extrapolation .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27110",
+      "date": "2026-07-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260730-0000-turbovla-real-time-vision-language-action-model-at-32-hz-on-an-r",
+      "title": "🦾 TurboVLA: Real-Time Vision-Language-Action Model at 32 Hz on an RTX 4090 with <1 GB VRAM",
+      "summary": "TurboVLA throws out the dominant V→L→A pipeline (project visual observations into LLM-token space, then decode to actions) and replaces it with a direct V+L→A mapping: visual and language features are encoded independently, exchange information through lightweight bidirectional vision-language interaction, and a compact decoder emits continuous action chunks. The payoff is a 0.2B-parameter policy that runs at 32 Hz with 31.2 ms latency on a consumer RTX 4090, using only 0.9 GB VRAM , and matches or beats substantially larger LLM-centric VLA stacks on LIBERO (97.7 % average success).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27205",
+      "date": "2026-07-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260730-0000-mental-world-modeling-mentis-framework",
+      "title": "🧠 Mental World Modeling (MENTIS framework)",
+      "summary": "Current world models answer the physical question — what / where / how will it move — but human behavior is driven by hidden mental state (beliefs, wants, intents, social permissibility). Mental World Modeling proposes that mental variables become core components of the world model rather than post-hoc rationales: a coupled physical-mental world state, target-specific partial observation, and joint simulation of how candidate actions update both. The authors instantiate it as MENTIS, a training-free, fully inspectable baseline that decomposes the process into state parsing, target-observation generation, action decomposition, coupled transition, and branch-level value evaluation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27201",
+      "date": "2026-07-30",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260730-0000-pangram-4-technical-report-sota-ai-text-detection",
+      "title": "🛡️ Pangram 4 Technical Report — SOTA AI-Text Detection",
+      "summary": "Pangram 4 is the latest deep-learning AI-text classifier from Pangram Labs, reaching AUROC 0.9916, FPR 0.0041 %, FNR 0.3396 % — and the more interesting lift is in the harder sub-tasks: fine-grained edit boundary detection and identifying interleaved AI-human co-authored text. Better out-of-distribution generalization and adversarial robustness than Pangram 3; new SOTA across standard AI-detection benchmarks in a wide variety of settings and domains.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27183",
+      "date": "2026-07-30",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260729-0000-self-speculating-agent-predict-your-next-tool-call-via-joint-age",
       "title": "⚡ Self-Speculating Agent: Predict Your Next Tool Call via Joint Agent-Speculator RL",
