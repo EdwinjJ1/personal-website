@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-07-30",
-  "latestLabel": "July 30, 2026",
+  "latestDate": "2026-07-31",
+  "latestLabel": "July 31, 2026",
   "items": [
     {
-      "id": "research-20260730-0000-inferscale-gpu-native-kv-injection-for-personalized-llm-serving",
-      "title": "⚡ InferScale: GPU-Native KV Injection for Personalized LLM Serving",
+      "id": "research-20260731-0000-aispa-user-centric-system-prompt-auditing-for-large-language-mod",
+      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
       "tag": "RESEARCH",
-      "date": "2026-07-30",
+      "date": "2026-07-31",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260730-0000-freqforcing-autoregressive-long-video-generation-via-spectral-se",
-      "title": "🎬 FreqForcing: Autoregressive Long Video Generation via Spectral Self-Anchoring",
+      "id": "research-20260731-0000-askchem-claim-centered-infrastructure-for-chemistry-literature-s",
+      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
       "tag": "RESEARCH",
-      "date": "2026-07-30",
+      "date": "2026-07-31",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260730-0000-pangram-4-technical-report-sota-ai-text-detection",
-      "title": "🛡️ Pangram 4 Technical Report — SOTA AI-Text Detection",
+      "id": "research-20260731-0000-osreward-instituting-standardized-evaluation-for-cross-platform-",
+      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
       "tag": "RESEARCH",
-      "date": "2026-07-30",
+      "date": "2026-07-31",
       "time": "00:00",
       "category": "research"
     }
