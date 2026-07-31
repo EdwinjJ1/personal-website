@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-07-30T13:59:00.000Z",
+  "lastUpdated": "2026-07-31T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-07-31",
+      "label": "July 31, 2026"
+    },
     {
       "value": "2026-07-30",
       "label": "July 30, 2026"
@@ -423,6 +427,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260731-0000-vidmap-video-structure-from-motion-combining-slam-sequential-str",
+      "title": "🎥 VidMap: Video Structure-from-Motion Combining SLAM Sequential Structure with Offline SfM Global Optimization",
+      "summary": "Existing SfM pipelines trade away either robustness or flexibility. VidMap is a system that fuses the strong sequential constraints of SLAM with the global optimization of offline SfM for metric reconstruction of arbitrary-length, uncalibrated videos . It uses recent wide-baseline dense matching, treats temporal ordering as a first-class citizen for reliable loop closure, and augments global optimization with metric monocular depth priors . Across a diverse set of challenging datasets exhibiting extreme motion and visual symmetries, the system significantly outperforms both classical and learned SLAM and SfM methods , with or without known camera calibration.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27194",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-omegause-officeval-economic-grounded-long-horizon-office-suite-b",
+      "title": "📊 OmegaUse-OfficeVal: Economic-Grounded Long-Horizon Office-Suite Benchmark for LLM Agents (Baidu)",
+      "summary": "Most office-agent benchmarks ignore whether the agent actually paid for itself. OmegaUse-OfficeVal ships 100 long-horizon office-suite tasks sourced from practitioner requests (each averages 2.32 hours of human labor ) and pairs every task with two economic signals — human labor time and a task-price proxy — enabling direct apples-to-apples comparison of LLM inference cost vs the work being substituted. A fine-grained rule-based code verifier anchors the eval. Across multiple frontier LLMs and a human baseline: the LLMs are dramatically cheaper and faster than humans , but none match human delivery quality . Code and dataset are fully open.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27155",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-denseon-lateon-fully-open-dense-and-late-interaction-retrieval-m",
+      "title": "🔍 DenseOn + LateOn: Fully Open Dense & Late-Interaction Retrieval Models with a Multilingual Generalization Surprise",
+      "summary": "SOTA retrievers increasingly rely on closed training data, so the field can't reproduce them. LightOn presents a fully open recipe: from 1.4 B public pairs they curate 665 M English contrastive pre-training pairs + 1.88 M supervised pairs with mined hard negatives, and train two 149 M-param models — DenseOn (single-vector) and LateOn (ColBERT-style late-interaction) . They hit 56.20 / 57.22 mean nDCG@10 on BEIR at that size — new SOTA for the class. They then translate-train the pipeline into 8 more languages (2.8 B pairs total) to build mDenseOn / mLateOn on mmBERT-base, and surface a striking finding: despite sharing backbone + data + objective, late-interaction generalizes much better than dense to languages and scripts outside translate-train support — i.e., token-level matching turns translate-train from a target-language expansion tool into a multilingual generalization recipe.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27178",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-ipe-rethinking-whether-q-functions-need-pre-training-for-online-",
+      "title": "🤖 IPE: Rethinking Whether Q-Functions Need Pre-Training for Online RL Fine-Tuning",
+      "summary": "The default recipe in value-based RL pretrain-then-finetune is to initialize both the policy and the Q-function from offline data. This paper systematically shows naive Q-function pretraining provides almost no benefit over random initialization — because the off-policy Q targets the pretrained policy's Q, not the Q the online fine-tune converges to, a gap that persists even after offline value maximization. The proposed Initialization via Policy Ensemble (IPE) trains multiple diverse policies up front and uses their pooled rollouts to bootstrap online-RL Q-learning. Across a suite of continuous-control benchmarks, IPE delivers an average 1.26× fine-tune improvement over naive Q-pretraining.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27203",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-apex-accounting-frontier-models-tested-on-real-accountant-work-m",
+      "title": "🧾 APEX-Accounting: Frontier Models Tested on Real Accountant Work (Mercor × Ramp)",
+      "summary": "A closed, expert-authored benchmark of 160 real accounting tasks across 10 worlds — each world contains an accounting system plus spreadsheets, PDFs, and supporting files; tasks include reconciling accounts, accruing expenses, posting transactions, and producing reports. Across 9 frontier models, Claude-Fable-5 (Max) leads at 56.4 % Mean Criteria@3 , Muse-Spark-1.1 (xHigh) is at 52.6 %, and no model exceeds 2.6 % on Pass^8 (GPT-5.6-Sol Max+Pro). A separate token-budget sweep surfaces a clean instance of Simpson's paradox : scores rise with budget in aggregate, but within a fixed-budget harness, models score lower on tasks where they spent more tokens.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.27189",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-aispa-user-centric-system-prompt-auditing-for-large-language-mod",
+      "title": "AISPA: User-Centric System Prompt Auditing for Large Language Model Applications",
+      "summary": "AISPA is a framework that audits system prompts across 8 user-relevant dimensions, applied to 3,249 instructions from 88 commercial AI products. Findings: some orgs ship 60+ protective instructions per product while others ship <5; 98.9% of products have at least one protective instruction but only 24% cover all 8 dimensions; system prompts have grown steadily longer/more protective; and ~40% of products still contain at least one instruction that works against user interests.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28617",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-askchem-claim-centered-infrastructure-for-chemistry-literature-s",
+      "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+      "summary": "AskChem changes the unit of retrieval from paper to provenance-carrying claim — each paper is decomposed into typed atomic claims, each grounded by a DOI and verbatim quote. It indexes 2.4M claims from 147K chemistry papers with a faceted taxonomy, evidence graph, and living taxonomy, exposed via web UI and REST/SDK/MCP. Grounding GPT-5.5 in AskChem yields 100% resolvable DOIs vs 88.3% without retrieval, and the highest citation density among five tested systems.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28618",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-osreward-instituting-standardized-evaluation-for-cross-platform-",
+      "title": "OSReward: Instituting Standardized Evaluation for Cross-Platform Computer-Use Reward Models",
+      "summary": "OSReward benchmarks VLM judges on computer-use agent (CUA) trajectories and finds even SOTA VLMs share a systematic leniency bias that mislabels failed runs as successes. The authors release OS-Shepherd-100K and train OS-Shepherd (9B and 35B) reward models that match commercial judges at 30–60% lower cost.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28609",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-retoken-one-token-to-improve-vision-language-models-for-visual-r",
+      "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+      "summary": "ReToken is a single learnable embedding trained as an explicit retrieval target that picks a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. On Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and zero-shot transfers to long-video LVBench for +8.0 points with Qwen3VL-8B. Training and long-video inference fit on a single H100.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28627",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260731-0000-sample-more-reflect-less-self-refine-and-reflexion-lose-to-repea",
+      "title": "Sample More, Reflect Less: Self-Refine and Reflexion Lose to Repeated Sampling at Equal Token Cost, from 1.5B to 7B",
+      "summary": "A designed experiment (7 methods, 1.5B/3B/7B open models, two math benchmarks, 150 questions each, all 36 comparisons paired by question with bootstrap intervals and multiplicity correction) shows that no self-critique/self-reflection method reliably beats plain repeated sampling at equal token cost; ten are reliably worse, and all 18 self-inspection comparisons are negative. The result holds from 1.5B to 7B, and Self-Refine / forced Reflexion stay 3.6–10.1 points below baseline even at 7B.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28576",
+      "date": "2026-07-31",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260730-0000-inferscale-gpu-native-kv-injection-for-personalized-llm-serving",
       "title": "⚡ InferScale: GPU-Native KV Injection for Personalized LLM Serving",
