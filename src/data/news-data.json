@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-07-31T13:59:00.000Z",
+  "lastUpdated": "2026-08-03T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-03",
+      "label": "August 3, 2026"
+    },
     {
       "value": "2026-07-31",
       "label": "July 31, 2026"
@@ -427,6 +431,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260803-0000-data-turnstile-a-scalable-open-framework-for-function-calling-da",
+      "title": "Data Turnstile: A Scalable Open Framework for Function-Calling Data Generation",
+      "summary": "Open-source framework that takes API specs and produces high-quality synthetic multi-turn function-calling data via constrained stepwise generation with validation and error-feedback loops. Fine-tuning Qwen3-0.6B on Turnstile data without CoT hits 75.9% on BFCL single-turn (vs. 67.4% base w/ thinking) and 31.1% pass 1 on &tau; 2 -bench Telecom (vs. 6.6% base) &mdash; surpassing Qwen2.5-32B (27.4%) with a 19&times; smaller model.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29250",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-mixture-of-translators-translating-kv-caches-across-heterogeneou",
+      "title": "Mixture-of-Translators: Translating KV Caches Across Heterogeneous Large Language Models",
+      "summary": "MoT is a learned mixture of cross-model KV-cache translators plus a Context-Correction Loss that re-aligns the replayed target trajectory with the native one. It diagnoses two failure modes &mdash; propagated early-injection shift and last-state shift &mdash; and addresses them via MoE-style routing + target-side correction. Across Qwen2.5, GPT-2 and OPT it preserves 51.0% closed-set QA and 0.43 extractive F1 on Qwen2.5-7B-scale translation, and retains 96.3% of direct-cache quality in a multi-agent memory-reuse case study.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28979",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-moroute-dynamic-routing-for-in-context-multimodal-video-generati",
+      "title": "MoRoute: Dynamic Routing for In-Context Multimodal Video Generation",
+      "summary": "MoRoute replaces the &ldquo;pick one VLM layer&rdquo; hack with a learned dynamic router that, for every video DiT denoising step, chooses which VLM layer(s) and which spatial/temporal tokens to inject for the current condition (text, image, or video reference). It unifies text-to-video, image-to-video and video-to-video inside a single model and reports SOTA on VBench-Long, ChronoEdit and a new in-context compositional suite.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29545",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-saf-opd-stable-advantage-fusion-for-rlvr-on-policy-distillation",
+      "title": "SAF-OPD: Stable Advantage Fusion for RLVR + On-Policy Distillation",
+      "summary": "Diagnoses why naively mixing RLVR (verifiable reward, broadcast to every token) and on-policy distillation (dense per-token teacher advantage) collapses: a magnitude mismatch (token OPD advantages dwarf bounded RLVR signal) and a temporal mismatch (sustained OPD pulls the student into teacher-locked trajectories). SAF-OPD fuses them with a stable, norm-aware, time-decayed schedule and recovers the upside of both — AIME / MATH-500 gains over either alone with the same compute.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29209",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-scaling-properties-of-text-conditioning-in-visual-generation",
+      "title": "Scaling Properties of Text Conditioning in Visual Generation",
+      "summary": "First empirical scaling laws for text conditioning in visual generation: converged diffusion loss decreases roughly linearly with structured-language likelihood (GPG) and follows a power law with a black-box attribute metric (ED). Using these laws they build a structured-prompt constructor + a verifier-gated prompter; the resulting system tops every open-weight model tested on compositional / reasoning / world-knowledge benchmarks and matches or beats the strongest closed-weight models on most evaluations.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29679",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-tokenswap-benchmarking-and-reducing-the-modality-gap-in-multimod",
+      "title": "TokenSwap: Benchmarking and Reducing the Modality Gap in Multimodal LLMs",
+      "summary": "A Google DeepMind team formalises the modality gap as the systematic performance discrepancy an MLLM shows when the same semantic content is delivered as text vs. interleaved text+image tokens, then introduces TokenSwap : replace textual concepts with semantically aligned images inside existing text benchmarks (MMLU → image-interleaved variant). The paper both ships the diagnostic benchmark and proposes a training-time mitigation that closes most of the gap.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28640",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-toktier-exact-stateful-tokenization-for-agentic-llm-serving",
+      "title": "TokTier: Exact Stateful Tokenization for Agentic LLM Serving",
+      "summary": "A serving-side tokenizer that keeps a per-session state so it only re-tokenizes a small window around the appended text and splices back into the cached token stream, with exact-match guarantees (zero divergence across 1.5e10 split checks and 93k+ replayed agent steps). GPU BPE on the fallback path encodes a 1M-char request in 0.87 ms; when dropped in front of vLLM, median TTFT drops 16&ndash;34% and P99 drops 23%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29678",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-translation-with-thought-twt-difficulty-adaptive-reasoning-for-m",
+      "title": "Translation with Thought (TwT): Difficulty-Adaptive Reasoning for Multi-Domain MT",
+      "summary": "Brings DeepSeek-R1-style chain-of-thought to machine translation in a resource-rational way: TwT is SFT-ed on difficulty-aware long CoT traces distilled from R1 (rewritten by GPT-4o for human-like economy), then RL-tuned with a hybrid quality+efficiency reward so the model learns to &ldquo;think more&rdquo; on hard sentences and &ldquo;think less&rdquo; on easy ones. Beats GPT-4o and DeepSeek-R1 on average across 15 domain MT benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29287",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-visage-self-correcting-memories-for-long-form-video-understandin",
+      "title": "ViSAGE: Self-Correcting Memories for Long-Form Video Understanding",
+      "summary": "ViSAGE replaces &ldquo;compress and embed&rdquo; with an entity-centric memory that cross-modally anchors identity (face/voice/object) and only commits new evidence when it passes a self-correction check against prior bindings. On long-form video QA it reduces entity-confusion hallucinations vs. ReAct/MemGPT-style baselines by large margins on EgoSchema, Video-MME and a new long-horizon entity-tracking suite.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.28678",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260803-0000-zero-mem-zero-token-memory-operations-for-llm-agents",
+      "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
+      "summary": "Zero-Mem pushes all memory access out of the LLM: it preserves the raw interaction trace as source-of-truth, builds two deterministic views (an entity&ndash;context graph plus a temporal hierarchy), and only invokes the LLM for the final question-answering reader. Across long-memory and long-context QA it matches token-based memory baselines while cutting memory-operation time by 57.6% versus the fastest compared baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2607.29377",
+      "date": "2026-08-03",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260731-0000-vidmap-video-structure-from-motion-combining-slam-sequential-str",
       "title": "🎥 VidMap: Video Structure-from-Motion Combining SLAM Sequential Structure with Offline SfM Global Optimization",
