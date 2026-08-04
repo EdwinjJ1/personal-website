@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-03T13:59:00.000Z",
+  "lastUpdated": "2026-08-04T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-04",
+      "label": "August 4, 2026"
+    },
     {
       "value": "2026-08-03",
       "label": "August 3, 2026"
@@ -431,6 +435,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260804-0000-atumai-a-principled-framework-for-agentic-generation-of-datacent",
+      "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
+      "summary": "Out-of-the-box agentic AI for datacenter control-plane design is \"not formal, not transferable, not systematic\" &mdash; no structured problem statement, no cross-task transfer, and the LLM alone narrows the search to a thin slice of the design space. AtumAI splits the work into two pieces: the Datacenter Task Compiler turns a plain-English goal into a machine-checkable spec (objectives, constraints, decision variables, evaluation), and the Evolutionary Design Discovery Loop expands the search beyond the LLM via a diffusion model + evolutionary algorithm + surrogate. On workload placement, resource scaling, and power management, AtumAI's policies beat expert-engineered baselines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02569",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-aurora-lm-autoencoding-unified-representation-for-continuous-lat",
+      "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling",
+      "summary": "Argues that text is the outlier in generative modelling &mdash; images/video/audio all sit in continuous latent spaces, text still rides on discrete tokens &mdash; and ships a continuous-latent diffusion language model that keeps a high-capacity, decodable text latent while learning its distribution via a block-causal DiT and flow matching. A query-based encoder-decoder organises text into prefix-aligned latents, the diffusion model generates blocks left-to-right while denoising positions within each block in parallel, and the authors add a width-calibrated noise schedule plus a self-trajectory-consistency loss to keep iterative denoising on-distribution at inference.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02602",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-cmuon-accelerating-and-stabilizing-diffusion-transformer-trainin",
+      "title": "CMuon: Accelerating and Stabilizing Diffusion Transformer Training via Chunked Momentum Orthogonalization",
+      "summary": "Diagnoses why vanilla Muon underperforms on DiTs: DiT architectures fuse functionally distinct weights (AdaLN, QKV) into unified tensors for efficiency, and applying Muon to those fused tensors induces an implicit subspace coupling that distorts the update direction. CMuon simply partitions the fused matrices into independent sub-components before orthogonalisation. On ImageNet 256, a 675M DiT trained with CMuon reaches FID 1.18 in 200 epochs &mdash; ~2x training speedup over AdamW and no late-stage convergence plateau.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02502",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-gradcuit-credit-assigned-gradient-flow-enables-robust-and-interp",
+      "title": "GradCuit: Credit-Assigned Gradient Flow Enables Robust and Interpretable Test-Time Latent Reasoning",
+      "summary": "Existing test-time latent-reasoning methods route gradient signal through decoded tokens, so credit assignment is indirect and the link between latent updates and the actual reasoning trajectory is opaque. GradCuit inserts optimisable latent states at a chosen Transformer layer; causal self-attention then gives every continuation-token log-prob a differentiable path back to every preceding latent, so reward-weighted gradients from the entire continuation land directly on the latents. Across five instruction-tuned backbones and three reasoning benchmarks, GradCuit averages 64.5% (+6.6 over CoT, +2.4 over the strongest baseline) and is markedly more stable across learning-rate sweeps (std 0.82 vs 1.53).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02585",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-onepot-bench-0-towards-lab-aware-in-silico-chemistry-benchmarks",
+      "title": "onepot-Bench 0: Towards Lab-Aware In Silico Chemistry Benchmarks",
+      "summary": "Targets the gap that public-domain chemistry benchmarks cannot tell whether an LLM \"knows\" chemistry or has memorised answers from training corpora. onepot-Bench 0 is a three-part proprietary evaluation suite: ChemAbacus (tool-free cheminformatics literacy + numerical reasoning), SynthRefusal (safety / refusal behaviour across benign, controlled, and designer-drug targets), and SynthBench (reaction-outcome prediction and catalyst selection on private wet-lab data generated in the authors' own lab).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02595",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-pseudorandom-streams-within-diffusion-models-act-as-learnable-in",
+      "title": "Pseudorandom Streams within Diffusion Models Act as Learnable Inputs That Affect Generation Quality",
+      "summary": "Diffusion models are supposed to consume \"noise\", but on finite-precision hardware that noise is a deterministic orbit through a pseudorandom generator &mdash; and the realised training loss depends on the concrete PRNG values consumed at each step. The authors measure orbit predictability with a small MLP, then run a \"diffusion probe\" that swaps real images for online random tensors and asks whether the loss / sample quality still degrades on the same orbits. After controlling marginal statistics and screening out clear dynamical / finite-precision failures, the remaining orbits still produce significantly different diffusion losses and generation quality on MNIST and CIFAR-10, and probe loss vs real-data loss follow an empirical power law.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02575",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-structured-memory-for-edge-language-models-persistent-context-an",
+      "title": "Structured Memory for Edge Language Models: Persistent Context and Corpus Retrieval via O(1) SSM State Injection (PRECOG)",
+      "summary": "Exploits the unique property of state-space models &mdash; the fixed-size, position-agnostic recurrent state is a complete summary of everything read &mdash; to collapse RAG prefill from O(L_context) to O(1) per query. PRECOG pre-encodes document corpora offline as SSM hidden states and injects the best-matching state directly at query time, with no in-context re-ingestion. A second component, SMC (Structured Memory Consolidation), builds a hierarchical persistent memory on top with cognitive-domain clustering and a fidelity-vs-storage dial. On a 1.2B-parameter TENNs-LLM with a 192 KB hidden state, PRECOG matches in-context RAG answer quality and cuts prefill latency from ~27 s to <6 ms on edge hardware &mdash; a ~4500x speedup that the authors note is architecturally impossible for Transformer KV caches.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02560",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-token-radius-attention-for-efficient-video-generation",
+      "title": "Token Radius Attention for Efficient Video Generation",
+      "summary": "Observes that the attention density a query actually needs varies per token and correlates log-linearly with attention entropy, and that the dominant interactions form query-centred neighbourhoods with token-dependent radii. TRA maps each query's entropy to an analytic token budget, converts that into a temporally decayed radius, and skips the rest &mdash; fused entropy extraction, warm-up reuse and block-sparse mask construction make it cheap. Across seven Wan2.1/Wan2.2/HunyuanVideo T2V and I2V configs, TRA keeps only 9&ndash;19% of attention interactions and delivers a 1.56&ndash;2.05x speedup at competitive quality.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02504",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-uembed-unified-sparse-and-dense-multimodal-embeddings",
+      "title": "UEmbed: Unified Sparse and Dense Multimodal Embeddings",
+      "summary": "Learned Sparse Retrieval has been stuck behind encoder-only bidirectional architectures and bolted-on cross-modal adapters. UEmbed is a decoder-only model that emits both a sparse lexical vector and a dense vector in a single causal forward pass by appending N learnable special tokens, partitioning the vocabulary into N disjoint subsets, and letting each token's causal hidden state predict sparse weights over its own subset. Released at 2B / 4B / 9B scales, UEmbed-9B hits 71.8 (dense) and 71.0 (sparse) on MMEB-v2, beating the public-data SOTA (RzenEmbed), and stays competitive on BEIR.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02583",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260804-0000-worldexam-benchmarking-world-models-from-apparent-appearance-to-",
+      "title": "WorldExam: Benchmarking World Models from Apparent Appearance to Inherent Reactivity",
+      "summary": "Argues that the standard \"is the video pretty / did it follow my instruction\" benchmark family is missing the thing world models actually claim to model: reactivity &mdash; the ability to infer, from a scene state, what the world should do next even when no instruction names that outcome. WorldExam is a hierarchical diagnostic with four levels (Visual Quality, Control Adherence, Spatial Consistency, World Reactivity), 1,474 cases across eight tasks, and unified evaluation for camera-, action-, and language-driven controllable video generation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.02603",
+      "date": "2026-08-04",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260803-0000-data-turnstile-a-scalable-open-framework-for-function-calling-da",
       "title": "Data Turnstile: A Scalable Open Framework for Function-Calling Data Generation",
