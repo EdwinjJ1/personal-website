@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-08-03",
-  "latestLabel": "August 3, 2026",
+  "latestDate": "2026-08-04",
+  "latestLabel": "August 4, 2026",
   "items": [
     {
-      "id": "research-20260803-0000-data-turnstile-a-scalable-open-framework-for-function-calling-da",
-      "title": "Data Turnstile: A Scalable Open Framework for Function-Calling Data Generation",
+      "id": "research-20260804-0000-aurora-lm-autoencoding-unified-representation-for-continuous-lat",
+      "title": "AURORA-LM: Autoencoding Unified Representation for Continuous-Latent Diffusion Language Modeling",
       "tag": "RESEARCH",
-      "date": "2026-08-03",
+      "date": "2026-08-04",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260803-0000-mixture-of-translators-translating-kv-caches-across-heterogeneou",
-      "title": "Mixture-of-Translators: Translating KV Caches Across Heterogeneous Large Language Models",
+      "id": "research-20260804-0000-atumai-a-principled-framework-for-agentic-generation-of-datacent",
+      "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
       "tag": "RESEARCH",
-      "date": "2026-08-03",
+      "date": "2026-08-04",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260803-0000-moroute-dynamic-routing-for-in-context-multimodal-video-generati",
-      "title": "MoRoute: Dynamic Routing for In-Context Multimodal Video Generation",
+      "id": "research-20260804-0000-cmuon-accelerating-and-stabilizing-diffusion-transformer-trainin",
+      "title": "CMuon: Accelerating and Stabilizing Diffusion Transformer Training via Chunked Momentum Orthogonalization",
       "tag": "RESEARCH",
-      "date": "2026-08-03",
+      "date": "2026-08-04",
       "time": "00:00",
       "category": "research"
     }
