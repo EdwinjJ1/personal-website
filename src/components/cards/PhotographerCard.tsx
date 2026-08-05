@@ -2,50 +2,10 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useRef, useState } from 'react';
 import BaseCard from './BaseCard';
 import Folder from '@/components/Folder';
 import PhotographerFlowingMenu from './PhotographerFlowingMenu';
 import { getThumbnailUrl } from '@/lib/imageUtils';
-
-/* eslint-disable @next/next/no-img-element */
-
-// Crossfading two-pose sprite (both imgs render so the swap pose is preloaded)
-function PoseSprite({
-  idle,
-  active,
-  on,
-  alt,
-  className,
-  style,
-  activeStyle,
-}: {
-  idle: string;
-  active: string;
-  on: boolean;
-  alt: string;
-  className?: string;
-  style?: React.CSSProperties;
-  activeStyle?: React.CSSProperties;
-}) {
-  return (
-    <div className={`relative ${className ?? ''}`} style={style}>
-      <img
-        src={idle}
-        alt={alt}
-        className="block w-full select-none transition-all duration-200"
-        style={{ opacity: on ? 0 : 1 }}
-      />
-      <img
-        src={active}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-x-0 bottom-0 block w-full select-none transition-all duration-200"
-        style={{ opacity: on ? 1 : 0, ...activeStyle }}
-      />
-    </div>
-  );
-}
 
 const menuItems = [
   {
@@ -129,99 +89,15 @@ interface PhotographerCardProps {
 
 export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps) {
   const router = useRouter();
-  const [shooting, setShooting] = useState(false);
-  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  // Click → the photographer drops low, the model presses the frame down,
-  // the frame dips, the flash fires.
-  const shoot = () => {
-    if (shooting) return;
-    setShooting(true);
-    if (timerRef.current) clearTimeout(timerRef.current);
-    timerRef.current = setTimeout(() => setShooting(false), 1600);
-  };
 
   return (
     <BaseCard
       size="md"
       hover={true}
       delay={delay}
-      className={`md:col-span-2 lg:col-span-4 ${shooting ? 'frame-press' : ''}`}
+      className="md:col-span-2 lg:col-span-4"
       glass={true}
     >
-      <style>{`
-        @keyframes frame-press {
-          0% { transform: none; }
-          28% { transform: translateY(6px) scaleY(0.978); }
-          58% { transform: translateY(2px) scaleY(0.995); }
-          100% { transform: none; }
-        }
-        .frame-press { animation: frame-press 1s cubic-bezier(.34,1.56,.64,1); transform-origin: 50% 100%; }
-        @keyframes cam-flash {
-          0% { opacity: 0; }
-          14% { opacity: 1; }
-          100% { opacity: 0; }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .frame-press { animation: none; }
-        }
-      `}</style>
-
-      {/* Model leaning on the folder — click/hover and she strikes a pose while the folder pops open */}
-      <button
-        type="button"
-        onMouseEnter={shoot}
-        onClick={shoot}
-        aria-label="The model poses by the folder"
-        className="absolute right-[88px] top-[12px] z-20 w-[56px] cursor-pointer border-0 bg-transparent p-0"
-      >
-        <PoseSprite
-          idle="/images/sprites/girl-idle.png"
-          active="/images/sprites/girl-press.png"
-          on={shooting}
-          alt="Model leaning on the photo folder"
-          className="transition-transform duration-300"
-          style={{
-            transform: shooting ? 'translateY(2px)' : 'none',
-            transitionTimingFunction: 'cubic-bezier(.34,1.56,.64,1)',
-            filter: 'drop-shadow(0 6px 8px rgb(var(--p-shadow) / calc(0.35 * var(--p-shadow-strength))))',
-          }}
-        />
-      </button>
-
-      {/* Photographer on her left, aiming at her and the folder */}
-      <button
-        type="button"
-        onMouseEnter={shoot}
-        onClick={shoot}
-        aria-label="Take a photo"
-        className="absolute right-[196px] top-[18px] z-20 w-[34px] cursor-pointer border-0 bg-transparent p-0"
-      >
-        <PoseSprite
-          idle="/images/sprites/photographer-idle.png"
-          active="/images/sprites/photographer-crouch.png"
-          on={shooting}
-          alt="Evan taking a photo"
-          className="transition-transform duration-200"
-          style={{
-            transform: shooting ? 'translateY(4px)' : 'none',
-            filter: 'drop-shadow(0 4px 6px rgb(var(--p-shadow) / calc(0.4 * var(--p-shadow-strength))))',
-          }}
-        />
-      </button>
-
-      {/* Camera flash */}
-      {shooting && (
-        <div
-          className="pointer-events-none absolute inset-0 z-30 rounded-2xl"
-          style={{
-            background:
-              'radial-gradient(circle at 74% 12%, rgba(255,252,240,0.95), rgba(255,252,240,0.55) 38%, transparent 72%)',
-            animation: 'cam-flash 0.55s ease-out 0.32s both',
-          }}
-        />
-      )}
-
       <div className="flex h-full flex-col gap-3.5">
         {/* Header */}
         <div className="flex items-start justify-between gap-3">
@@ -235,7 +111,6 @@ export default function PhotographerCard({ delay = 0.72 }: PhotographerCardProps
           <Folder
             color="rgb(var(--p-sage))"
             size={0.75}
-            forceOpen={shooting}
             items={folderPhotos.map((src) => ({
               content: (
                 <div style={{
