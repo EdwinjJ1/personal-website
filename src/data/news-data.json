@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-04T13:59:00.000Z",
+  "lastUpdated": "2026-08-05T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-05",
+      "label": "August 5, 2026"
+    },
     {
       "value": "2026-08-04",
       "label": "August 4, 2026"
@@ -435,6 +439,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260805-0000-logic-before-language-pre-pretraining-on-formal-derivations-fost",
+      "title": "Logic Before Language: Pre-pretraining on Formal Derivations Fosters Skill Acquisition and Compressibility",
+      "summary": "Proposes \"Logic-PPT\": pre-pretraining on formal logical derivations before natural language. Scaled to a 100B-token regime, the approach reaches 80% on linguistic tasks using 36B fewer tokens than a standard initialization and outperforms prior symbolic pre-pretraining baselines (Dyck, procedural algorithms). Mechanistically, formal derivations induce a lower-rank, spectrally concentrated representation that survives pruning — the dense baseline is matched even at ~33% sparsity.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.03930",
+      "date": "2026-08-05",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260805-0000-parvl-parallel-scaling-and-expandable-compute-allocation-for-mul",
+      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "summary": "A parallel vision-language scaling framework that reuses a fixed ViT+LLM backbone across multiple vision/language branches via branch-specific prefix parameters, then studies how shared-backbone compute should be split between the ViT encoder and LLM decoder. End-to-end full-parameter SFT on ~13B tokens; code released.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.04010",
+      "date": "2026-08-05",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260805-0000-societybench-forecasting-counterfactual-social-world-evolution",
+      "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
+      "summary": "End-to-end benchmark for LLM social forecasting: turn a one-line event topic into a date-indexed timeline of factual events plus a public-opinion layer, then replace every named entity and shift every date by a per-event constant — producing a structurally identical counterfactual world that defeats memorization. Questions are scored on two orthogonal 100-point axes (probability calibration, temporal accuracy); five events, 125 prediction points, zh/en editions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.04009",
+      "date": "2026-08-05",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260805-0000-test-time-scaling-in-reasoning-llms-inference-regimes-evaluation",
+      "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+      "summary": "A systematic account of test-time scaling that breaks it into three structural regimes — single-trajectory sequential, leaf-level with terminal reduction, and prefix-level — and argues the evaluated object is the entire inference system, not the base model. The authors define an evaluation profile whose functionals recover or bound common repeated-sampling metrics, prescribe protocol-matched compute and uncertainty reporting, and lay out reproducibility tiers (exact replay vs distributional).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.04001",
+      "date": "2026-08-05",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260805-0000-video-deepresearch-towards-the-next-generation-multimodal-deepre",
+      "title": "Video-DeepResearch: Towards the Next-Generation Multimodal Deepresearch Agent",
+      "summary": "Extends multimodal deep-research agents from static images to long video streams, with a decoupled perception–exploration pipeline and stage-wise tool unlocking that forces exhaustive cross-frame visual grounding before web retrieval. Training is SFT followed by Group Relative Policy Optimization (GRPO) to break the imitation-learning ceiling. The authors also curate Video-DR-Bench: 200 multi-source questions co-built by humans and AI.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.03979",
+      "date": "2026-08-05",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260804-0000-atumai-a-principled-framework-for-agentic-generation-of-datacent",
       "title": "AtumAI: A Principled Framework for Agentic Generation of Datacenter Control-Plane Policies",
