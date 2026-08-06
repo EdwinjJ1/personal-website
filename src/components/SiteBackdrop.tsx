@@ -14,10 +14,9 @@ import { useTheme } from '@/hooks/useTheme';
 export default function SiteBackdrop() {
   const { resolved } = useTheme();
 
-  // Dark is the default, so the starfield is the safe pre-mount guess:
-  // it is what most visitors get, and only an explicit light choice
-  // swaps it out. Rendering nothing here would blank the backdrop for a
-  // frame on every load.
+  // The inline theme script already stamped the correct class on <html>;
+  // this dark pre-mount fallback keeps the backdrop present until React
+  // adopts that resolved system or saved preference.
   if (resolved === 'light') {
     return <div key="bloom" className="site-bloom" aria-hidden="true" />;
   }

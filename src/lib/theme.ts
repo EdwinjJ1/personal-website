@@ -6,10 +6,10 @@
  */
 
 export type Theme = 'dark' | 'light';
-export type ThemePreference = Theme;
+export type ThemePreference = Theme | 'system';
 
-/** Dark is the site's own identity, so it wins unless the visitor opts out. */
-export const DEFAULT_THEME: Theme = 'dark';
+/** New visitors follow the operating system; a light OS therefore starts white. */
+export const DEFAULT_THEME_PREFERENCE: ThemePreference = 'system';
 
 export const THEME_STORAGE_KEY = 'theme-preference';
 
@@ -20,10 +20,8 @@ export const isTheme = (value: unknown): value is Theme =>
 
 /**
  * Runs in <head> before first paint to stamp the theme class on <html>,
- * so a visitor who chose light never sees a frame of the dark palette.
- * Deliberately ignores prefers-color-scheme: the warm charcoal palette is
- * the site's default look, and a light-mode OS should not override it —
- * only an explicit click on the header toggle does.
+ * so a visitor who chose light never sees a frame of the dark palette. With
+ * no saved choice, the first paint follows the operating system preference.
  *
  * Self-contained and defensive: private-mode Safari throws on any
  * localStorage access, and a failure here must not block the page.
@@ -33,7 +31,11 @@ export const THEME_SCRIPT = `
   try {
     var stored = null;
     try { stored = localStorage.getItem('${THEME_STORAGE_KEY}'); } catch (e) {}
-    var theme = stored === 'light' ? 'light' : '${DEFAULT_THEME}';
+    var prefersDark = false;
+    try { prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches; } catch (e) {}
+    var theme = stored === 'light' || stored === 'dark'
+      ? stored
+      : (prefersDark ? 'dark' : 'light');
     var root = document.documentElement;
     root.classList.remove('theme-dark', 'theme-light');
     root.classList.add('theme-' + theme);
