@@ -12,6 +12,8 @@ export interface Photo {
   camera: string;
   settings: string;
   featured?: boolean;
+  series?: string;
+  seriesOrder?: number;
 }
 
 const basePhotos: Photo[] = [
@@ -902,7 +904,9 @@ const basePhotos: Photo[] = [
     image: '/images/photography/P1071596.JPG',
     date: '2025-07',
     camera: 'Panasonic Lumix S5II',
-    settings: '50mm • f/2.8'
+    settings: '50mm • f/2.8',
+    series: 'Standalone portrait studies',
+    seriesOrder: 30,
   },
   {
     id: 96,
@@ -1062,7 +1066,9 @@ const basePhotos: Photo[] = [
     image: '/images/photography/P1140236.jpg',
     date: '2025-11',
     camera: 'Panasonic Lumix S5II',
-    settings: '35mm • f/2.8'
+    settings: '35mm • f/2.8',
+    series: 'Mission Maid — City Mode',
+    seriesOrder: 25,
   },
 ];
 
@@ -1079,6 +1085,21 @@ const enrichWithExif = (photo: Photo): Photo => {
   };
 };
 
-export const photos: Photo[] = [...basePhotos, ...importedPhotos].map(enrichWithExif);
+const dateSortKey = (date: string): string => {
+  const [year = '0000', month = '00', day = '00'] = date.split('-');
+  return `${year.padStart(4, '0')}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+};
+
+const sortPhotos = (items: Photo[]): Photo[] => [...items].sort((a, b) => {
+  if (a.category === 'Portrait' && b.category === 'Portrait') {
+    const seriesOrderA = a.seriesOrder ?? 90;
+    const seriesOrderB = b.seriesOrder ?? 90;
+    if (seriesOrderA !== seriesOrderB) return seriesOrderA - seriesOrderB;
+  }
+
+  return dateSortKey(b.date).localeCompare(dateSortKey(a.date));
+});
+
+export const photos: Photo[] = sortPhotos([...basePhotos, ...importedPhotos].map(enrichWithExif));
 
 export const categories = ['All', 'Landscape', 'Architecture', 'Street', 'Portrait', 'Night', 'Nature', 'Wildlife', 'Travel'];

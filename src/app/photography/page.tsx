@@ -47,6 +47,19 @@ export default function PhotographyPage() {
     ? [featuredPhoto, ...filteredPhotos]
     : filteredPhotos;
 
+  // Portraits are presented as small editorial series rather than one flat
+  // archive. Other categories keep the compact single-grid layout.
+  const portraitSectionMap = new Map<string, typeof filteredPhotos>();
+  filteredPhotos.forEach((photo) => {
+    const series = photo.series ?? 'Other portrait studies';
+    const section = portraitSectionMap.get(series) ?? [];
+    section.push(photo);
+    portraitSectionMap.set(series, section);
+  });
+  const photoSections = selectedCategory === 'Portrait'
+    ? Array.from(portraitSectionMap, ([title, sectionPhotos]) => ({ title, photos: sectionPhotos }))
+    : [{ title: '', photos: filteredPhotos }];
+
   // Image preloading logic for lightbox
   useEffect(() => {
     if (selectedPhotoIndex !== null && lightboxPhotos.length > 0) {
@@ -225,47 +238,65 @@ export default function PhotographyPage() {
           )}
 
           {/* Photo Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <AnimatePresence mode='popLayout'>
-              {filteredPhotos.map((photo, index) => {
-                // Lightbox index offset by 1 if the hero occupies index 0.
-                const lightboxIndex = showFeatured ? index + 1 : index;
-                return (
-                  <motion.div
-                    layout
-                    key={photo.id}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.9 }}
-                    transition={{ duration: 0.3 }}
-                    className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-surface-4"
-                    onClick={() => setSelectedPhotoIndex(lightboxIndex)}
-                  >
-                    <Image
-                      src={getThumbnailUrl(photo.image)}
-                      alt={photo.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      priority={index < 4}
-                      loading={index < 4 ? 'eager' : 'lazy'}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="text-xl font-bold mb-1" style={{ color: 'rgb(var(--p-ink))' }}>{photo.title}</h3>
-                        <p className="text-sm mb-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>{photo.location}</p>
-                        <div className="flex items-center gap-2">
-                          <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgb(var(--p-sage) / 0.2)', color: 'rgb(var(--p-sage))' }}>
-                            {photo.category}
-                          </span>
+          {photoSections.map((section) => (
+            <section key={section.title || 'all-photos'} className="mb-12 last:mb-0">
+              {section.title && (
+                <div className="flex items-end justify-between gap-4 mb-5 px-1">
+                  <div>
+                    <p className="type-eyebrow mb-1">Portrait special</p>
+                    <h2 className="text-2xl md:text-3xl font-bold" style={{ color: 'rgb(var(--p-ink))' }}>
+                      {section.title}
+                    </h2>
+                  </div>
+                  <span className="text-sm" style={{ color: 'rgb(var(--p-ink-dim))' }}>
+                    {section.photos.length} {section.photos.length === 1 ? 'frame' : 'frames'}
+                  </span>
+                </div>
+              )}
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <AnimatePresence mode='popLayout'>
+                  {section.photos.map((photo) => {
+                    const photoIndex = filteredPhotos.findIndex((candidate) => candidate.id === photo.id);
+                    // Lightbox index offset by 1 if the hero occupies index 0.
+                    const lightboxIndex = showFeatured ? photoIndex + 1 : photoIndex;
+                    return (
+                      <motion.div
+                        layout
+                        key={photo.id}
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.9 }}
+                        transition={{ duration: 0.3 }}
+                        className="group relative aspect-[4/3] rounded-2xl overflow-hidden cursor-pointer bg-surface-4"
+                        onClick={() => setSelectedPhotoIndex(lightboxIndex)}
+                      >
+                        <Image
+                          src={getThumbnailUrl(photo.image)}
+                          alt={photo.title}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                          priority={photoIndex < 4}
+                          loading={photoIndex < 4 ? 'eager' : 'lazy'}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="absolute bottom-0 left-0 right-0 p-6">
+                            <h3 className="text-xl font-bold mb-1" style={{ color: 'rgb(var(--p-ink))' }}>{photo.title}</h3>
+                            <p className="text-sm mb-2" style={{ color: 'rgb(var(--p-ink-mid))' }}>{photo.location}</p>
+                            <div className="flex items-center gap-2">
+                              <span className="text-xs px-2 py-1 rounded" style={{ backgroundColor: 'rgb(var(--p-sage) / 0.2)', color: 'rgb(var(--p-sage))' }}>
+                                {photo.category}
+                              </span>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
+                      </motion.div>
+                    );
+                  })}
+                </AnimatePresence>
+              </div>
+            </section>
+          ))}
 
           {/* Full Screen Lightbox */}
           <AnimatePresence>
