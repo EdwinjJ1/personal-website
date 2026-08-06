@@ -1,3 +1,5 @@
+import { importedPhotos } from './photography-imported';
+
 export interface Photo {
   id: number;
   title: string;
@@ -1061,6 +1063,7 @@ export const photos: Photo[] = [
     camera: 'Panasonic Lumix S5II',
     settings: '35mm • f/2.8'
   },
+  ...importedPhotos,
 ];
 
 export const categories = ['All', 'Landscape', 'Architecture', 'Street', 'Portrait', 'Night', 'Nature', 'Wildlife', 'Travel'];
