@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/fetch-github-activity.js",
     "build": "next build",
+    "postbuild": "node scripts/optimize-pages-images.js",
     "github:fetch": "node scripts/fetch-github-activity.js",
     "start": "next start",
     "lint": "next lint",
