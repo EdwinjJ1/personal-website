@@ -19,7 +19,7 @@ const importedGroups: ImportedGroup[] = [
   },
   {
     category: 'Landscape',
-    files: 'P1052056.jpg P1052072.jpg P1052081-2.jpg P1052081.jpg P1052082.jpg P1052204.jpg P1052207.jpg P1052240.jpg P1052508.jpg P1052519.jpg',
+    files: 'P1052056.jpg P1052072.jpg P1052081-2.jpg P1052081.jpg P1052082.jpg P1052204.jpg P1052240.jpg P1052508.jpg P1052519.jpg',
     location: 'Sydney Coast',
     description: 'Coastal studies of basalt, surf, and late light from the new works archive.',
   },
@@ -61,7 +61,7 @@ const importedGroups: ImportedGroup[] = [
   },
   {
     category: 'Landscape',
-    files: 'WEXF5926-2.jpg WEXF5926.jpg WEXF5935.jpg WEXF5939.jpg WEXF5971.jpg',
+    files: 'WEXF5926.jpg WEXF5935.jpg WEXF5939.jpg WEXF5971.jpg',
     location: 'Sydney Coast',
     description: 'Additional landscape and city-edge studies from the archive.',
   },
