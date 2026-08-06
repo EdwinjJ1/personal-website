@@ -1,4 +1,5 @@
 import { importedPhotos } from './photography-imported';
+import exifByFilename from './photography-exif.json';
 
 export interface Photo {
   id: number;
@@ -13,7 +14,7 @@ export interface Photo {
   featured?: boolean;
 }
 
-export const photos: Photo[] = [
+const basePhotos: Photo[] = [
   // ===== FEATURED COVER — Mission Maid: City Mode =====
   // ===== Panasonic Lumix S9 / S5II — Sydney 2024 =====
   {
@@ -1063,7 +1064,21 @@ export const photos: Photo[] = [
     camera: 'Panasonic Lumix S5II',
     settings: '35mm • f/2.8'
   },
-  ...importedPhotos,
 ];
+
+const enrichWithExif = (photo: Photo): Photo => {
+  const filename = photo.image.split('/').pop() ?? '';
+  const exif = exifByFilename[filename as keyof typeof exifByFilename];
+  if (!exif) return photo;
+
+  return {
+    ...photo,
+    date: exif.date ?? photo.date,
+    camera: exif.camera ?? photo.camera,
+    settings: exif.settings ?? photo.settings,
+  };
+};
+
+export const photos: Photo[] = [...basePhotos, ...importedPhotos].map(enrichWithExif);
 
 export const categories = ['All', 'Landscape', 'Architecture', 'Street', 'Portrait', 'Night', 'Nature', 'Wildlife', 'Travel'];

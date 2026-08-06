@@ -55,7 +55,7 @@ const importedGroups: ImportedGroup[] = [
   },
   {
     category: 'Street',
-    files: 'WEXF5979.jpg WEXF7044.jpg WEXF7055.jpg WEXF7068.jpg WEXF7074.jpg WEXF7370.jpg WEXF7372.jpg WEXF7373.jpg WEXF7383_(2).jpg WEXF7386.jpg WEXF7393.jpg WEXF7399.jpg WEXF7457.jpg WEXF7485.jpg WEXF7487.jpg WEXF7493.jpg WEXF7515.jpg WEXF7520.jpg WEXF7522.jpg WEXF7545.jpg WEXF7545_(2).jpg WEXF7566.jpg WEXF7573.jpg WEXF7576.jpg WEXF7591.jpg',
+    files: 'WEXF5979.jpg WEXF7044.jpg WEXF7074.jpg WEXF7370.jpg WEXF7372.jpg WEXF7373.jpg WEXF7383_(2).jpg WEXF7386.jpg WEXF7393.jpg WEXF7399.jpg WEXF7457.jpg WEXF7485.jpg WEXF7487.jpg WEXF7493.jpg WEXF7515.jpg WEXF7520.jpg WEXF7522.jpg WEXF7545.jpg WEXF7545_(2).jpg WEXF7566.jpg WEXF7573.jpg WEXF7576.jpg WEXF7591.jpg',
     location: 'Sydney',
     description: 'Documentary frames from public spaces and event days, kept in the existing street category.',
   },
@@ -65,22 +65,46 @@ const importedGroups: ImportedGroup[] = [
     location: 'Sydney Coast',
     description: 'Additional landscape and city-edge studies from the archive.',
   },
+  {
+    category: 'Portrait',
+    files: 'portrait-jojo-darling-harbour.jpg portrait-jojo-stone-free.jpg portrait-jojo-golden-hour.jpg portrait-jojo-electric-motion.jpg',
+    location: 'Sydney',
+    description: 'Cosplay portrait studies combining camera work, gesture, and graphic JoJo-inspired finishing.',
+  },
 ];
 
-function titleFor(file: string): string {
-  return `Archive study · ${file.replace(/\.[^.]+$/, '')}`;
+const titleOverrides: Record<string, string> = {
+  'portrait-jojo-darling-harbour.jpg': 'Stand at Darling Harbour',
+  'portrait-jojo-stone-free.jpg': 'Stone Free by the Waterfront',
+  'portrait-jojo-golden-hour.jpg': 'Golden Hour Stand',
+  'portrait-jojo-electric-motion.jpg': 'Electric Motion',
+};
+
+const categoryTitle: Record<string, string> = {
+  Night: 'Night Study',
+  Landscape: 'Coastal Light',
+  Travel: 'Sydney Passage',
+  Portrait: 'Portrait Study',
+  Wildlife: 'Wildlife Study',
+  Nature: 'Nature Study',
+  Architecture: 'Urban Form',
+  Street: 'Street Frame',
+};
+
+function titleFor(file: string, category: string): string {
+  return titleOverrides[file] ?? `${categoryTitle[category] ?? 'Archive Study'} · ${file.replace(/\.[^.]+$/, '')}`;
 }
 
 export const importedPhotos: Photo[] = importedGroups.flatMap((group, groupIndex) =>
   group.files.split(' ').map((file, fileIndex) => ({
     id: 200 + groupIndex * 50 + fileIndex,
-    title: titleFor(file),
+    title: titleFor(file, group.category),
     location: group.location,
     description: group.description,
     category: group.category,
     image: `/images/photography/${file}`,
     date: '2026',
-    camera: 'Panasonic Lumix S5II / S9',
-    settings: 'Imported portfolio selection',
+    camera: 'Unknown — WeChat export',
+    settings: 'EXIF unavailable',
   })),
 );
