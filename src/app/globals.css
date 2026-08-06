@@ -14,10 +14,9 @@
    `rgb(var(--p-ink) / 0.4)` and have those follow the theme too.
 
    `.theme-dark` / `.theme-light` are stamped on <html> by the inline
-   script in layout.tsx; the bare :root block doubles as the dark
+   script in layout.tsx; the bare :root block doubles as the light
    default so a no-JS visitor still gets a coherent page.
    ------------------------------------------------------------ */
-:root,
 .theme-dark {
   color-scheme: dark;
 
@@ -57,6 +56,7 @@
   --p-on-accent: 21 20 18;
 }
 
+:root,
 .theme-light {
   color-scheme: light;
 
