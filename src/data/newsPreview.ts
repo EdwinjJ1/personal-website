@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-08-05",
-  "latestLabel": "August 5, 2026",
+  "latestDate": "2026-08-07",
+  "latestLabel": "August 7, 2026",
   "items": [
     {
-      "id": "research-20260805-0000-logic-before-language-pre-pretraining-on-formal-derivations-fost",
-      "title": "Logic Before Language: Pre-pretraining on Formal Derivations Fosters Skill Acquisition and Compressibility",
+      "id": "research-20260807-0404-beyond-top-k-replacing-black-box-retrieval-with-interpretable-ag",
+      "title": "Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations",
       "tag": "RESEARCH",
-      "date": "2026-08-05",
-      "time": "00:00",
+      "date": "2026-08-07",
+      "time": "04:04",
       "category": "research"
     },
     {
-      "id": "research-20260805-0000-parvl-parallel-scaling-and-expandable-compute-allocation-for-mul",
-      "title": "ParVL: Parallel Scaling and Expandable Compute Allocation for Multimodal LLMs",
+      "id": "research-20260807-0404-mass-multiplayer-world-models-with-authoritative-shared-state",
+      "title": "MASS: Multiplayer World Models with Authoritative Shared State",
       "tag": "RESEARCH",
-      "date": "2026-08-05",
-      "time": "00:00",
+      "date": "2026-08-07",
+      "time": "04:04",
       "category": "research"
     },
     {
-      "id": "research-20260805-0000-societybench-forecasting-counterfactual-social-world-evolution",
-      "title": "SocietyBench: Forecasting Counterfactual Social-World Evolution",
+      "id": "research-20260807-0404-on-policy-self-distillation-without-any-supervision",
+      "title": "On-Policy Self-Distillation without Any Supervision",
       "tag": "RESEARCH",
-      "date": "2026-08-05",
-      "time": "00:00",
+      "date": "2026-08-07",
+      "time": "04:04",
       "category": "research"
     }
   ]
