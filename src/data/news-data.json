@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-05T13:59:00.000Z",
+  "lastUpdated": "2026-08-07T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-07",
+      "label": "August 7, 2026"
+    },
     {
       "value": "2026-08-05",
       "label": "August 5, 2026"
@@ -439,6 +443,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260807-0404-beyond-top-k-replacing-black-box-retrieval-with-interpretable-ag",
+      "title": "Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations",
+      "summary": "Argues that for structured documents — financial statements, audit reports, regulatory filings — top-k embedding retrieval is structurally unsound, and makes the case measurable. On a 780-page government financial report, 86.8% of content lines are table rows, thousands of near-identical figures share one embedding space, and a figure inherits its unit from a header a median of 13 lines above it (so chunk boundaries routinely split &ldquo;crore&rdquo; from &ldquo;lakh&rdquo; — a two-orders-of-magnitude error). The proposed READ (Reliable Embedding-free Agentic Document-search) gives an agent three deterministic operations — normalized lexical search, structural navigation, bounded span reads — exposed over MCP, so the trajectory is a replayable audit trail. On 51 verified questions READ answers 58.8% vs dense retrieval&rsquo;s 15.7% (p Holm = 2×10⁻⁵); a top-k-tool agent on the same loop only reaches 27.5%, locating the gain in the interface rather than in iteration count.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06305",
+      "date": "2026-08-07",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260807-0404-mass-multiplayer-world-models-with-authoritative-shared-state",
+      "title": "MASS: Multiplayer World Models with Authoritative Shared State",
+      "summary": "Video world models today entangle world dynamics with view-dependent visual latents, which (i) wastes compute across agents, (ii) creates cross-view inconsistency, (iii) kills scalability in multiplayer settings. MASS splits them: a learned Logic Engine advances a global, typed, authoritative state from joint actions (no hand-written transitions, it is the sole recurrent memory), and a learned Rendering Engine renders any camera on demand from that shared state. The architecture lets the model hold 1,024 concurrent players for 10,000 recurrent steps on a matched multiplayer Snake benchmark, with better state accuracy and lower cross-view inconsistency than multi-view baselines.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06257",
+      "date": "2026-08-07",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260807-0404-on-policy-self-distillation-without-any-supervision",
+      "title": "On-Policy Self-Distillation without Any Supervision",
+      "summary": "A genuinely unsupervised variant of On-Policy Self-Distillation. The model samples multiple rollouts, takes a majority-vote pseudo-solution (with a self-consistency threshold), then distills from a teacher distribution conditioned on the shortest pseudo-solution into the prefixes of its own longest incorrect completions — i.e. it surgically corrects itself exactly where it is confidently wrong. Across AIME24/25, HMMT25, MATH500, AMC23 the method beats OPSD-with-ground-truth and GRPO: +8.5% / +10.7% over the base model at Qwen3-4B / 8B non-thinking, and +3.2% / +2.3% over OPSD-GT. Thinking mode holds up too, surpassing GRPO by 0.7–1.1 points.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06296",
+      "date": "2026-08-07",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260807-0404-rrc-unlocking-generative-reward-models-in-llm-reinforcement-lear",
+      "title": "RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction",
+      "summary": "Diagnoses why generative reward models (GenRMs) underperform in RL despite being strong rankers: it is a paradigm mismatch — GenRMs are comparative, RL rewards are scalars. RRC fixes this by deriving scalar rewards from relative preference rankings via two complementary strategies: self-competitive ranking (comparing sampled responses against each other) and anchor-guided ranking (using a small reference set for scalable ranking-based reward construction). Across open-ended chat and reasoning benchmarks RRC consistently beats prior reward-construction approaches when plugging GenRMs into RL.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06310",
+      "date": "2026-08-07",
+      "time": "04:04",
+      "category": "research"
+    },
+    {
+      "id": "research-20260807-0404-the-bitter-lesson-of-tool-calling",
+      "title": "The Bitter Lesson of Tool Calling",
+      "summary": "A systematic comparison of Programmatic Tool Calling (PTC) — where tools are exposed as typed Python stubs the model invokes through code in a single agent turn — against native JSON tool calling across 14 LLMs on the BFCL v4 benchmark. PTC matches or beats JSON in 11/14 models, with the GPT-5.6 family gaining +10.6% over JSON. The wins hold under parallel fan-out (13/14 models) and under context rot, where the JSON baseline degrades 2.3% on average while PTC stays stable. The authors frame this as another &ldquo;bitter lesson&rdquo; variant: as models get more code-capable, expressing tool use as code generalizes better than hand-designed structured-output schemas.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06370",
+      "date": "2026-08-07",
+      "time": "04:04",
+      "category": "research"
+    },
     {
       "id": "research-20260805-0000-logic-before-language-pre-pretraining-on-formal-derivations-fost",
       "title": "Logic Before Language: Pre-pretraining on Formal Derivations Fosters Skill Acquisition and Compressibility",
