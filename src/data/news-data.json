@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-07T13:59:00.000Z",
+  "lastUpdated": "2026-08-08T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-08",
+      "label": "August 8, 2026"
+    },
     {
       "value": "2026-08-07",
       "label": "August 7, 2026"
@@ -443,6 +447,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260808-0409-on-policy-self-distillation-without-any-supervision",
+      "title": "On-Policy Self-Distillation without Any Supervision",
+      "summary": "Introduces U-OPSD : on-policy self-distillation that uses only the model's own generations , with no ground truth, no environment reward, and no larger teacher. Algorithm: sample N rollouts, take a self-consistency majority-vote pseudo-solution, condition a teacher distribution on the shortest one, distill it into the prefixes of the longest wrong completion. On AIME24/25, HMMT25, MATH500, AMC23: Qwen3 non-thinking improves +8.5% / +10.7% over its base model &mdash; matching or beating OPSD with ground truth and GRPO .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06296",
+      "date": "2026-08-08",
+      "time": "04:09",
+      "category": "research"
+    },
+    {
+      "id": "research-20260808-0409-rrc-unlocking-generative-reward-models-in-llm-reinforcement-lear",
+      "title": "RRC: Unlocking Generative Reward Models in LLM Reinforcement Learning via Ranking-Based Reward Construction",
+      "summary": "Diagnoses why generative reward models (GRMs) underperform in RL despite being strong rankers: there's a mismatch between their comparative nature and RL's scalar scoring paradigm. RRC fixes this by deriving scalar rewards from preference rankings with two complementary strategies &mdash; self-competitive ranking (across sampled responses) and anchor-guided ranking (against a small reference set). Consistent gains across open-ended chat and reasoning benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06310",
+      "date": "2026-08-08",
+      "time": "04:09",
+      "category": "research"
+    },
+    {
+      "id": "research-20260808-0409-the-bitter-lesson-of-tool-calling",
+      "title": "The Bitter Lesson of Tool Calling",
+      "summary": "Systematic empirical comparison of programmatic tool calling (PTC) &mdash; exposing tools as typed Python stubs the model invokes as code &mdash; vs native JSON tool calling across 14 LLMs on Berkeley Function-Calling Leaderboard v4 . PTC matches or beats JSON calling in 11 of 14 models, the GPT-5.6 family gains +10.6% , and PTC stays stable under context rot where JSON calling degrades 2.3% on average.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06370",
+      "date": "2026-08-08",
+      "time": "04:09",
+      "category": "research"
+    },
+    {
+      "id": "research-20260808-0409-the-low-frequency-trap-video-language-models-fail-at-simple-even",
+      "title": "The Low Frequency Trap: Video Language Models Fail at Simple Event Bookkeeping",
+      "summary": "Trace-grounded parametric profiling for event counting in video: 2,190 controlled videos across bouncing-ball contacts, blinks, and state transitions, with executable event traces that audit reported events against ground truth. Result on Gemini 3.6 Flash: at the 80% reliability threshold it counts persistent state transitions up to 12 events at 0.5/1.0 Hz, but has no reliable positive-count region for transient blinks . In the high-count/high-frequency regime only 0.2% of final counts are correct and just 18.1% of true events are recovered. Increasing frame sampling boosts Bounce Ball accuracy 19.6%&rarr;29.3% but the reported sequence agrees with ground truth only 3.7% of the time &mdash; i.e. extra frames inflate final scores without producing faithful recovery.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06361",
+      "date": "2026-08-08",
+      "time": "04:09",
+      "category": "research"
+    },
+    {
+      "id": "research-20260808-0204-learning-when-to-trust-via-selective-context-preference-optimiza",
+      "title": "Learning When to Trust via Selective Context Preference Optimization",
+      "summary": "Reframes \"robustness to misleading context\" as selective trust : a good LLM should ignore bad signals but use good ones. Introduces MIST , a 4-condition human-annotated benchmark (clean / misleading / correct-context / irrelevant-context) plus the SC2W metric, and proposes SCOPE , a DPO-style training that mines clean-correct vs. misleading-wrong pairs and balances them across all four conditions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.06377",
+      "date": "2026-08-08",
+      "time": "02:04",
+      "category": "research"
+    },
     {
       "id": "research-20260807-0404-beyond-top-k-replacing-black-box-retrieval-with-interpretable-ag",
       "title": "Beyond Top-K: Replacing Black-Box Retrieval with Interpretable Agentic Operations",
