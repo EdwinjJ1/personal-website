@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-08T13:59:00.000Z",
+  "lastUpdated": "2026-08-10T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-10",
+      "label": "August 10, 2026"
+    },
     {
       "value": "2026-08-08",
       "label": "August 8, 2026"
@@ -447,6 +451,50 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260810-0406-creativeinstruct-scalably-teaching-llms-to-balance-quality-creat",
+      "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+      "summary": "Post-training collapses LLM output diversity/creativity &mdash; bad for explicit tasks like story generation and bad for implicit ones like RL rollouts. CreativeInstruct learns to inject a special [StartCreativity] span that biases generation toward creativity without sacrificing post-trained quality. Introduces a structural diversity metric based on graph edit distance on textual idea graphs. Human raters call CreativeInstruct generations more creative than post-trained baselines 70.3% of the time , and GRPO on top of a CreativeInstruct checkpoint adds +~4% on AMC, +~5pp on MATH over the same training on the post-trained base.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.07460",
+      "date": "2026-08-10",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260810-0406-fisher-r1-training-llm-agents-for-reliable-hypothesis-testing",
+      "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing",
+      "summary": "Current LLM agents run hypothesis-testing code correctly but ship statistically invalid conclusions (wrong p-values, wrong test choices). The team builds P-Bench , 425 open-ended hypothesis-testing tasks across economics, biology, and medicine, and trains Fisher-R1-14B via synthetic tasks + verified-reward RL. Beats GPT-5.4 and DeepSeek-V4-Pro by +21% single-trial success on average (up to +26% on the hardest slice).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.07437",
+      "date": "2026-08-10",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260810-0406-modular-ttt-rethinking-test-time-training-as-composable-modules",
+      "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+      "summary": "TTT variants (Mamba/Titans-style fast weights) are usually hard-coded monolithically &mdash; hard to ablate, hard to invent new ones. Modular TTT casts the inner learner as a DAG over five exposed knobs (fast-weight network, loss, LR init, weight decay, normalization) and auto-assembles train-view forward/backward + causal query-view rules. Ablations land three robust wins: small LR init, weight decay, and a single-layer nonlinearity ; deeper fast-weight nets and normalization actually hurt . Best variant trained to 410M / 1.45B params on 100B tokens matches Gated DeltaNet on loss and benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.07110",
+      "date": "2026-08-10",
+      "time": "04:06",
+      "category": "research"
+    },
+    {
+      "id": "research-20260810-0406-simwam-a-simple-world-action-model-for-end-to-end-autonomous-dri",
+      "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
+      "summary": "A \"World-Action Model\" that uses video generation only as a training signal : co-trains a pretrained video expert with a lightweight action expert via joint flow matching, then discards the video branch at inference . Isolated attention masks keep action prediction independent of future frames, so the planner ships as a self-contained trajectory predictor. Adds a compositional RL reward on top. Hits 91.5 PDMS on NAVSIM (beats WAM SOTA at lower latency) and zero-shot transfers to nuScenes.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.07468",
+      "date": "2026-08-10",
+      "time": "04:06",
+      "category": "research"
+    },
     {
       "id": "research-20260808-0409-on-policy-self-distillation-without-any-supervision",
       "title": "On-Policy Self-Distillation without Any Supervision",
