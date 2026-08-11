@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-10T13:59:00.000Z",
+  "lastUpdated": "2026-08-11T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-11",
+      "label": "August 11, 2026"
+    },
     {
       "value": "2026-08-10",
       "label": "August 10, 2026"
@@ -451,6 +455,83 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260811-0000-bdh-cq-in-context-learning-with-recurrent-latent-reasoning",
+      "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+      "summary": "A reasoning model that fuses in-context learning with a recurrent latent state: the model's hidden memory keeps getting rewritten by the input, and it solves a query through iterative computation in a high-dimensional latent space — without ever verbalizing intermediate steps. Evaluated on ARC-AGI-1 with a 150M config and ARC-like controlled interventions to probe what gets learned from demonstrations.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09888",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-evo-bench-can-language-models-improve-agent-harness",
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
+      "summary": "First benchmark for harness-evolution — measuring whether an LLM can autonomously optimize its own agent harness (search / office / general agents). Uses a harness-guided construction framework to isolate harness improvement from base model strength and prevent task-specific overfitting.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09096",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-intent-speaks-louder-controllable-user-simulation-beyond-respons",
+      "title": "Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation",
+      "summary": "UserIDA — a user simulator that exposes per-turn interaction intent as an explicit directive, separating what the user wants to do next from how they say it. Uses a six-way intent interface, SFT for directive-conditioned generation, and intent-calibrated RL group optimization. On LMSYS-USP, 86.6% intent accuracy (+24.3 pts vs strongest baseline).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09420",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-macaron-v1-towards-open-continual-learning-with-self-improvement",
+      "title": "Macaron-V1: Towards Open Continual Learning with Self-Improvement and Mixture-of-LoRA",
+      "summary": "An open agent-model family for \"experiential intelligence\": versions of model+harness pair are recursively improved via an external success contract, and at serving time a frozen base model routes each user turn to one specialist LoRA adapter (Mixture-of-LoRA). The flagship \"Venti\" config is the first open continual-learning setup with this composition.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09819",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-sci-vbench-evaluating-knowledge-and-reasoning-intensive-video-ge",
+      "title": "Sci-VBench: Evaluating Knowledge- and Reasoning-Intensive Video Generation in Science Domains",
+      "summary": "A benchmark of 1,253 expert-annotated prompts across 60 subjects in natural science, healthcare, humanities & social sciences, and engineering, with a rubric-based evaluation protocol. Tasks force generated videos to be temporally coherent AND knowledge-grounded, not just visually pretty.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09873",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-swe-bench-promax-benchmarking-agents-on-large-scale-multilingual",
+      "title": "SWE-Bench ProMax: Benchmarking Agents on Large-Scale Multilingual Code Refactoring",
+      "summary": "A new expert-curated, multilingual code-refactoring benchmark of 170 instances across 7 languages (Python, Java, TS, Go, C, C++, Rust). Issue descriptions are rewritten from scratch and tests are manually reviewed to remove the false-positive / false-negative traps that plague SWE-bench Verified. Average task = 11.4 files / 261.6 LoC.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09802",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260811-0000-towards-expert-level-medical-ai-for-real-time-video-consultation",
+      "title": "Towards Expert-level Medical AI for Real-time Video Consultations",
+      "summary": "AMIE (Articulate Medical Intelligence Engine) extended from text-only to real-time audio-visual clinical consultation. Trained on multimodal doctor-patient dialog with non-verbal cues; evaluated against clinicians on OSCE-style scenarios and shown to reach expert-level agreement.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.09861",
+      "date": "2026-08-11",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260810-0406-creativeinstruct-scalably-teaching-llms-to-balance-quality-creat",
       "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
