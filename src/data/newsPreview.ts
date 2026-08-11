@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-08-10",
-  "latestLabel": "August 10, 2026",
+  "latestDate": "2026-08-11",
+  "latestLabel": "August 11, 2026",
   "items": [
     {
-      "id": "research-20260810-0406-creativeinstruct-scalably-teaching-llms-to-balance-quality-creat",
-      "title": "CreativeInstruct: Scalably Teaching LLMs to Balance Quality, Creativity, and Diversity",
+      "id": "research-20260811-0000-bdh-cq-in-context-learning-with-recurrent-latent-reasoning",
+      "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
       "tag": "RESEARCH",
-      "date": "2026-08-10",
-      "time": "04:06",
+      "date": "2026-08-11",
+      "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260810-0406-fisher-r1-training-llm-agents-for-reliable-hypothesis-testing",
-      "title": "Fisher-R1: Training LLM Agents for Reliable Hypothesis Testing",
+      "id": "research-20260811-0000-evo-bench-can-language-models-improve-agent-harness",
+      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
       "tag": "RESEARCH",
-      "date": "2026-08-10",
-      "time": "04:06",
+      "date": "2026-08-11",
+      "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260810-0406-modular-ttt-rethinking-test-time-training-as-composable-modules",
-      "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+      "id": "research-20260811-0000-intent-speaks-louder-controllable-user-simulation-beyond-respons",
+      "title": "Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation",
       "tag": "RESEARCH",
-      "date": "2026-08-10",
-      "time": "04:06",
+      "date": "2026-08-11",
+      "time": "00:00",
       "category": "research"
     }
   ]
