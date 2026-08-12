@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-08-11",
-  "latestLabel": "August 11, 2026",
+  "latestDate": "2026-08-12",
+  "latestLabel": "August 12, 2026",
   "items": [
     {
-      "id": "research-20260811-0000-bdh-cq-in-context-learning-with-recurrent-latent-reasoning",
-      "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
+      "id": "research-20260812-0000-attention-path-fragility-as-an-uncertainty-signal-in-large-langu",
+      "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",
       "tag": "RESEARCH",
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260811-0000-evo-bench-can-language-models-improve-agent-harness",
-      "title": "Evo-Bench: Can Language Models Improve Agent Harness?",
+      "id": "research-20260812-0000-long-horizon-ai-research-for-grothendieck-constant-a-case-study-",
+      "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
       "tag": "RESEARCH",
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260811-0000-intent-speaks-louder-controllable-user-simulation-beyond-respons",
-      "title": "Intent Speaks Louder: Controllable User Simulation Beyond Response Imitation",
+      "id": "research-20260812-0000-test-time-self-evolving-gui-visual-grounding-via-reflection-guid",
+      "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
       "tag": "RESEARCH",
-      "date": "2026-08-11",
+      "date": "2026-08-12",
       "time": "00:00",
       "category": "research"
     }
