@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-11T13:59:00.000Z",
+  "lastUpdated": "2026-08-12T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-12",
+      "label": "August 12, 2026"
+    },
     {
       "value": "2026-08-11",
       "label": "August 11, 2026"
@@ -455,6 +459,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260812-0000-attention-path-fragility-as-an-uncertainty-signal-in-large-langu",
+      "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",
+      "summary": "Introduces ASMI (Attention-Subnetwork Mutual Information), a training-free uncertainty estimator that masks attention heads and measures BALD-style disagreement among the resulting subnetworks. Crucially, it works from a single greedy response (no need for the 10 stochastic samples that Semantic Entropy requires) and ties or beats Semantic Entropy on 10 of 12 grounded QA benchmark-backbone settings, cutting retained error of a confidence filter roughly in half on confident-but-fragile predictions.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.11138",
+      "date": "2026-08-12",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260812-0000-long-horizon-ai-research-for-grothendieck-constant-a-case-study-",
+      "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+      "summary": "Reports that an AI research system tightened the known bounds on the Grothendieck constant KG to 6π/11 ≤ KG ≤ π/(2 log(1+√2)) − 10⁻⁴, with the AI's intermediate steps deemed genuinely novel by domain experts. The paper is framed as a candid case study — not just the wins, but also where the AI got stuck and what conditions unlocked breakthroughs.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.11195",
+      "date": "2026-08-12",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260812-0000-test-time-self-evolving-gui-visual-grounding-via-reflection-guid",
+      "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+      "summary": "Proposes a closed-loop Explore → Evaluate → Reflect → Internalize framework that lets GUI-grounding models keep improving after deployment with no human labels. A MLLM Reflector grades each exploration, and Reflection-Guided On-Policy Self-Distillation turns the critique into dense token-level supervision, with Contrastive Calibration guarding against corrupted prefixes. Reports +7.4% average accuracy over the base model across six GUI-grounding benchmarks; claimed first successful on-policy self-distillation for test-time GUI adaptation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.11191",
+      "date": "2026-08-12",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260812-0000-v-fillm-verified-financial-llm-reasoning-benchmark",
+      "title": "V-FiLLM: Verified Financial LLM Reasoning Benchmark",
+      "summary": "Builds financial-reasoning benchmark items from executable computation trees over real tables — answers are correct-by-construction because the trees are evaluated symbolically, so no LLM touches the labels. Sweeps four axes (depth, breadth, concept complexity, context size) and shows open-source model accuracy drops up to 51% with reasoning depth and 47 points under adversarial numeric perturbations; a small LoRA on verified CoT traces lifts accuracy 81.1% → 85.6% in-domain and +5 pp on FinQA.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.11047",
+      "date": "2026-08-12",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260812-0000-why-does-claude-md-keep-growing-catastrophic-remembering-in-agen",
+      "title": "Why Does CLAUDE.md Keep Growing? Catastrophic Remembering in Agentic Coding",
+      "summary": "Empirical study across 1,867 repositories and 247,694 instruction lifetimes showing that agentic-coding prompts (CLAUDE.md, AGENTS.md) grow without bound, tripling (+226%) over a repo's life with +4.9 net instructions per commit, because deleting an instruction costs O(2^|D|) to verify safety once its rationale is gone. The author names this catastrophic remembering — the inverse of catastrophic forgetting — and shows that prompt comments encoding latent reasoning cut 99.3% of the bloat in synthetic worlds and lift real-world IFE follow-rate by up to 23.1%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.11095",
+      "date": "2026-08-12",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260811-0000-bdh-cq-in-context-learning-with-recurrent-latent-reasoning",
       "title": "BDH-CQ: In-Context Learning with Recurrent Latent Reasoning",
