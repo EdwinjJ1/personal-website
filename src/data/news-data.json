@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-12T13:59:00.000Z",
+  "lastUpdated": "2026-08-13T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-13",
+      "label": "August 13, 2026"
+    },
     {
       "value": "2026-08-12",
       "label": "August 12, 2026"
@@ -459,6 +463,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260813-0000-ai4ai-at-test-time-strong-to-weak-capability-transfer-via-harnes",
+      "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
+      "summary": "Asks whether a stronger \"builder\" model can transfer capability to a weaker \"target\" model at test time , without any parameter updates, by constructing inference-time harnesses (routing, code, format enforcement). On four Theory-of-Mind benchmarks, the harness nearly doubles the target model's average accuracy from 0.49 to 0.91. The gains come mostly from offloading unstable reasoning into deterministic code and strict output formats, not from more sampling or longer chain-of-thought.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.12307",
+      "date": "2026-08-13",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260813-0000-ava-encoder-towards-agent-native-video-representation-learning",
+      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
+      "summary": "Proposes an Agentic Video Auto-Encoder that turns a video into a structured knowledge graph (KG) with hierarchy/state nodes for text and a linked asset layer for generated images/audio/video, then reconstructs it back. Reconstruction differences drive a textual-gradient optimization loop that produces natural-language update directions for both data-independent encoding policy pseudo-training and test-time data-dependent KG refinement. The agent can query, edit, and reason about the KG directly.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.12313",
+      "date": "2026-08-13",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260813-0000-information-abundance-paradox-long-context-training-undermines-p",
+      "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
+      "summary": "Challenges the standard assumption that scaling context windows is strictly beneficial. The authors define the Information Abundance Paradox : when abundant relevant information is present in the training context, the model has less incentive to internalize it into its parameters, shifting learning from parametric memory to contextualization. Empirically, pretraining context length improves language modeling, NLU, and closed-book MCQA only up to an intermediate sweet spot, after which performance consistently declines; in SFT, more task-relevant context improves with-support results but reduces robustness when context is absent or misleading.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.12218",
+      "date": "2026-08-13",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260813-0000-one-frozen-simulator-is-not-enough-simulator-collapse-in-multi-a",
+      "title": "One Frozen Simulator Is Not Enough: Simulator Collapse in Multi-Agent RL",
+      "summary": "Diagnoses a systematic failure mode in multi-agent RL for human-AI interaction: when a single LLM is used as the user simulator, its mode-collapsed distribution causes the policy to overfit to that simulator's dominant mode, and the resulting policy fails to transfer to unseen simulators or real humans. The paper formalizes simulator collapse and proposes two complementary fixes — Verbalized Sampling at inference time (sample from a verbalized response distribution) and Co-Training at training time (jointly optimize against a population of trainable simulators). On Persuasion-for-Good, τ²-bench, and CooperBench, Verbalized Sampling adds up to +9% held-out success and Co-Training pushes gains to +14%.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.12253",
+      "date": "2026-08-13",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260813-0000-vakra-evaluating-multi-hop-reasoning-across-apis-and-retrieval-u",
+      "title": "VAKRA: Evaluating Multi-Hop Reasoning Across APIs and Retrieval Under Tool-Use Policies",
+      "summary": "VAKRA evaluates agents across 8,000+ executable APIs in 62 domains with three difficulty tiers: diverse API interaction styles, multi-hop reasoning over structured APIs, and multi-source reasoning under natural-language tool-use policies. Correctness is verified by re-executing predicted tool calls against live APIs, accepting multiple valid paths. Using a fixed ReAct harness to isolate model capability from agent scaffolding, the best frontier model hits only 70.4% on single-hop endpoint tasks and drops to 50–51% on compositional APIs; reasoning depth costs >50% accuracy, and policy-constrained questions expose failures as low as 2.4% on unanswerable queries.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.12282",
+      "date": "2026-08-13",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260812-0000-attention-path-fragility-as-an-uncertainty-signal-in-large-langu",
       "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",

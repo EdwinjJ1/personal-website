@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-08-12",
-  "latestLabel": "August 12, 2026",
+  "latestDate": "2026-08-13",
+  "latestLabel": "August 13, 2026",
   "items": [
     {
-      "id": "research-20260812-0000-attention-path-fragility-as-an-uncertainty-signal-in-large-langu",
-      "title": "Attention-Path Fragility as an Uncertainty Signal in Large Language Models",
+      "id": "research-20260813-0000-ai4ai-at-test-time-strong-to-weak-capability-transfer-via-harnes",
+      "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
       "tag": "RESEARCH",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260812-0000-long-horizon-ai-research-for-grothendieck-constant-a-case-study-",
-      "title": "Long-Horizon AI Research for Grothendieck Constant: A Case Study in Human-AI Mathematical Collaboration",
+      "id": "research-20260813-0000-ava-encoder-towards-agent-native-video-representation-learning",
+      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
       "tag": "RESEARCH",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260812-0000-test-time-self-evolving-gui-visual-grounding-via-reflection-guid",
-      "title": "Test-Time Self-Evolving GUI Visual Grounding via Reflection-Guided On-Policy Self-Distillation",
+      "id": "research-20260813-0000-information-abundance-paradox-long-context-training-undermines-p",
+      "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
       "tag": "RESEARCH",
-      "date": "2026-08-12",
+      "date": "2026-08-13",
       "time": "00:00",
       "category": "research"
     }
