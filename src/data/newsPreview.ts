@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-08-13",
-  "latestLabel": "August 13, 2026",
+  "latestDate": "2026-08-14",
+  "latestLabel": "August 14, 2026",
   "items": [
     {
-      "id": "research-20260813-0000-ai4ai-at-test-time-strong-to-weak-capability-transfer-via-harnes",
-      "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
-      "tag": "RESEARCH",
-      "date": "2026-08-13",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260814-0914-cardinal-glass-to-install-world-first-carbon-capture-system-at-f",
+      "title": "Cardinal Glass to Install World-First Carbon Capture System at Float Glass Plant",
+      "tag": "POLICY",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
     },
     {
-      "id": "research-20260813-0000-ava-encoder-towards-agent-native-video-representation-learning",
-      "title": "AVA-Encoder: Towards Agent-Native Video Representation Learning",
-      "tag": "RESEARCH",
-      "date": "2026-08-13",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260814-0914-european-energy-closes-234-1m-financing-for-225-mw-italian-agriv",
+      "title": "European Energy Closes €234.1M Financing for 225 MW Italian Agrivoltaic Project",
+      "tag": "POLICY",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
     },
     {
-      "id": "research-20260813-0000-information-abundance-paradox-long-context-training-undermines-p",
-      "title": "Information Abundance Paradox: Long-Context Training Undermines Parametric Knowledge",
-      "tag": "RESEARCH",
-      "date": "2026-08-13",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260814-0914-microsoft-ppa-backed-150-mw-carwarp-solar-park-enters-operation-",
+      "title": "Microsoft PPA-Backed 150 MW Carwarp Solar Park Enters Operation in Australia",
+      "tag": "PRODUCT",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
     }
   ]
 } as const;
