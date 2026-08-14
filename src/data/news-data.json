@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-13T13:59:00.000Z",
+  "lastUpdated": "2026-08-14T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-14",
+      "label": "August 14, 2026"
+    },
     {
       "value": "2026-08-13",
       "label": "August 13, 2026"
@@ -463,6 +467,116 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260814-0914-cardinal-glass-to-install-world-first-carbon-capture-system-at-f",
+      "title": "Cardinal Glass to Install World-First Carbon Capture System at Float Glass Plant",
+      "summary": "Cardinal Glass Industries will install what it calls the world's first carbon capture system at its Cardinal FG float glass facility in Winlock, Washington. The system is expected to capture ~130,000 metric tons of CO2 per year and remove up to 95% of CO2 from targeted process streams. The announcement coincides with a parallel Saint-Gobain/AGC electric float glass furnace project.",
+      "tag": "POLICY",
+      "source": "Carboncapturejournal",
+      "sourceUrl": "https://carboncapturejournal.com/",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260814-0914-european-energy-closes-234-1m-financing-for-225-mw-italian-agriv",
+      "title": "European Energy Closes €234.1M Financing for 225 MW Italian Agrivoltaic Project",
+      "summary": "European Energy has reached financial close on €234.1 million in project financing from Credit Agricole CIB, Intesa Sanpaolo, NORD/LB, and Société Générale for the 225 MW Vizzini agrivoltaic project in Sicily, Italy. The facility is integrated with continued agricultural use and biodiversity measures, and benefits from a 20-year Contract for Difference under Italy's FerX scheme. COD targeted for 2028.",
+      "tag": "POLICY",
+      "source": "Energyglobal",
+      "sourceUrl": "https://www.energyglobal.com/solar/12082026/european-energy-secures-financing-for-225-mw-agrivoltaic-project-in-italy/",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260814-0914-microsoft-ppa-backed-150-mw-carwarp-solar-park-enters-operation-",
+      "title": "Microsoft PPA-Backed 150 MW Carwarp Solar Park Enters Operation in Australia",
+      "summary": "Recurrent Energy (a Canadian Solar subsidiary) has energized its 150 MWac Carwarp Energy Park in Victoria, Australia ahead of schedule. The project is underpinned by a long-term PPA with Microsoft, uses ~243,000 TOPCon modules from Canadian Solar, and will generate ~405 GWh/year — enough for ~65,000 Australian households. The site has planning approval for a follow-on 120 MW battery storage system.",
+      "tag": "PRODUCT",
+      "source": "Solarquarter",
+      "sourceUrl": "https://solarquarter.com/2026/08/13/microsoft-backed-150-mw-carwarp-solar-park-enters-commercial-operation-in-australia/",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260814-0914-ogci-releases-strategic-ccs-deployment-roadmap-for-asia-pacific",
+      "title": "OGCI Releases Strategic CCS Deployment Roadmap for Asia-Pacific",
+      "summary": "The Oil and Gas Climate Initiative (OGCI) released a new report titled \"CCS in the Asia-Pacific Region,\" prepared in partnership with the Global CCS Institute. The report examines deployment barriers, financing models, and policy needs across major Asia-Pacific economies — including Japan, Korea, China, Indonesia, and Australia — where industrial CO2 emissions are still rising.",
+      "tag": "POLICY",
+      "source": "Carboncapturejournal",
+      "sourceUrl": "https://carboncapturejournal.com/",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260814-0914-saudi-arabia-completes-8-5b-neom-green-hydrogen-megaproject",
+      "title": "Saudi Arabia Completes $8.5B NEOM Green Hydrogen Megaproject",
+      "summary": "NEOM Green Hydrogen Company (JV between ACWA Power, Air Products, and NEOM) has completed construction of the world's largest green hydrogen facility at Oxagon in NEOM, Saudi Arabia. The $8.5 billion project has entered the commissioning phase and is expected to produce up to 600 tons of carbon-free hydrogen per day once fully operational, backed by an integrated 4 GW solar + wind power system. Commercial green ammonia exports are targeted for 2027.",
+      "tag": "PRODUCT",
+      "source": "Solarquarter",
+      "sourceUrl": "https://solarquarter.com/2026/08/13/saudi-arabia-completes-8-5-billion-green-hydrogen-plant-in-neom/",
+      "date": "2026-08-14",
+      "time": "09:14",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260814-0000-alaya-evoke-from-linear-scaling-supervision-to-endless-world",
+      "title": "Alaya-EVOKE: From Linear-Scaling Supervision to Endless World",
+      "summary": "An interactive video world model that externalizes persistent scene state into a camera-indexed 3D world-state bank (view-relevant retrieval only) so the denoiser context stays bounded as sessions grow. The teacher uses sparse attention with chunk-wise grouping + selected-distant-frame retrieval + a linear-attention global state, giving linear memory/compute growth over long horizons. A 30-second distribution-matching objective transfers these capabilities to a 3-step student that runs without classifier-free guidance, generating a 1.5 s 384×640 chunk in 2.11 s on a single H200 and hitting SOTA on WBench while staying competitive on VBench-Long and VBench-2.0.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.13546",
+      "date": "2026-08-14",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260814-0000-dartree-speculative-diffusion-decoding-with-autoregressive-draft",
+      "title": "DARTree: Speculative Diffusion Decoding with Autoregressive Draft Trees",
+      "summary": "A training-free speculative-decoding method that combines a diffusion drafter (predicts a whole token block in parallel) with an AR-style verification tree. DARTree expands a fixed-width candidate tree at every depth in one batch, then best-first prunes to a verification tree so the AR correction head carries causal information down every branch.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.13524",
+      "date": "2026-08-14",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260814-0000-intern-s2-preview-scientific-agentic-foundation-model",
+      "title": "Intern-S2-Preview: Scientific Agentic Foundation Model",
+      "summary": "Shanghai AI Lab releases Intern-S2-Preview, a 397B-parameter scientific agentic foundation model trained with a unified post-training stack (SFT + multi-task RL + black/white-box agentic RL + on-policy distillation), plus a separate Intern-MemDec-4B memory-augmented extension that adapts to new scientific domains without touching the frozen 397B backbone. The system is explicitly built for long-horizon tool use across heterogeneous scientific evidence (rendered documents, interleaved image-text, time series).",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.13505",
+      "date": "2026-08-14",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260814-0000-omniscientist-an-omni-modal-omni-discipline-ai-scientist",
+      "title": "OmniScientist: An Omni-Modal Omni-Discipline AI Scientist",
+      "summary": "An end-to-end AI scientist that ingests heterogeneous raw scientific evidence (images, signals, audio, video, 3-D structures, trajectories, tables, formulae, graphs) and runs a perception layer + three autonomous agents (ideation, experiment, writeup) inside a deterministic pipeline. Statistical validity, novelty screening, and numerical traceability are enforced in code rather than prompting. Evaluated on 36 real-data cases across 5 discipline families, it produces a compiled manuscript in all 36 and wins 85% of head-to-head judgments against a blind variant that only sees precomputed scalar features.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.13558",
+      "date": "2026-08-14",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260814-0000-vero-can-ai-agents-build-formally-verified-software-repositories",
+      "title": "Vero: Can AI Agents Build Formally Verified Software Repositories?",
+      "summary": "The first benchmark for joint implementation + proof synthesis at repository scale: 43 multi-module Lean 4 instances drawn from real Python/Dafny/Verus/Coq projects across crypto protocols, distributed systems, and more, with curated specs and reference implementations. Frontier coding-agent configs with Lean toolchain access fully solve only 27 of 43 and close zero specs on the hardest repositories.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.13522",
+      "date": "2026-08-14",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260813-0000-ai4ai-at-test-time-strong-to-weak-capability-transfer-via-harnes",
       "title": "AI4AI at Test-Time: Strong-to-Weak Capability Transfer via Harnesses",
