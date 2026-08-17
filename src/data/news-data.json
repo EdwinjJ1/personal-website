@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-14T13:59:00.000Z",
+  "lastUpdated": "2026-08-17T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-17",
+      "label": "August 17, 2026"
+    },
     {
       "value": "2026-08-14",
       "label": "August 14, 2026"
@@ -467,6 +471,116 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260817-0903-bank-leumi-partners-with-galaxy-to-bring-btc-eth-sol-trading-to-",
+      "title": "Bank Leumi Partners with Galaxy to Bring BTC, ETH, SOL Trading to 2.5M Israeli Customers in 2027",
+      "summary": "Bank Leumi — Israel's largest lender — will let its ~2.5M retail customers buy, hold and sell Bitcoin, Ether, and Solana directly inside its mobile banking app starting in early 2027. Galaxy Digital supplies trading infrastructure (GalaxyOne Institutional) and custody (Custody Infrastructure, formerly GK8). Final sign-off from the Bank of Israel is still pending. This is Leumi's second attempt — a 2022 Paxos partnership was shelved when regulators declined approval.",
+      "tag": "PRODUCT",
+      "source": "Btcusa",
+      "sourceUrl": "https://btcusa.com/bank-leumi-bitcoin-ether-solana-trading/",
+      "date": "2026-08-17",
+      "time": "09:03",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260817-0903-bitgo-captures-27-5-of-26-6b-real-world-asset-market-overtakes-s",
+      "title": "BitGo Captures 27.5% of $26.6B Real-World Asset Market, Overtakes Securitize, Ondo, BlackRock",
+      "summary": "Token Terminal data (Aug 15, 18:00 UTC) shows BitGo now holds $7.3B in TVL across real-world asset issuers — 27.5% of the $26.6B sector — ranking first among 21 tracked issuers. Securitize is second at 14.9% ($4.0B), Ondo Finance third at 13.4% ($3.6B), and BlackRock fourth at 10.3% ($2.7B). The RWA market as a whole has grown 156.4% over the measurement period, with Ethereum hosting 56.6% of issuer TVL.",
+      "tag": "PRODUCT",
+      "source": "Cryptotimes",
+      "sourceUrl": "https://www.cryptotimes.io/2026/08/16/bitgo-takes-lead-in-26-6b-real-world-asset-market-with-27-5-share/",
+      "date": "2026-08-17",
+      "time": "09:03",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260817-0903-cboe-bzx-files-for-first-3x-leveraged-bitcoin-and-ether-etfs-in-",
+      "title": "Cboe BZX Files for First 3x Leveraged Bitcoin and Ether ETFs in the U.S.",
+      "summary": "Cboe's BZX Exchange filed proposed rule change SR-CboeBZX-2026-065 (submitted Aug 10, 2026; publicly reported Aug 16) to list the first 3x leveraged Bitcoin and Ether ETFs in the United States. The funds, sponsored by Volatility Shares LLC, target 3x daily performance of Bitcoin and Ether via CME futures rather than spot. Critically, the Bitcoin fund is structured as a commodity pool under CFTC oversight rather than the Investment Company Act — a novel legal architecture that lets it bypass the SEC's investment-company framework.",
+      "tag": "PRODUCT",
+      "source": "Btcusa",
+      "sourceUrl": "https://btcusa.com/cboe-seeks-sec-approval-first-3x-leveraged-bitcoin-ether-etfs/",
+      "date": "2026-08-17",
+      "time": "09:03",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260817-0903-tether-ceo-denies-plans-for-proprietary-blockchain-days-after-fi",
+      "title": "Tether CEO Denies Plans for Proprietary Blockchain Days After First-Ever KPMG Full Audit",
+      "summary": "Tether CEO Paolo Ardoino publicly denied on X (Aug 15) that Tether is building its own blockchain, after CoinMarketCap had grouped Tether with Stripe (Tempo) and Circle (Arc) as \"stablechain\" issuers. The clarification came just days after Tether completed its first-ever full independent financial statement audit with KPMG U.S., which issued an unqualified opinion on Tether International Limited's 2025 financials. USDT supply stands at ~184.6B with >60% stablecoin market share.",
+      "tag": "POLICY",
+      "source": "Cryptotimes",
+      "sourceUrl": "https://www.cryptotimes.io/2026/08/16/tether-ceo-denies-blockchain-plans-as-stablecoin-operations-grow/",
+      "date": "2026-08-17",
+      "time": "09:03",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260817-0903-world-liberty-financial-wins-conditional-occ-trust-bank-charter-",
+      "title": "World Liberty Financial Wins Conditional OCC Trust Bank Charter for $4B USD1 Stablecoin",
+      "summary": "The Office of the Comptroller of the Currency granted World Liberty Trust Company preliminary conditional approval to operate as a national trust bank, moving USD1 stablecoin issuance under direct federal supervision. USD1's ~$4B market cap makes it the fourth-largest stablecoin. The charter shifts issuance away from BitGo Bank & Trust, which had served as USD1's exclusive issuer/custodian. World Liberty joins Ripple, Fidelity, Paxos, and Circle among OCC-conditionally-approved crypto firms. The charter does not include FDIC insurance or a Fed master account.",
+      "tag": "POLICY",
+      "source": "Btcusa",
+      "sourceUrl": "https://btcusa.com/world-liberty-financial-wins-conditional-trust-charter-to-put-usd1-under-federal-supervision/",
+      "date": "2026-08-17",
+      "time": "09:03",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260817-0000-agentrewind-recoverable-execution-for-long-horizon-llm-agents",
+      "title": "AgentRewind: Recoverable Execution for Long-Horizon LLM Agents",
+      "summary": "Long-horizon agents suffer cascading errors: a bad early action corrupts both the agent's context and the environment, and subsequent \"fixes\" can't undo it because the world has moved on. AgentRewind records aligned checkpoints of (agent context, controlled environment) so the agent can rewind to any earlier state and resume execution with information from prior attempts. The companion MettleBench evaluates long-horizon engineering tasks with checklists of related requirements.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.14380",
+      "date": "2026-08-17",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260817-0000-intern-s2-mobius-foundation-model-with-decoupled-knowledge-and-r",
+      "title": "Intern-S2-Mobius: Foundation Model with Decoupled Knowledge and Reasoning",
+      "summary": "Introduces Mobius-v0, a knowledge-reasoning-separation architecture with one globally shared Memory (FFN) storing knowledge vectors plus multiple Reasoners (Self-Attn) that iteratively query it via hidden-state carriers. A 7B model trained from scratch matches a strong 7B Transformer baseline using only 62.6% of the training tokens , and the continually-pretrained Intern-S2-Mobius (from Qwen3.5-35B) matches the baseline downstream score while delivering nearly 4× end-to-end inference speedup .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.14290",
+      "date": "2026-08-17",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260817-0000-mathform-scaling-mathematical-autoformalization-with-knowledge-r",
+      "title": "MathForm: Scaling Mathematical Autoformalization with Knowledge Retrieval and Verification-Guided Refinement",
+      "summary": "Autoformalization to Lean 4 / Mathlib has been bottlenecked by library-specific knowledge and brittle single-pass generation. MathForm (a) retrieves relevant Mathlib definitions and prior formalizations before generation, (b) revises outputs using compiler diagnostics and semantic-consistency feedback, and (c) produces FormalVerse , a Lean 4 dataset of ~ 367K verified examples across diverse mathematical domains. The resulting MathForm-8B reaches 88.06% Syntax-Check Pass@8 and 72.3% (truncated in abstract) type-correct rate across six Lean 4 benchmarks, after SFT + RL.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.14221",
+      "date": "2026-08-17",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260817-0000-sheetcompass-hierarchical-relation-graphs-for-agentic-spreadshee",
+      "title": "SheetCompass: Hierarchical Relation Graphs for Agentic Spreadsheet Reasoning",
+      "summary": "Spreadsheet reasoning is a notorious failure mode for LLMs because real workbooks hide cross-table associations, fine-grained column dependencies, and complex spatial layouts that get flattened away by linearization. SheetCompass builds a hierarchical graph across worksheets, keeps task-relevant state in memory, and dispatches an agentic LLM that reasons over the global spatial context instead of a serialized string dump.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.14452",
+      "date": "2026-08-17",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260817-0000-wyvern-an-agentic-framework-for-generating-grounded-multimodal-r",
+      "title": "Wyvern: An Agentic Framework for Generating Grounded Multimodal Reports",
+      "summary": "Wyvern is a multi-agent framework for synthesizing grounded technical reports that mix text, tables, images, and citations end-to-end. The pipeline emphasizes information grounding via a claims auto-revision stage and unifies multimodal outputs into a single report schema. Human evaluation finds figure informativeness beats a recent baseline in 87% of cases; reports rated more useful than 3 alternatives in 63–100% of instances; automated metrics show up to 2.3× citation recall and 1.6× citation precision gains.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.14446",
+      "date": "2026-08-17",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "industry-20260814-0914-cardinal-glass-to-install-world-first-carbon-capture-system-at-f",
       "title": "Cardinal Glass to Install World-First Carbon Capture System at Float Glass Plant",
