@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-17T13:59:00.000Z",
+  "lastUpdated": "2026-08-18T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-18",
+      "label": "August 18, 2026"
+    },
     {
       "value": "2026-08-17",
       "label": "August 17, 2026"
@@ -471,6 +475,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260818-0000-an-empirical-study-of-training-pixel-space-text-to-image-diffusi",
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "summary": "Pixel-space diffusion models are usually dismissed as too expensive vs. latent diffusion, but no large-scale recipe had been published. The authors run a comprehensive empirical study and find that direct large-scale pixel-space pre-training converges much slower than latent, but a latent-to-pixel post-training strategy recovers the gap. They systematically ablate weight init, data mix, prediction target, decoder, and noise schedule, and produce a recipe whose pixel-space models match or beat their latent-space counterparts at 3.18–4.75× inference speedup .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.16887",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260818-0000-clawgym-ii-exploring-black-box-rl-on-agent-harness",
+      "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+      "summary": "RL training of long-horizon LLM agents through complex agent harnesses has been hard because (a) the harness is opaque, (b) multi-turn trajectories explode, and (c) training/inference consistency is fragile. ClawGym II provides a sandboxed concurrent-rollout infra , a serving proxy at the model boundary that captures calls into prefix trees, and a unified framework that runs both PPO and GRPO over the reconstructed tree. A new mix-harness training mode lets a single model be optimized across heterogeneous harnesses (OpenClaw and Claude Code are tested together). With Qwen3-30A3B, Pass@1 on ClawGym-Bench improves by 9.98 through OpenClaw and 14.81 through Claude Code, stable across 200–400 optimization steps.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.16798",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260818-0000-don-t-drop-the-baton-long-horizon-robot-manipulation-via-agentic",
+      "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
+      "summary": "Long-horizon robot manipulation chains many contact-rich VLA skills into one multi-stage task, and today's \"LLM plans, VLA executes\" recipes fail twice: (1) whole-task exploration is multiplicative in stages (T^K episodes for K stages), and (2) VLA primitives carry an exit but no entry condition, so a subtask can succeed in a form its successor cannot use. BATON turns each subtask into the unit of exploration (cost becomes additive: T*K) and equips exploration with a transition-aware memory : a verifier-agent governs the VLA's invocation, a handoff transition restores the entry state, and a lookahead transition picks the strategy whose outcome the successor can inherit. No parameters are updated.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.16889",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260818-0000-improving-the-matrix-multiplication-exponent-with-modern-optimiz",
+      "title": "Improving the Matrix Multiplication Exponent with Modern Optimization and AlphaEvolve",
+      "summary": "A new upper bound on the matrix multiplication exponent ω < 2.371177 (vs. the previous record 2.371339 from Alman et al., 2025). The authors reformulate the combination-loss-analysis optimization problem so it can be solved in a larger setting, design a new ML-driven optimizer, then refine it with AlphaEvolve — the same evolutionary-coding loop DeepMind has used to rediscover Strassen-style tricks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.16884",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260818-0000-proteus-incremental-memory-activation-for-long-context-sequence-",
+      "title": "Proteus: Incremental Memory Activation for Long-Context Sequence Modeling",
+      "summary": "Memory-based sequence models (Titans, Comba, SWLA, Hope-Attention) expose a static memory of fixed capacity for the whole context. Early tokens then over-occupy that memory with no compression pressure, \"polluting\" it and starving later context. Proteus makes the active memory grow over time — early tokens get a small budget and are forced to compress; later tokens unlock fresh capacity. Plug-in, parameter-free, drops into SWLA / Comba / Titans / Hope-Attention, and gains grow with sequence length .",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.16844",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "industry-20260817-0903-bank-leumi-partners-with-galaxy-to-bring-btc-eth-sol-trading-to-",
       "title": "Bank Leumi Partners with Galaxy to Bring BTC, ETH, SOL Trading to 2.5M Israeli Customers in 2027",
