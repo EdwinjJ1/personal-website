@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-08-17",
-  "latestLabel": "August 17, 2026",
+  "latestDate": "2026-08-18",
+  "latestLabel": "August 18, 2026",
   "items": [
     {
-      "id": "industry-20260817-0903-bank-leumi-partners-with-galaxy-to-bring-btc-eth-sol-trading-to-",
-      "title": "Bank Leumi Partners with Galaxy to Bring BTC, ETH, SOL Trading to 2.5M Israeli Customers in 2027",
-      "tag": "PRODUCT",
-      "date": "2026-08-17",
-      "time": "09:03",
-      "category": "industry"
+      "id": "research-20260818-0000-an-empirical-study-of-training-pixel-space-text-to-image-diffusi",
+      "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
+      "tag": "RESEARCH",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
     },
     {
-      "id": "industry-20260817-0903-bitgo-captures-27-5-of-26-6b-real-world-asset-market-overtakes-s",
-      "title": "BitGo Captures 27.5% of $26.6B Real-World Asset Market, Overtakes Securitize, Ondo, BlackRock",
-      "tag": "PRODUCT",
-      "date": "2026-08-17",
-      "time": "09:03",
-      "category": "industry"
+      "id": "research-20260818-0000-clawgym-ii-exploring-black-box-rl-on-agent-harness",
+      "title": "ClawGym II: Exploring Black-Box RL on Agent Harness",
+      "tag": "RESEARCH",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
     },
     {
-      "id": "industry-20260817-0903-cboe-bzx-files-for-first-3x-leveraged-bitcoin-and-ether-etfs-in-",
-      "title": "Cboe BZX Files for First 3x Leveraged Bitcoin and Ether ETFs in the U.S.",
-      "tag": "PRODUCT",
-      "date": "2026-08-17",
-      "time": "09:03",
-      "category": "industry"
+      "id": "research-20260818-0000-don-t-drop-the-baton-long-horizon-robot-manipulation-via-agentic",
+      "title": "Don't Drop the BATON: Long-Horizon Robot Manipulation via Agentic Subtask Exploration and Transition-aware Memory",
+      "tag": "RESEARCH",
+      "date": "2026-08-18",
+      "time": "00:00",
+      "category": "research"
     }
   ]
 } as const;
