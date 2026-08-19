@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-18T13:59:00.000Z",
+  "lastUpdated": "2026-08-19T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-19",
+      "label": "August 19, 2026"
+    },
     {
       "value": "2026-08-18",
       "label": "August 18, 2026"
@@ -475,6 +479,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260819-0000-autoresearch-insight-in-hallucination-out",
+      "title": "AutoResearch: Insight In, Hallucination Out",
+      "summary": "A two-stage autonomous research system that decouples Idea Generation from Idea Execution. Idea Generation continuously fuses emerging signals with accumulated knowledge and uses multi-model generation + cross-review; Idea Execution decomposes plans into experiments with independent evidence-based review. On RSICD, an AutoResearch idea bumps recall from 32.84 to 34.69 while recording only 5 audit-confirmed issues vs 11–27 for competing systems.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.17906",
+      "date": "2026-08-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260819-0000-procedural-content-metageneration-via-program-search-and-continu",
+      "title": "Procedural Content Metageneration via Program Search and Continual Abstraction Discovery",
+      "summary": "Evolves complete Python procedural content generators for Sokoban, Zelda, Dangerous Dave, and Lode Runner using LM mutation/crossover, plus CAD (Continual Abstraction Discovery) that extracts reusable primitives into a run-specific helper module. CAD raises mean final best fitness across all eight domain×API comparisons; learned libraries get adopted by most later programs and repeatedly rediscover validation, reachability, and structural utilities.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.17947",
+      "date": "2026-08-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260819-0000-stagedworkspace-a-versioned-workspace-for-knowledge-work-agents",
+      "title": "StagedWorkspace: A Versioned Workspace for Knowledge-Work Agents",
+      "summary": "Proposes a workspace-state contract that binds parsed records, review diffs, and submitted artifacts to content hashes of native files. With dual parsed/native access, Gemini 3.1 Pro jumps from 29.3% to 63.9% on OfficeQA, and GPT-5.4 Nano climbs from 25.5 to 42.1 on APEX-Agents — a 2x lift with no model changes.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18050",
+      "date": "2026-08-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260819-0000-tokeval-a-tokenizer-evaluation-suite",
+      "title": "TokEval: A Tokenizer Evaluation Suite",
+      "summary": "A principled tokenizer evaluation framework that goes beyond fertility and compression, measuring UTF-8 boundary integrity, digit place-value alignment, and other structurally meaningful properties. Information-theoretic metrics predict language modeling ability (Spearman ρ up to 0.80), while structure-sensitive metrics correlate with downstream task accuracy across linguistic, math, and code benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18062",
+      "date": "2026-08-19",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260819-0000-tuned-diffusion-sampling-with-bayesian-optimization-oys",
+      "title": "Tuned Diffusion Sampling with Bayesian Optimization (OYS)",
+      "summary": "Treats diffusion-model timestep selection as a black-box optimization problem and optimizes sample quality directly with Bayesian Optimization. A 5-step OYS schedule retains 89–94% of a 50-step schedule's quality, slashing inference cost by 10x. Beats \"Align Your Steps\" on text-to-image and improves inpainting, working with both simple Euler and DPM-Solver++ samplers without retraining.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18040",
+      "date": "2026-08-19",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260818-0000-an-empirical-study-of-training-pixel-space-text-to-image-diffusi",
       "title": "An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models",
