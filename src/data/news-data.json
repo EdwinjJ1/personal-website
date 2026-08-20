@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-19T13:59:00.000Z",
+  "lastUpdated": "2026-08-20T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-20",
+      "label": "August 20, 2026"
+    },
     {
       "value": "2026-08-19",
       "label": "August 19, 2026"
@@ -479,6 +483,105 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260820-0000-beyond-teacher-likelihood-group-calibrated-on-policy-distillatio",
+      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+      "summary": "Diagnoses a real failure mode in on-policy distillation: token-level teacher likelihoods reward locally fluent continuations that miss evidence scattered across long inputs. Proposes group-calibrated OPD that uses response-level verifier signals (graded rewards reflecting partial success) instead of raw teacher probability, with calibration across candidate groups.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19181",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-editbridge-towards-faithful-and-efficient-ultra-high-resolution-",
+      "title": "EDITBRIDGE: Towards Faithful and Efficient Ultra-High-Resolution Image Editing",
+      "summary": "Reformulates ultra-HR image editing as a *diffusion bridge* — structured data-to-data translation from a low-res edited result to its 4K counterpart, conditioned on the original HR source — instead of the usual noise-to-image denoising. A prior-guided block-wise sparse attention exploits semantic correspondences from the first-stage edit to restrict cross-image interactions to spatially aligned regions, killing the quadratic cost of attending over a 4K feature map.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18063",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-from-corpora-to-co-evolving-capabilities-capability-centric-data",
+      "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
+      "summary": "A capability-driven data infrastructure for generalist image generation that decouples three interoperable data engines (T2I grounding, inter-image transformation, image-knowledge association) and aligns them with a multi-stage curriculum that co-evolves task composition, visual-concept distribution, quality, and resolution along the dependency order of capability acquisition. The pipeline curates 440M T2I images, 120M editing pairs, and 27M image-entity pairs, then trains 3B/6B multimodal diffusion models from scratch and reports SOTA on CPI-Bench.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18076",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-gs-vla-plug-and-play-viewpoint-canonicalization-for-frozen-vla-p",
+      "title": "GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting",
+      "summary": "A lightweight, retraining-free adapter for Vision-Language-Action policies: when the deployment camera angle drifts from the training view, GS-VLA renders a canonical-view observation via 3D Gaussian Splatting and feeds it to the frozen VLA. First work to use Gaussian Splatting specifically as observation-space adaptation for VLAs, not for policy learning itself.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19066",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-multi-agent-ai-system-for-radiology-report-structuring-and-quali",
+      "title": "Multi-Agent AI System for Radiology Report Structuring and Quality Assurance with Independent Radiologist Evaluation",
+      "summary": "A locally deployed, multi-agent pipeline (regex + local LLM specialists) that structures 22,270 sentences from 638 chest/abdominal/pelvis CT reports into standardized anatomical sections, detects Findings↔Impression mismatches, gender-anatomy conflicts, and undocumented critical-finding communications, and was independently evaluated by two board-certified radiologists on a 45-report subset. They agreed the system correctly restructured 69%, incorrectly 4%, disagreed on 27%, and unanimously found no clinically important omissions or fabricated content.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18072",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-on-the-fragility-of-self-improving-agents-variance-task-order-an",
+      "title": "On the Fragility of Self-Improving Agents: Variance, Task Order, and Underspecification",
+      "summary": "A rigorous re-evaluation of two memory-based self-improving agents that quantifies variance across seeds and shows that the agent's reported \"improvement\" is heavily dependent on the *order* in which tasks are presented — meaning prior SOTA claims were riding on a hidden curriculum. The authors trace the failure to task and environment underspecification, and show that adding rubrics and environment feedback into the memory bank partially closes the gap, framing underspecification as the root cause rather than a tuning nuisance.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18066",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-reweigh-the-evidence-calibrating-token-level-ordinal-visual-evid",
+      "title": "ReWEIGH the Evidence: Calibrating Token-Level Ordinal Visual Evidence to Mitigate Hallucinations in Large Vision-Language Models",
+      "summary": "A decoding-time hallucination mitigation for LVLMs. Instead of pooling raw visual-token logits (whose magnitudes aren't comparable across positions), the method projects each visual state through the output head and uses vocabulary ranks — an ordinal, position-invariant evidence signal — to reweight the next-token distribution so image-implausible tokens get suppressed.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19075",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-spade-self-play-in-adaptive-synthetic-executable-environments",
+      "title": "SPADE: Self-Play in Adaptive Synthetic Executable Environments",
+      "summary": "A self-play RL framework where a single LLM simultaneously acts as an Environment Designer (writing executable Gym-style training environments) and a Reasoning Agent that learns inside them. The environments are adaptive: the designer reacts to the agent's current skill frontier so the goal distribution keeps expanding as the learner scales, instead of freezing on a fixed task pool.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19197",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260820-0000-test-time-scaling-in-the-wild-why-exploitation-not-exploration-i",
+      "title": "Test-Time Scaling in the Wild: Why Exploitation, Not Exploration, Is the Bottleneck",
+      "summary": "First compute-normalized comparison of five TTS families (best-of-N, beam search, self-refine, etc.) across five open-ended generation benchmarks — medicine, law, finance, general chat, creative writing — instead of the usual math/code stress tests. Headline finding: TTS gains collapse outside easy-to-verify domains, and the binding constraint is how to exploit verifier feedback, not how to explore.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.18931",
+      "date": "2026-08-20",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260819-0000-autoresearch-insight-in-hallucination-out",
       "title": "AutoResearch: Insight In, Hallucination Out",
