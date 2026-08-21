@@ -1,28 +1,28 @@
 export const newsPreview = {
-  "latestDate": "2026-08-20",
-  "latestLabel": "August 20, 2026",
+  "latestDate": "2026-08-21",
+  "latestLabel": "August 21, 2026",
   "items": [
     {
-      "id": "research-20260820-0000-beyond-teacher-likelihood-group-calibrated-on-policy-distillatio",
-      "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
+      "id": "research-20260821-0000-ai4ai-bench-benchmarking-llm-agents-in-algorithmic-design-for-re",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
       "tag": "RESEARCH",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260820-0000-editbridge-towards-faithful-and-efficient-ultra-high-resolution-",
-      "title": "EDITBRIDGE: Towards Faithful and Efficient Ultra-High-Resolution Image Editing",
+      "id": "research-20260821-0000-break-it-down-pass-it-on-cross-task-skill-transfer-in-llm-agents",
+      "title": "Break It Down, Pass It On: Cross-Task Skill Transfer in LLM Agents",
       "tag": "RESEARCH",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "time": "00:00",
       "category": "research"
     },
     {
-      "id": "research-20260820-0000-from-corpora-to-co-evolving-capabilities-capability-centric-data",
-      "title": "From Corpora to Co-Evolving Capabilities: Capability-Centric Data Design for Generalist Image Generation",
+      "id": "research-20260821-0000-learning-when-to-think-adaptive-reasoning-for-test-time-compute-",
+      "title": "Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation",
       "tag": "RESEARCH",
-      "date": "2026-08-20",
+      "date": "2026-08-21",
       "time": "00:00",
       "category": "research"
     }

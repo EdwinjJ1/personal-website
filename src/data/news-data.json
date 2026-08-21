@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-20T13:59:00.000Z",
+  "lastUpdated": "2026-08-21T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-21",
+      "label": "August 21, 2026"
+    },
     {
       "value": "2026-08-20",
       "label": "August 20, 2026"
@@ -483,6 +487,61 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260821-0000-ai4ai-bench-benchmarking-llm-agents-in-algorithmic-design-for-re",
+      "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
+      "summary": "A new benchmark that isolates a single scientific question: can an LLM agent design a better training algorithm? Ten frozen research repositories span ten training-algorithm families; an agent has 4 hours on a single B300 to rewrite the training algorithm, the code is rerun from scratch for up to 12 hours, and a hidden evaluator scores the result against the repo's original algorithm under matched compute. Crucially, no agent can win by collecting more data or tuning hyperparameters — only by changing the algorithm itself.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20318",
+      "date": "2026-08-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260821-0000-break-it-down-pass-it-on-cross-task-skill-transfer-in-llm-agents",
+      "title": "Break It Down, Pass It On: Cross-Task Skill Transfer in LLM Agents",
+      "summary": "A controlled study of how the way skills are induced from completed tasks affects whether LLM agents can reuse them later. Two axes are isolated: task-level vs. subtask-level induction, and text vs. code skill formats. Result: task-level skills mostly push the agent below its no-memory baseline, while subtask-level skills lift it above — and text skills transfer better than code skills. The two complementary properties, specificity (match to real tasks) and abstractness (relevance distribution), explain most of the variance.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20274",
+      "date": "2026-08-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260821-0000-learning-when-to-think-adaptive-reasoning-for-test-time-compute-",
+      "title": "Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation",
+      "summary": "A small, sharp paper that lets the model choose its own reasoning depth inside GRPO. The model emits a first-token mode flag — NoThink (answer fast), Short , or Long — learned end-to-end via a shaped reward plus per-mode token caps so the modes don't collapse. On a 1.5B distilled model trained on MATH, the three modes emerge cleanly, and the brief modes end up more accurate than Long — evidence the router is actually sorting problems by difficulty instead of just running longer.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20256",
+      "date": "2026-08-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260821-0000-midtool-mid-training-data-synthesis-for-agentic-tool-use",
+      "title": "MidTool: Mid-training Data Synthesis for Agentic Tool Use",
+      "summary": "Argues that mid-training — not just SFT or RL — is the right stage to bake agentic tool use into a base model. MidTool is an open corpus-construction pipeline that mixes large-scale web/PDF/code data with synthesized supervision from real tool APIs, MCP skills, and document-grounded workflows, and explicitly targets four behaviours: recognizing tool affordances, grounding arguments, composing call workflows, and recovering from incomplete information. Mid-training Qwen3-4B-Base and Qwen3-8B-Base on MidTool-Mix, then continuing with SFT + RL, beats baselines on agentic tool-use benchmarks.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20314",
+      "date": "2026-08-21",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260821-0000-phantom-gains-auditing-self-improvement-against-a-measured-null",
+      "title": "Phantom Gains: Auditing Self-Improvement Against a Measured Null",
+      "summary": "A controlled audit of LoRA self-training on Qwen3-8B that pushes an untrained frozen control through the identical pipeline and finds seven measurement artifacts that each invert a reported finding without the control. A simple greedy-decode ledger manufactures capability changes on an untrained model (mostly an inference-batching artifact), and the popular \"expansion statistic\" assigns that same untrained model a 0.280 acquisition rate. The authors replace the natural threshold repair with a per-problem exact test against a pooled baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20290",
+      "date": "2026-08-21",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260820-0000-beyond-teacher-likelihood-group-calibrated-on-policy-distillatio",
       "title": "Beyond Teacher Likelihood: Group-Calibrated On-Policy Distillation for Long-Context Reasoning",
