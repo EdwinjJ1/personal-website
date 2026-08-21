@@ -100,6 +100,7 @@ export default function RootLayout({
       'Entrepreneurship',
     ],
     sameAs: [
+      'https://www.linkedin.com/in/evan-jia-152108369/',
       'https://github.com/EdwinjJ1',
     ],
   };

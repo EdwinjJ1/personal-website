@@ -9,6 +9,15 @@ interface ProjectFlagshipShowcaseProps {
 }
 
 function getInspectorProfile(project: Project) {
+  if (project.title === 'Athena') {
+    return {
+      mode: 'active project memory',
+      thesis: 'Keeps the team’s shared picture current by going out and asking for updates.',
+      signal: 'Discord reply -> Mistral delta -> live graph',
+      angle: 'An award-winning 24-hour build for finding blockers and contradictions before they spread.',
+    };
+  }
+
   if (project.title === 'Roundtable') {
     return {
       mode: 'workflow control plane',

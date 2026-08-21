@@ -1,4 +1,4 @@
-export type ProjectStatus = 'Live' | 'In Development' | 'Ongoing' | 'Archived';
+export type ProjectStatus = 'Live' | 'In Development' | 'Ongoing' | 'Completed' | 'Archived';
 
 export type ProjectCategory =
   | 'Education'
@@ -28,6 +28,34 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 110,
+    title: 'Athena',
+    tagline: 'A project second brain that actively keeps teams aligned.',
+    description:
+      'Award-winning 24-hour hackathon build: a Discord bot and living knowledge graph that chase project updates and surface cross-team contradictions.',
+    longDescription:
+      'Built at the UNSW × Mistral AI × Atlassian Hackathon, Athena turns project coordination into an active loop. A Discord bot asks people for updates, Mistral extracts grounded graph changes, and a live knowledge graph shows tasks, blockers, dependencies, and conflicting team assumptions. The project won the Susquehanna Prize.',
+    technologies: ['Next.js', 'TypeScript', 'Mistral API', 'Discord.js', 'SQLite'],
+    category: 'AI & Automation',
+    featured: true,
+    status: 'Ongoing',
+    githubUrl: 'https://github.com/EdwinjJ1/unsw-mistral-hackathon-2026',
+    icon: 'network',
+    accent: 'rgb(var(--p-teal))',
+    metrics: [
+      { label: 'Build sprint', value: '24h' },
+      { label: 'Award', value: 'SIG Prize' },
+      { label: 'Core loop', value: 'Live' },
+    ],
+    highlights: [
+      'Discord bot that proactively collects project updates',
+      'Mistral-powered triage, extraction, composition, and contradiction detection',
+      'Live graph of teams, tasks, blockers, and dependencies',
+      'Source-traceable updates rather than opaque AI summaries',
+      'Susquehanna Prize winner at UNSW × Mistral AI × Atlassian Hackathon',
+    ],
+  },
   {
     id: 109,
     title: 'Roundtable',
@@ -125,9 +153,9 @@ export const projects: Project[] = [
     title: 'FinalBoss',
     tagline: 'Beat any exam with AI.',
     description:
-      'AI exam-prep workspace that turns notes and past papers into timed mocks, targeted practice, and Socratic tutor feedback.',
+      'AI exam-prep workspace used by 150+ users to turn notes and past papers into timed mocks, targeted practice, and Socratic tutor feedback.',
     longDescription:
-      'FinalBoss is a focused AI study product: one workspace per exam, upload or paste notes and past papers, generate mock exams or practice sets, then use an AI tutor to identify weak spots without simply giving away answers. The business model is already mapped with free, basic, and Practice Pro tiers, Stripe subscriptions, Firebase auth, and a campus-first UNSW launch plan.',
+      'FinalBoss is a focused AI study product used by 150+ users: one workspace per exam, upload or paste notes and past papers, generate mock exams or practice sets, then use an AI tutor to identify weak spots without simply giving away answers. The business model is already mapped with free, basic, and Practice Pro tiers, Stripe subscriptions, Firebase auth, and a campus-first UNSW launch plan.',
     technologies: ['Next.js 16', 'Firebase', 'Stripe', 'Anthropic', 'Tailwind CSS', 'Judge0'],
     category: 'Education',
     featured: true,
@@ -139,11 +167,12 @@ export const projects: Project[] = [
     heroImage: '/images/projects/finalboss-home.png',
     accent: 'rgb(var(--p-sage-mist))',
     metrics: [
+      { label: 'Users', value: '150+' },
       { label: 'Gross margin', value: '96%' },
-      { label: 'MVP scope', value: '6 wk' },
       { label: 'Pro plan', value: 'A$39' },
     ],
     highlights: [
+      '150+ users on the platform',
       'Exam workspaces with uploaded materials',
       'Mock and practice generation',
       'AI grading and weakness feedback',
@@ -209,6 +238,29 @@ export const projects: Project[] = [
       'Gemini CLI + Claude Code Integration',
       'Git State & Relevant File Detection',
       'Terminal-first Workflow',
+    ],
+  },
+  {
+    id: 111,
+    title: 'Fake News Detection',
+    tagline: 'Leakage-aware NLP experiments across classical ML, deep learning, and BERT.',
+    description:
+      'UNSW academic group project comparing TF-IDF, BiLSTM, and title-only BERT on 44,267 labelled English news articles.',
+    longDescription:
+      'Contributed to the dataset audit, de-duplication pipeline, model evaluation, and error analysis for a COMP9444 group project. The team identified 1,399 overlapping train-test articles, rebuilt leakage-controlled splits, and compared TF-IDF with Logistic Regression, an embedding-based BiLSTM, and title-only BERT fine-tuning. A tuned character TF-IDF model achieved 99.43% accuracy and 99.42% F1 on 8,084 de-duplicated test articles; the report also documented source and writing-style artifacts that limit real-world generalisation.',
+    technologies: ['Python', 'PyTorch', 'Hugging Face Transformers', 'BERT', 'Scikit-learn', 'Pandas'],
+    category: 'Education',
+    featured: false,
+    status: 'Completed',
+    link: 'https://huggingface.co/datasets/ErfanMoosaviMonazzah/fake-news-detection-dataset-English',
+    linkLabel: 'View dataset',
+    icon: 'brain',
+    highlights: [
+      'Audited missing values, class balance, duplicates, and cross-split leakage',
+      'Identified 1,399 overlapping train-test articles and created de-duplicated splits',
+      'Compared TF-IDF + Logistic Regression, embedding + BiLSTM, and title-only BERT',
+      'Selected checkpoints and models using validation F1',
+      'Analysed dataset-specific source, style, punctuation, and formatting signals',
     ],
   },
   {

@@ -13,7 +13,7 @@ I'm ambitious in the slightly-too-honest way: I want to build something that gen
 - **Name:** 贾岱林 / Evan Lin
 - **Age:** 19
 - **Location:** Sydney, Australia
-- **Studying:** Computer Science at UNSW (2025–2028 expected)
+- **Studying:** Computer Science at UNSW (2025–2027 expected)
 - **Languages:** English & Chinese (fluent in both)
 - **Personality:** ENTJ — strategist who likes shipping. Comfortable leading, comfortable building.
 
@@ -27,7 +27,7 @@ I'm ambitious in the slightly-too-honest way: I want to build something that gen
 
 - **Founded and led a startup at 18.** CEO of Hypha (Beijing), a 7-person team across engineering, design, and legal. Took an NFT product from zero to ¥100K+ single-day revenue. Owned the roadmap, the architecture, and most of the backend.
 - **Shipped open-source AI tools that people use.** Chiron Prompt (prompt optimization), a 3D-print skill for Claude, and others — used by developers internationally.
-- **Built real products solo.** ChronoMap (an interactive heritage map), FinalBoss (AI exam prep), a study platform that had paying subscribers, and this website.
+- **Built real products solo.** ChronoMap (an interactive heritage map), FinalBoss (AI exam prep used by 150+ users), a study platform that had paying subscribers, and this website.
 
 ## How to think about me
 
@@ -38,5 +38,6 @@ If you want the formal version, see the [resume](https://evanlin.site/resume.md)
 ## Contact
 
 - **Email:** jiaedwin0605@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/evan-jia-152108369/
 - **GitHub:** https://github.com/EdwinjJ1
 - **Website:** https://evanlin.site
