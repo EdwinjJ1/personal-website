@@ -32,11 +32,11 @@ A bilingual camera and lens research database with real specifications, separate
 
 ### FinalBoss — *Beat any exam with AI*
 
-AI exam-prep workspace: create an exam workspace, upload notes and past papers, generate mock exams or practice sets, then use a Socratic AI tutor that finds weak spots without simply giving answers away.
+AI exam-prep workspace used by 150+ users: create an exam workspace, upload notes and past papers, generate mock exams or practice sets, then use a Socratic AI tutor that finds weak spots without simply giving answers away.
 
 **Stack:** Next.js 16 · Firebase · Stripe · Anthropic · Judge0
 
-**Status:** In development · [Site](https://finalboss.cn) · [GitHub](https://github.com/EdwinjJ1/preuni-prexam)
+**Status:** In development · 150+ users · [Site](https://finalboss.cn) · [GitHub](https://github.com/EdwinjJ1/preuni-prexam)
 
 ### ChronoMap — *One map to understand the story behind every place*
 
@@ -53,6 +53,18 @@ Free, open-source prompt enhancer that scans a repository, reads relevant files 
 **Stack:** Node.js · Gemini CLI · Claude Code · JavaScript
 
 **Status:** Live · [GitHub](https://github.com/EdwinjJ1/chiron-prompt)
+
+---
+
+## Academic machine learning
+
+### Fake News Detection — *Leakage-aware NLP model comparison*
+
+COMP9444 group project comparing TF-IDF with Logistic Regression, an embedding-based BiLSTM, and title-only `google-bert/bert-base-uncased` fine-tuning on 44,267 labelled English news articles. I contributed to the dataset audit, de-duplication pipeline, model evaluation, and error analysis. The audit identified 1,399 overlapping train-test articles; after rebuilding leakage-controlled splits, the tuned character TF-IDF model achieved 99.43% accuracy and 99.42% F1 on 8,084 test articles. We also documented source and writing-style artifacts that limit real-world generalisation.
+
+**Stack:** Python · PyTorch · Hugging Face Transformers · BERT · scikit-learn · pandas
+
+**Status:** Completed academic group project · [Dataset](https://huggingface.co/datasets/ErfanMoosaviMonazzah/fake-news-detection-dataset-English) · [BERT](https://huggingface.co/google-bert/bert-base-uncased)
 
 ---
 

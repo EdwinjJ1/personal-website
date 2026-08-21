@@ -10,6 +10,9 @@ interface ProjectListItemProps {
 }
 
 export default function ProjectListItem({ project }: ProjectListItemProps) {
+  const href = project.link ?? project.liveUrl ?? project.githubUrl ?? '/projects';
+  const opensInNewTab = /^https?:\/\//.test(href);
+
   return (
     <li className="showcase-card flex flex-col gap-3 rounded-2xl p-6 sm:flex-row sm:items-center sm:gap-6">
       <span className="accent-text accent-soft-bg flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl">
@@ -42,11 +45,14 @@ export default function ProjectListItem({ project }: ProjectListItemProps) {
       </div>
 
       <Link
-        href={project.liveUrl ?? project.githubUrl ?? '/projects'}
+        href={href}
+        target={opensInNewTab ? '_blank' : undefined}
+        rel={opensInNewTab ? 'noopener noreferrer' : undefined}
         className="accent-text inline-flex flex-shrink-0 items-center gap-1.5 text-sm font-medium transition-all hover:gap-2.5"
       >
         {project.linkLabel ?? 'Open'}
-        <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {opensInNewTab ? <span className="sr-only"> (opens in a new tab)</span> : null}
+        <svg aria-hidden="true" className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </Link>

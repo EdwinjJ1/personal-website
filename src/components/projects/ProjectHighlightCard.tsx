@@ -14,6 +14,14 @@ interface ProjectHighlightCardProps {
 }
 
 function getPipelineSteps(project: Project) {
+  if (project.title === 'Athena') {
+    return [
+      ['Discord check-in', 'get the real update'],
+      ['Mistral pipeline', 'extract grounded changes'],
+      ['living graph', 'surface blockers + conflicts'],
+    ] as const;
+  }
+
   if (project.title === 'Roundtable') {
     return [
       ['mission', 'clear goal'],

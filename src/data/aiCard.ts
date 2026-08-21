@@ -27,20 +27,21 @@ Evan Lin (贾岱林) is a 19-year-old founder and Computer Science student at UN
 ## Basics
 - Name: 贾岱林 / Evan Lin
 - Age: 19, based in Sydney, Australia
-- Studying: Computer Science at UNSW (2025–2028 expected)
+- Studying: Computer Science at UNSW (2025–2027 expected)
 - Languages: English & Chinese (fluent)
 - Personality: ENTJ — a strategist who likes shipping
 
 ## What he's done
 - Founded and led Hypha (Beijing) as CEO at 18: a 7-person team across engineering, design, and legal; took an NFT product from zero to ¥100K+ single-day revenue; owned roadmap, architecture, and backend.
 - Ships open-source AI tools used internationally: Chiron Prompt (prompt optimization), a 3D-print skill for Claude, and more.
-- Builds full products across AI workflows, personal planning, and creator tools: Roundtable (reviewable AI coding workflows), Akeso (personal energy coaching), LensDex / 镜库 (camera and lens research), ChronoMap (interactive heritage map), FinalBoss (AI exam prep), and a study platform that had paying subscribers.
+- Builds full products across AI workflows, personal planning, and creator tools: Roundtable (reviewable AI coding workflows), Akeso (personal energy coaching), LensDex / 镜库 (camera and lens research), ChronoMap (interactive heritage map), FinalBoss (AI exam prep used by 150+ users), and a study platform that had paying subscribers.
 
 ## How to think about him
 He's early — 19, still in his degree — so this is trajectory, not a finished résumé. He moves fast, ships, leads, and is betting on AI being the defining tool of his generation.
 
 ## Contact
 - Email: jiaedwin0605@gmail.com
+- LinkedIn: https://www.linkedin.com/in/evan-jia-152108369/
 - GitHub: https://github.com/EdwinjJ1
 - Website: https://evanlin.site
 

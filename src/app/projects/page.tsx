@@ -34,7 +34,7 @@ export default function ProjectsPage() {
   const liveCount = projects.filter((p) => p.status === 'Live').length;
   const flagshipCount = projects.filter((p) => p.featured).length;
 
-  const flagshipOrder = ['Roundtable', 'Akeso', 'LensDex (镜库)', 'FinalBoss', 'Chrono-Map: Sydney Layers', 'Chiron Prompt Enhancer'];
+  const flagshipOrder = ['Athena', 'Roundtable', 'Akeso', 'LensDex (镜库)', 'FinalBoss', 'Chrono-Map: Sydney Layers', 'Chiron Prompt Enhancer'];
   const highlight = featured.length > 0
     ? [...featured].sort((a, b) => {
         const aIndex = flagshipOrder.indexOf(a.title);

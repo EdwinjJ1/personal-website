@@ -1,79 +1,86 @@
-# Evan Lin (贾岱林) — Resume
+# Evan Jia (贾岱林) - Resume
 
-**Founder · Full-Stack Engineer · UNSW Computer Science**
+**Forward Deployed / Full-Stack AI Engineer**
 
-Sydney, Australia | jiaedwin0605@gmail.com
-GitHub: https://github.com/EdwinjJ1 | Website: https://evanlin.site
-
----
-
-## Summary
-
-19-year-old founder and CS student at UNSW. Built and led a 7-person Web3 startup to ¥100K+ single-day revenue as CEO. Currently shipping open-source AI tools used by developers worldwide. Entrepreneurial and technical, looking to do significant work in an international environment.
+Sydney, Australia | jiaedwin0605@gmail.com<br>
+LinkedIn: https://www.linkedin.com/in/evan-jia-152108369/ | GitHub: https://github.com/EdwinjJ1 | Website: https://evanlin.site
 
 ---
+
+## Profile
+
+Founder and UNSW Computer Science student who turns ambiguous user problems into deployed AI products, working across discovery, architecture, full-stack implementation, deployment, demos, and stakeholder handoff. Led a seven-person startup to RMB 100K+ single-day revenue and recently delivered three award-recognised AI builds.
+
+## Selected AI Projects & Competitions
+
+### Athena - Susquehanna Prize
+
+**UNSW × Mistral AI × Atlassian Hackathon | Jul-Aug 2026**<br>
+Repository: https://github.com/EdwinjJ1/unsw-mistral-hackathon-2026
+
+- Led product architecture and final integration for a 24-hour build: a Discord agent that proactively collects status updates and writes source-traceable changes into a live organisational knowledge graph.
+- Built the TypeScript/Next.js/SQLite graph core and productionised a specialised Mistral pipeline for triage, structured extraction, outbound messaging, document ingestion, and cross-team contradiction detection.
+
+### Lark Loom - Top 3, AI Full-Stack Development
+
+**ByteDance Feishu AI Campus Challenge | Apr-May 2026**<br>
+Repository: https://github.com/EdwinjJ1/lark-loom
+
+- Architected a typed pnpm monorepo, CI quality gates, dual-model LLM routing, function calling, and a Feishu Bitable-backed MemoryStore with six memory types for a chat-native project coordination agent.
+- Implemented WebSocket ingestion with HTTP fallback, message deduplication, task/progress skills, and cross-platform lark-cli execution so the three-person team could build and demo against stable contracts.
+
+### Akeso - Finalist
+
+**ICON × Lyra Innovation Challenge | Jul 2026**<br>
+Repository: https://github.com/EdwinjJ1/akeso
+
+- Shipped an Expo/React Native energy coach with an Express API, Supabase persistence, and grounded Gemini workflows that turn a 20-second check-in into explainable daily planning and nutrition guidance.
+
+### Chiron
+
+**Open-source developer CLI | 2026**<br>
+Repository: https://github.com/EdwinjJ1/chiron-prompt
+
+- Built a repo-aware prompt enhancement engine with installers and terminal workflows for Gemini CLI, Claude Code, Codex TUI, and Claw Code; enriches rough requests with relevant files, git state, risks, and verification steps.
+
+### FinalBoss
+
+**AI exam-prep SaaS | 2026**<br>
+Product: https://finalboss.cn
+
+- Built a Next.js/Firebase/Stripe workspace used by 150+ users, transforming uploaded notes and past papers into timed mocks, targeted practice, AI grading, weakness analysis, and Socratic tutoring.
+
+### Fake News Detection
+
+**COMP9444 Neural Networks and Deep Learning, UNSW | Academic group project, 2026**<br>
+Dataset: https://huggingface.co/datasets/ErfanMoosaviMonazzah/fake-news-detection-dataset-English
+
+- Contributed to the audit, de-duplication, model evaluation, and error analysis of 44,267 labelled English news articles; identified 1,399 overlapping train-test articles and rebuilt leakage-controlled splits.
+- Compared TF-IDF with Logistic Regression, an embedding-based BiLSTM, and title-only `google-bert/bert-base-uncased` fine-tuning. The tuned character TF-IDF model achieved 99.43% accuracy and 99.42% F1 on 8,084 de-duplicated test articles, with dataset-specific source and style limitations documented.
 
 ## Experience
 
-**Chief Executive Officer & Product Manager** — Hypha (Beijing Lingjing Junluo Technology Ltd.), Beijing
-*Jul 2023 – Jul 2024*
+### Founder & CEO - Hypha, Beijing
 
-- Led a 7-person cross-functional team (3 engineers, 2 designers, 1 legal) across the full product lifecycle.
-- Achieved ¥100,000 single-day revenue through NFT product positioning and user acquisition.
-- Owned product roadmap, technical architecture, server deployment, and backend development.
-- Built and executed a community growth strategy from zero to commercial validation.
+*Jul 2023-Jul 2024*
 
-**Software Operations Engineer** — Hanya Investment Consulting Co., Ltd., Beijing
-*Feb 2025 – Apr 2025*
+- Led a seven-person team across engineering, design, and legal; owned customer discovery, roadmap, architecture, backend delivery, deployment, and go-to-market from zero to commercial validation.
+- Reached RMB 100K+ single-day revenue through product positioning, community growth, and end-to-end execution.
 
-- Optimized enterprise web service architecture (PHP + Nginx).
-- Led migration of a cross-national cloud platform to Google Cloud.
-- Built an automated multimedia processing system using FFmpeg.
-- Wrote technical documentation integrated into the company knowledge base.
+### Software Operations Engineer - Hanya Investment Consulting, Beijing
 
-**Vice President, Student Council** — Beijing Jingshan School Caofeidian International Department
-*Sep 2022 – Jun 2023*
+*Feb-Apr 2025*
 
-- Organised multiple large-scale school events with 100+ participants.
-- Coordinated between students and school administration.
-
----
+- Migrated a cross-national platform to Google Cloud, improved PHP/Nginx service architecture, and built an FFmpeg-based multimedia automation pipeline with operational documentation.
 
 ## Education
 
-**Bachelor of Computer Science** — University of New South Wales (UNSW), Sydney
-*Feb 2025 – Dec 2028 (expected)*
+**Bachelor of Computer Science** - University of New South Wales (UNSW), Sydney<br>
+*Expected Dec 2027*
 
-Completed coursework: COMP1511, COMP1531, COMP2041, COMP2521, MATH1081, MATH1131, MATH1231, ECON1101
+## Technical Skills
 
----
-
-## Selected Projects
-
-- **Roundtable** — Visual workflow and governance layer that turns AI coding sessions into reusable, reviewable workflows. (github.com/EdwinjJ1/roundtable)
-- **Akeso** — Personal energy coach that turns a short daily check-in into an explainable energy-aware plan. (akeso-showcase.vercel.app)
-- **LensDex / 镜库** — Bilingual camera and lens database with specifications, price context, rankings, and reviews. (github.com/EdwinjJ1/cameraweb)
-- **Chiron Prompt** — Open-source prompt optimization tool for terminal-first developers. (github.com/EdwinjJ1/chiron-prompt)
-- **ChronoMap** — Interactive heritage map; one map to understand the story behind every place. (chronomap.site)
-- **FinalBoss** — AI exam-prep workspace that turns notes and past papers into mocks and Socratic tutoring.
-- **3D Print Skill for Claude** — Searches real hardware specs before generating manifold-safe 3D models. (github.com/EdwinjJ1/3d-print-skill)
-
-See the full list at https://evanlin.site/projects.md
-
----
-
-## Skills
-
-**Languages:** Python · TypeScript · JavaScript · PHP · SQL
-**Frontend:** React · Next.js · Tailwind CSS · Framer Motion
-**Backend & Infra:** Node.js · Docker · AWS · Google Cloud · Linux · Nginx · FFmpeg · REST APIs
-**AI:** Claude MCP · Prompt engineering · AI tooling
-**Other:** Team leadership · Product management · Cross-cultural communication
-
----
-
-## Links
-
-- Website: https://evanlin.site
-- GitHub: https://github.com/EdwinjJ1
-- ChronoMap: https://chronomap.site
+- **Languages:** TypeScript, JavaScript, Python, SQL, PHP
+- **AI & Full Stack:** React, Next.js, Node.js, Express, LLM APIs, PyTorch, Hugging Face Transformers, scikit-learn, structured outputs, tool calling, prompt design
+- **Infrastructure:** Docker, Linux, GCP, AWS, Supabase, Firebase, SQLite, PostgreSQL, CI/CD, Nginx
+- **Communication:** English and Mandarin Chinese
