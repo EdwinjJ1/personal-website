@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>贾岱林｜AI 开发工程师 / 全栈 AI 产品构建者</title>
+  <style>
+    /*
+      Assumptions carried from the supplied Chinese resume:
+      - Single-page A4 resume, warm red accent, editorial hierarchy.
+      - The supplied high-resolution portrait is the only image asset.
+      - Content is tailored toward AI development, full-stack AI, and Agent engineering roles.
+    */
+    :root {
+      --paper: #ffffff;
+      --ink: #242323;
+      --muted: #73706f;
+      --accent: #d63d35;
+      --soft: #f8f4f3;
+      --rule: #d63d35;
+      --page-width: 210mm;
+      --page-height: 297mm;
+      --pad-x: 14mm;
+      --pad-top: 10mm;
+      --pad-bottom: 7mm;
+      --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      background: #ece9e7;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    body {
+      display: grid;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .resume-page {
+      width: var(--page-width);
+      height: var(--page-height);
+      overflow: hidden;
+      padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+      background: var(--paper);
+      box-shadow: 0 12px 40px rgba(55, 42, 38, 0.14);
+      break-after: auto;
+      page-break-after: auto;
+    }
+
+    .identity {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .portrait {
+      width: 92px;
+      height: 92px;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #1c2023;
+    }
+
+    .name-line {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin: 0 0 3px;
+      letter-spacing: -0.035em;
+    }
+
+    .name-cn {
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 760;
+    }
+
+    .name-en {
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 680;
+    }
+
+    .role-line {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13.5px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+
+    .contact-lines {
+      display: grid;
+      gap: 4px;
+      font-size: 11.5px;
+      line-height: 1.2;
+    }
+
+    .contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px 20px;
+      align-items: center;
+    }
+
+    .contact-item {
+      white-space: nowrap;
+    }
+
+    .contact-label {
+      margin-right: 6px;
+      color: var(--accent);
+      font-weight: 760;
+    }
+
+    .contact-link {
+      color: var(--accent);
+    }
+
+    .top-rule {
+      height: 2px;
+      margin: 12px 0 7px;
+      background: var(--rule);
+    }
+
+    .section {
+      margin-top: 6px;
+    }
+
+    .section-title {
+      margin: 0 0 4px;
+      color: var(--accent);
+      font-size: 18.5px;
+      line-height: 1.12;
+      font-weight: 760;
+      letter-spacing: 0.01em;
+    }
+
+    .positioning {
+      margin: 0;
+      font-size: 12px;
+      line-height: 1.42;
+      text-wrap: pretty;
+    }
+
+    .positioning strong {
+      font-weight: 760;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 6px;
+      background: var(--soft);
+    }
+
+    .highlight {
+      min-width: 0;
+      padding: 6px 10px 5px;
+      border-left: 2px solid var(--accent);
+    }
+
+    .highlight-title {
+      margin: 0 0 3px;
+      font-size: 12.5px;
+      line-height: 1.2;
+      font-weight: 760;
+    }
+
+    .highlight-detail {
+      margin: 0;
+      color: var(--muted);
+      font-size: 10.3px;
+      line-height: 1.35;
+    }
+
+    .education-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 18px;
+    }
+
+    .education-main {
+      font-size: 12px;
+      font-weight: 760;
+    }
+
+    .education-date {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 10.5px;
+      white-space: nowrap;
+    }
+
+    .entry {
+      margin-top: 5px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .entry:first-of-type {
+      margin-top: 0;
+    }
+
+    .entry-head {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 14px;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .entry-title {
+      min-width: 0;
+      font-size: 12px;
+      line-height: 1.35;
+      font-weight: 740;
+      text-wrap: pretty;
+    }
+
+    .entry-title .context {
+      color: var(--muted);
+      font-weight: 450;
+    }
+
+    .entry-title .award {
+      font-weight: 760;
+    }
+
+    .entry-date {
+      color: var(--muted);
+      font-size: 10.2px;
+      white-space: nowrap;
+    }
+
+    .entry-summary {
+      margin: 0 0 3px;
+      color: var(--muted);
+      font-size: 10.7px;
+      line-height: 1.38;
+      text-wrap: pretty;
+    }
+
+    .entry ul {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 10.6px;
+      line-height: 1.38;
+    }
+
+    .entry li {
+      margin: 0;
+      padding-left: 2px;
+      text-wrap: pretty;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 3px;
+      margin-top: 2px;
+    }
+
+    .skill-row {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 1fr);
+      gap: 8px;
+      align-items: start;
+      font-size: 10.3px;
+      line-height: 1.34;
+    }
+
+    .skill-label {
+      color: var(--accent);
+      font-weight: 760;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      html,
+      body {
+        background: #fff;
+      }
+
+      body {
+        display: block;
+        padding: 0;
+      }
+
+      .resume-page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume-page" aria-label="贾岱林中文简历">
+    <header class="identity">
+      <img
+        class="portrait"
+        src="../../assets/resume/evan-profile-hd.png"
+        alt="贾岱林个人头像"
+      />
+      <div>
+        <h1 class="name-line">
+          <span class="name-cn">贾岱林</span>
+          <span class="name-en">（Evan Jia）</span>
+        </h1>
+        <p class="role-line">AI 开发工程师 · 全栈 AI 产品构建者 · Agent 开发者</p>
+        <div class="contact-lines">
+          <div class="contact-row">
+            <span class="contact-item"><span class="contact-label">邮箱</span><a href="mailto:jiaedwin0605@gmail.com">jiaedwin0605@gmail.com</a></span>
+            <span class="contact-item"><span class="contact-label">电话</span>0412 522 985</span>
+            <span class="contact-item"><span class="contact-label">地点</span>悉尼 / 北京</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-item"><span class="contact-label">网站</span><a class="contact-link" href="https://evanlin.site">evanlin.site</a></span>
+            <span class="contact-item"><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/evan-jia-152108369/">linkedin.com/in/evan-jia-152108369</a></span>
+            <span class="contact-item"><span class="contact-label">GitHub</span><a href="https://github.com/EdwinjJ1">github.com/EdwinjJ1</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="top-rule" aria-hidden="true"></div>
+
+    <section class="section">
+      <h2 class="section-title">个人定位</h2>
+      <p class="positioning">
+        <strong>把模糊业务问题变成可上线、可验证、可交付的 AI 产品。</strong>
+        兼具 Founder、产品与工程经验，能够从用户发现、需求拆解和架构设计一路推进到全栈开发、模型编排、部署、Demo 与交付；擅长在时间紧、信息不完整的环境中建立可执行路径并对结果负责。
+      </p>
+      <div class="highlights" aria-label="核心成果">
+        <article class="highlight">
+          <h3 class="highlight-title">Susquehanna Prize</h3>
+          <p class="highlight-detail">24 小时带队完成组织智能 Agent</p>
+        </article>
+        <article class="highlight">
+          <h3 class="highlight-title">字节 AI 全栈 Top 3</h3>
+          <p class="highlight-detail">双模型路由、Function Calling 与项目记忆</p>
+        </article>
+        <article class="highlight">
+          <h3 class="highlight-title">Founder / CEO</h3>
+          <p class="highlight-detail">带领 7 人团队，单日营收人民币 10 万+</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">教育经历</h2>
+      <div class="education-row">
+        <div class="education-main">新南威尔士大学（UNSW）　计算机科学本科</div>
+        <div class="education-date">悉尼 · 2025.02 入学　|　预计 2027.12 毕业</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">近期 AI 项目与比赛</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/unsw-mistral-hackathon-2026">Athena</a>
+            <span class="context">　|　UNSW × Mistral AI × Atlassian Hackathon　|　</span>
+            <span class="award">Susquehanna Prize</span>
+          </div>
+          <time class="entry-date">2026.07-08</time>
+        </div>
+        <ul>
+          <li>在 24 小时内带队完成面向组织知识管理的 Discord Agent：主动采集团队状态，并把变更写入可追溯的组织知识图谱。</li>
+          <li>负责产品架构与最终集成；用 TypeScript、Next.js、SQLite 构建图谱核心，并以 Mistral 完成分流、结构化抽取、文档摄取、外联消息和跨团队矛盾检测。</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/lark-loom">Lark Loom</a>
+            <span class="context">　|　字节跳动飞书 AI 校园挑战赛　|　</span>
+            <span class="award">AI 全栈开发 Top 3</span>
+          </div>
+          <time class="entry-date">2026.04-05</time>
+        </div>
+        <ul>
+          <li>构建飞书内办公效能 Agent，以会议贡献、任务巡检和绩效分析，将聊天协作转化为可追踪的项目记忆。</li>
+          <li>设计类型化 pnpm monorepo、双模型 LLM 路由、Function Calling 与飞书多维表格 MemoryStore；实现 WebSocket 摄取、HTTP fallback、消息去重和跨平台 CLI。</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/akeso">Akeso</a>
+            <span class="context">　|　ICON × Lyra Innovation Challenge　|　</span>
+            <span class="award">决赛入围</span>
+          </div>
+          <time class="entry-date">2026.07</time>
+        </div>
+        <ul>
+          <li>交付 Expo / React Native 能量管理应用，以 Express API、Supabase 和 Gemini 工作流把 20 秒状态记录转化为可解释的日程与营养建议。</li>
+          <li>负责产品拆解、端到端集成与 Pitch 路径，把模糊的 wellbeing 概念转成可记录、可解释、可行动的产品闭环。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">创业与工作经历</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">北京灵境菌落科技有限公司 Hypha　|　CEO & 产品负责人</div>
+          <time class="entry-date">北京 · 2023.07-2024.07</time>
+        </div>
+        <ul>
+          <li>主导产品方向、路线图、团队协作、技术架构与商业化执行；带领 7 人团队完成从概念、开发、上线到商业验证的完整产品生命周期。</li>
+          <li>参与后端流程、服务器部署、社区增长和产品定位，推动产品实现单日营收人民币 10 万+，形成从技术到市场的商业闭环。</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">瀚亚投资咨询有限公司　|　软件运维工程师</div>
+          <time class="entry-date">北京 · 2025.02-2025.04</time>
+        </div>
+        <ul>
+          <li>维护企业级 Web 服务与内部自动化流程；优化 PHP + Nginx 架构，支持 Google Cloud 迁移，并搭建 FFmpeg 多媒体处理流水线与运维文档。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">产品与工程项目</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/chiron-prompt">Chiron Prompt</a>
+            <span class="context">　|　开源 Repo-aware Prompt CLI</span>
+          </div>
+          <time class="entry-date">2025.09-至今</time>
+        </div>
+        <p class="entry-summary">面向 AI 编程用户的开源 Prompt 工具，GitHub 获得 150+ Stars，支持 Gemini CLI、Claude Code、Codex TUI 和 Claw Code。</p>
+        <ul>
+          <li>将粗糙需求改写为包含项目栈、相关文件、Git 状态、验收标准、风险和验证步骤的高质量任务。</li>
+          <li>设计终端优先工作流、安装器与低摩擦集成体验，让工具能进入开发者现有的 Coding Agent 工作流。</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://finalboss.cn">FinalBoss</a>
+            <span class="context">　|　AI 备考与机构测评平台</span>
+          </div>
+          <time class="entry-date">2026.05-至今</time>
+        </div>
+        <p class="entry-summary">服务 150+ 用户的 AI 备考平台，覆盖资料上传、Mock 生成、AI 批改、苏格拉底式 Tutor、薄弱点分析、订阅与机构交付。</p>
+        <ul>
+          <li>使用 Next.js、Firebase、Stripe 和 Judge0 搭建完整 workspace；把资料理解、出题、批改、反馈与 Tutor 对话组织成连续学习闭环。</li>
+          <li>独立完成产品路径、信息架构、权限支付、真实 API 与机构侧交付，贯通用户体验、Agent 交互和商业化验证。</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            Fake News Detection
+            <span class="context">　|　UNSW COMP9444 课程小组项目</span>
+          </div>
+          <time class="entry-date">2026.07-08</time>
+        </div>
+        <ul>
+          <li>参与 44,267 篇英文新闻的数据审计、去重、模型评估与错误分析；发现 1,399 篇 train-test 重复文章，并建立无跨集重复的数据划分。</li>
+          <li>对比 TF-IDF + Logistic Regression、Embedding + BiLSTM 与 title-only BERT 微调；优化后的字符级 TF-IDF 在 8,084 篇去重测试文章上达到 99.43% Accuracy / 99.42% F1，并明确记录来源与写作风格偏差。</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">能力与工具</h2>
+      <div class="skill-list">
+        <div class="skill-row"><div class="skill-label">产品</div><div>用户发现、需求拆解、PRD / Spec、MVP 定义、Agent 工作流、Demo 叙事、ToB 定位、商业化验证</div></div>
+        <div class="skill-row"><div class="skill-label">AI / Agent</div><div>Agent 编排、Prompt / Eval 闭环、BERT 微调、PyTorch、Hugging Face Transformers、Function Calling、结构化输出、RAG</div></div>
+        <div class="skill-row"><div class="skill-label">工程</div><div>TypeScript、JavaScript、Python、React、Next.js、Node.js、REST API、Postgres、SQLite、Firebase、Supabase、Stripe、Docker、CLI</div></div>
+        <div class="skill-row"><div class="skill-label">协作</div><div>Founder 经历、跨职能协作、客户沟通、技术写作、需求澄清、跨文化沟通；英语与中文工作能力</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
