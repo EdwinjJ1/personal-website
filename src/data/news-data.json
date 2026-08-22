@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-21T13:59:00.000Z",
+  "lastUpdated": "2026-08-22T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-22",
+      "label": "August 22, 2026"
+    },
     {
       "value": "2026-08-21",
       "label": "August 21, 2026"
@@ -487,6 +491,171 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260822-2315-compulsion-games-completes-management-buyout-from-xbox-regains-f",
+      "title": "Compulsion Games Completes Management Buyout From Xbox, Regains Full IP Rights",
+      "summary": "South of Midnight developer Compulsion Games officially separated from Microsoft/Xbox via a management buyout completed Aug 20–21, regaining ownership of all original IPs (Contrast, We Happy Few, South of Midnight) plus publishing rights. CEO Guillaume Provost: \"The team told me we would rather eat rocks and drink gasoline than be split up.\" Microsoft provided financial runway. The split follows Xbox's July restructuring that cut ~9,000 jobs and led to spinoffs of Double Fine, Ninja Theory, and Undead Labs. Compulsion is now meeting with publishers/financing partners for the next project.",
+      "tag": "PRODUCT",
+      "source": "Gamesindustry",
+      "sourceUrl": "https://www.gamesindustry.biz/compulsion-games-officially-separates-from-xbox-the-team-told-me-we-would-rather-eat-rocks-and-drink-gasoline-than-be-split-up",
+      "date": "2026-08-22",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260822-2315-double-fine-leaves-xbox-tim-schafer-regains-full-publishing-righ",
+      "title": "Double Fine Leaves Xbox — Tim Schafer Regains Full Publishing Rights to Game Catalog",
+      "summary": "Tim Schafer's Double Fine Productions became fully independent from Xbox on Aug 21, regaining publishing rights to its entire game catalog (Psychonauts 1/2, Brütal Legend, Broken Age, Costume Quest, etc.). The studio had been part of Xbox Game Studios since the June 2019 acquisition. This is the second studio to officially exit Microsoft's July restructuring program; Compulsion Games completed its MBO the same day.",
+      "tag": "PRODUCT",
+      "source": "Ingamenews",
+      "sourceUrl": "https://ingamenews.com/pc-gaming/double-fine-becomes-independent-studio-regains-publishing-rights/",
+      "date": "2026-08-22",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260822-2315-makers-fund-closes-250m-fund-iv-interactive-entertainment-vc-cro",
+      "title": "Makers Fund Closes $250M Fund IV — Interactive-Entertainment VC Crosses $1.5B AUM",
+      "summary": "Makers Fund, the London/Reykjavik/Tokyo/Singapore/NYC/LA-based VC focused on interactive entertainment, closed its fourth fund at $250M (announced Aug 20), bringing total AUM to $1.5B. Fund I ($180M, 2016) has returned 3.6x invested capital, putting it in the top 1% of global venture funds. Portfolio includes Dream Games (acquired by CVC at ~$5B), FaceIt ($1.5B exit), Medal/General Intuition ($2.3B), Voldex (Roblox publisher), PixAI, and Bossa Studios. Fund IV will broaden beyond games into consumer apps, entertainment, and creation platforms.",
+      "tag": "PRODUCT",
+      "source": "Makersfund",
+      "sourceUrl": "https://www.makersfund.com/fund4announcement",
+      "date": "2026-08-22",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260822-2315-riot-games-sunsets-active-development-of-2xko-free-to-play-fight",
+      "title": "Riot Games Sunsets Active Development of 2XKO — Free-to-Play Fighter Goes Maintenance Mode by EOY",
+      "summary": "Riot Games announced Aug 20 that active development on its free-to-play League-of-Legends fighting game 2XKO will end in December 2026 after a final bug-fix patch. Servers stay online indefinitely and offline play is unaffected. Two more Champions (Lux in September, Samira in October) will still launch. All Champions unlock for everyone, and Riot is refunding every in-game purchase made on or before Aug 20 across all platforms. After active development ends, Ranked is disabled but skill-based matchmaking remains in Casual.",
+      "tag": "PRODUCT",
+      "source": "Riotgames",
+      "sourceUrl": "https://www.riotgames.com/en/news/2xko-active-development-ends-december-2026",
+      "date": "2026-08-22",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260822-2315-roblox-open-sources-three-child-safety-ai-models-to-roost-pii-cl",
+      "title": "Roblox Open-Sources Three Child-Safety AI Models to ROOST — PII Classifier Covers 189 Languages",
+      "summary": "Roblox contributed updated versions of three child-safety AI models to the Robust Open Online Safety Tools (ROOST) Model Community on Aug 19: a PII Classifier v2.0 (F1 score 90.52, up from 63.41; language support 17 → 189), Roblox Sentinel v2 (child-endangerment early-warning; accounted for ~70% of cases Roblox detected in the 12 months ending Aug 7), and voice safety classifier v3 (30 languages, 8 violation categories, 61% recall at 1% FPR, 320M params distilled for real-time). Roblox also released a synthetic-conversation benchmark dataset. ROOST was co-founded by Roblox, Google, OpenAI, and Discord in 2025.",
+      "tag": "POLICY",
+      "source": "About.Roblox",
+      "sourceUrl": "https://about.roblox.com/zh-hans/newsroom/2026/08/roblox-open-source-safety-models-roost",
+      "date": "2026-08-22",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260822-0000-4danyone-create-anyone-in-4d-from-a-casual-monocular-video",
+      "title": "4DAnyone: Create Anyone in 4D from a Casual Monocular Video",
+      "summary": "Reconstructs animatable 4D humans from an uncalibrated monocular video by first generating reconstruction-grade, multi-view-consistent videos and then lifting them into 4D Gaussian Splatting. Diagnoses the failure mode of off-the-shelf camera-controlled video diffusion as a bounded-attention-context problem when target views exceed a single DiT pass, and fixes it with two designs: Reference Context Packing compresses growing reference views into fixed-length mixed-resolution context with O(1) reference cost; Target Context Routing rotates target-view groupings during denoising so disjoint groups exchange information. Combined with a new in-house MVGameHuman dataset, 4DAnyone beats prior methods on DNA-Rendering and DyMVHumans in both novel-view quality and downstream 4DGS.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20335",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-are-llms-becoming-similarly-creative-evidence-from-three-years-o",
+      "title": "Are LLMs becoming similarly creative? Evidence from three years of models",
+      "summary": "A preliminary analysis of LLM creative outputs across three years of model releases, using sentence-embedding similarity on two open-ended corpora: Infinity-Chat100 (real open-ended user queries) and the Alternate Uses Task (psychometric creativity benchmark). The headline finding is a statistically significant decrease in model output diversity over time, suggesting LLM outputs are converging in creative substance across models — even as verifiable-answer benchmarks keep climbing. The authors are upfront that this is preliminary: no effect size, no p-value, and no model count in the abstract. If the trend holds, they argue, LLM-driven homogenization will progressively diminish human agency in human-AI co-creation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19437",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-benchmarking-end-to-end-frontier-formal-theoretical-computer-sci",
+      "title": "Benchmarking End-to-End Frontier Formal Theoretical Computer Science Research of Large Language Models",
+      "summary": "The first expert-validated benchmark for evaluating LLMs on end-to-end theoretical CS research — not just theorem proving. 175 instances drawn from STOC/FOCS/SODA/COLT 2025-2026 papers, with paper-specific definitions, assumptions, and proof dependencies preserved as expert-verified Lean formalizations. The diagnosis is sharp: autoformalization is the binding bottleneck — the best model scores only 11.5 on translating natural-language claims into formal theorem statements, versus 28.6 Pass@8 when proving a human-provided formal statement. Running their automated TCS research framework (generate → formalize → filter → prove) on 64 generated claims yields only 6 that pass expert evaluation and proof verification — meaning limited \"research taste\" is the second major wall after formalization.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20153",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-conceptguard-benchmarking-context-sensitive-unlearning-in-large-",
+      "title": "ConceptGuard: Benchmarking Context-Sensitive Unlearning in Large Language Models",
+      "summary": "Redefines LLM unlearning evaluation around dual-use concepts — facts that are harmful in one framing and useful in another — instead of disjoint forget/retain sets of independent facts. The ConceptGuard benchmark makes forget and retain sets explicitly complementary in concept usage, and evaluation is intent-sensitive, measuring whether the model separates harmful and benign uses of the same knowledge. Across current unlearning methods, contextual separation is weak, forgetting-utility trade-offs are severe, and concept-level control is inconsistent — and the dataset is released.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20338",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-envharness-awakening-static-worlds-for-agent-learning",
+      "title": "EnvHarness: Awakening Static Worlds for Agent Learning",
+      "summary": "A programmable layer of plug-in components that wraps a static environment to reshape its behaviour without modifying the underlying logic. The motivation: LLM agents learn by interacting with environments that are hand-built, blind to the agent's weaknesses, and quickly obsolete as the agent improves — but rebuilding environments from scratch is engineering-heavy. EnvHarness operates through standard interfaces so it works across domains, and every reshaped environment retains its original verifier. An automated companion, EnvRigger, treats the target policy as a black box, observes execution trajectories, and synthesizes EnvHarness components targeting diagnosed flaws, validating them via fresh rollouts. Across five benchmarks in four domains, EnvHarness beats both the original environments and domain-specific environment-generation pipelines — up to a 9.0-point improvement on held-out instances with 9.8% fewer execution steps, and a superior RL optimization signal for continuous policy-environment co-evolution.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19880",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-inducing-task-models-from-computer-use-traces",
+      "title": "Inducing Task Models from Computer-Use Traces",
+      "summary": "Formalises Task Model Induction (TMI): from a passive, unconstrained stream of screenshots and mouse/keyboard events, (i) discover the latent tasks being done at the same time and disentangle interleaved activity, then (ii) for each latent task induce a structured task model pairing a hierarchical objective model (recursive goal decomposition) with a procedure model (the control flow that actually executed). On controlled human and agent traces TMI recovers interleaved tasks with 0.974 agreement against ground-truth groupings and reconstructs 74.9% of observed execution steps, far ahead of the strongest workflow-induction baseline; skills lifted out of the task models lift held-out task accuracy by 30.0% over the same baseline.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20319",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-pandora-s-ai-model-routing-box-efficient-allocation-with-costly-",
+      "title": "Pandora's AI Model Routing Box: Efficient Allocation with Costly Value Estimation",
+      "summary": "Frames LLM/model routing as a Pandora's Box problem: each candidate specialist has an expected return that you have to inspect to estimate , and inspection itself is expensive (cheap embedding-based predictors are noisy; fine-tuned estimators that read retrieval results or partial reasoning traces are accurate but costly). Under a Gaussian signal model, the resulting policies have closed-form value-of-information expressions that decide, per (specialist, input), whether refining the value estimate is worth it. The centralized version is \"Pandora's Router\"; the decentralized version is \"Pandora's Bidder\", where specialists decide for themselves whether to invest in self-assessment before accepting a query at an offered price. Across three domains — a standard multi-LLM benchmark, retrieval-augmented specialists, and LLMs with variable inference-time reasoning — Pandora's Router matches the routing quality of exhaustive estimation while calling the expensive estimator far less often.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20316",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-recache-efficient-kv-cache-reuse-and-compression-for-tool-augmen",
+      "title": "ReCache: Efficient KV Cache Reuse and Compression for Tool-Augmented LLM Agents",
+      "summary": "Tool/skill schemas recur across agent requests in different combinations and orders, which kills standard prefix caching. ReCache independently caches resource representations and cuts their inference-time cost in two moves: (1) resource-wise attention removes cross-resource interactions and assigns resource-local positions, yielding composition-invariant KV blocks; (2) it restricts resource visibility to contribution-selected layer-KV-head-group routes and retains only invocation-critical fields via structural + semantic pruning. On a benchmark assembled from seven public tool- and skill-use datasets (including resource-disjoint tests), resource-wise attention matches dense-invocation performance (82.3% vs 82.4% Inv-F1) with a 3.655× time-to-first-token speedup. The full framework cuts allocated KV-tensor memory by 92.43% and accelerates attention by 1.423×.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.19662",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-swift-image-exploring-the-performance-frontier-of-compact-unifie",
+      "title": "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models",
+      "summary": "A compact 6B-parameter single-stream DiT that unifies text-to-image, single-image editing, and multi-image editing under one set of weights. The training pipeline progresses from broad semantic coverage to higher resolution + stronger visual quality + unified generation-editing supervision; post-training is parallel-expert RL followed by multi-teacher on-policy distillation; a Prompt Enhancer decouples high-level reasoning from pixel rendering; and structural pruning + few-step distillation yield 3B and accelerated variants. Total training budget: 243K GPU-hours. Aggregate benchmarks across editing + generation land the 6B model ahead of evaluated open-source peers, and the 3B compressed variant loses almost nothing.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20334",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260822-0000-witheveryone-unified-planning-and-identity-grounding-for-group-i",
+      "title": "WithEveryone: Unified Planning and Identity Grounding for Group Image Generation",
+      "summary": "Generates a group image containing up to ten specified identities without collapsing them. The framework injects each selected identity as an addressed token, predicts a structured identity-layout plan, and renders that plan as a visual condition. The novel Layout-Grounded ID Loss supervises identity directly from annotated face regions instead of unstable embedding-based matching, and ID Representation Forcing pre-trains a per-identity prediction before synthesis. On an identity-disjoint benchmark the model lifts face similarity from 0.462 (GPT-Image-2) to 0.499 while cutting copy-paste artifacts from 0.169 to 0.055, covering 97.3% of requested identities with only 2.8% duplicates.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20336",
+      "date": "2026-08-22",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260821-0000-ai4ai-bench-benchmarking-llm-agents-in-algorithmic-design-for-re",
       "title": "AI4AI-Bench: Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement",
