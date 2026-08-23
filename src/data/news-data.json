@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-22T13:59:00.000Z",
+  "lastUpdated": "2026-08-23T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-23",
+      "label": "August 23, 2026"
+    },
     {
       "value": "2026-08-22",
       "label": "August 22, 2026"
@@ -491,6 +495,61 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260823-2304-china-releases-three-edtech-llm-group-standards-at-gse2026-first",
+      "title": "China Releases Three EdTech LLM Group Standards at GSE2026 — First Sector-Level Guardrails for \"AI + Education\"",
+      "summary": "At the closing of the 2026 Global Smart Education Conference (GSE2026, Beijing, Aug 18–20), China published three group standards for educational large models: \"General Educational LLM Technical Architecture Design Specification,\" \"Guidelines for Building Smart Education Systems Based on LLMs,\" and \"Intelligent Teacher Technical Specification.\" The standards cover data-privacy protection, algorithm-fairness auditing, service-continuity guarantees, and disclosure requirements. Standards work includes VIPKID as a co-drafter. The release comes as China's \"15th Five-Year Plan for Education Development\" and a five-ministry \"AI + Education Action Plan\" move into implementation phase.",
+      "tag": "PRODUCT",
+      "source": "Tech.China",
+      "sourceUrl": "https://tech.china.com/articles/20260820/202608201945463.html",
+      "date": "2026-08-23",
+      "time": "23:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260823-2304-jiuxuewang-tencent-cloud-launch-future-learning-center-at-wwec-2",
+      "title": "Jiuxuewang + Tencent Cloud Launch \"Future Learning Center\" at WWEC 2026 — \"AI Dual-Learning · Dual-Planning\" System 3.0 + AI Self-Study Room Franchise",
+      "summary": "At the 12th WWEC World Education Conference (Shanghai, Aug 20), Jiuxuewang Group and Tencent Cloud jointly launched the \"Future Learning Center\" new product line. The school-side flagship is \"XueWang Premium Course Smart Learning System 3.0,\" targeting middle/high schools with an \"AI dual-learning + dual-planning\" model that connects weekday in-school learning and weekend tutoring on a single data layer across four terminals (school admin / teacher / student tablet / parent WeChat). The social-side line ships three franchise products — \"AI Self-Study Room,\" \"AI Class,\" \"AI Daycare\" — already validated across 70 directly-operated studios and 1,000+ partner stores.",
+      "tag": "PRODUCT",
+      "source": "Toutiao",
+      "sourceUrl": "https://www.toutiao.com/article/7676451067399275043/",
+      "date": "2026-08-23",
+      "time": "23:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260823-2304-medly-ai-london-closes-8m-seed-led-by-felix-capital-joins-uk-dep",
+      "title": "Medly AI (London) Closes $8M Seed Led by Felix Capital — Joins UK Dept. for Education AI Tutoring Pioneers Alongside Pearson & ElevenLabs",
+      "summary": "Medly AI, founded by UCL medical graduates Dr. Paul Jung and Dr. Kavi Samra, closed an $8M seed round (announced Aug 19, covered through Aug 21) led by Felix Capital with Eka Ventures, Ada Ventures, and angels including InvestEngine CEO Andrey Dobrynin and LearnLaunch GP Jean Hammond. The platform combines seven specialized LLMs for exam prep (GCSE, IGCSE, A-Level, IB; US SAT launching now, AP/ACT by year-end). Reached 400K UK users in ~18 months, with 74% of GCSE users improving at least one grade. Medly was also selected for the UK Dept. for Education's AI Tutoring Tools Pioneers Programme (£300K grant) alongside Pearson and ElevenLabs.",
+      "tag": "PRODUCT",
+      "source": "Tech",
+      "sourceUrl": "https://tech.eu/2026/08/19/medly-ai-raises-8m-to-bring-ai-powered-tutoring-to-more-students/",
+      "date": "2026-08-23",
+      "time": "23:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260823-2304-netdragon-hk-0777-signs-serbia-s-first-national-level-ai-educati",
+      "title": "NetDragon (HK:0777) Signs Serbia's First National-Level AI Education Pilot at GSE2026 — Open-Q Ecosystem Goes Live Internationally",
+      "summary": "At GSE2026 closing ceremony on Aug 20, NetDragon Network (HKEX: 0777) signed Serbia's first national-level AI education pilot with the Serbian Ministry of Education. The agreement covers national curriculum development, digital-infrastructure build-out, and local deployment of NetDragon's AI production center. Serbia's ~4,000 teachers are already being trained in batches at the Belgrade Robotics & AI Education Center (a NetDragon-built facility that has become the Balkans' largest digital education lab). NetDragon also formally launched its \"On-Demand Learning\" framework with a Springer open-access academic monograph co-authored with international scholars.",
+      "tag": "PRODUCT",
+      "source": "Tech.Gmw",
+      "sourceUrl": "https://tech.gmw.cn/2026-08/22/content_38957399.htm",
+      "date": "2026-08-23",
+      "time": "23:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260823-2304-yiqi-education-technology-nasdaq-yq-launches-teacher-personalize",
+      "title": "Yiqi Education Technology (NASDAQ: YQ) Launches \"Teacher Personalized Agent\" at GSE2026 — Building Three-Tier AI Agent Stack (Region / Teacher / Student)",
+      "summary": "At GSE2026's \"Digital Transformation Toward Smart Education\" parallel session (Aug 19–20), Yiqi Education Technology founder & CEO Liu Chang released a \"Teacher Personalized Agent\" as part of a three-tier agent system: regional-level agent \"Zingo\" (deployed in Shanghai Minhang district), teacher personalized agent (released today), and student personalized agent. Capabilities include automated essay grading with class reports, one-click AI-generated test assembly from local question banks, and learning-analytics pipelines from mock-exam data to differentiated teaching recommendations. Zingo has been running as an \"Agentic Service\" (proactive, not just a Copilot) since 2025.",
+      "tag": "PRODUCT",
+      "source": "So.Html5.Qq",
+      "sourceUrl": "https://so.html5.qq.com/page/real/search_news?docid=70000021_4236a8801cc09352",
+      "date": "2026-08-23",
+      "time": "23:04",
+      "category": "industry"
+    },
     {
       "id": "industry-20260822-2315-compulsion-games-completes-management-buyout-from-xbox-regains-f",
       "title": "Compulsion Games Completes Management Buyout From Xbox, Regains Full IP Rights",
