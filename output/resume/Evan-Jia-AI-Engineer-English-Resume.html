@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evan Jia | AI Engineer / Full-Stack AI Product Builder</title>
+  <style>
+    :root {
+      --paper: #ffffff;
+      --ink: #242323;
+      --muted: #73706f;
+      --accent: #d63d35;
+      --soft: #f8f4f3;
+      --page-width: 210mm;
+      --page-height: 297mm;
+      --pad-x: 14mm;
+      --pad-top: 10mm;
+      --pad-bottom: 7mm;
+      --font-sans: Arial, Helvetica, sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      color: var(--ink);
+      background: #ece9e7;
+      font-family: var(--font-sans);
+      -webkit-font-smoothing: antialiased;
+      text-rendering: geometricPrecision;
+    }
+
+    body {
+      display: grid;
+      justify-content: center;
+      gap: 24px;
+      padding: 24px;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .resume-page {
+      width: var(--page-width);
+      height: var(--page-height);
+      overflow: hidden;
+      padding: var(--pad-top) var(--pad-x) var(--pad-bottom);
+      background: var(--paper);
+      box-shadow: 0 12px 40px rgba(55, 42, 38, 0.14);
+    }
+
+    .identity {
+      display: grid;
+      grid-template-columns: 92px minmax(0, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .portrait {
+      width: 92px;
+      height: 92px;
+      display: block;
+      object-fit: cover;
+      border-radius: 16px;
+      background: #1c2023;
+    }
+
+    .name-line {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 13px;
+      margin: 0 0 3px;
+      letter-spacing: -0.035em;
+    }
+
+    .name-en { font-size: 36px; line-height: 1; font-weight: 760; }
+    .name-cn { font-size: 22px; line-height: 1; font-weight: 650; }
+
+    .role-line {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.35;
+      letter-spacing: 0.01em;
+    }
+
+    .contact-lines { display: grid; gap: 4px; font-size: 10.7px; line-height: 1.2; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 5px 17px; align-items: center; }
+    .contact-item { white-space: nowrap; }
+    .contact-label { margin-right: 6px; color: var(--accent); font-weight: 760; }
+    .contact-link { color: var(--accent); }
+
+    .top-rule { height: 2px; margin: 12px 0 7px; background: var(--accent); }
+    .section { margin-top: 6px; }
+
+    .section-title {
+      margin: 0 0 4px;
+      color: var(--accent);
+      font-size: 17px;
+      line-height: 1.12;
+      font-weight: 760;
+      letter-spacing: 0.01em;
+    }
+
+    .positioning { margin: 0; font-size: 10.7px; line-height: 1.38; text-wrap: pretty; }
+    .positioning strong { font-weight: 760; }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 6px;
+      background: var(--soft);
+    }
+
+    .highlight { min-width: 0; padding: 6px 9px 5px; border-left: 2px solid var(--accent); }
+    .highlight-title { margin: 0 0 3px; font-size: 11.5px; line-height: 1.2; font-weight: 760; }
+    .highlight-detail { margin: 0; color: var(--muted); font-size: 9.2px; line-height: 1.32; }
+
+    .education-row { display: flex; justify-content: space-between; align-items: baseline; gap: 18px; }
+    .education-main { font-size: 10.8px; font-weight: 760; }
+    .education-date { flex: 0 0 auto; color: var(--muted); font-size: 9.5px; white-space: nowrap; }
+
+    .entry { margin-top: 5px; break-inside: avoid; page-break-inside: avoid; }
+    .entry:first-of-type { margin-top: 0; }
+    .entry-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: baseline; margin-bottom: 2px; }
+    .entry-title { min-width: 0; font-size: 10.8px; line-height: 1.28; font-weight: 740; text-wrap: pretty; }
+    .entry-title .context { color: var(--muted); font-weight: 450; }
+    .entry-title .award { font-weight: 760; }
+    .entry-date { color: var(--muted); font-size: 9.2px; white-space: nowrap; }
+    .entry-summary { margin: 0 0 3px; color: var(--muted); font-size: 9.4px; line-height: 1.3; text-wrap: pretty; }
+    .entry ul { margin: 0; padding-left: 17px; font-size: 9.35px; line-height: 1.3; }
+    .entry li { margin: 0; padding-left: 2px; text-wrap: pretty; }
+
+    .skill-list { display: grid; gap: 3px; margin-top: 2px; }
+    .skill-row { display: grid; grid-template-columns: 76px minmax(0, 1fr); gap: 8px; align-items: start; font-size: 9.2px; line-height: 1.28; }
+    .skill-label { color: var(--accent); font-weight: 760; }
+
+    @page { size: A4; margin: 0; }
+
+    @media print {
+      html, body { background: #fff; }
+      body { display: block; padding: 0; }
+      .resume-page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="resume-page" aria-label="Evan Jia English resume">
+    <header class="identity">
+      <img class="portrait" src="../../assets/resume/evan-profile-hd.png" alt="Portrait of Evan Jia" />
+      <div>
+        <h1 class="name-line">
+          <span class="name-en">Evan Jia</span>
+          <span class="name-cn">(贾岱林)</span>
+        </h1>
+        <p class="role-line">AI Engineer · Full-Stack AI Product Builder · Agent Developer</p>
+        <div class="contact-lines">
+          <div class="contact-row">
+            <span class="contact-item"><span class="contact-label">Email</span><a href="mailto:jiaedwin0605@gmail.com">jiaedwin0605@gmail.com</a></span>
+            <span class="contact-item"><span class="contact-label">Phone</span>0412 522 985</span>
+            <span class="contact-item"><span class="contact-label">Location</span>Sydney / Beijing</span>
+          </div>
+          <div class="contact-row">
+            <span class="contact-item"><span class="contact-label">Website</span><a class="contact-link" href="https://evanlin.site">evanlin.site</a></span>
+            <span class="contact-item"><span class="contact-label">LinkedIn</span><a href="https://www.linkedin.com/in/evan-jia-152108369/">linkedin.com/in/evan-jia-152108369</a></span>
+            <span class="contact-item"><span class="contact-label">GitHub</span><a href="https://github.com/EdwinjJ1">github.com/EdwinjJ1</a></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="top-rule" aria-hidden="true"></div>
+
+    <section class="section">
+      <h2 class="section-title">Profile</h2>
+      <p class="positioning">
+        <strong>I turn ambiguous business problems into deployable, testable, and handoff-ready AI products.</strong>
+        With experience as a founder, product lead, and engineer, I work end to end across discovery, requirements, architecture, full-stack development, model orchestration, deployment, demos, and delivery. I excel at creating executable paths and owning outcomes under tight timelines and incomplete information.
+      </p>
+      <div class="highlights" aria-label="Selected achievements">
+        <article class="highlight">
+          <h3 class="highlight-title">Susquehanna Prize</h3>
+          <p class="highlight-detail">Led a 24-hour organisational intelligence agent build</p>
+        </article>
+        <article class="highlight">
+          <h3 class="highlight-title">ByteDance AI Full-Stack Top 3</h3>
+          <p class="highlight-detail">Dual-model routing, function calling, and project memory</p>
+        </article>
+        <article class="highlight">
+          <h3 class="highlight-title">Founder / CEO</h3>
+          <p class="highlight-detail">Led 7 people; achieved RMB 100K+ single-day revenue</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-row">
+        <div class="education-main">Bachelor of Computer Science · University of New South Wales (UNSW)</div>
+        <div class="education-date">Sydney · Feb 2025 - Dec 2027 (expected)</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Recent AI Projects & Competitions</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/unsw-mistral-hackathon-2026">Athena</a>
+            <span class="context"> | UNSW × Mistral AI × Atlassian Hackathon | </span>
+            <span class="award">Susquehanna Prize</span>
+          </div>
+          <time class="entry-date">Jul-Aug 2026</time>
+        </div>
+        <ul>
+          <li>Led a 24-hour build of a Discord agent for organisational knowledge management that proactively collects team updates and writes source-traceable changes to a live knowledge graph.</li>
+          <li>Owned product architecture and final integration; built the graph core with TypeScript, Next.js, and SQLite, and used Mistral for triage, structured extraction, document ingestion, outbound messaging, and cross-team contradiction detection.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/lark-loom">Lark Loom</a>
+            <span class="context"> | ByteDance Feishu AI Campus Challenge | </span>
+            <span class="award">Top 3, AI Full-Stack Development</span>
+          </div>
+          <time class="entry-date">Apr-May 2026</time>
+        </div>
+        <ul>
+          <li>Built a Feishu-native workplace agent that turns meetings, task checks, and performance analysis into traceable project memory.</li>
+          <li>Designed a typed pnpm monorepo, dual-model LLM routing, function calling, and a Feishu Bitable MemoryStore; implemented WebSocket ingestion, HTTP fallback, deduplication, and a cross-platform CLI.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/akeso">Akeso</a>
+            <span class="context"> | ICON × Lyra Innovation Challenge | </span>
+            <span class="award">Finalist</span>
+          </div>
+          <time class="entry-date">Jul 2026</time>
+        </div>
+        <ul>
+          <li>Delivered an Expo / React Native energy-management app using an Express API, Supabase, and Gemini workflows to turn a 20-second check-in into explainable schedule and nutrition guidance.</li>
+          <li>Owned product decomposition, end-to-end integration, and the pitch flow, converting an ambiguous wellbeing concept into a measurable, explainable, and actionable product loop.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Startup & Professional Experience</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Hypha, Beijing | CEO & Product Lead</div>
+          <time class="entry-date">Jul 2023-Jul 2024</time>
+        </div>
+        <ul>
+          <li>Led product direction, roadmap, team collaboration, architecture, and commercial execution; guided a seven-person team through the complete lifecycle from concept and development to launch and market validation.</li>
+          <li>Worked across backend delivery, deployment, community growth, and product positioning, achieving RMB 100K+ in single-day revenue and closing the loop from technology to market.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Hanya Investment Consulting, Beijing | Software Operations Engineer</div>
+          <time class="entry-date">Feb-Apr 2025</time>
+        </div>
+        <ul>
+          <li>Maintained enterprise web services and internal automation; improved the PHP + Nginx architecture, supported a Google Cloud migration, and built an FFmpeg media-processing pipeline with operational documentation.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Product & Engineering Projects</h2>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://github.com/EdwinjJ1/chiron-prompt">Chiron Prompt</a>
+            <span class="context"> | Open-source repo-aware prompt CLI</span>
+          </div>
+          <time class="entry-date">Sep 2025-Present</time>
+        </div>
+        <p class="entry-summary">Open-source prompt tool for AI coding users with 150+ GitHub stars; supports Gemini CLI, Claude Code, Codex TUI, and Claw Code.</p>
+        <ul>
+          <li>Transforms rough requests into high-quality tasks grounded in the project stack, relevant files, git state, acceptance criteria, risks, and verification steps.</li>
+          <li>Designed terminal-first workflows, installers, and low-friction integrations that fit existing coding-agent workflows.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">
+            <a href="https://finalboss.cn">FinalBoss</a>
+            <span class="context"> | AI exam preparation and institutional assessment platform</span>
+          </div>
+          <time class="entry-date">May 2026-Present</time>
+        </div>
+        <p class="entry-summary">AI study platform serving 150+ users across content upload, mock generation, AI grading, Socratic tutoring, weakness analysis, subscriptions, and institutional delivery.</p>
+        <ul>
+          <li>Built a complete workspace with Next.js, Firebase, Stripe, and Judge0, connecting content understanding, question generation, grading, feedback, and tutoring into a continuous learning loop.</li>
+          <li>Independently delivered product flows, information architecture, permissions and payments, live APIs, and institutional handoff across user experience, agent interaction, and commercial validation.</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <div class="entry-head">
+          <div class="entry-title">Fake News Detection <span class="context"> | UNSW COMP9444 group project</span></div>
+          <time class="entry-date">Jul-Aug 2026</time>
+        </div>
+        <ul>
+          <li>Audited, deduplicated, evaluated, and analysed 44,267 English news articles; found 1,399 train-test duplicates and rebuilt leakage-controlled splits.</li>
+          <li>Compared TF-IDF + Logistic Regression, Embedding + BiLSTM, and title-only BERT fine-tuning. Tuned character TF-IDF reached 99.43% accuracy / 99.42% F1 on 8,084 deduplicated test articles, with source and writing-style biases documented.</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Capabilities & Tools</h2>
+      <div class="skill-list">
+        <div class="skill-row"><div class="skill-label">Product</div><div>User discovery, requirements, PRDs / specs, MVP definition, agent workflows, demo narratives, B2B positioning, commercial validation</div></div>
+        <div class="skill-row"><div class="skill-label">AI / Agents</div><div>Agent orchestration, prompt / eval loops, BERT fine-tuning, PyTorch, Hugging Face Transformers, function calling, structured outputs, RAG</div></div>
+        <div class="skill-row"><div class="skill-label">Engineering</div><div>TypeScript, JavaScript, Python, React, Next.js, Node.js, REST APIs, PostgreSQL, SQLite, Firebase, Supabase, Stripe, Docker, CLI</div></div>
+        <div class="skill-row"><div class="skill-label">Collaboration</div><div>Founder experience, cross-functional teamwork, customer communication, technical writing, requirements clarification, cross-cultural work; English and Mandarin</div></div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
