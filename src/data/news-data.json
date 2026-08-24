@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-23T13:59:00.000Z",
+  "lastUpdated": "2026-08-24T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-24",
+      "label": "August 24, 2026"
+    },
     {
       "value": "2026-08-23",
       "label": "August 23, 2026"
@@ -495,6 +499,116 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260824-0904-bitcoin-erupts-past-77k-to-80k-on-u-s-treasury-buyback-expansion",
+      "title": "Bitcoin Erupts Past $77K to ~$80K on U.S. Treasury Buyback Expansion — $4B+ Short Liquidated, Total Crypto Market Cap Adds $500B to $2.74T",
+      "summary": "On Aug 22–23, 2026, Bitcoin broke decisively out of a weeks-long $62K–$67K range, surging past $77K and briefly topping $79,461 on Friday before settling near $77,300 on Sunday. The trigger: the U.S. Treasury announced it will at least double the size of its long-term bond buyback program to absorb selling pressure, alongside a White House crypto summit where Trump publicly pushed the Senate to pass the CLARITY Act and CFTC Chair Mike Selig pledged to use existing authority to advance the administration's crypto agenda. CoinGlass data shows $4B+ in crypto short positions liquidated in 24h; ~$2.6B poured into US spot Bitcoin and Ether ETFs (BlackRock's IBIT alone took $742M across Aug 20–21) — making this the biggest ETF week of 2026. Total crypto market cap added ~$500B in a week, reaching ~$2.74T (highest since early May). BTC's YTD loss narrowed to ~12% from nearly -30% at the start of August.",
+      "tag": "PRODUCT",
+      "source": "Cryptoslate",
+      "sourceUrl": "https://cryptoslate.com/news/bitcoin/",
+      "date": "2026-08-24",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260824-0904-grayscale-files-5th-amendment-for-zcash-trust-the-zcash-etf-zcsh",
+      "title": "Grayscale Files 5th Amendment for Zcash Trust → \"The Zcash ETF\" (ZCSH) — First U.S. Privacy-Coin Spot ETF in the Pipeline, 2.5% Fee, Possible 34% DCG Stake",
+      "summary": "Grayscale filed its fifth amended S-1 with the SEC on Aug 21, 2026, advancing its bid to convert the existing Grayscale Zcash Trust into a spot ETF. If approved, the product — renamed \"The Zcash ETF\" and listing on NYSE Arca under ticker ZCSH — would be the first U.S. spot ETF to directly hold a privacy-focused cryptocurrency. Key terms: 2.5% annual sponsor fee (accrued and paid in ZEC); BNY Mellon as transfer agent; Coinbase Custody as custodian; in-kind creations supported (cash redemptions only at launch). The trust already holds $260M AUM and has traded OTC since 2017. DCG International Investments (a Grayscale/DCG subsidiary) is in nonbinding discussions to contribute ~200,000 ZEC to seed the creation basket — under a June 30 snapshot that would give DCG ~34% of the enlarged fund (potentially higher if you count existing 757,202 related-party shares). The S-3 was filed Aug 21; the parallel Rule 19b-4 exchange filing status has not been disclosed.",
+      "tag": "PRODUCT",
+      "source": "Theblock",
+      "sourceUrl": "https://www.theblock.co/news/regulation/2026-08-21-grayscale-moves-closer-launching-first-zcash-etf-in-us-sec-amended-filing-412517",
+      "date": "2026-08-24",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260824-0904-trump-holds-white-house-crypto-summit-sets-sept-15-senate-proced",
+      "title": "Trump Holds White House Crypto Summit, Sets Sept 15 Senate Procedural Vote on CLARITY Act — Ethics Provision Remains the Blocker",
+      "summary": "On Aug 19, 2026, President Trump convened crypto executives at the White House (Coinbase, Kraken, Ripple, Gemini, Robinhood alongside SEC Chair Paul Atkins and CFTC Chair Mike Selig) and publicly pressured the Senate to pass the Digital Asset Market Clarity Act. The Senate left for August recess without voting, and a procedural vote is now scheduled for Sept 15 — the first opportunity after summer recess and the last realistic window before midterm positioning takes over the calendar. Core bill: assigns SEC vs CFTC jurisdiction (SEC for security-like digital assets; CFTC for digital commodities), shields non-custodial DeFi developers under Section 604 (Blockchain Regulatory Certainty Act), creates registration regimes for digital commodity exchanges, and allocates $150M for crypto fraud enforcement. The unresolved fight: an ethics provision covering officials' own crypto holdings — Trump's 2025 disclosure showed ~$1.4B in crypto-related income ($635M from $TRUMP meme coin royalties + $500M+ from World Liberty Financial token sales). Democratic version (Gallego/Alsobrooks): require divestiture and blind-trust compliance, state AG enforcement. Republican/White House version: bar officials + spouses from issuing/sponsoring tokens, $250K/day fines, DOJ enforcement, sunset Jan 2029. Polymarket odds of 2026 enactment: collapsed from 82% in Feb to ~13–45% depending on cut.",
+      "tag": "POLICY",
+      "source": "Dipprofit",
+      "sourceUrl": "https://www.dipprofit.com/trump-pressures-congress-to-break-clarity-act",
+      "date": "2026-08-24",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260824-0904-u-s-spot-bitcoin-ether-etfs-record-biggest-week-of-2026-2-6b-net",
+      "title": "U.S. Spot Bitcoin + Ether ETFs Record Biggest Week of 2026 — $2.6B Net Inflows as BTC Approaches $80K",
+      "summary": "U.S. spot Bitcoin and Ether ETFs pulled in roughly $2.6 billion net inflows for the week ending Aug 22, 2026 — the largest weekly haul of the year. Breakdown from Farside: Aug 20 spot BTC ETFs +$606.3M (BlackRock's IBIT took $503.0M); Aug 21 spot BTC ETFs +$307.5M (IBIT +$239.3M); spot Ether ETFs +$219.5M on Aug 20 and +$184.0M on Aug 21. Friday Aug 22 was a record session — Bitcoin briefly touched $79,461 before profit-taking. Total ETF cumulative AUM now exceeds $165B (BTC ETFs ~$120B, ETH ETFs ~$25B, altcoin ETFs ~$20B). ETF flows are the dominant marginal buyer in this rally; spot exchange balances have dropped to multi-year lows.",
+      "tag": "PRODUCT",
+      "source": "Cryptoslate",
+      "sourceUrl": "https://cryptoslate.com/news/bitcoin/",
+      "date": "2026-08-24",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260824-0904-zcash-hits-8-year-high-near-855-on-etf-filing-privacy-coin-marke",
+      "title": "Zcash Hits 8-Year High Near $855 on ETF Filing — Privacy Coin Market Cap Crosses $14B (Now #12 Crypto)",
+      "summary": "Zcash (ZEC) surged to roughly $855 on Saturday Aug 23 — the highest price since 2018 — and is now the 12th-largest cryptocurrency by market cap (~$14.5B). The weekly move: +22–30% over 24h and ~70% over the week (from ~$490 on Aug 16 to ~$873). Trading is heavily derivatives-driven: 24h ZEC futures volume hit ~$9.54B vs ~$1.06B spot volume, and open interest sits at ~$1.8B (~13% of market cap). The rally reverses a brutal Q2 — ZEC had crashed from ~$630 to ~$250 in June after developers disclosed a counterfeiting vulnerability in the Orchard shielded pool (since patched via the NU6.2 network upgrade). Three weeks later, the token is more than 3× its June low.",
+      "tag": "PRODUCT",
+      "source": "Tradingview",
+      "sourceUrl": "https://www.tradingview.com/news/cryptoprowl:83a6eb972094b:0-zcash-hits-eight-year-high-after-grayscale-advances-u-s-etf-push/",
+      "date": "2026-08-24",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260824-0000-clear-continuous-latent-adapter-routing-for-utility-preserving-l",
+      "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
+      "summary": "A targeted fix for the safety-vs-utility trade-off in LLM alignment. Existing global safety tuning (SFT, standard LoRA) writes the same safety signal into the backbone for every input, which degrades benign prompts alongside the harmful ones it intends to suppress. CLEAR attaches a small safety LoRA adapter and gates it continuously per-input by a lightweight hidden-state classifier that decides how strongly to mix the adapter in at each token. The backbone stays frozen. On Llama-3-8B-Instruct this drops HarmBench ASR from 32.3% to 0.5% while raising GSM8K by up to 7.1 points over globally applied SFT / LoRA — i.e. you get the safety benefit without paying the usual utility tax, and often net-improving utility because the global interventions were hurting it.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.21278",
+      "date": "2026-08-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260824-0000-don-t-solve-just-compare-tiny-advisors-for-runtime-intervention-",
+      "title": "Don't Solve, Just Compare: Tiny Advisors for Runtime Intervention in LLM Agents",
+      "summary": "Most \"agent runtime oversight\" work falls into one of two traps: either the overseer is a second expert solver (so you're paying for a second frontier model to babysit the first), or it's a task-capable critic (same problem, plus capacity costs). COTA replaces both with a tiny comparator that only has to answer \"is sampled alternative A better than the actor's current proposal?\" — a much weaker supervised objective trained from same-prefix counterfactual branches. Repeated pairwise comparisons decide when intervention is warranted, and the preferred alternative is returned as non-binding advice for the actor to replan. Across WebShop, ALFWorld and τ³-Retail with three different actors, COTA improves all nine evaluation settings and beats the compared baselines — and crucially, the comparator can be substantially weaker than the actor it supervises.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.21027",
+      "date": "2026-08-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260824-0000-omniassistbench-assistant-style-interaction-benchmark-for-omni-l",
+      "title": "OmniAssistBench: Assistant-style Interaction Benchmark for Omni-LLMs",
+      "summary": "A benchmark purpose-built for interactive omni-modal assistants — models that continuously perceive the world (video, audio, gestures) and proactively guide a user toward a goal, not just answer questions about a passive video clip. Static offline datasets can't accommodate the fact that the model's response dynamically changes the user's next action, so OmniAssistBench reverse-engineers the dataset from internet videos: 1000+ expert person-hours to deduce user goals and segment each source into multi-turn clips that simulate continuous interaction. To handle the path-divergence problem (one goal, many valid routes), models are given priors derived from the source video and have to guide the user along the exact same route — turning \"creativity\" into a measurable mismatch. The headline number: Gemini-3-Pro hits 66.4/100, the open-source Qwen3-Omni-Instruct 51.2/100. Both stumble on visual prompts (hand gestures) and fail to maintain temporal continuity across turns.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.21360",
+      "date": "2026-08-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260824-0000-scaling-muon-for-diffusion-transformers",
+      "title": "Scaling Muon for Diffusion Transformers",
+      "summary": "First systematic scaling study of the Muon optimizer (matrix-aware, balancing updates across singular directions) on DiTs from 1.3B to 15B parameters, plus a fix for its biggest scaling flaw. The diagnostic: vanilla Muon's per-step 5-iteration Newton–Schulz (NS5) and full-momentum materialization stop paying off at scale — the optimizer time can exceed the model-step savings. The fix is Periodic Row-wise Muon : do the full NS5 spectral refresh every K steps, and use a cheap row-wise constrained update on the live momentum in between. The distributed implementation runs the row-wise path directly on sharded momentum and overlaps the NS5 refresh via bucketed all-gather. Across all scales Muon still beats AdamW on best generative quality by 12.9–19.1%; Periodic Row-wise Muon stays within 0.5% of vanilla Muon at 1.3B–4B, gains 4.5% at 9B, cuts optimizer time by 46.9–54.3%, end-to-end step time by 15.7–24.3%, communication volume by 66.7%, and reaches best quality with 33.7–64.8% less active training time.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20818",
+      "date": "2026-08-24",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260824-0000-treewy-speculative-verification-for-gated-deltanet-hybrids",
+      "title": "TreeWY: Speculative Verification for Gated DeltaNet Hybrids",
+      "summary": "Modern open-source frontier models (Qwen3.5, the new generation of hybrid linear-attention / Transformer stacks) keep most layers as Gated DeltaNet (GDN) — a fixed-size recurrent state instead of a growing KV cache. That's great for memory but kills speculative decoding: today's approach snapshots the full recurrent state at every draft position, and those snapshots can't be shared across branches of a draft tree, so a wide high-acceptance tree becomes memory-infeasible. TreeWY removes the snapshots entirely. Using a tree-structured WY transform of the gated delta rule, it computes every draft node's output with a single triangular solve, stores a small pseudo-value matrix instead of per-node states, and reconstructs only the one accepted state on commit. On Qwen3.5 35B and 397B serving benchmarks it cuts speculative recurrent-state memory and KV-cache pressure at identical acceptance length — turning the freed HBM into higher throughput and lower TTFT wherever memory is the bottleneck, with only a few percent cost where it isn't. Same memory budget now buys a wider, higher-acceptance draft tree.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.20961",
+      "date": "2026-08-24",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "industry-20260823-2304-china-releases-three-edtech-llm-group-standards-at-gse2026-first",
       "title": "China Releases Three EdTech LLM Group Standards at GSE2026 — First Sector-Level Guardrails for \"AI + Education\"",

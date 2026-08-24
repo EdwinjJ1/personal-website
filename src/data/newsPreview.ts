@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-08-23",
-  "latestLabel": "August 23, 2026",
+  "latestDate": "2026-08-24",
+  "latestLabel": "August 24, 2026",
   "items": [
     {
-      "id": "industry-20260823-2304-china-releases-three-edtech-llm-group-standards-at-gse2026-first",
-      "title": "China Releases Three EdTech LLM Group Standards at GSE2026 — First Sector-Level Guardrails for \"AI + Education\"",
+      "id": "industry-20260824-0904-bitcoin-erupts-past-77k-to-80k-on-u-s-treasury-buyback-expansion",
+      "title": "Bitcoin Erupts Past $77K to ~$80K on U.S. Treasury Buyback Expansion — $4B+ Short Liquidated, Total Crypto Market Cap Adds $500B to $2.74T",
       "tag": "PRODUCT",
-      "date": "2026-08-23",
-      "time": "23:04",
+      "date": "2026-08-24",
+      "time": "09:04",
       "category": "industry"
     },
     {
-      "id": "industry-20260823-2304-jiuxuewang-tencent-cloud-launch-future-learning-center-at-wwec-2",
-      "title": "Jiuxuewang + Tencent Cloud Launch \"Future Learning Center\" at WWEC 2026 — \"AI Dual-Learning · Dual-Planning\" System 3.0 + AI Self-Study Room Franchise",
+      "id": "industry-20260824-0904-grayscale-files-5th-amendment-for-zcash-trust-the-zcash-etf-zcsh",
+      "title": "Grayscale Files 5th Amendment for Zcash Trust → \"The Zcash ETF\" (ZCSH) — First U.S. Privacy-Coin Spot ETF in the Pipeline, 2.5% Fee, Possible 34% DCG Stake",
       "tag": "PRODUCT",
-      "date": "2026-08-23",
-      "time": "23:04",
+      "date": "2026-08-24",
+      "time": "09:04",
       "category": "industry"
     },
     {
-      "id": "industry-20260823-2304-medly-ai-london-closes-8m-seed-led-by-felix-capital-joins-uk-dep",
-      "title": "Medly AI (London) Closes $8M Seed Led by Felix Capital — Joins UK Dept. for Education AI Tutoring Pioneers Alongside Pearson & ElevenLabs",
-      "tag": "PRODUCT",
-      "date": "2026-08-23",
-      "time": "23:04",
+      "id": "industry-20260824-0904-trump-holds-white-house-crypto-summit-sets-sept-15-senate-proced",
+      "title": "Trump Holds White House Crypto Summit, Sets Sept 15 Senate Procedural Vote on CLARITY Act — Ethics Provision Remains the Blocker",
+      "tag": "POLICY",
+      "date": "2026-08-24",
+      "time": "09:04",
       "category": "industry"
     }
   ]
