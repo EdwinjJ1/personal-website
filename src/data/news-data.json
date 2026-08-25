@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-24T13:59:00.000Z",
+  "lastUpdated": "2026-08-25T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-25",
+      "label": "August 25, 2026"
+    },
     {
       "value": "2026-08-24",
       "label": "August 24, 2026"
@@ -499,6 +503,171 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260825-0000-china-s-palantir-zhongshu-ruizhi-closes-multi-hundred-million-rm",
+      "title": "\"China's Palantir\" Zhongshu Ruizhi (中数睿智) Closes Multi-Hundred-Million RMB Strategic Round — National Team Capital Goes All In",
+      "summary": "On Aug 24, industrial-grade decision-AI platform Zhongshu Ruizhi announced a multi-hundred-million RMB strategic round from a \"national team\" syndicate: China Internet Investment Fund (中网投), National Social Security Fund (社保基金), Suchuangtou (苏创投), Financial Street Capital, ICBC Capital, and Kunlun Capital, with existing investors following on. Just three months after its hundred-million RMB Series B. The company claims a unique \"trinity closed loop\" causal-AI architecture serving 50+ central state-owned enterprises across 800+ complex production scenarios, with two consecutive years of revenue doubling and profitability.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-alibaba-closes-hk-80b-top-up-placement-100-to-full-stack-ai-jack",
+      "title": "Alibaba Closes HK$80B Top-Up Placement — 100% to Full-Stack AI; Jack Ma Personally Adds HK$800M+ in Show of Confidence",
+      "summary": "On Aug 24, Alibaba completed its first equity placement since 2019 Hong Kong listing — 710 million new shares at HK$112.70, raising net HK$79.7B (largest follow-on in HKEX history), with 100% of net proceeds earmarked for full-stack AI capability and infrastructure. Alibaba Cloud Q1 FY2027 revenue grew 45% YoY, AI-related revenue has posted triple-digit growth for 12 consecutive quarters, capex was up 75% YoY at RMB 67.68B. Stock dropped ~9% on the dilution, short interest hit a record HK$14.2B; Jack Ma, Joe Tsai, and Eddie Wu together bought HK$800M+ worth to signal confidence.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-bytedance-launches-doubao-work-ai-office-agent-goes-head-to-head",
+      "title": "ByteDance Launches \"Doubao Work\" AI Office Agent — Goes Head-to-Head with Tencent WorkBuddy and Alibaba Qianwen Office",
+      "summary": "On Aug 25, ByteDance officially released \"Doubao Work\" (豆包工作), a productivity-focused AI Agent product deeply integrated with Feishu (Lark) that supports document, spreadsheet, PPT, image, video, and web generation/editing with full enterprise permission inheritance. It became one of the first office agents in China to pass both the Office Agent Capability certification and Cloud Baseline certification. Free 30-day subscription promo on launch.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-capricor-s-deramiocel-pdufa-pushed-from-aug-22-to-nov-22-fda-acc",
+      "title": "Capricor's Deramiocel PDUFA Pushed From Aug 22 to Nov 22 — FDA Accepts 24-Month Open-Label Extension Data as Major BLA Amendment, Narrows Indication to Upper-Limb Function in DMD",
+      "summary": "The FDA formally extended Capricor Therapeutics' (CAPR) PDUFA date for deramiocel (CAP-1002, allogeneic cardiosphere-derived cells) from Aug 22, 2026 to Nov 22, 2026 after accepting the company's 24-month open-label extension (OLE) data as a major BLA amendment — meaning the agency will treat the new long-term data as a substantive addition to the original dossier. Capricor also narrowed the indication language to focus on upper-limb function preservation in Duchenne muscular dystrophy (DMD) patients on chronic steroids. CAPR shares spiked +13.2% to $7.12 intraday Monday on the original report before settling at $6.80 (+8.11%). The new 24-month OLE data is being held as a \"late-cycle\" submission that requires an additional 3-month FDA review clock under PDUFA.",
+      "tag": "PRODUCT",
+      "source": "Xueqiu",
+      "sourceUrl": "https://xueqiu.com/1947009696/406438360",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-erasca-s-eras-0015-pan-ras-molecular-glue-wins-fda-fast-track-fo",
+      "title": "Erasca's ERAS-0015 (Pan-RAS Molecular Glue) Wins FDA Fast Track for Metastatic Pancreatic Cancer — Phase III PDAC Trial Slated for 2027",
+      "summary": "Erasca (ERAS) announced Aug 24 that the FDA granted Fast Track Designation (FTD) to ERAS-0015, an oral pan-RAS molecular glue, for metastatic pancreatic adenocarcinoma. The designation is ERAS-0015's first formal regulatory milestone globally and follows July 2026 AURORAS-1 Phase 1 data showing a 57% unconfirmed 8-week ORR in 7 evaluable 2L+ KRAS G12X pancreatic ductal adenocarcinoma (PDAC) patients at the 32 mg recommended dose for expansion (RDE); 6 of 7 remained on treatment at the May 25 cutoff with no DLTs. FTD enables more frequent FDA interactions, plus eligibility for rolling review, accelerated approval, and priority review. Company plans: a Phase III 1L PDAC trial in 2027, a registration-enabling 2L+ NSCLC trial in H1 2027, and a second Phase III NSCLC study in H2 2027–H1 2028. ERAS was trading +2.72% to $18.11 pre-market.",
+      "tag": "PRODUCT",
+      "source": "Tradingview",
+      "sourceUrl": "https://www.tradingview.com/news/tradingview:35931308288b6:0-erasca-receives-fda-fast-track-for-eras-0015-in-metastatic-pancreatic-cancer",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-fda-halts-regenxbio-s-rgx-121-hunter-syndrome-gene-therapy-again",
+      "title": "FDA Halts Regenxbio's RGX-121 Hunter Syndrome Gene Therapy Again — 5 Asymptomatic Spine MRI Findings, BLA Resubmission Indefinitely Postponed, Stock -25%",
+      "summary": "Regenxbio (RGNX) disclosed Monday Aug 24 that the FDA placed a new clinical hold on RGX-121 (clemidsogene lanparvovec) for Hunter syndrome (MPS II) after investigators found small asymptomatic nodules/cystic masses in the spines of 5 of 48 patients in the CAMPSIITE registrational trial — all treated 3–6 years ago via intracisternal/intraventricular AAV delivery. Radiologists call the findings \"likely benign\"; no brain masses detected; all 5 patients remain clinically well with stable-to-improving neurocognitive scores. The company now says it will NOT refile the BLA \"in the near term\" — reversing the June Type-A meeting agreement where the agency (under acting commissioner Kyle Diamantas) had blessed an accelerated-approval resubmission in Q3. This is RGX-121's second clinical hold of 2026 (the first came in January when a separate MPS I gene therapy program, RGX-111, produced a brain tumor). RGNX fell 24.81% to $8.06 Monday.",
+      "tag": "PRODUCT",
+      "source": "Biopharmadive",
+      "sourceUrl": "https://www.biopharmadive.com/news/regenxbio-fda-hunter-syndrome-hold-mri-safety/828578",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-genentech-pays-190m-upfront-up-to-2-3b-total-for-hanmi-s-hm17321",
+      "title": "Genentech Pays $190M Upfront, Up to $2.3B Total, for Hanmi's HM17321 — First-in-Class Non-Incretin Obesity Drug That Preserves Muscle Mass",
+      "summary": "Genentech (Roche) signed an exclusive global license (ex-South Korea) for Hanmi Pharmaceutical's HM17321, a proprietary urocortin-2 (UCN2) analog designed as a non-incretin obesity therapy that reduces fat while preserving (and possibly adding) lean muscle. Deal terms disclosed Aug 24: $190M upfront + up to ~$2.12B in development/regulatory/commercial milestones + tiered royalties on sales — making it the largest single-asset out-licensing deal in Korean pharma history. FDA cleared Phase 1 IND in Nov 2025; Hanmi runs the current Phase 1 in healthy volunteers and obese patients, after which Genentech takes over from Phase 2. Hanmi shares hit the 30% daily-limit-up on KOSPI Monday (KRW 540,000), the first limit-up since Aug 2020.",
+      "tag": "PRODUCT",
+      "source": "Koreaherald",
+      "sourceUrl": "https://www.koreaherald.com/article/10850144",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-google-cloud-and-verizon-announce-full-stack-enterprise-ai-strat",
+      "title": "Google Cloud & Verizon Announce Full-Stack Enterprise AI Strategic Partnership — Gemini Enterprise for Telecom \"Self-Driving Network\"",
+      "summary": "On Aug 24, Google Cloud announced a strategic partnership with Verizon to deploy Google's full-stack AI across customer experience, enterprise data unification, and company-wide AI expansion. Verizon will use Gemini Enterprise for agent orchestration and build a self-driving network intelligence framework to predict and resolve network anomalies, boost employee productivity, and improve customer service. Google says its customer service platform already handles the majority of Verizon's monthly inbound calls and chats.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-gsk-s-bepirovirsen-hibsago-approved-in-japan-world-s-first-funct",
+      "title": "GSK's Bepirovirsen (Hibsago) Approved in Japan — World's First Functional Cure Drug for CHB; 19% Functional Cure Rate vs ~1% Standard of Care",
+      "summary": "Japan's MHLW approved GSK's bepirovirsen (brand: Hibsago) on Aug 24 as the first-ever functional cure treatment for chronic hepatitis B in adults with ≥6 months of prior nucleos(t)ide analogue therapy and HBsAg ≤3000 IU/mL + HBV DNA <90 IU/mL at baseline. Approval was accelerated under Japan's SENKU designation for high-unmet-need medicines. B-Well Phase III pooled data: 19% functional cure rate at 6 months (233/1,220) in the broad HBsAg ≤3000 IU/mL population, vs 0/614 on placebo (p<0.001); in the HBsAg ≤1000 IU/mL subgroup, 26% (200/768) achieved functional cure. Bepirovirsen is an antisense oligonucleotide co-developed with Ionis Pharmaceuticals. GSK projects peak sales exceeding $2.7B; decisions pending in the U.S. (FDA Breakthrough + Fast Track), China (Breakthrough + Priority), and elsewhere over the next few months. The drug is partnered in China with Sino Biopharm via CTTQ for fast rollout if approved.",
+      "tag": "PRODUCT",
+      "source": "Ir.Ionis",
+      "sourceUrl": "https://ir.ionis.com/news-releases/news-release-details/ionis-partner-gsk-announces-hibsago-bepirovirsen-approved-japan",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260825-0000-rillet-crosses-1b-unicorn-mark-with-100m-series-c-48-hour-round-",
+      "title": "Rillet Crosses $1B \"Unicorn\" Mark with $100M Series C — 48-Hour Round Closed by ICONIQ, Sequoia, a16z",
+      "summary": "AI-native ERP startup Rillet announced a $100M Series C at $1B valuation led by ICONIQ with Sequoia and Andreessen Horowitz participating — the company's third round in 14 months and total funding past $200M. The round was unsolicited by Rillet (initiated by investors after a board update showing Q2 ARR doubling) and closed in 48 hours. Customer base passed 600 organizations, all of whom have fully replaced their legacy ERP/accounting systems. Notable: 50% of customers came from Intuit, 30% from NetSuite/Sage Intacct, 20% from Oracle/SAP/Workday/Microsoft.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260825-0000-echowm-open-and-enterable-omnimodal-world-models",
+      "title": "EchoWM: Open and Enterable Omnimodal World Models",
+      "summary": "Most \"world model\" demos are vision-only. EchoWM is the first open release that generates all four modalities jointly — 720p video, environmental sound, music, and speech — while responding to continuous camera motion. The camera-intent abstraction is the bit worth stealing: in first-person scenes it specifies observer motion; in third-person scenes the camera-character dynamics are learned from data with no view-specific controllers. Discrete commands and continuous poses both map to a shared metric-scale 6-DoF trajectory, with dataset-level calibration preserving motion magnitude across heterogeneous sources. The \"enterable\" part is the design choice that distinguishes it from Oasis/Genie: you don't just watch, you walk.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.23189",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260825-0000-how-to-train-a-critic-stably-and-efficiently",
+      "title": "How to Train a Critic Stably and Efficiently",
+      "summary": "A principled answer to the GRPO-is-stable-but-critic-is-not question that has been bugging RL-for-LLM practitioners since GRPO ate the field. The paper diagnoses why naive critic-based training recipes blow up on token-level advantages, then ships BPCO (Best-Practice Critic Optimization) : DPPO backbone + value predictions bounded to the reward range + Monte Carlo value targets + unnormalized policy advantages + length-adaptive GAE. Because the critic needs only one sampled response per prompt (not a group of k), the effective sample-efficiency win is roughly k× over GRPO at comparable compute — i.e. a PPO-shaped pipeline becomes competitive with group-based methods if you stop using their default recipes. The headline ablation makes that explicit.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.23566",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260825-0000-proxyformer-a-dual-stream-proxy-architecture-for-ultra-long-cont",
+      "title": "ProxyFormer: A Dual-Stream Proxy Architecture for Ultra-Long Context and High-Resolution Generation",
+      "summary": "Quadratic attention and growing KV cache are the bottleneck for both million-token context LLMs and high-res image/video generators. ProxyFormer splits each layer into two streams. A fine-grained local stream compresses bottom-up into a small set of proxy tokens ; expensive global interaction happens only in that compressed proxy space; then the globally contextualised proxies decompress top-down back into the local stream. Because the local stream is dense but never attends globally, and the proxy stream is sparse but sees the whole input, the layer runs at sub-quadratic cost with no perceivable loss in long-context retrieval or high-resolution fidelity. Single-author work, but with the ablation tables of a lab.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.23463",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260825-0000-reworld-an-interactive-world-model-with-long-horizon-memory",
+      "title": "ReWorld: An Interactive World Model with Long-Horizon Memory",
+      "summary": "The world-model \"control vs memory\" tension is real: control wants a short rollout horizon (so reactions stay sharp), memory wants unbounded history (so the agent doesn't forget the room it walked through). ReWorld separates the two structurally inside the attention itself. Mixed per-head attention windows: most heads look only at the recent window, a small subset are global, and random head routing keeps the two capabilities from binding to particular heads. Random chunk dropping during training makes sparse histories in-distribution, so at inference the whole past lives under a bounded budget. Result: controllable interactive video that doesn't lose track of where it's been over hundreds of steps — the part every existing world model collapses on.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.23565",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260825-0000-srpo-self-reflective-policy-optimization-for-long-horizon-reason",
+      "title": "SRPO: Self-Reflective Policy Optimization for Long-Horizon Reasoning",
+      "summary": "Self-reflection is the credit-assignment trick humans use to convert sparse outcome feedback into dense guidance; SRPO internalises it for LLM post-training. Concretely: the model analyses its own completed trajectories, synthesises the errors into compact \"reflection patches,\" and a teacher model scores on-policy student rollouts conditioned on those patches — turning the patches into dense, token-level training signal rather than the coarse outcome-only reward that current GRPO/RLOO methods use. The framing is \"the reflection is part of the policy, not a separate prompt trick.\" They report meaningful gains on long-horizon math and tool-use benchmarks where outcome-only rewards are too sparse to be useful.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.23493",
+      "date": "2026-08-25",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "industry-20260824-0904-bitcoin-erupts-past-77k-to-80k-on-u-s-treasury-buyback-expansion",
       "title": "Bitcoin Erupts Past $77K to ~$80K on U.S. Treasury Buyback Expansion — $4B+ Short Liquidated, Total Crypto Market Cap Adds $500B to $2.74T",
