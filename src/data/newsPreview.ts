@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-08-24",
-  "latestLabel": "August 24, 2026",
+  "latestDate": "2026-08-25",
+  "latestLabel": "August 25, 2026",
   "items": [
     {
-      "id": "industry-20260824-0904-bitcoin-erupts-past-77k-to-80k-on-u-s-treasury-buyback-expansion",
-      "title": "Bitcoin Erupts Past $77K to ~$80K on U.S. Treasury Buyback Expansion — $4B+ Short Liquidated, Total Crypto Market Cap Adds $500B to $2.74T",
+      "id": "industry-20260825-0000-china-s-palantir-zhongshu-ruizhi-closes-multi-hundred-million-rm",
+      "title": "\"China's Palantir\" Zhongshu Ruizhi (中数睿智) Closes Multi-Hundred-Million RMB Strategic Round — National Team Capital Goes All In",
       "tag": "PRODUCT",
-      "date": "2026-08-24",
-      "time": "09:04",
+      "date": "2026-08-25",
+      "time": "00:00",
       "category": "industry"
     },
     {
-      "id": "industry-20260824-0904-grayscale-files-5th-amendment-for-zcash-trust-the-zcash-etf-zcsh",
-      "title": "Grayscale Files 5th Amendment for Zcash Trust → \"The Zcash ETF\" (ZCSH) — First U.S. Privacy-Coin Spot ETF in the Pipeline, 2.5% Fee, Possible 34% DCG Stake",
+      "id": "industry-20260825-0000-alibaba-closes-hk-80b-top-up-placement-100-to-full-stack-ai-jack",
+      "title": "Alibaba Closes HK$80B Top-Up Placement — 100% to Full-Stack AI; Jack Ma Personally Adds HK$800M+ in Show of Confidence",
       "tag": "PRODUCT",
-      "date": "2026-08-24",
-      "time": "09:04",
+      "date": "2026-08-25",
+      "time": "00:00",
       "category": "industry"
     },
     {
-      "id": "industry-20260824-0904-trump-holds-white-house-crypto-summit-sets-sept-15-senate-proced",
-      "title": "Trump Holds White House Crypto Summit, Sets Sept 15 Senate Procedural Vote on CLARITY Act — Ethics Provision Remains the Blocker",
-      "tag": "POLICY",
-      "date": "2026-08-24",
-      "time": "09:04",
+      "id": "industry-20260825-0000-bytedance-launches-doubao-work-ai-office-agent-goes-head-to-head",
+      "title": "ByteDance Launches \"Doubao Work\" AI Office Agent — Goes Head-to-Head with Tencent WorkBuddy and Alibaba Qianwen Office",
+      "tag": "PRODUCT",
+      "date": "2026-08-25",
+      "time": "00:00",
       "category": "industry"
     }
   ]
