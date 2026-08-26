@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-25T13:59:00.000Z",
+  "lastUpdated": "2026-08-26T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-26",
+      "label": "August 26, 2026"
+    },
     {
       "value": "2026-08-25",
       "label": "August 25, 2026"
@@ -503,6 +507,116 @@
     }
   ],
   "news": [
+    {
+      "id": "research-20260826-0000-browserforge-scaling-web-episode-via-parallel-browser-sandboxes",
+      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
+      "summary": "cs.CL An open-web-sourcing framework that drives hundreds of browser sandboxes in parallel against hundreds of thousands of real, openly reachable websites, with a Proposer-Solver dual-agent loop turning raw pages into executable tasks and a rule-plus-model cleaning pipeline that rewrites surviving reasoning into a single unified chain-of-thought style. Resulting corpus: 203,238 trajectories, each from a distinct website — bigger and more diverse than prior trajectory datasets. Fine-tuning a compact multimodal model lifts Online-Mind2Web success from 25.66% to 33.33%, with the gain growing as the corpus scales.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24848",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-do-robotic-world-models-really-follow-actions-diagnosing-and-ali",
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+      "summary": "cs.RO / cs.CV Introduces WorldEcho, a benchmark that probes action-following over a much broader action distribution than expert-only demos (using visual integrity and SE(3) trajectory alignment), and WorldSync, a three-axis fix that broadens training distribution, grounds intermediate video representations in action-induced dynamics via an Action-Forcing Expert, and aligns predicted-vs-actual changes under interventions. The diagnosis: current world models handle expert actions fine but ignore or break on diverse off-expert trajectories.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24885",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-effective-learning-rate-governs-loss-dynamics-in-language-model-",
+      "title": "Effective Learning Rate Governs Loss Dynamics in Language Model Pretraining",
+      "summary": "cs.LG An empirical scaling law for LM pretraining: loss trajectories collapse across runs when the ratio of learning rate to parameter norm (the \"effective learning rate\", ELR) is matched, even with very different absolute LRs and norms. The collapse holds across optimizers, architectures, datasets, and model scales with mean errors in the few-x-10^-3 range, below seed-to-seed noise.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24814",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-laion-bvd-a-10-million-hour-open-video-dataset-for-multimodal-pr",
+      "title": "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Pre-training",
+      "summary": "cs.CV / cs.LG / cs.CL LAION drops a 10-million-hour open video pretraining corpus: 1.3B platform-specific URLs from CommonCrawl, 80M videos actually downloaded, content-aware scene detection for clips, and synthetic video+audio captions. Models trained on it post competitive results on standard video-text and audio-text benchmarks with monotonic gains as compute grows.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24845",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-latent-action-as-intention-enables-efficient-future-imagination-",
+      "title": "Latent Action as Intention Enables Efficient Future Imagination for World Action Models (LAWA)",
+      "summary": "cs.RO / cs.CV An architecture that keeps test-time future imagination but skips the expensive future-video branch: a discrete tokenizer pre-trained on action-free data produces manipulation-centric codebook targets, then a continuous latent state anchored to those targets is denoised jointly with executable action chunks. On RoboCasa LAWA hits 65.6% / 80.8% in few-shot / full-data settings — beating matched Fast-WAM by 9.6 / 4.5 points and matching Joint-WAM with 42.9% lower inference latency.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24882",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-reading-is-not-using-retrieval-judgment-and-the-design-of-ai-fin",
+      "title": "Reading Is Not Using: Retrieval, Judgment, and the Design of AI Financial Research Workflows",
+      "summary": "cs.CL / cs.AI Identifies a retrieval-integration gap in long-context financial analysis: holding focal-firm information fixed and varying only unrelated context from 2k to 128k tokens, a risk disclosure's influence on investment judgments falls to the noise floor even as direct retrieval remains accurate. The pattern replicates across model families and in real 10-K filings — more capable models postpone but do not eliminate it. Chunk-and-summarize pipelines actively evict relevant info; a targeted, structured restatement adjacent to the decision restores its influence.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24842",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-recursive-experiential-working-memory-evolution-for-long-horizon",
+      "title": "Recursive Experiential-Working Memory Evolution for Long-Horizon Agent Harnesses (Recuris)",
+      "summary": "cs.AI / cs.CL A two-tier memory architecture for long-horizon agents: Working Memory tracks task progress and routes skill selection from Experiential Memory, so skill use is grounded in current needs rather than the full history. Execution traces become structured evidence that localizes failures to specific memory components, which a fixed Meta-Agent then rewrites recursively.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24876",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-right-diagnoses-decorative-reasoning-a-perturbation-audit-of-med",
+      "title": "Right Diagnoses, Decorative Reasoning: A Perturbation Audit of Medical Chain-of-Thought",
+      "summary": "cs.AI / cs.CL A 30-operator medical CoT faithfulness audit: severity reversal, negation flips, demographic swaps, evidence ablation, etc., paired with chain-update × answer-flip joint analysis to classify each model's failure mode. The headline finding: medical LLMs often keep the right diagnosis but produce decorative reasoning that does not track the perturbed question.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24790",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-stream-aligned-policy-optimization-for-asynchronous-agentic-rl-s",
+      "title": "Stream-Aligned Policy Optimization for Asynchronous Agentic RL (SPO++)",
+      "summary": "cs.AI Identifies a math bug in SPO: trajectory-level centering does not center the token-weighted quantity the actor loss actually consumes. SPO++ fixes it by standardizing terminal-outcome advantages under the action-token measure and organizing prompt evidence by the policy event that produced it rather than learner receipt order. On ALFWorld and Math-TIR, the action-token-measure normalization is the single strongest tested component.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24870",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260826-0000-what-fid-hides-detecting-ranking-and-diagnosing-deviations-in-ge",
+      "title": "What FID Hides: Detecting, Ranking, and Diagnosing Deviations in Generative Evaluation",
+      "summary": "cs.LG A critical audit of FID/KID scores that everyone in generative modeling uses but nobody really questions. The authors show that visually unrecognizable images optimized only to match Inception mean+covariance achieve FID 24.7 vs. 58.6 for real held-out images. FID is a moment summary that misses distributional differences, and the scalar gap is not even calibrated against sampling variation.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.24881",
+      "date": "2026-08-26",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "industry-20260825-0000-china-s-palantir-zhongshu-ruizhi-closes-multi-hundred-million-rm",
       "title": "\"China's Palantir\" Zhongshu Ruizhi (中数睿智) Closes Multi-Hundred-Million RMB Strategic Round — National Team Capital Goes All In",
