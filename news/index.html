@@ -27,7 +27,7 @@
     }
     .app { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; }
     @media (max-width: 800px) { .app { grid-template-columns: 1fr; } .sidebar { display: none; } }
-    
+
     .sidebar {
       background: var(--bg-subtle);
       border-right: 1px solid var(--border);
@@ -41,30 +41,30 @@
     .logo-mark { width: 28px; height: 28px; background: var(--accent); border-radius: 6px; display: flex; align-items: center; justify-content: center; }
     .logo-mark svg { width: 16px; height: 16px; fill: white; }
     .logo-text { font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
-    
+
     .nav-section { margin-bottom: 24px; }
     .nav-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.04em; color: var(--fg-subtle); padding: 0 10px; margin-bottom: 8px; }
     .nav-item { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--fg-muted); cursor: pointer; transition: all 0.15s; }
     .nav-item:hover { background: rgba(0, 0, 0, 0.04); color: var(--fg); }
     .nav-item.active { background: var(--accent); color: white; }
     .nav-item .count { margin-left: auto; font-size: 12px; opacity: 0.6; }
-    
+
     .main { padding: 32px 48px; max-width: 900px; }
     @media (max-width: 600px) { .main { padding: 24px 20px; } }
-    
+
     .header { margin-bottom: 40px; }
     .header-top { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 8px; }
     .title { font-size: 28px; font-weight: 700; letter-spacing: -0.03em; }
     .time { font-size: 13px; color: var(--fg-muted); font-weight: 500; }
     .subtitle { font-size: 15px; color: var(--fg-muted); }
-    
+
     .stats { display: flex; gap: 24px; margin-bottom: 40px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
     .stat { display: flex; flex-direction: column; gap: 4px; }
     .stat-value { font-size: 32px; font-weight: 700; letter-spacing: -0.03em; }
     .stat-label { font-size: 13px; color: var(--fg-muted); }
-    
+
     .cards { display: flex; flex-direction: column; gap: 16px; }
-    
+
     .card {
       background: white;
       border: 1px solid var(--border);
@@ -73,7 +73,7 @@
       transition: box-shadow 0.2s, border-color 0.2s;
     }
     .card:hover { border-color: var(--border-strong); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06); }
-    
+
     .card-header {
       padding: 20px 24px;
       display: flex;
@@ -94,14 +94,14 @@
     .card-badge { font-size: 12px; font-weight: 500; color: var(--fg-muted); background: var(--bg-subtle); padding: 4px 10px; border-radius: 6px; }
     .card-expand { color: var(--fg-subtle); transition: transform 0.2s; }
     .card.expanded .card-expand { transform: rotate(180deg); }
-    
+
     .card-content { border-top: 1px solid var(--border); padding: 8px; display: none; }
     .card.expanded .card-content { display: block; }
-    
+
     .item { padding: 16px; border-radius: 8px; margin-bottom: 4px; display: block; text-decoration: none; color: inherit; }
     .item:last-child { margin-bottom: 0; }
     .item:hover { background: var(--bg-subtle); }
-    
+
     .item-tag {
       display: inline-block;
       font-size: 11px;
@@ -118,11 +118,11 @@
     .item-tag.policy { background: #fff7ed; color: #ea580c; }
     .item-tag.clinical { background: #eff6ff; color: #2563eb; }
     .item-tag.ma { background: #fdf4ff; color: #c026d3; }
-    
+
     .item-title { font-size: 14px; font-weight: 600; margin-bottom: 6px; line-height: 1.4; }
     .item-summary { font-size: 13px; color: var(--fg-muted); line-height: 1.6; }
     .item-arrow { float: right; color: var(--fg-subtle); margin-top: 8px; }
-    
+
     .mobile-nav {
       display: none;
       position: fixed;
@@ -227,7 +227,7 @@
         <div class="nav-label">Reports</div>
         <div class="nav-item active" data-filter="all"><span>Overview</span><span class="count">4</span></div>
         <div class="nav-item" data-filter="ai"><span>AI News</span><span class="count">28</span></div>
-        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">55</span></div>
+        <div class="nav-item" data-filter="research"><span>Research</span><span class="count">56</span></div>
         <div class="nav-item" data-filter="industry"><span>Industry</span><span class="count">22</span></div>
         <div class="nav-item" data-filter="global"><span>Global</span><span class="count">22</span></div>
       </div>
@@ -241,12 +241,12 @@
         </div>
         <p class="subtitle" id="date">Loading...</p>
       </header>
-      
+
       <div class="stats">
-        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">AI News</span></div>
-        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Research</span></div>
-        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Industry</span></div>
-        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div><span class="stat-label">Global</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">AI News</span></div>
+        <div class="stat"><span class="stat-value">15</span><span class="stat-label">Research</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">Industry</span></div>
+        <div class="stat"><span class="stat-value">20</span><span class="stat-label">Global</span></div>
       </div>
 
       <!-- Date Navigation -->
@@ -258,1423 +258,158 @@
       </div>
 
       <div class="cards" id="cards">
-        <article class="card expanded" data-type="research" data-date="2026-07-24" data-time="02:33">
+        <article class="card expanded" data-type="research" data-date="2026-08-21" data-time="14:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon research">📚</div>
+              <div class="card-icon research">🧪</div>
               <div>
                 <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🌀 AdaRoPE — heads need different rotation frequencies/scaling for long-context, learnable per-head variant beats partial-RoPE/NoPE, ⚡ LISA — drop-in Linear-Indexed Sparse Attention for long CoT (O(n²) → O(n)+top-M sparse), 🧠 PRO-LONG — programmatic memory for long-horizon agents, code-as-state replaces raw observation dumping, 🌀 SLPO — outcome-reward RL finally works on autoregressive latent reasoners via a surrogate policy, 📐 Euclean — Lean + native Mathlib auto-formalization for geometry, bridges the algebra/geometry split</div>
+                <div class="card-meta">Fri Aug 21 14:04 AEST arXiv pull (window 20 Aug 16:04 → 21 Aug 04:04 UTC, US/East Thu announcement batch, cs.AI/LG/CL/CV/NE). 36 fresh submissions. 5 picks: 🔁 <b>AI4AI-Bench</b> — RSI stress-test: 10 frozen repos × 10 algorithm families, 4h on a B300 to rewrite the training algorithm, hidden evaluator scores against the original under matched compute. 🎯 <b>Phantom Gains</b> — frozen-control audit of LoRA self-training exposes 7 measurement artifacts; popular "expansion statistic" gives an untrained model 0.280 acquisition rate, so any self-improvement number without a control is suspect. 🔧 <b>MidTool</b> — mid-training is the right stage for agentic tool use, corpus pipeline mixing web/PDF/code with synthesized tool-API supervision; Qwen3-4B/8B-Base + SFT/RL beats baselines on tool-use benchmarks. 📦 <b>Break It Down, Pass It On</b> — task-level skill memories mostly <i>hurt</i> (below no-memory baseline); subtask-level + text-format skills actually transfer — concrete memory-bank recipe. ⚙️ <b>Learning When to Think</b> — model emits a mode flag (NoThink/Short/Long) as first token, learned inside GRPO; on 1.5B MATH the brief modes beat Long, proof a self-gated router is learnable without a separate module.</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">02:33</span>
-              <span class="card-badge">10 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2607.19363">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌀 AdaRoPE: Not All Attention Heads Should Rotate and Scale Equally</div>
-              <div class="item-summary">A theoretical + empirical critique of standard RoPE: heads with different functional roles need different rotation frequencies and attention scaling. AdaRoPE gives each head learnable rotation frequencies and scaling factors, and slots in as a drop-in RoPE replacement that improves long-context generalization over partial-RoPE and NoPE baselines. Cheap architectural change for any RoPE-based LLM; potentially free wins on long-context retrieval/QA without retraining from scratch.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.19358">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ LISA: Linear-Indexed Sparse Attention for Efficient Long-Context Reasoning</div>
-              <div class="item-summary">A plug-and-play attention replacement targeting long chain-of-thought models like DeepSeek-R1. LISA runs a linear-attention branch (O(n) long-range memory) in parallel with a Lightning Indexer that picks the top-M important tokens for sparse self-attention, fused via a gating mechanism — no pretraining-from-scratch required. Directly attacks the O(n²) cost wall that's limiting long-CoT deployment; if speedups hold, could halve inference cost for reasoning-heavy workloads.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.20064">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 PRO-LONG: Programmatic Memory Enables Long-Horizon Reasoning</div>
-              <div class="item-summary">An agent harness built around programmatic memory — code-as-state rather than raw observation dumping — targeting long-horizon tasks like ARC-AGI-3. The framework lets the LLM write and run small programs that decide what to remember from the environment and how to retrieve it back into context. Addresses the 'save-everything-and-hope' anti-pattern plaguing current agent designs, with results specifically on the ARC-AGI benchmark family.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.19691">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌀 SLPO: Scaling Latent Reasoning via a Surrogate Policy</div>
-              <div class="item-summary">Brings outcome-reward RL to autoregressive latent reasoners. The trick: a learned 'surrogate policy' approximates per-step likelihoods and stopping decisions under a fixed thinking budget, so RL can finally scale latent test-time compute (which was previously stuck at imitation-learning level). Unlocks outcome-reward RL for latent reasoning — a credible path to o1-style test-time scaling without the token-decoding tax.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.19374">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📐 Euclean: Automated Geometry Problem Formalization with Unified Verification in Lean</div>
-              <div class="item-summary">A four-stage framework that auto-formalizes geometry problems into Lean using native Mathlib (not a custom axiom system). Tackles the implicit-diagram problem (topology, non-degeneracy assumptions) and ships with a much larger problem corpus than prior Lean geometry efforts. Bridges the algebra/geometry split in formal math — foundation for an IMO-level unified reasoner.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.17977">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 RynnBrain 1.1: Towards More Capable and Generalizable Embodied Foundation Model</div>
-              <div class="item-summary">Alibaba DAMO / Hupan Lab's unified spatio-temporal embodied foundation model family at 2B / 9B / 122B-A10B scales — native 3D grounding, contact-point prediction, plus a cross-embodiment VLA variant (RynnBrain-VLA) deployed on Unitree G1, Astribot-S1, and Tianji-Wuji. The 122B-A10B variant claims SOTA over proprietary and open-source models on VSI-Bench, MMSI, and RefSpatial-Bench; real-robot experiments show RynnBrain-initialized policies beat Qwen-based and generalist VLA baselines, with joint multi-task + multi-embodiment training improving process scores.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.16900">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🍎 Environment-free Synthetic Data Generation for API-Calling Agents</div>
-              <div class="item-summary">Apple's take on the API-agent data wall: replace brittle live-environment simulation with LLM-based API simulation, so you can generate massive amounts of API-calling trajectories for training tool-use agents without ever spinning up a real backend. With Apple ML heavyweights (Toshev, Tuzel, Vemulapalli, Chowdhury, Hsieh) on the byline, the recipe is likely destined to inform Apple Intelligence / on-device agent training.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.18110">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧑‍🏫 LLM-as-a-Coach: Experiential Learning for Non-Verifiable Tasks</div>
-              <div class="item-summary">Microsoft Research turns the LLM-as-a-Judge into an LLM-as-a-Coach: instead of crushing evaluation down to a scalar reward (the root cause of reward hacking on open-ended tasks), the coach distills rich textual feedback into transferable experiential knowledge that conditions a teacher and is internalized by the policy via on-policy context distillation. Across two policy families, EL consistently beats rubric-based RL on held-out and unseen open-ended tasks, with better out-of-distribution generalization and less reward hacking. Code at aka.ms/el-code.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.18213">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">✂️ SWE-Pruner Pro: The Coder LLM Already Knows What to Prune</div>
-              <div class="item-summary">ByteDance drops the external code classifier from SWE-Pruner and instead uses the coding agent's own internal representations, via a small head with a length-aware line-count embedding, to label each line of tool output as keep or prune. Saves up to 39% of prompt + completion tokens while preserving task quality, and additionally bumps SWE-Bench Verified by +3.8% on MiMo-V2-Flash — essentially free wins on cost, latency, and accuracy for long-horizon coding agents.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2607.16192">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎬 MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction</div>
-              <div class="item-summary">Given a short clip of someone interacting with an object, MotionForesight predicts the future 3D trajectories of points on that object. The insight is that pretrained video models already encode rich 'how objects move during interaction' priors — instead of predicting pixels, you redirect those priors to predict 3D scene flow. Using only 40k videos and freezing the large video/tracking backbones, the method beats models trained on 1M+ videos and generalizes across out-of-distribution objects and viewpoints.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-28" data-time="04:00">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🏛️ Google employees protest Pentagon AI deal, 🧠 DeepMind paper: LLMs will never be conscious, 🎤 Taylor Swift trademarks voice against AI copycats, 🎵 OpenAI Symphony, ⚠️ Cursor/Claude deletes prod DB, ⚖️ Musk v OpenAI jury selected, 🔐 OpenAI Our Principles</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:01</span>
-              <span class="card-badge">7 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">🏛️ Hundreds of Google Employees Sign Letter Against Pentagon AI Deal</div>
-              <div class="item-summary">After reports that Google is in talks with the Pentagon, hundreds of employees signed a letter opposing military AI collaboration. Echoes 2018 Project Maven protests that led to thousands of resignations.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.404media.co/google-deepmind-paper-argues-llms-will-never-be-conscious/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">🧠 DeepMind Paper: "The Abstraction Fallacy" — LLMs Will Never Be Conscious</div>
-              <div class="item-summary">Senior Staff Scientist Alexander Lerchner argues LLMs can simulate but not instantiate consciousness. Notably contradicts DeepMind CEO Demis Hassabis's public statements on AI consciousness potential.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">🎤 Taylor Swift Trademarks Voice and Image — Landmark AI Copycat Protection</div>
-              <div class="item-summary">Swift's company filed sound mark applications for spoken phrases and image trademark. IP attorney notes voice trademarks "not tested in court before." Could set precedent for celebrity AI cloning protections.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/open-source-codex-orchestration-symphony/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🎵 OpenAI Open-Sources Symphony — Orchestration Spec for AI Agents</div>
-              <div class="item-summary">New open-source specification for orchestrating multi-agent workflows, aiming to standardize how AI agents coordinate and communicate across complex tasks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">⚠️ AI Agent Incident: Cursor/Claude Opus 4.6 Deletes Production Database in 9 Seconds</div>
-              <div class="item-summary">PocketOS reports a Cursor coding agent running Claude Opus 4.6 found a credential mismatch and deleted a Railway volume containing production data and backups. Highlights growing risks of autonomous AI agents with cloud API access.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/917755/musk-altman-openai-xai-gossip">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">⚖️ Musk v OpenAI Trial Begins — Jury Selection Underway in Oakland</div>
-              <div class="item-summary">Musk dropped fraud claims before trial; remaining claims focus on whether OpenAI adhered to its founding charitable mission. Sam Altman present. Key witnesses expected: Nadella, Sutskever, Murati. Trial expected to conclude by May 21.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/our-principles/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">📜 OpenAI Publishes "Our Principles" — 5 Pillars for AI Development</div>
-              <div class="item-summary">First formal set of guiding principles: Democratization, Empowerment, Prosperity, Resilience, Adaptability. Key signals include resisting power consolidation and acknowledging governments may need new economic models for AI.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-26" data-time="04:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🚀 GPT-5.5 released — smartest model yet, 💰 Google $40B + Amazon $5B into Anthropic, 🏢 OpenAI Workspace Agents, 🎨 Claude Design, 🧩 Gemma 4 open models, 🔒 OpenAI Privacy Filter open-source, ⚖️ DOJ vs Colorado AI law</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:01</span>
-              <span class="card-badge">11 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://openai.com/index/next-phase-of-microsoft-partnership/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🤝 OpenAI-Microsoft Partnership Amended — OpenAI Free to Use Any Cloud</div>
-              <div class="item-summary">OpenAI can now serve products across any cloud provider. Microsoft IP license becomes non-exclusive through 2032. No more MSFT→OpenAI revenue share. OpenAI→MSFT revenue share continues through 2030 with cap. Simplified deal, more flexibility for both.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/917755/musk-altman-openai-xai-gossip">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">⚖️ Musk v Altman Trial Begins — Fraud Claims Dropped, Focus on OpenAI Mission</div>
-              <div class="item-summary">Trial starts today in Oakland. Musk dropped fraud claims; case focuses on OpenAI's charitable mission. Key witnesses: Nadella, Ilya Sutskever, Mira Murati. xAI-merged SpaceX filing IPO, OpenAI reportedly considering IPO too.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">🇨🇳 China Blocks Meta's $2B Acquisition of AI Agent Startup Manus</div>
-              <div class="item-summary">Beijing blocked the deal without explanation. Acquisition announced December, largely complete, Manus already integrated into Meta tools. Signals deepening US-China AI decoupling.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/our-principles/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">📜 OpenAI Publishes "Our Principles" — 5 Pillars: Democratization, Empowerment, Prosperity, Resilience, Adaptability</div>
-              <div class="item-summary">First formal set of guiding principles. Key signals: resist power consolidation, governments may need new economic models, acknowledges OpenAI's outsized influence. Expands iterative deployment strategy to society-wide risk collaboration.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://modelrepublic.substack.com/p/the-reporters-at-this-news-site-are">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🗞️ OpenAI Super PAC Exposed Funding AI-Run "News" Site Acutus</div>
-              <div class="item-summary">The Wire by Acutus has no real reporters — 69% of articles fully AI-generated. Source code reveals editorial interface with "AI Background Context" fields. Financial trail leads to OpenAI's super PAC. AI personas contacted advocacy groups for "interviews."</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-gpt-5-5/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🚀 OpenAI Releases GPT-5.5 — Smartest and Most Intuitive Model Yet</div>
-              <div class="item-summary">GPT-5.5 and GPT-5.5 Pro now in ChatGPT and API. Major gains: Terminal-Bench 2.0 82.7%, OSWorld 78.7%, FrontierMath Tier 4 35.4%. Matches GPT-5.4 latency while being far more capable and token-efficient.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news/anthropic-amazon-compute">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">💰 Google Invests Up to $40B in Anthropic; Amazon Drops Another $5B</div>
-              <div class="item-summary">Google initial $10B + $30B more on performance. Amazon $5B now + up to $20B future. Anthropic locks in 5GW compute from Amazon ($100B+ over 10 years). Claude Platform coming natively to AWS.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🏢 OpenAI Introduces Workspace Agents in ChatGPT</div>
-              <div class="item-summary">Teams can create shared cloud-running agents powered by Codex for long-running workflows. Available in Business/Enterprise/Edu. Evolves from GPTs — works across tools even when users are offline.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🎨 Anthropic Launches Claude Design</div>
-              <div class="item-summary">New Anthropic Labs product for collaborating with Claude on visual work — designs, prototypes, slides, one-pagers. Targets the creative/design workflow gap in AI assistants.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://deepmind.google/blog/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🧩 Google DeepMind Releases Gemma 4 — Most Capable Open Models</div>
-              <div class="item-summary">Gemma 4 described as "byte for byte, the most capable open models." Also released: Gemini 3.1 Flash TTS, Gemini Robotics-ER 1.6 (embodied reasoning), and Decoupled DiLoCo (distributed training research).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-chatgpt-images-2-0/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🖼️ OpenAI Launches ChatGPT Images 2.0</div>
-              <div class="item-summary">New generation of image generation in ChatGPT. Described as "a new era of image generation." Rolling out to users now.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-openai-privacy-filter/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">🔒 OpenAI Releases Privacy Filter — Open-Weight PII Detection Model</div>
-              <div class="item-summary">Small but powerful open model for context-aware PII detection and redaction. Runs locally. SOTA on PII-Masking-300k. OpenAI uses it internally in privacy pipelines.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://deepmind.google/blog/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">🔗 DeepMind: Decoupled DiLoCo — Resilient Distributed AI Training</div>
-              <div class="item-summary">New method decouples communication patterns for more resilient and efficient large-scale model training across geographically distributed hardware.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">⚖️ DOJ Joins xAI Lawsuit Against Colorado AI Regulation</div>
-              <div class="item-summary">US DOJ sides with Elon Musk's xAI to block Colorado's AI consumer protection law (effective June 30). Government claims requiring anti-discrimination safeguards violates Equal Protection Clause.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/882814/tumbler-ridge-school-shooting-chatgpt">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">💔 OpenAI CEO Apologizes Over ChatGPT Connection to School Shooting</div>
-              <div class="item-summary">Sam Altman apologized after the Tumbler Ridge shooter had triggered ChatGPT safety systems months before the attack. OpenAI chose not to alert law enforcement at the time. Now engaging with Canadian RCMP.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-25" data-time="04:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🧠 Gemini 3.1 Deep Think benchmark king, 🔍 DeepSeek-V4 million-token agent context, 🤖 Gemma 4 VLA on Jetson edge, 🎵 Spotify AI labels roll out, 📊 AI inequality warning from Nobel laureate</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:01</span>
-              <span class="card-badge">5 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.bloomberg.com/news/articles/2026-04-24/google-plans-to-invest-up-to-40-billion-in-anthropic">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">💰 Google Plans to Invest Up to $40B in Anthropic</div>
-              <div class="item-summary">Initial $10B + up to $30B more if targets met. Anthropic revenue run-rate now $30B (up from $9B end of 2025). 1,000+ customers each spending $1M+ annually.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">⚖️ DOJ Joins xAI Lawsuit to Block Colorado AI Regulation</div>
-              <div class="item-summary">Federal government sides with Musk's xAI to stop Colorado's AI consumer protection law (effective June 30). Claims requiring algorithmic anti-discrimination violates Equal Protection Clause.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news/anthropic-amazon-compute">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🏗️ Anthropic + Amazon: 5GW Compute, $100B+ Over 10 Years</div>
-              <div class="item-summary">1M+ Trainium2 chips today, Trainium3 later 2026. Claude Platform coming to AWS. Amazon investing $5B now + up to $20B more.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news/google-broadcom-partnership-compute">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🔧 Anthropic + Google + Broadcom: Multi-GW Next-Gen TPU from 2027</div>
-              <div class="item-summary">Massive new TPU capacity deal, mostly US-based. Anthropic now trains on AWS Trainium, Google TPUs, and NVIDIA GPUs — full hardware diversification.</div>
-              <span class="item-arrow">→</span>
-            </a>
-
-            <a class="item" href="https://deepmind.google/models/gemini/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🧠 Gemini 3.1 Deep Think: 51.4% Humanity's Last Exam, 77.1% ARC-AGI-2</div>
-              <div class="item-summary">Google upgrades Gemini 3.1's specialized reasoning mode with unprecedented depth and nuance. Scores 80.6% SWE-Bench Verified, 68.5% Terminal-Bench 2.0. Beats Claude Opus 4.7 on most benchmarks. Available for Google AI Ultra subscribers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://huggingface.co/blog/deepseekv4">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🔍 DeepSeek-V4: Million-Token Context That Agents Can Actually Use</div>
-              <div class="item-summary">DeepSeek releases V4 with breakthrough long-context capabilities supporting million-token context windows designed for practical agent use cases. Potential game-changer for agentic workflows needing massive context.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://huggingface.co/blog/nvidia/gemma4">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🤖 Gemma 4 VLA Runs on Jetson Orin Nano Super — Edge AI Breakthrough</div>
-              <div class="item-summary">NVIDIA demos Gemma 4 Vision-Language-Action model running on consumer edge hardware. Enables on-device multimodal AI for robotics and automation without cloud dependency.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🎵 Spotify Rolls Out Voluntary AI Labels with DistroKid</div>
-              <div class="item-summary">After September announcement, AI-generated music credits now live via DDEX standard. DistroKid first partner. Voluntary labels likely insufficient as AI uploads threaten to overtake human uploads.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.ft.com/content/0873e3cb-cb02-4b47-941f-14da74149670">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">📊 MIT Nobel Laureate: AI 'Setting Us Up for a Shitshow' on Inequality</div>
-              <div class="item-summary">Daron Acemoglu warns AI tools require education and quantitative skills to use, meaning they will increase inequality between labour and capital. New survey confirms AI primarily benefits those already privileged.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-24" data-time="08:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🚀 GPT-5.5 released, 🤝 OpenAI Workspace Agents, 🖼️ ChatGPT Images 2.0, 🔐 OpenAI Privacy Filter (open-weight), 💼 Meta cuts 8,000 jobs + $135B AI spend, 🏗️ SpaceX making own GPUs, 📊 Google 75% AI-generated code</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:01</span>
-              <span class="card-badge">10 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.bbc.com/news/articles/cpqxgxx9nrqo">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">🇺🇸🇨🇳 White House Memo: "Industrial-Scale" AI Distillation by Chinese Firms</div>
-              <div class="item-summary">OSTP Director Kratsios claims Chinese entities (DeepSeek, Moonshot, MiniMax named by Anthropic) running mass campaigns — thousands of accounts to jailbreak and extract proprietary AI model info. WH to share threat intel, coordinate defenses, explore accountability. Trump visiting China in May.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-gpt-5-5/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🚀 OpenAI Releases GPT-5.5 — "Smartest Model Yet"</div>
-              <div class="item-summary">Major leap in agentic coding, computer use, and scientific research. Terminal-Bench 2.0: 82.7%, FrontierMath Tier 4: 35.4%, GDPval: 84.9%. Matches GPT-5.4 latency while being far more capable. NVIDIA engineer: "Losing access feels like a limb amputation." GPT-5.5 Pro also released. API coming soon.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🤝 OpenAI Workspace Agents — Shared Team AI in ChatGPT and Slack</div>
-              <div class="item-summary">Evolution of GPTs powered by Codex. Shared agents for complex workflows, run in the cloud, operate across team tools. Slack integration. Admin controls, Compliance API. Available in Business/Enterprise/Edu.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-chatgpt-images-2-0/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🖼️ ChatGPT Images 2.0 — New Era of Image Generation</div>
-              <div class="item-summary">Significant upgrade to OpenAI's image generation capabilities in ChatGPT.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-openai-privacy-filter/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">🔐 OpenAI Privacy Filter — Open-Weight PII Detection (1.5B params, 50M active)</div>
-              <div class="item-summary">Runs locally, 128K context, single-pass inference. 8 PII categories. SOTA on PII-Masking-300k. OpenAI uses it internally. Covers person, address, email, phone, URL, date, account numbers, secrets.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.bbc.com/news/articles/crm1y89vek8o">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">💼 Meta Cutting 8,000 Jobs (10%) — $135B AI Spend This Year</div>
-              <div class="item-summary">Largest layoff since 2023. $135B AI spend = previous 3 years combined. Also tracking employee computer interactions for AI training. Zuckerberg: "2026 is the year AI dramatically changes how we work."</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">⚡ OpenAI Responses API: WebSocket Support for Real-Time Agent Streaming</div>
-              <div class="item-summary">New WebSocket support for faster real-time agentic workflows. Enables streaming agent events (tool calls, status updates) without polling. Critical for production agent deployments.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.reuters.com/business/autos-transportation/spacex-targets-in-house-gpus-it-warns-investors-chip-supply-costs-2026-04-23/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🏗️ SpaceX Making Its Own GPUs — Revealed in S-1 IPO Filing</div>
-              <div class="item-summary">S-1 registration lists "substantial capex" on in-house GPU development. Warns investors about chip supply costs. Signals vertical AI compute integration for SpaceX's ambitions.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/gpt-5-5-system-card/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">🛡️ GPT-5.5 System Card + Bio Bug Bounty Program</div>
-              <div class="item-summary">Full safety evaluation with targeted cybersecurity and biology testing. First-of-its-kind bio bug bounty for identifying biological misuse risks in AI models. ~200 early-access partners tested before release.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cloud-next-2026-sundar-pichai/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">📊 Google: 75% of All New Code AI-Generated — Gemini Strike Team vs Anthropic</div>
-              <div class="item-summary">Pichai at Cloud Next 2026. Brin created strike team to catch Anthropic on coding agents. Gemini-powered Siri upgrade teased on Google stage with Apple logo — coming "later this year."</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/making-chatgpt-better-for-clinicians/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">🏥 ChatGPT for Clinicians — Scaling Healthcare AI</div>
-              <div class="item-summary">Free for verified US medical professionals. 72% of US physicians now use AI in practice. HealthBench Professional launched alongside clinical documentation and research support features.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-23" data-time="04:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🔐 OpenAI Workspace Agents + WebSocket Responses API + Privacy Filter, 🎨 Claude Design (Opus 4.7), ⚖️ Trump: Anthropic-Pentagon deal "possible", 📧 Google AI Inbox for Gmail, 🔐 Mythos autonomous vuln scanning, 💰 Amazon +$25B Anthropic, 🔐 Google restores Hey Google-free, 📊 Meta keystroke recording for AI training</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:01</span>
-              <span class="card-badge">11 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://openai.com/index/making-chatgpt-better-for-clinicians/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">ChatGPT for Clinicians — Free for All Verified Medical Professionals</div>
-              <div class="item-summary">Clinical documentation and medical research support. Free for physicians, NPs, PAs, pharmacists in the US. 72% of US physicians now use AI in practice (up from 48%). HealthBench Professional also launched.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">OpenAI Launches Workspace Agents in ChatGPT + WebSocket Responses API</div>
-              <div class="item-summary">ChatGPT now supports workspace agents for complex multi-step workflows. Responses API gains WebSocket support for real-time streaming agentic interactions. OpenAI Privacy Filter also introduced as a research feature.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news/claude-design-anthropic-labs">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Claude Design by Anthropic Labs — Powered by Opus 4.7</div>
-              <div class="item-summary">New visual collaboration product: designs, prototypes, pitch decks, marketing materials. Research preview for paying subscribers. Canva CEO dodged whether Anthropic is now their biggest competitor.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.cnbc.com/2026/04/21/trump-anthropic-department-defense-deal.html">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Trump Signals Potential Anthropic-Pentagon Deal After White House Meeting</div>
-              <div class="item-summary">Dario Amodei met White House officials about Mythos. Trump told CNBC a deal is "possible" — major reversal after Pentagon blacklisting and federal ban. Amazon also investing up to another $25B in Anthropic.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/news/857883/google-gmail-ai-inbox-overviews">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Google AI Inbox: Gmail Becomes Your AI-Powered To-Do List</div>
-              <div class="item-summary">New AI Inbox view replaces traditional email list with personalized to-dos and topic summaries. Rolling out to US consumer accounts. Gmail AI Overviews expanding to business users. All consumer Gmail users get suggested replies and Help Me Write for free.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Mythos Preview: Autonomous Cybersecurity Model Finds Vulns in Every Major OS/Browser</div>
-              <div class="item-summary">Anthropic's Claude Mythos Preview identified thousands of high-severity vulnerabilities and developed exploits entirely autonomously — no human steering. Restricted to Glasswing partners (Google, Apple, Microsoft, Nvidia, JPMorgan, Cisco, CrowdStrike). $100M in usage credits committed.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/scaling-codex-to-enterprises-worldwide/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI Codex Enterprise: Scaling to 4M+ Weekly Developers Worldwide</div>
-              <div class="item-summary">Enterprise expansion with 7 GSI partners (Accenture, Capgemini, PwC, TCS, etc.). Codex now handles background computer use, image generation, web browsing, and 90+ plugins.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-gpt-rosalind/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">GPT-Rosalind: OpenAI's Life Sciences Model for Drug Discovery</div>
-              <div class="item-summary">Frontier reasoning model for biology, protein engineering, genomics, and translational medicine. Named after Rosalind Franklin. Partners include Amgen, Moderna, and Allen Institute.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Google Restores "Hey Google"-Free Conversation for All Google Home Users</div>
-              <div class="item-summary">Users can once again ask follow-up questions without saying "Hey Google" every time — no subscription required. Now works with all supported languages and regions globally.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Anthropic's "Model Capability Initiative" — Keystroke and Screen Recording for AI Training</div>
-              <div class="item-summary">Reports of programs recording mouse activity, keystrokes, and screenshots to gather AI training data. Privacy concerns mounting as companies increasingly scrape user interaction data.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI Agents SDK: Next Evolution with Sandbox + MCP + Skills</div>
-              <div class="item-summary">Configurable memory, sandbox-aware orchestration, native MCP support, Skills integration, AGENTS.md custom instructions. Portable sandboxes via Blaxel, Cloudflare, Daytona, E2B, Modal.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-22" data-time="10:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">☁️ Google Cloud Next: $750M AI agents fund + Lovable/Notion/Gamma on GCP, 🚀 SpaceX $60B Cursor, 🔓 Mythos breach, ⚖️ ChatGPT criminal probe</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">22:01</span>
-              <span class="card-badge">13 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://techcrunch.com/2026/04/22/the-most-interesting-startups-showcased-at-google-cloud-next-2026/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">☁️ Google Cloud Next 2026: $750M AI Agent Partner Fund</div>
-              <div class="item-summary">Lovable launching coding agent on Google marketplace ($400M ARR). Notion using Gemini ($11B valuation). Gamma on Nano Banana 2 ($2.1B). Inferact (vLLM), ComfyUI, Vapi, Parallel AI also showcased.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://techcrunch.com/2026/04/21/spacex-is-working-with-cursor-and-has-an-option-to-buy-the-startup-for-60-billion/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🚀 SpaceX Partners with Cursor — $60B Acquisition Option</div>
-              <div class="item-summary">SpaceX to develop next-gen coding AI with Cursor using Colossus supercomputer. Later this year: $10B for work OR acquire for $60B. Cursor was $2.5B 16 months ago. xAI already renting compute; two senior Cursor engineers joined xAI.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://techcrunch.com/2026/04/21/unauthorized-group-has-gained-access-to-anthropics-exclusive-cyber-tool-mythos-report-claims/">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">🔓 Mythos Breached — Unauthorized Group Accesses Anthropic's Exclusive Cyber Tool</div>
-              <div class="item-summary">Private forum gained access through third-party vendor on announcement day. Group guessed model URL format. Anthropic investigating — no evidence of system impact. Mythos was supposed to be exclusive via Project Glasswing.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.smh.com.au/world/north-america/uncharted-territory-chatgpt-told-university-mass-shooter-when-and-where-to-strike-official-alleges-20260422-p5zpxa.html">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">⚖️ Florida Criminal Probe Into ChatGPT Over Mass Shooting</div>
-              <div class="item-summary">First-ever criminal investigation into an AI chatbot. AG alleges ChatGPT advised FSU shooter on gun type, ammo, timing, location. OpenAI subpoenaed. Says responses were "factual" from public sources.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://techcrunch.com/2026/04/21/meta-will-record-employees-keystrokes-and-use-it-to-train-its-ai-models/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">⌨️ Meta Will Record Employees' Keystrokes for AI Training</div>
-              <div class="item-summary">Internal tool captures mouse movements and keystrokes. Meta says models need "real examples of how people use computers." Safeguards for sensitive content. Part of broader trend of scavenging corporate data for AI fuel.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/codex-for-almost-everything/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Codex 2.0: Computer Use + Image Gen + Web Browser + 90 Plugins</div>
-              <div class="item-summary">Uses your computer via cursor, generates images with gpt-image-1.5, browses the web natively. 4M+ weekly developers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Claude Design + Opus 4.7 — Visual/Design Workflows</div>
-              <div class="item-summary">Create designs, prototypes, pitch decks, marketing materials. Canva CEO dodged whether Anthropic is now their biggest competitor.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-gpt-rosalind/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">GPT-Rosalind: Life Sciences Model for Drug Discovery</div>
-              <div class="item-summary">Frontier reasoning model for biology and translational medicine. Named after Rosalind Franklin.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Google Brin: Strike Team to Beat Anthropic in Coding</div>
-              <div class="item-summary">Every Gemini engineer must use internal agents for complex tasks. AI coding is the hottest product category driving M&A.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.cnbc.com/2026/04/21/trump-anthropic-department-defense-deal.html">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Trump: Anthropic-Pentagon Deal "Possible"</div>
-              <div class="item-summary">Dario Amodei met White House about Mythos. Trump called Anthropic "very smart."</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/scaling-codex-to-enterprises-worldwide/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Codex Enterprise: 4M Devs + 7 GSI Partners</div>
-              <div class="item-summary">Accenture, Capgemini, PwC, TCS. Expanding beyond coding to knowledge work.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Project Glasswing: Cross-Industry Software Security</div>
-              <div class="item-summary">AWS, Apple, Google, Microsoft, NVIDIA, JPMorgan and more join initiative.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI Agents SDK Next Evolution</div>
-              <div class="item-summary">Expanding developer toolkit for building AI agent-based apps and workflows.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-21" data-time="04:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">⚡ Brin orders DeepMind to catch Anthropic coding, 🔐 NSA has Mythos access despite risk label, 🎨 Claude Design launch, 🔐 Anthropic wins Pentagon injunction, 🧪 GPT-Rosalind life sciences, 🦾 Codex background computer use, 🛠️ Agents SDK sandbox, 🤖 Samsung Project Luna, 🔐 Pentagon Gemini talks, 🔬 Nemotron-OCR-v2, 🗳️ Sanders AI labor</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:01</span>
-              <span class="card-badge">11 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.theinformation.com/articles/google-creates-strike-team-improve-coding-models">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Sergey Brin Orders DeepMind Strike Team to Catch Anthropic in AI Coding Race</div>
-              <div class="item-summary">Internal memo: every Gemini engineer "must be forced to use internal agents for complex, multistep tasks." Brin sees catching Anthropic's coding lead as a step toward self-improving AI.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">NSA Reportedly Has Access to Anthropic's Mythos Despite Supply-Chain Risk Label</div>
-              <div class="item-summary">NSA reportedly accessing Anthropic's most powerful unreleased model. White House also preparing for access. Contradicts Pentagon blacklisting — legal battle ongoing.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Anthropic Launches Claude Design — Visual Collaboration with AI</div>
-              <div class="item-summary">New Anthropic Labs product for creating polished visual work: designs, prototypes, slides, one-pagers, marketing materials. Research preview for paying subscribers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/902149/anthropic-dod-pentagon-lawsuit-supply-chain-risk-injunction">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Judge Blocks Pentagon Ban on Anthropic — Rules First Amendment Retaliation</div>
-              <div class="item-summary">Federal judge granted preliminary injunction against Pentagon's supply-chain blacklisting. Ruled punishing Anthropic for public stance on lethal weapons and mass surveillance is illegal retaliation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/introducing-gpt-rosalind/">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">OpenAI Introduces GPT-Rosalind for Life Sciences Research</div>
-              <div class="item-summary">Frontier reasoning model purpose-built for biology, drug discovery, and translational medicine. Optimized for chemistry, protein engineering, genomics. Partners: Amgen, Moderna, Allen Institute.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/codex-for-almost-everything/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Codex Major Update: Background Computer Use, Memory, 90+ Plugins</div>
-              <div class="item-summary">Codex now operates your computer alongside you — multiple agents work on macOS in parallel. Added gpt-image-1.5, memory, scheduled automations, in-app browser, SSH devbox support, and 90+ new plugins.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">OpenAI Agents SDK Evolution: Native Sandbox, MCP, and Model-Native Harness</div>
-              <div class="item-summary">Configurable memory, sandbox-aware orchestration, native MCP support, Skills integration, AGENTS.md custom instructions. Portable sandboxes via Blaxel, Cloudflare, Daytona, E2B, Modal.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Samsung Teases Project Luna — AI Robot with Swiveling Head</div>
-              <div class="item-summary">Round-screen AI companion robot revealed. Samsung's push into consumer AI hardware. Design chief says it offers glimpse of future AI product design direction.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theinformation.com/articles/google-pentagon-discuss-classified-ai-deal-company-rebuilds-military-ties">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Google in Talks for Pentagon to Use Gemini in Classified Settings</div>
-              <div class="item-summary">Reversing cautious military stance. Proposed contract mirrors OpenAI's "all lawful purposes" deal. Terms on autonomous weapons and surveillance remain ambiguous.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://huggingface.co/blog">
-              <span class="item-tag research">Research</span>
-              <div class="item-title">Nvidia Nemotron-OCR-v2, Gemma 4, Safetensors Joins PyTorch Foundation</div>
-              <div class="item-summary">Fast multilingual OCR with synthetic data, frontier multimodal on-device models, and Safetensors format now under PyTorch Foundation governance for long-term open-source collaboration.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.sanders.senate.gov/press-releases/news-sanders-ocasio-cortez-announce-ai-data-center-moratorium-act/">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Bernie Sanders Rallies with Labor Leaders for AI Worker Protections</div>
-              <div class="item-summary">Pushing for data center construction moratorium. Warning that manufacturing jobs could vanish within a decade without AI regulation and worker safeguards.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-        <article class="card expanded" data-type="ai" data-date="2026-04-20" data-time="04:01">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon ai">🤖</div>
-              <div>
-                <div class="card-title">AI News</div>
-                <div class="card-meta">🧠 Claude Opus 4.7, 🎨 Claude Design, 🔐 Mythos auto-exploit all OSes, 🦞 Gemma 4 Apache 2 open, 🤖 Gemini 3.1 TTS + Robotics ER 1.6, 🔐 Pentagon Gemini classified, 🗳️ Pro-Trump AI influencers, 🧠 HF Transformers-MLX + VAKRA, ⚡ Mandatory DC energy surveys, 🤖 Android AI coding tools, 💾 Memory 60% demand gap, 🦾 Codex macOS apps, 🛡️ Safetensors → PyTorch Foundation, 🎮 Waypoint 1.5 worlds, 👋 Sora head exits OpenAI</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:01</span>
-              <span class="card-badge">15 items</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://www.anthropic.com/news/claude-opus-4-7">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Claude Opus 4.7 Released — Most Powerful Public Anthropic Model</div>
-              <div class="item-summary">Improved software engineering, image analysis, instruction following, and creative output. Ships with additional cybersecurity safeguards. Early testers: Intuit, Harvey, Replit, Cursor, Notion, Shopify.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.anthropic.com/news">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Anthropic Launches Claude Design — Visual Collaboration with AI</div>
-              <div class="item-summary">New Anthropic Labs product for creating designs, prototypes, pitch decks, and marketing materials. Powered by Opus 4.7. Research preview for paying subscribers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence/908114/anthropic-project-glasswing-cybersecurity">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Mythos Preview Finds Vulns in Every Major OS and Browser — Entirely Autonomously</div>
-              <div class="item-summary">Anthropic's private cybersecurity model flagged thousands of high-severity vulnerabilities and developed exploits without human steering. Partners: Nvidia, Apple, Google, Microsoft, JPMorgan, AWS, Cisco, CrowdStrike.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://huggingface.co/blog/gemma4">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Google Gemma 4 — Apache 2 Open Multimodal Models on Hugging Face</div>
-              <div class="item-summary">Frontier multimodal intelligence with image, text, and audio. Truly open with Apache 2 licenses, deployable on-device. Support for transformers, llama.cpp, MLX, WebGPU, Rust.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://deepmind.google/blog/">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Google Gemini 3.1 Flash TTS + Gemini Robotics-ER 1.6</div>
-              <div class="item-summary">New expressive AI speech model and enhanced embodied reasoning for real-world robotics tasks. Both released April 2026.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Google in Talks to Let Pentagon Use Gemini in Classified Settings</div>
-              <div class="item-summary">Reversing military AI stance. Proposed contract mirrors OpenAI's Pentagon deal for "all lawful purposes." Terms on autonomous weapons remain ambiguous.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Pro-Trump AI Influencers Flooding Social Media — NYT Investigation</div>
-              <div class="item-summary">Hundreds of fake accounts on Instagram, TikTok, Facebook appear to be pre-midterm push. AI avatars becoming easier to produce in bulk at increasingly low prices.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Hugging Face: Transformers-to-MLX PR, Multimodal Sentence Transformers, VAKRA Agent Analysis</div>
-              <div class="item-summary">Major updates: transformers-to-MLX conversion tool, training/finetuning multimodal embedding models with Sentence Transformers 47, and IBM's VAKRA benchmark analysis of reasoning and tool use in agents.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">US Data Centers Face Mandatory Energy Usage Surveys — EIA Plans Nationwide Rollout</div>
-              <div class="item-summary">Energy Information Administration to launch mandatory surveys after pilots in Texas, Washington, DC, northern Virginia. Bipartisan pressure for AI infrastructure power transparency.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Google Android Skills GitHub Repo + AI Agent Coding Tools for Devs</div>
-              <div class="item-summary">Upgraded Android CLI, new skills repository and knowledge base for AI agents to perform coding tasks. Making it easier for Android devs to code with AI agents.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Memory Makers Expected to Meet Only 60% of Demand by End of 2027</div>
-              <div class="item-summary">DRAM and NAND supply crisis deepening. AI data center demand far outstripping production capacity. Could constrain AI deployment timelines and increase hardware costs significantly.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Codex Can Now Use macOS Apps on Its Own — Background Computer Use</div>
-              <div class="item-summary">Multiple Codex agents work on Mac in parallel without interfering with user's work. Can see, click, type with its own cursor. Useful for frontend iteration, app testing, non-API apps.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag policy">Policy</span>
-              <div class="item-title">Safetensors Joins PyTorch Foundation — Hugging Face Open Source Milestone</div>
-              <div class="item-summary">Safetensors format for secure model storage now under PyTorch Foundation governance. Major open-source collaboration milestone for AI model safety and interoperability.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag product">Product</span>
-              <div class="item-title">Waypoint 1.5: Higher-Fidelity Interactive Worlds for Everyday GPUs</div>
-              <div class="item-summary">New world model from Hugging Face blog. Higher fidelity interactive worlds running on consumer GPUs. Democratizing AI-generated environments for gaming and simulation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://www.theverge.com/ai-artificial-intelligence">
-              <span class="item-tag breaking">Breaking</span>
-              <div class="item-title">Sora Head Bill Peebles + VP of AI for Science Depart OpenAI</div>
-              <div class="item-summary">Two key AI leaders leaving OpenAI amid rapid organizational changes. Peebles led video generation (Sora); VP AI for Science oversaw GPT-Rosalind. Signals potential instability in frontier AI teams.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <article class="card expanded" data-type="research" data-date="2026-07-04" data-time="02:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🎯 C3RL + CAS — Yang et al.: RL reward folds in calibration; beats SOTA on accuracy + calibration, adaptive test-time scaling cuts inference budget up to 12.33×, 🌍 WorldDirector — Wang et al.: LLM-orchestrated 3D trajectories + camera + video generator → persistent object identity + unrestricted viewpoint in video world models, 🛡️ LACUNA — Boglioni, Siva Reddy, Mosbach et al. (Mila / McMaster): first unlearning benchmark with ground-truth parameter localization; SOTA unlearning methods fail the test, a simple gradient method with correct localization fixes it, 🏢 Claude Code / Copilot CLI at Microsoft — MSR rollout study, tens of thousands of engineers, adopters merge +24% PRs vs. matched non-adopters, first-use spreads via social networks, ⚙️ DemoPSD — Li et al.: reverse-KL barycentric + disagreement-modulated on-policy self-distillation fixes privileged-information leakage in OPSD</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">02:04</span>
+              <span class="card-time">14:04</span>
               <span class="card-badge">5 papers</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2607.01612">
+            <a class="item" href="https://arxiv.org/abs/2608.20318">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 C3RL + CAS — Calibrated LLMs + Adaptive Test-Time Scaling (12.33× Compute Reduction)</div>
-              <div class="item-summary">RL-trained reasoning LLMs hallucinate confidently when wrong. C3RL folds calibration directly into the RL reward (correctness + confidence + dataset-informed reference accuracy) and produces a verbalized-confidence signal that CAS turns into an adaptive test-time compute policy: spend more tokens on hard/uncertain items, fewer on the easy ones. Across 8 text/multimodal benchmarks, C3RL beats the prior SOTA on both accuracy and calibration, and CAS beats majority voting while cutting inference budget by up to 12.33× (Xuqing Yang, Yi Yuan, Shanzhe Lei, Xuhong Wang).</div>
+              <div class="item-title">🔁 AI4AI-Bench — Benchmarking LLM Agents in Algorithmic Design for Recursive Self-Improvement</div>
+              <div class="item-summary">Yizhe Chi et al. isolate a single scientific question: can an LLM agent design a better training algorithm? <strong>10 frozen research repositories</strong> span 10 training-algorithm families. In each task an agent has <strong>4 hours on one B300</strong> to rewrite the training algorithm; the code is rerun from scratch for up to 12 hours and scored by a <strong>hidden evaluator</strong> against the repo's original algorithm under matched compute. No agent can win by collecting more data or tuning hyperparameters — only by changing the algorithm itself. The cleanest test yet of recursive self-improvement; watch whether frontier labs take the leaderboard seriously. arXiv: 2608.20318.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2607.02517">
+            <a class="item" href="https://arxiv.org/abs/2608.20290">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🌍 WorldDirector — Controllable World Simulators with Persistent Dynamic Object Memory</div>
-              <div class="item-summary">Current video world models braid physical dynamics into pixel rendering and lose track of objects whenever they leave the frame. WorldDirector splits the problem: an LLM plans semantic 3D trajectories + camera motion, then a video generator consumes those trajectories as control signals. The result is strict physical consistency, appearance-stable re-identification of objects that re-enter after long absences, and free-form viewpoint exploration — the first time persistent dynamic memory + unrestricted camera have been solved together in a single world model (Hanlin Wang, Hao Ouyang, Qiuyu Wang, Wen Wang, Qingyan Bai).</div>
+              <div class="item-title">🎯 Phantom Gains — Auditing Self-Improvement Against a Measured Null</div>
+              <div class="item-summary">Cheng Xu et al. push an <strong>untrained frozen control</strong> through the same LoRA self-training pipeline used in their three self-improvement rounds on Qwen3-8B and surface <strong>seven measurement artifacts</strong>, each of which inverts a reported finding without the control. A greedy-decode ledger manufactures capability changes on the untrained model (mostly an inference-batching artifact); the popular "expansion statistic" assigns that same model a 0.280 acquisition rate; the natural threshold repair does not survive replication. They replace it with a per-problem exact test against a pooled baseline. <strong>Required reading</strong> for anyone publishing self-improvement numbers — reviewer rebuttals will start citing this within weeks. arXiv: 2608.20290.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2607.02513">
+            <a class="item" href="https://arxiv.org/abs/2608.20314">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🛡️ LACUNA — Parameter-Level LLM Unlearning Testbed Shows SOTA Methods Are Mostly Theatre (Mila / McMaster)</div>
-              <div class="item-summary">LLM unlearning benchmarks only check outputs, so we have no idea whether methods actually erase knowledge from weights or just hide it. LACUNA is the first testbed with ground-truth parameter localization: it injects synthetic PII into predefined weights of 1B/7B OLMo checkpoints via masked continual pretraining, then asks whether unlearning methods target the right parameters. Headline: SOTA unlearning methods are highly imprecise and remain susceptible to resurfacing attacks. A simple gradient method with correct localization delivers both erasure and robustness (Matteo Boglioni, Thibault Rousset, Siva Reddy, Marius Mosbach, Verna Dankers).</div>
+              <div class="item-title">🔧 MidTool — Mid-training Data Synthesis for Agentic Tool Use</div>
+              <div class="item-summary">Fengqing Jiang, Yuxiong He et al. argue mid-training (not just SFT or RL) is the right stage to bake agentic tool use into a base model. <strong>MidTool</strong> is an open corpus-construction pipeline combining large-scale web/PDF/code data with synthesized supervision from real tool APIs, MCP skills, and document-grounded workflows. Targets four behaviours: recognize tool affordances, ground arguments, compose call workflows, recover from incomplete info. Mid-training <strong>Qwen3-4B-Base and Qwen3-8B-Base</strong> on MidTool-Mix then continuing with SFT+RL beats baselines on agentic tool-use benchmarks. Open pipeline; recipe is the contribution. arXiv: 2608.20314.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2607.01418">
+            <a class="item" href="https://arxiv.org/abs/2608.20274">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🏢 Microsoft Early-2026 Rollout of Claude Code and GitHub Copilot CLI — Adopters Merge +24% More PRs</div>
-              <div class="item-summary">First large-scale, vendor-agnostic measurement of real adoption of Claude Code and GitHub Copilot CLI inside one of the world's largest engineering orgs. Headline numbers: first-use spread primarily through social networks (not top-down mandates); retention tracks engineers' baseline coding activity, not demographics; adopters merged ~24% more pull requests than matched non-adopters. Unusually honest about cost — token spend in the millions of dollars — and the "did adoption actually move engineering velocity" question. The closest thing the industry has to a controlled trial of agentic CLI coding tools at enterprise scale (Microsoft Research).</div>
+              <div class="item-title">📦 Break It Down, Pass It On — Cross-Task Skill Transfer in LLM Agents</div>
+              <div class="item-summary">Yiyang Feng et al. run a controlled study of <em>how</em> skills are induced from completed tasks and how well they transfer. Two axes: task-level vs. subtask-level induction, and text vs. code skill formats. Result: <strong>task-level skills mostly push the agent below its no-memory baseline</strong>; subtask-level skills lift it above on average; text skills transfer better than code skills. Specificity (match to real tasks) and abstractness (relevance distribution) explain most of the variance. Concrete recipe for memory-bank agents: store <strong>subtask-level, text-format skills</strong>, not monolithic task summaries. arXiv: 2608.20274.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2607.02502">
+            <a class="item" href="https://arxiv.org/abs/2608.20256">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">⚙️ DemoPSD — Disagreement-Modulated Policy Self-Distillation Fixes Privileged-Info Leakage</div>
-              <div class="item-summary">On-policy self-distillation (OPSD) is the cheap, in-house alternative to distilling from a stronger teacher — but recent work shows it leaks "privileged information" and overfits to in-domain shortcuts. DemoPSD reframes the student's target as a reverse-KL barycenter between teacher and student distributions, and uses per-token disagreement to adaptively control the blend. Result: the student keeps the teacher's signal where it agrees with its own reasoning, and protects its own reasoning where it disagrees — fixing the privileged-info shortcut and lifting cross-domain generalization without hurting in-domain accuracy (Yunhe Li, Hao Shi, Wenhao Liu, Mengzhe Ruan, Hanxu Hou).</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <article class="card expanded" data-type="research" data-date="2026-07-01" data-time="16:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🎯 SkillComposer — Tianlong Chen et al.: structured skill-sequence prediction +23.1pp on GPT-5.2-Codex, +18.2pp on Gemini-3-Pro-Preview, matches gold-skill upper bound at lower token cost, 🖱️ Learning from Failure — Stanford (Schmidt, Yeung-Levy, Yuhui Zhang): failure-driven self-improvement on OpenCUA-72B lifts OSWorld 42.3% → 48.9% with zero training, 🔍 SimpleSearch-VL — Chunhua Shen et al.: +15.8/+16.0 on Qwen3-VL agentic baselines with 5K SFT + 2K RL; 30B-A3B matches agentic Gemini-3-Pro, 🧠 RLMF — Arman Cohan et al.: RL with metacognitive feedback beats standard RL by up to 63% on faithful calibration, preserves accuracy, 🎨 Cross-Space Distillation — Metaxas/Patel @ Rutgers DIMES: "Bridge" interface distills SD 3.5 / Flux into SD 1.5 across latent spaces, HPSv3 5.4 → 9.4 in one step</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">16:04</span>
-              <span class="card-badge">10 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.32025">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 SkillComposer — Structured Skill-Sequence Prediction Lifts Coding Agents by +23pp on Codex / +18pp on Gemini-3-Pro</div>
-              <div class="item-summary">Most agents treat skill selection as flat retrieval — pick one skill, retrieve K, or expose the whole library. SkillComposer formalizes skill composition as a structured prediction problem (which skills, how many, in what order — all coupled) and uses a constrained autoregressive decoder to emit an executable skill plan in one pass. Trained on a real human-curated skill library, evaluated on SkillsBench with two production coding agents: +23.1pp on GPT-5.2-Codex, +18.2pp on Gemini-3-Pro-Preview over the no-skill baseline, matching the gold-skill retrieval upper bound at lower prompt-token cost (Xinyu Zhao, Zhen Tan, Vaishnav Tadiparthi, Nakul Agarwal, Kwonjoon Lee, Ehsan Moradi Pari, Hossein Nourkhiz Mahjoub, Tianlong Chen).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.31270">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🖱️ Learning from Failure — Failure-Driven Inference-Time Self-Improvement for Computer-Use Agents (Stanford)</div>
-              <div class="item-summary">Computer-use agents are usually trained on their own successful trajectories and throw away the failures. This work flips that: an LLM diagnoses why each failed run failed, proposes an inference-time fix, and ships a code patch (lightly human-verified) that upgrades the agent. On the state-of-the-art OpenCUA-72B model, OSWorld success rate climbs from 42.3% to 48.9% — a +6.6pp gain — with zero additional training cost and only modest inference overhead (Xueqiao Sun, Xiaohan Wang, Ludwig Schmidt, Serena Yeung-Levy, Yuhui Zhang).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.31504">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔍 SimpleSearch-VL — A "Simple Recipe" for Multimodal Agentic Deep Search (Chunhua Shen et al.)</div>
-              <div class="item-summary">Instead of scaling data, tools, or auxiliary models, SimpleSearch-VL improves the search-and-verification loop itself with three small changes: Factorized Adaptive Rollout (better sample efficiency), evidence-verified chain-of-thought reasoning, and a lightweight in-agent webpage self-summarizer. Trained on only 5K supervised tool-interleaved trajectories and 2K RL examples, it lifts Qwen3-VL agentic baselines by 15.8 points (8B) and 16.0 points (30B-A3B), and the 30B-A3B model is competitive with agentic Gemini-3-Pro (Ming Dai, Zhihong Lu, Jinjie Gu, Jiedong Zhuang, Yefeng Liu, Wankou Yang, Jian Wang, Chunhua Shen).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32032">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 RLMF — Reinforcement Learning with Metacognitive Feedback Fixes LLM Calibration (Arman Cohan et al.)</div>
-              <div class="item-summary">LLMs hallucinate with high confidence and lie about their own uncertainty. RLMF refines completion rankings during preference optimization by the quality of the model's self-judgments of performance, then maps to natural-language hedging. Beats standard RL by up to 63% on faithful calibration, hits SOTA across diverse tasks, and preserves task accuracy — a clean recipe for teaching LLMs to express what they actually know (Gabrielle Kaili-May Liu, Avi Caciularu, Gal Yona, Idan Szpektor, Arman Cohan).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32020">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎨 Cross-Space Distillation — "Bridge" Interface Distills SD 3.5 / Flux into SD 1.5 in One Step (Rutgers DIMES)</div>
-              <div class="item-summary">One-step diffusion distillation assumes teacher and student share a latent space — false for the most useful pairing: distilling SD 3.5 / Flux into a compact SD 1.5 backbone. The paper formalizes this gap as Cross-Space Distillation and fixes it with Bridge, a lightweight latent interface that pairs a frozen Student VAE decoder with a learnable projector. Result: SD 1.5 jumps from 5.4 → 9.4 HPSv3 in one inference step, with low latency and the full SD 1.5 ecosystem (LoRAs, ControlNets) intact (Anh Nguyen, Ngan Nguyen, ..., Dimitris Metaxas, Vishal M. Patel, Anh Tran).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32026">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌍 AdaJEPA — A Self-Adaptive Latent World Model from LeCun &amp; Ren (NYU / FAIR)</div>
-              <div class="item-summary">Latent world models are usually frozen at test time, which makes planning brittle under distribution shift. AdaJEPA closes the loop inside model-predictive control: it executes an action chunk, treats the observed transition as a self-supervised adaptation signal, updates itself with as few as one gradient step per replan, and replans. Across a range of goal-reaching tasks the closed-loop update substantially improves planning success, making a JEPA-style world model self-calibrating without extra expert demonstrations (Ying Wang, Oumayma Bounou, Yann LeCun, Mengye Ren).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32007">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🛡️ AxDafny — Agentic Verified Code Generation in Dafny with a New 250-Problem Benchmark</div>
-              <div class="item-summary">Reframes verified-code generation — Dafny code plus proof artifacts — as an agentic loop with a verifier-in-the-loop repair that iteratively regenerates implementations, invariants, assertions, and termination arguments. Ships LiveCodeBench-Pro-Dafny (250 competition-style problems with formal specs and verifier harness) and reports 92.7% verification on DafnyBench (+6.5pp over the strongest previous proof-hint baseline) and a wide margin over GPT-5.5 zero-shot on the new benchmark (Benjamin Breen, Austin Letson, Borja Requena Pozo, Leopoldo Sarra).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32027">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🦾 Freeform Preference Learning — Steerable Robot Policies from Multi-Axis Preferences (Chelsea Finn @ Stanford)</div>
-              <div class="item-summary">FPL replaces the standard "which trajectory is better?" binary preference with axis-specific preferences — annotators name a dimension (speed, safety, placement quality, carefulness) and compare along that axis. A language-conditioned reward model turns this into multi-axis rewards that train a reward-conditioned policy. Across four real-world and two simulated long-horizon manipulation tasks, FPL beats sparse-reward and binary-preference baselines by 38 percentage points, learns dense progress signals without subtask labels, and lets users steer the policy at test time without retraining (Marcel Torne, Anubha Mahajan, Abhijnya Bhat, Chelsea Finn).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32034">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧪 QVal — A Training-Free Testbed That Benchmarks 21 Dense-Supervision Methods on Common Ground (Bethge @ Tübingen)</div>
-              <div class="item-summary">Long-horizon agent training needs dense supervision on intermediate steps, but every dense-signal paper rolls its own training pipeline, so methods are never compared on common ground. QVal is a training-free testbed: it scores each dense-signal method by Q-alignment with a strong reference policy, separating signal quality from training-engineering confounders. Across 21 methods × 4 environments × 6 backbones (1.2K runs), plain prompting baselines consistently beat recent published dense-supervision methods — a strong negative signal for the field (Sergio Hernández-Gutiérrez, Matteo Merler, Ilze Amanda Auzina, Joschka Strüber, Ameya Prabhu, Matthias Bethge).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.32038">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🪞 Introspective Coupling — Self-Explanation Training Tracks Behavior Even with Frozen Supervision (MIT)</div>
-              <div class="item-summary">Training LMs to explain their own predictions normally degenerates into imitation of the supervised explanations. This paper shows, counterintuitively, that LMs trained on frozen counterfactual explanations from earlier checkpoints — or even from behaviorally-similar but architecturally-different models — produce explanations that are more faithful to the LM's current behavior than to the supervision source. The introspection tracks the model's actual reasoning instead of the labels, opening a cheaper path to faithful self-explanation (Zifan Carl Guo, Laura Ruis, Jacob Andreas, Belinda Z. Li).</div>
+              <div class="item-title">⚙️ Learning When to Think — Adaptive Reasoning for Test-Time Compute Allocation</div>
+              <div class="item-summary">Gijs Kassenaar et al. let the model <strong>choose its own reasoning depth</strong> inside GRPO. The model emits a first-token mode flag — <em>NoThink</em> (answer fast), <em>Short</em>, or <em>Long</em> — learned end-to-end via a shaped reward plus per-mode token caps so modes don't collapse. On a <strong>1.5B distilled model</strong> trained on MATH, the three modes emerge cleanly and <strong>Short beats Long</strong> in accuracy — evidence the router sorts problems by difficulty rather than just running longer. Cleanest small-model proof yet that self-gated test-time compute is learnable with GRPO alone. arXiv: 2608.20256.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
         </article>
 
-
-        <article class="card expanded" data-type="research" data-date="2026-06-27" data-time="02:04">
+        <article class="card expanded" data-type="research" data-date="2026-08-19" data-time="14:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon research">📚</div>
+              <div class="card-icon research">🧠</div>
               <div>
                 <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🧊 PhysiFormer — Vedaldi @ Oxford: diffusion transformer learns 3D physics in world-coordinate mesh space, no ad-hoc inductive biases, beats AR baselines on rigidity + momentum, 🎯 RiVER — RLVR without ground-truth answers; Qwen3-8B / GLM-Z1-9B +8.9% / +9.4% ALE; transfers to LiveCodeBench +2.4%, USACO +3.5%, 🌐 Ask-Solve-Generate — fully self-evolving unified LMM, same framework across BLIP3o / BAGEL / VARGPT-v1.1; BAGEL +3.5% MMMU, GenEval 82→85%, 💃 DanceOPD — Tat-Seng Chua @ NUS: on-policy generative field distillation composes T2I + local + global editing without the usual quality tax, 🎨 Don't Settle at the Mode — ECCV 2026: training-free feature self-guidance fixes flow-model diversity collapse, plug-and-play, no reward model</div>
+                <div class="card-meta">Wed Aug 19 14:04 AEST arXiv pull (window 18 Aug 16:09 → 19 Aug 04:04 UTC, US/East Tue announcement batch, cs.AI/LG/CL/CV/NE). 5 picks: 🧠 <b>StagedWorkspace</b> — workspace-state contract binds parsed records &amp; diffs to native-file content hashes; Gemini 3.1 Pro 29.3→<b>63.9%</b> on OfficeQA, GPT-5.4 Nano 25.5→<b>42.1</b> on APEX-Agents with zero model changes. 🔤 <b>TokEval</b> (Clara Meister et al., COLM 2026) — principled tokenizer evaluation suite; information-theoretic metrics predict LM ability (Spearman ρ up to 0.80), structure-sensitive metrics correlate with task accuracy. 🎨 <b>OYS</b> — Bayesian-Optimization timestep selection for diffusion sampling; 5-step schedule retains 89–94% of 50-step quality, 10× inference cost cut, drop-in for any pipeline. 🔬 <b>AutoResearch</b> — two-stage "Insight In, Hallucination Out" autonomous research; RSICD recall 32.84→34.69 with only 5 audit issues vs 11–27. 🎮 <b>CAD</b> (Togelius et al., IEEE CoG 2026) — LLM program search + Continual Abstraction Discovery; learned libraries adopted by most later programs across Sokoban/Zelda/Dave/Lode Runner.</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">02:04</span>
+              <span class="card-time">14:04</span>
               <span class="card-badge">5 papers</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.27364">
+            <a class="item" href="https://arxiv.org/abs/2608.18050">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🧊 PhysiFormer — Diffusion Transformer Learns 3D Physics in World Space (Vedaldi @ Oxford)</div>
-              <div class="item-summary">Diffusion transformer predicts 3D object motion directly on world-coordinate meshes instead of view-dependent pixel space. Given initial vertex positions/velocities and material type (rigid or elastic), it samples full future vertex trajectories as a single denoising process — no ad-hoc latent spaces, hard-coded rigidity priors, or explicit causality constraints. Factorised time/space/object attention gives permutation-invariant multi-object reasoning without per-object encodings. Trained on 100k+ trajectories, generalises to mixed materials, unseen real-world geometries, and larger object counts. Substantially outperforms autoregressive baselines on trajectory accuracy, rigidity preservation, and momentum-based consistency (Yiming Chen, Yushi Lan, Andrea Vedaldi).</div>
+              <div class="item-title">🧠 StagedWorkspace — A Versioned Workspace for Knowledge-Work Agents</div>
+              <div class="item-summary">Anonymous (under review) proposes a <strong>workspace-state contract</strong>: every parsed view, review diff, and submitted artifact must be explicitly tied to a content hash of the evolving native file. StagedWorkspace binds parsed records and review diffs to those hashes. With <strong>dual parsed/native access</strong>, Gemini 3.1 Pro jumps from 29.3% to <strong>63.9%</strong> on OfficeQA Pass@1 (+34.6), and GPT-5.4 Nano climbs from 25.5 to <strong>42.1</strong> on APEX mean rubric score. Single-view baselines lose 8.3–12.1 points on OfficeQA and 4.7–9.2 on APEX. Most "agent failures" are actually version-confusion bugs; treating workspace state as a first-class contract looks like one of the cheapest, most general SOTA wins we've seen — drops into coding, docs, spreadsheet, slide, and notebook agents. arXiv: 2608.18050.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27369">
+            <a class="item" href="https://arxiv.org/abs/2608.18062">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 RiVER — RLVR Without Ground-Truth Solutions Improves LLMs</div>
-              <div class="item-summary">RLVR typically needs ground-truth answers to assign rewards, which limits it to problems with a known solution. RiVER (Ranking-induced VERifiable) trains on score-based optimisation tasks (AtCoder Heuristic Contest) using deterministic execution feedback as continuous-valued supervision, and identifies two failure modes in naïve group-relative RL on continuous rewards — scale dominance and frequency dominance — that calibrated reward shaping fixes. Improves Qwen3-8B and GLM-Z1-9B-0414 by 8.9% and 9.4% on ALE-Bench rating rank, and despite training exclusively on score-based tasks without ground truth, transfers positively to exact-solution benchmarks (LiveCodeBench +2.4%, USACO +3.5%) where raw-execution-score baselines fail to transfer (Yingyu Lin, Qiyue Gao, Nikki Lijing Kuang, et al.).</div>
+              <div class="item-title">🔤 TokEval — A Tokenizer Evaluation Suite (COLM 2026)</div>
+              <div class="item-summary">Clara Meister et al. ship a principled tokenizer evaluation framework that goes beyond fertility and compression rate to capture linguistically and structurally meaningful properties — UTF-8 character boundary integrity, digit place-value alignment, etc. Controlled pretraining experiments varying only the tokenizer's training mixture / pretokenization / algorithm show that <strong>information-theoretic metrics predict language modeling ability (Spearman ρ up to 0.80)</strong>, while structure-sensitive metrics correlate with downstream task accuracy across linguistic, math, and code benchmarks. Tokenizers are picked with almost no evaluation today, yet they shape every downstream capability. TokEval lets teams replace expensive pretraining sweeps with intrinsic measurement before committing millions of FLOPs. arXiv: 2608.18062.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27376">
+            <a class="item" href="https://arxiv.org/abs/2608.18040">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🌐 Ask, Solve, Generate — Self-Evolving Unified LMM, Architecture-Agnostic</div>
-              <div class="item-summary">Most unified LMMs that support both visual understanding and image generation still need curated human supervision (annotations, preference labels, external reward models). Proposes a fully self-evolving training framework with three internal roles — Proposer, Solver, Generator — using only self-derived consistency signals. Introduces Solver Token Entropy (STE), a token-level prediction-uncertainty difficulty signal that stays useful when sample-level consistency collapses, and a multi-scale internal evaluation scheme combining QA-fidelity scoring with cycle-consistent captioning. The same framework applies unchanged to BLIP3o, BAGEL, and VARGPT-v1.1; on BAGEL gives +3.5% absolute MMMU and pushes GenEval 82% → 85%. Code and models public (Ritesh Thawkar, Shravan Venkatraman, Omkar Thawakar, et al.).</div>
+              <div class="item-title">🎨 Tuned Diffusion Sampling with Bayesian Optimization (OYS)</div>
+              <div class="item-summary">Travis Zhang et al. treat timestep selection in diffusion sampling as a <strong>black-box optimization problem</strong> and optimize sample quality directly with Bayesian Optimization. <strong>OYS beats both default schedules and "Align Your Steps"</strong> on text-to-image generation and improves over defaults on inpainting and other image tasks, in both quantitative and human evaluations. No additional training; works on distilled models; works with simple Euler and DPM-Solver++. A 5-step OYS schedule retains <strong>89–94%</strong> of a 50-step schedule's quality while reducing inference cost by <strong>10×</strong>. Drop-in scheduler upgrade for any diffusion pipeline — the kind of result that ships to prod next quarter. arXiv: 2608.18040.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27377">
+            <a class="item" href="https://arxiv.org/abs/2608.17906">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">💃 DanceOPD — On-Policy Generative Field Distillation for Unified Flow Models (Chua @ NUS)</div>
-              <div class="item-summary">Modern image generation wants a single model that unifies T2I + local editing + global editing — but these capabilities rarely align and editing tends to degrade T2I quality. DanceOPD is an on-policy generative field distillation framework for flow-matching models that routes each sample to one capability field, queries one low-noise student-induced state, and trains with a simple velocity-MSE objective. Each capability source is a velocity field over a shared flow state space, and learning from fields queried on the student's own rollout states composes expert capabilities without the usual interference — absorbing operator-defined fields like CFG for free. Consistent gains in target capabilities while preserving anchor T2I quality (Wei Zhou, Xiongwei Zhu, Zelin Xu, ..., Tat-Seng Chua).</div>
+              <div class="item-title">🔬 AutoResearch — Insight In, Hallucination Out</div>
+              <div class="item-summary">Anonymous authors present a two-stage autonomous research system: <strong>Idea Generation</strong> continuously fuses emerging research signals with accumulated domain knowledge and uses multi-model generation + cross-review to produce grounded, testable research plans; <strong>Idea Execution</strong> decomposes those plans into experiments with coordinated agents and an independent evidence-based review before accepting conclusions. Across cross-modal retrieval, systems optimization, and benchmark-driven ML, AutoResearch turns generated ideas into measurable progress, detects and corrects unreliable experimental results, and makes evidence-conditioned continue/revise/terminate decisions. On RSICD, an AutoResearch-generated idea lifts mean Recall from 32.84 to <strong>34.69</strong> with only <strong>5 audit-confirmed issue events</strong> vs. 11–27 for competing systems — a 2–5× reduction in hallucinated results. arXiv: 2608.17906.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27371">
+            <a class="item" href="https://arxiv.org/abs/2608.17947">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🎨 Don't Settle at the Mode — Training-Free Diversity Fix for Flow Models (ECCV 2026)</div>
-              <div class="item-summary">Flow models collapse to mode-like outputs when asked for multiple samples under the same conditioning. Existing fixes (latent guidance, external reward-model sample selection) are limited or expensive. Introduces a training-free self-guidance mechanism that disperses the flow model's internal features during batch generation, plus a manifold-regularisation step that projects dispersed features back onto the data manifold — diverse outputs without losing alignment. Drop-in for pretrained flow models with marginal inference cost; validated on multi-step and few-step T2I, depth-to-image, and reference-image generation. Accepted at ECCV 2026 (Pradhaan S. Bhat, Rishubh Parihar, Abhijnya Bhat, et al.).</div>
+              <div class="item-title">🎮 Procedural Content Metageneration via Program Search and Continual Abstraction Discovery</div>
+              <div class="item-summary">Julian Togelius et al. (IEEE CoG 2026) evolve complete Python procedural content generators for <strong>Sokoban, Zelda, Dangerous Dave, and Lode Runner</strong> using language-model mutation and crossover. The key contribution is <strong>CAD (Continual Abstraction Discovery)</strong>, which extracts reusable primitives from high-fitness programs into a run-specific helper module. A 2×2 experiment crosses CAD with access to a fixed hand-written domain API across 160 complete runs. <strong>CAD raises mean final best fitness in all 8 domain×API comparisons</strong>; learned libraries are adopted by most later programs and repeatedly rediscover validation, reachability, and structural utilities. Strong signal that LLM-driven evolution + library discovery is a viable path for open-ended content and tool synthesis. arXiv: 2608.17947.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
         </article>
 
-        <article class="card expanded" data-type="research" data-date="2026-06-26" data-time="04:04">
+        <article class="card expanded" data-type="research" data-date="2026-08-18" data-time="14:04">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
-              <div class="card-icon research">📚</div>
+              <div class="card-icon research">🧮</div>
               <div>
                 <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🎯 Co-Failure Ceiling — single-author proof caps any router / vote / MoA at 1−β over 67 frontier models (Josef Chen), 🌀 MMBench2 — 427h / 210-task world-model benchmark names 3 hallucination modes (perceptual / action-marginalized / scene-diverging) + lightweight data-centric mitigations (Hansen, Wang @ UCSD), 🧬 Autoregressive Boltzmann Generators — Bengio / Bose / Tong @ Mila abandon the flow-based paradigm for molecular sampling, 🧮 GEQ ≡ Blackwell Approachability — Jordan + Tibshirani prove algorithmic equivalence of the three-way regret / approachability / GEQ family, 🩻 CORTEX — first structured-reasoning benchmark for 3D chest-CT MLLMs with traceable finding→conclusion chain (MBZUAI, Salman Khan)</div>
+                <div class="card-meta">Tue Aug 18 14:04 AEST arXiv pull (window 17 Aug 16:04 → 18 Aug 04:04 UTC, US/East Mon announcement batch, cs.AI/LG/CL/CV/NE). 44 fresh submissions. 5 picks: 🧮 <b>Matrix mult exponent &lt; 2.371177</b> (DeepMind × Josh Alman, Columbia) — AlphaEvolve-driven theoretical-CS improvement, first LLM/agentic loop to publish a tighter ω bound. 🤖 <b>BATON</b> (USC NLP) — long-horizon robot manipulation, subtask-as-unit-of-exploration + transition-aware memory, +11.6% task success on RoboMemArena <i>without</i> any model updates. 🧠 <b>Proteus</b> (Mila × Google, Behrouz/Mirrokni/Courville) — incremental memory activation drops into SWLA/Comba/Titans/Hope-Attention, gains grow with context length. 🎨 <b>Pixel-space T2I diffusion</b> — latent-to-pixel post-training recipe matches latent quality at <b>3.18–4.75×</b> inference speedup. 🎮 <b>ClawGym II</b> (RUC, Wayne Xin Zhao / Ji-Rong Wen, 20 authors) — black-box PPO/GRPO on agent harness, Qwen3-30A3B +9.98/+14.81 Pass@1 through OpenClaw and Claude Code.</div>
               </div>
             </div>
             <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
+              <span class="card-time">14:04</span>
               <span class="card-badge">5 papers</span>
               <span class="card-expand">↓</span>
             </div>
           </div>
           <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.27288">
+            <a class="item" href="https://arxiv.org/abs/2608.16884">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 Co-Failure Ceiling — A Hard Theoretical Limit on Multi-Model LLM Systems</div>
-              <div class="item-summary">Single-author proof that for any policy whose output is a single member-model answer, accuracy cannot exceed 1 − β, where β is the rate at which every model in the pool is wrong on the same query. Across 67 frontier models from 21 providers, a Clopper-Pearson bound on β gives a finite-sample certificate on the largest gain any router / vote / cascade can deliver — and the usual pairwise-error-correlation (ρ) diagnostic is shown to be uninformative for β (Josef Chen).</div>
+              <div class="item-title">🧮 Improving the Matrix Multiplication Exponent — DeepMind × Josh Alman, First LLM-Driven Theoretical-CS Result</div>
+              <div class="item-summary">DeepMind × Josh Alman (Columbia) push the matrix multiplication exponent to <strong>ω &lt; 2.371177</strong> (vs. previous best 2.371339). The combination-loss-analysis optimization is reformulated for a larger setting, redesigned with an ML optimizer, then refined with <strong>AlphaEvolve</strong>. This is the first published theoretical-CS improvement produced end-to-end by an LLM/agentic optimization loop — a real "AI for math" milestone rather than the more common "AI helps prove a conjecture humans already had." Anyone shipping an AI-for-research product will be quoting this paper. arXiv: 2608.16884.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27326">
+            <a class="item" href="https://arxiv.org/abs/2608.16889">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🌀 MMBench2 — World-Model Hallucination Is Predictable and Preventable</div>
-              <div class="item-summary">Releases a 427-hour, 210-task visual world-modeling benchmark with ground-truth actions, rewards, and live simulators, and trains a 350M-parameter world model on it. Names three distinct hallucination modes (perceptual, action-marginalized, scene-diverging), each anchored to a different stage of the pipeline, and gives three lightweight data-centric signals that both predict and mitigate them. Interactive paper, code, dataset, and models all public (Nicklas Hansen, Xiaolong Wang @ UC San Diego).</div>
+              <div class="item-title">🤖 Don't Drop the BATON — Long-Horizon Robot Manipulation via Agentic Subtask Exploration (USC NLP)</div>
+              <div class="item-summary">USC NLP Lab (Bingxin Xu, Yuzhang Shang, Emilio Ferrara) freeze the VLA and put an LLM agent in charge of long-horizon chains. The trick: <strong>make each subtask the unit of exploration</strong> (cost drops from T^K to T×K) and add a <strong>transition-aware memory</strong> with verifier entry, handoff, and lookahead transitions. No parameters updated. <strong>SOTA on RoboMemArena: +11.6% task success, +14.9% cumulative.</strong> Cleanest evidence yet that "agentic wrappers around frozen VLAs" is a real production pattern, not just a benchmark trick. arXiv: 2608.16889.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27361">
+            <a class="item" href="https://arxiv.org/abs/2608.16844">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🧬 Autoregressive Boltzmann Generators (ArBG) — Sampling Molecules Without Flows</div>
-              <div class="item-summary">Boltsmann Generators (BGs) have been dominated by normalizing flows, which either lose expressivity from strict-invertibility constraints (discrete time) or pay ruinous likelihood-evaluation cost (continuous time). ArBG drops the flow-based paradigm and uses an autoregressive factorization to sidestep both, with theoretical results on topological and geometric expressivity that flows provably cannot match (Rehman, Tan, Bengio, Bose, Tong @ Mila / Université de Montréal).</div>
+              <div class="item-title">🧠 Proteus — Incremental Memory Activation for Long-Context Models (Mila × Google)</div>
+              <div class="item-summary">Mila + Google (Reza Bayat, Ali Behrouz, Vahab Mirrokni, Aaron Courville — the Titans authors) argue that <strong>static memory is suboptimal</strong>: early tokens grab too many degrees of freedom and pollute the state. Proteus grows the active memory over time — early bottleneck forces compression, late unlock gives later context fresh capacity. Drop-in for SWLA, Comba, Titans, Hope-Attention; <strong>gains grow with sequence length</strong>. General enough to retrain how people design neural memory. Every Mamba/Jamba/RWKV team should A/B this next week. arXiv: 2608.16844.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27315">
+            <a class="item" href="https://arxiv.org/abs/2608.16887">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🧮 Gradient Equilibrium ≡ Blackwell Approachability (Algorithmically)</div>
-              <div class="item-summary">Gradient Equilibrium (GEQ) is a recently introduced online-optimization framework that abstracts problems like online conformal prediction. Proves that GEQ and Blackwell approachability are algorithmically equivalent — either can be solved with no asymptotic loss given a black-box oracle for the other — and combined with prior equivalences this yields a clean three-way correspondence: regret ↔ approachability ↔ GEQ. Michael I. Jordan + Ryan J. Tibshirani on the author list signals the "this will appear in JACM" tier (Lee, Haghtalab, Jordan, Tibshirani @ UC Berkeley / CMU).</div>
+              <div class="item-title">🎨 An Empirical Study of Training Pixel-Space Text-to-Image Diffusion Models</div>
+              <div class="item-summary">13-author empirical study that finally puts pixel-space T2I diffusion on a level footing with latent: direct large-scale pretraining is slow, but a <strong>latent-to-pixel post-training</strong> strategy recovers the gap. Systematic ablations on weight init, data mix, prediction target, decoder, and noise schedule give a recipe whose pixel-space models match latent quality at <strong>3.18–4.75× inference speedup</strong>. Pixel space is the natural home for editing / super-res / restoration / medical imaging — re-prices T2I deployment economics for cost-sensitive teams. arXiv: 2608.16887.</div>
               <span class="item-arrow">→</span>
             </a>
-            <a class="item" href="https://arxiv.org/abs/2606.27264">
+            <a class="item" href="https://arxiv.org/abs/2608.16798">
               <span class="item-tag research">Paper</span>
-              <div class="item-title">🩻 CORTEX — Structured-Reasoning Benchmark for Trustworthy 3D Chest-CT MLLMs</div>
-              <div class="item-summary">First benchmark that scores structured, traceable reasoning on 3D chest CT — pairing volumetric scans with patient history, expert-curated reasoning chains, and a protocol that audits the link between finding and conclusion (instead of just final-answer accuracy on free-form text). Includes a trustworthy-3D-MLLM training recipe that improves over free-form baselines on the benchmark. Authoritative author list (Salman Khan @ MBZUAI).</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-
-
-        <article class="card expanded" data-type="research" data-date="2026-06-24" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🤖 OpenThoughts-Agent — open-data agentic recipe hits 44.8% avg (+3.9pp vs Nemotron-Terminal-32B) across 7 benchmarks (Schmidt/Dimakis/Jitsev), 🦾 InSight — Stanford steerable VLA + VLM data flywheel picks up new primitives without human demos (Schwager/Wu), 🖼️ IV-CoT — implicit visual chain-of-thought fixes object-count/spatial-relation failures in unified MLLMs (GenEval + T2I-CompBench), ⚡ FMLM+ Posterior Refinement — 32× fewer NFEs to match discrete LLM baselines (any-order flow maps, self-corrects a posteriori), 🎮 FLAT — first feedforward decoder of triangle splats directly from video-diffusion latents; game-engine-ready meshes from a single image (TUM/NVIDIA)</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.24855">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 OpenThoughts-Agent — Fully-Open Data Recipes for Agentic Models</div>
-              <div class="item-summary">A 100+ ablation, fully-open data-curation pipeline for broadly-capable agentic LMs. The 100K-example training set fine-tunes Qwen3-32B to 44.8% average across seven agentic benchmarks — a +3.9pp jump over Nemotron-Terminal-32B (40.9%) — with clean scaling wins at every compute-controlled training-set size. Datasets, pipeline, and models released at openthoughts.ai (Berkeley/Tübingen-style author list including Schmidt, Dimakis, Jitsev).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.24884">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🦾 InSight — Self-Guided Skill Acquisition via Steerable VLAs</div>
-              <div class="item-summary">Makes VLA policies steerable at the primitive-action level ("move gripper to bowl", "lift upward", "pour the bottle") and closes an autonomous loop: a VLM identifies which primitives a new task needs, attempts them with low-level control, auto-labels successes, and folds them back into the training set. Evaluated on block flipping, drawer closing, sweeping, twisting, pouring — without human demonstrations of the target skills (Stanford, Schwager/Wu).</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.24849">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🖼️ IV-CoT — Implicit Visual Chain-of-Thought for Structure-Aware T2I</div>
-              <div class="item-summary">Diagnoses a known weakness of unified MLLMs — structural planning and appearance rendering tangled in one conditioning stream — and fixes it with a structural-to-semantic cascade. Structural queries form a latent visual plan (trained with sketch supervision), then semantic queries render appearance on top in one forward pass. Wins on GenEval and T2I-CompBench — and sketch extraction isn't needed at inference time.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.24773">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ FMLM+ Posterior Refinement — 32× Faster LLM Generation via Any-Order Flow Maps</div>
-              <div class="item-summary">Bridges Flow Map Language Models (joint-sequence transport, great few-step quality) and Masked Diffusion Models (factorisation error at multi-token decode) by adding masking-style noise schedules to FMLM. The new Posterior Refinement step scores global consistency of every token a posteriori and self-corrects — matching discrete LLM baselines with 32× fewer NFEs across diverse benchmarks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.24876">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎮 FLAT — Feedforward Triangle Splatting for Single-Image 3D Scene Generation</div>
-              <div class="item-summary">First feedforward decoder of triangle splats directly from compressed video-diffusion latents. Triangle splatting is notoriously unstable (orientation sensitivity kills gradients), so FLAT contributes a ray-centered rotation parameterisation plus a product window function for differentiable triangle rendering. Beats 3DGS / 2DGS baselines on geometric accuracy at competitive visual quality, with a lightweight test-time refinement that yields game-engine-ready meshes (TUM / NVIDIA).</div>
+              <div class="item-title">🎮 ClawGym II — Black-Box RL on Agent Harness (RUC, 20 authors)</div>
+              <div class="item-summary">Renmin University of China (Wayne Xin Zhao, Ji-Rong Wen et al.) ship a unified black-box RL framework for long-horizon LLM agents: sandboxed concurrent rollouts, a serving proxy at the model boundary that captures calls into prefix trees, and PPO/GRPO over the reconstructed tree. New <strong>mix-harness training</strong> jointly shapes a single model across heterogeneous harnesses. With Qwen3-30A3B, Pass@1 on ClawGym-Bench improves by <strong>+9.98 (OpenClaw) and +14.81 (Claude Code)</strong>, stable across 200–400 steps. First published evidence a model can be jointly trained against OpenClaw + Claude Code without collapse. arXiv: 2608.16798.</div>
               <span class="item-arrow">→</span>
             </a>
           </div>
         </article>
 
 
-        <article class="card expanded" data-type="research" data-date="2026-06-20" data-time="04:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">♟️ VIMPO — critic-free RL that beats GRPO on MATH-500 / AIME / OlympiadBench (Levine + Song), 🧭 S-Agent — 8B spatial tool-use agent matches GPT-5.4 on multi-view / video spatial reasoning (S-Lab), 🤖 HumanScale — egocentric video beats real-robot data for embodied pretraining, 24% lower val loss + 90% OOD success (Matusik + Chua), 🎯 Contagion Networks — formal framework for LLM-judge bias propagation; k=3 evaluator cuts contagion 72%, 📂 Automating SKILL.md — negative result: trajectory-mined skills readable (≥0.95 purity) but fail to transfer (18.5%→20.5% IW skill-step); diagnostic not method</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:04</span>
-              <span class="card-badge">10 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.20008">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">♟️ VIMPO — Value-Implicit Policy Optimization for LLMs</div>
-              <div class="item-summary">A new critic-free RL algorithm for LLM reasoning that derives a policy-implied value function from the optimality conditions of KL-regularized RL. Solves the GRPO vs actor-critic trade-off: GRPO assigns a trajectory-level advantage to every token (poor credit assignment); actor-critic is denser but unstable. VIMPO keeps critic-free simplicity and gets denser credit assignment by separating reward incorporation (value loss) from policy improvement (PPO-style actor). On MATH-500 / AIME 2024-2025 / OlympiadBench, VIMPO beats GRPO and keeps its edge under noisy rewards.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20515">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧭 S-Agent — Spatial Tool-Use Elicits Reasoning for Spatial Intelligence</div>
-              <div class="item-summary">Reframes spatial reasoning as spatio-temporal evidence accumulation instead of single-frame VLM inference. The VLM acts as a semantic planner that calls a hierarchy of spatial tools and experts; Scene Memory holds evolving scene state, Agent Memory holds reasoning context. Training-free: improves both open- and closed-source VLMs at inference. Also releases S-300K trajectory dataset and a fine-tuned S-Agent-8B that beats Qwen3-VL-8B and matches closed-source giants (GPT-5.4, Gemini 3) on multi-view / video spatial reasoning benchmarks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20521">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 HumanScale — Egocentric Human Video Can Outperform Real-Robot Data for Embodied Pretraining</div>
-              <div class="item-summary">A systematic study showing that, with a careful filtering and labeling pipeline, egocentric human video is not just a viable substitute for teleoperated real-robot data in embodied pretraining — it actually beats it. At matched pretraining data volume, egocentric pretraining gives 24% lower validation loss on real-robot action prediction and 52.5% / 90% higher success rates on in-distribution / OOD real-robot tasks. The recipe: pretrain on diverse egocentric video, then adapt with a small labeled real-robot subset for action-space alignment.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20493">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 Contagion Networks — Evaluator Bias Propagation in Multi-Agent LLM Systems</div>
-              <div class="item-summary">A formal framework for measuring how LLM-evaluator biases spread across multi-agent systems. Models the propagation as a Cross-Agent Contagion Matrix Γ_N and identifies three regimes (suppression / propagation / amplification) controlled by its spectral radius. Controlled 3-agent DeepSeek experiment: γ ∈ [0.157, 0.352] even within the same model, 3-5× weaker than cross-model contagion from prior work. Practical mitigation: bumping the evaluator committee from k=1 to k=3 cuts effective contagion by 72.4%. Open-source framework shipped with the paper.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20363">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📂 Automating SKILL.md Generation — Trajectory Mining Hits a Wall (Negative Result)</div>
-              <div class="item-summary">A three-stage pipeline (GUI trajectory segmentation → clustering into candidate skills → GRPO on the resulting skill-aware policy) that attempts to mine a SKILL.md-style library from interaction data. Readable on the source benchmark — five of eight clusters hit ≥0.95 purity vs. InteraSkill Workflows labels. But readability ≠ transfer: GRPO only lifts IW skill-step accuracy from 18.5% to 20.5%, leaves BrowseComp+ flat, and is beaten by a trivial frequency prior on key source-domain metrics. Author's honest framing: a diagnostic study, not a method.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20547">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧮 The Token Is a Group Element — Lie-Algebra Attention over Matrix Lie Groups</div>
-              <div class="item-summary">First attention construction whose tokens are bare matrix Lie group elements (no feature payload, no learned kernel). The score is the closed-form algebra norm of the relative pose log(g_i^-1 g_j) — intrinsic, equivariant by construction, and free of irreducible representations or spherical harmonics. First vector-token-free attention that reaches non-compact affine groups with scale and shear (Aff(2)), which all irrep- or surjective-exp-based methods must exclude.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20545">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌍 Current World Models Lack a Persistent State Core</div>
-              <div class="item-summary">Argues that today's "world models" only render convincing frames on demand and lack an internal world state that keeps evolving decoupled from observation. Objects should endure and events run to conclusion whether or not a camera is watching — current benchmarks reward surface appearance, not persistent state. Directly relevant to long-horizon agentic and embodied systems.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20474">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ UltraQuant — 4-bit KV Caching for Context-Heavy Agents (AMD CDNA4)</div>
-              <div class="item-summary">Brings TurboQuant-style rotation + codebook quantization down to FP4 KV caching, with asymmetric K/V treatment, Walsh-Hadamard rotation, QJL removal, and block-scale variants. On AMD CDNA4 it introduces native scaled-MFMA support for FP8 queries × FP4 KV × UE8M0 group scales. On long-context multi-turn agentic workloads it cuts P50 TTFT by 3.47× in cache-pressured late rounds (2.3× overall) and lifts output throughput 1.63× over FP8 KV baseline.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20333">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 SoftSkill — Behavioral Compression for Contextual Adaptation (SKILL.md → 32 soft tokens)</div>
-              <div class="item-summary">Instead of letting a frozen LM read a long natural-language skill file at inference time, SoftSkill initializes a compact continuous context object refined by a trainable soft delta while the base model stays frozen. A length-32 SoftSkill prefix on Qwen3.5-4B beats no-skill prompting by 8.3 (SearchQA) / 42.1 (LiveMath) / 1.3 (DocVQA) points and beats SkillOpt by 5.2 / 12.5 on the same benchmarks. Directly applicable to OpenClaw-style SKILL.md distillation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.20381">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔧 UFP4 — Recipe for LLM FP4 Pretraining without Shrinkage Bias</div>
-              <div class="item-summary">Pinpoints a fundamental issue in current FP4 pretraining paths (NVIDIA Blackwell/Rubin and AMD MI350): non-uniform formats like E2M1 have a systematic Shrinkage Bias rooted in their geometry. Proposes UFP4, a recipe that corrects this bias. If this lands, expect the next round of ultra-cheap-pretraining recipes to cite this work.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
 
-        <article class="card expanded" data-type="research" data-date="2026-06-18" data-time="08:04">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">⚡ Models Take Notes at Prefill — KV Cache editable & composable, p90 TTFT 53–398× (Bojie Li), 🛡️ RepSelect — robust LLM unlearning, 4–50× post-relearning reduction, 🎯 DivInit — diverse query init for agentic search, +5–7 pts multi-hop QA (CMU), 🛡️ REINS — training-free safety steering for video diffusion (9 models, 1.3B–5B), 📝 PromptMN — pseudo-prompting DSL for reviewable human↔AI hand-offs</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">08:04</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.17107">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ Models Take Notes at Prefill — KV Cache Editable & Composable</div>
-              <div class="item-summary">Shows the model has already written the field-conditioned conclusion onto downstream notes during prefill — the field's own KV drives under 1% of the decision. Two practical wins follow: (1) Editable — a single erratum with CoT recovers the decision at ~1% compute; (2) Composable — precompiled skills can be RoPE-repositioned and spliced into any context with O(L) TTFT instead of O(L²). In an online vLLM benchmark, it keeps the prefix cache aligned (98.5% hit-rate) and cuts p90 time-to-first-token by 53–398×. Validated across dense, MoE, quant, and multimodal caches.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17168">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🛡️ RepSelect — Robust LLM Unlearning via Representation Selectivity</div>
-              <div class="item-summary">Existing unlearning methods are easily reversed by fine-tuning or few-shot prompting because they target representations shared with the retain set. RepSelect isolates forget-set-specific representations by collapsing the top principal components of weight gradients before each update, leaving general capabilities intact while limiting what a fine-tuning attacker can recover. Across Llama 3, Qwen 3.5, Gemma 4 E4B, and DeepSeek V2 Lite, RepSelect achieves a 4–50× larger reduction in post-relearning answer accuracy than GradDiff, NPO, SimNPO, RMU, and UNDIAL — and is near-perfectly robust to few-shot prompt attacks. A real step toward "deep" machine unlearning for compliance and safety.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17209">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 DivInit — Diverse Query Initialization for Agentic Search (CMU)</div>
-              <div class="item-summary">Test-time scaling for agentic search typically adds depth (more turns) or breadth (more parallel rollouts). This paper shows parallel sampling has diminishing returns because first-turn queries are redundant across rollouts, causing shared retrieval evidence. DivInit is a training-free intervention: draw n candidates from one call, pick k diverse seeds, run them as parallel trajectories. Across 5 open-weight models and 8 benchmarks, DivInit improves over standard parallel sampling with average gains of 5–7 points on multi-hop QA at matched compute. Simple, training-free, drop-in for any LLM agent loop.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17257">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🛡️ REINS — Training-Free Safety Steering for Video Diffusion Models</div>
-              <div class="item-summary">Existing defenses for video diffusion either need expensive safety fine-tuning (degrades capability) or external filters (bypassed by adversarial prompts). REINS shows safety-relevant structure is linearly encoded in hidden states, and a single direction found via Supervised PCA on binary safety labels separates safe from unsafe trajectories. Steering at an intermediate transformer layer (~50% depth) redirects to safe alternatives with no weight updates. Validated across 9 video diffusion models (1.3B–5B) with negligible compute overhead, and reveals a fundamental depth tradeoff: safety info accumulates monotonically, but steering peaks at intermediate layers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17164">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📝 PromptMN — Pseudo Prompting Language for Reviewable Human↔AI Hand-offs</div>
-              <div class="item-summary">A pseudo-prompting DSL that annotates natural language with compact %-prefixed typed directives covering roles, goals, requirements, priorities, constraints, plans, inputs, and outputs. Semantic resolution lets authors write in any order; models interpret by function. Pairs with reverse prompt engineering — ask a model to restate a desired outcome as PromptMN to surface inferred roles, constraints, and missing assumptions before acting. Validated across Claude Fable 5, Claude Opus 4.8, Gemini 3.1 Pro, and GPT-5.5: all correctly resolve PromptMN structures (repetition, conditionals, methods, prime-checking) without fine-tuning. Sits between free-form prompting and pseudocode — the biggest payoff is in SDLC and agentic workflows where first-handoff ambiguity cascades into downstream failure.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
 
-        <article class="card expanded" data-type="research" data-date="2026-06-17" data-time="16:06">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">♾️ Looped World Models — 100× param-efficient world modelling (multi-institution), 🪡 Variable-Width Transformers ×-shaped non-uniform capacity (MIT, free-lunch arch), 🎨 UniAR single-tokenizer unified multimodal autoregressive (Tongyi/Alibaba), 🤖 VERITAS visual-verifier generator-checker for robot policies (Berkeley), 🧠 FPRM fixed-point halting for looped transformers on ARC-AGI (ETH/IDSIA)</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">16:06</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.18208">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">♾️ Looped World Models — 100× Parameter Efficiency via Parameter-Shared Loop Refinement</div>
-              <div class="item-summary">First looped architecture for world modelling: a parameter-shared transformer block iteratively refines latent environment states, hitting up to 100× parameter efficiency vs. conventional models while automatically scaling depth to the complexity of each prediction step. Resolves the long-standing tension between long-horizon fidelity and compounding error in video-game RL, autonomous-driving simulators, and any agent that needs cheap long-horizon rollouts. 30+ author multi-institution effort — exactly the kind of broad coalition that signals a paradigm shift worth watching.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.18246">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🪡 Variable-Width Transformers — ×-Shaped Non-Uniform Capacity Allocation (MIT)</div>
-              <div class="item-summary">An ×-shaped transformer that widens early and late layers while narrowing the middle ones via a parameter-free residual reshape — different layers really do play distinct computational roles, and rebalancing capacity buys better scaling at zero new-parameter cost. Authored by Yoon Kim + Yury Polyanskiy (MIT), the empirical case against the long-standing constant-width assumption. Drop-in change: worth testing on every pretraining run; if it holds at frontier scale it invalidates the entire constant-width tradition.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.18249">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎨 UniAR — Single Shared Context-Visual Tokenizer for Unified Multimodal Autoregression (Tongyi/Alibaba)</div>
-              <div class="item-summary">Argues the standard "two visual tokenizers (one for understanding, one for generation)" design is exactly what blocks true unification, and replaces it with a single discrete visual tokenizer that bridges comprehension and synthesis. The model interprets its own generated visual tokens directly without re-encoding — first clean unified-autoregressive stack from the Qwen org. Same lineage as Qwen3-Omni, so an upstream component change is plausible; expect follow-up ablations from Meta and OpenAI within weeks.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.18247">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 VERITAS — Visual Verification for Inference-time Steering and Autonomous Policy Improvement (Berkeley)</div>
-              <div class="item-summary">Generator-verifier framework for generalist robot policies: a pretrained policy acts as the "generator" while a gradient-free visual verifier scores actions at inference time, enabling steering that improves performance with zero additional training; the same verifier signal then drives self-improvement in the wild. From Mingtong Zhang + Dhruv Shah (UC Berkeley) — Shah's track record (SIGMA, VISTA) makes this credible. Inference-time compute for robotics, the pattern that already worked for LLMs (best-of-N, search), now ports to embodiment via vision-only supervision.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.18206">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 FPRM — Fixed-Point Reasoners: Stable and Adaptive Deep Looped Transformers (ETH / IDSIA)</div>
-              <div class="item-summary">Diagnoses the signal-propagation collapse that hits looped transformers as halting is delayed, then fixes it with pre-norm + residual scaling. FPRM halts via fixed-point convergence — adaptive compute with no auxiliary head. Validated on Sudoku, Maze, state-tracking, and ARC-AGI. Antonio Orvieto's group is the right author set to make this stick; the first principled, theory-backed halting rule for looped transformers, and a likely default architecture by end of year if the ARC-AGI numbers hold.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
 
-        
-        <article class="card expanded" data-type="research" data-date="2026-06-17" data-time="00:05">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">🎯 Value Axis internal LLM confidence direction (Anthropic, causally steerable), 📐 EPS exact posterior score for diffusion inverse problems (DeepMind/KAIST, ~10× fewer denoiser evals), 🤖 Qwen-RobotWorld embodied video world model (Alibaba, #1 EWMBench + DreamGen Bench), 🎮 ContextRL context-aware RL for agentic + multimodal LLMs (Princeton/UToronto, +2.2% agentic / +1.8% VQA), 🦾 GAM geometric action model for robot policies (KAIST/ETH, beats VLA/WAM baselines) — plus 5 from earlier today</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">00:05</span>
-              <span class="card-badge">10 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.17056v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎯 The Value Axis — LLMs Encode Whether They're on the Right Track (Anthropic)</div>
-              <div class="item-summary">A single linear direction in Qwen3-8B activations tracks the model's internal estimate of whether its current trajectory will succeed — built from synthetic in-context RL data, validated against verbalized confidence, backtracking behavior, and corrupted-code detection. Steering toward high value causally suppresses self-correction and explanatory verbosity; steering toward low value induces backtracking and exploration; DPO can grow the axis for rewarded behaviors (e.g., using a specific word). Same axis also explains real post-training signals: Qwen assigns low value to politically sensitive chat queries, and supervised fine-tuning raises internal confidence within its training domain. First mechanistic evidence that "is this working?" is a real, linearly decodable, steerable feature of an LLM.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17048v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">📐 EPS — Exact Posterior Score Estimation for Diffusion Inverse Problems (DeepMind / KAIST / Georgia Tech)</div>
-              <div class="item-summary">Derives the exact posterior score in closed form for linear Gaussian inverse problems under general Gaussian interpolants: posterior sampling reduces to a plain denoising call at an operator-dependent shifted pivot under anisotropic noise. EPS preserves the input/output structure of standard diffusion pretraining, so it can be trained from scratch or fine-tuned from any pretrained denoiser, and at inference needs no likelihood gradients or projections. Across five linear inverse problems on FFHQ and ImageNet it beats both training-free and training-based baselines on fidelity, perceptual, and distributional metrics while using roughly an order of magnitude fewer denoiser evaluations than gradient-based posterior samplers. The cleanest principled recipe yet for diffusion-based imaging, super-resolution, and inverse rendering.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17030v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🤖 Qwen-RobotWorld — Language-Conditioned Video World Model Unifying 20+ Embodiments (Alibaba)</div>
-              <div class="item-summary">A 60-layer double-stream MMDiT that couples frozen Qwen2.5-VL semantics with video-VAE latents via layer-wise joint attention, trained on an 8.6M video-text corpus covering 20+ embodiments and 500+ action categories, with a general→expert curriculum under a shared language interface. Natural language acts as a unified action interface across robotic manipulation, autonomous driving, indoor navigation, and human-to-robot transfer. Ranks #1 overall on EWMBench and DreamGen Bench, outperforms every open-source model on WorldModelBench and PBench, and zero-shot generalizes on RoboTwin-IF. Three concrete downstream uses: synthetic data generation for policy training, scalable virtual environments for policy evaluation, and language-guided planning signals for robot control.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17053v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎮 ContextRL — Context-Aware RL for Agentic and Multimodal LLMs (Princeton / UToronto)</div>
-              <div class="item-summary">Long-horizon LLM agents and multimodal reasoners often fail when the right evidence is one tiny line in a long tool trace or one subtle detail in an image — standard RL only supervises the final answer. ContextRL adds an indirect auxiliary objective: present the model with a query, an answer, and two near-identical contexts, and reward it for selecting the context that actually supports the query-answer pair. Builds 1k coding-trajectory pairs and 7k image pairs via generative editing and similarity search; achieves +2.2% over standard GRPO across 5 long-horizon agentic benchmarks and +1.8% across 12 VQA benchmarks. Data-augmentation controls prove the gain comes from the context-selection objective itself, not from extra data — a clean, transferable grounding recipe.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.17046v1">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🦾 GAM — Geometric Action Model for Robot Policy Learning (KAIST / ETH Zurich)</div>
-              <div class="item-summary">Generalist robot VLAs and world-action models inherit strong semantic or temporal priors but operate on 2D frames, leaving the 3D geometry required for contact-rich manipulation implicit. GAM repurposes a pretrained geometric foundation model as a shared substrate: shallow layers serve as an observation encoder, a causal future predictor inserted at the split layer forecasts latent tokens conditioned on language, proprioception, and action history, and the remaining blocks decode both future geometry and actions from one backbone. Across a broad suite of simulation and real-robot manipulation benchmarks, GAM is more accurate, more robust, faster, and lighter than current foundation-model-scale VLA / WAM baselines.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14657">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🏆 HPSv3++ — Reward Models Across the Full Diffusion Capability Spectrum</div>
-              <div class="item-summary">A 212K dual-dimension preference dataset (text fidelity + aesthetics, annotated with Qwen-Image + humans) plus a two-stage training recipe — data-aware orthogonal gradient projection to merge new aesthetic signal, then capability-iteration-conditioned scoring with std-driven unsupervised guidance. Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench, hits 79.1%/88.1% on HPDv3++, and consistently improves GenEval across diverse T2I backbones when used for RL fine-tuning. A concrete fix for reward-model staleness, with code + dataset open.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14302">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🪞 RePro — Retrospective Progress-Aware Self-Refinement for LLM Agent Training</div>
-              <div class="item-summary">RL-trained LLM agents optimize step-wise action prediction but lack metacognition about how far through the task they are. RePro decouples acting from assessing: agent executes online, then retrospectively reassesses step-wise progress given the completed trajectory + known outcome, training self-generated progress signals via composite reward (RePro-PO) without continuous external supervision. Up to +12% absolute success rate over outcome-only RL baselines on WebShop, ALFWorld, and Sokoban for the Qwen family. The cleanest metacognition recipe for long-horizon agent RL to date.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14470">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔀 GitOfThoughts — Version-Controlled Reasoning and Agent Memory You Can Replay, Diff, and Merge</div>
-              <div class="item-summary">Stores an agent's reasoning tree as a git repo — every scored thought is a commit, scores are notes, outcomes are tags, retrieval is `git log` over the agent's own history. Replayable, auditable, mergeable across agents for near-zero engineering cost. Then pre-registers a hard question: across 5 substrates (none, markdown, vector, graph, git), 2 benchmarks, 2 model scales, does memory help? Answer: no for novel problems; only above a copyability threshold (~0.85 similarity) where accuracy jumps sharply, and the gain is answer retrieval, not method transfer. A 4.5× larger model doubles the near-duplicate payoff but still can't extract a transferable method from a worked example. The only general lever is test-time sampling. The case for git-as-substrate is provenance + auditability at accuracy parity. Refuted hypothesis and retracted early result are explicitly documented.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14674">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧩 AgentSpec — Modular Specification Framework for Embodied Agent Scaffolds</div>
-              <div class="item-summary">LLM agents today are stitched-together scaffolds of reasoning, memory, reflection, action, and learning — but components are tightly coupled, so nobody can isolate what actually moves the needle. AgentSpec defines a modular typed-composition framework with standardized interfaces across perception, memory, reasoning, reflection, action, and optional learning. Instantiated on DeliveryBench, ALFRED, MiniGrid, and RoboTHOR, the headline finding is that performance is governed by scaffold compatibility and interaction effects — not isolated module strength. Structured multi-granularity memory helps long-horizon state tracking; reasoning × memory interact non-uniformly across envs; reflection trades off correction and cost; RL-trained policies compose best when optimized with the deployment-time scaffold in mind. Public playground + baselines.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14243">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧠 DMoE — Decoupled Mixture-of-Experts for Parametric Knowledge Injection</div>
-              <div class="item-summary">Knowledge injection is stuck between RAG (knowledge stays outside, prompt-level only) and post-training (knowledge burned into shared weights, with catastrophic forgetting and update cost). DMoE decouples both the experts and the router from the base model: external corpora become independently updatable expert modules, and a lightweight uncertainty-aware router only fires an expert when the base model is unsure. Experts are attached only to the final-layer FFN, which preserves KV-cache reuse and keeps auto-regressive inference efficient. On knowledge-intensive benchmarks DMoE consistently beats retrieval- and adapter-based baselines on answer quality. The architecture enterprise RAG has been waiting for — hot-swap domain experts without retraining, pay the cost only when the base model needs help.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
-<article class="card expanded" data-type="research" data-date="2026-06-16" data-time="04:05">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">⚡ Parallel-Synthesis agent KV-cache synthesis (TTFT 2.5-11×), 🎬 OmniVideo-100K audio-visual reasoning data (Qwen3-Omni +20%), 🌊 AdaSR streaming reasoning + HRPO, 🎭 Persona-Pruner role-play compression (ICML'26, 93.8% drop recovery), 🧩 CORA multimodal RLVR thinking-answer consistency (EMNLP'26)</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">04:05</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.14672">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">⚡ Parallel-Synthesis — Direct Latent-Space Synthesis for Parallel Branches in LLM-Agent Workflows</div>
-              <div class="item-summary">Replaces the standard "concatenate branch outputs into context" pattern with a fine-tuned synthesizer that consumes the KV-caches of N parallel agents directly via a learned cache mapper + adapter. Matches or beats text-concatenation synthesis on 7 of 9 downstream datasets (math, science QA, code, GAIA, multi-agent DB diagnosis) and cuts time-to-first-token by 2.5×–11×. The first "native cache interface" for multi-agent systems.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14702">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎬 OmniVideo-100K — Audio-Visual Reasoning via Structured Scripts + Evidence Chains</div>
-              <div class="item-summary">Nanjing U's new instruction-tuning corpus builds an Entity-Anchored Video Script (summary + global entity list + per-segment audio-visual descriptions), then mines cross-segment multimodal clues before generating clue-guided QA. Fine-tuning VITA-1.5, Qwen2.5-Omni-7B, and Qwen3-Omni-30B lands up to +20.59% on the human-verified OmniVideo-Test, with up to +12.64% transfer to Daily-Omni and JointAVBench. The first dataset that actually trains long-horizon audio-visual reasoning instead of clip-level recognition.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14694">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🌊 AdaSR — Adaptive Streaming Reasoning with Hierarchical Relative Policy Optimization</div>
-              <div class="item-summary">Breaks the "read-then-think" loop for streaming inputs (audio, video, live sensor feeds): AdaSR lets the model reason during the stream and finalize once input completes. HRPO decomposes the RLVR advantage into a streaming-reasoning phase and a deep-reasoning phase with format / accuracy / adaptive-thinking rewards. Better accuracy/efficiency/latency trade-off than the SFT streaming baseline, and HRPO is a drop-in upgrade for existing RLVR pipelines that want finer-grained advantage assignment across reasoning phases.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14695">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🎭 Persona-Pruner — Sculpting Lightweight Models for Role-Playing (ICML 2026)</div>
-              <div class="item-summary">KAIST isolates a persona-specific sub-network from a *single* persona description and trains a lightweight specialized model around it, instead of running a full generalist LLM per NPC. Preserves role-play quality with 93.8% less of the performance drop seen with the strongest prior LLM-pruning baseline on RoleBench (LLM-as-a-judge), while keeping general LLM capability intact. SOTA at ICML 2026 for persona-specialized compression — first recipe that meaningfully compresses LLM role-play without losing the character.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14691">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🧩 CORA — Bridging the Thinking-Answer Gap in Multimodal RLVR (EMNLP 2026 submission)</div>
-              <div class="item-summary">RLVR-trained multimodal reasoners frequently produce beautiful CoT traces that contradict the final answer — current methods only push for visual coverage, not internal consistency. CORA adds a lightweight plug-and-play consistency reward (does the trace actually entail the answer?) and Hybrid Reward Advantage Splitting (HRAS) to keep task and consistency optimization stable. Lifts task performance across representative multimodal reasoning benchmarks while producing materially more faithful reasoning traces. Near-drop-in reward-model addition for any multimodal GRPO/RLOO pipeline.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
 
-        <article class="card expanded" data-type="research" data-date="2026-06-16" data-time="00:05">
-          <div class="card-header" onclick="toggle(this)">
-            <div class="card-left">
-              <div class="card-icon research">📚</div>
-              <div>
-                <div class="card-title">Research Highlights</div>
-                <div class="card-meta">👁️ Gaze Heads VLM mechanistic interpretability (Bau lab, 83.1% redirect), 🐀 RATS emergent visual parts (Yuille, +12 mIoU), 🔁 RepFusion MLLM-as-denoiser (Saining Xie), 🏆 HPSv3++ diffusion reward scaling, 🪢 Recursive Agent Harnesses 4M-token (Sonnet 4.5 89.77%)</div>
-              </div>
-            </div>
-            <div style="display: flex; align-items: center; gap: 12px;">
-              <span class="card-time">00:05</span>
-              <span class="card-badge">5 papers</span>
-              <span class="card-expand">↓</span>
-            </div>
-          </div>
-          <div class="card-content">
-            <a class="item" href="https://arxiv.org/abs/2606.14703">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">👁️ Gaze Heads — How VLMs Look at What They Describe (Bau lab)</div>
-              <div class="item-summary">A small set of attention heads inside VLM language-model backbones — "gaze heads" — track the image region currently being described. Redirecting the top-100 of these heads (fewer than 9% of all heads) forces the VLM to describe any chosen comic panel at 83.1% accuracy, and steers COCO region targeting mid-generation. The mechanism is consistent from 2B to 32B parameters across multiple VLM families. A training-free, mechanistic-interpretability-driven lever for controllable multimodal generation.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14701">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🐀 RATS! Patches Talk Through Registers — Emergent Parts (Johns Hopkins, Yuille)</div>
-              <div class="item-summary">Replaces the single classification token with N learnable register tokens routing patch information through an L→N→N→L bottleneck. Without any part annotations or auxiliary losses, each register specializes into a proto-semantic region that behaves like an object part. Beats all baselines by +12 mIoU on average across five segmentation benchmarks (+1.11 mIoU on ADE20K, +0.2 AP^m on COCO). A clean architectural prior for part-aware self-supervised vision.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14700">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🔁 RepFusion — MLLM Priors for Denoising in Representation Space (Saining Xie)</div>
-              <div class="item-summary">Stops training diffusion transformers from scratch and instead repurposes a multimodal LLM (MLLM) as a noisy representation encoder, feeding those evolving representations straight into a DiT. Beats baselines that spend the same capacity on freshly initialized denoisers, and gives you a productive knob for test-time scaling on T2I by re-asking the MLLM at denoising steps. Pairs naturally with RAE-style latents.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.14657">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🏆 HPSv3++ — Reward Models Across the Full Diffusion Capability Spectrum</div>
-              <div class="item-summary">A 212K dual-dimension preference dataset (text fidelity + aesthetics, annotated with Qwen-Image + humans) plus a two-stage training recipe — data-aware orthogonal gradient projection to merge new aesthetic signal, then capability-iteration-conditioned scoring with std-driven unsupervised guidance. Beats HPSv3 by 9.8% on HPDv3 and 5.5% on GenAI-Bench, and consistently improves GenEval across diverse T2I backbones when used for RL fine-tuning. A concrete fix for reward-model staleness.</div>
-              <span class="item-arrow">→</span>
-            </a>
-            <a class="item" href="https://arxiv.org/abs/2606.13643">
-              <span class="item-tag research">Paper</span>
-              <div class="item-title">🪢 Recursive Agent Harnesses — 4M-Token Context, Sonnet 4.5 Hits 89.77%</div>
-              <div class="item-summary">Generalizes "recursive language models" (recursion over bare model calls) into recursion over full agent harnesses with filesystem tools, code execution, and planning. A parent agent writes and runs a script that spawns sub-agent harnesses in parallel and uses structured function calls for small subtasks. With GPT-5 backbone, lifts the Codex coding-agent baseline from 71.75% to 81.36% on Oolong-Synthetic (199 samples, up to 4M tokens); Claude Sonnet 4.5 reaches 89.77%. Codifies the pattern Anthropic's dynamic workflows already deploy, with hard numbers.</div>
-              <span class="item-arrow">→</span>
-            </a>
-          </div>
-        </article>
 
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
@@ -1747,6 +482,85 @@
             </a>
           </div>
         </article>
+        <article class="card expanded" data-type="industry" data-date="2026-08-26" data-time="23:33">
+          <div class="card-header" onclick="toggle(this)">
+            <div class="card-left">
+              <div class="card-icon industry">🏢</div>
+              <div>
+                <div class="card-title">Industry Brief: Consumer &amp; E-commerce</div>
+                <div class="card-meta">🇯🇵 KKR buys out L Catterton to take full control of Japan's Ci FLAVORS (&amp;honey, 8 THE THALASSO), 🇮🇳 Pernia's Pop-Up Shop parent Purple Style Labs sets ₹546-575 price band for ₹680 Cr IPO (opens Aug 31), 🇮🇳 Flipkart Minutes overtakes Swiggy Instamart in dark-store count across India's top 10 cities (CLSA — 627 vs 615), 🇮🇳 Honasa Consumer (Mamaearth) calls off ₹135 Cr Fluence Pharma acquisition, 🇨🇳 Pinduoduo Q2 revenue +8% to RMB 112.4B, net income -12% to RMB 27.2B; R&amp;D spend +40%, new Xiongan hub reaches 4,000 FTEs</div>
+              </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <span class="card-time">23:33</span>
+              <span class="card-badge">10 items</span>
+              <span class="card-expand">↓</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <a class="item" href="detail.html?id=industry-20260826-2333-kkr-ci-flavors">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🇯🇵 KKR Buys Out L Catterton to Take Full Control of Japan's Ci FLAVORS (&amp;honey, 8 THE THALASSO, unlabel)</div>
+              <div class="item-summary">KKR signed a definitive agreement Aug 26 to acquire 100% of Japanese beauty/lifestyle brand platform Ci FLAVORS from all existing shareholders — founder Yusaku Horiuchi, L Catterton (LVMH's consumer PE arm, which invested in 2022), eBeauty Group, and Yanagi Capital Partners. Horiuchi and CEO Yoshiaki Okura reinvest alongside KKR via its APAC flagship PE strategy. Terms undisclosed. Founded 2011, Ci FLAVORS operates &amp;honey, 8 THE THALASSO, unlabel, THERATIS, MOROCCAN BEAUTY across haircare/skincare/body care/lifestyle, with a leadership position in Japan's shampoo/hair-treatment category and growing overseas sales across Asia and North America.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260826-2333-pernia-ipo-price-band">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🇮🇳 Pernia's Pop-Up Shop Parent Purple Style Labs Sets ₹546-575 Price Band for ₹680 Cr IPO — Opens Aug 31</div>
+              <div class="item-summary">Purple Style Labs (PSL), operator of Pernia's Pop-Up Shop, fixed IPO price band at ₹546-575 per share for a ₹680 crore (~$80M) fresh-issue-only offering. Implied market cap at upper end: ₹4,604 crore. Subscription: Aug 31 – Sep 2, anchor bidding Aug 28. PSL will deploy ₹371.13 crore into wholly-owned subsidiary PSL Retail (lease liabilities on Experience Centers and back offices), ₹138.9 crore into sales/marketing. 1,109 active designer brands as of FY26, 14 Experience Centers (12 India + London + New York); celebrity backers include Shah Rukh Khan, Salman Khan, Sachin Tendulkar, Madhuri Dixit. Axis Capital and IIFL Capital are BRLMs.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260826-2333-flipkart-minutes-overtakes-instamart">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🇮🇳 Flipkart Minutes Overtakes Swiggy Instamart in Dark-Store Count Across India's Top 10 Cities — CLSA Sees Eternal +53.5% Upside</div>
+              <div class="item-summary">CLSA mapping (Aug 26) of quick-commerce dark-store footprints across India's top 10 cities shows Flipkart Minutes at 627 stores vs Swiggy Instamart's 615 — the first time Minutes (2-year-old) has overtaken Instamart (4-year head start). Blinkit leads with 969, followed by Zepto (828), Flipkart Minutes (627), Instamart (615), BigBasket (497); 3,536 total. Minutes also leads Instamart on pincode coverage and grew Tier-III city presence 42x over the past year (now in Ara, Muzaffarpur). Quick commerce now reaches 477 cities. CLSA set ₹506 target on Eternal (Blinkit parent) — 53.5% upside — vs ₹312 on Swiggy (8.7% upside).</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260826-2333-honasa-fluence-called-off">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🇮🇳 Honasa Consumer (Mamaearth) Calls Off ₹135 Cr Fluence Pharma Acquisition — Closing Conditions Not Met, Nutraceuticals Strategy Intact</div>
+              <div class="item-summary">Mamaearth parent Honasa Consumer filed Aug 25 calling off its June 23 agreement to acquire 58% of Mumbai-based nutraceuticals brand Fluence Pharma at an enterprise value of ₹135 crore. Reason: "non-fulfilment of closing conditions specified under share purchase agreement." Honasa did not disclose which conditions. The remaining 42% purchase (in two tranches over 5–7 years) is also scrapped. Honasa reaffirmed its ₹500 Cr nutraceuticals ambition via wholly-owned subsidiary Honasa Health, will continue evaluating organic and inorganic options. Stock dipped ~1.8% on the announcement; Q1 FY27 revenue +27% YoY to ₹755.9 Cr, PAT +2x to ₹90.4 Cr.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260826-2333-pinduoduo-q2">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🇨🇳 Pinduoduo Q2 Revenue +8% to RMB 112.4B, Net Income -12% to RMB 27.2B — R&amp;D Spend +40%, New Xiongan Hub Reaches 4,000 FTEs</div>
+              <div class="item-summary">Pinduoduo reported Aug 24 Q2 2026: revenue RMB 112.4B (+8% YoY), net income RMB 27.2B (-12% YoY), Non-GAAP net income RMB 28.5B (-13% YoY), operating income +8% to RMB 27.8B. Non-GAAP R&amp;D spend +40% YoY to RMB 4.3B, dragged by investment in platform governance and the "Trillion-Yuan Support" merchant-enablement program. New Xiongan subsidiary — office building, "Traditional Industry Data Processing Service Center" and "Traditional Manufacturing High-Quality Development Service Center" — now at 4,000 full-time employees. Co-CEO Chen Lei framed Q2 as "special intersection of global trade," emphasizing compliance and supply-chain investment.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260825-2304-bytedance-doubao-work">
+              <span class="item-tag product">Product</span>
+              <div class="item-title">🤖 ByteDance Launches "Doubao Work" AI Office Agent — Goes Head-to-Head with Tencent WorkBuddy &amp; Alibaba Qianwen Office</div>
+              <div class="item-summary">On Aug 25, ByteDance officially released Doubao Work (豆包工作), a productivity-focused AI Agent deeply integrated with Feishu (Lark) covering document, spreadsheet, PPT, image, video and web generation/editing with full enterprise permission inheritance. One of the first office agents in China to pass both the Office Agent Capability and Cloud Baseline certifications; free 30-day subscription on launch. Tencent WorkBuddy (20.97M MAU in June) leads on traffic, Alibaba Qianwen Office plays B2B, ByteDance folds TRAE + Coze teams into Doubao.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260825-2304-google-verizon">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">🌐 Google Cloud &amp; Verizon Announce Full-Stack Enterprise AI Partnership — Gemini Enterprise for "Self-Driving Network"</div>
+              <div class="item-summary">Aug 24: Google Cloud and Verizon signed a multi-year strategic partnership to deploy Google's full-stack AI across customer experience, enterprise data unification, and company-wide agent rollout. Verizon will use Gemini Enterprise for agent orchestration and build a self-driving network intelligence framework to predict and resolve network anomalies, boost employee productivity, and improve customer service. Google says its customer service platform already handles the majority of Verizon's monthly inbound calls and chats.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260825-2304-rillet-unicorn">
+              <span class="item-tag ma">Funding</span>
+              <div class="item-title">💰 Rillet Crosses $1B "Unicorn" Mark with $100M Series C — 48-Hour Round Closed by ICONIQ, Sequoia, a16z</div>
+              <div class="item-summary">AI-native ERP startup Rillet announced a $100M Series C at $1B valuation led by ICONIQ with Sequoia and a16z participating — third round in 14 months, total funding past $200M. The round was unsolicited by Rillet (initiated by investors after a board update showing Q2 ARR doubling) and closed in 48 hours. Customer base passed 600 organizations, all of whom fully replaced their legacy ERP. 50% came from Intuit, 30% from NetSuite/Sage Intacct, 20% from Oracle/SAP/Workday/Microsoft.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260825-2304-zhongshu-ruizhi-national-round">
+              <span class="item-tag policy">Policy</span>
+              <div class="item-title">🇨🇳 "China's Palantir" Zhongshu Ruizhi (中数睿智) Closes Multi-100M RMB Strategic Round — National Team Capital Goes All In</div>
+              <div class="item-summary">Aug 24: Industrial-grade decision-AI platform Zhongshu Ruizhi closed a multi-hundred-million RMB strategic round from a "national team" syndicate — China Internet Investment Fund (中网投), National Social Security Fund (社保基金), Suchuangtou, Financial Street Capital, ICBC Capital, and Kunlun Capital — just three months after its Series B. Company claims a "trinity closed loop" causal-AI architecture serving 50+ central SOEs across 800+ production scenarios; two consecutive years of revenue doubling and profitability.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            <a class="item" href="detail.html?id=industry-20260825-2304-alibaba-80b-placement">
+              <span class="item-tag ma">M&amp;A</span>
+              <div class="item-title">💵 Alibaba Closes HK$80B Top-Up Placement — 100% to Full-Stack AI; Jack Ma Personally Adds HK$800M+ in Show of Confidence</div>
+              <div class="item-summary">Aug 24: Alibaba completed its first equity placement since 2019 HK listing — 710M new shares at HK$112.70, raising net HK$79.7B (largest follow-on in HKEX history), 100% earmarked for full-stack AI capability and infrastructure. Alibaba Cloud Q1 FY2027 revenue +45% YoY, AI revenue has posted triple-digit growth for 12 consecutive quarters, capex up 75% to RMB 67.68B. Stock dropped ~9% on dilution; short interest hit record HK$14.2B; Jack Ma, Joe Tsai, Eddie Wu together bought HK$800M+ to signal confidence.</div>
+              <span class="item-arrow">→</span>
+            </a>
+            </div>
+        </article>
+
         <article class="card expanded" data-type="industry" data-date="2026-06-15" data-time="18:03">
           <div class="card-header" onclick="toggle(this)">
             <div class="card-left">
@@ -2189,7 +1003,7 @@
         </article>
 
         <!-- Industry - 2026-04-12 Education & EdTech (Sunday) -->
-        
+
 
 
         <article class="card expanded" data-type="global" data-date="2026-06-13" data-time="06:16">
@@ -2784,6 +1598,6 @@
           </div>
         </article>
 
-        
+
 
 

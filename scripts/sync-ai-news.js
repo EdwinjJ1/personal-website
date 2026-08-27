@@ -253,7 +253,7 @@ function createItem({ category, date, time, title, summary, tag, source, sourceU
 
 function extractBlocks(content, className) {
   const pattern = new RegExp(
-    `<div class="${className}">([\\s\\S]*?)</div>\\s*(?=<div class="${className}">|</div>\\s*</article>|</div>\\s*</body>)`,
+    `<div class="${className}">([\\s\\S]*?)</div>(?=\\s*(?:<div class="${className}">|</article>|</body>))`,
     'gi'
   );
   return [...content.matchAll(pattern)].map((match) => match[1]);
