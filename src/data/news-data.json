@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-08-26T13:59:00.000Z",
+  "lastUpdated": "2026-08-27T13:59:00.000Z",
   "availableDates": [
+    {
+      "value": "2026-08-27",
+      "label": "August 27, 2026"
+    },
     {
       "value": "2026-08-26",
       "label": "August 26, 2026"
@@ -507,6 +511,116 @@
     }
   ],
   "news": [
+    {
+      "id": "industry-20260827-2333-flipkart-minutes-overtakes-swiggy-instamart-in-dark-store-count-",
+      "title": "Flipkart Minutes Overtakes Swiggy Instamart in Dark-Store Count Across India's Top 10 Cities — CLSA Sees Eternal +53.5% Upside",
+      "summary": "A CLSA mapping (released Aug 26) of quick-commerce dark-store footprints across India's top 10 cities shows Flipkart Minutes at 627 stores vs Swiggy Instamart's 615 — the first time Minutes (which entered the segment only 2 years ago) has overtaken Instamart (4-year head start). Blinkit still leads with 969, followed by Zepto (828), Flipkart Minutes (627), Instamart (615), BigBasket (497); 3,536 stores total across the top-10. Minutes also leads Instamart on pincode coverage. Minutes grew Tier-III city presence 42x over the past year (now in Ara, Muzaffarpur). Bengaluru (735) and Delhi (531) remain the largest markets; quick commerce now reaches 477 cities. CLSA set ₹506 target on Eternal (Blinkit parent) — 53.5% upside — vs ₹312 on Swiggy (8.7% upside).",
+      "tag": "PRODUCT",
+      "source": "Moneycontrol",
+      "sourceUrl": "https://www.moneycontrol.com/news/business/companies/blinkit-leads-flipkart-minutes-overtakes-swiggy-instamart-in-dark-stores-across-top-cities-clsa-14015717.html",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260827-2333-honasa-consumer-mamaearth-calls-off-135-cr-fluence-pharma-acquis",
+      "title": "Honasa Consumer (Mamaearth) Calls Off ₹135 Cr Fluence Pharma Acquisition — Closing Conditions Not Met, Nutraceuticals Strategy Intact",
+      "summary": "Mamaearth parent Honasa Consumer filed with stock exchanges on Aug 25 calling off its June 23 agreement to acquire 58% of Mumbai-based nutraceuticals brand Fluence Pharma at an enterprise value of ₹135 crore. Reason cited: \"non-fulfilment of closing conditions specified under share purchase agreement.\" Honasa did not disclose which specific conditions weren't met (likely due-diligence or representations). The remaining 42% purchase (in two tranches over 5–7 years) is also scrapped. Honasa reaffirmed its ₹500 Cr nutraceuticals ambition via wholly-owned subsidiary Honasa Health, and will continue to evaluate organic and inorganic options. Honasa's stock dipped ~1.8% on the announcement; underlying Q1 FY27 numbers remained strong (revenue +27% YoY to ₹755.9 Cr, PAT +2x to ₹90.4 Cr).",
+      "tag": "PRODUCT",
+      "source": "Economictimes.Indiatimes",
+      "sourceUrl": "https://economictimes.indiatimes.com/tech/technology/honasa-consumer-calls-off-fluence-pharma-acquisition/articleshow/133517336.cms",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260827-2333-kkr-buys-out-l-catterton-to-take-full-control-of-japan-s-ci-flav",
+      "title": "KKR Buys Out L Catterton to Take Full Control of Japan's Ci FLAVORS (&honey, 8 THE THALASSO, unlabel)",
+      "summary": "KKR signed a definitive agreement (announced Aug 26) to acquire 100% of Japanese beauty and lifestyle brand platform Ci FLAVORS Co. from all existing shareholders — founder Yusaku Horiuchi, L Catterton (LVMH's consumer PE arm, which invested in 2022), eBeauty Group, and Yanagi Capital Partners. Horiuchi and CEO Yoshiaki Okura will reinvest alongside KKR through its flagship Asia-Pacific PE strategy. Terms undisclosed. Founded in 2011, Ci FLAVORS operates &honey, 8 THE THALASSO, unlabel, THERATIS, MOROCCAN BEAUTY across haircare, skincare, body care and lifestyle, with a leadership position in Japan's shampoo/hair-treatment category and growing overseas sales across Asia and North America.",
+      "tag": "PRODUCT",
+      "source": "Dealstreetasia",
+      "sourceUrl": "https://www.dealstreetasia.com/stories/kkr-to-acquire-japanese-beauty-platform-ci-flavors-493124",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260827-2333-pernia-s-pop-up-shop-parent-purple-style-labs-sets-inr-546-575-p",
+      "title": "Pernia's Pop-Up Shop Parent Purple Style Labs Sets INR 546-575 Price Band for ₹680 Cr IPO — Opens Aug 31",
+      "summary": "Purple Style Labs (PSL), operator of Pernia's Pop-Up Shop, fixed its IPO price band at INR 546-575 per share for a ₹680 crore (~$80M) fresh-issue-only offering. Implied market cap at the upper end: ₹4,604 crore. Subscription window: Aug 31 – Sep 2, with anchor bidding Aug 28. PSL will deploy ₹371.13 crore into wholly-owned subsidiary PSL Retail to cover lease liabilities on Experience Centers and back offices, ₹138.9 crore into sales/marketing, and the rest for general corporate purposes. PSL carries 1,109 active designer brands as of FY26, 14 Experience Centers (12 in India + London + New York), and is backed by celebrities Shah Rukh Khan, Salman Khan, Sachin Tendulkar, and Madhuri Dixit. Backers include Akash Bhanshali, Madhusudan Kela, and Mukul Mahavir Agrawal. Axis Capital and IIFL Capital are BRLMs.",
+      "tag": "PRODUCT",
+      "source": "Thehindu",
+      "sourceUrl": "https://www.thehindu.com/business/Industry/luxury-apparel-store-pernia-to-raise-680-crore-through-ipo/article71392741.ece",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
+    },
+    {
+      "id": "industry-20260827-2333-pinduoduo-q2-revenue-8-to-rmb-112-4b-net-income-12-to-rmb-27-2b-",
+      "title": "Pinduoduo Q2 Revenue +8% to RMB 112.4B, Net Income -12% to RMB 27.2B — R&D Spend +40%, New Xiongan Hub Reaches 4,000 FTEs",
+      "summary": "Pinduoduo reported Aug 24 Q2 2026 results: revenue RMB 112.4B (+8% YoY), net income RMB 27.2B (-12% YoY), Non-GAAP net income RMB 28.5B (-13% YoY), operating income +8% to RMB 27.8B. Non-GAAP R&D spend jumped 40% YoY to RMB 4.3B, dragged by investment in platform governance and the \"Trillion-Yuan Support\" merchant-enablement program. The company also disclosed a new Xiongan New Area subsidiary — purchased an office building, established a \"Traditional Industry Data Processing Service Center\" and a \"Traditional Manufacturing High-Quality Development Service Center\" — now at 4,000 full-time employees. Co-CEO Chen Lei framed Q2 as \"special intersection of global trade,\" emphasizing continued investment in compliance, supply-chain upgrades, and merchant support.",
+      "tag": "PRODUCT",
+      "source": "Cnstock",
+      "sourceUrl": "https://www.cnstock.com/commonDetail/769072",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
+    },
+    {
+      "id": "research-20260827-0000-asymspec-context-asymmetric-speculative-decoding-for-agentic-llm",
+      "title": "AsymSpec: Context-Asymmetric Speculative Decoding for Agentic LLMs",
+      "summary": "Agentic pipelines blow up on context, so deployments compress inputs — but compression kills accuracy. Standard speculative decoding requires the drafter and verifier to share context, so it can't fix the accuracy/overhead trade-off. AsymSpec breaks the symmetry: a small drafter reads the full context while the big verifier sees the compressed view, fused via contrastive δ-logits with a divergence-aware acceptance gate.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.26004",
+      "date": "2026-08-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260827-0000-prefix-sliding-for-efficient-test-time-scaling",
+      "title": "Prefix Sliding for Efficient Test-Time Scaling",
+      "summary": "Reasoning LLMs keep the entire chain-of-thought in context via full attention, which gets prohibitively expensive on hard problems that need long thinking. The authors observe that most intermediate reasoning tokens lose importance as the model continues, and propose Prefix Sliding : drop tokens that aren't part of the prefix (instructions, tools) or the recent sliding window. The prefix is preserved because it contains the task spec; the window is preserved because recent steps still matter.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.26070",
+      "date": "2026-08-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260827-0000-r-training-robots-to-reason-in-natural-language-via-reinforcemen",
+      "title": "R³: Training Robots to Reason in Natural Language via Reinforcement Learning",
+      "summary": "Can a VLM be trained to reason in natural language about long-horizon manipulation? R³ is a two-stage recipe: mid-train a VLM on expert reasoning traces to set the reasoning style, then single-step rubric-based RL from offline action data to refine it. The reasoner outputs free-form language that steers a low-level policy at test time, instead of using structured traces as auxiliary loss.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.26053",
+      "date": "2026-08-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260827-0000-tailsft-filtered-fine-tuning-improves-post-training-performance",
+      "title": "TailSFT: Filtered Fine-Tuning Improves Post-Training Performance",
+      "summary": "Post-RL pipelines are bottlenecked by SFT coverage: RL fine-tunes a base model, so the base must already model the tail of the data distribution. TailSFT filters out the easy sequences during SFT and trains only on the under-modeled tail, with both a theoretical and empirical justification of the filtering rule. On OLMo-3 7B it lifts pass@16 on math/coding by up to 17% absolute, and the resulting checkpoints give up to 4% absolute pass@1 gains in subsequent GRPO.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.25756",
+      "date": "2026-08-27",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260827-0000-vbvr-pro-a-scalable-and-verifiable-suite-for-native-visual-reaso",
+      "title": "VBVR-Pro: A Scalable and Verifiable Suite for Native Visual Reasoning",
+      "summary": "\"Native visual reasoning\" treats image/video generation as the medium of thought, not just the output. VBVR-Pro is a closed-loop testbed that makes this trainable, verifiable, optimizable, and experimentally controllable at scale: task scaling, reliable feedback, and head-to-head substrate comparisons all in one suite. 52 authors spanning CUHK, Oxford (Torr, Khashabi, Müller), Princeton (Kriegeskorte, Millière, Yuille) and others.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2608.26105",
+      "date": "2026-08-27",
+      "time": "00:00",
+      "category": "research"
+    },
     {
       "id": "research-20260826-0000-browserforge-scaling-web-episode-via-parallel-browser-sandboxes",
       "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
