@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-08-26",
-  "latestLabel": "August 26, 2026",
+  "latestDate": "2026-08-27",
+  "latestLabel": "August 27, 2026",
   "items": [
     {
-      "id": "research-20260826-0000-browserforge-scaling-web-episode-via-parallel-browser-sandboxes",
-      "title": "BrowserForge: Scaling Web Episode via Parallel Browser Sandboxes",
-      "tag": "RESEARCH",
-      "date": "2026-08-26",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260827-2333-flipkart-minutes-overtakes-swiggy-instamart-in-dark-store-count-",
+      "title": "Flipkart Minutes Overtakes Swiggy Instamart in Dark-Store Count Across India's Top 10 Cities — CLSA Sees Eternal +53.5% Upside",
+      "tag": "PRODUCT",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
     },
     {
-      "id": "research-20260826-0000-do-robotic-world-models-really-follow-actions-diagnosing-and-ali",
-      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
-      "tag": "RESEARCH",
-      "date": "2026-08-26",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260827-2333-honasa-consumer-mamaearth-calls-off-135-cr-fluence-pharma-acquis",
+      "title": "Honasa Consumer (Mamaearth) Calls Off ₹135 Cr Fluence Pharma Acquisition — Closing Conditions Not Met, Nutraceuticals Strategy Intact",
+      "tag": "PRODUCT",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
     },
     {
-      "id": "research-20260826-0000-effective-learning-rate-governs-loss-dynamics-in-language-model-",
-      "title": "Effective Learning Rate Governs Loss Dynamics in Language Model Pretraining",
-      "tag": "RESEARCH",
-      "date": "2026-08-26",
-      "time": "00:00",
-      "category": "research"
+      "id": "industry-20260827-2333-kkr-buys-out-l-catterton-to-take-full-control-of-japan-s-ci-flav",
+      "title": "KKR Buys Out L Catterton to Take Full Control of Japan's Ci FLAVORS (&honey, 8 THE THALASSO, unlabel)",
+      "tag": "PRODUCT",
+      "date": "2026-08-27",
+      "time": "23:33",
+      "category": "industry"
     }
   ]
 } as const;
