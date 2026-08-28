@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-27T13:59:00.000Z",
+  "lastUpdated": "2026-08-27T16:06:35.567Z",
   "availableDates": [
     {
       "value": "2026-08-27",
@@ -4060,6 +4060,17 @@
       "tag": "RESEARCH",
       "source": "arXiv",
       "sourceUrl": "https://arxiv.org/abs/2606.26071",
+      "date": "2026-06-25",
+      "time": "04:07",
+      "category": "research"
+    },
+    {
+      "id": "research-20260625-0407-natural-ungrokking-asymmetric-control-of-which-rules-survive-pre",
+      "title": "Natural Ungrokking: Asymmetric Control of Which Rules Survive Pretraining",
+      "summary": "Identifies \"natural ungrokking\": the phenomenon where models that originally grokked certain algorithmic rules lose them over continued pretraining, but the loss is rule-selective. Some rules survive far longer than others, and the asymmetry is predictable from rule complexity and frequency in the training distribution.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2606.26050",
       "date": "2026-06-25",
       "time": "04:07",
       "category": "research"
@@ -16583,6 +16594,17 @@
       "category": "industry"
     },
     {
+      "id": "industry-20260412-0600-uk-parliament-launches-inquiry-into-ai-s-role-in-education",
+      "title": "UK Parliament Launches Inquiry into AI's Role in Education",
+      "summary": "UK MPs launched a formal inquiry examining AI and EdTech's role across the British education system. The investigation will assess how AI tools are being adopted in schools and universities, their impact on learning outcomes, data privacy implications, and what regulatory frameworks are needed.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-12",
+      "time": "06:00",
+      "category": "industry"
+    },
+    {
       "id": "research-20260412-0400-benchmarking-ai-models-on-real-world-prediction-markets",
       "title": "Benchmarking AI Models on Real-World Prediction Markets",
       "summary": "Prediction Arena is the first benchmark that pits frontier AI models against real prediction markets (Kalshi, Polymarket) with actual capital. Six frontier models traded autonomously for 57 days starting with $10K each. The results are humbling: most models lost money on Kalshi (-16% to -30.8%), but there's a striking cross-platform contrast — the same models averaged only -1.1% on Polymarket, with grok-4 achieving a 71.4% settlement win rate and Gemini 3.1 Pro netting +6.02% in just 3 days.",
@@ -19256,6 +19278,17 @@
       "category": "ai"
     },
     {
+      "id": "global-20260405-0000-artemis-ii-crew-now-halfway-to-moon",
+      "title": "Artemis II crew now halfway to Moon",
+      "summary": "Commander Reid Wiseman captured spectacular Earth image from Orion capsule. Crew is halfway through their journey to the Moon. First crewed lunar flyby since Apollo program.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-05",
+      "time": "00:00",
+      "category": "global"
+    },
+    {
       "id": "global-20260405-0000-iran-says-strike-near-nuclear-plant-kills-one-search-for-us-airm",
       "title": "Iran says strike near nuclear plant kills one; search for US airman continues",
       "summary": "Iran reports one death from a strike near its nuclear facility. Two US warplanes shot at in the region — one pilot rescued, second crew member (WSO) still missing. Iran denies arrest but governor claims US \"rescue\" narrative is \"enemy disinformation.\" Armed Iranian civilians still hunting with £50K bounty.",
@@ -19304,6 +19337,17 @@
       "title": "Europe debates nuclear power revival amid war-driven energy shock",
       "summary": "With Iran war driving gas and fuel prices higher, European nations are seriously reconsidering nuclear energy as path to independence. Multiple countries assessing reactor restarts and new builds.",
       "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-04",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "global-20260404-1600-hungary-election-in-9-days-can-orb-n-finally-be-unseated",
+      "title": "Hungary election in 9 days: Can Orbán finally be unseated?",
+      "summary": "After 16 years in power, Viktor Orbán faces a competitive election. Outcome could reshape EU tech regulation — Orbán has been a key blocker of EU AI Act enforcement and Big Tech regulation.",
+      "tag": "POLICY",
       "source": "Source",
       "sourceUrl": "",
       "date": "2026-04-04",
@@ -19364,6 +19408,17 @@
       "date": "2026-04-04",
       "time": "08:01",
       "category": "ai"
+    },
+    {
+      "id": "global-20260404-0800-artemis-ii-crew-captures-spectacular-earth-image-en-route-to-moo",
+      "title": "Artemis II crew captures \"spectacular\" Earth image en route to Moon",
+      "summary": "NASA's Artemis II mission continues successfully. Commander Reid Wiseman photographed Earth from the Orion capsule as the crew heads toward the Moon. First crewed lunar flyby since Apollo.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-04",
+      "time": "08:00",
+      "category": "global"
     },
     {
       "id": "global-20260404-0800-iran-war-trump-threatens-back-to-stone-ages-in-2-3-weeks",
@@ -19443,6 +19498,17 @@
       "category": "industry"
     },
     {
+      "id": "industry-20260404-0601-marathon-solo-players-forming-gangs-disrupting-team-meta",
+      "title": "Marathon: solo players forming gangs, disrupting team meta",
+      "summary": "In Bungie's extraction shooter Marathon, solo players are organizing into impromptu squads, challenging the intended team-based gameplay loop. The emergent behavior is reshaping community expectations.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-04-04",
+      "time": "06:01",
+      "category": "industry"
+    },
+    {
       "id": "industry-20260404-0601-playstation-acquires-cinemersive-labs-ml-computer-vision",
       "title": "PlayStation acquires Cinemersive Labs (ML/Computer Vision)",
       "summary": "Sony Interactive Entertainment acquired Cinemersive Labs, a machine learning and computer vision company. The team joins SIE's Visual Computing Group to advance state-of-the-art visual computing within games.",
@@ -19482,6 +19548,17 @@
       "tag": "RESEARCH",
       "source": "arXiv",
       "sourceUrl": "https://arxiv.org/abs/2604.01438",
+      "date": "2026-04-04",
+      "time": "04:05",
+      "category": "research"
+    },
+    {
+      "id": "research-20260404-0405-crashing-waves-vs-rising-tides-ai-automation-from-thousands-of-w",
+      "title": "Crashing Waves vs. Rising Tides: AI Automation from Thousands of Worker Evaluations",
+      "summary": "Study of 17,000+ evaluations across 3,000+ O*NET tasks. Finds little evidence of \"crashing waves\" (abrupt AI capability surges) but strong evidence of \"rising tides\" (continuous broad-based improvement). Estimates LLMs will handle most text tasks at 80-95% success by 2029.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2604.01363",
       "date": "2026-04-04",
       "time": "04:05",
       "category": "research"
@@ -28263,6 +28340,17 @@
       "date": "2026-03-18",
       "time": "08:00",
       "category": "global"
+    },
+    {
+      "id": "research-20260318-0405-can-llms-model-incorrect-student-reasoning-a-case-study-on-distr",
+      "title": "Can LLMs Model Incorrect Student Reasoning? A Case Study on Distractor Generation",
+      "summary": "Examines how LLMs reason about misconceptions when generating multiple-choice distractors, requiring modeling incorrect yet plausible answers by coordinating solution knowledge, simulating student misconceptions, and evaluating plausibility.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2603.15547",
+      "date": "2026-03-18",
+      "time": "04:05",
+      "category": "research"
     },
     {
       "id": "research-20260318-0405-democratizing-frontier-search-agents-by-fully-open-sourcing-trai",
@@ -38066,6 +38154,17 @@
       "category": "global"
     },
     {
+      "id": "global-20260224-1600-blizzard-blankets-nyc-thousands-of-flights-cancelled",
+      "title": "Blizzard blankets NYC, thousands of flights cancelled",
+      "summary": "Major winter storm hits US East Coast, disrupting travel and logistics. Thousands of flights cancelled.",
+      "tag": "BREAKING",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-02-24",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
       "id": "global-20260224-1600-ex-british-minister-mandelson-released-on-bail-in-epstein-probe",
       "title": "Ex-British minister Mandelson released on bail in Epstein probe",
       "summary": "Lord Peter Mandelson was arrested and released on bail amid the Epstein leaks probe. Prince Andrew remains in the spotlight as the royal family navigates the crisis.",
@@ -38803,6 +38902,17 @@
       "category": "industry"
     },
     {
+      "id": "industry-20260220-0000-market-energy-markets-and-commodity-price-volatility",
+      "title": "MARKET Energy Markets and Commodity Price Volatility",
+      "summary": "Global energy markets continue to experience volatility driven by geopolitical tensions, supply chain disruptions, and shifting demand patterns. Traditional energy sources face competition from renewables, while extreme weather events strain infrastructure resilience.",
+      "tag": "PRODUCT",
+      "source": "Source",
+      "sourceUrl": "",
+      "date": "2026-02-20",
+      "time": "00:00",
+      "category": "industry"
+    },
+    {
       "id": "industry-20260220-0000-policy-energy-transition-policy-and-regulatory-landscape",
       "title": "POLICY Energy Transition Policy and Regulatory Landscape",
       "summary": "Governments worldwide continue to implement policies supporting renewable energy adoption, carbon pricing mechanisms, and energy efficiency standards. The regulatory environment increasingly influences investment decisions across traditional and renewable energy sectors.",
@@ -39260,6 +39370,17 @@
       "tag": "RESEARCH",
       "source": "arXiv",
       "sourceUrl": "https://arxiv.org/abs/2602.08990",
+      "date": "2026-02-11",
+      "time": "00:00",
+      "category": "research"
+    },
+    {
+      "id": "research-20260211-0000-scaling-laws-for-neural-compressors-data-driven-learning-for-eff",
+      "title": "Scaling Laws for Neural Compressors: Data-Driven Learning for Efficient Inference",
+      "summary": "Investigates scaling laws for neural compression techniques that enable more efficient LLM inference. The study examines how model size, training data, and compression parameters interact to produce optimal trade-offs between compression rate, inference speed, and model accuracy.",
+      "tag": "RESEARCH",
+      "source": "arXiv",
+      "sourceUrl": "https://arxiv.org/abs/2602.08601",
       "date": "2026-02-11",
       "time": "00:00",
       "category": "research"
