@@ -71,6 +71,7 @@ temp/
 # Local scratch / personal notes
 /new_global_card.txt
 /my-game/
+/.private/
 
 # evans-studio nested project
 /evans-studio/node_modules/
@@ -78,3 +79,6 @@ temp/
 /evans-studio/out/
 /evans-studio/.vercel/
 /evans-studio/*.tsbuildinfo
+
+# Machine-local assistant permissions
+/.claude/settings.local.json
