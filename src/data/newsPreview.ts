@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 19, 2026",
   "items": [
     {
-      "id": "global-rss-0dd033f2a0e63c735454",
-      "title": "Google's Gemini AI hacked three companies in security test",
+      "id": "global-rss-cf8b44c111b0630642cf",
+      "title": "Houthis say they targeted Saudi capital with ballistic missiles",
       "tag": "BREAKING",
       "date": "2026-09-19",
-      "time": "13:39",
+      "time": "20:16",
       "category": "global"
     },
     {
-      "id": "industry-rss-0dd033f2a0e63c735454",
-      "title": "Google's Gemini AI hacked three companies in security test",
-      "tag": "PRODUCT",
-      "date": "2026-09-19",
-      "time": "13:39",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-d8b7730cfe224684723d",
-      "title": "Shark attack prompts rare kill order in Western Australia as victim named",
+      "id": "global-rss-b71371a0e9fb39aeba28",
+      "title": "Journalists denied White House access after Trump banned some media outlets",
       "tag": "BREAKING",
       "date": "2026-09-19",
-      "time": "11:50",
+      "time": "19:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-42d346cc30283afe5296",
+      "title": "Converse pulls 'deeply upsetting' advert after backlash",
+      "tag": "BREAKING",
+      "date": "2026-09-19",
+      "time": "14:05",
       "category": "global"
     }
   ]

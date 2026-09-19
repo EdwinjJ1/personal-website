@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-19T15:54:51.427140Z",
+  "lastUpdated": "2026-09-19T20:43:22.841360Z",
   "availableDates": [
     {
       "value": "2026-09-19",
@@ -567,6 +567,39 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-cf8b44c111b0630642cf",
+      "title": "Houthis say they targeted Saudi capital with ballistic missiles",
+      "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as conflict between Saudi Arabia and the Yemen-based group continues.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "20:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b71371a0e9fb39aeba28",
+      "title": "Journalists denied White House access after Trump banned some media outlets",
+      "summary": "CNN, MS NOW and Politico reporters' White House press badges were confiscated, the outlets reported.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cj4gklz9dxplo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "19:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-42d346cc30283afe5296",
+      "title": "Converse pulls 'deeply upsetting' advert after backlash",
+      "summary": "Social media users say an image from the brand's Instagram account resembled a KKK hood and hanging.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "14:05",
+      "category": "global"
+    },
     {
       "id": "global-rss-0dd033f2a0e63c735454",
       "title": "Google's Gemini AI hacked three companies in security test",
