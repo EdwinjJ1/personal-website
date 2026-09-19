@@ -31,6 +31,21 @@ const skills = [
 
 const timeline = [
   {
+    year: "MosMos",
+    title: "AI Product Intern (Technical)",
+    organization: "MosMos AI Voice Assistant",
+    location: "macOS & Windows",
+    description: "Helped deliver multiple releases of an AI voice assistant, taking voice input, meeting summaries, and intelligent Q&A from product design and technical integration through acceptance and launch.",
+    highlights: [
+      "Defined user flows, requirements, and acceptance criteria with client and backend teams",
+      "Designed ASR and LLM workflows for text refinement, speaker differentiation, and meeting summaries",
+      "Integrated voice Q&A and web search with intent recognition, streaming responses, and source citations",
+      "Contributed to accounts, usage management, releases, and end-to-end validation across macOS and Windows",
+      "Project ranked No. 4 on the Product Hunt ChatGPT Astra leaderboard"
+    ],
+    type: "experience"
+  },
+  {
     year: "2025 - Present",
     title: "Computer Science Student",
     organization: "University of New South Wales (UNSW)",

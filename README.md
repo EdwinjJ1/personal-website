@@ -52,13 +52,17 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## News Sync
 
-Use the `/sync-news` Claude Code skill to sync news from ClawdBot canvas:
+Public feeds now sync directly, without Clawd or API credentials:
 
 ```bash
-node scripts/sync-ai-news.js
+npm run news:sync
 ```
 
-Sources: `~/clawd/canvas/{ai-news,arxiv-papers,industry-news,global-news}`
+Sources: [Google AI](https://blog.google/technology/ai/rss/), [arXiv cs.AI](https://rss.arxiv.org/rss/cs.AI), [BBC Technology](https://feeds.bbci.co.uk/news/technology/rss.xml), and [BBC World](https://feeds.bbci.co.uk/news/world/rss.xml). Publication dates use UTC. Existing archive entries are preserved; matching source URLs are updated without duplication. A failed feed is reported while other feeds continue; a completely empty/failed run leaves the archive unchanged and fails the job.
+
+The Pages workflow syncs, saves the archive, and deploys every six hours, on pushes, or when run manually in GitHub Actions. Scheduled runs require Actions to be enabled for the repository.
+
+The original local HTML importer remains available: `npm run news:sync:local -- /path/to/canvas`.
 
 ## Build
 

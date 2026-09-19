@@ -1,6 +1,58 @@
 {
-  "lastUpdated": "2026-08-27T16:06:35.567Z",
+  "lastUpdated": "2026-09-19T11:02:23.461736Z",
   "availableDates": [
+    {
+      "value": "2026-09-19",
+      "label": "September 19, 2026"
+    },
+    {
+      "value": "2026-09-18",
+      "label": "September 18, 2026"
+    },
+    {
+      "value": "2026-09-17",
+      "label": "September 17, 2026"
+    },
+    {
+      "value": "2026-09-16",
+      "label": "September 16, 2026"
+    },
+    {
+      "value": "2026-09-15",
+      "label": "September 15, 2026"
+    },
+    {
+      "value": "2026-09-14",
+      "label": "September 14, 2026"
+    },
+    {
+      "value": "2026-09-12",
+      "label": "September 12, 2026"
+    },
+    {
+      "value": "2026-09-10",
+      "label": "September 10, 2026"
+    },
+    {
+      "value": "2026-09-09",
+      "label": "September 9, 2026"
+    },
+    {
+      "value": "2026-09-08",
+      "label": "September 8, 2026"
+    },
+    {
+      "value": "2026-09-05",
+      "label": "September 5, 2026"
+    },
+    {
+      "value": "2026-09-02",
+      "label": "September 2, 2026"
+    },
+    {
+      "value": "2026-09-01",
+      "label": "September 1, 2026"
+    },
     {
       "value": "2026-08-27",
       "label": "August 27, 2026"
@@ -84,6 +136,10 @@
     {
       "value": "2026-08-03",
       "label": "August 3, 2026"
+    },
+    {
+      "value": "2026-08-01",
+      "label": "August 1, 2026"
     },
     {
       "value": "2026-07-31",
@@ -512,6 +568,699 @@
   ],
   "news": [
     {
+      "id": "global-rss-4f739bafcf5315620ce4",
+      "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
+      "summary": "Trump says the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics have not been confirmed by Danish officials.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "11:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f4b390b8712ebbb37182",
+      "title": "Millions without power as Cuba hit by latest major blackout",
+      "summary": "Widespread power outages have become increasingly common due to fuel shortages made worse by a US blockade.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6j9x4387lzxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "10:27",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d8b7730cfe224684723d",
+      "title": "Deadly shark attack prompts rare kill order in Western Australia",
+      "summary": "Police boats and helicopters are patrolling Perth's beaches as authorities continue their search for the swimmer's body, and the shark that attacked him.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqwyzdnk442lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "09:19",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6647c9fc50b2e199d7b2",
+      "title": "Trump says he is banning CNN and Politico from White House",
+      "summary": "The US president has had a tense and fiery relationship with the US media throughout his political career.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "05:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "04:27",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "04:27",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c62df2e8526726695bd0",
+      "title": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks",
+      "summary": "Residents later received the all-clear after explosions were reported in the capital.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmed7el18dxpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "04:20",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-6cdb0ccc5e113187cf5e",
+      "title": "Tech Now",
+      "summary": "Adrienne Murray follows NASA scientists in Iceland researching a rare total solar eclipse.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m0032301?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "01:00",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c273b76ce2bce8f32992",
+      "title": "Kerry Kennedy: 'It would be a tragedy' if Kennedy Center is demolished",
+      "summary": "The BBC’s Caitríona Perry spoke to the late president's niece, as protesters gathered at the venue to condemn demolition threats.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cv8e3jw1kr4lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "00:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0cc0ac284fa1c3102379",
+      "title": "I found love at an Irish matchmaking festival - and I want others to do the same",
+      "summary": "Mary Timby flew to Ireland on a whim last year and met her boyfriend at a matchmaking festival.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw5y4jz6k2p3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "23:18",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-d5911730957e7c2248df",
+      "title": "Would Australians support a smart glasses ban?",
+      "summary": "As Australia considers barring the use of smart glasses in government offices, the BBC asks people in Sydney what they think.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm9w4nenzv4no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "23:15",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-34d6dedbfdba365df68f",
+      "title": "Tata Sons: India's corporate crown braces for upheaval amid boardroom revolt",
+      "summary": "The Tata boardroom battle has intensified over a re-appointment of its chairman and a diktat to go public.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c670lkvdzkn2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "23:07",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-97be3ab6a4079b109cf7",
+      "title": "Grim discoveries of murdered women spark fear in South Africa",
+      "summary": "Dineo Motapane is one of nine recent victims whose deaths have left a nation traumatised over the level of violence against women.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cjkg71e67k17o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "23:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d07f08e5e517af9fc33a",
+      "title": "A four-minute warning isn't enough: Russia's new relentless missile tactics exhaust Kyiv residents",
+      "summary": "Increasingly frequent and ferocious attacks on the Ukrainian capital have left many on edge.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwp93k9gpnv1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "23:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-78d2bea860ff396b726f",
+      "title": "Trump signs sweeping Russia sanctions bill",
+      "summary": "The bill is named after the late Senator Lindsey Graham, a staunch advocate of aid for Ukraine.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "22:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-62a7b221ca9281715d0f",
+      "title": "Watch: Trump says ban on some news outlets is 'because they're fake news'",
+      "summary": "The US president on Friday announced he is \"immediately\" banning CNN, MS NOW and Politico from the White House.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm93e7p1wkndo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "20:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-00b4c6ceffe43db1bcd1",
+      "title": "At least 21 killed after vehicle loaded with explosives rams Pakistan mosque",
+      "summary": "A four-year-old child is among those killed in the attack, during which gunmen also opened fire on a police facility.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckn9wenz8wjwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "20:17",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8232697a094c45a359db",
+      "title": "Is the Kennedy Center losing 'hundreds of millions of dollars'?",
+      "summary": "Records in 2024 show the venue had a surplus of millions of dollars once contributions and grants had been factored in.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cqy4zw4xr717o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "18:56",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-83e9529895aebe4611f4",
+      "title": "Russian hybrid attacks against Europe intensifying, says Macron",
+      "summary": "The French president says he has tasked the government with protecting critical infrastructure and defence industry sites.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "18:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-019c5f3fc425b30a9124",
+      "title": "North Korean anthem played for South Korea at Asian Games",
+      "summary": "Organisers have apologised for playing the North Korean national anthem for the South Korean men's hockey team at the Asian Games in Japan.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/hockey/articles/cmx2zg85gq03o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "17:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-77cc300c74746d76bc62",
+      "title": "Warren Buffett steps down after six decades at Berkshire - 'Father Time always wins'",
+      "summary": "Since taking control in 1965, Buffett grew a struggling textile mill into a global conglomerate.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvj64dl1w6yno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "17:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e16e191edb7b8b13366b",
+      "title": "Ryanair boss Michael O'Leary apologises over 'high-fare rapists' remarks",
+      "summary": "O'Leary described his choice of language as \"careless\" and said \"it won't happen again\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm1j4kj57k08o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "17:10",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f3e5088aaa5e94e7aabc",
+      "title": "Dozens of suspected illegal miners die in Nigerian custody",
+      "summary": "Authorities linked the deaths to disease, but this has been disputed by intelligence reports and relatives of the accused.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw980qp2n3p4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "15:47",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-d92122e53ec9d4f7bc6f",
+      "title": "New experts join Google’s AI & Economy team",
+      "summary": "We are expanding our AI & Economy team with world-class academic advisors, fellows, and core internal researchers.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/expanding-ai-economy-research-bench/",
+      "date": "2026-09-18",
+      "time": "14:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-44ec3a3d6fdc7de7b05f",
+      "title": "Co-creating the future of fashion with Google",
+      "summary": "Google worked side-by-side with designers Jane Wade and Sergio Hudson to custom-design Google Flow tools to prep for NYFW.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-flow-fashion-week/",
+      "date": "2026-09-18",
+      "time": "13:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-8cacc6627e99601e95c2",
+      "title": "Ronaldo named in first Portugal squad since World Cup - at age of 41",
+      "summary": "Cristiano Ronaldo is named in the first squad selected by new Portugal coach Jorge Jesus for their upcoming Nations League games.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cmeq8v8e3ql7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "12:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-60852a32054a513130fb",
+      "title": "Shots heard as police start moving migrants from Ceuta beaches",
+      "summary": "Police reportedly fired into the air on Friday morning as they struggled to contain crowds jostling to secure a place at the tented site.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "11:59",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-95a2b79c5ab320e7b549",
+      "title": "Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children",
+      "summary": "It is the first time the juror, who refused to side with the others and acquit Clancy, has spoken publicly about his decision.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c54g7jdmw032o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "11:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b760bb1a6980eac16a30",
+      "title": "Three dead and eight injured in Philippines school shooting",
+      "summary": "The gunman is among the dead in what is the third school shooting in the country since June.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6x2z4dlzyr0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "11:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4d777636784383963361",
+      "title": "Why US plan to sell F-35 warplanes to Saudi Arabia is controversial",
+      "summary": "Saudi Arabia has lobbied the US for years to buy F35s, the world's most advanced fighter jet.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3x2zrn01pxko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "01:31",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7ddeefee8efc856db742",
+      "title": "Canadians dream of Europe as Carney floats longshot plan for living and working in EU",
+      "summary": "Torontonians are excited by the possibility of moving to the EU, even if it is unlikely anytime soon.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx980qj57r89o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-18",
+      "time": "01:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-185a33e481277cd99b94",
+      "title": "This Olympic river has 500 crocodiles in it - but that's not the main concern",
+      "summary": "Queensland's Fitzroy River has been selected for the 2032 Games, despite concerns over the course - and its inhabitants.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c68xkypqyxw7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "23:29",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-ca691b64f42f124bc71d",
+      "title": "The virtual worlds where robots are trained",
+      "summary": "Training systems that allow robots to negotiate the real world are getting more sophisticated.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c79g0j3d4q9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "23:00",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-590df77dc8c3726e2134",
+      "title": "Making global data easier to explore",
+      "summary": "Google and the UN system have launched the UN System Data Commons, a new open platform making global statistics accessible and easy to search.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-un-data-commons-platform/",
+      "date": "2026-09-17",
+      "time": "20:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-5e976daeff976d24718a",
+      "title": "Is Canada about to join the EU?",
+      "summary": "Ties between Canada and the European Union have been getting closer as trade dispute with the US continue.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6wyz8kk2nepo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "16:18",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-87edd459c4d066d761dc",
+      "title": "King Charles warns of 'existential danger' of AI falling into wrong hands",
+      "summary": "The comments were made at a summit in Ayrshire with participants from AI giants including Nvidia, OpenAI and Anthropic.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c65ymj7njvl7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "14:33",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-8128fa4f3ef2d1a9d5f7",
+      "title": "Why are there concerns AI could threaten humanity, and how real are they?",
+      "summary": "Existential fears about AI have once again reared their head - here's what you need to know.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c790xvnzgnno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "09:18",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-4a87dc1c7397cf1b3e68",
+      "title": "Uncontrolled AI could lead to 'silicon species' rivalling humans, warns Microsoft",
+      "summary": "Mustafa Suleyman says he believes rival AI firm Anthropic is in effect teaching Claude it \"may be conscious\".",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6n07ypqz8kzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-17",
+      "time": "08:22",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-69d773778745adfa81f2",
+      "title": "Snapchat open to putting time limits on teens, boss tells BBC",
+      "summary": "Evan Spiegel says it would be \"an important step forward for the industry\" in an interview with the BBC.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr3wjz3edd10o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-16",
+      "time": "23:41",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-14bb7b514bbf64d849b9",
+      "title": "Would you buy branded clothing from your favourite tech firm?",
+      "summary": "Nvidia, OpenAI and Anthropic are all now selling their own limited edition fashion lines.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cgqd9zkkvlyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-16",
+      "time": "23:18",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-aa47b99b381eea86e987",
+      "title": "Inside Singapore's 'Fort Knox' for city's $2bn dirty money auction",
+      "summary": "The BBC goes inside a fortified storage facility to view luxury goods seized by police that are now up for auction.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmew984dq92lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-16",
+      "time": "22:13",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-4686332c8f939c294df4",
+      "title": "OpenAI boss says world 'right to be afraid' but should trust AI firms",
+      "summary": "Sam Altman and other tech CEOs say there are incentives to limit advancements in AI, as fears grow over the threats it poses to humanity.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-16",
+      "time": "10:02",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-3f8309803edf69c46107",
+      "title": "AI app ads promoting 'objectification of women' banned by watchdog",
+      "summary": "The ad regulator said it had \"zero-tolerance\" for ads promoting AI tools that could sexualise or objectify women.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmlyrn2n4zg5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-15",
+      "time": "23:27",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-0cfb3dcdb81d5c48e0a7",
+      "title": "Tech Life",
+      "summary": "What should children learn in a world transformed by artificial intelligence?",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyf?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-15",
+      "time": "19:30",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-970c94673769027aa8a4",
+      "title": "AI for Societal Impact",
+      "summary": "Explore this collection to see how experts and local leaders are using AI breakthroughs to ensure everyone can share the opportunity of AI.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-for-societal-impact/",
+      "date": "2026-09-15",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-6fff55fdf7cb614f4288",
+      "title": "Building AI to accelerate science and improve lives",
+      "summary": "The true measure of AI is who it helps. Here’s how it’s impacting lives today. We're focused on key areas where advanced technology can help make extraordinary progress …",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-applications-science-people/",
+      "date": "2026-09-15",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-50f1fa34d3c31e122438",
+      "title": "AI for everyone in every language",
+      "summary": "We’re moving beyond traditional text translation to build models that understand the world’s rich, living languages exactly as they are expressed.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-for-every-language/",
+      "date": "2026-09-15",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-b21c5e1ffc812be885ba",
+      "title": "New insights from Google’s AI & Economy ATLAS",
+      "summary": "We’ve translated ATLAS’s millions of global data points into an interactive, open-access experience.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/ai-economy-atlas-september-2026/",
+      "date": "2026-09-15",
+      "time": "13:00",
+      "category": "ai"
+    },
+    {
+      "id": "industry-rss-5a4264a30fd9a900aa06",
+      "title": "Pubs in England and Wales to allow digital ID apps to prove age",
+      "summary": "New rules introduced on Tuesday mean establishments will be able to accept digital ID apps alongside physical documents.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gl6j53w19o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-14",
+      "time": "23:07",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-6666660dfd652924f82b",
+      "title": "Watch astronaut Christina Koch and Google’s James Manyika discuss space, technology, and discovery.",
+      "summary": "Christina Koch sits down with James Manyika, Google’s Senior Vice President of Research, Labs, Technology & Society.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/dialogues-christina-koch/",
+      "date": "2026-09-14",
+      "time": "19:00",
+      "category": "ai"
+    },
+    {
+      "id": "industry-rss-e3780432d3acd49e8388",
+      "title": "Valve's Steam Frame is excellent - but at over £1,000 is VR still too expensive?",
+      "summary": "The BBC's Tom Gerken is hands-on with the latest virtual reality headset.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cn8m1113ym1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-14",
+      "time": "17:05",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-7bb18b0506123141aec3",
+      "title": "What is AI, how does it work and why are some people concerned about it?",
+      "summary": "AI is transforming modern life, but not without worry for some that it may be abused or have an adverse environmental impact.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c2l799gxjjpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-14",
+      "time": "16:09",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-ac6fab4ebd9f6bc88d56",
+      "title": "DevFest is back",
+      "summary": "DevFest 2026 is back and here’s how you can connect with one of the more than 800 global events to build, secure, and scale in the agentic AI era.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/devfest2026/",
+      "date": "2026-09-14",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "industry-rss-3b00970eb874191dad41",
+      "title": "Tech Now",
+      "summary": "Shiona McCallum meets mums and hospital staff trialling a new assisted birth innovation.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m0031qjy?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-12",
+      "time": "01:00",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-ceadd21f5d3a2d6592d4",
+      "title": "3 ways to prep for your next big race with Search",
+      "summary": "Search can help runners get race-day ready with registration alerts, tailored training plans, and more.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/running-race-training-tips/",
+      "date": "2026-09-10",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-73af7527f82e0ada94cf",
+      "title": "Get ready for the game with new football features in Search",
+      "summary": "Track live game feeds, explore detailed stats, and get custom fantasy recommendations directly in Search this season.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/football-features-google-search/",
+      "date": "2026-09-09",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-82b8bf7db8ec7233d073",
+      "title": "Recreating a 70-year love story frame by frame",
+      "summary": "Discover how filmmakers and Google DeepMind used AI to recreate a couple's unrecorded past in the short film \"Love, Rendered.\"",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/love-rendered-film/",
+      "date": "2026-09-09",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
+      "id": "industry-rss-0bf850c7b0e85177233b",
+      "title": "Tech Life",
+      "summary": "Scammers demand money from Instagram users over fake copyright claims.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyd?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-08",
+      "time": "20:00",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-4e834fb3c8dac8191fd3",
+      "title": "Tech Now",
+      "summary": "Laura Cress has the highlights from Gamescom, the biggest gaming convention in the world.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m0031d1p?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-05",
+      "time": "01:00",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-5eb2aa71a90a9c91745c",
+      "title": "Proactive cyber defense for governments and enterprises",
+      "summary": "The Fairwind Program is a limited access program for governments and trusted partners to use our cyber defense tools.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/fairwind-program/",
+      "date": "2026-09-02",
+      "time": "15:40",
+      "category": "ai"
+    },
+    {
+      "id": "ai-rss-c97fc058379572822e7b",
+      "title": "The latest AI news we announced in August 2026",
+      "summary": "Here are Google’s latest AI updates from August 2026",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/google-ai-updates-august-2026/",
+      "date": "2026-09-01",
+      "time": "20:45",
+      "category": "ai"
+    },
+    {
+      "id": "industry-rss-aac336945946f96f2c8e",
+      "title": "Tech Life",
+      "summary": "AI can only communicate in languages that it's been trained on.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyc?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-01",
+      "time": "20:10",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-7415c6bcd9dd29dab310",
+      "title": "Try Google Pics: Easy image creation and editing in Google Workspace",
+      "summary": "Built on our latest Nano Banana model, Google Pics — our image creation and editing tool — is now available.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/google-pics/",
+      "date": "2026-09-01",
+      "time": "16:00",
+      "category": "ai"
+    },
+    {
       "id": "industry-20260827-2333-flipkart-minutes-overtakes-swiggy-instamart-in-dark-store-count-",
       "title": "Flipkart Minutes Overtakes Swiggy Instamart in Dark-Store Count Across India's Top 10 Cities — CLSA Sees Eternal +53.5% Upside",
       "summary": "A CLSA mapping (released Aug 26) of quick-commerce dark-store footprints across India's top 10 cities shows Flipkart Minutes at 627 stores vs Swiggy Instamart's 615 — the first time Minutes (which entered the segment only 2 years ago) has overtaken Instamart (4-year head start). Blinkit still leads with 969, followed by Zepto (828), Flipkart Minutes (627), Instamart (615), BigBasket (497); 3,536 stores total across the top-10. Minutes also leads Instamart on pincode coverage. Minutes grew Tier-III city presence 42x over the past year (now in Ara, Muzaffarpur). Bengaluru (735) and Delhi (531) remain the largest markets; quick commerce now reaches 477 cities. CLSA set ₹506 target on Eternal (Blinkit parent) — 53.5% upside — vs ₹312 on Swiggy (8.7% upside).",
@@ -565,6 +1314,17 @@
       "date": "2026-08-27",
       "time": "23:33",
       "category": "industry"
+    },
+    {
+      "id": "ai-rss-a1c9c66d7311246563eb",
+      "title": "3 new ways to plan and book travel in Search",
+      "summary": "Book hotels and track airfares, plus view miles and rewards with AI Mode in Google Search.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/book-travel-ai-mode/",
+      "date": "2026-08-27",
+      "time": "16:00",
+      "category": "ai"
     },
     {
       "id": "research-20260827-0000-asymspec-context-asymmetric-speculative-decoding-for-agentic-llm",
@@ -730,6 +1490,28 @@
       "date": "2026-08-26",
       "time": "00:00",
       "category": "research"
+    },
+    {
+      "id": "industry-rss-49caa2fe864e4ce577c5",
+      "title": "Tech Life",
+      "summary": "The government agency that's encouraging high-risk and high-reward research.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyb?at_medium=RSS&at_campaign=rss",
+      "date": "2026-08-25",
+      "time": "20:00",
+      "category": "industry"
+    },
+    {
+      "id": "ai-rss-9ce79d4dded95af4f616",
+      "title": "5 ways to upgrade your home decor with Google Search",
+      "summary": "Learn how to use Google Search tools to find home decor inspiration, shop for furniture, and tackle DIY projects.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/home-decor-tips/",
+      "date": "2026-08-25",
+      "time": "16:00",
+      "category": "ai"
     },
     {
       "id": "industry-20260825-0000-china-s-palantir-zhongshu-ruizhi-closes-multi-hundred-million-rm",
@@ -1381,6 +2163,17 @@
       "category": "research"
     },
     {
+      "id": "ai-rss-abaed39cbc9c9b421285",
+      "title": "5 new ways to level up your learning with Search",
+      "summary": "Here’s how you can use Google Search tools to study for classes and standardized tests.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/back-to-school-study-tools/",
+      "date": "2026-08-19",
+      "time": "19:00",
+      "category": "ai"
+    },
+    {
       "id": "research-20260819-0000-autoresearch-insight-in-hallucination-out",
       "title": "AutoResearch: Insight In, Hallucination Out",
       "summary": "A two-stage autonomous research system that decouples Idea Generation from Idea Execution. Idea Generation continuously fuses emerging signals with accumulated knowledge and uses multi-model generation + cross-review; Idea Execution decomposes plans into experiments with independent evidence-based review. On RSICD, an AutoResearch idea bumps recall from 32.84 to 34.69 while recording only 5 audit-confirmed issues vs 11–27 for competing systems.",
@@ -1546,6 +2339,17 @@
       "category": "industry"
     },
     {
+      "id": "ai-rss-4001c007c7b531442a37",
+      "title": "Get closer to the game with Gemini and Pixel",
+      "summary": "Google Gemini and Pixel partner with five global football clubs to elevate the fan matchday experience through AI and Smartphone Technology.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/gemini/google-gemini-pixel-football-club-partnerships/",
+      "date": "2026-08-17",
+      "time": "08:00",
+      "category": "ai"
+    },
+    {
       "id": "research-20260817-0000-agentrewind-recoverable-execution-for-long-horizon-llm-agents",
       "title": "AgentRewind: Recoverable Execution for Long-Horizon LLM Agents",
       "summary": "Long-horizon agents suffer cascading errors: a bad early action corrupts both the agent's context and the environment, and subsequent \"fixes\" can't undo it because the world has moved on. AgentRewind records aligned checkpoints of (agent context, controlled environment) so the agent can rewind to any earlier state and resume execution with information from prior attempts. The companion MettleBench evaluates long-horizon engineering tasks with checklists of related requirements.",
@@ -1709,6 +2513,17 @@
       "date": "2026-08-14",
       "time": "00:00",
       "category": "research"
+    },
+    {
+      "id": "ai-rss-d00944e12348f9f23440",
+      "title": "Bring your spreadsheet data to life with Sheets canvas",
+      "summary": "Sheets canvas turns data into interactive dashboards, custom study trackers, seating charts, and more, all with a simple prompt.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/sheets-canvas-for-google-sheets-spreadsheets/",
+      "date": "2026-08-13",
+      "time": "16:45",
+      "category": "ai"
     },
     {
       "id": "research-20260813-0000-ai4ai-at-test-time-strong-to-weak-capability-transfer-via-harnes",
@@ -2325,6 +3140,17 @@
       "date": "2026-08-03",
       "time": "00:00",
       "category": "research"
+    },
+    {
+      "id": "industry-rss-015d85faabedcd212b94",
+      "title": "Tech Now",
+      "summary": "New technologies measuring forests and exclusive access to a hacker rehab programme.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m002zxt1?at_medium=RSS&at_campaign=rss",
+      "date": "2026-08-01",
+      "time": "01:00",
+      "category": "industry"
     },
     {
       "id": "research-20260731-0000-vidmap-video-structure-from-motion-combining-slam-sequential-str",
