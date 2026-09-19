@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 19, 2026",
   "items": [
     {
-      "id": "global-rss-4f739bafcf5315620ce4",
-      "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
+      "id": "global-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
       "tag": "BREAKING",
       "date": "2026-09-19",
-      "time": "11:01",
+      "time": "13:39",
       "category": "global"
     },
     {
-      "id": "global-rss-f4b390b8712ebbb37182",
-      "title": "Millions without power as Cuba hit by latest major blackout",
-      "tag": "BREAKING",
+      "id": "industry-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "tag": "PRODUCT",
       "date": "2026-09-19",
-      "time": "10:27",
-      "category": "global"
+      "time": "13:39",
+      "category": "industry"
     },
     {
       "id": "global-rss-d8b7730cfe224684723d",
-      "title": "Deadly shark attack prompts rare kill order in Western Australia",
+      "title": "Shark attack prompts rare kill order in Western Australia as victim named",
       "tag": "BREAKING",
       "date": "2026-09-19",
-      "time": "09:19",
+      "time": "11:50",
       "category": "global"
     }
   ]
