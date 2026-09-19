@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-19T11:02:23.461736Z",
+  "lastUpdated": "2026-09-19T15:54:51.427140Z",
   "availableDates": [
     {
       "value": "2026-09-19",
@@ -568,14 +568,58 @@
   ],
   "news": [
     {
+      "id": "global-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "13:39",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-0dd033f2a0e63c735454",
+      "title": "Google's Gemini AI hacked three companies in security test",
+      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "13:39",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-d8b7730cfe224684723d",
+      "title": "Shark attack prompts rare kill order in Western Australia as victim named",
+      "summary": "Greg O'Neill \"loved the ocean\", his family say, as police boats and helicopters patrol Perth's beaches in search of his body and the shark that attacked him.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqwyzdnk442lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "11:50",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ae0b9b980743f1c7b076",
+      "title": "'Enough is enough': Women protest after string of murders near Johannesburg",
+      "summary": "The police have since set up a task team to investigate the murders and have urged women in the Kempton Park area to avoid walking or running alone \"particularly in isolated areas\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm4gjxq1dx2eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "11:50",
+      "category": "global"
+    },
+    {
       "id": "global-rss-4f739bafcf5315620ce4",
-      "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
-      "summary": "Trump says the agreement will give the US \"permanent control over security, and all other needs, in Greenland\", though specifics have not been confirmed by Danish officials.",
+      "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
+      "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-19",
-      "time": "11:01",
+      "time": "11:36",
       "category": "global"
     },
     {
@@ -590,17 +634,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-d8b7730cfe224684723d",
-      "title": "Deadly shark attack prompts rare kill order in Western Australia",
-      "summary": "Police boats and helicopters are patrolling Perth's beaches as authorities continue their search for the swimmer's body, and the shark that attacked him.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqwyzdnk442lo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-19",
-      "time": "09:19",
-      "category": "global"
-    },
-    {
       "id": "global-rss-6647c9fc50b2e199d7b2",
       "title": "Trump says he is banning CNN and Politico from White House",
       "summary": "The US president has had a tense and fiery relationship with the US media throughout his political career.",
@@ -610,28 +643,6 @@
       "date": "2026-09-19",
       "time": "05:36",
       "category": "global"
-    },
-    {
-      "id": "global-rss-0dd033f2a0e63c735454",
-      "title": "Google's Gemini AI hacked three companies in security test",
-      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-19",
-      "time": "04:27",
-      "category": "global"
-    },
-    {
-      "id": "industry-rss-0dd033f2a0e63c735454",
-      "title": "Google's Gemini AI hacked three companies in security test",
-      "summary": "The AI model accessed the internet and guessed credentials to three websites, a Google official told the BBC.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-19",
-      "time": "04:27",
-      "category": "industry"
     },
     {
       "id": "global-rss-c62df2e8526726695bd0",
