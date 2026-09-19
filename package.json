@@ -10,7 +10,8 @@
     "github:fetch": "node scripts/fetch-github-activity.js",
     "start": "next start",
     "lint": "next lint",
-    "news:sync": "node scripts/sync-ai-news.js"
+    "news:sync": "python3 scripts/sync-rss-news.py",
+    "news:sync:local": "node scripts/sync-ai-news.js"
   },
   "dependencies": {
     "framer-motion": "^12.23.12",

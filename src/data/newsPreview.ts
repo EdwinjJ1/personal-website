@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-08-27",
-  "latestLabel": "August 27, 2026",
+  "latestDate": "2026-09-19",
+  "latestLabel": "September 19, 2026",
   "items": [
     {
-      "id": "industry-20260827-2333-flipkart-minutes-overtakes-swiggy-instamart-in-dark-store-count-",
-      "title": "Flipkart Minutes Overtakes Swiggy Instamart in Dark-Store Count Across India's Top 10 Cities — CLSA Sees Eternal +53.5% Upside",
-      "tag": "PRODUCT",
-      "date": "2026-08-27",
-      "time": "23:33",
-      "category": "industry"
+      "id": "global-rss-4f739bafcf5315620ce4",
+      "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
+      "tag": "BREAKING",
+      "date": "2026-09-19",
+      "time": "11:01",
+      "category": "global"
     },
     {
-      "id": "industry-20260827-2333-honasa-consumer-mamaearth-calls-off-135-cr-fluence-pharma-acquis",
-      "title": "Honasa Consumer (Mamaearth) Calls Off ₹135 Cr Fluence Pharma Acquisition — Closing Conditions Not Met, Nutraceuticals Strategy Intact",
-      "tag": "PRODUCT",
-      "date": "2026-08-27",
-      "time": "23:33",
-      "category": "industry"
+      "id": "global-rss-f4b390b8712ebbb37182",
+      "title": "Millions without power as Cuba hit by latest major blackout",
+      "tag": "BREAKING",
+      "date": "2026-09-19",
+      "time": "10:27",
+      "category": "global"
     },
     {
-      "id": "industry-20260827-2333-kkr-buys-out-l-catterton-to-take-full-control-of-japan-s-ci-flav",
-      "title": "KKR Buys Out L Catterton to Take Full Control of Japan's Ci FLAVORS (&honey, 8 THE THALASSO, unlabel)",
-      "tag": "PRODUCT",
-      "date": "2026-08-27",
-      "time": "23:33",
-      "category": "industry"
+      "id": "global-rss-d8b7730cfe224684723d",
+      "title": "Deadly shark attack prompts rare kill order in Western Australia",
+      "tag": "BREAKING",
+      "date": "2026-09-19",
+      "time": "09:19",
+      "category": "global"
     }
   ]
 } as const;

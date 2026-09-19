@@ -25,6 +25,7 @@ I'm ambitious in the slightly-too-honest way: I want to build something that gen
 
 ## What I've actually done
 
+- **Built AI voice product experiences at MosMos.** AI Product Intern (Technical) at MosMos AI Voice Assistant: contributed to voice input, meeting summaries, intelligent Q&A, and web search across macOS and Windows, from requirements and model integration to end-to-end validation and releases. The project ranked No. 4 on the Product Hunt ChatGPT Astra leaderboard.
 - **Founded and led a startup at 18.** CEO of Hypha (Beijing), a 7-person team across engineering, design, and legal. Took an NFT product from zero to ¥100K+ single-day revenue. Owned the roadmap, the architecture, and most of the backend.
 - **Shipped open-source AI tools that people use.** Chiron Prompt (prompt optimization), a 3D-print skill for Claude, and others — used by developers internationally.
 - **Built real products solo.** ChronoMap (an interactive heritage map), FinalBoss (AI exam prep used by 150+ users), a study platform that had paying subscribers, and this website.

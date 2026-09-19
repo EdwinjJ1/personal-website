@@ -60,6 +60,14 @@ Dataset: https://huggingface.co/datasets/ErfanMoosaviMonazzah/fake-news-detectio
 
 ## Experience
 
+### AI Product Intern (Technical) - MosMos AI Voice Assistant
+
+- Contributed to product design and delivery for an AI voice assistant across voice input, meeting notes, and intelligent Q&A; defined user flows, requirements, and acceptance criteria with client and backend teams.
+- Designed ASR and LLM workflows for speech recognition, text refinement, speaker differentiation, and meeting summaries, balancing latency, output quality, and error handling.
+- Helped deliver voice Q&A and web search with intent recognition, streaming responses, and source citations; integrated model APIs and validated results.
+- Contributed to macOS and Windows product planning, technical evaluation, accounts, usage management, and releases; validated product proposals through implementation and end-to-end tests.
+- Helped deliver multiple releases from design and integration through acceptance and launch. The project ranked No. 4 on the Product Hunt ChatGPT Astra leaderboard.
+
 ### Founder & CEO - Hypha, Beijing
 
 *Jul 2023-Jul 2024*
