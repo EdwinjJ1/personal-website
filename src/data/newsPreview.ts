@@ -3,8 +3,16 @@ export const newsPreview = {
   "latestLabel": "September 20, 2026",
   "items": [
     {
+      "id": "global-rss-e791fd7ad415206f7cf9",
+      "title": "Trump says his planned triumphal arch will double as a military complex to store ammunition",
+      "tag": "BREAKING",
+      "date": "2026-09-20",
+      "time": "13:50",
+      "category": "global"
+    },
+    {
       "id": "global-rss-ad9e995a839bf16fad6e",
-      "title": "'Massive' drone attack on Moscow region sees Ukraine hit oil refinery",
+      "title": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
       "tag": "BREAKING",
       "date": "2026-09-20",
       "time": "10:45",
@@ -16,14 +24,6 @@ export const newsPreview = {
       "tag": "BREAKING",
       "date": "2026-09-20",
       "time": "07:57",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-60350867f16b230ba37b",
-      "title": "Watch: Fans react as Ed Sheeran speaks out over Macklemore controversy at show",
-      "tag": "BREAKING",
-      "date": "2026-09-20",
-      "time": "05:01",
       "category": "global"
     }
   ]
