@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T11:27:38.805705Z",
+  "lastUpdated": "2026-09-20T16:09:45.895313Z",
   "availableDates": [
     {
       "value": "2026-09-20",
@@ -572,9 +572,20 @@
   ],
   "news": [
     {
+      "id": "global-rss-e791fd7ad415206f7cf9",
+      "title": "Trump says his planned triumphal arch will double as a military complex to store ammunition",
+      "summary": "Trump said the updated plans were at the request of the US military and for national security purposes.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "13:50",
+      "category": "global"
+    },
+    {
       "id": "global-rss-ad9e995a839bf16fad6e",
-      "title": "'Massive' drone attack on Moscow region sees Ukraine hit oil refinery",
-      "summary": "Moscow's mayor says 450 drones were downed during the \"unprecedented attack\", in which two people died.",
+      "title": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
+      "summary": "Moscow's mayor says 450 drones were downed during the overnight barrage, in which two people died.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
@@ -639,7 +650,7 @@
     },
     {
       "id": "global-rss-208eb44d421557e6f3f9",
-      "title": "Cultural treasures are being destroyed by war, and people want justice",
+      "title": "Cultural treasures are being destroyed worldwide - so why is no-one being punished?",
       "summary": "A cauldron of conflicts is bubbling across the world, with cultural monuments being destroyed. These people are fighting against it.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -651,7 +662,7 @@
     {
       "id": "global-rss-16d2a023660b232a885c",
       "title": "Mum's viral barefoot race sparks debate over India's education crisis",
-      "summary": "Unprepared and in flip-flops, the 47-year-old widow ran 3km to try to secure her daughter's future.",
+      "summary": "The 47-year-old ran - and won - a 3km race where she hoped to win enough prize money to buy study books for her daughter.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62m6z7m7zjo?at_medium=RSS&at_campaign=rss",
