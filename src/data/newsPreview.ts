@@ -1,29 +1,21 @@
 export const newsPreview = {
-  "latestDate": "2026-09-19",
-  "latestLabel": "September 19, 2026",
+  "latestDate": "2026-09-20",
+  "latestLabel": "September 20, 2026",
   "items": [
     {
-      "id": "global-rss-cf8b44c111b0630642cf",
-      "title": "Houthis say they targeted Saudi capital with ballistic missiles",
+      "id": "global-rss-478e73a6c211621ef240",
+      "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
       "tag": "BREAKING",
-      "date": "2026-09-19",
-      "time": "20:16",
+      "date": "2026-09-20",
+      "time": "04:49",
       "category": "global"
     },
     {
-      "id": "global-rss-b71371a0e9fb39aeba28",
-      "title": "Journalists denied White House access after Trump banned some media outlets",
+      "id": "global-rss-71878062186a8b82ff58",
+      "title": "Watch: Concertgoers and pro-Palestinian activists arrive at Ed Sheeran concert",
       "tag": "BREAKING",
-      "date": "2026-09-19",
-      "time": "19:13",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-42d346cc30283afe5296",
-      "title": "Converse pulls 'deeply upsetting' advert after backlash",
-      "tag": "BREAKING",
-      "date": "2026-09-19",
-      "time": "14:05",
+      "date": "2026-09-20",
+      "time": "02:45",
       "category": "global"
     }
   ]

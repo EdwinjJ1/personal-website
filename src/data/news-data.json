@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-09-19T20:43:22.841360Z",
+  "lastUpdated": "2026-09-20T04:57:07.367137Z",
   "availableDates": [
+    {
+      "value": "2026-09-20",
+      "label": "September 20, 2026"
+    },
     {
       "value": "2026-09-19",
       "label": "September 19, 2026"
@@ -568,14 +572,124 @@
   ],
   "news": [
     {
+      "id": "global-rss-478e73a6c211621ef240",
+      "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
+      "summary": "The mega-star spoke about Israel and Gaza at his first concert since rapper Macklemore was removed from his tour.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "04:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-71878062186a8b82ff58",
+      "title": "Watch: Concertgoers and pro-Palestinian activists arrive at Ed Sheeran concert",
+      "summary": "Some Ed Sheeran fans say they are excited to enjoy music and are not there for politics after Macklemore was dropped from the tour for making pro-Palestinian comments.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/ckd68l9g0gy5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "02:45",
+      "category": "global"
+    },
+    {
       "id": "global-rss-cf8b44c111b0630642cf",
       "title": "Houthis say they targeted Saudi capital with ballistic missiles",
-      "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as conflict between Saudi Arabia and the Yemen-based group continues.",
+      "summary": "A reported strike on a fuel depot at Riyadh airport caused delays on Saturday, as Saudi Arabia says it shot down a ballistic missile aimed at the capital.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-19",
-      "time": "20:16",
+      "time": "23:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-208eb44d421557e6f3f9",
+      "title": "Cultural treasures are being destroyed by war, and people want justice",
+      "summary": "A cauldron of conflicts is bubbling across the world, with cultural monuments being destroyed. These people are fighting against it.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-16d2a023660b232a885c",
+      "title": "Mum's viral barefoot race sparks debate over India's education crisis",
+      "summary": "Unprepared and in flip-flops, the 47-year-old widow ran 3km to try secure her daughter's future.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62m6z7m7zjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-591b553a0644e4e0810d",
+      "title": "Our head teacher was an abuser. We joined forces to get justice - now we're married",
+      "summary": "Students spent years collecting evidence against their Indonesian principal, before falling in love.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6c717aa9f7cec5dff382",
+      "title": "Not all AI workers think the tech could kill everyone",
+      "summary": "In text exchanges and conversations, multiple people who have worked for leading companies are sceptical of the warnings.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y7qj54klpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-dd8707705147cdce95b7",
+      "title": "'I don't even know if my parents are alive' - the war heroes jailed 25 years ago",
+      "summary": "The children of key politicians jailed 25 years ago without a trace in Eritrea want answers.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx1l6762jeq4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:01",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-6c717aa9f7cec5dff382",
+      "title": "Not all AI workers think the tech could kill everyone",
+      "summary": "In text exchanges and conversations, multiple people who have worked for leading companies are sceptical of the warnings.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y7qj54klpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:01",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-4f739bafcf5315620ce4",
+      "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
+      "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "23:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9403c5d7646ebe732228",
+      "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar",
+      "summary": "The president said his administration \"will not in any way hinder or stifle the growth\" amid amid warnings about the emergent technology.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "21:01",
       "category": "global"
     },
     {
@@ -642,17 +756,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/cm4gjxq1dx2eo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-19",
       "time": "11:50",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-4f739bafcf5315620ce4",
-      "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
-      "summary": "Denmark and the US have reached an agreement after months of threats from Donald Trump to annex the territory.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-19",
-      "time": "11:36",
       "category": "global"
     },
     {
