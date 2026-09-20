@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-20T04:57:07.367137Z",
+  "lastUpdated": "2026-09-20T11:27:38.805705Z",
   "availableDates": [
     {
       "value": "2026-09-20",
@@ -572,9 +572,42 @@
   ],
   "news": [
     {
+      "id": "global-rss-ad9e995a839bf16fad6e",
+      "title": "'Massive' drone attack on Moscow region sees Ukraine hit oil refinery",
+      "summary": "Moscow's mayor says 450 drones were downed during the \"unprecedented attack\", in which two people died.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "10:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b3f0dc8693371ca7f1eb",
+      "title": "German elections under way which could decide fate of Chancellor Merz",
+      "summary": "The chancellor is facing intense political pressure which will increase if his party struggles in Sunday's polls.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cme8xj6g2ny7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "07:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-60350867f16b230ba37b",
+      "title": "Watch: Fans react as Ed Sheeran speaks out over Macklemore controversy at show",
+      "summary": "Ed Sheeran told the crowd he had made mistakes after Macklemore was dropped from his tour for making pro-Palestinian remarks.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/ck980m0pr1e0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "05:01",
+      "category": "global"
+    },
+    {
       "id": "global-rss-478e73a6c211621ef240",
-      "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
-      "summary": "The mega-star spoke about Israel and Gaza at his first concert since rapper Macklemore was removed from his tour.",
+      "title": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy",
+      "summary": "The singer spoke about Israel and Gaza after Macklemore was dropped from his tour for making pro-Palestinian remarks on stage.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
@@ -618,7 +651,7 @@
     {
       "id": "global-rss-16d2a023660b232a885c",
       "title": "Mum's viral barefoot race sparks debate over India's education crisis",
-      "summary": "Unprepared and in flip-flops, the 47-year-old widow ran 3km to try secure her daughter's future.",
+      "summary": "Unprepared and in flip-flops, the 47-year-old widow ran 3km to try to secure her daughter's future.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62m6z7m7zjo?at_medium=RSS&at_campaign=rss",
@@ -701,6 +734,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cj4gklz9dxplo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-19",
       "time": "19:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-bc4bea79dcf345c270d7",
+      "title": "Trump escalates media fight after week of setbacks",
+      "summary": "An embattled Trump has injected his fight with the news media with new acrimony, writes the BBC's Anthony Zurcher.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmn8ed1xpxnyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-19",
+      "time": "17:23",
       "category": "global"
     },
     {
@@ -1194,6 +1238,17 @@
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyf?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-15",
+      "time": "19:30",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-6c97203d76598be571dc",
+      "title": "Tech Life",
+      "summary": "What should children learn in a world transformed by artificial intelligence?",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_world_service_south_asia?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-15",
       "time": "19:30",
       "category": "industry"

@@ -3,19 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 20, 2026",
   "items": [
     {
-      "id": "global-rss-478e73a6c211621ef240",
-      "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
+      "id": "global-rss-ad9e995a839bf16fad6e",
+      "title": "'Massive' drone attack on Moscow region sees Ukraine hit oil refinery",
       "tag": "BREAKING",
       "date": "2026-09-20",
-      "time": "04:49",
+      "time": "10:45",
       "category": "global"
     },
     {
-      "id": "global-rss-71878062186a8b82ff58",
-      "title": "Watch: Concertgoers and pro-Palestinian activists arrive at Ed Sheeran concert",
+      "id": "global-rss-b3f0dc8693371ca7f1eb",
+      "title": "German elections under way which could decide fate of Chancellor Merz",
       "tag": "BREAKING",
       "date": "2026-09-20",
-      "time": "02:45",
+      "time": "07:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-60350867f16b230ba37b",
+      "title": "Watch: Fans react as Ed Sheeran speaks out over Macklemore controversy at show",
+      "tag": "BREAKING",
+      "date": "2026-09-20",
+      "time": "05:01",
       "category": "global"
     }
   ]
