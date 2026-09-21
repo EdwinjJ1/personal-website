@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21T12:52:06.597750Z",
+  "lastUpdated": "2026-09-21T22:00:13.495084Z",
   "availableDates": [
     {
       "value": "2026-09-21",
@@ -576,25 +576,157 @@
   ],
   "news": [
     {
+      "id": "global-rss-1c6eaeb0daa1d2788bd6",
+      "title": "CNN, MS NOW and Politico file lawsuit against Trump's White House ban",
+      "summary": "Major US networks later suspended White House TV coverage of Trump as he heads to New York for the UN summit.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0e32rwvrryo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "21:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-acbeb50af663ca4e10ec",
+      "title": "Millions urged to evacuate as powerful Typhoon Dujuan hits Japan",
+      "summary": "The country's meteorological agency had warned of an \"imminent threat to life,\" but this has now been downgraded.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm3wj2lexl97o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "20:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1cf5f9f6e248667200fc",
+      "title": "Airlines criticise air traffic control as second glitch causes more disruption in UK",
+      "summary": "Prime Minister Andy Burnham said further issues today \"cause even greater concern\" about the UK's air traffic control and the head of the organisation that runs it.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqp80p78mxx5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "20:21",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-89c2a67c5eaedbf2111a",
+      "title": "Death of Cindy Crawford's son Presley Gerber being investigated as suspected overdose",
+      "summary": "His family asked for privacy during a \"very difficult and painful time\" following the model's death.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmdx0pqrv72wo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "19:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-15f984951da1d97e1af8",
+      "title": "First UK charges brought over 1994 Rwanda genocide",
+      "summary": "Dr Vincent Brown, formerly Dr Vincent Bajinya, 65, will appear at Westminster Magistrates’ Court on Tuesday charged with seven offences.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr2092216nywo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "17:48",
+      "category": "global"
+    },
+    {
       "id": "global-rss-aeca218ae5605c5be07b",
-      "title": "Three arrested in South Africa over one of nine women's body finds",
+      "title": "Two charged with woman's murder as South Africa police investigate eight other body finds",
       "summary": "The body of Jabulile Ntimba was the ninth to be found recently in an area east of Johannesburg.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c617j2x01epjo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
-      "time": "12:22",
+      "time": "17:06",
       "category": "global"
     },
     {
-      "id": "global-rss-1c6eaeb0daa1d2788bd6",
-      "title": "CNN, MS NOW and Politico to file lawsuit against Trump's White House ban",
-      "summary": "The US media outlets say they are defending \"the principle that the government does not decide what the press reports or publishes\".",
+      "id": "global-rss-bc09a6f0c3452f7035d5",
+      "title": "Seven Ethiopian rebel groups form new alliance",
+      "summary": "The groups have been active in Ethiopia's most populous regions for years and now say they will work together.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0e32rwvrryo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckp84pj8zpngo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
-      "time": "12:21",
+      "time": "17:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e035c621630bbf31eca4",
+      "title": "Merz vows to keep coalition together for Germany's 'democratic future'",
+      "summary": "The chancellor has come under increasing pressure after resounding state election defeats, but says the results \"go far beyond my own person\"",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm27p8enwmko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "16:54",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7052dc33ef86bd2af2b0",
+      "title": "Watch: Timelapse shows typhoon barrelling towards Japan",
+      "summary": "The typhoon is passing Japan's eastern coast, bringing major disruption and heavy rainfall in its wake.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm0j3224p6j8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "16:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-774d6d209c0ba4cdff40",
+      "title": "London Fashion Week 2026: The five trends we'll see in spring",
+      "summary": "As London Fashion Week comes to a close, here are the biggest trends for your wardrobe.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmzxz2pe5vd0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "16:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1a4a8ccdd565f844ea4e",
+      "title": "Xhaka under investigation over Covid-19 certificate",
+      "summary": "Switzerland captain Granit Xhaka is being investigated over an issue with his Covid-19 vaccination certificate.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c3qjkpgengn7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "15:24",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c8e7aa74cf6226491262",
+      "title": "Yemenis flee across Red Sea as Houthis and Saudi-backed forces escalate war",
+      "summary": "The BBC's Frank Gardner speaks to some of those who have fled the war by crossing the Red Sea to Djibouti.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw4gm7l742dmo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "14:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-93c4e6486c69bcad2d65",
+      "title": "Merz's political crisis threatens Germany's obsession with stability",
+      "summary": "Political shifts in Germany are being watched closely in Europe and beyond, Katya Adler writes.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgyz1n0v1xo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "13:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4e45a51902dc7710a8eb",
+      "title": "Google hit with €403m fine by Irish data watchdog over GDPR violations",
+      "summary": "The penalty follows an inquiry launched into the tech giant six years ago, following complaints from several European consumer rights organisations.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1e52v16ngxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "12:30",
       "category": "global"
     },
     {
@@ -617,17 +749,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ye7v88qy7o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
       "time": "12:08",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-bc09a6f0c3452f7035d5",
-      "title": "Seven Ethiopian rebel groups form new alliance",
-      "summary": "The groups have been active in Ethiopia's most populous regions for years and now say they will work together.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckp84pj8zpngo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-21",
-      "time": "11:46",
       "category": "global"
     },
     {
@@ -661,17 +782,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2z10zk736o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
       "time": "07:20",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-89c2a67c5eaedbf2111a",
-      "title": "Presley Gerber, Cindy Crawford's son, dies aged 27",
-      "summary": "His family asked for privacy during a \"very difficult and painful time\" following the model's death.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmdx0pqrv72wo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-21",
-      "time": "07:01",
       "category": "global"
     },
     {
