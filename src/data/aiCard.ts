@@ -32,7 +32,7 @@ Evan Lin (贾岱林) is a 19-year-old founder and Computer Science student at UN
 - Personality: ENTJ — a strategist who likes shipping
 
 ## What he's done
-- AI Product Intern (Technical) at MosMos AI Voice Assistant: contributed to voice input, meeting summaries, intelligent Q&A, and web search across macOS and Windows, from requirements and model integration to end-to-end validation and releases. The project ranked No. 4 on the Product Hunt ChatGPT Astra leaderboard.
+- AI Product Intern (Technical) at 上海模思智能有限公司 (Sep 2026-Present), working on MosMos AI Voice Assistant: contributed to voice input, meeting summaries, intelligent Q&A, and web search across macOS and Windows, from requirements and model integration to end-to-end validation and releases. The project ranked No. 4 on the Product Hunt ChatGPT Astra leaderboard.
 - Founded and led Hypha (Beijing) as CEO at 18: a 7-person team across engineering, design, and legal; took an NFT product from zero to ¥100K+ single-day revenue; owned roadmap, architecture, and backend.
 - Ships open-source AI tools used internationally: Chiron Prompt (prompt optimization), a 3D-print skill for Claude, and more.
 - Builds full products across AI workflows, personal planning, and creator tools: Roundtable (reviewable AI coding workflows), Akeso (personal energy coaching), LensDex / 镜库 (camera and lens research), ChronoMap (interactive heritage map), FinalBoss (AI exam prep used by 150+ users), and a study platform that had paying subscribers.
