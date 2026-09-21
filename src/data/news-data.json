@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21T04:59:13.644421Z",
+  "lastUpdated": "2026-09-21T12:22:17.698890Z",
   "availableDates": [
     {
       "value": "2026-09-21",
@@ -575,6 +575,138 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-1c6eaeb0daa1d2788bd6",
+      "title": "CNN, MS NOW and Politico to file lawsuit against Trump's White House ban",
+      "summary": "The US media outlets say they are defending \"the principle that the government does not decide what the press reports or publishes\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0e32rwvrryo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "12:21",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-15afdceaa225b5702739",
+      "title": "US strikes on alleged drug boats could be crimes against humanity, says UN",
+      "summary": "A report says the attacks, of which there have been at least 68, were not self-defence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ye7v88qy7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "12:08",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-bc09a6f0c3452f7035d5",
+      "title": "Seven Ethiopian rebel groups form new alliance",
+      "summary": "The groups have been active in Ethiopia's most populous regions for years and now say they will work together.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckp84pj8zpngo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "11:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-aeca218ae5605c5be07b",
+      "title": "Three arrested in South Africa over one of nine women's body finds",
+      "summary": "The body of Jabulile Ntimba was the ninth to be found recently in an area east of Johannesburg.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c617j2x01epjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "10:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-29d55e5d8ecc357e3132",
+      "title": "Inside Djibouti refugee camp for thousands fleeing Houthi advance in Yemen",
+      "summary": "Fighting on Yemen's west coast has prompted thousands of people to flee by boat across the Bab al-Mandab Strait.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6z0z2nne11vo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "10:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-313473f6a5135e709440",
+      "title": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on",
+      "summary": "Exit polls show damaging losses for Merz's centre-right CDU party in the state of Mecklenburg-Vorpommern and Berlin.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "08:56",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ac4cd3a5efff8a60cc0f",
+      "title": "Sydney policeman allegedly disguised himself as Uber Eats rider before murders",
+      "summary": "Beaumont Lamarre-Condon has pleaded not guilty to the 2024 murder of his ex-partner and his new boyfriend.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2z10zk736o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "07:20",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-89c2a67c5eaedbf2111a",
+      "title": "Presley Gerber, Cindy Crawford's son, dies aged 27",
+      "summary": "His family asked for privacy during a \"very difficult and painful time\" following the model's death.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmdx0pqrv72wo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "07:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ef3433f590e5b6705ec8",
+      "title": "'No surprises' as results emerge in Russian parliamentary election",
+      "summary": "Preliminary results suggest that Kremlin-backed United Russia is on course to retain its constitutional majority.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cjp30pq0rx6ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "06:58",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a241fac39f6c20e5e497",
+      "title": "'Far from their best' to 'a joy to watch' - ranking Premier League teams' start to season",
+      "summary": "Five matches into the league season, which teams in the Premier League have impressed so far and who have disappointed?",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cq70d74g4d8go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "06:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1e7ce6a8ed2731ee8a93",
+      "title": "Lindsay Clancy's ex-husband says he forgave her so he would not be 'eaten up inside forever'",
+      "summary": "Patrick Clancy gives his first interview since his wife's mistrial over the killing of their three young children.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq5yme200n8go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "05:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b7dee4be8463359fce4d",
+      "title": "US and China discuss AI safety plan ahead of Trump-Xi summit",
+      "summary": "Top US and Chinese officials held talks in New York on Sunday ahead of a Trump-Xi summit this week.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8vgyzn2d31yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "05:50",
+      "category": "global"
+    },
     {
       "id": "research-20260317-0805-crystal-benchmark-for-transparent-multimodal-reasoning-evaluatio",
       "title": "Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning Evaluation",
@@ -2930,14 +3062,69 @@
       "category": "research"
     },
     {
-      "id": "global-rss-313473f6a5135e709440",
-      "title": "German Chancellor Merz calls state election a 'disaster' for his party but vows to stay on",
-      "summary": "Exit polls show damaging losses for Merz's centre-right CDU party in the state of Mecklenburg-Vorpommern and Berlin.",
+      "id": "global-rss-56646a55041df366e2b7",
+      "title": "UK should 'team up' with Canada in new Europe alliance, Canadian minister tells BBC",
+      "summary": "It comes after European Commission President proposed \"opening the door\" for Canada to become an associate member of the EU.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvwyz29n0nn2o?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmed7p06epxjo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
-      "time": "03:22",
+      "time": "04:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c9527db831208a56ccc3",
+      "title": "Watch: Dramatic moment a cargo ship crashes into another vessel",
+      "summary": "Verified footage appears to show a cargo ship colliding with a fishing boat near Singapore, with investigators still working to establish exactly when and how the crash happened.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cq0lr24x3ep1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "02:27",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-467ae2284464849687a4",
+      "title": "Russia's elections had few surprises - but how the Kremlin uses the results will be crucial",
+      "summary": "Vladimir Putin will likely use the result to claim most Russians back the so-called special military operation in Ukraine, writes the BBC's Steve Rosenberg.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx4gqv239043o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "00:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1f628cfb768fde2d6500",
+      "title": "Jailed teacher convicted of sexual abuse secretly released early in Indonesia, BBC finds",
+      "summary": "Undercover footage recorded by the BBC reveals he has been released after serving less than half his sentence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9zrz0nl4p70o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "23:12",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-60c7ee7f40a0f823b6a3",
+      "title": "Watch: BBC tracks down abusive teacher secretly released early",
+      "summary": "BBC Eye has discovered a teacher who was imprisoned for sexually assaulting a student in Indonesia has been secretly released early.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c5gmrlm7pm0vo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "23:09",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b40e401be0aebe17eaac",
+      "title": "Workers came across human remains – and unearthed a mass grave of 572 people",
+      "summary": "Workers in northern Sri Lanka accidentally uncovered the country's largest mass grave – and reopened wounds from its civil war.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm1j4kl80z56o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "22:28",
       "category": "global"
     },
     {
@@ -2960,6 +3147,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm36l2pye2kwo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-20",
       "time": "19:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1c0a80be4b784d49730a",
+      "title": "Burnham hails Greenland deal ahead of expected first Trump meeting",
+      "summary": "While Burnham praised the agreement, Lib Dem leader Ed Davey called it a \"pretend\" victory for Trump.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8207255rq5lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-20",
+      "time": "17:25",
       "category": "global"
     },
     {
