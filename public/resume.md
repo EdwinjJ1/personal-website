@@ -60,7 +60,9 @@ Dataset: https://huggingface.co/datasets/ErfanMoosaviMonazzah/fake-news-detectio
 
 ## Experience
 
-### AI Product Intern (Technical) - MosMos AI Voice Assistant
+### AI Product Intern (Technical) - 上海模思智能有限公司
+
+*Sep 2026-Present* | Product: MosMos AI Voice Assistant
 
 - Contributed to product design and delivery for an AI voice assistant across voice input, meeting notes, and intelligent Q&A; defined user flows, requirements, and acceptance criteria with client and backend teams.
 - Designed ASR and LLM workflows for speech recognition, text refinement, speaker differentiation, and meeting summaries, balancing latency, output quality, and error handling.

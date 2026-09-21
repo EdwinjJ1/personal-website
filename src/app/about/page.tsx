@@ -31,11 +31,11 @@ const skills = [
 
 const timeline = [
   {
-    year: "MosMos",
+    year: "Sep 2026 - Present",
     title: "AI Product Intern (Technical)",
-    organization: "MosMos AI Voice Assistant",
+    organization: "上海模思智能有限公司 · MosMos AI",
     location: "macOS & Windows",
-    description: "Helped deliver multiple releases of an AI voice assistant, taking voice input, meeting summaries, and intelligent Q&A from product design and technical integration through acceptance and launch.",
+    description: "Helped deliver multiple releases of MosMos AI Voice Assistant, taking voice input, meeting summaries, and intelligent Q&A from product design and technical integration through acceptance and launch.",
     highlights: [
       "Defined user flows, requirements, and acceptance criteria with client and backend teams",
       "Designed ASR and LLM workflows for text refinement, speaker differentiation, and meeting summaries",
