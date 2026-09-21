@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 21, 2026",
   "items": [
     {
-      "id": "research-20260317-0805-crystal-benchmark-for-transparent-multimodal-reasoning-evaluatio",
-      "title": "Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning Evaluation",
-      "tag": "RESEARCH",
+      "id": "global-rss-1c6eaeb0daa1d2788bd6",
+      "title": "CNN, MS NOW and Politico to file lawsuit against Trump's White House ban",
+      "tag": "BREAKING",
       "date": "2026-09-21",
-      "time": "04:00",
-      "category": "research"
+      "time": "12:21",
+      "category": "global"
     },
     {
-      "id": "research-rss-7517c50358dbe9ce4cc6",
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "tag": "RESEARCH",
+      "id": "global-rss-15afdceaa225b5702739",
+      "title": "US strikes on alleged drug boats could be crimes against humanity, says UN",
+      "tag": "BREAKING",
       "date": "2026-09-21",
-      "time": "04:00",
-      "category": "research"
+      "time": "12:08",
+      "category": "global"
     },
     {
-      "id": "research-rss-a51d145ffe436938784a",
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "tag": "RESEARCH",
+      "id": "global-rss-bc09a6f0c3452f7035d5",
+      "title": "Seven Ethiopian rebel groups form new alliance",
+      "tag": "BREAKING",
       "date": "2026-09-21",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:46",
+      "category": "global"
     }
   ]
 } as const;
