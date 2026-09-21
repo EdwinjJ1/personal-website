@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 21, 2026",
   "items": [
     {
-      "id": "global-rss-aeca218ae5605c5be07b",
-      "title": "Three arrested in South Africa over one of nine women's body finds",
-      "tag": "BREAKING",
-      "date": "2026-09-21",
-      "time": "12:22",
-      "category": "global"
-    },
-    {
       "id": "global-rss-1c6eaeb0daa1d2788bd6",
-      "title": "CNN, MS NOW and Politico to file lawsuit against Trump's White House ban",
+      "title": "CNN, MS NOW and Politico file lawsuit against Trump's White House ban",
       "tag": "BREAKING",
       "date": "2026-09-21",
-      "time": "12:21",
+      "time": "21:52",
       "category": "global"
     },
     {
-      "id": "global-rss-5708f274c5144bb0d5fd",
-      "title": "British Museum bans visitors from photographing Bayeux Tapestry",
+      "id": "global-rss-acbeb50af663ca4e10ec",
+      "title": "Millions urged to evacuate as powerful Typhoon Dujuan hits Japan",
       "tag": "BREAKING",
       "date": "2026-09-21",
-      "time": "12:21",
+      "time": "20:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1cf5f9f6e248667200fc",
+      "title": "Airlines criticise air traffic control as second glitch causes more disruption in UK",
+      "tag": "BREAKING",
+      "date": "2026-09-21",
+      "time": "20:21",
       "category": "global"
     }
   ]
