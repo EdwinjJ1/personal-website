@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21T12:22:17.698890Z",
+  "lastUpdated": "2026-09-21T12:52:06.597750Z",
   "availableDates": [
     {
       "value": "2026-09-21",
@@ -576,12 +576,34 @@
   ],
   "news": [
     {
+      "id": "global-rss-aeca218ae5605c5be07b",
+      "title": "Three arrested in South Africa over one of nine women's body finds",
+      "summary": "The body of Jabulile Ntimba was the ninth to be found recently in an area east of Johannesburg.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c617j2x01epjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "12:22",
+      "category": "global"
+    },
+    {
       "id": "global-rss-1c6eaeb0daa1d2788bd6",
       "title": "CNN, MS NOW and Politico to file lawsuit against Trump's White House ban",
       "summary": "The US media outlets say they are defending \"the principle that the government does not decide what the press reports or publishes\".",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0e32rwvrryo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "12:21",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5708f274c5144bb0d5fd",
+      "title": "British Museum bans visitors from photographing Bayeux Tapestry",
+      "summary": "Visitors stopping to take pictures of the 68m medieval embroidery were holding up others, prompting the rule change.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmd79p4z98lzo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
       "time": "12:21",
       "category": "global"
@@ -606,17 +628,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ckp84pj8zpngo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
       "time": "11:46",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-aeca218ae5605c5be07b",
-      "title": "Three arrested in South Africa over one of nine women's body finds",
-      "summary": "The body of Jabulile Ntimba was the ninth to be found recently in an area east of Johannesburg.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c617j2x01epjo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-21",
-      "time": "10:35",
       "category": "global"
     },
     {
