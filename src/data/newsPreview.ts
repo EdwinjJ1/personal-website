@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 22, 2026",
   "items": [
     {
-      "id": "research-20260317-0805-crystal-benchmark-for-transparent-multimodal-reasoning-evaluatio",
-      "title": "Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning Evaluation",
-      "tag": "RESEARCH",
+      "id": "global-rss-2d07e8f1b5d5acfd5b60",
+      "title": "Doctor in court to face Rwanda genocide charges in UK",
+      "tag": "BREAKING",
       "date": "2026-09-22",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:25",
+      "category": "global"
     },
     {
-      "id": "research-rss-7517c50358dbe9ce4cc6",
-      "title": "RBS-Attention: Radius-Bounded Sparse Prefill for Long-Context Large Language Models",
-      "tag": "RESEARCH",
+      "id": "global-rss-1fb27fe8888fcdedb8cb",
+      "title": "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
+      "tag": "BREAKING",
       "date": "2026-09-22",
-      "time": "04:00",
-      "category": "research"
+      "time": "10:45",
+      "category": "global"
     },
     {
-      "id": "research-rss-a51d145ffe436938784a",
-      "title": "Attention-Aware Routing: Coupling Routing and Attention in MoEs",
-      "tag": "RESEARCH",
+      "id": "global-rss-0bf9156e89877657c1cb",
+      "title": "Eleven injured in shooting outside Turkish school",
+      "tag": "BREAKING",
       "date": "2026-09-22",
-      "time": "04:00",
-      "category": "research"
+      "time": "10:42",
+      "category": "global"
     }
   ]
 } as const;
