@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22T16:59:28.046126Z",
+  "lastUpdated": "2026-09-22T21:21:55.952738Z",
   "availableDates": [
     {
       "value": "2026-09-22",
@@ -580,6 +580,105 @@
   ],
   "news": [
     {
+      "id": "global-rss-a0d4c8b969aca2a61624",
+      "title": "How Ceuta, football and Israel are shaping Morocco's election",
+      "summary": "Young voters are being courted with football slogans, promises of jobs and anti-Israel rallying calls.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8r4v7n6py97o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "20:59",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-a5840e5a42f749a2ff4d",
+      "title": "Tech Life",
+      "summary": "China is competing with the United States and other nations to develop AI.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyg?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "20:00",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-25b91f8afeb701b30b85",
+      "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
+      "summary": "Three churches and three luxury hotels were targeted in the 2019 attacks which killed 270.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "19:47",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7949c04832a7bcafb5c0",
+      "title": "What is the White House pool and why is it in a row with Trump?",
+      "summary": "The White House press pool is at the centre of a major row between President Donald Trump and TV networks. What is it?",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8dx5dy5rzz2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "19:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-70f11dbf8f061a0dd991",
+      "title": "Ukraine anger as EU removes Russian oligarchs from sanctions list",
+      "summary": "Alisher Usmanov and Mikhail Fridman both have close ties to President Putin, and Kyiv said the move sent Moscow the wrong signals.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6dj4k98107do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "19:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9474722a1fbe0050caa8",
+      "title": "US to build two military bases in Greenland under new deal with Denmark",
+      "summary": "The defence deal signed at the UN General Assembly also re-affirms Denmark's sovereignty over its semi-autonomous Arctic territory.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "18:43",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0b1997a2713482cc267c",
+      "title": "Cyclist who dressed as man to avoid Taliban wins silver medal",
+      "summary": "Afghan cyclist Fariba Hashimi wins silver in the women's road race at the Asian Games, having fled oppression in her home country to pursue a sporting dream.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/cycling/articles/c63eqyvdndwdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "16:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8d3eff57f3565bc49818",
+      "title": "Top South African policeman charged with sexual offences",
+      "summary": "Shadrack Sibiya, who has made no comment, is alleged to have groomed a 16-year-old and raped an 18-year-old.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvgx77n0zo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "16:54",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-3282bbfc457cc0cd7d33",
+      "title": "'I have never felt heat like that' - a survivor on watching 33 cellmates die in Nigeria",
+      "summary": "The BBC goes inside the prison where prisoners were trapped in stifling, cramped conditions.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm27jen9r23o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "16:42",
+      "category": "global"
+    },
+    {
       "id": "global-rss-5436f3eec4b1eb117806",
       "title": "Father admits causing death of his son in Cyprus hotel fall",
       "summary": "The two-year-old boy fell from the window of a hotel in Cyprus in July, a Paphos court hears.",
@@ -646,17 +745,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-25b91f8afeb701b30b85",
-      "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
-      "summary": "Three churches and three luxury hotels were targeted in the 2019 attacks which killed 270.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-22",
-      "time": "14:03",
-      "category": "global"
-    },
-    {
       "id": "global-rss-3576d46893ca7b1407a1",
       "title": "Lindsay Clancy's lawyer asks judge to investigate juror and check his phone",
       "summary": "The attorney wants the court to look at the juror's mobile phone use and answers on questionnaires.",
@@ -709,17 +797,6 @@
       "sourceUrl": "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-22",
       "time": "12:54",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-7949c04832a7bcafb5c0",
-      "title": "What is the White House pool and why is it in a row with Trump?",
-      "summary": "The White House press pool is at the centre of a major row between President Donald Trump and TV networks. What is it?",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8dx5dy5rzz2o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-22",
-      "time": "12:26",
       "category": "global"
     },
     {

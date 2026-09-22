@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 22, 2026",
   "items": [
     {
-      "id": "global-rss-5436f3eec4b1eb117806",
-      "title": "Father admits causing death of his son in Cyprus hotel fall",
+      "id": "global-rss-a0d4c8b969aca2a61624",
+      "title": "How Ceuta, football and Israel are shaping Morocco's election",
       "tag": "BREAKING",
       "date": "2026-09-22",
-      "time": "15:52",
+      "time": "20:59",
       "category": "global"
     },
     {
-      "id": "global-rss-76c585a3c7072075d8bf",
-      "title": "Autopsy shows Hayden Panettiere died from a drug overdose",
-      "tag": "BREAKING",
+      "id": "industry-rss-a5840e5a42f749a2ff4d",
+      "title": "Tech Life",
+      "tag": "PRODUCT",
       "date": "2026-09-22",
-      "time": "15:17",
-      "category": "global"
+      "time": "20:00",
+      "category": "industry"
     },
     {
-      "id": "global-rss-3b79a23a7c6179a841b0",
-      "title": "Call of Duty's Activision to make next Halo game as Xbox cuts more jobs",
+      "id": "global-rss-25b91f8afeb701b30b85",
+      "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
       "tag": "BREAKING",
       "date": "2026-09-22",
-      "time": "14:51",
+      "time": "19:47",
       "category": "global"
     }
   ]
