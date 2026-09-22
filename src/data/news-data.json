@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22T04:59:37.205947Z",
+  "lastUpdated": "2026-09-22T11:42:02.519356Z",
   "availableDates": [
     {
       "value": "2026-09-22",
@@ -579,6 +579,149 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-2d07e8f1b5d5acfd5b60",
+      "title": "Doctor in court to face Rwanda genocide charges in UK",
+      "summary": "Dr Vincent Brown was charged following a seven year British investigation into the 1994 killings.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790y1gj247o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "11:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1fb27fe8888fcdedb8cb",
+      "title": "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
+      "summary": "Sinkevičius told BBC Newsnight Lithuanians feel \"constantly threatened\" by Moscow, but the nation was prepared to \"fight back\" if attacked.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "10:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0bf9156e89877657c1cb",
+      "title": "Eleven injured in shooting outside Turkish school",
+      "summary": "Footage appears to show a male in the area carrying a firearm, while officials say the attacker has been captured.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y0z4gv0le4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "10:42",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-85ebd3f9d7054e1b49c5",
+      "title": "British man missing after diving into Lake Como to rescue teenager",
+      "summary": "The UK Foreign Office says it is supporting the man's family and working with local authorities.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx8d38djqm25o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "10:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a32e0631b84fb1f2331f",
+      "title": "To Kill A Mockingbird first edition found in London charity shop",
+      "summary": "An original US edition of To Kill a Mockingbird is found in an Oxfam store in west London.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmd79wn72ngjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "10:11",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f37ba19d73b5d3191fa4",
+      "title": "Sri Lankan court to deliver verdict on deadly Easter bombings",
+      "summary": "Co-ordinated suicide attacks killed 270 people across several churches and hotels in Colombo in 2019.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8r687nedzgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "10:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f1bcd8cec3fb57cf397a",
+      "title": "Can you take the 'London' out of London Fashion Week?",
+      "summary": "An initiative to show that LFW is \"bigger than London\" launched this year - but will it make a difference?",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cklyjz20pd22o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "09:27",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-450eefac36d48a34320a",
+      "title": "Major US outlets boycott shared Trump coverage in protest at media ban",
+      "summary": "Regular coverage of the president has been disrupted after he banned CNN, MS NOW and Politico from the White House.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3rezd92y3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "08:17",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-007b74de84db576109dd",
+      "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
+      "summary": "The G7 also condemns \"in the strongest terms\" Houthi attacks on Saudi Arabia, saying that the escalation in fighting in Yemen jeopardises global energy security.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwm2qpmepmlzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "07:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-acbeb50af663ca4e10ec",
+      "title": "Four dead after powerful Typhoon Dujuan lashes Japan",
+      "summary": "The storm pulled away from Japan after bringing heavy rains and strong winds to Tokyo and surrounding areas.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm3wj2lexl97o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "05:58",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1ed04b5df5aea58841fc",
+      "title": "Texas ICE shooting leaves Venezuelan DoorDash driver with bullet in his back, says lawyer",
+      "summary": "The delivery driver was transferred from a hospital to a detention centre, his lawyer tells US media.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3y0z25v0zjwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "05:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2476496b3c12fe4b4b43",
+      "title": "Outrage in India over viral video of teen molested and her friend beaten",
+      "summary": "Three minors were arrested after videos capturing the assault went viral in India, sparking anger.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmz6z2vx65jeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "05:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ef506e975787470fd8fb",
+      "title": "Watch: What to expect as world leaders descend on New York - and who won't be there",
+      "summary": "The BBC’s Sarah Smith outlines which world leaders Trump is set to meet and the key topics expected on the agenda.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cxe87p9d4198o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "04:05",
+      "category": "global"
+    },
     {
       "id": "research-20260317-0805-crystal-benchmark-for-transparent-multimodal-reasoning-evaluatio",
       "title": "Beyond Final Answers: CRYSTAL Benchmark for Transparent Multimodal Reasoning Evaluation",
@@ -2934,6 +3077,17 @@
       "category": "research"
     },
     {
+      "id": "global-rss-60a948325ad11cd3331e",
+      "title": "Canadian province sues OpenAI over Tumbler Ridge school shooting",
+      "summary": "British Columbia has accused the company of failing to report the shooter's troubling interactions with ChatGPT to law enforcement.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3wyz2rkgrx0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "01:44",
+      "category": "global"
+    },
+    {
       "id": "global-rss-1c6eaeb0daa1d2788bd6",
       "title": "CNN, MS NOW and Politico file lawsuit against Trump's White House ban",
       "summary": "Major US networks later suspended White House TV coverage of Trump as he headed to New York for a UN summit.",
@@ -2945,14 +3099,14 @@
       "category": "global"
     },
     {
-      "id": "global-rss-acbeb50af663ca4e10ec",
-      "title": "Millions urged to evacuate as powerful Typhoon Dujuan hits Japan",
-      "summary": "The country's meteorological agency had warned of an \"imminent threat to life,\" but this has now been downgraded.",
+      "id": "global-rss-2abb279c7febaae249a9",
+      "title": "Why a Bollywood celebrity manager's 2020 death case has been reopened",
+      "summary": "Disha Salian's father insists her death was not suicide or an accident, but that she was gang-raped and murdered.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm3wj2lexl97o?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cpwl1ejlgw9o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
-      "time": "20:26",
+      "time": "23:32",
       "category": "global"
     },
     {
@@ -2964,6 +3118,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqp80p78mxx5o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-21",
       "time": "20:21",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9f5d707a5c3d97507a87",
+      "title": "Infantino says he is open to talks over Fifa reform",
+      "summary": "Fifa president Gianni Infantino has proposed an external review of how world football's governing body operates. shifting tone as he seeks support to stay on.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c639m2yggm1ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-21",
+      "time": "19:50",
       "category": "global"
     },
     {
