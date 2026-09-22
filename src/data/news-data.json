@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-22T11:42:02.519356Z",
+  "lastUpdated": "2026-09-22T16:59:28.046126Z",
   "availableDates": [
     {
       "value": "2026-09-22",
@@ -580,6 +580,160 @@
   ],
   "news": [
     {
+      "id": "global-rss-5436f3eec4b1eb117806",
+      "title": "Father admits causing death of his son in Cyprus hotel fall",
+      "summary": "The two-year-old boy fell from the window of a hotel in Cyprus in July, a Paphos court hears.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gvyz2vlkvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "15:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-76c585a3c7072075d8bf",
+      "title": "Autopsy shows Hayden Panettiere died from a drug overdose",
+      "summary": "The death of the child star - who had fentanyl, Xanax, a muscle relaxant and antipsychotic medication in her system - was ruled an accident.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crn45d8dd2wdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "15:17",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-3b79a23a7c6179a841b0",
+      "title": "Call of Duty's Activision to make next Halo game as Xbox cuts more jobs",
+      "summary": "The news comes as part of a \"reset\" announced by Xbox in July, with 3,600 planned job losses overall.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvj64gz74ky4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "14:51",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-3b79a23a7c6179a841b0",
+      "title": "Call of Duty's Activision to make next Halo game as Xbox cuts more jobs",
+      "summary": "The news comes as part of a \"reset\" announced by Xbox in July, with 3,600 planned job losses overall.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvj64gz74ky4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "14:51",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-6addf72af2ca3baafa14",
+      "title": "Neutral venues and no 'away' fans - how Israel v Republic of Ireland became so contentious",
+      "summary": "BBC Sport explores the backdrop to the Republic of Ireland's matches against Israel, amid fraught tensions between the nations.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/ckz7z5w7ey2jo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "14:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-10d20e10ea8802d08e3c",
+      "title": "Veteran BBC Africa correspondent Mark Doyle dies aged 67",
+      "summary": "Doyle was best known for reporting on African conflicts in the 1990s and 2000s, notably in Rwanda and Sierra Leone.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq986214den3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "14:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-25b91f8afeb701b30b85",
+      "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
+      "summary": "Three churches and three luxury hotels were targeted in the 2019 attacks which killed 270.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "14:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-3576d46893ca7b1407a1",
+      "title": "Lindsay Clancy's lawyer asks judge to investigate juror and check his phone",
+      "summary": "The attorney wants the court to look at the juror's mobile phone use and answers on questionnaires.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gvyw80dp2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "13:58",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1fb27fe8888fcdedb8cb",
+      "title": "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
+      "summary": "Sinkevičius told BBC Newsnight Lithuanians feel \"constantly threatened\" by Moscow, but the nation was prepared to \"fight back\" if attacked.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "13:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-007b74de84db576109dd",
+      "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
+      "summary": "The G7 also condemns \"in the strongest terms\" Houthi attacks on Saudi Arabia, saying that the escalation in fighting in Yemen jeopardises global energy security.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwm2qpmepmlzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "13:39",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-964a8fdf8ee1ea467bc9",
+      "title": "Why is the Bab al-Mandab Strait so important?",
+      "summary": "The BBC's Frank Gardner explains why the narrow waterway is key to oil transportation and the world economy.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6kgw4xklvx3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "12:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1fbd54746d123764b781",
+      "title": "Developing El Niño becomes strongest on record weeks before expected peak",
+      "summary": "Scientists say the developing El Niño is now the strongest on record with weather impacts already being felt around the world.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "12:54",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7949c04832a7bcafb5c0",
+      "title": "What is the White House pool and why is it in a row with Trump?",
+      "summary": "The White House press pool is at the centre of a major row between President Donald Trump and TV networks. What is it?",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8dx5dy5rzz2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "12:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-85ebd3f9d7054e1b49c5",
+      "title": "British man missing after diving into Lake Como to rescue teenager",
+      "summary": "The man had jumped in to save a father and son in difficulty in the water, local officials say.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx8d38djqm25o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "11:44",
+      "category": "global"
+    },
+    {
       "id": "global-rss-2d07e8f1b5d5acfd5b60",
       "title": "Doctor in court to face Rwanda genocide charges in UK",
       "summary": "Dr Vincent Brown was charged following a seven year British investigation into the 1994 killings.",
@@ -591,17 +745,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-1fb27fe8888fcdedb8cb",
-      "title": "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
-      "summary": "Sinkevičius told BBC Newsnight Lithuanians feel \"constantly threatened\" by Moscow, but the nation was prepared to \"fight back\" if attacked.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-22",
-      "time": "10:45",
-      "category": "global"
-    },
-    {
       "id": "global-rss-0bf9156e89877657c1cb",
       "title": "Eleven injured in shooting outside Turkish school",
       "summary": "Footage appears to show a male in the area carrying a firearm, while officials say the attacker has been captured.",
@@ -610,17 +753,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y0z4gv0le4o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-22",
       "time": "10:42",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-85ebd3f9d7054e1b49c5",
-      "title": "British man missing after diving into Lake Como to rescue teenager",
-      "summary": "The UK Foreign Office says it is supporting the man's family and working with local authorities.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx8d38djqm25o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-22",
-      "time": "10:29",
       "category": "global"
     },
     {
@@ -658,24 +790,13 @@
     },
     {
       "id": "global-rss-450eefac36d48a34320a",
-      "title": "Major US outlets boycott shared Trump coverage in protest at media ban",
+      "title": "Major US outlets suspend shared Trump coverage in protest at media ban",
       "summary": "Regular coverage of the president has been disrupted after he banned CNN, MS NOW and Politico from the White House.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3rezd92y3o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-22",
       "time": "08:17",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-007b74de84db576109dd",
-      "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
-      "summary": "The G7 also condemns \"in the strongest terms\" Houthi attacks on Saudi Arabia, saying that the escalation in fighting in Yemen jeopardises global energy security.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwm2qpmepmlzo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-22",
-      "time": "07:14",
       "category": "global"
     },
     {
@@ -713,7 +834,7 @@
     },
     {
       "id": "global-rss-ef506e975787470fd8fb",
-      "title": "Watch: What to expect as world leaders descend on New York - and who won't be there",
+      "title": "What to expect as world leaders descend on New York - and who won't be there",
       "summary": "The BBC’s Sarah Smith outlines which world leaders Trump is set to meet and the key topics expected on the agenda.",
       "tag": "BREAKING",
       "source": "BBC World",
