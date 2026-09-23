@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 23, 2026",
   "items": [
     {
-      "id": "research-rss-57154098a79d16f7645e",
-      "title": "Bayesian Belief Layer for Controllable Opinion Dynamics in LLM Agents",
-      "tag": "RESEARCH",
+      "id": "global-rss-dfecf4f16d3efd50d1ba",
+      "title": "Angry Anderson, rock star who soundtracked Kylie's wedding in Neighbours, dies aged 79",
+      "tag": "BREAKING",
       "date": "2026-09-23",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:18",
+      "category": "global"
     },
     {
-      "id": "research-20260721-0000-environment-free-synthetic-data-generation-for-api-calling-agent",
-      "title": "Simulate to Generalize: Scaling Stateful Supervision for API-calling Agents using LLM World Models",
-      "tag": "RESEARCH",
+      "id": "global-rss-6c8bc7fef5320e225db0",
+      "title": "What's at stake when Trump and Xi meet in the US?",
+      "tag": "BREAKING",
       "date": "2026-09-23",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:00",
+      "category": "global"
     },
     {
-      "id": "research-20260614-1206-multiagent-protocols-with-aggregated-confidence-signals",
-      "title": "Confidence Composition for Multiagent Language Model Systems",
-      "tag": "RESEARCH",
+      "id": "global-rss-b0c6a040cc34d454cdc8",
+      "title": "Trump meets US-backed Venezuelan president for first time since Maduro seized",
+      "tag": "BREAKING",
       "date": "2026-09-23",
-      "time": "04:00",
-      "category": "research"
+      "time": "09:48",
+      "category": "global"
     }
   ]
 } as const;
