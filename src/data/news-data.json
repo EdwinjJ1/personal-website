@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T04:48:12.961658Z",
+  "lastUpdated": "2026-09-23T11:40:41.284970Z",
   "availableDates": [
     {
       "value": "2026-09-23",
@@ -583,6 +583,105 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-dfecf4f16d3efd50d1ba",
+      "title": "Angry Anderson, rock star who soundtracked Kylie's wedding in Neighbours, dies aged 79",
+      "summary": "He fronted the rock band Rose Tattoo, but became best known for his solo hit Suddenly.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqn745px55nno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "11:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6c8bc7fef5320e225db0",
+      "title": "What's at stake when Trump and Xi meet in the US?",
+      "summary": "The BBC’s China correspondent and US editor explain everything you need to know ahead of the Trump-Xi meeting in Washington DC.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c38xk275jd21o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "11:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b0c6a040cc34d454cdc8",
+      "title": "Trump meets US-backed Venezuelan president for first time since Maduro seized",
+      "summary": "Rodriguez was handpicked by Trump as leader of Venezuela was arrested and taken to the US",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cj207y30wp0lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "09:48",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-c37c01db3860399fae69",
+      "title": "Pornhub investigated over its age checks",
+      "summary": "The regulator says it has concerns over how the site is relying on third party checks provided by Apple for some users.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6eq8dw3dlyqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "09:12",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-e175d70b2286baa5e6c8",
+      "title": "Eleven killed in mass shooting at house in South Africa",
+      "summary": "One of those killed is believed to be a pregnant woman, police said.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "07:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-db5a7211171795f65a47",
+      "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
+      "summary": "The US Justice Department's response to a lawsuit filed by CNN, Politico and MS NOW also cites national security.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "06:47",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0f2aa42397f1237e2285",
+      "title": "US and Iran hold first talks since June after Trump's 'annihilation' threat",
+      "summary": "The talks are the first since a ceasefire collapsed in June, with the sides exchanging fire intermittently.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck62m1631d7po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "06:12",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-03e83a2be475d7755b21",
+      "title": "Reports of violence against women in Gaza surge, UN agency finds",
+      "summary": "The UN Population Fund also says there has been a \"severe escalation\" in the number of early and forced marriages.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c94gm7dp40y0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "05:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-df548b00b0ada59a51f0",
+      "title": "More than 170,000 respiratory cases recorded in haze-choked Indonesia",
+      "summary": "More than 40,000 of the cases – which range from mild coughs to pneumonia – involve toddlers.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq62j13gnyrko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "04:20",
+      "category": "global"
+    },
     {
       "id": "research-rss-57154098a79d16f7645e",
       "title": "Bayesian Belief Layer for Controllable Opinion Dynamics in LLM Agents",
@@ -4621,6 +4720,17 @@
       "category": "global"
     },
     {
+      "id": "global-rss-a997bfed079f21bc27d5",
+      "title": "Hurricane Polo intensifies into rare category 5 storm off the coast of Mexico",
+      "summary": "The storm's sudden intensification is \"truly remarkable\", the US hurricane monitoring agency said.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "02:54",
+      "category": "global"
+    },
+    {
       "id": "industry-rss-8189b0d4924dc37c233e",
       "title": "US criticises Australia's proposed algorithm opt-out laws as 'censorship'",
       "summary": "Under the draft laws, tech firms face fines if they do not give users the option to switch off algorithms.",
@@ -4630,6 +4740,28 @@
       "date": "2026-09-23",
       "time": "01:35",
       "category": "industry"
+    },
+    {
+      "id": "global-rss-f83d8e2e4ae65131bcd5",
+      "title": "Watch: Key moments from Andy Burnham's first UN speech",
+      "summary": "In his first speech to the UN as UK prime minister, Burnham highlighted the risks posed by Russian disinformation.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cq5y4zpn655ko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "01:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e697a5da32b50817ff95",
+      "title": "Playing loud music on the bus? That will cost you hundreds of dollars in Singapore",
+      "summary": "Authorities are cracking down on \"disruptive behaviours\" including eating onboard and putting feet on seats.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3kg80ve7x0no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "00:05",
+      "category": "global"
     },
     {
       "id": "global-rss-a9db91f60d544c08272c",
@@ -4666,8 +4798,8 @@
     },
     {
       "id": "industry-rss-a8ba1405a8aaf3d13eb4",
-      "title": "As Trump and Xi talk, China surges ahead with its AI ambitions",
-      "summary": "The BBC visits Inner Mongolia, where Beijing's AI infrastructure is progressing at \"China speed\", says one worker.",
+      "title": "Huge data centres rise at 'China speed' to power its AI ambitions",
+      "summary": "The BBC visits Inner Mongolia, an unlikely frontier in Beijing's AI race with Washington.",
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5ydz4kl65ro?at_medium=RSS&at_campaign=rss",
@@ -4676,8 +4808,19 @@
       "category": "industry"
     },
     {
+      "id": "global-rss-a8ba1405a8aaf3d13eb4",
+      "title": "Huge data centres rise at 'China speed' to power its AI ambitions",
+      "summary": "The BBC visits Inner Mongolia, an unlikely frontier in Beijing's AI race with Washington.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5ydz4kl65ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "22:04",
+      "category": "global"
+    },
+    {
       "id": "industry-rss-758c489d1cf9d19dd4b6",
-      "title": "Rare look at the remote engine rooms powering China's AI ambitions",
+      "title": "Rare look at the remote engine rooms fuelling China's AI boom",
       "summary": "The BBC is in Inner Mongolia where dozen of Chinese data centres are being constructed, as the country aims to lead the world in artificial intelligence.",
       "tag": "PRODUCT",
       "source": "BBC Technology",
@@ -4685,6 +4828,17 @@
       "date": "2026-09-22",
       "time": "22:03",
       "category": "industry"
+    },
+    {
+      "id": "global-rss-758c489d1cf9d19dd4b6",
+      "title": "Rare look at the remote engine rooms fuelling China's AI boom",
+      "summary": "The BBC is in Inner Mongolia where dozen of Chinese data centres are being constructed, as the country aims to lead the world in artificial intelligence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cwe8ejvv0leno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-22",
+      "time": "22:03",
+      "category": "global"
     },
     {
       "id": "global-rss-9474722a1fbe0050caa8",
