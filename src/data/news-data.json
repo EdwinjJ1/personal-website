@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T17:03:53.413422Z",
+  "lastUpdated": "2026-09-23T21:32:06.886816Z",
   "availableDates": [
     {
       "value": "2026-09-23",
@@ -584,25 +584,36 @@
   ],
   "news": [
     {
-      "id": "global-rss-416d6e7eb829ab0047cc",
-      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
-      "summary": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes.",
+      "id": "global-rss-4264506216ba0f46403c",
+      "title": "Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction",
+      "summary": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
-      "time": "16:53",
+      "time": "21:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-46dd0b19303bba2bbeb4",
+      "title": "UK survivor of Canadian poison seller says he exploited her despair",
+      "summary": "Elisabeth Belien tells Kenneth Law's sentencing hearing she took the poison when she was just 23 years old.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmvgy4237gq9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "21:16",
       "category": "global"
     },
     {
       "id": "global-rss-90210de10b2a2e91ed7f",
       "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
-      "summary": "In court, Miriam Haley said the assault had a \"devastating effect on my life and sense of security that may never go away\".",
+      "summary": "Assault survivor Miriam Haley said the \"devastating effect on my life and sense of security that may never go away\".",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm98626n260yo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
-      "time": "16:40",
+      "time": "18:51",
       "category": "global"
     },
     {
@@ -613,7 +624,40 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqvgyjy23ggjo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
-      "time": "15:58",
+      "time": "18:15",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-1ccf342131e2aeec4f4f",
+      "title": "Google Beam expands with new regions, partners, and customers",
+      "summary": "We’re expanding Google Beam to five new countries, and partnering with Industrious for an extended network.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/google-beam-expansion/",
+      "date": "2026-09-23",
+      "time": "18:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-db5a7211171795f65a47",
+      "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
+      "summary": "The US Justice Department's response to a lawsuit filed by CNN, Politico and MS NOW also cites national security.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "17:40",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-416d6e7eb829ab0047cc",
+      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
+      "summary": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "16:53",
       "category": "global"
     },
     {
@@ -680,17 +724,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
       "time": "14:02",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-db5a7211171795f65a47",
-      "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
-      "summary": "The US Justice Department's response to a lawsuit filed by CNN, Politico and MS NOW also cites national security.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "13:34",
       "category": "global"
     },
     {

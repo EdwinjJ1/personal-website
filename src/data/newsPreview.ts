@@ -3,11 +3,19 @@ export const newsPreview = {
   "latestLabel": "September 23, 2026",
   "items": [
     {
-      "id": "global-rss-416d6e7eb829ab0047cc",
-      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
+      "id": "global-rss-4264506216ba0f46403c",
+      "title": "Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction",
       "tag": "BREAKING",
       "date": "2026-09-23",
-      "time": "16:53",
+      "time": "21:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-46dd0b19303bba2bbeb4",
+      "title": "UK survivor of Canadian poison seller says he exploited her despair",
+      "tag": "BREAKING",
+      "date": "2026-09-23",
+      "time": "21:16",
       "category": "global"
     },
     {
@@ -15,15 +23,7 @@ export const newsPreview = {
       "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
       "tag": "BREAKING",
       "date": "2026-09-23",
-      "time": "16:40",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-4dcb53e3691638b9cb01",
-      "title": "Iran's president tells Trump it will never 'bend the knee'",
-      "tag": "BREAKING",
-      "date": "2026-09-23",
-      "time": "15:58",
+      "time": "18:51",
       "category": "global"
     }
   ]
