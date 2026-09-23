@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T11:40:41.284970Z",
+  "lastUpdated": "2026-09-23T17:03:53.413422Z",
   "availableDates": [
     {
       "value": "2026-09-23",
@@ -584,6 +584,116 @@
   ],
   "news": [
     {
+      "id": "global-rss-416d6e7eb829ab0047cc",
+      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
+      "summary": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "16:53",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-90210de10b2a2e91ed7f",
+      "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
+      "summary": "In court, Miriam Haley said the assault had a \"devastating effect on my life and sense of security that may never go away\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm98626n260yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "16:40",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4dcb53e3691638b9cb01",
+      "title": "Iran's president tells Trump it will never 'bend the knee'",
+      "summary": "Masoud Pezeshkian's defiant speech to the UN comes after the US president threatened to \"annihilate\" Iran if a peace deal is not agreed soon.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqvgyjy23ggjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "15:58",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-c37c01db3860399fae69",
+      "title": "Pornhub investigated over its age checks",
+      "summary": "The regulator says it has concerns over how the site is relying on third party checks provided by Apple for some users.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6eq8dw3dlyqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "15:56",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-6d3f6f21ab88e5775cef",
+      "title": "Watch: How toxic smog from wildfires is making Indonesians sick",
+      "summary": "Around 175,000 people in Indonesia have suffered from respiratory illness since August.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c962j1jgx884o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "15:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a23a4287ae5359876780",
+      "title": "Poland accuses Russian military helicopter of violating its airspace",
+      "summary": "Poland says the aircraft stayed in its skies for 42 seconds, forcing the Nato member to scramble its fighter jets.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c699d2dn9z0mo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "15:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7173ed7281d33b630cb2",
+      "title": "White House rolling out red carpet for historic Xi Jinping visit",
+      "summary": "Trump and Xi are expected to discuss a range of issues from trade to AI during the latter's multi-day visit to Washington.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6n9w410v3vzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "14:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-804cbed7a85c2bd3cf09",
+      "title": "Azerbaijan pardons Frenchman after EU lifts sanctions on Russian billionaire",
+      "summary": "Martin Ryan is pardoned months after he was jailed on charges of spying, but a second Frenchman remains in prison.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwp84rrrymd0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "14:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e175d70b2286baa5e6c8",
+      "title": "Eleven killed in mass shooting at house in South Africa",
+      "summary": "One of those killed is believed to be a pregnant woman, police said.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "14:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-db5a7211171795f65a47",
+      "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
+      "summary": "The US Justice Department's response to a lawsuit filed by CNN, Politico and MS NOW also cites national security.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "13:34",
+      "category": "global"
+    },
+    {
       "id": "global-rss-dfecf4f16d3efd50d1ba",
       "title": "Angry Anderson, rock star who soundtracked Kylie's wedding in Neighbours, dies aged 79",
       "summary": "He fronted the rock band Rose Tattoo, but became best known for his solo hit Suddenly.",
@@ -591,12 +701,78 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqn745px55nno?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
-      "time": "11:18",
+      "time": "13:20",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c89a7e14aca1783b5925",
+      "title": "Dramatic eviction of woman aged 87 highlights Spain's housing shortage",
+      "summary": "The tenant of the flat in Madrid, Maricarmen, was unable to pay the rent set by the firm which recently bought it.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy55lm8z1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "12:31",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a997bfed079f21bc27d5",
+      "title": "Hurricane Polo downgraded but remains 'very powerful' off coast of Mexico",
+      "summary": "The large storm in the Pacific Ocean is being driven by warm waters caused by the El Niño weather phenomenon.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "12:24",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0f97b37f06f7bd023c52",
+      "title": "Dolly Parton's manager accuses her nephew of 'threats and intimidation'",
+      "summary": "Bryan Seaver, who announced Parton's death to the world, is accused of trying to extort her estate.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c670lydl5wg5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "12:22",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-b7e58b5f1e5883b56db2",
+      "title": "OpenAI gives cyber defence tools to Ukraine",
+      "summary": "Ukraine will get access to OpenAI's advanced GPT 5.6 Sol model under the deal - a rival to Anthropic's Mythos and Fable",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c90kly26d7pzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "12:01",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-b7e58b5f1e5883b56db2",
+      "title": "OpenAI gives cyber defence tools to Ukraine",
+      "summary": "Ukraine will get access to OpenAI's advanced GPT 5.6 Sol model under the deal - a rival to Anthropic's Mythos and Fable",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c90kly26d7pzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "12:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-49bcaf46d61d787d3618",
+      "title": "South Sudan's president dissolves government ahead of country's first elections",
+      "summary": "South Sudan has not held elections since independence in 2011 - polls have twice been postponed.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8750ykkglq1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-23",
+      "time": "11:16",
       "category": "global"
     },
     {
       "id": "global-rss-6c8bc7fef5320e225db0",
-      "title": "What's at stake when Trump and Xi meet in the US?",
+      "title": "Watch: Trump and Xi are meeting on US soil - what's at stake?",
       "summary": "The BBC’s China correspondent and US editor explain everything you need to know ahead of the Trump-Xi meeting in Washington DC.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -614,39 +790,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cj207y30wp0lo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
       "time": "09:48",
-      "category": "global"
-    },
-    {
-      "id": "industry-rss-c37c01db3860399fae69",
-      "title": "Pornhub investigated over its age checks",
-      "summary": "The regulator says it has concerns over how the site is relying on third party checks provided by Apple for some users.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6eq8dw3dlyqo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "09:12",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-e175d70b2286baa5e6c8",
-      "title": "Eleven killed in mass shooting at house in South Africa",
-      "summary": "One of those killed is believed to be a pregnant woman, police said.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "07:02",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-db5a7211171795f65a47",
-      "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
-      "summary": "The US Justice Department's response to a lawsuit filed by CNN, Politico and MS NOW also cites national security.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "06:47",
       "category": "global"
     },
     {
@@ -4717,17 +4860,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
       "time": "02:57",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-a997bfed079f21bc27d5",
-      "title": "Hurricane Polo intensifies into rare category 5 storm off the coast of Mexico",
-      "summary": "The storm's sudden intensification is \"truly remarkable\", the US hurricane monitoring agency said.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "02:54",
       "category": "global"
     },
     {
