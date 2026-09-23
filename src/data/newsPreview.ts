@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-09-22",
-  "latestLabel": "September 22, 2026",
+  "latestDate": "2026-09-23",
+  "latestLabel": "September 23, 2026",
   "items": [
     {
-      "id": "global-rss-a0d4c8b969aca2a61624",
-      "title": "How Ceuta, football and Israel are shaping Morocco's election",
-      "tag": "BREAKING",
-      "date": "2026-09-22",
-      "time": "20:59",
-      "category": "global"
+      "id": "research-rss-57154098a79d16f7645e",
+      "title": "Bayesian Belief Layer for Controllable Opinion Dynamics in LLM Agents",
+      "tag": "RESEARCH",
+      "date": "2026-09-23",
+      "time": "04:00",
+      "category": "research"
     },
     {
-      "id": "industry-rss-a5840e5a42f749a2ff4d",
-      "title": "Tech Life",
-      "tag": "PRODUCT",
-      "date": "2026-09-22",
-      "time": "20:00",
-      "category": "industry"
+      "id": "research-20260721-0000-environment-free-synthetic-data-generation-for-api-calling-agent",
+      "title": "Simulate to Generalize: Scaling Stateful Supervision for API-calling Agents using LLM World Models",
+      "tag": "RESEARCH",
+      "date": "2026-09-23",
+      "time": "04:00",
+      "category": "research"
     },
     {
-      "id": "global-rss-25b91f8afeb701b30b85",
-      "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
-      "tag": "BREAKING",
-      "date": "2026-09-22",
-      "time": "19:47",
-      "category": "global"
+      "id": "research-20260614-1206-multiagent-protocols-with-aggregated-confidence-signals",
+      "title": "Confidence Composition for Multiagent Language Model Systems",
+      "tag": "RESEARCH",
+      "date": "2026-09-23",
+      "time": "04:00",
+      "category": "research"
     }
   ]
 } as const;
