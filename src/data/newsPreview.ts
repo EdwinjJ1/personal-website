@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 24, 2026",
   "items": [
     {
-      "id": "industry-rss-90aa3aaf99feda11a772",
-      "title": "FBI investigates claim by hackers they stole data on all agency staff",
-      "tag": "PRODUCT",
+      "id": "global-rss-97baa5d0c93b2661b7db",
+      "title": "White House restores access to media outlets banned by Trump after judge's order",
+      "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "11:46",
-      "category": "industry"
+      "time": "16:42",
+      "category": "global"
     },
     {
-      "id": "industry-rss-08be7c7455990ed07a65",
-      "title": "Are we back in big tech's 'move fast and break things' era?",
-      "tag": "PRODUCT",
+      "id": "global-rss-60bd4982154542e53aee",
+      "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
+      "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "11:29",
-      "category": "industry"
+      "time": "16:36",
+      "category": "global"
     },
     {
       "id": "global-rss-923ffca2a455a278ab2b",
       "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
       "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "11:16",
+      "time": "16:00",
       "category": "global"
     }
   ]

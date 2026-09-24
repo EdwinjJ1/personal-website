@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24T11:49:24.199786Z",
+  "lastUpdated": "2026-09-24T17:13:59.291606Z",
   "availableDates": [
     {
       "value": "2026-09-24",
@@ -588,14 +588,113 @@
   ],
   "news": [
     {
+      "id": "global-rss-97baa5d0c93b2661b7db",
+      "title": "White House restores access to media outlets banned by Trump after judge's order",
+      "summary": "CNN, Politico and MS NOW were allowed back into the White House after some of their staff were earlier turned away.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "16:42",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-60bd4982154542e53aee",
+      "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
+      "summary": "Andy Burnham said in 2023 the sculptures should be returned to Greece with \"no strings attached\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm2mgk6mlddo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "16:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-923ffca2a455a278ab2b",
+      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
+      "summary": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "16:00",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-24a6d9427f52953a5168",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "15:42",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-24a6d9427f52953a5168",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "15:42",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-01e07f482a47679ddf99",
+      "title": "Ethiopia's army says it has repelled attacks in first comment on fresh fighting",
+      "summary": "The military says its soldiers inflicted casualties as fears grow of a resumption of a full-blown civil war.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqevwm09w4xmo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "15:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4869940429368912522d",
+      "title": "105-year-old investigated for crimes at Nazi PoW camp in Germany",
+      "summary": "The suspect is alleged to have been an accessory to murder at the Stalag 326 camp, where tens of thousands of Soviet PoWs died.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwzrzjy3pynvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "14:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f8a485533e9d30351db3",
+      "title": "Why did an OpenAI system hack Australia's health system - and can it be stopped in the future?",
+      "summary": "News that an automated AI agent hacked a government IT system raises big questions about regulating the tech.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw24jm9rryy3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "14:08",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-f8a485533e9d30351db3",
+      "title": "Why did an OpenAI system hack Australia's health system - and can it be stopped in the future?",
+      "summary": "News that an automated AI agent hacked a government IT system raises big questions about regulating the tech.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw24jm9rryy3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "14:08",
+      "category": "industry"
+    },
+    {
       "id": "industry-rss-90aa3aaf99feda11a772",
-      "title": "FBI investigates claim by hackers they stole data on all agency staff",
+      "title": "FBI investigating claim hackers have stolen details of all its agents",
       "summary": "The hackers claim they have every agent's name, role, badge number and personal details including home address, phone numbers and spouse information.",
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c9n74574elljo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
-      "time": "11:46",
+      "time": "12:23",
       "category": "industry"
     },
     {
@@ -608,17 +707,6 @@
       "date": "2026-09-24",
       "time": "11:29",
       "category": "industry"
-    },
-    {
-      "id": "global-rss-923ffca2a455a278ab2b",
-      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
-      "summary": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-24",
-      "time": "11:16",
-      "category": "global"
     },
     {
       "id": "global-rss-10042227ff50f3aac3f8",
@@ -662,28 +750,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqkgw68yjg29o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
       "time": "08:26",
-      "category": "global"
-    },
-    {
-      "id": "industry-rss-24a6d9427f52953a5168",
-      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
-      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-24",
-      "time": "07:10",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-24a6d9427f52953a5168",
-      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
-      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-24",
-      "time": "07:10",
       "category": "global"
     },
     {
