@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 24, 2026",
   "items": [
     {
-      "id": "global-rss-97baa5d0c93b2661b7db",
-      "title": "White House restores access to media outlets banned by Trump after judge's order",
+      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
+      "title": "Netanyahu defends Israeli military actions in Middle East in UN speech",
       "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "16:42",
+      "time": "21:21",
       "category": "global"
     },
     {
-      "id": "global-rss-60bd4982154542e53aee",
-      "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
+      "id": "global-rss-021ad3c5587ee9583664",
+      "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
       "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "16:36",
+      "time": "19:32",
       "category": "global"
     },
     {
-      "id": "global-rss-923ffca2a455a278ab2b",
-      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
+      "id": "global-rss-acbb0a103fd294d65813",
+      "title": "Priest killed and four injured in knife attack at Polish abbey",
       "tag": "BREAKING",
       "date": "2026-09-24",
-      "time": "16:00",
+      "time": "19:18",
       "category": "global"
     }
   ]
