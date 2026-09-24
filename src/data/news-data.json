@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24T17:13:59.291606Z",
+  "lastUpdated": "2026-09-24T21:33:17.271283Z",
   "availableDates": [
     {
       "value": "2026-09-24",
@@ -588,6 +588,94 @@
   ],
   "news": [
     {
+      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
+      "title": "Netanyahu defends Israeli military actions in Middle East in UN speech",
+      "summary": "Dozens of delegates walked out in protest as he took the podium, with the Israeli leader labelling them \"moral cowards\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "21:21",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-021ad3c5587ee9583664",
+      "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
+      "summary": "Prime Minister Giorgia Meloni described the measures as \"common-sense tools that do not divide but really help to integrate\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "19:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-acbb0a103fd294d65813",
+      "title": "Priest killed and four injured in knife attack at Polish abbey",
+      "summary": "A male suspect from Ukraine was arrested after the stabbings in the town of Jarosław, police say.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607lrvm41l3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "19:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a85bcf08c0c4348ccc79",
+      "title": "Four civilians killed in Pakistani strikes in Afghanistan, Taliban says",
+      "summary": "Pakistan says it struck 10 targets, adding the strikes were \"strictly limited to identified military objectives\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "19:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-3551026a7cd90a589377",
+      "title": "Watch: UN delegates walk out of Netanyahu speech",
+      "summary": "The Israeli delegation could be be seen cheering in support during Netanyahu's speech.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cqwyzmpm3pgdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "18:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f912c18b19fc5b489277",
+      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
+      "summary": "Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "18:06",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-f912c18b19fc5b489277",
+      "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
+      "summary": "Australia, which has strict social media restrictions and has proposed controls on algorithms and smart glasses, announced the breach at the UN.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "18:06",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-94bed59e126c3d377b5a",
+      "title": "Rapper Macklemore announces 'Free Palestine' tour after Ed Sheeran fallout",
+      "summary": "Proceeds from the tour, which begins in Dublin next month, will go to organisations supporting Palestinians, he says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqzjzlve8jg7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "17:55",
+      "category": "global"
+    },
+    {
       "id": "global-rss-97baa5d0c93b2661b7db",
       "title": "White House restores access to media outlets banned by Trump after judge's order",
       "summary": "CNN, Politico and MS NOW were allowed back into the White House after some of their staff were earlier turned away.",
@@ -595,7 +683,7 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
-      "time": "16:42",
+      "time": "17:49",
       "category": "global"
     },
     {
