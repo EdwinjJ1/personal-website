@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-24T04:54:50.487692Z",
+  "lastUpdated": "2026-09-24T11:49:24.199786Z",
   "availableDates": [
     {
       "value": "2026-09-24",
@@ -588,6 +588,61 @@
   ],
   "news": [
     {
+      "id": "industry-rss-90aa3aaf99feda11a772",
+      "title": "FBI investigates claim by hackers they stole data on all agency staff",
+      "summary": "The hackers claim they have every agent's name, role, badge number and personal details including home address, phone numbers and spouse information.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9n74574elljo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "11:46",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-08be7c7455990ed07a65",
+      "title": "Are we back in big tech's 'move fast and break things' era?",
+      "summary": "Despite promises to make safe AI, examples of bots behaving badly are now coming at us thick and fast.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6eq8egl3wd2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "11:29",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-923ffca2a455a278ab2b",
+      "title": "Poland says fire at Starlink station is sabotage as Denmark warns of rising Russian threat",
+      "summary": "The satellite station is used in part to provide internet coverage to neighbouring Ukraine, the government says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmp30r1klk37o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "11:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-10042227ff50f3aac3f8",
+      "title": "Judge temporarily overturns Trump's White House media ban",
+      "summary": "A court has ordered the US government to reinstate access to the building for CNN, Politico and MS NOW.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm2mg34x2v7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "10:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4264506216ba0f46403c",
+      "title": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan",
+      "summary": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "10:11",
+      "category": "global"
+    },
+    {
       "id": "global-rss-416d6e7eb829ab0047cc",
       "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
       "summary": "The local authorities reportedly seize Tigray's airports following reports of recent drone strikes.",
@@ -595,8 +650,63 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
-      "time": "04:37",
+      "time": "09:28",
       "category": "global"
+    },
+    {
+      "id": "global-rss-4559f7790e8501a630ed",
+      "title": "Why India's Election Commission is in the eye of a storm - again",
+      "summary": "India's polling monitor is facing yet another crisis of credibility with fresh allegations against its chief.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqkgw68yjg29o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "08:26",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-24a6d9427f52953a5168",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "07:10",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-24a6d9427f52953a5168",
+      "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+      "summary": "Australia criticised OpenAI for taking \"too long\" to tell them about the breach which happened in June.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "07:10",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7d7eb22e04cd574466bf",
+      "title": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent",
+      "summary": "Her heavy metal performance trumped nine other finalists, including magicians and even a robot crew.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqzjzl3d1409o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "06:47",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-45543d731f6b71443383",
+      "title": "What you need to know about the OpenAI Australian government hack",
+      "summary": "The BBC’s North America technology correspondent Lily Jamali explains how the Medicare breach happened, and why it matters.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cwe8ekyzdjvlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-24",
+      "time": "05:18",
+      "category": "industry"
     },
     {
       "id": "research-rss-57154098a79d16f7645e",
@@ -4625,25 +4735,14 @@
       "category": "research"
     },
     {
-      "id": "industry-rss-24a6d9427f52953a5168",
-      "title": "OpenAI agent 'infiltrated' Australian government website, PM says",
-      "summary": "Albanese said he expressed \"concern\" to OpenAI founder Sam Altman, after authorities were informed three months after the breach in June.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-24",
-      "time": "03:22",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-24a6d9427f52953a5168",
-      "title": "OpenAI agent 'infiltrated' Australian government website, PM says",
-      "summary": "Albanese said he expressed \"concern\" to OpenAI founder Sam Altman, after authorities were informed three months after the breach in June.",
+      "id": "global-rss-07a8f2f97165164e65a7",
+      "title": "Trump offers warm welcome as China's Xi arrives for US visit",
+      "summary": "The US treasury secretary said that the US and China had reached an agreement to extend a trade truce as Xi began his visit.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrk7187lzo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
-      "time": "03:22",
+      "time": "03:52",
       "category": "global"
     },
     {
@@ -4670,7 +4769,7 @@
     },
     {
       "id": "global-rss-d88ace1b87547d736a1f",
-      "title": "Residents eating garden weeds in Russian-occupied city cut off from food and water",
+      "title": "Eating garden weeds to survive in Russian-occupied city cut off from food and water",
       "summary": "The BBC has spoken to residents in the Russian-occupied Ukrainian town of Oleshky who say they are being \"constantly shelled\".",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -4736,7 +4835,7 @@
     },
     {
       "id": "global-rss-68b4e36734a487d4da55",
-      "title": "AI superpower ambitions take centre stage as Trump and Xi meet",
+      "title": "Trump and Xi come face-to-face as US and China battle to win the AI race",
       "summary": "The US and China are vying for AI supremacy while seeking to keep it under human control.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -4754,17 +4853,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/c34gdygn5lqpo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-23",
       "time": "21:29",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-4264506216ba0f46403c",
-      "title": "Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction",
-      "summary": "The figure was announced during a meeting of the group's board at the sidelines of the UN General Assembly in New York.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-23",
-      "time": "21:26",
       "category": "global"
     },
     {
