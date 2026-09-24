@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-09-23",
-  "latestLabel": "September 23, 2026",
+  "latestDate": "2026-09-24",
+  "latestLabel": "September 24, 2026",
   "items": [
     {
-      "id": "global-rss-4264506216ba0f46403c",
-      "title": "Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction",
+      "id": "global-rss-416d6e7eb829ab0047cc",
+      "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
       "tag": "BREAKING",
-      "date": "2026-09-23",
-      "time": "21:26",
+      "date": "2026-09-24",
+      "time": "04:37",
       "category": "global"
     },
     {
-      "id": "global-rss-46dd0b19303bba2bbeb4",
-      "title": "UK survivor of Canadian poison seller says he exploited her despair",
-      "tag": "BREAKING",
-      "date": "2026-09-23",
-      "time": "21:16",
-      "category": "global"
+      "id": "research-rss-57154098a79d16f7645e",
+      "title": "Bayesian Belief Layer for Controllable Opinion Dynamics in LLM Agents",
+      "tag": "RESEARCH",
+      "date": "2026-09-24",
+      "time": "04:00",
+      "category": "research"
     },
     {
-      "id": "global-rss-90210de10b2a2e91ed7f",
-      "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
-      "tag": "BREAKING",
-      "date": "2026-09-23",
-      "time": "18:51",
-      "category": "global"
+      "id": "research-20260721-0000-environment-free-synthetic-data-generation-for-api-calling-agent",
+      "title": "Simulate to Generalize: Scaling Stateful Supervision for API-calling Agents using LLM World Models",
+      "tag": "RESEARCH",
+      "date": "2026-09-24",
+      "time": "04:00",
+      "category": "research"
     }
   ]
 } as const;
