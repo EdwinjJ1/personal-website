@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T11:54:22.884027Z",
+  "lastUpdated": "2026-09-25T17:15:23.966523Z",
   "availableDates": [
     {
       "value": "2026-09-25",
@@ -592,6 +592,105 @@
   ],
   "news": [
     {
+      "id": "global-rss-373e7b36324e48390839",
+      "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
+      "summary": "During the two-year civil war in Tigray, the region was totally cut off from the outside world.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "17:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-899d6295eefe8b61be5f",
+      "title": "Supreme Court revives controversial US data system for citizenship checks",
+      "summary": "The system uses citizenship information and other sensitive data to filter alleged non-citizen voting.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "16:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-535466d2fc7082a15530",
+      "title": "Students strike across Germany in protest against military service",
+      "summary": "A law establishing voluntary military service came into effect in January, but protest organisers fear compulsory service could follow.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxnvlnve52qdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "15:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7073a37412ee58b785e4",
+      "title": "Senior Kazakh officials detained after 14 service members swept out to sea",
+      "summary": "Seventeen service members were swept out to the Caspian Sea during military exercises.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0reew1591zo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "15:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-43155d15a311d0948ed4",
+      "title": "Pope warns against 'losing humanity' to AI machines",
+      "summary": "The pontiff delivered the warning on the first day of his trip to France on Friday.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "15:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9d7201a9decef3f312e0",
+      "title": "Africa's richest man helps fund $660m fuel pipeline between Ethiopia and Djibouti",
+      "summary": "The pipeline would strengthen energy security in landlocked Ethiopia, while creating jobs at Djibouti's port.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6z9z7lv41wgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "14:24",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5bdf201b1a20b71fdfa0",
+      "title": "Special agents' blood and urine test results stolen in FBI hack",
+      "summary": "Experts say the hack could leave agents vulnerable to scams, blackmail and targeted attacks.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62me2vlj07o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "13:56",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-5bdf201b1a20b71fdfa0",
+      "title": "Special agents' blood and urine test results stolen in FBI hack",
+      "summary": "Experts say the hack could leave agents vulnerable to scams, blackmail and targeted attacks.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62me2vlj07o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "13:56",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-1305a76102dba8913892",
+      "title": "Man shot during 2024 Trump campaign rally in Butler dies",
+      "summary": "A gunman shot Jim Copenhaver twice while also killing another man and grazing Trump's ear with a bullet.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5dj401d88l3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "13:23",
+      "category": "global"
+    },
+    {
       "id": "global-rss-0e34f3bdf0b7dd17bbb3",
       "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
       "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
@@ -636,14 +735,14 @@
       "category": "industry"
     },
     {
-      "id": "global-rss-43155d15a311d0948ed4",
-      "title": "Hundreds of thousands expected in Paris for Pope's visit",
-      "summary": "The highpoint of his time in Paris will be a giant Mass attended by more than half a million people.",
+      "id": "global-rss-a0dba1a33ff320273d73",
+      "title": "US backs Elon Musk's bid to overturn €120m EU fine against X",
+      "summary": "The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
-      "time": "09:35",
+      "time": "09:48",
       "category": "global"
     },
     {
@@ -655,17 +754,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/c3qjkxk58y02o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
       "time": "09:20",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-9d7201a9decef3f312e0",
-      "title": "Africa's richest man helps fund $660m fuel pipeline between Ethiopia and Djibouti",
-      "summary": "The pipeline would strengthen energy security in landlocked Ethiopia, while creating jobs at Djibouti's port.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6z9z7lv41wgo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-25",
-      "time": "06:48",
       "category": "global"
     },
     {
