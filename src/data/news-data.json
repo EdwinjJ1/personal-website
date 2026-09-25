@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T05:00:34.163816Z",
+  "lastUpdated": "2026-09-25T11:54:22.884027Z",
   "availableDates": [
     {
       "value": "2026-09-25",
@@ -591,6 +591,94 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
+      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+      "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "11:44",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0671bf4a49ebdd634c83",
+      "title": "Jay-Z rape accuser says her allegation was false",
+      "summary": "A woman who accused Jay-Z of raping her when she was 13 now says she has never met the rap superstar.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4g53547wygo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "10:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8e7c0fb37fb0df800647",
+      "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
+      "summary": "Despite diplomatic niceties and gifts, little was shared on substantial issues separating the leaders.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "10:36",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-a0dba1a33ff320273d73",
+      "title": "US backs Elon Musk's bid to overturn €120m EU fine against X",
+      "summary": "The EU had said X \"deceives users\" by selling blue ticks without \"meaningfully verifying\" accounts.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq0m373ee0v0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "09:48",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-43155d15a311d0948ed4",
+      "title": "Hundreds of thousands expected in Paris for Pope's visit",
+      "summary": "The highpoint of his time in Paris will be a giant Mass attended by more than half a million people.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "09:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a82c54959e22a1b27212",
+      "title": "Robbie Williams' surprise singalong after Peru gig cancelled",
+      "summary": "Robbie Williams gave an impromptu performance outside a hotel in Lima after his stadium concert was cancelled.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c3qjkxk58y02o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "09:20",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9d7201a9decef3f312e0",
+      "title": "Africa's richest man helps fund $660m fuel pipeline between Ethiopia and Djibouti",
+      "summary": "The pipeline would strengthen energy security in landlocked Ethiopia, while creating jobs at Djibouti's port.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6z9z7lv41wgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "06:48",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-26484f1c1a9d034279ff",
+      "title": "Pomp and toasts: Day 2 of Trump and Xi in DC",
+      "summary": "Xi’s first visit to Washington in a decade was a display of pomp and pageantry, with Trump offering his guest a two-month truce on the brewing tariff war.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c9lykxx5zp70o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "05:54",
+      "category": "global"
+    },
     {
       "id": "research-rss-d9c35de2f3af8be7995d",
       "title": "Dual-Frontier: When Can an Agent Trust Its World Model?",
@@ -4543,23 +4631,12 @@
     {
       "id": "global-rss-97baa5d0c93b2661b7db",
       "title": "Media outlets banned by Trump denied access to White House dinner despite judge's order",
-      "summary": "CNN and MS NOW said reporters were denied access to covering White House arrivals for a state dinner, despite a judge ruling their passes must be restored.",
+      "summary": "CNN and MS NOW reporters say they were barred from covering a state dinner after a judge ruled their passes should be restored.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
       "time": "01:10",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
-      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
-      "summary": "The Israeli leader labels those who left his speech at the UN General Assembly as \"moral cowards\".",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-25",
-      "time": "00:44",
       "category": "global"
     },
     {
@@ -4571,17 +4648,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cv2dwk3z7x5eo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-24",
       "time": "23:41",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-43155d15a311d0948ed4",
-      "title": "Hundreds of thousands expected in Paris for Pope's visit",
-      "summary": "The highpoint of his time in Paris will be a giant Mass attended by more than half a million people.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-24",
-      "time": "23:17",
       "category": "global"
     },
     {
@@ -4631,7 +4697,7 @@
     {
       "id": "global-rss-3551026a7cd90a589377",
       "title": "Watch: UN delegates walk out of Netanyahu speech",
-      "summary": "The Israeli delegation could be be seen cheering in support during Netanyahu's speech.",
+      "summary": "The Israeli delegation cheered in support during Netanyahu's speech. Nada Tawfik in New York explains what happened.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/videos/cqwyzmpm3pgdo?at_medium=RSS&at_campaign=rss",

@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 25, 2026",
   "items": [
     {
-      "id": "research-rss-d9c35de2f3af8be7995d",
-      "title": "Dual-Frontier: When Can an Agent Trust Its World Model?",
-      "tag": "RESEARCH",
+      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
+      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+      "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:44",
+      "category": "global"
     },
     {
-      "id": "research-rss-ea664bf32981ed76a775",
-      "title": "Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It",
-      "tag": "RESEARCH",
+      "id": "global-rss-0671bf4a49ebdd634c83",
+      "title": "Jay-Z rape accuser says her allegation was false",
+      "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "04:00",
-      "category": "research"
+      "time": "10:51",
+      "category": "global"
     },
     {
-      "id": "research-rss-12bb3566a490c1d0e70e",
-      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
-      "tag": "RESEARCH",
+      "id": "global-rss-8e7c0fb37fb0df800647",
+      "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
+      "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "04:00",
-      "category": "research"
+      "time": "10:36",
+      "category": "global"
     }
   ]
 } as const;
