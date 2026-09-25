@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-09-24",
-  "latestLabel": "September 24, 2026",
+  "latestDate": "2026-09-25",
+  "latestLabel": "September 25, 2026",
   "items": [
     {
-      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
-      "title": "Netanyahu defends Israeli military actions in Middle East in UN speech",
-      "tag": "BREAKING",
-      "date": "2026-09-24",
-      "time": "21:21",
-      "category": "global"
+      "id": "research-rss-d9c35de2f3af8be7995d",
+      "title": "Dual-Frontier: When Can an Agent Trust Its World Model?",
+      "tag": "RESEARCH",
+      "date": "2026-09-25",
+      "time": "04:00",
+      "category": "research"
     },
     {
-      "id": "global-rss-021ad3c5587ee9583664",
-      "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
-      "tag": "BREAKING",
-      "date": "2026-09-24",
-      "time": "19:32",
-      "category": "global"
+      "id": "research-rss-ea664bf32981ed76a775",
+      "title": "Type-Safe Is Not Error-Free: A Constrained Decision Head Follows the Option Name, Not the Rubric Bound to It",
+      "tag": "RESEARCH",
+      "date": "2026-09-25",
+      "time": "04:00",
+      "category": "research"
     },
     {
-      "id": "global-rss-acbb0a103fd294d65813",
-      "title": "Priest killed and four injured in knife attack at Polish abbey",
-      "tag": "BREAKING",
-      "date": "2026-09-24",
-      "time": "19:18",
-      "category": "global"
+      "id": "research-rss-12bb3566a490c1d0e70e",
+      "title": "Grow the Harness, Not the Context: From Strategy-Free Scaffolds to Reusable Specialist Agents",
+      "tag": "RESEARCH",
+      "date": "2026-09-25",
+      "time": "04:00",
+      "category": "research"
     }
   ]
 } as const;
