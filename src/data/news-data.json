@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T17:15:23.966523Z",
+  "lastUpdated": "2026-09-25T21:37:08.152869Z",
   "availableDates": [
     {
       "value": "2026-09-25",
@@ -592,6 +592,50 @@
   ],
   "news": [
     {
+      "id": "global-rss-cef9fc91331bcf002d0a",
+      "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
+      "summary": "Such strikes aim to disrupt \"people's ability to stay connected, study, work\", says Ukraine's president.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "20:47",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-899d6295eefe8b61be5f",
+      "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+      "summary": "Critics have questioned the reliability of the data, warning it could result in US citizens being wrongly removed from electoral rolls.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "19:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-97baa5d0c93b2661b7db",
+      "title": "Media outlets banned by Trump resume White House coverage after judge's order",
+      "summary": "US TV news coverage of the White House returns to normal after a judge lifted Trump's ban of three news outlets.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "18:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-afda0e5978517e2aedfe",
+      "title": "Trump's plans for massive arch move ahead",
+      "summary": "Opposition to building the 250-foot arch, and using it for military purposes, is growing with one Democrat blasting Trump's plans as \"foolhardy\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq0lrr8kxy0lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "18:27",
+      "category": "global"
+    },
+    {
       "id": "global-rss-373e7b36324e48390839",
       "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
       "summary": "During the two-year civil war in Tigray, the region was totally cut off from the outside world.",
@@ -600,17 +644,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
       "time": "17:13",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-899d6295eefe8b61be5f",
-      "title": "Supreme Court revives controversial US data system for citizenship checks",
-      "summary": "The system uses citizenship information and other sensitive data to filter alleged non-citizen voting.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-25",
-      "time": "16:35",
       "category": "global"
     },
     {
@@ -4714,17 +4747,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/cm790gjyw1qxo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
       "time": "01:27",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-97baa5d0c93b2661b7db",
-      "title": "Media outlets banned by Trump denied access to White House dinner despite judge's order",
-      "summary": "CNN and MS NOW reporters say they were barred from covering a state dinner after a judge ruled their passes should be restored.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-25",
-      "time": "01:10",
       "category": "global"
     },
     {
