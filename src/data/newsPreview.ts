@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 25, 2026",
   "items": [
     {
-      "id": "global-rss-0e34f3bdf0b7dd17bbb3",
-      "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+      "id": "global-rss-373e7b36324e48390839",
+      "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
       "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "11:44",
+      "time": "17:13",
       "category": "global"
     },
     {
-      "id": "global-rss-0671bf4a49ebdd634c83",
-      "title": "Jay-Z rape accuser says her allegation was false",
+      "id": "global-rss-899d6295eefe8b61be5f",
+      "title": "Supreme Court revives controversial US data system for citizenship checks",
       "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "10:51",
+      "time": "16:35",
       "category": "global"
     },
     {
-      "id": "global-rss-8e7c0fb37fb0df800647",
-      "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
+      "id": "global-rss-535466d2fc7082a15530",
+      "title": "Students strike across Germany in protest against military service",
       "tag": "BREAKING",
       "date": "2026-09-25",
-      "time": "10:36",
+      "time": "15:36",
       "category": "global"
     }
   ]
