@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 26, 2026",
   "items": [
     {
-      "id": "global-rss-6096d6a184eb3059d866",
-      "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
+      "id": "global-rss-1f401a94e62a96911835",
+      "title": "Republic of Ireland news conference delayed before controversial Israel game",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "04:14",
+      "time": "10:44",
       "category": "global"
     },
     {
-      "id": "global-rss-b26cc2f8862a6966c50c",
-      "title": "OpenAI bots meddled with multiple US government agency sites",
+      "id": "global-rss-947aa80905841d5b69a3",
+      "title": "At least two dead after explosion destroys building close to Acropolis in Athens",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "02:50",
+      "time": "10:18",
       "category": "global"
     },
     {
-      "id": "industry-rss-b26cc2f8862a6966c50c",
-      "title": "OpenAI bots meddled with multiple US government agency sites",
-      "tag": "PRODUCT",
+      "id": "global-rss-3905074a13675726570d",
+      "title": "Bangkok roads submerged as flood disaster declared",
+      "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "02:50",
-      "category": "industry"
+      "time": "07:21",
+      "category": "global"
     }
   ]
 } as const;
