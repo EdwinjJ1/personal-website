@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-09-25",
-  "latestLabel": "September 25, 2026",
+  "latestDate": "2026-09-26",
+  "latestLabel": "September 26, 2026",
   "items": [
     {
-      "id": "global-rss-cef9fc91331bcf002d0a",
-      "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
+      "id": "global-rss-6096d6a184eb3059d866",
+      "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
       "tag": "BREAKING",
-      "date": "2026-09-25",
-      "time": "20:47",
+      "date": "2026-09-26",
+      "time": "04:14",
       "category": "global"
     },
     {
-      "id": "global-rss-899d6295eefe8b61be5f",
-      "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+      "id": "global-rss-b26cc2f8862a6966c50c",
+      "title": "OpenAI bots meddled with multiple US government agency sites",
       "tag": "BREAKING",
-      "date": "2026-09-25",
-      "time": "19:13",
+      "date": "2026-09-26",
+      "time": "02:50",
       "category": "global"
     },
     {
-      "id": "global-rss-97baa5d0c93b2661b7db",
-      "title": "Media outlets banned by Trump resume White House coverage after judge's order",
-      "tag": "BREAKING",
-      "date": "2026-09-25",
-      "time": "18:36",
-      "category": "global"
+      "id": "industry-rss-b26cc2f8862a6966c50c",
+      "title": "OpenAI bots meddled with multiple US government agency sites",
+      "tag": "PRODUCT",
+      "date": "2026-09-26",
+      "time": "02:50",
+      "category": "industry"
     }
   ]
 } as const;
