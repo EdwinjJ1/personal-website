@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T16:26:10.886601Z",
+  "lastUpdated": "2026-09-26T21:12:41.076496Z",
   "availableDates": [
     {
       "value": "2026-09-26",
@@ -596,6 +596,39 @@
   ],
   "news": [
     {
+      "id": "global-rss-1d7078360a489aa3c567",
+      "title": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
+      "summary": "Around 700,000 people gathered in central Paris to hear the Catholic leader speak and offer prayer.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "19:48",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-93518d29afda753734a7",
+      "title": "White House bars CNN from travelling with Trump on Air Force One",
+      "summary": "CNN was scheduled to fly with US President Donald Trump for his trip to Tennessee on Saturday.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "19:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-389fd0490c34466e78bf",
+      "title": "Tenth woman's body found in South Africa suburb as police probe killings",
+      "summary": "The deaths have sparked a national outcry about the scale of violence against women in the country.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vgyyj8q807o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "18:30",
+      "category": "global"
+    },
+    {
       "id": "global-rss-6096d6a184eb3059d866",
       "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
       "summary": "The US president says Tehran had only put forward the proposal because it is losing the war.",
@@ -603,7 +636,18 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
-      "time": "16:16",
+      "time": "18:17",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c40a3dfae780cf5bfc42",
+      "title": "Nor'easter storm brings coastal flooding, as New York and New Jersey declare emergency",
+      "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "17:47",
       "category": "global"
     },
     {
@@ -651,17 +695,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-1d7078360a489aa3c567",
-      "title": "Huge crowds greet Pope in Paris for open-air Mass",
-      "summary": "More than half a million people are expected to attend the event in the heart of the French capital.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "13:23",
-      "category": "global"
-    },
-    {
       "id": "global-rss-947aa80905841d5b69a3",
       "title": "British national among six dead in building explosion close to Acropolis in Athens",
       "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
@@ -703,17 +736,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/ck9800jdj1q0o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "06:28",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-93518d29afda753734a7",
-      "title": "White House bars CNN from travelling with Trump on Air Force One",
-      "summary": "CNN was scheduled to fly with US President Donald Trump for his trip to Tennessee on Saturday.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "05:09",
       "category": "global"
     },
     {

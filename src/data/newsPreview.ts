@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 26, 2026",
   "items": [
     {
-      "id": "global-rss-6096d6a184eb3059d866",
-      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
+      "id": "global-rss-1d7078360a489aa3c567",
+      "title": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "16:16",
+      "time": "19:48",
       "category": "global"
     },
     {
-      "id": "global-rss-21cd6a4ef40d68b003a5",
-      "title": "German town bans 'stumbling stone' memorials to Nazi victims",
+      "id": "global-rss-93518d29afda753734a7",
+      "title": "White House bars CNN from travelling with Trump on Air Force One",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "15:48",
+      "time": "19:16",
       "category": "global"
     },
     {
-      "id": "global-rss-a894c7ff0c754d765fb0",
-      "title": "Brazil's Lula bans online gambling ahead of presidential election",
+      "id": "global-rss-389fd0490c34466e78bf",
+      "title": "Tenth woman's body found in South Africa suburb as police probe killings",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "15:46",
+      "time": "18:30",
       "category": "global"
     }
   ]
