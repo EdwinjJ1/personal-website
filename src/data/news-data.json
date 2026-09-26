@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-09-25T21:37:08.152869Z",
+  "lastUpdated": "2026-09-26T05:01:22.163437Z",
   "availableDates": [
+    {
+      "value": "2026-09-26",
+      "label": "September 26, 2026"
+    },
     {
       "value": "2026-09-25",
       "label": "September 25, 2026"
@@ -592,6 +596,127 @@
   ],
   "news": [
     {
+      "id": "global-rss-6096d6a184eb3059d866",
+      "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
+      "summary": "Asked about the Iranian proposal, a US official told the BBC \"constructive discussions\" were taking place through mediators.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "04:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b26cc2f8862a6966c50c",
+      "title": "OpenAI bots meddled with multiple US government agency sites",
+      "summary": "OpenAI said its bots accessed public data from the US Census and the Securities and Exchange Commission, which regulates US stock markets.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "02:50",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-b26cc2f8862a6966c50c",
+      "title": "OpenAI bots meddled with multiple US government agency sites",
+      "summary": "OpenAI said its bots accessed public data from the US Census and the Securities and Exchange Commission, which regulates US stock markets.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "02:50",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-08a283bc51baa60d5ed3",
+      "title": "Black woman found hanging from tree was dead before body was 'staged', police say",
+      "summary": "Tasia Fortune's body was found hanging from a tree on the grounds of an abandoned home in Jackson in August.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwp933nzpp9ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "01:24",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-c78bd9d9cf8132ab967c",
+      "title": "Tech Now",
+      "summary": "Ammie Sekhon explores tech used to identify and remove counterfeit products online.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m0032d9k?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "01:00",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-81211daaa3d81d5f837c",
+      "title": "Are Ethiopians marching back to war in Tigray?",
+      "summary": "Exploring the issues behind the escalation of tensions between the TPLF and the national army.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d94wywx0ypo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:42",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-9ac357b6ba7af3e598f7",
+      "title": "Inside iconic horror game Silent Hill's Scottish makeover",
+      "summary": "One of gaming's biggest horror franchises has come to the UK. Can it live up to the original?",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckvgyzjpy2eno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:34",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-2551dd230f049d952085",
+      "title": "South African white genocide does not exist, new ambassador to US tells BBC",
+      "summary": "Roelf Meyer tells the BBC that being a white Afrikaner gives him legitimacy to challenge Trump's claim of a genocide.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2l8qv7zppko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:20",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-baa69c0d1acbfcf4e2e9",
+      "title": "As Merz scrambles for support, Germany's identity crisis is laid bare",
+      "summary": "Voters are turning away from the centre in Germany as fears grow about the economy and migration.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2zlqeje9zo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:08",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-26421e4030e817a8e783",
+      "title": "Inside the FBI hack: Agents fearful and angry after 'dangerous' data breach",
+      "summary": "Current and former agents speak to the BBC about the devastating impact of the FBI hack.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gjjlgzdjgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f5b48cb8f8fe544db73d",
+      "title": "The treasured 'eternal snow' on this tropical island is about to disappear forever",
+      "summary": "Climate change is transforming Papua's snowy peaks, which hold scientific value and spiritual significance.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5ydvww0erdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "22:12",
+      "category": "global"
+    },
+    {
       "id": "global-rss-cef9fc91331bcf002d0a",
       "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
       "summary": "Such strikes aim to disrupt \"people's ability to stay connected, study, work\", says Ukraine's president.",
@@ -636,6 +761,17 @@
       "category": "global"
     },
     {
+      "id": "global-rss-b80cc9bb3b75563f2306",
+      "title": "Two arrested after people seen mysteriously emerging from various New York City sewers",
+      "summary": "The city has seen a string of incidents in which people have climbed out of manholes late at night.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwddvv44091vo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "17:59",
+      "category": "global"
+    },
+    {
       "id": "global-rss-373e7b36324e48390839",
       "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
       "summary": "During the two-year civil war in Tigray, the region was totally cut off from the outside world.",
@@ -644,6 +780,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-25",
       "time": "17:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a030cd1d0f072827366c",
+      "title": "Thousands turn out to greet Pope in France",
+      "summary": "The BBC's Hugh Schofield looks at why the visit is met with enthusiasm the Church attributes to growing spirituality among the French.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cq14d142p08do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "15:44",
       "category": "global"
     },
     {
