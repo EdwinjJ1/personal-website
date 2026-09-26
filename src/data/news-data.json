@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-26T11:28:45.322854Z",
+  "lastUpdated": "2026-09-26T16:26:10.886601Z",
   "availableDates": [
     {
       "value": "2026-09-26",
@@ -596,25 +596,91 @@
   ],
   "news": [
     {
+      "id": "global-rss-6096d6a184eb3059d866",
+      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
+      "summary": "The US president says Tehran had only put forward the proposal because it is losing the war.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "16:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-21cd6a4ef40d68b003a5",
+      "title": "German town bans 'stumbling stone' memorials to Nazi victims",
+      "summary": "Germany's education minister has branded the ban on the small brass memorial plaques a \"scandal\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm2mm4y5dkko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "15:48",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-a894c7ff0c754d765fb0",
+      "title": "Brazil's Lula bans online gambling ahead of presidential election",
+      "summary": "Lula, who is currently in a tight presidential race against Flávio Bolsonaro, said the industry was a \"cancer\" that he must \"remove\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c914ddj21rzlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "15:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2687e86916ba9afba478",
+      "title": "Watch: Bangkok declared flood disaster zone",
+      "summary": "Heavy rain over the last two days has overwhelmed Bangkok's water systems, with more rain forecast on Sunday.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cwp933mr9v1xo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "15:34",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-fb1d1507ce4e40a42248",
+      "title": "Security lapses at Utah campus where Charlie Kirk was killed, review says",
+      "summary": "The indpendent report also says Kirk's aides insisted he speak outdoors, overriding concerns from campus officials.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq4g55r76d9lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "15:12",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1d7078360a489aa3c567",
+      "title": "Huge crowds greet Pope in Paris for open-air Mass",
+      "summary": "More than half a million people are expected to attend the event in the heart of the French capital.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "13:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-947aa80905841d5b69a3",
+      "title": "British national among six dead in building explosion close to Acropolis in Athens",
+      "summary": "Four Americans and a Greek national are among those killed in a suspected gas explosion, officials said.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "12:47",
+      "category": "global"
+    },
+    {
       "id": "global-rss-1f401a94e62a96911835",
-      "title": "Republic of Ireland news conference delayed before controversial Israel game",
-      "summary": "The Republic of Ireland delay the pre-match news conference planned for Sunday's Uefa Nations League game against Israel in Hungary - a fixture campaigners have called on them to boycott.",
+      "title": "Republic of Ireland confirm rescheduled news conference before controversial Israel game",
+      "summary": "The Republic of Ireland will now hold their delayed news conference at 14:30 BST before they face Israel in tomorrow's Nations League fixture in Hungary - a fixture campaigners have called on them to boycott.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c962jjl18g3ro?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "10:44",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-947aa80905841d5b69a3",
-      "title": "At least two dead after explosion destroys building close to Acropolis in Athens",
-      "summary": "Local media report the property included a holiday rental, with US tourists and a UK national among the missing.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "10:18",
       "category": "global"
     },
     {
@@ -648,28 +714,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "05:09",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-6096d6a184eb3059d866",
-      "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
-      "summary": "Asked about the Iranian proposal, a US official told the BBC \"constructive discussions\" were taking place through mediators.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "05:03",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-a894c7ff0c754d765fb0",
-      "title": "Brazil's Lula bans online gambling ahead of presidential election",
-      "summary": "Lula, who is currently in a tight presidential race against Flávio Bolsonaro, said the industry was a \"cancer\" that he must \"remove\".",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c914ddj21rzlo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "03:22",
       "category": "global"
     },
     {
@@ -806,7 +850,7 @@
     },
     {
       "id": "global-rss-899d6295eefe8b61be5f",
-      "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+      "title": "US Supreme Court allows Trump to use controversial database to check voter citizenship",
       "summary": "Critics have questioned the reliability of the data, warning it could result in US citizens being wrongly removed from electoral rolls.",
       "tag": "BREAKING",
       "source": "BBC World",

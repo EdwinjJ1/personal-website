@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 26, 2026",
   "items": [
     {
-      "id": "global-rss-1f401a94e62a96911835",
-      "title": "Republic of Ireland news conference delayed before controversial Israel game",
+      "id": "global-rss-6096d6a184eb3059d866",
+      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "10:44",
+      "time": "16:16",
       "category": "global"
     },
     {
-      "id": "global-rss-947aa80905841d5b69a3",
-      "title": "At least two dead after explosion destroys building close to Acropolis in Athens",
+      "id": "global-rss-21cd6a4ef40d68b003a5",
+      "title": "German town bans 'stumbling stone' memorials to Nazi victims",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "10:18",
+      "time": "15:48",
       "category": "global"
     },
     {
-      "id": "global-rss-3905074a13675726570d",
-      "title": "Bangkok roads submerged as flood disaster declared",
+      "id": "global-rss-a894c7ff0c754d765fb0",
+      "title": "Brazil's Lula bans online gambling ahead of presidential election",
       "tag": "BREAKING",
       "date": "2026-09-26",
-      "time": "07:21",
+      "time": "15:46",
       "category": "global"
     }
   ]
