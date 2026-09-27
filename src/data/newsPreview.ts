@@ -3,19 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 27, 2026",
   "items": [
     {
-      "id": "global-rss-3905074a13675726570d",
-      "title": "Bangkok roads submerged as flood disaster declared",
+      "id": "global-rss-072cbec4247becf3f014",
+      "title": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
       "tag": "BREAKING",
       "date": "2026-09-27",
-      "time": "04:45",
+      "time": "11:38",
       "category": "global"
     },
     {
-      "id": "global-rss-c40a3dfae780cf5bfc42",
-      "title": "Nor'easter brings flooding as New York and New Jersey declare emergency",
+      "id": "global-rss-b32914394325e0f93e4d",
+      "title": "Two mass shootings in South Africa leave 27 dead",
       "tag": "BREAKING",
       "date": "2026-09-27",
-      "time": "04:23",
+      "time": "10:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-cb7921681dd9d30c6047",
+      "title": "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
+      "tag": "BREAKING",
+      "date": "2026-09-27",
+      "time": "07:44",
       "category": "global"
     }
   ]
