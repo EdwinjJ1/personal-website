@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-09-26T21:12:41.076496Z",
+  "lastUpdated": "2026-09-27T05:21:44.379873Z",
   "availableDates": [
+    {
+      "value": "2026-09-27",
+      "label": "September 27, 2026"
+    },
     {
       "value": "2026-09-26",
       "label": "September 26, 2026"
@@ -596,6 +600,61 @@
   ],
   "news": [
     {
+      "id": "global-rss-3905074a13675726570d",
+      "title": "Bangkok roads submerged as flood disaster declared",
+      "summary": "Authorities said the heavy rains have subsided but the flooding is not yet over.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "04:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c40a3dfae780cf5bfc42",
+      "title": "Nor'easter brings flooding as New York and New Jersey declare emergency",
+      "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "04:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6096d6a184eb3059d866",
+      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
+      "summary": "Iran's foreign minister acknowledges Trump's comments, but adds that Tehran is waiting for the \"definitive views\" of mediators.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "22:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-77ada0dded07bb21ff62",
+      "title": "Mother of woman found hanging in tree shocked as police say body was staged",
+      "summary": "Christy Spivey tells the BBC she only has more questions now police think Tasia Fortune's body was put in the tree after her death.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq4gmmdl52rgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "21:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7426e24e28c006870356",
+      "title": "Republic of Ireland to wear black armbands for Israel game",
+      "summary": "Republic of Ireland players intend to wear black armbands \"in recognition of all lives lost in the [Gaza] conflict\" for match against Israel.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/ckddvv5dn4eyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "19:59",
+      "category": "global"
+    },
+    {
       "id": "global-rss-1d7078360a489aa3c567",
       "title": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
       "summary": "Around 700,000 people gathered in central Paris to hear the Catholic leader speak and offer prayer.",
@@ -619,35 +678,13 @@
     },
     {
       "id": "global-rss-389fd0490c34466e78bf",
-      "title": "Tenth woman's body found in South Africa suburb as police probe killings",
+      "title": "Tenth woman's body found as South Africa police probe killings",
       "summary": "The deaths have sparked a national outcry about the scale of violence against women in the country.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vgyyj8q807o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "18:30",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-6096d6a184eb3059d866",
-      "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
-      "summary": "The US president says Tehran had only put forward the proposal because it is losing the war.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "18:17",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-c40a3dfae780cf5bfc42",
-      "title": "Nor'easter storm brings coastal flooding, as New York and New Jersey declare emergency",
-      "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "17:47",
       "category": "global"
     },
     {
@@ -714,17 +751,6 @@
       "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/c962jjl18g3ro?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "10:44",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-3905074a13675726570d",
-      "title": "Bangkok roads submerged as flood disaster declared",
-      "summary": "An emergency has been declared across the capital of Thailand as days of heavy rain leave the city inundated.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-26",
-      "time": "07:21",
       "category": "global"
     },
     {

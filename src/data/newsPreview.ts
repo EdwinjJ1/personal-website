@@ -1,29 +1,21 @@
 export const newsPreview = {
-  "latestDate": "2026-09-26",
-  "latestLabel": "September 26, 2026",
+  "latestDate": "2026-09-27",
+  "latestLabel": "September 27, 2026",
   "items": [
     {
-      "id": "global-rss-1d7078360a489aa3c567",
-      "title": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
+      "id": "global-rss-3905074a13675726570d",
+      "title": "Bangkok roads submerged as flood disaster declared",
       "tag": "BREAKING",
-      "date": "2026-09-26",
-      "time": "19:48",
+      "date": "2026-09-27",
+      "time": "04:45",
       "category": "global"
     },
     {
-      "id": "global-rss-93518d29afda753734a7",
-      "title": "White House bars CNN from travelling with Trump on Air Force One",
+      "id": "global-rss-c40a3dfae780cf5bfc42",
+      "title": "Nor'easter brings flooding as New York and New Jersey declare emergency",
       "tag": "BREAKING",
-      "date": "2026-09-26",
-      "time": "19:16",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-389fd0490c34466e78bf",
-      "title": "Tenth woman's body found in South Africa suburb as police probe killings",
-      "tag": "BREAKING",
-      "date": "2026-09-26",
-      "time": "18:30",
+      "date": "2026-09-27",
+      "time": "04:23",
       "category": "global"
     }
   ]
