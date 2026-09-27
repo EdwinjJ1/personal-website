@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-27T05:21:44.379873Z",
+  "lastUpdated": "2026-09-27T12:06:01.263900Z",
   "availableDates": [
     {
       "value": "2026-09-27",
@@ -600,6 +600,39 @@
   ],
   "news": [
     {
+      "id": "global-rss-072cbec4247becf3f014",
+      "title": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
+      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "11:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b32914394325e0f93e4d",
+      "title": "Two mass shootings in South Africa leave 27 dead",
+      "summary": "The two attacks hours apart come as the country struggles to stop high levels of gang-related armed violence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "10:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-cb7921681dd9d30c6047",
+      "title": "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
+      "summary": "The foreign minister says Tehran is waiting for an official rejection of a deal, despite the US President's comments.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "07:44",
+      "category": "global"
+    },
+    {
       "id": "global-rss-3905074a13675726570d",
       "title": "Bangkok roads submerged as flood disaster declared",
       "summary": "Authorities said the heavy rains have subsided but the flooding is not yet over.",
@@ -622,6 +655,28 @@
       "category": "global"
     },
     {
+      "id": "global-rss-ebbd93605f4b5c61d8cc",
+      "title": "Four killed in helicopter crash near Montreal",
+      "summary": "The victims of the crash have not yet been identified, Quebec provincial police told the BBC.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "02:43",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-03b012d5f44f2ecdc93c",
+      "title": "Killer Christa Pike is to be executed within days but her defence say she's a victim too",
+      "summary": "Lawyers for Pike, who killed a fellow student in 1995, say she should get clemency and would not be sentenced to death if the crime happened today.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "23:04",
+      "category": "global"
+    },
+    {
       "id": "global-rss-6096d6a184eb3059d866",
       "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
       "summary": "Iran's foreign minister acknowledges Trump's comments, but adds that Tehran is waiting for the \"definitive views\" of mediators.",
@@ -630,6 +685,28 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-26",
       "time": "22:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9bea66b25fb918ba31ab",
+      "title": "Young people in China are fangirling over a professor who gets their anxiety",
+      "summary": "China's economy and tech have developed at breakneck speed, but there is plenty worrying its Gen Z.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq70dgdndr46o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "22:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-079d934c613a4d01a494",
+      "title": "Are claims of a white genocide in South Africa real?",
+      "summary": "Thousands of white crosses have been displayed in Washington by an Afrikaner lobby group But South Africa's new ambassador Roelf Meyer says there is not a genocide.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cme8xx55eryno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-26",
+      "time": "21:20",
       "category": "global"
     },
     {
@@ -723,7 +800,7 @@
     {
       "id": "global-rss-fb1d1507ce4e40a42248",
       "title": "Security lapses at Utah campus where Charlie Kirk was killed, review says",
-      "summary": "The indpendent report also says Kirk's aides insisted he speak outdoors, overriding concerns from campus officials.",
+      "summary": "The independent report also says Kirk's aides insisted he speak outdoors, overriding concerns from campus officials.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cq4g55r76d9lo?at_medium=RSS&at_campaign=rss",
