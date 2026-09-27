@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 27, 2026",
   "items": [
     {
-      "id": "global-rss-072cbec4247becf3f014",
-      "title": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
+      "id": "global-rss-b79f35a9c10fbf4bc63f",
+      "title": "Woman charged with stealing from patients and staff at hospitals across Ontario",
       "tag": "BREAKING",
       "date": "2026-09-27",
-      "time": "11:38",
+      "time": "16:35",
       "category": "global"
     },
     {
-      "id": "global-rss-b32914394325e0f93e4d",
-      "title": "Two mass shootings in South Africa leave 27 dead",
+      "id": "global-rss-63d1fabb62c41dafe4f6",
+      "title": "Ten climbers missing after avalanche hits Himalayan base camp",
       "tag": "BREAKING",
       "date": "2026-09-27",
-      "time": "10:00",
+      "time": "16:22",
       "category": "global"
     },
     {
-      "id": "global-rss-cb7921681dd9d30c6047",
-      "title": "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
+      "id": "global-rss-0584f789da0efe2e8284",
+      "title": "Switzerland rejects stricter interpretation of its neutrality",
       "tag": "BREAKING",
       "date": "2026-09-27",
-      "time": "07:44",
+      "time": "16:02",
       "category": "global"
     }
   ]

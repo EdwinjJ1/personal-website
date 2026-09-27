@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-27T12:06:01.263900Z",
+  "lastUpdated": "2026-09-27T17:00:31.618509Z",
   "availableDates": [
     {
       "value": "2026-09-27",
@@ -600,14 +600,47 @@
   ],
   "news": [
     {
-      "id": "global-rss-072cbec4247becf3f014",
-      "title": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
-      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
+      "id": "global-rss-b79f35a9c10fbf4bc63f",
+      "title": "Woman charged with stealing from patients and staff at hospitals across Ontario",
+      "summary": "The 34-year-old is under investigation for incidents that began in February 2024 up until as recently as last month.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3ew9e5lg01vo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
-      "time": "11:38",
+      "time": "16:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-63d1fabb62c41dafe4f6",
+      "title": "Ten climbers missing after avalanche hits Himalayan base camp",
+      "summary": "The Nepali team was preparing to take overseas climbers up the Himlung Himal peak.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "16:22",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0584f789da0efe2e8284",
+      "title": "Switzerland rejects stricter interpretation of its neutrality",
+      "summary": "The initiative would have prevented the nation from imposing sanctions unless approved by the UN.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm750plvwy9vo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "16:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4e45b733e15321677174",
+      "title": "Venezuela releases dozens of political prisoners as election calls grow",
+      "summary": "A slew of dissidents being released from long-term detention comes days after the nation's interim leader met the US president.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c620lrw2xr12o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "15:56",
       "category": "global"
     },
     {
@@ -618,7 +651,40 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
-      "time": "10:00",
+      "time": "14:09",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c40a3dfae780cf5bfc42",
+      "title": "One dead as nor'easter storm pummels New York and New Jersey",
+      "summary": "Tens of millions of people from Maine to Virginia found themselves in the path of the powerful weather system.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "12:34",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-072cbec4247becf3f014",
+      "title": "'Scourge' of abuse must be rooted out, says Pope during Lourdes visit",
+      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "11:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5781b612613c1e0648f9",
+      "title": "Before BTS and Blackpink, there was Big Bang: Now the Kings of K-pop are back",
+      "summary": "Big Bang played London's Tottenham Hotspur Stadium, marking a long-awaited return for the group that helped build the blueprint for modern K-pop.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq39me84zrkdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "08:51",
       "category": "global"
     },
     {
@@ -644,17 +710,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-c40a3dfae780cf5bfc42",
-      "title": "Nor'easter brings flooding as New York and New Jersey declare emergency",
-      "summary": "Tens of millions of people from Maine to Virginia are in the path of the powerful storm.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-27",
-      "time": "04:23",
-      "category": "global"
-    },
-    {
       "id": "global-rss-ebbd93605f4b5c61d8cc",
       "title": "Four killed in helicopter crash near Montreal",
       "summary": "The victims of the crash have not yet been identified, Quebec provincial police told the BBC.",
@@ -667,7 +722,7 @@
     },
     {
       "id": "global-rss-03b012d5f44f2ecdc93c",
-      "title": "Killer Christa Pike is to be executed within days but her defence say she's a victim too",
+      "title": "Killer Christa Pike to be executed within days - but her defence say she's a victim too",
       "summary": "Lawyers for Pike, who killed a fellow student in 1995, say she should get clemency and would not be sentenced to death if the crime happened today.",
       "tag": "BREAKING",
       "source": "BBC World",
