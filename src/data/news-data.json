@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-27T17:00:31.618509Z",
+  "lastUpdated": "2026-09-27T21:23:26.730252Z",
   "availableDates": [
     {
       "value": "2026-09-27",
@@ -600,6 +600,61 @@
   ],
   "news": [
     {
+      "id": "global-rss-c68bfc5457aff9dae1fe",
+      "title": "Watch: BBC reports from the front-line of an escalating war in Yemen",
+      "summary": "In rare access to Yemen's conflict zone the BBC travels to the front line with pro-government soldiers.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/crp3kgjygnkeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "21:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-99d9f8f5af36f631f8a7",
+      "title": "Watch: The ups and downs of SpaceX's 13 Starship test flights",
+      "summary": "The BBC's Ricky Boleto looks how previous SpaceX test flights went.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm0e30lpngxpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "20:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ccd692e6d4bcf0054a11",
+      "title": "Embattled Serbian president resigns, paving way for early elections",
+      "summary": "Aleksandar Vučić's administration has been dogged by prolonged protests over allegations of corruption.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "20:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-072cbec4247becf3f014",
+      "title": "Pope says 'scourge' of abuse must be rooted out as he visits Lourdes",
+      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "19:47",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-63d1fabb62c41dafe4f6",
+      "title": "Two bodies found after avalanche hits Himalayan climbing group",
+      "summary": "Rescuers are looking for at least 10 Nepalese people who were preparing to take climbers up the Himlung Himal peak.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-27",
+      "time": "17:05",
+      "category": "global"
+    },
+    {
       "id": "global-rss-b79f35a9c10fbf4bc63f",
       "title": "Woman charged with stealing from patients and staff at hospitals across Ontario",
       "summary": "The 34-year-old is under investigation for incidents that began in February 2024 up until as recently as last month.",
@@ -608,17 +663,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3ew9e5lg01vo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
       "time": "16:35",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-63d1fabb62c41dafe4f6",
-      "title": "Ten climbers missing after avalanche hits Himalayan base camp",
-      "summary": "The Nepali team was preparing to take overseas climbers up the Himlung Himal peak.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-27",
-      "time": "16:22",
       "category": "global"
     },
     {
@@ -663,17 +707,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
       "time": "12:34",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-072cbec4247becf3f014",
-      "title": "'Scourge' of abuse must be rooted out, says Pope during Lourdes visit",
-      "summary": "Pope Leo spoke to bishops before leading a service attended by thousands of worshippers in France.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-27",
-      "time": "11:38",
       "category": "global"
     },
     {
