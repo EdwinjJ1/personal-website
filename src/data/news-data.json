@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T05:28:29.866334Z",
+  "lastUpdated": "2026-09-28T13:59:31.041307Z",
   "availableDates": [
     {
       "value": "2026-09-28",
@@ -603,6 +603,72 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-864b9fdb8d8b923525aa",
+      "title": "Plan for controversial Sydney data centre scrapped after push-back",
+      "summary": "Goodman Group, the property giant behind the Project Mars data centre, says the decision is due to changes to the \"policy and regulatory environment\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6n9wrqpj4yqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "12:47",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-af5b32a27fa22138ec17",
+      "title": "Apple ordered to pay $5.7bn after losing vibration tech patent suit",
+      "summary": "Audio firm Taction Technology claimed Apple infringed its patents for tech used to power device vibrations.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6je85n2vyleo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "11:16",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-2154fd5eaf09cffa3927",
+      "title": "Mexico's Pacific coast braces for Hurricane Polo",
+      "summary": "The category-three storm is approaching the state of Baja California Sur, on Mexico's northern Pacific coast.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8d3z5y7958o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "11:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-219d84a47ff54db7ea17",
+      "title": "Trump-Xi summit: What wasn't said might matter the most",
+      "summary": "The most revealing thing about the summit in Washington may be what the two leaders did not say - and what we still don't know.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxp84g2ly1mjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "07:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b32914394325e0f93e4d",
+      "title": "Two mass shootings in South Africa leave 28 dead",
+      "summary": "The two attacks hours apart come as the country struggles to stop high levels of gang-related armed violence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "06:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4132a578af6e85182d35",
+      "title": "Watch: Madonna and Taylor Swift win big at the MTV VMAs",
+      "summary": "Taylor Swift, Madonna, and LISA were among the big winners at the MTV Video Music Awards (VMAs) on Sunday evening in downtown Los Angeles.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/ckvgy6j4594yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "06:22",
+      "category": "global"
+    },
     {
       "id": "research-rss-a7fa72d763d6f21fedaf",
       "title": "PUBG Ally: A Conversational Embodied Agent as an AI Teammate",
@@ -4257,7 +4323,7 @@
     },
     {
       "id": "global-rss-63c3e2413df8133ecbf9",
-      "title": "Watch: Shipwreck uncovered on Nantucket island during nor'easter storm",
+      "title": "Shipwreck uncovered on Nantucket island during nor'easter storm",
       "summary": "The so-called nor'easter storm has washed up what may be a shipwreck from the 19th century in Massachusetts, local media says.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -4279,7 +4345,7 @@
     },
     {
       "id": "global-rss-ce11a47081a89beb131a",
-      "title": "News media must stay relevant or 'society will struggle', says World News Day boss",
+      "title": "News media must stay relevant or 'society will struggle', says World News Day organiser",
       "summary": "World News Day aims to highlight the role of news providers in investigating and explaining important events.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -4396,17 +4462,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c620lrw2xr12o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
       "time": "15:56",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-b32914394325e0f93e4d",
-      "title": "Two mass shootings in South Africa leave 27 dead",
-      "summary": "The two attacks hours apart come as the country struggles to stop high levels of gang-related armed violence.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-27",
-      "time": "14:09",
       "category": "global"
     },
     {
@@ -4727,6 +4782,17 @@
       "date": "2026-09-25",
       "time": "23:05",
       "category": "global"
+    },
+    {
+      "id": "industry-rss-26421e4030e817a8e783",
+      "title": "Inside the FBI hack: Agents fearful and angry after 'dangerous' data breach",
+      "summary": "Current and former agents speak to the BBC about the devastating impact of the FBI hack.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm4gjjlgzdjgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-25",
+      "time": "23:05",
+      "category": "industry"
     },
     {
       "id": "global-rss-f5b48cb8f8fe544db73d",
