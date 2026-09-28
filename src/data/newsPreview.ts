@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 28, 2026",
   "items": [
     {
-      "id": "research-rss-a7fa72d763d6f21fedaf",
-      "title": "PUBG Ally: A Conversational Embodied Agent as an AI Teammate",
-      "tag": "RESEARCH",
+      "id": "global-rss-864b9fdb8d8b923525aa",
+      "title": "Plan for controversial Sydney data centre scrapped after push-back",
+      "tag": "BREAKING",
       "date": "2026-09-28",
-      "time": "04:00",
-      "category": "research"
+      "time": "12:47",
+      "category": "global"
     },
     {
-      "id": "research-rss-f930b46c6edd83283f1d",
-      "title": "PrivDrift: Auditing User-Secret Leakage Under Topic Drift in Active LLM Conversations",
-      "tag": "RESEARCH",
+      "id": "industry-rss-af5b32a27fa22138ec17",
+      "title": "Apple ordered to pay $5.7bn after losing vibration tech patent suit",
+      "tag": "PRODUCT",
       "date": "2026-09-28",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:16",
+      "category": "industry"
     },
     {
-      "id": "research-rss-50fd716fb2131ca92e63",
-      "title": "AD-WM: Action-Discriminative World Models for Counterfactual Model Predictive Control",
-      "tag": "RESEARCH",
+      "id": "global-rss-2154fd5eaf09cffa3927",
+      "title": "Mexico's Pacific coast braces for Hurricane Polo",
+      "tag": "BREAKING",
       "date": "2026-09-28",
-      "time": "04:00",
-      "category": "research"
+      "time": "11:05",
+      "category": "global"
     }
   ]
 } as const;
