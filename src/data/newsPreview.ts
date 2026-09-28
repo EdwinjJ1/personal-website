@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "September 28, 2026",
   "items": [
     {
-      "id": "global-rss-864b9fdb8d8b923525aa",
-      "title": "Plan for controversial Sydney data centre scrapped after push-back",
+      "id": "global-rss-348fc91433cefae306be",
+      "title": "French PM warns against escalation of school protests after 164 arrested",
       "tag": "BREAKING",
       "date": "2026-09-28",
-      "time": "12:47",
+      "time": "21:46",
       "category": "global"
     },
     {
-      "id": "industry-rss-af5b32a27fa22138ec17",
-      "title": "Apple ordered to pay $5.7bn after losing vibration tech patent suit",
+      "id": "global-rss-986a89d2a2521f2d7fe1",
+      "title": "Stand-up comic released after being convicted of insulting Erdoğan",
+      "tag": "BREAKING",
+      "date": "2026-09-28",
+      "time": "20:23",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-db713ef86bd59ea8f7ba",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
       "tag": "PRODUCT",
       "date": "2026-09-28",
-      "time": "11:16",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-2154fd5eaf09cffa3927",
-      "title": "Mexico's Pacific coast braces for Hurricane Polo",
-      "tag": "BREAKING",
-      "date": "2026-09-28",
-      "time": "11:05",
-      "category": "global"
+      "time": "19:00",
+      "category": "ai"
     }
   ]
 } as const;
