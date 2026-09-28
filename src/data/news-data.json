@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T13:59:31.041307Z",
+  "lastUpdated": "2026-09-28T23:18:32.919537Z",
   "availableDates": [
     {
       "value": "2026-09-28",
@@ -603,6 +603,160 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-348fc91433cefae306be",
+      "title": "French PM warns against escalation of school protests after 164 arrested",
+      "summary": "Students are protesting over issues such as overcrowded classes, but the prime minister has condemned reports of violence.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmqxvnn49rg2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "21:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-986a89d2a2521f2d7fe1",
+      "title": "Stand-up comic released after being convicted of insulting Erdoğan",
+      "summary": "Turkish comedian Deniz Göktaş also faces a travel ban but has been released due to time served.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8zxzlqwzw0eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "20:23",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-db713ef86bd59ea8f7ba",
+      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
+      "date": "2026-09-28",
+      "time": "19:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-6ebd3511b67de1ef2096",
+      "title": "Stuck between superpowers: How Australia navigates the China-US rivalry",
+      "summary": "Australia is increasingly concerned about China's military might - but Beijing is also its biggest trade partner.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c61wxyzr4rwyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "18:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0f4174b157a8e7df7ac9",
+      "title": "US prosecutors reopen case of alleged gang rape at Cornell University",
+      "summary": "It comes after the woman filed a civil lawsuit alleging she was drugged and raped at a fraternity house in 2024.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5wyzrm0n74ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "18:11",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6118a7976098ff4a6d08",
+      "title": "Twelve women have been killed in one part of South Africa since July. Here's what we know so far",
+      "summary": "South African President Cyril Ramaphosa says the murders are a \"stain on our national conscience\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6m27dprvzv7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "17:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5a8fc117c7c11f3a2dc3",
+      "title": "Iran court upholds lashes sentence for singer who performed without hijab",
+      "summary": "Parastoo Ahmadi was convicted of \"offending public decency\" after singing while wearing a sleeveless dress during a livestreamed concert.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crn45ed1kqqgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "17:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-16509166689ce8b39d31",
+      "title": "People escape historic Kyiv building hit by Russian drone",
+      "summary": "The BBC's Paul Adams reports from the scene of the strike on Ukraine's National Academy of Sciences.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cqj9xkdyrvgzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "17:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-547824c1c865316ec9b5",
+      "title": "Remains of dozens of suspected kidnap victims found in Nigerian forests",
+      "summary": "Investigations are ongoing to establish the identities of at least 28 people whose remains were recovered by police.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6e30x757nx4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "16:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-cbc864f159ad5594b563",
+      "title": "Women protest in the streets of Delhi after string of sexual assaults",
+      "summary": "BBC correspondent Azadeh Moshiri reports from Delhi, where hundreds of women are protesting.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cm70lpg5z45go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "16:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-63d1fabb62c41dafe4f6",
+      "title": "Four bodies found after avalanche hits Himalayan climbing group",
+      "summary": "Rescuers are still looking for 12 Nepalese cook staff who were preparing for climbers to ascend the Himlung Himal peak.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "16:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-669d62cab54beea37bdc",
+      "title": "Nigerian attempts to break world record by dancing non-stop for seven days",
+      "summary": "Crowds have gathered in Lagos to watch Ben Dancer, who says he will carry on dancing until Tuesday morning.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8r6z2gjzd1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "15:39",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ec3483b858a46eceac72",
+      "title": "Seoul summons Ukraine envoy over North Korean prisoner-of-war row",
+      "summary": "Last week Zelensky revealed Ukraine had sent two captured North Koreans to South Korea - which Seoul says was meant to be a secret.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8ly40xx0dr0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "14:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b867db073209ffd886c7",
+      "title": "Watch: From launch to fiery splashdown, SpaceX's Starship completes orbit test",
+      "summary": "A thunderous lift off, rapid satellite deployments and a fiery ending. That's how SpaceX's 14th launch of its Starship rocket panned out today.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6ge4lp442npo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-28",
+      "time": "13:59",
+      "category": "global"
+    },
     {
       "id": "global-rss-864b9fdb8d8b923525aa",
       "title": "Plan for controversial Sydney data centre scrapped after push-back",
@@ -4418,17 +4572,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-27",
       "time": "19:47",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-63d1fabb62c41dafe4f6",
-      "title": "Two bodies found after avalanche hits Himalayan climbing group",
-      "summary": "Rescuers are looking for at least 10 Nepalese people who were preparing to take climbers up the Himlung Himal peak.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-27",
-      "time": "17:05",
       "category": "global"
     },
     {
