@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-29T05:46:49.055912Z",
+  "lastUpdated": "2026-09-29T12:56:36.436189Z",
   "availableDates": [
     {
       "value": "2026-09-29",
@@ -608,6 +608,28 @@
   ],
   "news": [
     {
+      "id": "global-rss-d77b9be5bd7c100cc2ae",
+      "title": "Spain announces new housing measures after protests over 87-year-old woman's eviction",
+      "summary": "The measures include a proposed ban on evictions until 2030 and the automatic renewal of tenant contracts.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "12:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2154fd5eaf09cffa3927",
+      "title": "Hurricane Polo makes landfall on Mexico's Pacific coast",
+      "summary": "The storm moved ashore on the Baja California peninsula, which is a popular tourist destination.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8d3z5y7958o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "10:34",
+      "category": "global"
+    },
+    {
       "id": "industry-rss-355c62d34bfd876c80e3",
       "title": "OpenAI scraps rollout of new model over safety concerns",
       "summary": "The firm also issued an update on incidents in which its models accessed Australian government systems.",
@@ -615,7 +637,7 @@
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nynl75ko?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-29",
-      "time": "04:30",
+      "time": "09:14",
       "category": "industry"
     },
     {
@@ -626,7 +648,62 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5y5nynl75ko?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-29",
-      "time": "04:30",
+      "time": "09:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2a7855935e3e7faa0716",
+      "title": "How an alleged rape sent an Indian university into turmoil and emptied hostels",
+      "summary": "Police are trying to verify whether a female student was raped at Lovely Professional University (LPU).",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6kg8dxrv54do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "08:12",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f18dd9c874bf43ce362e",
+      "title": "Burkina Faso's junta leader opens major gold refinery to keep mining profits at home",
+      "summary": "Junta leader Ibrahim Traoré wants the country to profit more from its mineral wealth.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c61mvdlk0327o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "08:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-790b6cd17ae10ca63544",
+      "title": "Watch: Bangkok locals create floating market during floods",
+      "summary": "As sellers waded through floodwaters to sell produce like fish and vegetables from floating platforms and foam boxes, buyers walked or paddled between the makeshift stalls to buy their groceries.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6q8jlqvjgdlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "06:15",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-79a521daf6420667347b",
+      "title": "Malaysia begins controversial repatriation of asylum seekers to Myanmar",
+      "summary": "Human rights groups say some 5,000 returnees could face violence, persecution and forced conscription.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckj06542e5neo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "06:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-26d4016fe46c6a10da50",
+      "title": "Rights group accuses Vietnam of abducting Australian and Norwegian activists",
+      "summary": "Vietnam says the men entered the country illegally and accused them of planning terrorist activities.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmvgy2wwvzlqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "05:31",
       "category": "global"
     },
     {
@@ -642,7 +719,7 @@
     },
     {
       "id": "global-rss-d6d4fbb5e2197b860e16",
-      "title": "New York Times executive fatally shot allegedly by elderly in-laws",
+      "title": "New York Times executive fatally shot by elderly in-laws, police say",
       "summary": "Jonathan McKinsey's in-laws, who are both 77 years old, face multiple charges including first-degree murder.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -16602,6 +16679,17 @@
       "category": "global"
     },
     {
+      "id": "global-rss-f105b25ad69f6e530034",
+      "title": "Are Trump's US government funded ads illegal?",
+      "summary": "President Trump has faced criticism after fronting adverts which were paid for by the US government.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6lymekx0repo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "01:12",
+      "category": "global"
+    },
+    {
       "id": "global-rss-6ddc9551cbd9b420370f",
       "title": "Sign before praying: A new conversion law is affecting churchgoers in Indian state",
       "summary": "A new anti-conversion law in Maharashtra is raising questions about faith, choice and freedom.",
@@ -16632,17 +16720,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cx7v4glz50elo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-28",
       "time": "23:44",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-2154fd5eaf09cffa3927",
-      "title": "Hurricane Polo unleashes threatening winds as it approaches Mexico",
-      "summary": "The category-three storm is expected to make landfall of north of Cabo San Lucas, a popular tourist area, on the Mexican peninsula of Baja California Sur.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8d3z5y7958o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-28",
-      "time": "23:43",
       "category": "global"
     },
     {
