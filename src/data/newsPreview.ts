@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-09-29",
-  "latestLabel": "September 29, 2026",
+  "latestDate": "2026-09-30",
+  "latestLabel": "September 30, 2026",
   "items": [
     {
-      "id": "global-rss-16d4086c4603d691182f",
-      "title": "Former American Idol contestant and pastor found guilty of murdering wife",
+      "id": "global-rss-6a9f573ffc0c8810277e",
+      "title": "South Korea demands apology from Pyongyang for landmine blasts that injured three",
       "tag": "BREAKING",
-      "date": "2026-09-29",
-      "time": "22:13",
+      "date": "2026-09-30",
+      "time": "05:24",
       "category": "global"
     },
     {
       "id": "industry-rss-0b10a0cc8ae175ba3cf0",
-      "title": "OpenAI agents get rebrand - as 'dots' - while safety worries delay new model",
+      "title": "OpenAI unveils AI assistant 'dots' while safety worries delay new model",
       "tag": "PRODUCT",
-      "date": "2026-09-29",
-      "time": "22:06",
+      "date": "2026-09-30",
+      "time": "05:18",
       "category": "industry"
     },
     {
-      "id": "global-rss-36d5ffadc69d1e0f776c",
-      "title": "More than 400 detained as France student protests escalate",
+      "id": "global-rss-7ae3429c5a0e9b545d62",
+      "title": "Girl has multiple surgeries to control infections after strike in Gaza",
       "tag": "BREAKING",
-      "date": "2026-09-29",
-      "time": "21:55",
+      "date": "2026-09-30",
+      "time": "05:02",
       "category": "global"
     }
   ]
