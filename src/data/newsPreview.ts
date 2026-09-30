@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "September 30, 2026",
   "items": [
     {
-      "id": "global-rss-c6a83b73af0564dc3ea3",
-      "title": "Botswana condemned for slaughtering elephants for independence celebrations",
+      "id": "global-rss-910b86dd7216aa80cf03",
+      "title": "Trekkers helicoptered off mountains as more deadly landslides hit Nepal",
       "tag": "BREAKING",
       "date": "2026-09-30",
-      "time": "12:06",
+      "time": "22:01",
       "category": "global"
     },
     {
-      "id": "global-rss-38619c509b1986d41015",
-      "title": "Russia launches largest attack on Ukraine energy infrastructure since spring",
+      "id": "global-rss-e9673cefe626ee197cf0",
+      "title": "Flydubai passenger describes putting attacker in chokehold after cockpit stabbing",
       "tag": "BREAKING",
       "date": "2026-09-30",
-      "time": "11:47",
+      "time": "21:38",
       "category": "global"
     },
     {
-      "id": "global-rss-543752e81afbf5136f3f",
-      "title": "Last UK and US troops leave Iraq as anti-Islamic State mission ends",
+      "id": "global-rss-6e51ebb4942878ed179f",
+      "title": "What we know about stabbing on Flydubai flight to Israel",
       "tag": "BREAKING",
       "date": "2026-09-30",
-      "time": "11:36",
+      "time": "21:36",
       "category": "global"
     }
   ]

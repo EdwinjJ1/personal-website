@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30T12:38:14.554496Z",
+  "lastUpdated": "2026-09-30T22:18:29.663719Z",
   "availableDates": [
     {
       "value": "2026-09-30",
@@ -612,14 +612,91 @@
   ],
   "news": [
     {
-      "id": "global-rss-c6a83b73af0564dc3ea3",
-      "title": "Botswana condemned for slaughtering elephants for independence celebrations",
-      "summary": "The government authorises the hunting of 23 elephants and dozens of other wild animals for independence day feasts.",
+      "id": "global-rss-910b86dd7216aa80cf03",
+      "title": "Trekkers helicoptered off mountains as more deadly landslides hit Nepal",
+      "summary": "A month after mass catastrophic flooding, around 30 people have died in landslides and heavy rain.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxm2qmpy57ggo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c607l4l3vn0eo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-30",
-      "time": "12:06",
+      "time": "22:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e9673cefe626ee197cf0",
+      "title": "Flydubai passenger describes putting attacker in chokehold after cockpit stabbing",
+      "summary": "Other passengers on the Israel-bound flight described the \"terrifying\" moment the plane dropped.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2z92xx57no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "21:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-6e51ebb4942878ed179f",
+      "title": "What we know about stabbing on Flydubai flight to Israel",
+      "summary": "A pilot has been arrested and is being questioned after another pilot was stabbed, officials say.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqjdv7pmj9dno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "21:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ee09fc2c613e65c85830",
+      "title": "Six smugglers jailed for manslaughter over worst Channel small boats disaster",
+      "summary": "Thirty-one migrants died when their boat went down in November 2021. The trial found that the guilty men were part of two smuggling networks.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6n8m33pn9djo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "17:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0a0a4fcc14c06d54c3c8",
+      "title": "UK-France 'one in, one out' migrant scheme scrapped",
+      "summary": "Some 1,500 people have been removed to France since the scheme began just over a year ago.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c64gvnv4eqylo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "17:11",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0d967fda81d878dfa6f8",
+      "title": "Execution of US murderer Christa Pike halted shortly before it was due to happen",
+      "summary": "Pike was convicted and sentenced to death in 1996 for the murder of Colleen Slemmer.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw20vxxn876no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "15:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d3a19f57703f8dd2cfa8",
+      "title": "Passengers describe stabbing on Israel-bound plane",
+      "summary": "Passengers on the Flydubai flight bound for Israel filmed the moments following the stabbing.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cv70d22kd34do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "15:07",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-fb456554df691889a30c",
+      "title": "Ethiopia fighting escalates in Tigray killing 52 civilians, medic tells the BBC",
+      "summary": "The deadly fighting has also spread to neighbouring regions, stranding tourists in Lalibela.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6grveejg1e2o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "15:04",
       "category": "global"
     },
     {
@@ -630,7 +707,51 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ckjw5jx2l393o?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-30",
-      "time": "11:47",
+      "time": "14:53",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-e200963ec8d1825befe5",
+      "title": "Regulating AI 'not the right place to start' says Bailey",
+      "summary": "AI needs \"rigorous\" testing and safeguards to contain risk, Andrew Bailey says.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "14:00",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-36d5ffadc69d1e0f776c",
+      "title": "Dozens hurt and hundreds arrested in wave of French school protests",
+      "summary": "Students have been protesting against conditions and resources in secondary schools since last week.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c862epne7glyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "13:18",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-a64ee96133a196c83eb7",
+      "title": "WhatsApp introduces optional parental controls for teenagers",
+      "summary": "The social messaging app will let parents decide on privacy settings for their child's account.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm986x65we88o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "13:01",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c6a83b73af0564dc3ea3",
+      "title": "Botswana condemned for slaughtering 23 elephants for independence celebrations",
+      "summary": "The government authorises the hunting of elephants and dozens of other wild animals for independence day feasts.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxm2qmpy57ggo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "12:06",
       "category": "global"
     },
     {
@@ -676,17 +797,6 @@
       "date": "2026-09-30",
       "time": "10:41",
       "category": "global"
-    },
-    {
-      "id": "industry-rss-e200963ec8d1825befe5",
-      "title": "Regulating AI 'not the right place to start' says Bailey",
-      "summary": "AI needs \"rigorous\" testing and safeguards to contain risk, Andrew Bailey says.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-30",
-      "time": "10:20",
-      "category": "industry"
     },
     {
       "id": "global-rss-4cc76f9f9ca805de0294",
@@ -8881,17 +8991,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c5rm9gv7n07xo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-29",
       "time": "22:13",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-36d5ffadc69d1e0f776c",
-      "title": "More than 400 detained as France student protests escalate",
-      "summary": "Students have been protesting conditions and resources in high schools since last week.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c862epne7glyo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-29",
-      "time": "21:55",
       "category": "global"
     },
     {
