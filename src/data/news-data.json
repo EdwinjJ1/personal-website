@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-30T05:35:58.553322Z",
+  "lastUpdated": "2026-09-30T12:38:14.554496Z",
   "availableDates": [
     {
       "value": "2026-09-30",
@@ -611,6 +611,138 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-c6a83b73af0564dc3ea3",
+      "title": "Botswana condemned for slaughtering elephants for independence celebrations",
+      "summary": "The government authorises the hunting of 23 elephants and dozens of other wild animals for independence day feasts.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxm2qmpy57ggo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "12:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-38619c509b1986d41015",
+      "title": "Russia launches largest attack on Ukraine energy infrastructure since spring",
+      "summary": "In total 11 regions of the country were attacked overnight, with residential buildings and railways also targeted, the Ukrainian PM says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckjw5jx2l393o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "11:47",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-543752e81afbf5136f3f",
+      "title": "Last UK and US troops leave Iraq as anti-Islamic State mission ends",
+      "summary": "The withdrawal of coalition forces, under a deal agreed two years ago, was a key demand of the Iraqi government.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c65ym1dyn92mo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "11:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1f7706314cac26e93964",
+      "title": "Africa's richest man launches Kenya oil refinery despite land protests",
+      "summary": "The Kenya refinery is part of Dangote's ambitious bid to expand and help industralise Africa by 2030.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmkg8dpwy25po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "11:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-177f907ac0744983c96f",
+      "title": "Couple describes relief at rescue after whale destroys their yacht",
+      "summary": "Jeremy and Gemma Cooper were 500 miles off the coast of New Zealand when their yacht, the Tai Tam, collided with a sperm whale.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c6n4ken4n7n7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "11:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-67f38fd4a8dc4b4537c9",
+      "title": "Luxury prison in Indonesia demolished after public outcry",
+      "summary": "Indonesian lawmakers on Wednesday ordered the demolition of a controversial luxury compound inside a penitentiary near the capital.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmwyz8j9j85wo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "10:41",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-e200963ec8d1825befe5",
+      "title": "Regulating AI 'not the right place to start' says Bailey",
+      "summary": "AI needs \"rigorous\" testing and safeguards to contain risk, Andrew Bailey says.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvzez7k0pn40o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "10:20",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-4cc76f9f9ca805de0294",
+      "title": "Singapore launches matchmaking service for government workers",
+      "summary": "The launch of FirstDate comes as the ageing nation wrestles with a record-low fertility rate.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqzjzr893yv4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "09:42",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8898c6075bf3298e2f3d",
+      "title": "US actor Chad Lowe 'heartbroken' by death of daughter Fiona aged 13",
+      "summary": "Lowe and his wife Kim Painter announce the death of their daughter, who \"was the light of our lives\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3x2z9k1zdn4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "08:59",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e1ef077caabf6e5b3212",
+      "title": "'He will never walk free': Indian judge's letter promises child sex abuse survivor",
+      "summary": "In the emotional letter, the judge describes the survivor as \"the bravest little girl this court has ever seen\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq7832kn4252o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "08:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c9f64bf2f199dbaab384",
+      "title": "Crackdown on South Africa's unsafe streets ordered by president to keep women safe",
+      "summary": "The murders of 12 women near Johannesburg has caused a outcry about the scale of violence against women.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c51kx9ze1mdzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "08:40",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7aaa964e6a3417a26bf8",
+      "title": "Somali pirates killed oil tanker crew before rescue, official tells BBC",
+      "summary": "Piracy off the Somali coast has increased in recent years after dropping when international naval operations began in 2011.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crjw5jp2de7go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-30",
+      "time": "06:41",
+      "category": "global"
+    },
     {
       "id": "global-rss-6a9f573ffc0c8810277e",
       "title": "South Korea demands apology from Pyongyang for landmine blasts that injured three",
@@ -8730,17 +8862,6 @@
       "category": "industry"
     },
     {
-      "id": "global-rss-c9f64bf2f199dbaab384",
-      "title": "South Africa to clean up high-risk areas after 12 women killed",
-      "summary": "The deaths sparked a national outcry about the scale of violence against women in the country.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c51kx9ze1mdzo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-29",
-      "time": "22:33",
-      "category": "global"
-    },
-    {
       "id": "global-rss-4e2c838dc995bd1ec446",
       "title": "Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries",
       "summary": "Hundreds of riders were allegedly injured on X2, which has seats that spin 360 degrees.",
@@ -8846,6 +8967,17 @@
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyh?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "19:30",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-89c3123e9896e81d0a37",
+      "title": "Tech Life",
+      "summary": "How a Chinese AI model was persuaded to ignore its rules and give dangerous advice.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_world_service_west_africa?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-29",
       "time": "19:30",
       "category": "industry"
