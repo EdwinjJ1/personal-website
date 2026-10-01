@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "October 1, 2026",
   "items": [
     {
-      "id": "global-rss-9e867a33cfee2d99907e",
-      "title": "US death row inmate Christa Pike taken to hospital after surviving two lethal injections, says lawyer",
+      "id": "global-rss-de1fdf8dd853114289ec",
+      "title": "Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash",
       "tag": "BREAKING",
       "date": "2026-10-01",
-      "time": "05:34",
+      "time": "13:13",
       "category": "global"
     },
     {
-      "id": "industry-rss-df6ead8af4b8279917c5",
-      "title": "AI boom could trigger market shocks, Bank of England boss warns",
-      "tag": "PRODUCT",
+      "id": "global-rss-c84b44b4d5b0c1b17f2d",
+      "title": "What happened in failed execution of Christa Pike - and what next?",
+      "tag": "BREAKING",
       "date": "2026-10-01",
-      "time": "04:03",
-      "category": "industry"
+      "time": "12:51",
+      "category": "global"
     },
     {
-      "id": "research-rss-7a0705dd2d3b98ff4267",
-      "title": "Privacy-Preserving Full-Body Meshing from mmWave Radar via Mesh Foundation Model Supervision",
-      "tag": "RESEARCH",
+      "id": "global-rss-5dfeef78afdafbc8acff",
+      "title": "Explosions heard in Ethiopia's capital after drone flights banned",
+      "tag": "BREAKING",
       "date": "2026-10-01",
-      "time": "04:00",
-      "category": "research"
+      "time": "12:38",
+      "category": "global"
     }
   ]
 } as const;

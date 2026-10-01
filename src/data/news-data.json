@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T05:58:34.016082Z",
+  "lastUpdated": "2026-10-01T13:19:47.920175Z",
   "availableDates": [
     {
       "value": "2026-10-01",
@@ -616,14 +616,102 @@
   ],
   "news": [
     {
-      "id": "global-rss-9e867a33cfee2d99907e",
-      "title": "US death row inmate Christa Pike taken to hospital after surviving two lethal injections, says lawyer",
-      "summary": "Her lawyer says Pike is being \"provided life-saving measures\" after two syringes of pentobarbital.",
+      "id": "global-rss-de1fdf8dd853114289ec",
+      "title": "Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash",
+      "summary": "Chivayo was known for his lavish lifestyle, close ties to African presidents and lucrative government contracts.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "05:34",
+      "time": "13:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c84b44b4d5b0c1b17f2d",
+      "title": "What happened in failed execution of Christa Pike - and what next?",
+      "summary": "The convicted killer is in hospital in Tennessee after surviving two lethal injections, in a case that has raised many questions.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "12:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5dfeef78afdafbc8acff",
+      "title": "Explosions heard in Ethiopia's capital after drone flights banned",
+      "summary": "It comes a week after fighting erupted north of the capital between the army and a new alliance of armed groups.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vgygpqky9zo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "12:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-08562153e46546735907",
+      "title": "Watch: Why are students protesting at schools in France?",
+      "summary": "The BBC's Hugh Schofield is in Paris as a wave of school protests over overcrowded classes and teacher shortages spreads across France.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cwy8z8rney97o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "12:31",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-06024677b65ae0214f11",
+      "title": "Kanye West's Russia shows officially cancelled after weeks of uncertainty",
+      "summary": "Chaos has surrounded the St Petersburg shows since the stadium said it had not agreed to host the rapper.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm74k417wpjxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "12:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8eb39e81ee00108bf778",
+      "title": "Cornell case highlights 'draining' maze for victims to report campus sex assaults",
+      "summary": "Victims often have to navigate both university and local law enforcement processes to find justice.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpd0wdnlgxno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "11:40",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9db916080857021e3a20",
+      "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
+      "summary": "The president wants AI to be called super intelligence - or SI - the same initials used by Slovenian domains.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqx2z23xj555o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "11:37",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-9db916080857021e3a20",
+      "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
+      "summary": "The president wants AI to be called super intelligence - or SI - the same initials used by Slovenian domains.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqx2z23xj555o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "11:37",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-f60c9bd1545297208683",
+      "title": "Too early to say if Iran involved in Dubai-Tel Aviv flight attack, Israeli PM says",
+      "summary": "A pilot who stabbed another pilot on an Israel-bound plane is being investigated in Saudi Arabia, Benjamin Netanyahu says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrm7xd8wyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "11:26",
       "category": "global"
     },
     {
@@ -634,8 +722,52 @@
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cv8e30enrkxyo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "04:03",
+      "time": "10:05",
       "category": "industry"
+    },
+    {
+      "id": "global-rss-9e867a33cfee2d99907e",
+      "title": "US death row inmate survives execution attempt after two lethal injections",
+      "summary": "Killer Christa Pike's lawyer says she is being given \"life-saving measures\" in hospital after two syringes of pentobarbital.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "09:59",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2400839f5b3eb7f2c6aa",
+      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+      "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "08:39",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-1f7706314cac26e93964",
+      "title": "Africa's richest man launches Kenya oil refinery despite land protests",
+      "summary": "The Kenya refinery is part of Dangote's ambitious bid to expand and help industralise Africa by 2030.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmkg8dpwy25po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "07:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-609472992b6a2b362626",
+      "title": "K-pop star convicted of violating military service law",
+      "summary": "The member of K-pop band Winner was given a suspended prison sentence for repeated absences from his national service work.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cjn5d52d3lk5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "05:24",
+      "category": "global"
     },
     {
       "id": "research-rss-7a0705dd2d3b98ff4267",
@@ -7392,14 +7524,14 @@
       "category": "global"
     },
     {
-      "id": "global-rss-f60c9bd1545297208683",
-      "title": "Too early to say what motive for Dubai-Tel Aviv flight attack was, Israeli PM says",
-      "summary": "A pilot who stabbed another pilot on an Israel-bound plane is under investigation in Saudi Arabia, Benjamin Netanyahu says.",
+      "id": "global-rss-e8ac71464ff5b33b5a8f",
+      "title": "Japan raises permanent residency fee by 20 times",
+      "summary": "The hikes are part of immigration policy changes introduced to manage Japan's growing foreign population.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgmrm7xd8wyo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y8z8xeg8j1o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "03:43",
+      "time": "02:57",
       "category": "global"
     },
     {
@@ -7437,7 +7569,7 @@
     },
     {
       "id": "global-rss-8402516ce8f912bd3ca7",
-      "title": "The children dying in India's remote tribal heartland",
+      "title": "Inside India's forest villages, where a dangerous mix of crises led to 32 child deaths",
       "summary": "At least 32 children have died in India's Balaghat district since May amid outbreaks of measles and malaria.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -7470,7 +7602,7 @@
     },
     {
       "id": "global-rss-c701e4f965714c7db092",
-      "title": "Putin shows no sign of stopping the war as Russia doubles down on Ukraine",
+      "title": "Rosenberg: Putin shows no sign of stopping the war as Russia doubles down on Ukraine",
       "summary": "A foreign policy speech by the Russian president will be keenly watched, but all signs point to the full-scale invasion continuing.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -7642,17 +7774,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c65ym1dyn92mo?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-30",
       "time": "11:36",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-1f7706314cac26e93964",
-      "title": "Africa's richest man launches Kenya oil refinery despite land protests",
-      "summary": "The Kenya refinery is part of Dangote's ambitious bid to expand and help industralise Africa by 2030.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmkg8dpwy25po?at_medium=RSS&at_campaign=rss",
-      "date": "2026-09-30",
-      "time": "11:25",
       "category": "global"
     },
     {
