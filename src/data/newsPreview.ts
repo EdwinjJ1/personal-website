@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-09-30",
-  "latestLabel": "September 30, 2026",
+  "latestDate": "2026-10-01",
+  "latestLabel": "October 1, 2026",
   "items": [
     {
-      "id": "global-rss-910b86dd7216aa80cf03",
-      "title": "Trekkers helicoptered off mountains as more deadly landslides hit Nepal",
+      "id": "global-rss-9e867a33cfee2d99907e",
+      "title": "US death row inmate Christa Pike taken to hospital after surviving two lethal injections, says lawyer",
       "tag": "BREAKING",
-      "date": "2026-09-30",
-      "time": "22:01",
+      "date": "2026-10-01",
+      "time": "05:34",
       "category": "global"
     },
     {
-      "id": "global-rss-e9673cefe626ee197cf0",
-      "title": "Flydubai passenger describes putting attacker in chokehold after cockpit stabbing",
-      "tag": "BREAKING",
-      "date": "2026-09-30",
-      "time": "21:38",
-      "category": "global"
+      "id": "industry-rss-df6ead8af4b8279917c5",
+      "title": "AI boom could trigger market shocks, Bank of England boss warns",
+      "tag": "PRODUCT",
+      "date": "2026-10-01",
+      "time": "04:03",
+      "category": "industry"
     },
     {
-      "id": "global-rss-6e51ebb4942878ed179f",
-      "title": "What we know about stabbing on Flydubai flight to Israel",
-      "tag": "BREAKING",
-      "date": "2026-09-30",
-      "time": "21:36",
-      "category": "global"
+      "id": "research-rss-7a0705dd2d3b98ff4267",
+      "title": "Privacy-Preserving Full-Body Meshing from mmWave Radar via Mesh Foundation Model Supervision",
+      "tag": "RESEARCH",
+      "date": "2026-10-01",
+      "time": "04:00",
+      "category": "research"
     }
   ]
 } as const;
