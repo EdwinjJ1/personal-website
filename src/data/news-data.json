@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T13:19:47.920175Z",
+  "lastUpdated": "2026-10-01T22:43:32.823441Z",
   "availableDates": [
     {
       "value": "2026-10-01",
@@ -616,25 +616,80 @@
   ],
   "news": [
     {
-      "id": "global-rss-de1fdf8dd853114289ec",
-      "title": "Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash",
-      "summary": "Chivayo was known for his lavish lifestyle, close ties to African presidents and lucrative government contracts.",
+      "id": "global-rss-89ad31c25c55fbfb642a",
+      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+      "summary": "Pike’s lawyers have asked for her death sentence to be commuted following the botched execution.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "13:13",
+      "time": "22:28",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0bc6100d01a0747bab1f",
+      "title": "Renee Good: Family of US woman killed by ICE agent sues Trump officials",
+      "summary": "Lawyers for Good's family say US officials created \"an unprecedented environment for state sponsored violence\" in Minneapolis.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwly7y5gvxlmo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "20:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0e1fbbdfe06f638053a8",
+      "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
+      "summary": "Israel's prime minister says the pilot who tried to take over the Flydubai plane clearly intended to \"down the plane\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "19:59",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-903db42d8eb7f2149980",
+      "title": "Putin warns West that Russia is ready to use every weapon to protect Kaliningrad",
+      "summary": "The Russian leader insists Moscow is \"not threatening anyone\" and is merely responding to statements by Western leaders.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqg7k7v499jjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "19:38",
       "category": "global"
     },
     {
       "id": "global-rss-c84b44b4d5b0c1b17f2d",
-      "title": "What happened in failed execution of Christa Pike - and what next?",
+      "title": "What happened in the failed execution of Christa Pike - and what next?",
       "summary": "The convicted killer is in hospital in Tennessee after surviving two lethal injections, in a case that has raised many questions.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "12:51",
+      "time": "19:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9cc12cf7d50a6adf6991",
+      "title": "Fires break out at French schools as students protest nationwide",
+      "summary": "The French government holds a crisis meeting as demonstrations grow and become violent in places.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d080d1e3l4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "19:19",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-16f89995c3849d8c894a",
+      "title": "Algeria introduces death penalty for arsonists after deadly wildfires",
+      "summary": "It is estimated more than 200 people have died in blazes in the north-east of the country over the summer.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmge4exg44v5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "16:31",
       "category": "global"
     },
     {
@@ -645,7 +700,51 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vgygpqky9zo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
-      "time": "12:38",
+      "time": "15:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2400839f5b3eb7f2c6aa",
+      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+      "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "15:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e1c99d351b764303d70b",
+      "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
+      "summary": "\"My family and I will not truly be safe as long as Putin is in power,\" says the former chess world champion.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y8z8kr5mk8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "14:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b54f9d6823a9f612248d",
+      "title": "Flydubai passenger describes hugging his children as plane nosedived during attack",
+      "summary": "Adam Polovincik tells the BBC he told his young children \"everything is going to be all right\" as flight plunged more than 17,000ft (5,200m).",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d949ydnw3po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "13:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-de1fdf8dd853114289ec",
+      "title": "Zimbabwe tycoon Wicknell Chivayo and wife killed in helicopter crash",
+      "summary": "Chivayo was known for his lavish lifestyle, close ties to African presidents and lucrative government contracts.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr4gvg0yenl4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-01",
+      "time": "13:13",
       "category": "global"
     },
     {
@@ -734,17 +833,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
       "time": "09:59",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-2400839f5b3eb7f2c6aa",
-      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
-      "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-01",
-      "time": "08:39",
       "category": "global"
     },
     {
