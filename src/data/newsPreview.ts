@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "October 2, 2026",
   "items": [
     {
-      "id": "global-rss-dce3b7690583e839bec2",
-      "title": "US pressures Europe over diesel reserves as Trump threatens export ban",
+      "id": "global-rss-2400839f5b3eb7f2c6aa",
+      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
       "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "05:26",
+      "time": "11:52",
       "category": "global"
     },
     {
-      "id": "global-rss-79a1e11c828341024be5",
-      "title": "Australia says platforms like Steam and Roblox have 'significant' child safety gaps",
+      "id": "global-rss-89ad31c25c55fbfb642a",
+      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
       "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "04:21",
+      "time": "11:06",
       "category": "global"
     },
     {
-      "id": "research-rss-f2be228cf342a968b219",
-      "title": "NesTok: Nested Self-Aligned 1D Tokenizer for Autoregressive Image Generation",
-      "tag": "RESEARCH",
+      "id": "global-rss-7288a3d72a53e2492de4",
+      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
+      "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "04:00",
-      "category": "research"
+      "time": "10:04",
+      "category": "global"
     }
   ]
 } as const;

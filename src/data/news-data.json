@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T05:40:57.117397Z",
+  "lastUpdated": "2026-10-02T12:39:01.723154Z",
   "availableDates": [
     {
       "value": "2026-10-02",
@@ -619,6 +619,105 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-2400839f5b3eb7f2c6aa",
+      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+      "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "11:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-89ad31c25c55fbfb642a",
+      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+      "summary": "Pike’s lawyers have asked for her death sentence to be commuted following the botched execution.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "11:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7288a3d72a53e2492de4",
+      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
+      "summary": "The diplomatic fallout comes as Ethiopian forces battle rebel fighters across its northern region.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpd0d0jl0y0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "10:04",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b11a6c63c91707a7bb6a",
+      "title": "'Ashamed': Cornell students gather to voice anger over alleged gang rape",
+      "summary": "Students tell the BBC that the tension on campus has become palpable since allegations from 2024 resurfaced.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm0e3ed1er1yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "10:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4245419d50da1fc03a32",
+      "title": "'I was not going to let others die' - pilot of Flydubai flight describes cockpit attack by co-pilot",
+      "summary": "Capt Smit Machchhar tells Indian Prime Minister Narendra Modi he opened the cockpit door to let others in during the attack.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c639m98gde00o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "09:08",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-91c513fd55ef07eda934",
+      "title": "Watch: Emotional pilot recounts moment of Flydubai attack",
+      "summary": "He has been hailed a hero for opening the cockpit door, allowing passengers to overpower his co-pilot.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c914d43y7xn4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "08:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ec99cede5e21e6c83aca",
+      "title": "OpenAI fires workers for 'mishandling sensitive information'",
+      "summary": "The former employees were investigated for sharing data with an outside AI evaluation group.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "08:20",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-ec99cede5e21e6c83aca",
+      "title": "OpenAI fires workers for 'mishandling sensitive information'",
+      "summary": "The former employees were investigated for sharing data with an outside AI evaluation group.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "08:20",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-52225408fb5f85aed1f6",
+      "title": "Japan's first mayor to take maternity leave lands on TIME100 Next list",
+      "summary": "Shoko Kawata's maternity leave drew mixed reactions in Japan, a country struggling to lift birth rates.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqj3d3d37nxgo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "05:53",
+      "category": "global"
+    },
     {
       "id": "global-rss-dce3b7690583e839bec2",
       "title": "US pressures Europe over diesel reserves as Trump threatens export ban",
@@ -6923,28 +7022,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-ec99cede5e21e6c83aca",
-      "title": "OpenAI fires workers for mishandling 'sensitive information'",
-      "summary": "The former employees were investigated for sharing data with an outside AI evaluation group.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-02",
-      "time": "01:34",
-      "category": "global"
-    },
-    {
-      "id": "industry-rss-ec99cede5e21e6c83aca",
-      "title": "OpenAI fires workers for mishandling 'sensitive information'",
-      "summary": "The former employees were investigated for sharing data with an outside AI evaluation group.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-02",
-      "time": "01:34",
-      "category": "industry"
-    },
-    {
       "id": "global-rss-58b250b346cbc9f6d650",
       "title": "Cornell students voice frustration at public hearing over rape case",
       "summary": "The BBC's Nada Tawfik was at the hearing, where the university's Student Assembly led a discussion around safety concerns and sexual violence on campus.",
@@ -6980,7 +7057,7 @@
     {
       "id": "global-rss-cf1e251d373ddf383698",
       "title": "Spain and China are cosying up - to the anger of many in the EU",
-      "summary": "Amid global tumult, the two countries alliance is not the only unlikely pairing.",
+      "summary": "Amid global tumult, the two countries' alliance is not the only unlikely pairing.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c6vgyg824m02o?at_medium=RSS&at_campaign=rss",
@@ -7008,17 +7085,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ckrerylrlg9vo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
       "time": "23:00",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-89ad31c25c55fbfb642a",
-      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
-      "summary": "Pike’s lawyers have asked for her death sentence to be commuted following the botched execution.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-01",
-      "time": "22:28",
       "category": "global"
     },
     {
@@ -7118,17 +7184,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3vgygpqky9zo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-01",
       "time": "15:05",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-2400839f5b3eb7f2c6aa",
-      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
-      "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cje3r3z7g0zzo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-01",
-      "time": "15:04",
       "category": "global"
     },
     {
