@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-10-01",
-  "latestLabel": "October 1, 2026",
+  "latestDate": "2026-10-02",
+  "latestLabel": "October 2, 2026",
   "items": [
     {
-      "id": "global-rss-89ad31c25c55fbfb642a",
-      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+      "id": "global-rss-dce3b7690583e839bec2",
+      "title": "US pressures Europe over diesel reserves as Trump threatens export ban",
       "tag": "BREAKING",
-      "date": "2026-10-01",
-      "time": "22:28",
+      "date": "2026-10-02",
+      "time": "05:26",
       "category": "global"
     },
     {
-      "id": "global-rss-0bc6100d01a0747bab1f",
-      "title": "Renee Good: Family of US woman killed by ICE agent sues Trump officials",
+      "id": "global-rss-79a1e11c828341024be5",
+      "title": "Australia says platforms like Steam and Roblox have 'significant' child safety gaps",
       "tag": "BREAKING",
-      "date": "2026-10-01",
-      "time": "20:30",
+      "date": "2026-10-02",
+      "time": "04:21",
       "category": "global"
     },
     {
-      "id": "global-rss-0e1fbbdfe06f638053a8",
-      "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
-      "tag": "BREAKING",
-      "date": "2026-10-01",
-      "time": "19:59",
-      "category": "global"
+      "id": "research-rss-f2be228cf342a968b219",
+      "title": "NesTok: Nested Self-Aligned 1D Tokenizer for Autoregressive Image Generation",
+      "tag": "RESEARCH",
+      "date": "2026-10-02",
+      "time": "04:00",
+      "category": "research"
     }
   ]
 } as const;
