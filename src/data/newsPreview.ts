@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "October 2, 2026",
   "items": [
     {
-      "id": "global-rss-2400839f5b3eb7f2c6aa",
-      "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
+      "id": "global-rss-e4b583dc89b9a5a7bae2",
+      "title": "Riot police clash with students as education protests rage in France",
       "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "11:52",
+      "time": "21:13",
       "category": "global"
     },
     {
-      "id": "global-rss-89ad31c25c55fbfb642a",
-      "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+      "id": "global-rss-5275757e5c7e60152d1f",
+      "title": "Hawaii's iconic 550-year-old Hōlei Sea Arch collapses",
       "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "11:06",
+      "time": "21:00",
       "category": "global"
     },
     {
-      "id": "global-rss-7288a3d72a53e2492de4",
-      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
+      "id": "global-rss-08e18bac009fdf43b537",
+      "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
       "tag": "BREAKING",
       "date": "2026-10-02",
-      "time": "10:04",
+      "time": "20:32",
       "category": "global"
     }
   ]

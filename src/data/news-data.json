@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-02T12:39:01.723154Z",
+  "lastUpdated": "2026-10-02T22:16:42.162484Z",
   "availableDates": [
     {
       "value": "2026-10-02",
@@ -620,6 +620,127 @@
   ],
   "news": [
     {
+      "id": "global-rss-e4b583dc89b9a5a7bae2",
+      "title": "Riot police clash with students as education protests rage in France",
+      "summary": "About 735 schools have faced disruption as violent protests over standards and lack of teachers continue.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "21:13",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5275757e5c7e60152d1f",
+      "title": "Hawaii's iconic 550-year-old Hōlei Sea Arch collapses",
+      "summary": "The lava rock formation protruding from the rocky cliffs of Volcanoes National Park crumbled some time last weekend.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crd6dy4xepgyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "21:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-08e18bac009fdf43b537",
+      "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
+      "summary": "As of Thursday night, Pike remained critically ill and is being treated at a hospital in Nashville, Tennessee.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3kgqw7zvz47o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "20:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-36367861a20bb5c741a5",
+      "title": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
+      "summary": "The coordinated release is aimed at heading off further price spikes and avoiding a ban on US diesel exports.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "20:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c850ec572f95efa0c6fe",
+      "title": "Woman at centre of Cornell rape inquiry was 'failed' by officials, says New York governor",
+      "summary": "The woman, known as Jane Doe, alleges she was raped by seven students at a fraternity house at the university in 2024.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqvg04718lr9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "17:44",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7288a3d72a53e2492de4",
+      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
+      "summary": "The diplomatic fallout comes as Ethiopian forces battle rebel fighters across its northern region.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpd0d0jl0y0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "16:08",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-96b427592c50736e6a2c",
+      "title": "Spanish PM Sánchez loses key housing crisis vote after eviction of woman, 87",
+      "summary": "The defeat raises pressure on Sánchez to call a snap election, after a series of scandals affecting his party and allies.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c623dlk4y75mo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "15:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8433c818c0341b770a3d",
+      "title": "Intensified Russian strikes are tearing Kyiv apart, warns mayor",
+      "summary": "Vitaliy Klitschko says Ukraine's capital is in a \"very dramatic situation\" as Russia hits critical infrastructure.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6wyv44y4ywjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "15:26",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-6a7bb4e3e69d69f535f5",
+      "title": "The latest AI news we announced in September 2026",
+      "summary": "Here are Google’s latest AI updates from September 2026",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/google-ai-updates-september-2026/",
+      "date": "2026-10-02",
+      "time": "15:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-128462f970a27bc9b949",
+      "title": "I've seen nearly 500 executions - but never one like Christa Pike's",
+      "summary": "Texas reporter Michael Graczyk has seen botched executions in his time, but not one in which an inmate survived.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d949gq47x9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "14:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8daa4b4ed0575b4809b7",
+      "title": "School protests send shivers down French government's spine",
+      "summary": "A movement that started nearly two weeks ago has spread, and in France young people on the streets spells trouble, writes Hugh Schofield.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c69wzjjxex8po?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "12:43",
+      "category": "global"
+    },
+    {
       "id": "global-rss-2400839f5b3eb7f2c6aa",
       "title": "Who is the 'hero' Indian pilot who was stabbed on Israel-bound flight?",
       "summary": "Capt Smit Machchhar was attacked by another pilot onboard the Flydubai flight bound for Tel Aviv.",
@@ -639,17 +760,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-02",
       "time": "11:06",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-7288a3d72a53e2492de4",
-      "title": "Ethiopia and Eritrea cut diplomatic ties as northern conflict escalates",
-      "summary": "The diplomatic fallout comes as Ethiopian forces battle rebel fighters across its northern region.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpd0d0jl0y0o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-02",
-      "time": "10:04",
       "category": "global"
     },
     {
