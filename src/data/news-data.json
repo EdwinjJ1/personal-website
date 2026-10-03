@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-10-02T22:16:42.162484Z",
+  "lastUpdated": "2026-10-03T05:22:58.843668Z",
   "availableDates": [
+    {
+      "value": "2026-10-03",
+      "label": "October 3, 2026"
+    },
     {
       "value": "2026-10-02",
       "label": "October 2, 2026"
@@ -620,6 +624,94 @@
   ],
   "news": [
     {
+      "id": "global-rss-36367861a20bb5c741a5",
+      "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
+      "summary": "The co-ordinated release is aimed at heading off further price spikes and avoiding a ban on US diesel exports.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "04:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-888ac0a61f6b891150c0",
+      "title": "Cornell frat house rape accuser 'under siege' online, says lawyer",
+      "summary": "A lawyer for Jane Doe says she is \"not doing well\" amid attempts to uncover her identity.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6ly0ljypzrdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "02:23",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-2d0c1972c36b2f83c7e4",
+      "title": "Tech Now",
+      "summary": "Alasdair Keane heads to the Pokémon World Championships in San Francisco.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/iplayer/episode/m0032n6v?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "01:00",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-b1288f93673b751d7a6b",
+      "title": "The South African men trying to end violence against women: 'Every man needs to play a part'",
+      "summary": "The discovery of 12 women's bodies near Johannesburg has again highlighted South Africa's problem with violence against women.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm3eqegwpzl4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "23:56",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-4b7633ee5217136de4e4",
+      "title": "Could El Niño mean there are no Atlantic hurricanes this year?",
+      "summary": "For the first time in three decades there has not been a single Atlantic hurricane in September, normally the most active month.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/weather/articles/cwgkvyyg8115o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "23:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b385cf323cbc71b6c952",
+      "title": "Women given shorts at Oktoberfest to prevent upskirting",
+      "summary": "The step at the Munich festival comes after thousands of voyeuristic videos emerged on social media.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cjwyzyqvx1zxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "23:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-03c8f03111f5eff55b85",
+      "title": "US road rage killer's sentence quashed because AI video of victim was shown in court",
+      "summary": "The Arizona appeals court ruled that airing an AI message from the dead victim \"crossed that line\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwgkvygg5nzvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "23:06",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-47d9f14692cecb2d3745",
+      "title": "The vanishing world of India's street magicians",
+      "summary": "India's street performers are struggling to survive as audiences shrink and public spaces become harder to access.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck7v4v8pmzdeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "22:59",
+      "category": "global"
+    },
+    {
       "id": "global-rss-e4b583dc89b9a5a7bae2",
       "title": "Riot police clash with students as education protests rage in France",
       "summary": "About 735 schools have faced disruption as violent protests over standards and lack of teachers continue.",
@@ -650,17 +742,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3kgqw7zvz47o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-02",
       "time": "20:32",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-36367861a20bb5c741a5",
-      "title": "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
-      "summary": "The coordinated release is aimed at heading off further price spikes and avoiding a ban on US diesel exports.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-02",
-      "time": "20:25",
       "category": "global"
     },
     {
@@ -705,6 +786,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c6wyv44y4ywjo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-02",
       "time": "15:26",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-610f070ee9e145316d58",
+      "title": "Watch: Why students in France are protesting",
+      "summary": "Demonstrations started in the French capital, then spread across the country in the days that followed.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cr5ynddn318eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "15:02",
       "category": "global"
     },
     {

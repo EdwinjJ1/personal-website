@@ -1,30 +1,30 @@
 export const newsPreview = {
-  "latestDate": "2026-10-02",
-  "latestLabel": "October 2, 2026",
+  "latestDate": "2026-10-03",
+  "latestLabel": "October 3, 2026",
   "items": [
     {
-      "id": "global-rss-e4b583dc89b9a5a7bae2",
-      "title": "Riot police clash with students as education protests rage in France",
+      "id": "global-rss-36367861a20bb5c741a5",
+      "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
       "tag": "BREAKING",
-      "date": "2026-10-02",
-      "time": "21:13",
+      "date": "2026-10-03",
+      "time": "04:38",
       "category": "global"
     },
     {
-      "id": "global-rss-5275757e5c7e60152d1f",
-      "title": "Hawaii's iconic 550-year-old Hōlei Sea Arch collapses",
+      "id": "global-rss-888ac0a61f6b891150c0",
+      "title": "Cornell frat house rape accuser 'under siege' online, says lawyer",
       "tag": "BREAKING",
-      "date": "2026-10-02",
-      "time": "21:00",
+      "date": "2026-10-03",
+      "time": "02:23",
       "category": "global"
     },
     {
-      "id": "global-rss-08e18bac009fdf43b537",
-      "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
-      "tag": "BREAKING",
-      "date": "2026-10-02",
-      "time": "20:32",
-      "category": "global"
+      "id": "industry-rss-2d0c1972c36b2f83c7e4",
+      "title": "Tech Now",
+      "tag": "PRODUCT",
+      "date": "2026-10-03",
+      "time": "01:00",
+      "category": "industry"
     }
   ]
 } as const;
