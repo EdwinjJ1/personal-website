@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T16:21:09.139312Z",
+  "lastUpdated": "2026-10-03T21:20:04.716132Z",
   "availableDates": [
     {
       "value": "2026-10-03",
@@ -624,6 +624,28 @@
   ],
   "news": [
     {
+      "id": "global-rss-d42f52493b5f9fd61c41",
+      "title": "Medical plane with 6 on board missing off Massachusetts coast",
+      "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "21:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8d685486a7e2d42a7560",
+      "title": "Tennessee prison chief to resign after Christa Pike's failed execution",
+      "summary": "Pike's lawyers said the failure \"goes far beyond any one person\". Pike is in critical condition after surviving two lethal injections.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "17:48",
+      "category": "global"
+    },
+    {
       "id": "global-rss-12bbd5dc0ec7d55d4e6b",
       "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
       "summary": "The strike on the Pivnichnyi (Northern) Bridge comes after repeat attacks on another major bridge in Ukraine's capital.",
@@ -632,17 +654,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
       "time": "16:16",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-d42f52493b5f9fd61c41",
-      "title": "Medical plane with 6 on board missing off Massachusetts coast",
-      "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-03",
-      "time": "15:56",
       "category": "global"
     },
     {
@@ -669,8 +680,8 @@
     },
     {
       "id": "global-rss-afee19a0de7066b3eb55",
-      "title": "Protesters across Spain demand action over housing crisis",
-      "summary": "More than 50 protests are taking place on Saturday after the government failed to get emergency legislation through parliament.",
+      "title": "'Anger in the streets': Tens of thousands protest in Spain over housing crisis",
+      "summary": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
@@ -714,7 +725,7 @@
     {
       "id": "global-rss-fb67961f81f1c19e9ae2",
       "title": "Joker persona helps Cong 'feel the fear' in opponents",
-      "summary": "Wang Cong dismisses critics who say she she is not deserving of facing Natalia Silva for the flyweight world title at UFC 332 on Saturday.",
+      "summary": "Wang Cong dismisses critics who say she is not deserving of facing Natalia Silva for the flyweight world title at UFC 332 on Saturday.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/ckq5x5de46ppo?at_medium=RSS&at_campaign=rss",
