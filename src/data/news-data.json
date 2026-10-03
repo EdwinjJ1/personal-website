@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T05:22:58.843668Z",
+  "lastUpdated": "2026-10-03T11:43:52.803980Z",
   "availableDates": [
     {
       "value": "2026-10-03",
@@ -624,6 +624,72 @@
   ],
   "news": [
     {
+      "id": "global-rss-afee19a0de7066b3eb55",
+      "title": "Protesters across Spain demand action over housing crisis",
+      "summary": "More than 50 protests are planned to take place on Saturday after the government failed to get emergency legislation through parliament.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "11:35",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-675a68b0bd645e8fea55",
+      "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
+      "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "11:20",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2fb3c89a6646aaedbbc9",
+      "title": "UK-Iranian dual national bailed after RAF Fairford incident arrest",
+      "summary": "The 25-year-old man was arrested in the London borough of Westminster on Thursday.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d095ygggv1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "10:58",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-12bbd5dc0ec7d55d4e6b",
+      "title": "Russia strikes second major bridge in Kyiv, mayor says",
+      "summary": "The strike on Northern Bridge comes after repeat attacks on another major bridge in recent days.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "09:53",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-17df1aa67c99893e387c",
+      "title": "Kim wins Asian Games gold to secure military exemption",
+      "summary": "Golfer Tom Kim wins gold at the Asian Games to secure an exemption from mandatory service in South Korea's military.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/golf/articles/cmy0rn425k4xo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "08:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-fb67961f81f1c19e9ae2",
+      "title": "Joker persona helps Cong 'feel the fear' in opponents",
+      "summary": "Wang Cong dismisses critics who say she she is not deserving of facing Natalia Silva for the flyweight world title at UFC 332 on Saturday.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/mixed-martial-arts/articles/ckq5x5de46ppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "07:07",
+      "category": "global"
+    },
+    {
       "id": "global-rss-36367861a20bb5c741a5",
       "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
       "summary": "The co-ordinated release is aimed at heading off further price spikes and avoiding a ban on US diesel exports.",
@@ -632,6 +698,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
       "time": "04:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ee5507a2073291c608d4",
+      "title": "EV drivers love their cars, but some passengers feel sick - this could be why",
+      "summary": "Research shows there are several reasons people might experience motion sickness in electric vehicles.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c3y0zx822wlzo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "02:36",
       "category": "global"
     },
     {
@@ -734,6 +811,17 @@
       "category": "global"
     },
     {
+      "id": "global-rss-7af1f3330465f70b1ae1",
+      "title": "Newly released video shows Luigi Mangione’s arrest",
+      "summary": "The bodycam footage also shows a police officer finding a gun in Mangione's backpack, days after the killing of UnitedHealthcare CEO Brian Thompson.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmewelkydwwyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "20:37",
+      "category": "global"
+    },
+    {
       "id": "global-rss-08e18bac009fdf43b537",
       "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
       "summary": "As of Thursday night, Pike remained critically ill and is being treated at a hospital in Nashville, Tennessee.",
@@ -742,6 +830,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c3kgqw7zvz47o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-02",
       "time": "20:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b564102834d5e3745c09",
+      "title": "How widely used is the death penalty in the US?",
+      "summary": "The death penalty is back in the news after Christa Pike survived two lethal injection attempts in Tennessee - but how widely used is it in the US?",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c54g1e3yxv0ko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-02",
+      "time": "19:56",
       "category": "global"
     },
     {
