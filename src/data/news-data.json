@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-03T11:43:52.803980Z",
+  "lastUpdated": "2026-10-03T16:21:09.139312Z",
   "availableDates": [
     {
       "value": "2026-10-03",
@@ -624,14 +624,25 @@
   ],
   "news": [
     {
-      "id": "global-rss-afee19a0de7066b3eb55",
-      "title": "Protesters across Spain demand action over housing crisis",
-      "summary": "More than 50 protests are planned to take place on Saturday after the government failed to get emergency legislation through parliament.",
+      "id": "global-rss-12bbd5dc0ec7d55d4e6b",
+      "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
+      "summary": "The strike on the Pivnichnyi (Northern) Bridge comes after repeat attacks on another major bridge in Ukraine's capital.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
-      "time": "11:35",
+      "time": "16:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d42f52493b5f9fd61c41",
+      "title": "Medical plane with 6 on board missing off Massachusetts coast",
+      "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "15:56",
       "category": "global"
     },
     {
@@ -642,7 +653,40 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
-      "time": "11:20",
+      "time": "14:27",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-67cfccb6360a71fdb830",
+      "title": "Why has Brazil accused the US of election interference?",
+      "summary": "The Latin American country will vote for its next president, as Lula da Silva and Bolsonaro clash over sovereignty, security and ties with Washington.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c3eweld0nddeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "13:52",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-afee19a0de7066b3eb55",
+      "title": "Protesters across Spain demand action over housing crisis",
+      "summary": "More than 50 protests are taking place on Saturday after the government failed to get emergency legislation through parliament.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "13:34",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e5d86d6e5fc945c9c397",
+      "title": "Will Spain's housing crisis lead to a snap election?",
+      "summary": "The BBC's Guy Hedgecoe is in Madrid, where a series of marches have been scheduled, after Spain's Congress rejected measures aimed at tackling the country's housing crisis.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmgj9vz2zxelo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "12:26",
       "category": "global"
     },
     {
@@ -654,17 +698,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c6d095ygggv1o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
       "time": "10:58",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-12bbd5dc0ec7d55d4e6b",
-      "title": "Russia strikes second major bridge in Kyiv, mayor says",
-      "summary": "The strike on Northern Bridge comes after repeat attacks on another major bridge in recent days.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-03",
-      "time": "09:53",
       "category": "global"
     },
     {
