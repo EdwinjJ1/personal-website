@@ -3,28 +3,28 @@ export const newsPreview = {
   "latestLabel": "October 3, 2026",
   "items": [
     {
-      "id": "global-rss-36367861a20bb5c741a5",
-      "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
+      "id": "global-rss-afee19a0de7066b3eb55",
+      "title": "Protesters across Spain demand action over housing crisis",
       "tag": "BREAKING",
       "date": "2026-10-03",
-      "time": "04:38",
+      "time": "11:35",
       "category": "global"
     },
     {
-      "id": "global-rss-888ac0a61f6b891150c0",
-      "title": "Cornell frat house rape accuser 'under siege' online, says lawyer",
+      "id": "global-rss-675a68b0bd645e8fea55",
+      "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
       "tag": "BREAKING",
       "date": "2026-10-03",
-      "time": "02:23",
+      "time": "11:20",
       "category": "global"
     },
     {
-      "id": "industry-rss-2d0c1972c36b2f83c7e4",
-      "title": "Tech Now",
-      "tag": "PRODUCT",
+      "id": "global-rss-2fb3c89a6646aaedbbc9",
+      "title": "UK-Iranian dual national bailed after RAF Fairford incident arrest",
+      "tag": "BREAKING",
       "date": "2026-10-03",
-      "time": "01:00",
-      "category": "industry"
+      "time": "10:58",
+      "category": "global"
     }
   ]
 } as const;
