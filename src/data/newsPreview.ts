@@ -3,11 +3,19 @@ export const newsPreview = {
   "latestLabel": "October 3, 2026",
   "items": [
     {
-      "id": "global-rss-afee19a0de7066b3eb55",
-      "title": "Protesters across Spain demand action over housing crisis",
+      "id": "global-rss-12bbd5dc0ec7d55d4e6b",
+      "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
       "tag": "BREAKING",
       "date": "2026-10-03",
-      "time": "11:35",
+      "time": "16:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d42f52493b5f9fd61c41",
+      "title": "Medical plane with 6 on board missing off Massachusetts coast",
+      "tag": "BREAKING",
+      "date": "2026-10-03",
+      "time": "15:56",
       "category": "global"
     },
     {
@@ -15,15 +23,7 @@ export const newsPreview = {
       "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
       "tag": "BREAKING",
       "date": "2026-10-03",
-      "time": "11:20",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-2fb3c89a6646aaedbbc9",
-      "title": "UK-Iranian dual national bailed after RAF Fairford incident arrest",
-      "tag": "BREAKING",
-      "date": "2026-10-03",
-      "time": "10:58",
+      "time": "14:27",
       "category": "global"
     }
   ]
