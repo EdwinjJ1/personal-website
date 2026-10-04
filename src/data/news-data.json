@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04T12:25:55.774617Z",
+  "lastUpdated": "2026-10-04T21:29:49.304796Z",
   "availableDates": [
     {
       "value": "2026-10-04",
@@ -628,6 +628,94 @@
   ],
   "news": [
     {
+      "id": "global-rss-3cd0e2456c0e0650ebba",
+      "title": "Polls close in Brazil as Lula and Flávio Bolsonaro remain neck and neck",
+      "summary": "If no candidate gets more than 50% of the vote, the election will go to a run-off on 25 October.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "21:11",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-899dbc8063186241a25d",
+      "title": "What to know about Brazil's election as Lula and Flávio Bolsonaro face off",
+      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "20:14",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8c43e1cec6b55b13e3ca",
+      "title": "Indian police accused of sexually harassing journalists at protest",
+      "summary": "The allegations were made after police detained dozens of protesters demanding the resignation of the election chief over changes to voter rolls.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9e8lvm6nrr3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "17:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2ebb5eac41a3dccaaa3d",
+      "title": "Yemen's government announces all-out war to reclaim land from Houthis",
+      "summary": "The Yemeni president's announcement comes amid an exchange of strikes between the Houthis and the Saudi-led coalition.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "16:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-42762d3d7a1052a96591",
+      "title": "Christa Pike's prognosis still unclear after failed execution, lawyer says",
+      "summary": "Pike's lawyer says doctors are still trying to clear two lethal doses of pentobarbital from her body.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckgelynyg7d3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "16:24",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-23f60e007b651cfcac55",
+      "title": "US Marine arrested over murder of woman in Okinawa, Japan",
+      "summary": "Japan's government lodged a formal protest with the US, demanding that military officials take action.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cme3xw4yy28do?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "14:36",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-b44427dd60f96ae2ed2b",
+      "title": "Watch: What we know about Russian strikes on Kyiv bridges",
+      "summary": "BBC Ukraine correspondent Dan Johnson is near Kyiv's Northern Bridge, which has been hit for the second day in a row.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "14:25",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-07160458556fb88745e5",
+      "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
+      "summary": "Two residents in Mekelle tell the BBC pro-government forces have taken control of the city.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "13:33",
+      "category": "global"
+    },
+    {
       "id": "global-rss-bd9526dd54522978c8a4",
       "title": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
       "summary": "Footage shows a drone hitting the Pivnichyi (Northern) Bridge as vehicles move across it, creating a large fireball.",
@@ -636,17 +724,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-04",
       "time": "12:09",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-899dbc8063186241a25d",
-      "title": "What to know about Brazil's election pitting Lula against Flávio Bolsonaro",
-      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-04",
-      "time": "11:03",
       "category": "global"
     },
     {
@@ -728,7 +805,7 @@
     },
     {
       "id": "global-rss-45a8b74b66f16cccc865",
-      "title": "Why Canada is preparing for a (long shot) US invasion",
+      "title": "Why Canada is wargaming a (long shot) US invasion",
       "summary": "Prime Minister Mark Carney has said the military is running scenarios in the unlikely case the US invades Canada.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -22359,6 +22436,17 @@
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_world_service_west_africa?at_medium=RSS&at_campaign=rss",
+      "date": "2026-09-29",
+      "time": "19:30",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-c2672bafa47d34cad76f",
+      "title": "Tech Life",
+      "summary": "How a Chinese AI model was persuaded to ignore its rules and give dangerous advice.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/sounds/play/live:bbc_world_service_news_internet?at_medium=RSS&at_campaign=rss",
       "date": "2026-09-29",
       "time": "19:30",
       "category": "industry"
