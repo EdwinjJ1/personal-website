@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-10-03",
-  "latestLabel": "October 3, 2026",
+  "latestDate": "2026-10-04",
+  "latestLabel": "October 4, 2026",
   "items": [
     {
+      "id": "global-rss-675a68b0bd645e8fea55",
+      "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
+      "tag": "BREAKING",
+      "date": "2026-10-04",
+      "time": "04:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-13f4518d8251fbaea916",
+      "title": "Rare tornado whips through small Australian town",
+      "tag": "BREAKING",
+      "date": "2026-10-04",
+      "time": "04:15",
+      "category": "global"
+    },
+    {
       "id": "global-rss-d42f52493b5f9fd61c41",
-      "title": "Medical plane with 6 on board missing off Massachusetts coast",
+      "title": "Debris found from plane that went missing off US coast",
       "tag": "BREAKING",
-      "date": "2026-10-03",
-      "time": "21:16",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-8d685486a7e2d42a7560",
-      "title": "Tennessee prison chief to resign after Christa Pike's failed execution",
-      "tag": "BREAKING",
-      "date": "2026-10-03",
-      "time": "17:48",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-12bbd5dc0ec7d55d4e6b",
-      "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
-      "tag": "BREAKING",
-      "date": "2026-10-03",
-      "time": "16:16",
+      "date": "2026-10-04",
+      "time": "03:49",
       "category": "global"
     }
   ]

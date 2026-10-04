@@ -1,6 +1,10 @@
 {
-  "lastUpdated": "2026-10-03T21:20:04.716132Z",
+  "lastUpdated": "2026-10-04T05:57:50.203213Z",
   "availableDates": [
+    {
+      "value": "2026-10-04",
+      "label": "October 4, 2026"
+    },
     {
       "value": "2026-10-03",
       "label": "October 3, 2026"
@@ -624,14 +628,80 @@
   ],
   "news": [
     {
+      "id": "global-rss-675a68b0bd645e8fea55",
+      "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
+      "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "04:57",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-13f4518d8251fbaea916",
+      "title": "Rare tornado whips through small Australian town",
+      "summary": "The twister was caught on camera in Ulladulla, New South Wales, damaging property and downing trees.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c69qzvggzppro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "04:15",
+      "category": "global"
+    },
+    {
       "id": "global-rss-d42f52493b5f9fd61c41",
-      "title": "Medical plane with 6 on board missing off Massachusetts coast",
+      "title": "Debris found from plane that went missing off US coast",
       "summary": "The aircraft lost communication with flight controllers after significantly dropping in altitude, according to flight data.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "03:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-afee19a0de7066b3eb55",
+      "title": "'Anger in the streets': Tens of thousands protest in Spain over housing crisis",
+      "summary": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "03:42",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f717161445acf9dc8e58",
+      "title": "Cornell president says university 'must do better' after frat house rape allegations",
+      "summary": "Michael Kotlikoff described the allegations of a woman who says she was drugged and gang raped as \"deeply disturbing\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "00:11",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-972ce0779e7ee8223d2e",
+      "title": "Why pastors may not be seen - or heard - preaching on Ghana's buses for much longer",
+      "summary": "Ghana is a predominantly Christian country where preaching on public transport is widespread.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwnvln99v2ygo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
-      "time": "21:16",
+      "time": "23:37",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-45a8b74b66f16cccc865",
+      "title": "Why Canada is preparing for a (long shot) US invasion",
+      "summary": "Prime Minister Mark Carney has said the military is running scenarios in the unlikely case the US invades Canada.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9m2mjj3yvg4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "23:30",
       "category": "global"
     },
     {
@@ -657,17 +727,6 @@
       "category": "global"
     },
     {
-      "id": "global-rss-675a68b0bd645e8fea55",
-      "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
-      "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-03",
-      "time": "14:27",
-      "category": "global"
-    },
-    {
       "id": "global-rss-67cfccb6360a71fdb830",
       "title": "Why has Brazil accused the US of election interference?",
       "summary": "The Latin American country will vote for its next president, as Lula da Silva and Bolsonaro clash over sovereignty, security and ties with Washington.",
@@ -676,17 +735,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/c3eweld0nddeo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
       "time": "13:52",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-afee19a0de7066b3eb55",
-      "title": "'Anger in the streets': Tens of thousands protest in Spain over housing crisis",
-      "summary": "More than 50 protests took place on Saturday after the government failed to get emergency legislation through parliament.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm2kej47095no?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-03",
-      "time": "13:34",
       "category": "global"
     },
     {
