@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-04T05:57:50.203213Z",
+  "lastUpdated": "2026-10-04T12:25:55.774617Z",
   "availableDates": [
     {
       "value": "2026-10-04",
@@ -628,6 +628,39 @@
   ],
   "news": [
     {
+      "id": "global-rss-bd9526dd54522978c8a4",
+      "title": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
+      "summary": "Footage shows a drone hitting the Pivnichyi (Northern) Bridge as vehicles move across it, creating a large fireball.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "12:09",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-899dbc8063186241a25d",
+      "title": "What to know about Brazil's election pitting Lula against Flávio Bolsonaro",
+      "summary": "Polls suggest the election will be a closely run contest between the left-wing incumbent and his right-wing rival.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "11:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-664b39e9cf4ba58bb932",
+      "title": "Australia investigating Flydubai co-pilot's links to country",
+      "summary": "State police and the country's security agency are looking into the co-pilot, who attempted to take control of a Flydubai plane travelling to Israel.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-04",
+      "time": "06:19",
+      "category": "global"
+    },
+    {
       "id": "global-rss-675a68b0bd645e8fea55",
       "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
       "summary": "The man accused of trying to take over the Israel-bound jet is named as Hamam al-Hammami by several media outlets.",
@@ -702,6 +735,17 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c9m2mjj3yvg4o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-03",
       "time": "23:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-dfaf5bd1a90dd77b493f",
+      "title": "US father and son arrested after 'gas station heroin' deaths",
+      "summary": "They are accused of selling at least one student derivatives of kratom, often called \"gas station heroin\" in the US.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6qjnlk4r2jjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-03",
+      "time": "22:39",
       "category": "global"
     },
     {
