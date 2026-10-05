@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "October 5, 2026",
   "items": [
     {
-      "id": "global-rss-e7ad4bd0672a927424b8",
-      "title": "Supporters of jailed ex-PM Imran Khan march to Pakistan capital",
+      "id": "global-rss-e25b642c8acffc89c8f5",
+      "title": "Teenager's hand blown off during confrontation between France school protesters and police",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "05:28",
+      "time": "14:30",
       "category": "global"
     },
     {
-      "id": "global-rss-4d9f80d91d4cefd4824c",
-      "title": "US air force removes all bombers from British military base RAF Fairford",
+      "id": "global-rss-8d0753946b5492df251e",
+      "title": "No10 insists UK military base RAF Fairford is safe after US withdraws bombers",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "04:58",
+      "time": "13:16",
       "category": "global"
     },
     {
-      "id": "global-rss-74b4dbb03449ad07b70f",
-      "title": "Watch: How Brazil's dramatic election unfolded",
+      "id": "global-rss-ac501aaf3cb7299a3a7b",
+      "title": "Bombs preventing rescue of kidnapped youths, Nigerian police say",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "04:51",
+      "time": "12:59",
       "category": "global"
     }
   ]

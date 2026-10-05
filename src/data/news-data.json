@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05T05:46:02.218577Z",
+  "lastUpdated": "2026-10-05T14:45:14.956708Z",
   "availableDates": [
     {
       "value": "2026-10-05",
@@ -632,14 +632,168 @@
   ],
   "news": [
     {
+      "id": "global-rss-e25b642c8acffc89c8f5",
+      "title": "Teenager's hand blown off during confrontation between France school protesters and police",
+      "summary": "The prefect of Pas-de-Calais says the 15-year-old's life is \"not in danger\" after the \"very serious\" incident.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9zrdmxp4vy6o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "14:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-8d0753946b5492df251e",
+      "title": "No10 insists UK military base RAF Fairford is safe after US withdraws bombers",
+      "summary": "US media reported a new threat led to the bombers being removed on Sunday, following an incident near the base last week.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmy56yvv1kxxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "13:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ac501aaf3cb7299a3a7b",
+      "title": "Bombs preventing rescue of kidnapped youths, Nigerian police say",
+      "summary": "The father of one of the 19 young abductees tells the BBC he hasn't eaten in three days out of worry.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6gqw8jg7k3go?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "12:59",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-f7e78b02e864b16c4807",
+      "title": "Georgia officials hunt for suspect in shooting that killed two and injured 35",
+      "summary": "A homecoming celebration turned into a scene of deadly violence, as dozens of shots were fired into a crowd.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6e9lj5r3ej7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "12:08",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0b56d28ea37f20889f54",
+      "title": "Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say",
+      "summary": "The Omani national was a \"lone wolf\" extremist, according to the reports.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "11:34",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-00aefe1983e090ebbe5f",
+      "title": "Indian singer Anuv Jain on finding success without the Bollywood boost",
+      "summary": "The star reveals why he is \"very selective\" about releasing music - and shares his future collab hopes.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c933xnneg2zvo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "11:10",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-7231e35f8ab907ca18d9",
+      "title": "Nobel Prize awarded for revealing inner workings of the brain",
+      "summary": "US psychiatrist and neurologist Karl Deisseroth and his German colleagues Peter Hegemann and Georg Nagel have been awarded for their work.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5ev3ypmzly8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "11:04",
+      "category": "global"
+    },
+    {
       "id": "global-rss-e7ad4bd0672a927424b8",
-      "title": "Supporters of jailed ex-PM Imran Khan march to Pakistan capital",
+      "title": "Supporters of jailed ex-PM Imran Khan begin march in Pakistan",
       "summary": "Thousands have taken to the streets after talks between authorities and Khan's party ended in deadlock.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cmkg79z04w4zo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-05",
-      "time": "05:28",
+      "time": "10:23",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-29c26406625591f70642",
+      "title": "Spanish PM Sánchez calls early election after housing protests",
+      "summary": "Sánchez says Spain will head to the polls on 29 November after recent defeats on measures aimed at addressing the country's housing crisis.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "10:18",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-15b939e1a39b6d2abe5d",
+      "title": "Trump chooses top spy boss to run new AI taskforce",
+      "summary": "The US president said his national intelligence chief will lead the group as worries over AI grow.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "10:03",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-15b939e1a39b6d2abe5d",
+      "title": "Trump chooses top spy boss to run new AI taskforce",
+      "summary": "The US president said his national intelligence chief will lead the group as worries over AI grow.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "10:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ca08a44f3320cf2ee331",
+      "title": "Watch: How Spain's housing crisis has resulted in an early general election",
+      "summary": "A series of measures to tackle the housing crisis were defeated in parliament on Friday",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c83vqk2k2k20o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "09:03",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-07160458556fb88745e5",
+      "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
+      "summary": "Two residents in Mekelle tell the BBC pro-government forces have taken control of the city.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "08:29",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-d44483100029ca22de73",
+      "title": "'Not again': Arrest of US marine for murder reignites protests in Japan's Okinawa",
+      "summary": "For many locals on this island, the arrest has brought decades of frustration back to the fore.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwgkv70gg1j3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "08:22",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-656650d58bc67e21657a",
+      "title": "£800m in, £800m out - Why Man City scandal shines light on Man Utd finances",
+      "summary": "Manchester City's owners have been found guilty of injecting money into the club. At Manchester United, fans are frustrated at how much has been taken out.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/ckg5j87jy3zmo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "08:08",
       "category": "global"
     },
     {
@@ -5109,36 +5263,25 @@
       "category": "research"
     },
     {
-      "id": "industry-rss-15b939e1a39b6d2abe5d",
-      "title": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
-      "summary": "The president named his national intelligence chief as the taskforce's head as worries over AI grow.",
-      "tag": "PRODUCT",
-      "source": "BBC Technology",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-05",
-      "time": "03:37",
-      "category": "industry"
-    },
-    {
-      "id": "global-rss-15b939e1a39b6d2abe5d",
-      "title": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
-      "summary": "The president named his national intelligence chief as the taskforce's head as worries over AI grow.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-05",
-      "time": "03:37",
-      "category": "global"
-    },
-    {
       "id": "global-rss-3cd0e2456c0e0650ebba",
-      "title": "Brazil election goes to run-off as right-wing Flávio Bolsonaro wins first round",
+      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
       "summary": "With neither candidate getting more than 50% of the vote, the election will go to a run-off on 25 October.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-05",
       "time": "03:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-eeb360467eb306c7f47d",
+      "title": "How India became dangerously addicted to Chinese imports",
+      "summary": "India’s toy shops provide an unlikely barometer by which to measure its economic relationship with China.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5pve834grpno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "01:42",
       "category": "global"
     },
     {
@@ -5216,17 +5359,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-04",
       "time": "14:25",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-07160458556fb88745e5",
-      "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
-      "summary": "Two residents in Mekelle tell the BBC pro-government forces have taken control of the city.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-04",
-      "time": "13:33",
       "category": "global"
     },
     {
