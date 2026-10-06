@@ -1,29 +1,29 @@
 export const newsPreview = {
-  "latestDate": "2026-10-05",
-  "latestLabel": "October 5, 2026",
+  "latestDate": "2026-10-06",
+  "latestLabel": "October 6, 2026",
   "items": [
     {
-      "id": "global-rss-3cd0e2456c0e0650ebba",
-      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
+      "id": "global-rss-d12cb19015e1afd72c25",
+      "title": "OpenAI admits response to Australian government hacks 'not good enough'",
       "tag": "BREAKING",
-      "date": "2026-10-05",
-      "time": "23:19",
+      "date": "2026-10-06",
+      "time": "06:00",
       "category": "global"
     },
     {
-      "id": "global-rss-0d245c72f21c683bc2a9",
-      "title": "Trump says 'threat' led US to pull bombers from RAF Fairford",
+      "id": "global-rss-14fbad747ccf53478dd9",
+      "title": "Watch: Moment Indonesian sneaker shop is torn apart by explosion",
       "tag": "BREAKING",
-      "date": "2026-10-05",
-      "time": "21:46",
+      "date": "2026-10-06",
+      "time": "04:57",
       "category": "global"
     },
     {
-      "id": "global-rss-e14684b03c01f1620cfd",
-      "title": "US 'watching closely' after plague researcher dies in Russia",
+      "id": "global-rss-2ca30dde97389635551d",
+      "title": "Yemeni military says it has 'secured' Red Sea waterway",
       "tag": "BREAKING",
-      "date": "2026-10-05",
-      "time": "21:33",
+      "date": "2026-10-06",
+      "time": "04:29",
       "category": "global"
     }
   ]
