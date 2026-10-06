@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05T14:45:14.956708Z",
+  "lastUpdated": "2026-10-06T00:05:57.978136Z",
   "availableDates": [
     {
       "value": "2026-10-05",
@@ -631,6 +631,105 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-3cd0e2456c0e0650ebba",
+      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
+      "summary": "With neither candidate getting more than 50% of the vote, the election will go to a run-off on 25 October.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "23:19",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0d245c72f21c683bc2a9",
+      "title": "Trump says 'threat' led US to pull bombers from RAF Fairford",
+      "summary": "The Pentagon confirmed on Sunday it had removed the B1 bombers from the base in England back to their home stations in America.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cwj3413e5m1lo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "21:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-e14684b03c01f1620cfd",
+      "title": "US 'watching closely' after plague researcher dies in Russia",
+      "summary": "Donald Trump says the US was looking \"very strongly\" at the case of a lab technician who died at a research centre in Siberia.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cv5yn3nwp5n5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "21:33",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-275c27e2ad6557e644ce",
+      "title": "France braces for national day of school protests after injuries and mass arrests",
+      "summary": "France prepares for a day of protests in support of students who’ve been demanding more investment in education.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr4g1q1elxnjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "21:18",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-88e135495155bb9585b2",
+      "title": "Spain PM pins hopes on housing crisis to help win snap election",
+      "summary": "Calling of a snap election was not a knee-jerk reaction from Pedro Sánchez but a carefully thought-out manoeuvre, Guy Hedgecoe reports from Madrid.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck5yn81qqde0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "19:30",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2ca30dde97389635551d",
+      "title": "Yemeni military says it has retaken Mokha and 'secured' Red Sea waterway",
+      "summary": "Saudi-backed forces say they seized the port city of Mocha, near the Bab al-Mandab Strait, at the start of an offensive against the Houthis.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "17:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-143400a2145b294b8406",
+      "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
+      "summary": "It labelled Anthropic a \"supply chain risk\" in February after the firm refused to remove safety guardrails from its tools.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "16:13",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-143400a2145b294b8406",
+      "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
+      "summary": "It labelled Anthropic a \"supply chain risk\" in February after the firm refused to remove safety guardrails from its tools.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "16:13",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c60abc17185ac762254b",
+      "title": "Zelensky condemns 'horrific' Russian strike on boat carrying corn in Black Sea",
+      "summary": "The vessel's captain was killed and 11 crew members were rescued after the attack on the Turkish-owned ship, Ukraine's leader says.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr0j0w3p8453o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-05",
+      "time": "15:17",
+      "category": "global"
+    },
     {
       "id": "global-rss-e25b642c8acffc89c8f5",
       "title": "Teenager's hand blown off during confrontation between France school protesters and police",
@@ -5261,17 +5360,6 @@
       "date": "2026-10-05",
       "time": "04:00",
       "category": "research"
-    },
-    {
-      "id": "global-rss-3cd0e2456c0e0650ebba",
-      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
-      "summary": "With neither candidate getting more than 50% of the vote, the election will go to a run-off on 25 October.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-05",
-      "time": "03:16",
-      "category": "global"
     },
     {
       "id": "global-rss-eeb360467eb306c7f47d",

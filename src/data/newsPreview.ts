@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "October 5, 2026",
   "items": [
     {
-      "id": "global-rss-e25b642c8acffc89c8f5",
-      "title": "Teenager's hand blown off during confrontation between France school protesters and police",
+      "id": "global-rss-3cd0e2456c0e0650ebba",
+      "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "14:30",
+      "time": "23:19",
       "category": "global"
     },
     {
-      "id": "global-rss-8d0753946b5492df251e",
-      "title": "No10 insists UK military base RAF Fairford is safe after US withdraws bombers",
+      "id": "global-rss-0d245c72f21c683bc2a9",
+      "title": "Trump says 'threat' led US to pull bombers from RAF Fairford",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "13:16",
+      "time": "21:46",
       "category": "global"
     },
     {
-      "id": "global-rss-ac501aaf3cb7299a3a7b",
-      "title": "Bombs preventing rescue of kidnapped youths, Nigerian police say",
+      "id": "global-rss-e14684b03c01f1620cfd",
+      "title": "US 'watching closely' after plague researcher dies in Russia",
       "tag": "BREAKING",
       "date": "2026-10-05",
-      "time": "12:59",
+      "time": "21:33",
       "category": "global"
     }
   ]
