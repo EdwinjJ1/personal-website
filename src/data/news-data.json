@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-06T06:25:25.260391Z",
+  "lastUpdated": "2026-10-06T18:28:30.639593Z",
   "availableDates": [
     {
       "value": "2026-10-06",
@@ -636,25 +636,223 @@
   ],
   "news": [
     {
-      "id": "global-rss-d12cb19015e1afd72c25",
-      "title": "OpenAI admits response to Australian government hacks 'not good enough'",
-      "summary": "Top executive Jason Kwon tells hearing company has added \"more precautions\" to its training environments.",
+      "id": "global-rss-bfdfa4b1ba902d86e409",
+      "title": "Lawyer for one of Cornell 7 calls for special prosecutor to be removed over previous comments",
+      "summary": "New York Attorney General Letitia James is investigating the rape allegations, but the lawyer says comments she made on the case should disqualify her.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2qne2j88wo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c9p8gxygvpg6o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-06",
-      "time": "06:00",
+      "time": "18:05",
       "category": "global"
     },
     {
-      "id": "global-rss-14fbad747ccf53478dd9",
-      "title": "Watch: Moment Indonesian sneaker shop is torn apart by explosion",
-      "summary": "Police have said it is “strongly suspected” that the incident was caused by a gas leak.",
+      "id": "industry-rss-1e1fb6600fb2f6ae1420",
+      "title": "Asos confirms hackers sent 'unauthorised' notification to app users",
+      "summary": "Asos confirmed an \"unauthorised customer notification\" was sent out via its app on Tuesday, after users raised alarm.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cj62ylzpr6d3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "17:50",
+      "category": "industry"
+    },
+    {
+      "id": "industry-rss-f74f87d0584cad18b66d",
+      "title": "Finland orders halt to work on two Google data centres",
+      "summary": "The order affecting two planned data centres follows concerns over forest clearance.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cvj6jkx6g1r0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "17:15",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-bc815d92d43acdd3bfeb",
+      "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
+      "summary": "The Parti Québécois, which secured a minority, has vowed to hold an independence referendum in the years to come.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmkg7dx8wpygo?at_medium=RSS&at_campaign=rss",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-06",
-      "time": "04:57",
+      "time": "16:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-00ffc7da3f3ad0b32fdf",
+      "title": "White House defends Trump comment to let Iran 'take out' LA and San Diego",
+      "summary": "Gavin Newsom called the remarks \"deranged\", but the White House said Trump was warning of the risk of a nuclear Iran.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6r7yn8pknyxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "16:22",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-849c7e80726622d4b76a",
+      "title": "Kenya confirms its first Ebola death as outbreak spreads",
+      "summary": "The patient had been living in DR Congo, where more than 4,000 people have died from the disease this year.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "16:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2414dee51949bfde765b",
+      "title": "Watch: At the scene of student protests in Lille",
+      "summary": "The BBC's Europe correspondent Nick Beake reports from a large demonstration in northern France.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cwzd650e2jqdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "15:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5d11f305b267dc575fd2",
+      "title": "AfD candidate elected speaker of German regional parliament for first time",
+      "summary": "Although Tobias Rausch's role is largely symbolic, opponents have described the result as a watershed moment.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c54g1m2g1pg3o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "14:44",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c3b5ceb12c0d19cca379",
+      "title": "Watch: How Russia responded to US after plague researcher death",
+      "summary": "The US and Russia have each offered to help each other tackling infectious diseases.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c8e36y796enno?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "13:32",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-46268e90a7791fb8b2da",
+      "title": "US televangelist Jim Bakker, disgraced from sex scandal and fraud, dies at 86",
+      "summary": "Jim Bakker co-founded The PTL Club with his then-wife Tammy Faye before being jailed for fraud and conspiracy.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckly02gd1xppo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "13:31",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-3fa7be176575eab1fb37",
+      "title": "Nigeria mourns 25 killed as military plane crashes into swamp",
+      "summary": "President Bola Tinubu describes the crash as a \"painful moment\" for the military and the entire nation.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck1wvjer20qqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "12:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ab44f1651ed32cd5eb65",
+      "title": "Seven arrested for using Ghanaian banknotes to make 'money bouquets'",
+      "summary": "The arrests are part of the country's efforts to curb the misuse and abuse of the national currency.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c65yn3g53dkqo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "12:00",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-56096ef5d9f8590774c5",
+      "title": "Ship sinks and crew missing after Black Sea drone attack",
+      "summary": "It is not clear who is behind the attacks which come as Russia intensifies strikes in the Black Sea as part of its war against Ukraine.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "11:53",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-5ffe2c34a18c778ee858",
+      "title": "Italian PM files to trademark her voice against AI threats",
+      "summary": "Giorgia Meloni submitted a four-second audio to a EU agency in a bid to protect her voice from deepfakes.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckly0g1ljq2yo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "11:24",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c1ba6177026c9159f6a6",
+      "title": "'Ghost particles' from space telescope wins physics Nobel",
+      "summary": "Belgian physicist Prof Francis Halzen has won for his pioneering work on an observatory that detects particles from space.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq203mymlvkeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "11:24",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-9055e51399321492e6c3",
+      "title": "Former German spy chief arrested for espionage and treason",
+      "summary": "August Hanning is accused of obtaining classified information for a foreign power.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "10:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2efce67f0a5971eb89b2",
+      "title": "Indian opposition MPs detained in protest against election chief",
+      "summary": "Opposition leaders have alleged that CEC Gyanesh Kumar manipulated voter rolls to favour Prime Minister Narendra Modi's party during elections.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpdgvx82831o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "10:05",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-66a558ea19f1ee04b810",
+      "title": "Fear and disruption for Ukraine's rail passengers as Russia escalates drone attacks",
+      "summary": "Ukrainians travelling by train are increasingly caught in the crosshairs of Russia's attacks.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cr4g1qxzwyj1o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "09:48",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-468b224e0ef85358ed63",
+      "title": "Ofcom investigates Meta over Instagram Instants feature",
+      "summary": "The regulator said Instagram had not fully assessed risks posed by its Instants feature prior to launching it.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8jzyey8e2ro?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "09:04",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-c429e025a3f95816121d",
+      "title": "The small African nation ready for Messi's big night",
+      "summary": "Benin are about to have their own moment in the limelight as they visit Argentina for Lionel Messi's final game.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/sport/football/articles/cqly0lx461m8o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "07:50",
       "category": "global"
     },
     {
@@ -665,7 +863,51 @@
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-06",
-      "time": "04:29",
+      "time": "07:43",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-70ad282505f08df7a091",
+      "title": "Children brave snipers and mortars to go to school near Yemen front line",
+      "summary": "In rare access to Taiz, the BBC World Service speaks to children, teachers and families affected by the war.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c670pzpv9gk4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "07:23",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-382d8beea788b4628ff7",
+      "title": "Lego fraudster among last year's most high-profile insurance scammers",
+      "summary": "The person was sentenced to 28 months in prison after an investigation found the claims were made up, the insurance trade body, the ABI said.",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm86z9npj5deo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "07:03",
+      "category": "industry"
+    },
+    {
+      "id": "global-rss-d12cb19015e1afd72c25",
+      "title": "OpenAI admits response to Australian government hacks 'not good enough'",
+      "summary": "Top executive Jason Kwon tells hearing company has added \"more precautions\" to its training environments.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cmx2qne2j88wo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "06:53",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-14fbad747ccf53478dd9",
+      "title": "Watch: Moment Indonesian shoe shop is torn apart by explosion",
+      "summary": "Police have said it is “strongly suspected” that the incident was caused by a gas leak.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/cmkg7dx8wpygo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "04:57",
       "category": "global"
     },
     {
@@ -10107,17 +10349,6 @@
       "category": "research"
     },
     {
-      "id": "global-rss-bc815d92d43acdd3bfeb",
-      "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
-      "summary": "The Parti Québécois, which secured a minority, has vowed to hold an independence referendum in the years to come.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-06",
-      "time": "02:37",
-      "category": "global"
-    },
-    {
       "id": "global-rss-e5924f5bb874e4a125d7",
       "title": "Samoa leader apologises for Nazi salute after video from 2007 emerges",
       "summary": "Schmidt acknowledged that his actions \"were inappropriate and capable of causing offence and hurt\".",
@@ -10131,7 +10362,7 @@
     {
       "id": "global-rss-ec70415c64f77d90cb77",
       "title": "Fort Hood shooter to be executed by firing squad - a first for US military since World War Two",
-      "summary": "Nidal Malik Hasan killed 13 unarmed US soldiers and injured another 32 and his execution will be the first by the US military since 1961.",
+      "summary": "Nidal Malik Hasan killed 13 unarmed soldiers and injured another 32 in the deadliest ever non-combat attack on an American military base.",
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cq8ezkkkrpy1o?at_medium=RSS&at_campaign=rss",
@@ -10141,7 +10372,7 @@
     },
     {
       "id": "global-rss-f237959a0e8487897e7f",
-      "title": "A simple guide to the US midterms",
+      "title": "What are the US midterms? A simple guide",
       "summary": "US voters will head to the polls on 3 November in a ballot that could have a major impact on Donald Trump’s presidency.",
       "tag": "BREAKING",
       "source": "BBC World",
