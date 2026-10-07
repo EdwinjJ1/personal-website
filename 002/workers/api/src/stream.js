@@ -16,7 +16,9 @@ export function convertChunk(buffer) {
     }
     try {
       const parsed = JSON.parse(data);
-      const text = parsed.response ?? parsed.choices?.[0]?.delta?.content;
+      const raw = parsed.response ?? parsed.choices?.[0]?.delta?.content;
+      // 纯数字的片段（比如年龄 “20”）Workers AI 会给成 JSON 数字，不转成字符串就会被丢掉
+      const text = typeof raw === 'number' ? String(raw) : raw;
       if (typeof text === 'string' && text.length > 0) {
         out += `data: ${JSON.stringify({ choices: [{ delta: { content: text } }] })}\n\n`;
       }

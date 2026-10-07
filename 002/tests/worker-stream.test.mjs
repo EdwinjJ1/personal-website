@@ -26,3 +26,8 @@ test('toOpenAIStream 处理被切碎的数据块，输出能被前端解析', as
   assert.equal(parsed.deltas.join(''), 'Hi, I am Evan.');
   assert.equal(parsed.done, true);
 });
+
+test('convertChunk 不丢纯数字的片段', () => {
+  const r = convertChunk('data: {"response":"我今年"}\ndata: {"response":20}\ndata: {"response":"岁"}\ndata: {"response":0}\n');
+  assert.equal(parseSSE(r.out).deltas.join(''), '我今年20岁0');
+});
