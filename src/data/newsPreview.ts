@@ -3,27 +3,27 @@ export const newsPreview = {
   "latestLabel": "October 7, 2026",
   "items": [
     {
-      "id": "global-rss-30aff8c73f16b43abd3f",
-      "title": "Residents of kibbutz destroyed in 7 October Hamas-led attacks grapple with how to rebuild",
+      "id": "global-rss-b267d4dc968f3546539e",
+      "title": "Zelensky condemns 'vile' large-scale Russian attacks that killed 20",
       "tag": "BREAKING",
       "date": "2026-10-07",
-      "time": "05:02",
+      "time": "13:02",
       "category": "global"
     },
     {
-      "id": "global-rss-64cac8fe46cd91557e4d",
-      "title": "The Republican candidates walking a Trump tightrope",
+      "id": "global-rss-25a768bd5992df4d85b5",
+      "title": "Trump to speak to Putin about plague lab worker's death in Russia",
       "tag": "BREAKING",
       "date": "2026-10-07",
-      "time": "05:00",
+      "time": "12:58",
       "category": "global"
     },
     {
-      "id": "global-rss-9563253029d534a9e095",
-      "title": "Pornhub returns to Australia but only for adults with Apple devices",
+      "id": "global-rss-96c9dd17d515ec75eb4f",
+      "title": "Ten people linked to Kenya's first-ever Ebola case quarantined as screening concerns grow",
       "tag": "BREAKING",
       "date": "2026-10-07",
-      "time": "04:39",
+      "time": "12:46",
       "category": "global"
     }
   ]

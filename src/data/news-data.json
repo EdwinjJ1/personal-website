@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-07T06:04:34.533783Z",
+  "lastUpdated": "2026-10-07T13:29:05.500070Z",
   "availableDates": [
     {
       "value": "2026-10-07",
@@ -639,6 +639,160 @@
     }
   ],
   "news": [
+    {
+      "id": "global-rss-b267d4dc968f3546539e",
+      "title": "Zelensky condemns 'vile' large-scale Russian attacks that killed 20",
+      "summary": "Rescue workers are continuing a search for residents after an apartment building in Pryluky was destroyed.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "13:02",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-25a768bd5992df4d85b5",
+      "title": "Trump to speak to Putin about plague lab worker's death in Russia",
+      "summary": "Fears that the death may have been caused by pneumonic plague has prompted calls for more transparency from Russia.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqgm0vrl3xp7o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "12:58",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-96c9dd17d515ec75eb4f",
+      "title": "Ten people linked to Kenya's first-ever Ebola case quarantined as screening concerns grow",
+      "summary": "The patient passed through multiple cities in DR Congo, drove to Uganda and eventually flew to Kenya.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6eq3x3v11d5o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "12:46",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-bbffa81b5cd21465cb68",
+      "title": "France halts use of stun grenades after boy's hand blown off in student protests",
+      "summary": "The step comes after several groups complained of police using disproportionate force towards teenagers.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "12:16",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-0fcbfcb8ec040133b0de",
+      "title": "Japan beer giants raided over alleged price-fixing cartel",
+      "summary": "Asahi, Kirin and Suntory confirmed their premises were searched by Japanese competition authorities.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cm5yn3592xk9o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "12:09",
+      "category": "global"
+    },
+    {
+      "id": "ai-rss-b6aec8c05cfc3e2f0fe3",
+      "title": "Introducing Playground: Create and play custom games",
+      "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
+      "tag": "PRODUCT",
+      "source": "Google AI",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+      "date": "2026-10-07",
+      "time": "12:00",
+      "category": "ai"
+    },
+    {
+      "id": "global-rss-10e820fe5374b49bf292",
+      "title": "Chemistry Nobel awarded for solving mystery of life's asymmetry",
+      "summary": "The prize was given to the French and Japanese scientists for solving the mystery of life's asymmetry.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c6ly038jg0d4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "11:51",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-5ad65a9ec17d95c70e1c",
+      "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
+      "summary": "A medical expert advising her legal team says the murderer of Colleen Slemmer is communicating in a \"basic way\".",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "10:12",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-c84b44b4d5b0c1b17f2d",
+      "title": "How did Christa Pike survive two lethal injections - and what happens now?",
+      "summary": "The convicted killer of Colleen Slemmer is said to be awake and speaking in hospital in Tennessee after an execution attempt.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "10:01",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-011531fb33b1d5862669",
+      "title": "Sri Lanka's ex-first lady arrested over alleged misuse of children's hospital donations",
+      "summary": "The 73-year-old has been arrested over allegations that a charity she is linked to misused donations.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/ck0e0n3xzvp4o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "09:49",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-ef1bb8f248853f6e21cc",
+      "title": "California pair charged with abusing at least 14 surrogate-born children",
+      "summary": "Guojun Xuan and Silvia Zhang were arrested at their Arcadia mansion after 21 children were removed from their custody last year.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crx23dvnp8vxo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "09:38",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-2efce67f0a5971eb89b2",
+      "title": "India's opposition leader dragged on to bus as police break up protest",
+      "summary": "Opposition leaders allege that CEC Gyanesh Kumar manipulated voter rolls to favour PM Narendra Modi's party.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpdgvx82831o?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "07:45",
+      "category": "global"
+    },
+    {
+      "id": "global-rss-cc5850285f882d510419",
+      "title": "Oscar-winning actress Eva Marie Saint dies aged 102",
+      "summary": "She starred opposite Marlon Brando in On the Waterfront, then alongside Cary Grant in Hitchcock's North by Northwest.",
+      "tag": "BREAKING",
+      "source": "BBC World",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/cqze43ky1xgdo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "07:37",
+      "category": "global"
+    },
+    {
+      "id": "industry-rss-f07f8294f68786d697d5",
+      "title": "Rainmakers: The drones used to seed clouds",
+      "summary": "Cloud seeding is gaining attention as countries look to boost rainfall - will drones help?",
+      "tag": "PRODUCT",
+      "source": "BBC Technology",
+      "sourceUrl": "https://www.bbc.co.uk/news/articles/c64g71j4lgyjo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-07",
+      "time": "07:09",
+      "category": "industry"
+    },
     {
       "id": "global-rss-30aff8c73f16b43abd3f",
       "title": "Residents of kibbutz destroyed in 7 October Hamas-led attacks grapple with how to rebuild",
@@ -10111,14 +10265,14 @@
       "category": "research"
     },
     {
-      "id": "global-rss-5ad65a9ec17d95c70e1c",
-      "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
-      "summary": "Experts and lawyers called the apparent recovery unprecedented, noting she is believed to be the only known person to survive a lethal injection.",
+      "id": "global-rss-94e047b0a3b88f692a3a",
+      "title": "What we know about Christa Pike’s ‘unprecedented' recovery after failed execution",
+      "summary": "The BBC's Sarah Smith details the injuries sustained by the US death row inmate after two failed lethal injections, and what comes next.",
       "tag": "BREAKING",
       "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-07",
-      "time": "00:56",
+      "sourceUrl": "https://www.bbc.co.uk/news/videos/c5398nwe9lzlo?at_medium=RSS&at_campaign=rss",
+      "date": "2026-10-06",
+      "time": "23:42",
       "category": "global"
     },
     {
@@ -10167,7 +10321,7 @@
     },
     {
       "id": "global-rss-67ee06715d484696484b",
-      "title": "How drunk is too drunk? Cornell rape allegations expose 'loopholes' in consent laws",
+      "title": "Drinking and consent - Cornell rape allegations expose 'loopholes' in laws",
       "summary": "The BBC speaks to experts about current US state sexual assault laws and why some believe changing them will help alleged victims.",
       "tag": "BREAKING",
       "source": "BBC World",
@@ -10201,7 +10355,7 @@
     {
       "id": "industry-rss-455cb086d7242df7acd7",
       "title": "Tech Life",
-      "summary": "What is a supercomputer for? How does it work? And who gets to use it? We explain all.",
+      "summary": "What is a supercomputer for? How does it work? And who gets to use it? We explain all",
       "tag": "PRODUCT",
       "source": "BBC Technology",
       "sourceUrl": "https://www.bbc.co.uk/sounds/play/w3ct8jyj?at_medium=RSS&at_campaign=rss",
@@ -10403,17 +10557,6 @@
       "tag": "BREAKING",
       "source": "BBC World",
       "sourceUrl": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-06",
-      "time": "10:05",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-2efce67f0a5971eb89b2",
-      "title": "Indian opposition MPs detained in protest against election chief",
-      "summary": "Opposition leaders have alleged that CEC Gyanesh Kumar manipulated voter rolls to favour Prime Minister Narendra Modi's party during elections.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/crpdgvx82831o?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-06",
       "time": "10:05",
       "category": "global"
@@ -21779,17 +21922,6 @@
       "sourceUrl": "https://www.bbc.co.uk/news/articles/cr1585y0y90go?at_medium=RSS&at_campaign=rss",
       "date": "2026-10-02",
       "time": "02:49",
-      "category": "global"
-    },
-    {
-      "id": "global-rss-c84b44b4d5b0c1b17f2d",
-      "title": "What happened in the failed execution of Christa Pike - and what next?",
-      "summary": "The convicted killer is in hospital in Tennessee after surviving two lethal injections, in a case that has raised many questions.",
-      "tag": "BREAKING",
-      "source": "BBC World",
-      "sourceUrl": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
-      "date": "2026-10-02",
-      "time": "02:11",
       "category": "global"
     },
     {
