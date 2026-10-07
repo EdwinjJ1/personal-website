@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Evan Jia 贾岱林 · AI PM × Agent Builder</title>
+  <meta name="description" content="贾岱林 Evan：AI 产品经理 × 全栈 Agent 开发者。回声 echo agent 作者。一张桌子，十个宇宙。">
+  <meta property="og:title" content="Evan Jia · One desk, ten universes">
+  <meta property="og:description" content="AI PM who ships voice agents. Click the mask to switch universe.">
+  <meta property="og:image" content="assets/styles/comic@1x.webp">
+  <meta name="theme-color" content="#14121c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preload" as="image" href="assets/styles/comic@1x.webp">
+</head>
+<body>
+  <div id="loader" role="status">
+    <div class="loader-card">
+      <p class="loader-name">EVAN</p>
+      <p id="loader-text">Crossing universes…</p>
+      <div class="loader-track"><div id="loader-bar"></div></div>
+    </div>
+  </div>
+
+  <canvas id="stage" role="img" tabindex="0"></canvas>
+  <canvas id="fx" aria-hidden="true"></canvas>
+
+  <header class="hud hud-top">
+    <a class="logo" href="./" aria-label="Evan">evan<sup>°</sup></a>
+    <nav class="nav" aria-label="视图">
+      <button id="btn-sound" type="button" class="pill"></button>
+      <button id="btn-lang" type="button" class="pill"></button>
+      <button id="btn-desk" type="button" class="pill" aria-pressed="true"></button>
+      <button id="btn-intro" type="button" class="pill" aria-pressed="false"></button>
+    </nav>
+  </header>
+
+  <footer class="hud hud-bottom">
+    <p id="earth" class="caption"></p>
+    <div id="dots" class="dots" role="group" aria-label="Universes"></div>
+    <p id="hint" class="hint"></p>
+  </footer>
+
+  <p id="tip" class="caption tip" hidden></p>
+  <p id="sfx" class="sfx" aria-hidden="true"></p>
+
+  <aside id="panel" class="panel" hidden>
+    <button id="back" type="button" class="pill back"></button>
+    <div id="panel-body" class="panel-body"></div>
+  </aside>
+
+  <main id="intro" class="intro" hidden>
+    <div id="intro-body" class="intro-body"></div>
+  </main>
+
+  <noscript>
+    <div class="noscript">
+      <h1>贾岱林 Evan · AI 产品经理 × 全栈 Agent 开发者</h1>
+      <p>这个页面需要 JavaScript。简历：<a href="assets/evan-jia-resume.pdf">PDF</a> · 邮箱：jiaedwin0605@gmail.com · <a href="https://github.com/EdwinjJ1">GitHub</a></p>
+    </div>
+  </noscript>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

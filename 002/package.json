@@ -1,0 +1,16 @@
+{
+  "name": "evan-personal-site",
+  "private": true,
+  "type": "module",
+  "description": "一张桌子，十个宇宙：Blender 渲染 + WebGL 的个人网站",
+  "scripts": {
+    "dev": "python3 -m http.server 4173 --directory site",
+    "test": "node --test --experimental-test-coverage \"tests/*.test.mjs\" && python3 -m unittest discover -s tests -p \"test_*.py\"",
+    "textures": "uv run pipeline/textures.py blender/tex",
+    "render": "blender -b --factory-startup -P blender/scene.py -- --out build/passes --width 3840 --passes albedo,emit,id,normal,depth,lights",
+    "stylize": "uv run pipeline/stylize.py build/passes site/assets",
+    "build": "npm run import && npm run textures && npm run render && npm run stylize",
+    "import": "node pipeline/import_legacy.mjs && uv run pipeline/import_photos.py",
+    "news": "python3 pipeline/sync_news.py"
+  }
+}

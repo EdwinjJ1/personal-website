@@ -1,76 +1,15 @@
-# Evan Lin - Personal Portfolio
+# Evan 的个人网站
 
-A modern, responsive personal portfolio website built with Next.js 15, showcasing projects, skills, and experience.
+这个仓库里有两代网站，各占一个文件夹：
 
-## Live Site
+| 文件夹 | 内容 | 状态 |
+|---|---|---|
+| [`002/`](002/) | 现在的网站：一张桌子，十个宇宙。Blender 渲染 + WebGL，纯静态站 | 在用 |
+| [`001/`](001/) | 上一代网站：Next.js 15 作品集（博客、项目、摄影、新闻） | 存档，不再更新 |
 
-[https://evanlin.site](https://evanlin.site)
+怎么跑、怎么重新出图，见 [`002/README.md`](002/README.md)。
+`002/` 里的摄影、新闻、博客、项目数据是从 `001/` 导入的，导入脚本在 `002/pipeline/import_legacy.mjs`。
 
-## Features
+## 许可
 
-- Dark theme with teal accents and Galaxy starfield WebGL background
-- Splash screen with decrypt animation on every visit
-- Global mouse-following text cursor particle effect
-- Real GitHub activity graph powered by GitHub API
-- Multi-page architecture: Home, Blog, Projects, About, Photography, News
-- Photography portfolio with category filtering and modal gallery
-- AI/Research news hub synced from ClawdBot canvas
-- Responsive design with mobile hamburger menu
-- Smooth animations via Framer Motion and GSAP
-- Static export optimized for GitHub Pages
-
-## Tech Stack
-
-- **Framework**: Next.js 15 with App Router
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS v4
-- **Animations**: Framer Motion, GSAP
-- **3D**: OGL (WebGL galaxy background)
-- **Deployment**: GitHub Pages with GitHub Actions
-
-## Pages
-
-| Path | Description |
-|------|-------------|
-| `/` | Card-based home with skills, GitHub activity, news hub |
-| `/blog` | Blog posts on technology and entrepreneurship |
-| `/projects` | Project showcase with category filtering |
-| `/about` | Background, timeline, skills, and interests |
-| `/photography` | Portfolio gallery with FlowingMenu hover effects |
-| `/news` | AI/Research/Industry/Global news dashboard |
-
-## Local Development
-
-```bash
-git clone https://github.com/EdwinjJ1/personal-website.git
-cd personal-website
-npm install
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## News Sync
-
-Public feeds now sync directly, without Clawd or API credentials:
-
-```bash
-npm run news:sync
-```
-
-Sources: [Google AI](https://blog.google/technology/ai/rss/), [arXiv cs.AI](https://rss.arxiv.org/rss/cs.AI), [BBC Technology](https://feeds.bbci.co.uk/news/technology/rss.xml), and [BBC World](https://feeds.bbci.co.uk/news/world/rss.xml). Publication dates use UTC. Existing archive entries are preserved; matching source URLs are updated without duplication. A failed feed is reported while other feeds continue; a completely empty/failed run leaves the archive unchanged and fails the job.
-
-The Pages workflow syncs, saves the archive, and deploys every six hours, on pushes, or when run manually in GitHub Actions. Scheduled runs require Actions to be enabled for the repository.
-
-The original local HTML importer remains available: `npm run news:sync:local -- /path/to/canvas`.
-
-## Build
-
-```bash
-npm run build
-npx serve out
-```
-
-## License
-
-Open source.
+代码以 [MIT](LICENSE) 协议开源。两个文件夹里的摄影作品、文字内容和个人形象不在此列，版权归作者所有。

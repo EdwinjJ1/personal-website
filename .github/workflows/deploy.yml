@@ -1,0 +1,45 @@
+# 部署 002/site 到 GitHub Pages（evanlin.site）。
+# 推到 main 时部署；另外每 6 小时跑一次，把最新的新闻放进当次部署（不往仓库里提交）。
+name: Deploy site
+
+on:
+  push:
+    branches: ["main"]
+    paths: ["002/site/**", "002/pipeline/sync_news.py", ".github/workflows/deploy.yml"]
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout (only 002; 001 holds 1.5 GB of archived photos)
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            002
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sync news
+        run: python3 002/pipeline/sync_news.py
+        continue-on-error: true
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: 002/site
+      - id: deployment
+        uses: actions/deploy-pages@v4
