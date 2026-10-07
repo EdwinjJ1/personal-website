@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { mapPhotos } from '../pipeline/photos.mjs';
+import { mapPhotos, orderPhotos } from '../pipeline/photos.mjs';
 
 const photo = (id, extra = {}) => ({
   id, title: `t${id}`, location: 'Sydney', description: 'd', category: 'Street', image: `/images/photography/${id}.jpg`,
@@ -43,4 +43,29 @@ test('mapPhotos：不改传入的数组和对象', () => {
   assert.equal(out[0].title, 'padded');
   assert.equal(list[0].title, ' padded ');
   assert.deepEqual(mapPhotos([], '/p'), []);
+});
+
+test('orderPhotos：人像和 Her 先按拍摄系列排、再按日期倒序；其他分类只按日期倒序', () => {
+  const list = [
+    photo(1, { category: 'Her', seriesOrder: 20, date: '2026-07-01' }),
+    photo(2, { category: 'Her', seriesOrder: 0, date: '2026' }),
+    photo(3, { category: 'Her', date: '2026-08' }),
+    photo(4, { category: 'Portrait', seriesOrder: 2, date: '2025-01' }),
+    photo(5, { category: 'Portrait', seriesOrder: 1, date: '2024-01' }),
+    photo(6, { category: 'Portrait', seriesOrder: 1, date: '2026-01' }),
+    photo(7, { category: 'Night', seriesOrder: 1, date: '2025-03' }),
+    photo(8, { category: 'Night', date: '2026-02-11' }),
+    photo(9, { category: 'Night', seriesOrder: 9, date: '2026-02-12' }),
+  ];
+  const ids = (category) => orderPhotos(list).filter((p) => p.category === category).map((p) => p.id);
+  assert.deepEqual(ids('Her'), [2, 1, 3]);
+  assert.deepEqual(ids('Portrait'), [6, 5, 4]);
+  assert.deepEqual(ids('Night'), [9, 8, 7]);
+});
+
+test('orderPhotos：只有年份或年月的日期也能比；排不出先后的保持原来的顺序；不改传入的数组', () => {
+  const list = Object.freeze([photo(1, { date: '2026' }), photo(2, { date: '2026-03' }), photo(3, { date: '2026' }), photo(4, { date: undefined }), photo(5, { date: '2025-12-31' })]);
+  assert.deepEqual(orderPhotos(list).map((p) => p.id), [2, 1, 3, 5, 4]);
+  assert.deepEqual(list.map((p) => p.id), [1, 2, 3, 4, 5]);
+  assert.deepEqual(orderPhotos([]), []);
 });

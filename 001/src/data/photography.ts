@@ -1084,7 +1084,7 @@ const basePhotos: Photo[] = [
     camera: '',
     settings: '',
     series: 'Her',
-    seriesOrder: 1,
+    seriesOrder: 0,
   },
   {
     id: 1101,
@@ -1097,7 +1097,7 @@ const basePhotos: Photo[] = [
     camera: '',
     settings: '',
     series: 'Her',
-    seriesOrder: 1,
+    seriesOrder: 0,
   },
   {
     id: 1102,
@@ -1110,7 +1110,7 @@ const basePhotos: Photo[] = [
     camera: '',
     settings: '',
     series: 'Her',
-    seriesOrder: 1,
+    seriesOrder: 0,
   },
   {
     id: 1103,
@@ -1123,7 +1123,7 @@ const basePhotos: Photo[] = [
     camera: '',
     settings: '',
     series: 'Her',
-    seriesOrder: 1,
+    seriesOrder: 0,
   },
   {
     id: 1104,
@@ -1136,7 +1136,7 @@ const basePhotos: Photo[] = [
     camera: '',
     settings: '',
     series: 'Her',
-    seriesOrder: 1,
+    seriesOrder: 0,
   },
   {
     id: 1110,
@@ -1241,6 +1241,20 @@ const enrichWithExif = (photo: Photo): Photo => {
   };
 };
 
+// Photographs of her belong to the "Her" collection instead of Portrait, whichever shoot they came from.
+// Listed by file name so the choice is made in one place; the shoot (series) each one belongs to is kept.
+const herFiles = new Set([
+  'WEXF7393.jpg', 'WEXF7493.jpg', 'WEXF7545.jpg', 'WEXF7545_(2).jpg', 'WEXF7508.jpg', 'WEXF7515.jpg',
+  'WEXF7520.jpg', 'WEXF7522.jpg', 'WEXF7566.jpg', 'WEXF7591.jpg', 'WEXF5289.jpg', 'WEXF5300.jpg',
+  'WEXF5310.jpg', 'WEXF5328.jpg', 'WEXF5333.jpg', 'WEXF5340.jpg', 'WEXF5344.jpg', 'WEXF5358.jpg',
+  'WEXF5379.jpg', 'WEXF5381.jpg', 'WEXF5393.jpg', 'WEXF5456.jpg', 'WEXF5490.jpg', 's5m2-35.1.jpg',
+  's5m2-35.jpg', 'WEXF5013.jpg', 'WEXF5015.jpg', 'WEXF5032-baby.jpg', 'WEXF5044.jpg', 'WEXF5045.jpg',
+  'WEXF5051.jpg', 'WEXF5055.jpg', 'WEXF5112.jpg', 'WEXF5118.jpg', 'WEXF5120.jpg', 'WEXF5129.jpg',
+  'P1052388.jpg', 'P1140236.jpg', 'P1071596.JPG',
+]);
+
+const withHer = (photo: Photo): Photo => (herFiles.has(photo.image.split('/').pop() ?? '') ? { ...photo, category: 'Her' } : photo);
+
 const dateSortKey = (date: string): string => {
   const [year = '0000', month = '00', day = '00'] = date.split('-');
   return `${year.padStart(4, '0')}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
@@ -1256,6 +1270,6 @@ const sortPhotos = (items: Photo[]): Photo[] => [...items].sort((a, b) => {
   return dateSortKey(b.date).localeCompare(dateSortKey(a.date));
 });
 
-export const photos: Photo[] = sortPhotos([...basePhotos, ...importedPhotos].map(enrichWithExif));
+export const photos: Photo[] = sortPhotos([...basePhotos, ...importedPhotos].map(enrichWithExif).map(withHer));
 
 export const categories = ['All', 'Her', 'Landscape', 'Architecture', 'Street', 'Portrait', 'Night', 'Nature', 'Wildlife', 'Travel'];

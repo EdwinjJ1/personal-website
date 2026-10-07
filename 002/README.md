@@ -85,7 +85,7 @@ npm run stylize    # 合成 10 种风格 + 热点图 → site/assets
 - 蜘蛛面具、蛛网、EARTH 编号是对《蜘蛛侠：平行宇宙》的致敬，图形都是自己画的，没有使用官方素材。
 - 显示器里的对话接的是 `workers/api` 这个 Cloudflare Worker。主通道是 Workers AI 的原生绑定（`@cf/meta/llama-3.3-70b-instruct-fp8-fast`，不需要任何密钥）；配了 `AI_API_KEY` 时还有一个 OpenAI 兼容的备用通道。两条都不通时，网页退回预设回答并注明。改了人设提示词（`workers/api/src/index.js`）要在那个目录下 `npx wrangler deploy` 才生效。
 - 唱片机放的是网易云歌单「-EdwinJ-喜欢的音乐」。`pipeline/sync_music.py` 读公开歌单（不带登录信息），只留不用会员就能听的歌，写进 `music.json`；声音走网易云官方外链，放不了的（会员曲目、地区限制）自动跳过。换歌单改脚本里的 `PLAYLIST_ID`，本地更新用 `npm run music`；部署时也会同步一次，抓不到就用仓库里的快照。
-- 摄影是旧站 `../001/src/data/photography.ts` 里的全部作品，网页上按分类归成合集（封面是每个分类的第一张，点开才是整组）。合集的先后和名字在 `content.js` 的 `ALBUMS`；加照片就是把原图放进 `../001/public/images/photography/`、在 `photography.ts` 里登记一条，再跑 `npm run photos`。`Her` 是单独的一个分类，不并进人像。
+- 摄影是旧站 `../001/src/data/photography.ts` 里的全部作品，网页上按分类归成合集（封面是每个分类的第一张，点开才是整组）。合集的先后和名字在 `content.js` 的 `ALBUMS`；加照片就是把原图放进 `../001/public/images/photography/`、在 `photography.ts` 里登记一条，再跑 `npm run photos`。`Her` 是单独的一个合集，不并进人像：哪些照片归它，列在 `photography.ts` 的 `herFiles` 里。
 - 友链在 `site/assets/data/friends.json`（来源是 `../001/src/data/friends.ts`），加一条就多一根蛛丝。
 - 新闻每 6 小时由 `.github/workflows/deploy.yml` 抓一次并重新部署，结果只进当次部署，不往仓库里提交；仓库里的 `news.json` 是兜底快照。本地更新用 `npm run news`。
 - 部署：推到 `main`（改动涉及 `002/site/`）就会发布到 GitHub Pages（evanlin.site）。

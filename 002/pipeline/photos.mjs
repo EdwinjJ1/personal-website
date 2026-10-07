@@ -1,5 +1,5 @@
 // 摄影清单：旧站（../001）里的全部作品 → build/photos-manifest.json，交给 import_photos.py 去缩图。
-// 网页上按分类归成合集（site/js/albums.js），所以这里一张都不挑，顺序也照旧站排好的来。
+// 网页上按分类归成合集（site/js/albums.js），所以这里一张都不挑；合集里的先后在这里排好。
 //
 //   node pipeline/photos.mjs [旧站目录，默认 ../001]
 //
@@ -11,6 +11,23 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const PLACEHOLDERS = ['Unknown — WeChat export', 'EXIF unavailable'];       // 旧站给没有 EXIF 的照片填的占位字
 const real = (text) => (PLACEHOLDERS.includes(text) ? '' : String(text || ''));
+
+const BY_SERIES = ['Portrait', 'Her'];        // 这两个合集一场拍摄一场拍摄地看，先按系列排
+const NO_SERIES = 90;
+const seriesKey = (p) => (BY_SERIES.includes(p.category) ? p.seriesOrder ?? NO_SERIES : NO_SERIES);
+/** '2026' / '2026-03' / '2026-03-09' 补成能直接比大小的字符串；没有日期的排最后。 */
+const dateKey = (date) => {
+  const [year = '0000', month = '00', day = '00'] = String(date || '').split('-');
+  return `${year.padStart(4, '0')}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+};
+
+/**
+ * 合集里的先后：人像和 Her 先按拍摄系列（seriesOrder 小的在前），再按日期倒序；其他分类只按日期倒序。
+ * 排不出先后的保持传入时的顺序。每个合集的第一张就是封面。不改传入的数组。
+ */
+export function orderPhotos(list) {
+  return [...list].sort((a, b) => seriesKey(a) - seriesKey(b) || dateKey(b.date).localeCompare(dateKey(a.date)));
+}
 
 /**
  * 旧站的照片 → 清单条目。id 沿用旧站的（文件名就是它，增删照片不会让别的文件改名）。
@@ -46,7 +63,7 @@ async function loadPhotos(legacy, tmp) {
 
 /** 读旧站 → 写 build/photos-manifest.json，返回清单。 */
 export async function writeManifest(legacy, root = ROOT) {
-  const photos = mapPhotos(await loadPhotos(legacy, join(root, 'build/legacy-tmp')), join(legacy, 'public'));
+  const photos = mapPhotos(orderPhotos(await loadPhotos(legacy, join(root, 'build/legacy-tmp'))), join(legacy, 'public'));
   mkdirSync(join(root, 'build'), { recursive: true });
   writeFileSync(join(root, 'build/photos-manifest.json'), JSON.stringify(photos, null, 1));
   return photos;
