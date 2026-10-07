@@ -38,6 +38,7 @@ export const HOTS = {
   photos: { panel: 'photos' },
   projects: { panel: 'projects' },
   friends: { panel: 'friends' },
+  music: { panel: 'music' },
   contact: { panel: 'contact' },
   camera: { panel: 'photos' },
   fries: { panel: 'fries' },
@@ -63,6 +64,7 @@ export const LABELS = {
   photos: { zh: '摄影', en: 'Photography' },
   projects: { zh: '全部项目', en: 'All projects' },
   friends: { zh: '朋友们', en: 'Friends' },
+  music: { zh: '放张唱片', en: 'Play a record' },
   contact: { zh: '联系我', en: 'Contact' },
   camera: { zh: '摄影', en: 'Photography' },
   fries: { zh: '一盘薯条', en: 'A plate of fries' },
@@ -99,8 +101,8 @@ export const PANELS = {
       {
         heading: L('时间线', 'Timeline'),
         items: L(
-          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.4 – 5　Lark Loom：飞书 AI 校园挑战赛 Top 3', '2026.6 – 7　Roundtable 开源', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.9 至今　回声 echo agent，入选 GitHub 61.7k★ 中国独立开发者项目列表'],
-          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Apr – May 2026　Lark Loom: Top 3 at the Feishu AI Campus Challenge', 'Jun – Jul 2026　Open-sourced Roundtable', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Sep 2026 – now　Echo Agent, featured in the 61.7k★ Chinese indie developer list'],
+          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.9 至今　回声 echo agent，入选 GitHub 61.7k★ 中国独立开发者项目列表'],
+          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Sep 2026 – now　Echo Agent, featured in the 61.7k★ Chinese indie developer list'],
         ),
       },
       {
@@ -220,8 +222,8 @@ export const PANELS = {
       ['Most multi-agent tools are a black box. Roundtable seats agents around a live table: handoffs, reviews, artifacts and chat happen in front of you, and a way of working that succeeded can be saved and run again.'],
     ),
     bullets: L(
-      ['Planner 主导的规划会议产出依赖感知的任务图，调度器按波次并行执行', 'Reviewer 把关，未通过触发有上限的 Fixer 轮次；产物落地前做安全扫描', '运行时可插拔：Claude Code / Codex / OpenCode CLI、E2B 沙箱', '项目发起人与主要作者：4 人协作，116 次提交中贡献 73 次'],
-      ['A planner-led meeting produces a dependency-aware task graph; the scheduler runs it in parallel waves', 'Reviewers gate quality; failures trigger bounded fixer rounds; artifacts get a safety scan', 'Pluggable runtimes: Claude Code / Codex / OpenCode CLIs, E2B sandboxes', 'Initiator and main author: 73 of 116 commits in a team of four'],
+      ['字节跳动飞书 AI 校园挑战赛 Agent 赛道 Top 3', 'Planner 主导的规划会议产出依赖感知的任务图，调度器按波次并行执行', 'Reviewer 把关，未通过触发有上限的 Fixer 轮次；产物落地前做安全扫描', '运行时可插拔：Claude Code / Codex / OpenCode CLI、E2B 沙箱', '项目发起人与主要作者：4 人协作，116 次提交中贡献 73 次'],
+      ['Top 3 in the Agent track of the ByteDance Feishu AI Campus Challenge', 'A planner-led meeting produces a dependency-aware task graph; the scheduler runs it in parallel waves', 'Reviewers gate quality; failures trigger bounded fixer rounds; artifacts get a safety scan', 'Pluggable runtimes: Claude Code / Codex / OpenCode CLIs, E2B sandboxes', 'Initiator and main author: 73 of 116 commits in a team of four'],
     ),
     tags: ['Next.js 15', 'TypeScript', 'tRPC', 'Multi-agent'],
     links: [{ label: L('GitHub 仓库', 'GitHub repo'), href: 'https://github.com/EdwinjJ1/roundtable' }],
@@ -247,11 +249,11 @@ export const PANELS = {
     sub: L('拿过的奖，和有人在用的开源', 'Prizes, and open source people actually use'),
     body: L([], []),
     bullets: L(
-      ['Athena：UNSW × Mistral AI × Atlassian Hackathon，Susquehanna Prize（2026.7–8）', 'Lark Loom：字节跳动飞书 AI 校园挑战赛，AI 全栈开发赛道 Top 3（2026.4–5）', 'Akeso：ICON × Lyra Innovation Challenge，Finalist（2026.7）', 'Chiron Prompt：仓库感知的终端提示词增强 CLI，GitHub 156★', '3D Print Skill：给 Claude Code 的 3D 打印 Skill，GitHub 27★'],
-      ['Athena: Susquehanna Prize, UNSW × Mistral AI × Atlassian Hackathon (Jul–Aug 2026)', 'Lark Loom: Top 3, AI full-stack track, ByteDance Feishu AI Campus Challenge (Apr–May 2026)', 'Akeso: Finalist, ICON × Lyra Innovation Challenge (Jul 2026)', 'Chiron Prompt: a repo-aware prompt enhancer for the terminal, 156★ on GitHub', '3D Print Skill: a 3D-printing skill for Claude Code, 27★ on GitHub'],
+      ['Athena：UNSW × Mistral AI × Atlassian Hackathon，Susquehanna Prize（2026.7–8）', 'Roundtable：字节跳动飞书 AI 校园挑战赛，Agent 赛道 Top 3', 'Akeso：ICON × Lyra Innovation Challenge，Finalist（2026.7）', 'Chiron Prompt：仓库感知的终端提示词增强 CLI，GitHub 156★', '3D Print Skill：给 Claude Code 的 3D 打印 Skill，GitHub 27★'],
+      ['Athena: Susquehanna Prize, UNSW × Mistral AI × Atlassian Hackathon (Jul–Aug 2026)', 'Roundtable: Top 3, Agent track, ByteDance Feishu AI Campus Challenge', 'Akeso: Finalist, ICON × Lyra Innovation Challenge (Jul 2026)', 'Chiron Prompt: a repo-aware prompt enhancer for the terminal, 156★ on GitHub', '3D Print Skill: a 3D-printing skill for Claude Code, 27★ on GitHub'],
     ),
     tags: [],
-    links: [{ label: L('Chiron Prompt', 'Chiron Prompt'), href: 'https://github.com/EdwinjJ1/chiron-prompt' }, { label: L('Lark Loom', 'Lark Loom'), href: 'https://github.com/EdwinjJ1/lark-loom' }],
+    links: [{ label: L('Chiron Prompt', 'Chiron Prompt'), href: 'https://github.com/EdwinjJ1/chiron-prompt' }, { label: L('Roundtable', 'Roundtable'), href: 'https://github.com/EdwinjJ1/roundtable' }],
   },
   press: {
     kicker: L('THE DAILY ECHO', 'THE DAILY ECHO'),
@@ -259,8 +261,8 @@ export const PANELS = {
     sub: L('墙上这几张，写的都是真事', 'Everything pinned here actually happened'),
     body: L([], []),
     bullets: L(
-      ['ECHO AGENT MAKES THE 61.7K-STAR LIST：首个提交后 5 天被「中国独立开发者项目列表」收录', 'ATHENA TAKES SUSQUEHANNA PRIZE：UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY：17 岁创立 Hypha，7 人团队', 'TOP 3 AT FEISHU AI CHALLENGE：Lark Loom，AI 全栈开发赛道', 'HIRE!：AI 产品经理 × Agent 开发者，Open to opportunities'],
-      ['ECHO AGENT MAKES THE 61.7K-STAR LIST: featured 5 days after the first commit', 'ATHENA TAKES SUSQUEHANNA PRIZE: UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY: founded Hypha at 17 with a team of seven', 'TOP 3 AT FEISHU AI CHALLENGE: Lark Loom, AI full-stack track', 'HIRE!: AI PM × agent builder, open to opportunities'],
+      ['ECHO AGENT MAKES THE 61.7K-STAR LIST：首个提交后 5 天被「中国独立开发者项目列表」收录', 'ATHENA TAKES SUSQUEHANNA PRIZE：UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY：17 岁创立 Hypha，7 人团队', 'TOP 3 AT FEISHU AI CHALLENGE：Roundtable，Agent 赛道', 'HIRE!：AI 产品经理 × Agent 开发者，Open to opportunities'],
+      ['ECHO AGENT MAKES THE 61.7K-STAR LIST: featured 5 days after the first commit', 'ATHENA TAKES SUSQUEHANNA PRIZE: UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY: founded Hypha at 17 with a team of seven', 'TOP 3 AT FEISHU AI CHALLENGE: Roundtable, Agent track', 'HIRE!: AI PM × agent builder, open to opportunities'],
     ),
     tags: [],
     links: [{ label: L('联系我', 'Get in touch'), action: 'contact' }],
@@ -322,10 +324,24 @@ export const INTRO_ORDER = ['about', 'mosi', 'echo', 'echoMobile', 'roundtable',
 export const DYNAMIC = {
   projects: { file: 'projects', kicker: L('PRESS START', 'PRESS START'), title: L('全部项目', 'All projects'), sub: L('做过的东西，都在这儿', 'Everything I have built') },
   blog: { file: 'blog', kicker: L('BLOG', 'BLOG'), title: L('博客', 'Blog'), sub: L('关于 AI、Agent 和做产品', 'On AI, agents and building products') },
-  photos: { file: 'photos', kicker: L('PHOTOGRAPHY', 'PHOTOGRAPHY'), title: L('摄影', 'Photography'), sub: L('街头、人像、建筑、野生动物', 'Street, portrait, architecture, wildlife') },
+  photos: { file: 'photos', kicker: L('PHOTOGRAPHY', 'PHOTOGRAPHY'), title: L('摄影', 'Photography'), sub: L('一组一组地看：点封面，翻开整个合集', 'In collections: open a cover to see the whole set') },
   news: { file: 'news', kicker: L('AI DAILY', 'AI DAILY'), title: L('新闻', 'News desk'), sub: L('AI · 研究 · 行业 · 国际', 'AI · Research · Industry · Global') },
   friends: { file: 'friends', kicker: L('FRIENDS', 'FRIENDS'), title: L('朋友们', 'Friends'), sub: L('他们的站也值得看', 'Their sites are worth a visit') },
+  music: { file: 'music', kicker: L('NOW SPINNING', 'NOW SPINNING'), title: L('唱片机', 'Turntable'), sub: L('我的网易云歌单，放下唱针就响', 'My NetEase playlist. Drop the needle.') },
 };
+
+// 摄影合集的先后和名字：key 是照片的分类（旧站 photography.ts 里的 category）。没登记的分类会排在最后。
+export const ALBUMS = [
+  { key: 'Her', name: L('Her', 'Her') },
+  { key: 'Street', name: L('街头', 'Street') },
+  { key: 'Portrait', name: L('人像', 'Portrait') },
+  { key: 'Architecture', name: L('建筑', 'Architecture') },
+  { key: 'Landscape', name: L('风光', 'Landscape') },
+  { key: 'Night', name: L('夜', 'Night') },
+  { key: 'Nature', name: L('自然', 'Nature') },
+  { key: 'Wildlife', name: L('野生动物', 'Wildlife') },
+  { key: 'Travel', name: L('旅途', 'Travel') },
+];
 
 // 显示器里的对话：接旧站那个 Worker（真模型）；连不上时退回下面的预设回答
 export const CHAT = {
@@ -358,10 +374,27 @@ export const UI = {
   all: L('全部', 'All'),
   updated: L('更新于', 'Updated'),
   backToList: L('← 返回列表', '← Back to list'),
+  backToAlbums: L('← 全部合集', '← All collections'),
+  photoCount: L('{n} 张', '{n} photos'),
   loadFailed: L('内容加载失败，稍后再试。', 'Could not load this. Try again later.'),
   close: L('关闭', 'Close'),
   prev: L('上一张', 'Previous'),
   next: L('下一张', 'Next'),
+  webHint: L('每个朋友都是一个平行宇宙。顺着蛛丝选一个，过去串门。', 'Every friend is a universe of their own. Pick a thread and go visit.'),
+  visit: L('去串门 →', 'Visit →'),
+  musicIdle: L('挑一张碟，放下唱针', 'Pick a record, drop the needle'),
+  musicPlay: L('播放', 'Play'),
+  musicPause: L('暂停', 'Pause'),
+  musicPrev: L('上一首', 'Previous track'),
+  musicNext: L('下一首', 'Next track'),
+  musicShuffle: L('随机播放', 'Shuffle'),
+  musicSeek: L('播放进度', 'Seek'),
+  musicVolume: L('音量', 'Volume'),
+  musicCrate: L('选碟台', 'The crate'),
+  musicCount: L('{n} 首能直接放 · 歌单共 {total} 首', '{n} play right here · {total} in the playlist'),
+  musicOpen: L('在网易云打开歌单 →', 'Open on NetEase Music →'),
+  musicBlocked: L('这几首在你这边放不出来，多半是地区限制。去网易云听，或者换一首试试。', 'These tracks will not play from where you are, most likely a region lock. Try NetEase Music, or pick another one.'),
+  musicEmpty: L('歌单暂时是空的。', 'The crate is empty right now.'),
   canvasLabel: L('Evan 的工位：可点击的 3D 场景。完整内容见 INTRO 阅读模式。', 'Evan’s desk: a clickable 3D scene. The full content is available in INTRO read mode.'),
 };
 

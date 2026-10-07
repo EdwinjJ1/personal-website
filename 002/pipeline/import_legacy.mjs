@@ -1,12 +1,13 @@
 // 把上一代网站（../001）里的内容导入新站：项目、博客、友链、新闻 → site/assets/data/*.json，
-// 并挑一组摄影作品写成清单，交给 import_photos.py 去缩图。
+// 并把全部摄影作品写成清单（见 photos.mjs），交给 import_photos.py 去缩图。
 //
 //   node pipeline/import_legacy.mjs [旧站目录，默认 ../001]
 //
 // 旧站的数据是 TypeScript 文件，这里靠 Node 自带的类型擦除直接 import（需要 Node 23.6+）。
-import { mkdirSync, readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { mkdirSync, readFileSync, rmSync, writeFileSync, existsSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { writeManifest } from './photos.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const LEGACY = resolve(ROOT, process.argv[2] || '../001');
@@ -15,7 +16,7 @@ const OUT = join(ROOT, 'site/assets/data');
 const TMP = join(ROOT, 'build/legacy-tmp');
 
 export const NEWS_PER_CATEGORY = 24;
-export const PHOTO_LIMIT = 24;
+export const NEWS_PER_DAY = 30;      // 日历档案里每天每个分类最多留几条（arXiv 一天能有几百篇）
 
 const load = (file) => import(pathToFileURL(file).href);
 const firstArray = (mod, key) => Object.values(mod).find((v) => Array.isArray(v) && v.length && typeof v[0] === 'object' && key in v[0]) || [];
@@ -58,26 +59,27 @@ export function mapNews(list, perCategory = NEWS_PER_CATEGORY) {
   });
 }
 
-/** 摄影：精选优先，其余按分类轮流取，凑满 limit 张。 */
-export function pickPhotos(list, limit = PHOTO_LIMIT) {
-  const featured = list.filter((p) => p.featured);
-  const byCat = new Map();
-  list.filter((p) => !p.featured).forEach((p) => byCat.set(p.category, [...(byCat.get(p.category) || []), p]));
-  const queues = [...byCat.values()];
-  const rest = [];
-  for (let i = 0; rest.length < list.length && queues.some((q) => q.length > i); i += 1) queues.forEach((q) => q[i] && rest.push(q[i]));
-  return [...featured, ...rest].slice(0, limit);
-}
-
-async function loadPhotos() {
-  // photography.ts 里有两处 Node 原生加载不了的写法：不带扩展名的 import、不带 type 的 JSON import。拷一份改掉再读。
-  mkdirSync(TMP, { recursive: true });
-  const patched = readFileSync(join(DATA, 'photography.ts'), 'utf8')
-    .replace("from './photography-imported'", "from './photography-imported.ts'")
-    .replace("from './photography-exif.json'", "from './photography-exif.json' with { type: 'json' }");
-  writeFileSync(join(TMP, 'photography.ts'), patched);
-  ['photography-imported.ts', 'photography-exif.json'].forEach((f) => writeFileSync(join(TMP, f), readFileSync(join(DATA, f))));
-  return firstArray(await load(join(TMP, 'photography.ts')), 'image');
+/**
+ * 新闻日历档案：按日期分组，每天每个分类最多 perDay 条（按时间倒序）。
+ * 返回 { index: [{ d, n, c: { 分类: 条数 } }]（日期倒序）, days: { 日期: 条目[] } }。不改传入的数组。
+ */
+export function buildArchive(list, perDay = NEWS_PER_DAY) {
+  const groups = new Map();
+  [...list]
+    .filter((n) => n.title && /^\d{4}-\d{2}-\d{2}$/.test(String(n.date || '')) && /^https?:\/\//.test(n.sourceUrl || n.url || ''))
+    .sort((a, b) => String(b.time || '').localeCompare(String(a.time || '')))
+    .forEach((n) => {
+      const category = String(n.category || 'ai').toLowerCase();
+      const day = groups.get(n.date) || [];
+      if (day.filter((x) => x.category === category).length >= perDay) return;
+      groups.set(n.date, [...day, { title: clip(n.title, 140), url: n.sourceUrl || n.url, source: n.source || '', category, time: n.time || '', summary: clip(n.summary, 200) }]);
+    });
+  const dates = [...groups.keys()].sort().reverse();
+  const count = (items) => items.reduce((acc, x) => ({ ...acc, [x.category]: (acc[x.category] || 0) + 1 }), {});
+  return {
+    index: dates.map((d) => ({ d, n: groups.get(d).length, c: count(groups.get(d)) })),
+    days: Object.fromEntries(dates.map((d) => [d, groups.get(d)])),
+  };
 }
 
 async function main() {
@@ -101,14 +103,17 @@ async function main() {
   const news = mapNews(raw.news || []);
   save('news.json', { updated: raw.lastUpdated || '', items: news });
 
-  const photos = pickPhotos(await loadPhotos()).map((p, i) => ({
-    id: i + 1, title: p.title, location: p.location, category: p.category, date: p.date, camera: p.camera, settings: p.settings,
-    description: p.description, source: join(LEGACY, 'public', p.image),
-  }));
-  mkdirSync(join(ROOT, 'build'), { recursive: true });
-  writeFileSync(join(ROOT, 'build/photos-manifest.json'), JSON.stringify(photos, null, 1));
+  // 日历档案：news/index.json + 每天一个文件，面板按日期懒加载
+  const archive = buildArchive(raw.news || []);
+  rmSync(join(OUT, 'news'), { recursive: true, force: true });
+  mkdirSync(join(OUT, 'news'), { recursive: true });
+  save('news/index.json', { updated: raw.lastUpdated || '', days: archive.index });
+  Object.entries(archive.days).forEach(([date, items]) => save(`news/${date}.json`, items));
+
+  const photos = await writeManifest(LEGACY, ROOT);
   writeFileSync(join(ROOT, 'build/project-images.json'), JSON.stringify(projectImages, null, 1));
 
+  console.log(`news archive: ${archive.index.length} days, ${archive.index.reduce((sum, d) => sum + d.n, 0)} items`);
   console.log(`projects ${projects.length} · blog ${blog.length} · friends ${friends.length} · news ${news.length}/${(raw.news || []).length} · photos ${photos.length}`);
     console.log('categories:', [...new Set(news.map((n) => n.category))].join(','), '| photo cats:', [...new Set(photos.map((p) => p.category))].join(','));
 }

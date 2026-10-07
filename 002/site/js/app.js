@@ -1,14 +1,24 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
+import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js';
 import * as G from './geometry.js';
+import { coverUrl, createPlayer, fmtTime } from './music.js';
+import { renderNews } from './news.js';
 import { createStage, hexToRgb } from './stage.js';
+import { CENTER as WEB_CENTER, earthOf, hostOf, webLayout } from './web.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const el = (tag, cls, text) => {
   const node = document.createElement(tag);
   if (cls) node.className = cls;
   if (text != null) node.textContent = text;
+  return node;
+};
+const SVG_NS = 'http://www.w3.org/2000/svg';
+const svgEl = (tag, attrs) => {
+  const node = document.createElementNS(SVG_NS, tag);
+  Object.entries(attrs).forEach(([k, v]) => node.setAttribute(k, v));
   return node;
 };
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -173,6 +183,39 @@ function staticContent(key) {
   return wrap;
 }
 
+// ── 唱片机：播放器只有一个，面板关掉音乐也不断；面板只是它的一张脸 ──
+let player = null;
+let playerOff = null;       // 上一次面板的订阅，重画前先退掉
+const ICONS = {
+  play: 'M7 4v16l13-8z',
+  pause: 'M6 4h4v16H6zM14 4h4v16h-4z',
+  prev: 'M5 4h3v16H5zM20 4v16L9 12z',
+  next: 'M16 4h3v16h-3zM4 4v16l11-8z',
+  shuffle: 'M3 6h4l9 12h5v2h-6L6 8H3zM3 16h4l2-2.6 1.3 1.7L8 18H3zM13.7 8.9 16 6h5v2h-4l-2 2.6zM19 3l4 4-4 4zM19 13l4 4-4 4z',
+};
+function iconButton(cls, icon, label, onClick) {
+  const b = el('button', cls);
+  b.type = 'button';
+  b.setAttribute('aria-label', label);
+  b.title = label;
+  const svg = svgEl('svg', { viewBox: '0 0 24 24', 'aria-hidden': 'true' });
+  const path = svgEl('path', { d: ICONS[icon] });
+  svg.append(path);
+  b.append(svg);
+  b.addEventListener('click', onClick);
+  return { b, path };
+}
+function slider(cls, label, max, onInput) {
+  const input = el('input', `range ${cls}`);
+  input.type = 'range';
+  input.min = '0';
+  input.max = String(max);
+  input.step = max > 1 ? '1' : '0.01';
+  input.setAttribute('aria-label', label);
+  input.addEventListener('input', () => onInput(Number(input.value)));
+  return input;
+}
+
 // ── 从旧站导入的内容：项目 / 博客 / 摄影 / 新闻 / 友链 ──
 const dataCache = new Map();
 function getData(file) {
@@ -196,7 +239,7 @@ function openLightbox(items, start) {
     index = G.wrapIndex(i, items.length);
     const p = items[index];
     img.src = `assets/photos/${p.id}.webp`;
-    img.alt = `${p.title} · ${p.location}`;
+    img.alt = [p.title, p.location].filter(Boolean).join(' · ');
     cap.replaceChildren(el('strong', null, p.title), el('span', null, [p.location, p.date, p.camera, p.settings].filter(Boolean).join(' · ')), el('span', 'desc', p.description || ''));
   };
   const close = () => { box.remove(); lightbox = null; };
@@ -266,52 +309,185 @@ const RENDER = {
     };
     list();
   },
+  // 摄影按合集翻：每个合集先只露一张封面，点开才是这一组的全部照片（分组在 albums.js）。
   photos(body, items) {
-    const grid = el('div', 'photo-grid');
-    items.forEach((p, i) => {
-      const b = el('button', 'photo');
-      b.type = 'button';
-      b.setAttribute('aria-label', `${p.title} · ${p.location}`);
+    const albums = groupAlbums(items, ALBUMS);
+    const count = (album) => tr(UI.photoCount).replace('{n}', album.photos.length);
+    const thumb = (p) => {
       const im = el('img');
       im.loading = 'lazy';
       im.alt = '';
       im.src = `assets/photos/${p.id}-t.webp`;
       im.width = p.w;
       im.height = p.h;
-      b.append(im, el('span', null, p.category));
-      b.addEventListener('click', () => openLightbox(items, i));
-      grid.append(b);
-    });
-    body.append(grid);
-  },
-  news(body, data) {
-    const chips = el('div', 'chips');
-    const list = el('div', 'news-list');
-    const draw = (cat) => {
-      list.replaceChildren(...data.items.filter((n) => cat === 'all' || n.category === cat).map((n) => {
-        const a = extLink('news-item', '', n.url);
-        a.append(el('span', 'meta', [n.category.toUpperCase(), n.source, n.date].filter(Boolean).join(' · ')), el('strong', null, n.title));
-        if (n.summary) a.append(el('span', 'sum', n.summary));
-        return a;
-      }));
-      [...chips.children].forEach((c) => c.setAttribute('aria-pressed', String(c.dataset.cat === cat)));
+      return im;
     };
-    ['all', ...new Set(data.items.map((n) => n.category))].forEach((cat) => {
-      const b = el('button', 'chip', cat === 'all' ? tr(UI.all) : cat.toUpperCase());
-      b.type = 'button';
-      b.dataset.cat = cat;
-      b.addEventListener('click', () => draw(cat));
-      chips.append(b);
-    });
-    body.append(el('p', 'meta', `${tr(UI.updated)} ${String(data.updated).slice(0, 10)}`), chips, list);
-    draw('all');
+    const toTop = () => { const scroller = body.closest('.panel-body'); if (scroller) scroller.scrollTop = 0; };
+    const list = () => {
+      const grid = el('div', 'album-grid');
+      albums.forEach((album) => {
+        const b = el('button', 'album');
+        b.type = 'button';
+        b.setAttribute('aria-label', `${tr(album.name)} · ${count(album)}`);
+        b.append(thumb(album.cover), el('strong', null, tr(album.name)), el('span', null, count(album)));
+        b.addEventListener('click', () => open(album));
+        grid.append(b);
+      });
+      body.replaceChildren(grid);
+      toTop();
+    };
+    const open = (album) => {
+      const back = el('button', 'btn small', tr(UI.backToAlbums));
+      back.type = 'button';
+      back.addEventListener('click', list);
+      const grid = el('div', 'photo-grid');
+      album.photos.forEach((p, i) => {
+        const b = el('button', 'photo');
+        b.type = 'button';
+        b.setAttribute('aria-label', [p.title, p.location].filter(Boolean).join(' · '));
+        b.append(thumb(p));
+        b.addEventListener('click', () => openLightbox(album.photos, i));
+        grid.append(b);
+      });
+      body.replaceChildren(back, el('h3', 'album-title', `${tr(album.name)} · ${count(album)}`), grid);
+      toTop();
+      back.focus({ preventScroll: true });
+    };
+    list();
   },
-  friends(body, items) {
-    items.forEach((f) => {
-      const a = extLink('news-item', '', f.link);
-      a.append(el('strong', null, f.name), el('span', 'sum', f.desc));
-      body.append(a);
+  // 新闻：顶部月历 + 按天加载，都在 news.js 里；data（各分类最近的新闻）是档案加载不到时的退路
+  news(body, data) {
+    renderNews(body, data, { el, extLink, lang: () => state.lang });
+  },
+  // 黑胶唱片机。歌单是 music.json（从网易云同步），真正出声的是 music.js 里的播放器。
+  music(body, data) {
+    if (!data.tracks.length) { body.append(el('p', null, tr(UI.musicEmpty))); return; }
+    player = player || createPlayer(new Audio());
+    if (!player.state.tracks.length) player.load(data.tracks);
+    playerOff?.();
+
+    const deck = el('div', 'deck');
+    const disc = el('div', 'disc');
+    const label = el('img', 'disc-label');
+    label.alt = '';
+    label.referrerPolicy = 'no-referrer';
+    disc.append(label, el('i', 'disc-hole'));
+    const arm = el('div', 'arm');
+    arm.append(el('i'));
+    const platter = el('div', 'platter');
+    platter.append(disc);
+    const rig = el('div', 'rig');
+    rig.append(platter, arm);
+    deck.append(rig, el('span', 'deck-rpm', '33⅓ RPM'));
+    deck.setAttribute('aria-hidden', 'true');
+
+    const title = el('h3', 'now-title');
+    const artist = el('p', 'meta now-artist');
+    const note = el('p', 'now-note', tr(UI.musicBlocked));
+    const seek = slider('seek', tr(UI.musicSeek), 100, (v) => player.seek(v));
+    const cur = el('span', null, '0:00');
+    const dur = el('span', null, '0:00');
+    const times = el('div', 'now-times');
+    times.append(cur, seek, dur);
+
+    const shuffle = iconButton('ctl', 'shuffle', tr(UI.musicShuffle), () => player.setShuffle(!player.state.shuffle));
+    const prev = iconButton('ctl', 'prev', tr(UI.musicPrev), () => player.step(-1));
+    const toggle = iconButton('ctl ctl-main', 'play', tr(UI.musicPlay), () => player.toggle());
+    const next = iconButton('ctl', 'next', tr(UI.musicNext), () => player.step(1));
+    const volume = slider('volume', tr(UI.musicVolume), 1, (v) => player.setVolume(v));
+    const controls = el('div', 'controls');
+    controls.append(shuffle.b, prev.b, toggle.b, next.b, volume);
+
+    const crate = el('ol', 'crate');
+    const rows = data.tracks.map((t, i) => {
+      const b = el('button', 'crate-row');
+      b.type = 'button';
+      b.append(el('span', 'crate-no', String(i + 1).padStart(2, '0')), el('strong', null, t.title), el('span', 'crate-by', t.artist), el('span', 'crate-len', fmtTime(t.duration)));
+      b.addEventListener('click', () => (player.state.index === i ? player.toggle() : player.play(i)));
+      const li = el('li');
+      li.append(b);
+      crate.append(li);
+      return b;
     });
+    const count = tr(UI.musicCount).replace('{n}', data.tracks.length).replace('{total}', data.playlist.total);
+    body.append(deck, title, artist, note, times, controls, el('h3', 'section', tr(UI.musicCrate)), el('p', 'meta', `${data.playlist.name} · ${count}`), crate, extLink('btn small', tr(UI.musicOpen), data.playlist.url));
+
+    let shown = { index: null, dead: null };
+    const draw = (s) => {
+      const t = s.tracks[s.index];
+      if (s.index !== shown.index) {
+        title.textContent = t ? t.title : tr(UI.musicIdle);
+        artist.textContent = t ? [t.artist, t.album].filter(Boolean).join(' · ') : data.playlist.name;
+        label.src = coverUrl((t || s.tracks[0]).cover, 200);
+        rows.forEach((b, i) => b.setAttribute('aria-current', String(i === s.index)));
+        if (t && 'mediaSession' in navigator) navigator.mediaSession.metadata = new MediaMetadata({ title: t.title, artist: t.artist, album: t.album, artwork: t.cover ? [{ src: coverUrl(t.cover, 300), sizes: '300x300', type: 'image/jpeg' }] : [] });
+      }
+      if (s.dead !== shown.dead) rows.forEach((b, i) => { b.disabled = s.dead.includes(i); });
+      shown = { index: s.index, dead: s.dead };
+      deck.classList.toggle('on', s.playing);
+      deck.classList.toggle('cue', s.playing || s.loading);
+      note.hidden = !s.blocked;
+      toggle.path.setAttribute('d', ICONS[s.playing || s.loading ? 'pause' : 'play']);
+      toggle.b.setAttribute('aria-label', tr(s.playing ? UI.musicPause : UI.musicPlay));
+      shuffle.b.setAttribute('aria-pressed', String(s.shuffle));
+      seek.max = String(Math.max(1, Math.round(s.duration)));
+      if (!seek.matches(':active')) seek.value = String(Math.round(s.time));      // 正在拖的时候别抢
+      seek.style.setProperty('--p', `${s.duration ? Math.min(100, (s.time / s.duration) * 100) : 0}%`);
+      volume.value = String(s.volume);
+      volume.style.setProperty('--p', `${s.volume * 100}%`);
+      cur.textContent = fmtTime(s.time);
+      dur.textContent = fmtTime(s.duration);
+    };
+    playerOff = player.subscribe(draw);
+    draw(player.state);
+    if ('mediaSession' in navigator) {
+      navigator.mediaSession.setActionHandler('previoustrack', () => player.step(-1));
+      navigator.mediaSession.setActionHandler('nexttrack', () => player.step(1));
+    }
+  },
+  // 友链画成一张蛛网：Evan 在中心，每个朋友是一根蛛丝另一头的宇宙。布局算法在 web.js。
+  friends(body, items) {
+    const layout = webLayout(items.length);
+    const svg = svgEl('svg', { viewBox: '0 0 100 100', 'aria-hidden': 'true' });
+    const strand = (p, cls) => svgEl('line', { x1: WEB_CENTER, y1: WEB_CENTER, x2: p.x, y2: p.y, class: cls });
+    const threads = layout.nodes.map((p) => [strand(p, 'web-thread'), strand(p, 'web-live')]);
+    svg.append(...layout.rings.map((d) => svgEl('path', { d, class: 'web-ring' })), ...layout.spokes.map((p) => strand(p, 'web-spoke')), ...threads.flat());
+
+    const nodes = el('ul', 'web-nodes');
+    const info = el('div', 'web-info');
+    info.append(el('p', 'web-hint', tr(UI.webHint)));
+    let picked = -1;
+    let pointer = 'mouse';
+    const pick = (i) => {
+      if (i === picked) return;
+      picked = i;
+      const f = items[i];
+      [...nodes.children].forEach((li, k) => li.firstChild.classList.toggle('on', k === i));
+      threads.forEach((pair, k) => pair.forEach((line) => line.classList.toggle('on', k === i)));
+      info.replaceChildren(el('p', 'meta', [earthOf(f.link), hostOf(f.link)].filter(Boolean).join(' · ')), el('strong', null, f.name), el('span', 'sum', f.desc), extLink('btn small', tr(UI.visit), f.link));
+      blip(880, 0.03, 'sine');
+    };
+    items.forEach((f, i) => {
+      const li = el('li');
+      li.style.left = `${layout.nodes[i].x}%`;
+      li.style.top = `${layout.nodes[i].y}%`;
+      li.style.setProperty('--i', i);
+      const a = extLink('web-node', '', f.link);
+      a.setAttribute('aria-label', `${f.name} · ${f.desc}`);
+      a.append(el('span', 'web-orb', [...f.name][0].toUpperCase()), el('span', 'web-name', f.name));
+      a.addEventListener('pointerdown', (ev) => { pointer = ev.pointerType; });
+      a.addEventListener('pointerenter', (ev) => { if (ev.pointerType === 'mouse') pick(i); });
+      a.addEventListener('focus', () => { if (a.matches(':focus-visible')) pick(i); });
+      // 触屏没有悬停：第一下先看简介，第二下（或者点下面的按钮）才跳走
+      a.addEventListener('click', (ev) => { if (pointer === 'touch' && picked !== i) ev.preventDefault(); pick(i); });
+      li.append(a);
+      nodes.append(li);
+    });
+    const hub = el('span', 'web-hub', 'EVAN');
+    hub.setAttribute('aria-hidden', 'true');
+    const web = el('div', 'web');
+    web.append(svg, hub, nodes);
+    body.append(web, info);
   },
 };
 

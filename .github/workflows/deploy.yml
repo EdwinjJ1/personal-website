@@ -1,11 +1,11 @@
 # 部署 002/site 到 GitHub Pages（evanlin.site）。
-# 推到 main 时部署；另外每 6 小时跑一次，把最新的新闻放进当次部署（不往仓库里提交）。
+# 推到 main 时部署；另外每 6 小时跑一次，把最新的新闻和网易云歌单放进当次部署（不往仓库里提交）。
 name: Deploy site
 
 on:
   push:
     branches: ["main"]
-    paths: ["002/site/**", "002/pipeline/sync_news.py", ".github/workflows/deploy.yml"]
+    paths: ["002/site/**", "002/pipeline/sync_news.py", "002/pipeline/sync_music.py", ".github/workflows/deploy.yml"]
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
@@ -36,6 +36,9 @@ jobs:
           python-version: "3.12"
       - name: Sync news
         run: python3 002/pipeline/sync_news.py
+        continue-on-error: true
+      - name: Sync music (NetEase playlist; keeps the committed snapshot if the fetch fails)
+        run: python3 002/pipeline/sync_music.py
         continue-on-error: true
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3

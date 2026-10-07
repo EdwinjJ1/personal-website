@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, LANGS, PANELS, STYLES, UI, matchTopic } from '../site/js/content.js';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, LANGS, PANELS, STYLES, UI, matchTopic } from '../site/js/content.js';
 
 const hasPanel = (key) => Boolean(PANELS[key] || DYNAMIC[key]);
 
@@ -105,12 +105,37 @@ test('动态面板：文案齐全，数据文件存在且形状正确', { skip: 
   const news = read('news');
   assert.ok(news.items.length > 0);
   news.items.forEach((n) => assert.match(n.url, /^https?:\/\//));
-  read('photos').forEach((p) => {
+  const photos = read('photos');
+  assert.equal(new Set(photos.map((p) => p.id)).size, photos.length, '照片 id 有重复');
+  photos.forEach((p) => {
     assert.ok(existsSync(new URL(`../site/assets/photos/${p.id}.webp`, import.meta.url)), `photo ${p.id}`);
     assert.ok(existsSync(new URL(`../site/assets/photos/${p.id}-t.webp`, import.meta.url)), `thumb ${p.id}`);
+    assert.ok(ALBUMS.some((a) => a.key === p.category), `照片 ${p.id} 的分类 ${p.category} 没有登记成合集`);
+    assert.ok(p.title && p.w > 0 && p.h > 0);
   });
+  assert.ok(photos.some((p) => p.category === 'Her'), 'Her 合集是空的');
   read('blog').forEach((p) => assert.ok(p.title && p.content));
   read('projects').forEach((p) => assert.ok(p.title && Array.isArray(p.tech)));
+  const friends = read('friends');
+  assert.equal(new Set(friends.map((f) => f.link)).size, friends.length, '友链有重复');
+  friends.forEach((f) => {
+    assert.ok(f.name && f.desc, `友链缺名字或简介：${f.link}`);
+    assert.match(f.link, /^https:\/\//);
+  });
+  const music = read('music');
+  assert.match(music.playlist.url, /^https:\/\/music\.163\.com\//);
+  assert.ok(music.tracks.length > 0 && music.playlist.total >= music.tracks.length);
+  assert.equal(new Set(music.tracks.map((t) => t.id)).size, music.tracks.length, '歌单里有重复的歌');
+  music.tracks.forEach((t) => {
+    assert.ok(Number.isInteger(t.id) && t.title, `歌曲缺 id 或标题：${JSON.stringify(t)}`);
+    assert.ok(t.cover === '' || t.cover.startsWith('https://'), `${t.title} 的封面不是 https`);
+    assert.ok(t.duration >= 0);
+  });
+});
+
+test('摄影合集：名字中英文齐全，key 不重复', () => {
+  assert.equal(new Set(ALBUMS.map((a) => a.key)).size, ALBUMS.length);
+  ALBUMS.forEach((a) => bothLangs(a.name, `album ${a.key}`));
 });
 
 test('对话接口地址是 https', () => {

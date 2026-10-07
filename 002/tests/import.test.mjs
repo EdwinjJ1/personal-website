@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { mapNews, mapProjects, pickPhotos } from '../pipeline/import_legacy.mjs';
+import { buildArchive, mapNews, mapProjects } from '../pipeline/import_legacy.mjs';
 
 test('mapNews：每个分类限量、按日期倒序、丢掉没有合法链接的', () => {
   const raw = [
@@ -20,16 +20,6 @@ test('mapNews：每个分类限量、按日期倒序、丢掉没有合法链接�
   assert.ok(out[1].summary.length <= 200);
 });
 
-test('pickPhotos：精选在前，其余按分类轮流取，不超过上限', () => {
-  const list = [
-    { title: 's1', category: 'Street' }, { title: 's2', category: 'Street' }, { title: 's3', category: 'Street' },
-    { title: 'n1', category: 'Night' }, { title: 'f1', category: 'Night', featured: true }, { title: 'p1', category: 'Portrait' },
-  ];
-  assert.deepEqual(pickPhotos(list, 5).map((p) => p.title), ['f1', 's1', 'n1', 'p1', 's2']);
-  assert.equal(pickPhotos(list, 99).length, list.length);
-  assert.deepEqual(pickPhotos([], 5), []);
-});
-
 test('mapProjects：精选排前，字段归一，不改原数组', () => {
   const list = Object.freeze([
     { title: 'B', description: 'b', technologies: ['x'], category: 'Web', status: 'Live', featured: false, link: 'https://b.example' },
@@ -43,4 +33,18 @@ test('mapProjects：精选排前，字段归一，不改原数组', () => {
   assert.deepEqual(withImage.metrics, [{ label: 'L', value: '1' }]);
   assert.equal(out[1].live, 'https://b.example');
   assert.equal(list[0].title, 'B');
+});
+
+test('buildArchive：按日期分组、每天每类限量、时间倒序，并给出每天的分类计数', () => {
+  const mk = (title, date, time, category, extra = {}) => ({ title, sourceUrl: `https://x.example/${title}`, source: 'S', date, time, category, summary: 'arXiv:1 Announce Type: new Abstract: body', ...extra });
+  const raw = Object.freeze([
+    mk('a1', '2026-10-07', '08:00', 'ai'), mk('a2', '2026-10-07', '12:00', 'ai'), mk('a3', '2026-10-07', '10:00', 'ai'),
+    mk('r1', '2026-10-07', '09:00', 'research'), mk('g1', '2026-10-06', '01:00', 'GLOBAL'),
+    mk('bad date', '10/07', '01:00', 'ai'), mk('bad link', '2026-10-07', '01:00', 'ai', { sourceUrl: 'javascript:1' }),
+  ]);
+  const { index, days } = buildArchive(raw, 2);
+  assert.deepEqual(index, [{ d: '2026-10-07', n: 3, c: { ai: 2, research: 1 } }, { d: '2026-10-06', n: 1, c: { global: 1 } }]);
+  assert.deepEqual(days['2026-10-07'].map((n) => n.title), ['a2', 'a3', 'r1']);
+  assert.deepEqual(days['2026-10-06'][0], { title: 'g1', url: 'https://x.example/g1', source: 'S', category: 'global', time: '01:00', summary: 'body' });
+  assert.equal(raw.length, 7);
 });

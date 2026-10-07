@@ -3,7 +3,7 @@
 俯视机位、铺满物件、墙上软木板 + 剪报，右侧黑钢框落地窗外是楼群。
 每个可点的东西带 hot 名字，前端按它开面板：
   board / press / monitor / keyboard / mask（切换宇宙）/ zine-echo / zine-roundtable / zine-athena / zine-preuni
-  notebook（博客）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / news（报纸）/ projects（手柄）/ friends（杯子）/ contact / fries
+  notebook（博客）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
 """
 import math
 import random
@@ -195,6 +195,13 @@ def build_left():
     cyl("mug_band", 0.0475, 0.02, (mx, my, T + 0.07), M("mug_band", "#2b6be4", 0.4), hot="friends")
     cyl("mug_coffee", 0.040, 0.004, (mx, my, T + 0.094), M("coffee", "#4a2c1a", 0.3), hot="friends")
     torus("mug_handle", 0.03, 0.009, (mx - 0.05, my + 0.01, T + 0.05), M("mug", "#ffffff"), rot=(math.pi / 2, 0, R(160)), seg=20, sub=8, hot="friends")
+    # 唱片：从封套里抽出来一半，点开是黑胶播放器
+    sx, sy, vx, vy = -0.968, -0.06, -0.923, -0.03
+    box("vinyl_sleeve", (0.18, 0.18, 0.004), (sx, sy, T + 0.004), M("vinyl_sleeve", "#8e4ec6", 0.7), rot=(0, 0, R(8)), hot="music")
+    box("vinyl_stripe", (0.18, 0.03, 0.001), (sx + 0.006, sy - 0.045, T + 0.0066), M("vinyl_stripe", "#f5b301", 0.6), rot=(0, 0, R(8)), hot="music")
+    cyl("vinyl_disc", 0.085, 0.003, (vx, vy, T + 0.0085), M("vinyl_disc", "#16161a", 0.3), seg=64, hot="music")
+    torus("vinyl_groove", 0.061, 0.0012, (vx, vy, T + 0.0098), M("vinyl_groove", "#34363f", 0.3), seg=64, sub=6, hot="music")
+    cyl("vinyl_label", 0.034, 0.001, (vx, vy, T + 0.0105), M("vinyl_label", "#f5b301", 0.5), seg=40, hot="music")   # 不挖中心孔：墨线一描就把标签糊掉了
     # 键盘 + 鼠标
     keyboard("kb", (-0.64, -0.13, T + 0.002), 5, "#22242a", {"main": "#2f323b", "accent": "#ff7a3d", "space": "#f4f1ea"})
     ball("mouse", 0.05, (-0.27, -0.15, T + 0.022), M("mouse", "#22242a", 0.4), scale=(0.72, 1.18, 0.5), hot="keyboard")

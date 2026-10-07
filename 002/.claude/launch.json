@@ -1,6 +1,6 @@
 {
   "version": "0.0.1",
   "configurations": [
-    { "name": "site", "runtimeExecutable": "python3", "runtimeArgs": ["-m", "http.server", "4173", "--directory", "site"], "port": 4173 }
+    { "name": "site", "runtimeExecutable": "sh", "runtimeArgs": ["-c", "exec python3 -m http.server \"${PORT:-4173}\" --directory site"], "port": 4173, "autoPort": true }
   ]
 }

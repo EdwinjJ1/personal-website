@@ -18,4 +18,16 @@ export const friends: Friend[] = [
     link: 'https://daily.yybb.us/',
     avatar: 'https://r2tc.20030327.xyz/file/博客/主题/1780655293662_avatar_me.jpg.PNG',
   },
+  {
+    name: 'HejiaC',
+    desc: '把好奇心，变成作品',
+    link: 'https://hejiac.com/',
+    avatar: 'https://hejiac.com/assets/cat.svg',
+  },
+  {
+    name: 'Bob Lee · Oasis',
+    desc: '一处温柔疗愈、带着禅意的数字花园',
+    link: 'https://www.boblee.dev/',
+    avatar: 'https://www.boblee.dev/miku.jpg',
+  },
 ];

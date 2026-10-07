@@ -11,6 +11,8 @@
     "stylize": "uv run pipeline/stylize.py build/passes site/assets",
     "build": "npm run import && npm run textures && npm run render && npm run stylize",
     "import": "node pipeline/import_legacy.mjs && uv run pipeline/import_photos.py",
-    "news": "python3 pipeline/sync_news.py"
+    "news": "python3 pipeline/sync_news.py",
+    "music": "python3 pipeline/sync_music.py",
+    "photos": "node pipeline/photos.mjs && uv run pipeline/import_photos.py"
   }
 }
