@@ -9,12 +9,13 @@
 import json
 import math
 import random
+import re
 import sys
 from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 from make_wallpaper import render as wallpaper
 
@@ -23,7 +24,7 @@ FONTS = {
     "impact": SUP + "Impact.ttf", "black": SUP + "Arial Black.ttf", "hand": SUP + "Bradley Hand Bold.ttf",
     "marker": "/System/Library/Fonts/MarkerFelt.ttc", "mono": SUP + "Courier New Bold.ttf", "serif": SUP + "Times New Roman Bold.ttf",
     "din": SUP + "DIN Condensed Bold.ttf", "slab": SUP + "Rockwell.ttc", "cjk": "/System/Library/Fonts/Hiragino Sans GB.ttc",
-    "sans": "/System/Library/Fonts/HelveticaNeue.ttc",
+    "sans": "/System/Library/Fonts/HelveticaNeue.ttc", "body": SUP + "Georgia.ttf",
 }
 INK, PAPER, NEWS = (24, 24, 28), (255, 250, 240), (238, 232, 216)
 RED, BLUE, YELLOW, GREEN, PINK, ORANGE = (229, 72, 77), (43, 107, 228), (255, 214, 64), (48, 164, 108), (255, 170, 196), (255, 122, 61)
@@ -47,23 +48,49 @@ def paper(w, h, color, grain=7, seed=0):
     return Image.fromarray(a.astype(np.uint8)).filter(ImageFilter.GaussianBlur(0.6))
 
 
-def greek(d, box, rng, lh=14, color=(70, 68, 66), cols=1, gap=18):
-    """假正文：一行行长短不一的灰条。"""
+def wrap(d, text, fnt, width):
+    """按宽度折行：英文按词，中文按字。"""
+    lines, line = [], ""
+    for token in re.findall(r"[A-Za-z0-9'’\-.,:;!?%$¥()\"/×·+&]+|\s+|.", text):
+        token = " " if token.isspace() else token
+        if d.textlength(line + token, font=fnt) > width and line.strip():
+            lines.append(line.rstrip())
+            line = token.lstrip()
+        else:
+            line += token
+    if line.strip():
+        lines.append(line.rstrip())
+    return lines
+
+
+def body(d, box, text, name="body", size=25, fill=(44, 42, 40), gap=1.24, max_lines=99):
+    """在框里排一段真实正文；放不下的行直接不画（不拿灰条充数）。返回排完后的 y。"""
     x0, y0, x1, y1 = box
-    cw = (x1 - x0 - gap * (cols - 1)) / cols
-    for c in range(cols):
-        y, cx = y0, x0 + c * (cw + gap)
-        while y + lh * 0.5 < y1:
-            x = cx
-            while x < cx + cw - 8:
-                ww = min(rng.uniform(14, 60), cx + cw - x)
-                d.rectangle((x, y, x + ww, y + lh * 0.42), fill=color)
-                x += ww + rng.uniform(5, 9)
-            y += lh
+    fnt, y = font(name, size), y0
+    for ln in wrap(d, text, fnt, x1 - x0)[:max_lines]:
+        if y + size > y1:
+            break
+        d.text((x0, y), ln, font=fnt, fill=fill)
+        y += size * gap
+    return y
 
 
-def halftone(w, h, seed, tint=INK, bg=NEWS, kind="city"):
-    """小幅“新闻照片”：先画灰度构图，再打成网点。"""
+def dots(gray, tint, bg):
+    """灰度数组（0..1，1 = 亮）→ 报纸网点图。"""
+    h, w = gray.shape
+    cell = max(5, w // 46)
+    yy, xx = np.mgrid[0:h, 0:w]
+    u, v = (xx * 0.707 + yy * 0.707) / cell, (-xx * 0.707 + yy * 0.707) / cell
+    dist = np.hypot(u - np.floor(u) - 0.5, v - np.floor(v) - 0.5)
+    mask = (dist < np.sqrt(np.clip(1 - gray, 0, 1)) * 0.62)[..., None]
+    return Image.fromarray(np.where(mask, np.array(tint, np.uint8), np.array(bg, np.uint8)).astype(np.uint8))
+
+
+def halftone(w, h, seed, tint=INK, bg=NEWS, kind="city", image=None):
+    """“新闻照片”。给了 image 就用真图打网点；否则按 kind 画一个图标式的构图。"""
+    if image is not None:
+        src = ImageOps.autocontrast(ImageOps.fit(image.convert("L"), (w, h), Image.LANCZOS, centering=(0.5, 0.4)), cutoff=2)
+        return dots(np.asarray(src, np.float32) / 255, tint, bg)
     rng = random.Random(seed)
     g = Image.new("L", (w, h), 200)
     d = ImageDraw.Draw(g)
@@ -84,16 +111,14 @@ def halftone(w, h, seed, tint=INK, bg=NEWS, kind="city"):
         d.polygon([(w * 0.3, h * 0.15), (w * 0.7, h * 0.15), (w * 0.6, h * 0.55), (w * 0.4, h * 0.55)], fill=40)
         d.rectangle((w * 0.47, h * 0.55, w * 0.53, h * 0.75), fill=40)
         d.rectangle((w * 0.36, h * 0.75, w * 0.64, h * 0.86), fill=30)
+    elif kind == "podium":
+        for i, (x0, top, label) in enumerate(((0.16, 0.50, "2"), (0.39, 0.30, "1"), (0.62, 0.62, "3"))):
+            d.rectangle((w * x0, h * top, w * (x0 + 0.22), h), fill=(60, 30, 85)[i])
+            d.text((w * (x0 + 0.11), h * (top + 0.16)), label, font=font("black", int(h * 0.2)), fill=240, anchor="mm")
     elif kind == "person":
         d.ellipse((w * 0.36, h * 0.14, w * 0.64, h * 0.52), fill=40)
         d.ellipse((w * 0.12, h * 0.56, w * 0.88, h * 1.5), fill=30)
-    a = np.asarray(g.filter(ImageFilter.GaussianBlur(1.2)), np.float32) / 255
-    cell = max(5, w // 46)
-    yy, xx = np.mgrid[0:h, 0:w]
-    u, v = (xx * 0.707 + yy * 0.707) / cell, (-xx * 0.707 + yy * 0.707) / cell
-    dist = np.hypot(u - np.floor(u) - 0.5, v - np.floor(v) - 0.5)
-    dots = (dist < np.sqrt(np.clip(1 - a, 0, 1)) * 0.62)[..., None]
-    return Image.fromarray(np.where(dots, np.array(tint, np.uint8), np.array(bg, np.uint8)).astype(np.uint8))
+    return dots(np.asarray(g.filter(ImageFilter.GaussianBlur(1.2)), np.float32) / 255, tint, bg)
 
 
 def stick(dst, src, center, angle=0.0, shadow=10):
@@ -121,6 +146,12 @@ def card(w, h, color=PAPER, border=0, seed=0):
 
 
 ASSETS = Path(__file__).resolve().parent.parent / "site/assets"
+
+
+def avatar():
+    """旧站公开使用的头像；仓库里没有 001 时返回 None，退回剪影。"""
+    f = ASSETS.parent.parent.parent / "001/public/profile.jpg"
+    return Image.open(f) if f.exists() else None
 
 
 def photo(pid):
@@ -273,29 +304,23 @@ def board(w=2400, h=1176):
 
 
 # ───────────────────────── 剪报 / 海报 ─────────────────────────
-def clipping(headline, sub, kind, seed, w=640, h=820, masthead="THE DAILY ECHO"):
-    rng = random.Random(seed)
+def clipping(headline, sub, kind, seed, text, w=640, h=820, masthead="THE DAILY ECHO", image=None):
+    """一张剪报：报头、大标题、导语、配图，下面是一段真实的报道正文。"""
     im = paper(w, h, NEWS, grain=9, seed=seed)
     d = ImageDraw.Draw(im)
     d.text((w / 2, 44), masthead, font=font("serif", 46), fill=INK, anchor="mm")
     d.rectangle((24, 76, w - 24, 80), fill=INK)
     d.rectangle((24, 86, w - 24, 88), fill=INK)
-    y, words, line = 104, headline.split(), ""
-    f = font("impact", 74)
-    for wd_ in words + [None]:
-        trial = (line + " " + wd_).strip() if wd_ else None
-        if wd_ is None or d.textlength(trial, font=f) > w - 56:
-            d.text((28, y), line, font=f, fill=INK)
-            y += 78
-            line = wd_ or ""
-        else:
-            line = trial
+    y, f = 104, font("impact", 70)
+    for line in wrap(d, headline, f, w - 56):
+        d.text((28, y), line, font=f, fill=INK)
+        y += 74
     d.text((28, y + 6), sub, font=fit(d, sub, "mono", w - 56, 26), fill=RED)
-    y += 50
-    ph = int(h * 0.30)
-    im.paste(halftone(w - 56, ph, seed, kind=kind), (28, y))
+    y += 48
+    ph = int(h * 0.23)
+    im.paste(halftone(w - 56, ph, seed, kind=kind, image=image), (28, y))
     d.rectangle((28, y, w - 29, y + ph), outline=INK, width=3)
-    greek(d, (28, y + ph + 22, w - 28, h - 26), rng, cols=3)
+    body(d, (28, y + ph + 16, w - 28, h - 20), text, size=25)
     return im
 
 
@@ -306,7 +331,7 @@ def poster(w=640, h=900):
     d.text((w / 2, 112), "HIRE!", font=font("slab", 150), fill=INK, anchor="mm")
     d.rectangle((40, 196, w - 40, 204), fill=INK)
     d.text((w / 2, 244), "OPEN TO OPPORTUNITIES", font=fit(d, "OPEN TO OPPORTUNITIES", "impact", w - 90, 60), fill=RED, anchor="mm")
-    im.paste(halftone(w - 200, 330, 5, bg=(240, 222, 178), kind="person"), (100, 290))
+    im.paste(halftone(w - 200, 330, 5, bg=(240, 222, 178), kind="person", image=avatar()), (100, 290))
     d.rectangle((100, 290, w - 101, 620), outline=INK, width=5)
     d.text((w / 2, 672), "EVAN JIA", font=font("black", 74), fill=INK, anchor="mm")
     d.text((w / 2, 742), "AI PM × AGENT BUILDER", font=font("din", 54), fill=INK, anchor="mm")
@@ -356,7 +381,7 @@ def zine(title, issue, tagline, bg, accent, motif, w=660, h=900):
         for i, c in enumerate(((255, 255, 255), (255, 244, 200), (255, 255, 255))):
             ox = (i - 1) * 46
             d.rectangle((cx - 150 + ox, cy - 190 + i * 30, cx + 150 + ox, cy + 150 + i * 30), fill=c, outline=INK, width=6)
-        greek(d, (cx - 100, cy - 90, cx + 170, cy + 150), random.Random(issue), lh=30, color=(60, 60, 70))
+        lines_text(d, (cx - 96, cy - 84), "Pointers & malloc\nLinked lists\nRecursion\nShell + regex\nMIPS basics", "hand", 36, fill=(40, 40, 52), spacing=1.26)
     d.rectangle((0, h - 120, w, h), fill=INK)
     d.text((w / 2, h - 60), tagline, font=fit(d, tagline, "din", w - 50, 60), fill=YELLOW, anchor="mm")
     d.rectangle((0, 0, w - 1, h - 1), outline=INK, width=6)
@@ -436,21 +461,26 @@ def screen(w=1600, h=1000):
 
 
 def phone(w=470, h=1010):
+    """回声手机端的首页，文案和官网手机版页面一致。"""
     im = Image.new("RGB", (w, h), (18, 18, 22))
     d = ImageDraw.Draw(im)
-    d.text((34, 60), "回声", font=font("cjk", 54), fill=PAPER)
+    d.text((34, 56), "回声", font=font("cjk", 56), fill=PAPER)
     d.ellipse((36, 150, 56, 170), fill=GREEN)
-    d.text((70, 144), "MacBook Pro · online", font=font("mono", 24), fill=(170, 172, 180))
-    for i, (a, b, col) in enumerate((("echo", "answering…", PAPER), ("Claude Code", "1 running", ORANGE), ("Codex", "needs approval", YELLOW))):
-        y = 230 + i * 150
-        d.rounded_rectangle((26, y, w - 26, y + 124), radius=22, fill=(34, 34, 40))
-        d.ellipse((48, y + 36, 100, y + 88), fill=col)
-        d.text((122, y + 26), a, font=font("black", 34), fill=PAPER)
-        d.text((122, y + 74), b, font=font("mono", 24), fill=(170, 172, 180))
-    d.ellipse((w / 2 - 80, h - 250, w / 2 + 80, h - 90), fill=RED)
+    d.text((70, 143), "你的 MacBook Pro · 在线", font=font("cjk", 28), fill=(190, 192, 200))
+    d.text((34, 204), "会话", font=font("cjk", 30), fill=(150, 152, 160))
+    for i, (a, b, col) in enumerate((("回声", "正在回答…", PAPER), ("Claude Code", "1 个在跑", ORANGE), ("Codex", "1 个等你批准", YELLOW))):
+        y = 256 + i * 142
+        d.rounded_rectangle((26, y, w - 26, y + 122), radius=22, fill=(34, 34, 40))
+        d.ellipse((48, y + 35, 100, y + 87), fill=col)
+        d.text((122, y + 22), a, font=font("cjk", 36), fill=PAPER)
+        d.text((122, y + 70), b, font=font("cjk", 28), fill=(180, 182, 190))
+    d.rounded_rectangle((26, 700, w - 26, 772), radius=22, outline=(120, 122, 130), width=3)
+    d.text((w / 2, 736), "新任务", font=font("cjk", 32), fill=PAPER, anchor="mm")
+    d.ellipse((w / 2 - 76, h - 216, w / 2 + 76, h - 64), fill=RED)
     for i, k in enumerate((0.4, 0.75, 0.5)):
         bx = w / 2 + (i - 1) * 34
-        d.rounded_rectangle((bx - 10, h - 170 - 60 * k, bx + 10, h - 170 + 60 * k), radius=10, fill=PAPER)
+        d.rounded_rectangle((bx - 10, h - 140 - 56 * k, bx + 10, h - 140 + 56 * k), radius=10, fill=PAPER)
+    d.text((w / 2, h - 34), "按住跟回声说", font=font("cjk", 26), fill=(170, 172, 180), anchor="mm")
     return im
 
 
@@ -475,47 +505,35 @@ def small_papers(out):
 
 
 def newspaper(w=780, h=1020):
-    """桌上那份报纸：头条取自导入的新闻（每个分类一条），没有新闻数据时用占位标题。"""
+    """桌上那份报纸：AI、研究、行业各一条真实新闻（标题、来源、日期、摘要），取自导入的新闻数据。"""
     f = ASSETS / "data/news.json"
     items = json.loads(f.read_text())["items"] if f.exists() else []
-    heads = []
-    for cat in ("ai", "research", "industry", "global"):
-        hit = next((n["title"] for n in items if n["category"] == cat and n["title"].isascii()), None)
-        if hit:
-            heads.append((cat.upper(), hit))
-    heads = heads or [("AI", "Fresh headlines land here once the news import has run")]
-    rng = random.Random(90)
+    # 只取 AI / 研究 / 行业三类：这是一份 AI 报纸，国际时政留给新闻面板
+    stories = [n for cat in ("ai", "research", "industry") for n in [next((x for x in items if x["category"] == cat and x["title"].isascii()), None)] if n]
     im = paper(w, h, NEWS, grain=9, seed=90)
     d = ImageDraw.Draw(im)
     d.text((w / 2, 62), "AI DAILY", font=font("serif", 104), fill=INK, anchor="mm")
     d.rectangle((26, 122, w - 26, 128), fill=INK)
     d.text((30, 136), "EVAN'S NEWS DESK", font=font("mono", 22), fill=INK)
-    d.text((w - 30, 136), "AI · RESEARCH · INDUSTRY · GLOBAL", font=font("mono", 22), fill=RED, anchor="ra")
+    d.text((w - 30, 136), stories[0]["date"] if stories else "", font=font("mono", 22), fill=RED, anchor="ra")
     d.rectangle((26, 168, w - 26, 170), fill=INK)
-    y = 186
-    for i, (cat, title) in enumerate(heads[:3]):
-        fs = 60 if i == 0 else 38
-        fnt, line, words = font("impact" if i == 0 else "black", fs), "", title.split()
-        d.rectangle((30, y + 4, 30 + d.textlength(cat, font=font("din", 26)) + 16, y + 34), fill=RED)
-        d.text((38, y + 5), cat, font=font("din", 26), fill=PAPER)
-        y += 42
-        rows = 0
-        for wd_ in words + [None]:
-            trial = (line + " " + wd_).strip() if wd_ else None
-            if wd_ is None or d.textlength(trial, font=fnt) > w - 60:
-                if rows < (3 if i == 0 else 2):
-                    d.text((30, y), line, font=fnt, fill=INK)
-                    y += fs + 4
-                    rows += 1
-                line = wd_ or ""
-            else:
-                line = trial
-        if i == 0:
-            im.paste(halftone(w - 60, 210, 91, kind="city"), (30, y + 8))
-            d.rectangle((30, y + 8, w - 31, y + 218), outline=INK, width=3)
-            y += 236
-        greek(d, (30, y + 4, w - 30, min(h - 24, y + (120 if i == 0 else 76))), rng, cols=3)
-        y += 136 if i == 0 else 92
+    y = 184
+    for i, n in enumerate(stories):
+        if y > h - 150:
+            break
+        tag = n["category"].upper()
+        d.rectangle((30, y + 2, 30 + d.textlength(tag, font=font("din", 26)) + 16, y + 32), fill=RED)
+        d.text((38, y + 3), tag, font=font("din", 26), fill=PAPER)
+        d.text((w - 30, y + 6), f"{n['source']} · {n['date']}", font=font("mono", 20), fill=(90, 88, 84), anchor="ra")
+        y += 40
+        fs = 52 if i == 0 else 36
+        fnt = font("impact" if i == 0 else "black", fs)
+        for line in wrap(d, n["title"], fnt, w - 60)[: 3 if i == 0 else 2]:
+            d.text((30, y), line, font=fnt, fill=INK)
+            y += fs + 4
+        y = body(d, (30, y + 4, w - 30, h - 24), n["summary"], size=25, max_lines=6 if i == 0 else 5) + 12
+        d.line((30, y, w - 30, y), fill=(150, 146, 138), width=2)
+        y += 12
     return im
 
 
@@ -569,12 +587,18 @@ def facade(seed, wall, w=512, h=1024, cols=10, rows=26):
 def main(out):
     out.mkdir(parents=True, exist_ok=True)
     board().save(out / "board.png")
-    clips = [("ECHO AGENT MAKES THE 61.7K-STAR LIST", "Featured 5 days after first commit", "bars"),
-             ("ATHENA TAKES SUSQUEHANNA PRIZE", "UNSW × Mistral AI × Atlassian", "cup"),
-             ("TEEN CEO HITS ¥100K IN ONE DAY", "Hypha · 7-person team · age 17", "person"),
-             ("TOP 3 AT FEISHU AI CHALLENGE", "Lark Loom · full-stack track", "city")]
-    for i, (hl, sub, kind) in enumerate(clips):
-        clipping(hl, sub, kind, 20 + i, h=820 if i % 2 == 0 else 720).save(out / f"clip_{i}.png")
+    clips = [
+        ("ECHO AGENT MAKES THE 61.7K-STAR LIST", "Featured 5 days after first commit", "bars", None,
+         "SHANGHAI — Echo Agent, a voice AI agent for Mac built by Evan Jia and a team of four, was added to GitHub's 61.7k-star list of Chinese indie developer projects on 29 September, five days after its first commit. Press Fn+Space in any app, say it, and Echo hands the work to Claude Code and Codex on your own machine. Version 0.1.38 shipped within two weeks."),
+        ("ATHENA TAKES SUSQUEHANNA PRIZE", "UNSW × Mistral AI × Atlassian", "cup", None,
+         "SYDNEY — Athena, a Discord agent that chases project updates and writes them into a live knowledge graph, won the Susquehanna Prize at the UNSW × Mistral AI × Atlassian Hackathon. Jia led product architecture and final integration; the team built it in 24 hours. Every team's answers land in one graph, so contradictions between teams surface on their own."),
+        ("TEEN CEO HITS ¥100K IN ONE DAY", "Hypha · 7-person team · age 17", "person", avatar(),
+         "BEIJING — At 17, Evan Jia founded Hypha and led a team of seven across engineering, art and legal. Its core digital-collectible product passed ¥100,000 in revenue in a single day. He owned the roadmap, the architecture and most of the backend, and took community growth from zero to a paying audience."),
+        ("TOP 3 AT FEISHU AI CHALLENGE", "Lark Loom · full-stack track", "podium", None,
+         "Lark Loom, a chat-native project coordination agent, finished in the top three of the AI full-stack track at ByteDance's Feishu AI Campus Challenge. It routes between two models, calls functions, and keeps six kinds of memory in a Bitable-backed store so a three-person team could build against stable contracts."),
+    ]
+    for i, (hl, sub, kind, image, text) in enumerate(clips):
+        clipping(hl, sub, kind, 20 + i, text, h=820 if i % 2 == 0 else 760, image=image).save(out / f"clip_{i}.png")
     poster().save(out / "poster.png")
     zine("ECHO AGENT", 1, "SPEAK. IT'S DONE.", (255, 122, 61), INK, "bars").save(out / "zine_echo.png")
     zine("ROUNDTABLE", 2, "AGENTS, ASSEMBLE.", (88, 166, 255), RED, "table").save(out / "zine_roundtable.png")

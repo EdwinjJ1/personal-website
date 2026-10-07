@@ -9,10 +9,12 @@ test('mapNews：每个分类限量、按日期倒序、丢掉没有合法链接�
     { title: 'mid ai', sourceUrl: 'https://a.example/3', source: 'A', date: '2026-02-01', category: 'ai' },
     { title: 'bad link', sourceUrl: 'javascript:alert(1)', date: '2026-04-01', category: 'ai' },
     { title: 'world', url: 'http://b.example', date: '2026-02-15', category: 'global', summary: 'x'.repeat(400) },
+    { title: 'paper', url: 'https://arxiv.example/1', date: '2026-01-15', category: 'research', summary: 'arXiv:2610.03872v1 Announce Type: new Abstract: Agents write code.' },
     { title: '', sourceUrl: 'https://c.example', date: '2026-05-01', category: 'ai' },
   ];
   const out = mapNews(raw, 2);
-  assert.deepEqual(out.map((n) => n.title), ['new ai', 'world', 'mid ai']);
+  assert.deepEqual(out.map((n) => n.title), ['new ai', 'world', 'mid ai', 'paper']);
+  assert.equal(out[3].summary, 'Agents write code.');
   assert.ok(out.every((n) => /^https?:\/\//.test(n.url)));
   assert.equal(out[0].category, 'ai');
   assert.ok(out[1].summary.length <= 200);

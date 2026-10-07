@@ -20,7 +20,8 @@ export const PHOTO_LIMIT = 24;
 const load = (file) => import(pathToFileURL(file).href);
 const firstArray = (mod, key) => Object.values(mod).find((v) => Array.isArray(v) && v.length && typeof v[0] === 'object' && key in v[0]) || [];
 const clip = (text, n) => {
-  const t = String(text || '').replace(/\s+/g, ' ').trim();
+  // arXiv 的 RSS 摘要带一段固定前缀，去掉
+  const t = String(text || '').replace(/\s+/g, ' ').trim().replace(/^arXiv:\S+\s+Announce Type:\s*\S+\s+Abstract:\s*/i, '');
   return t.length > n ? `${t.slice(0, n - 1)}…` : t;
 };
 const save = (name, value) => writeFileSync(join(OUT, name), JSON.stringify(value));

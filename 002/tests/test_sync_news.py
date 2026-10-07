@@ -34,6 +34,7 @@ class Helpers(unittest.TestCase):
         self.assertEqual(clip("<i>a</i>\n  b", 10), "a b")
         self.assertEqual(len(clip("x" * 500, 200)), 200)
         self.assertEqual(clip(None, 5), "")
+        self.assertEqual(clip("arXiv:2610.03872v1 Announce Type: new Abstract: AI agents are here.", 80), "AI agents are here.")
 
     def test_to_date(self):
         self.assertEqual(to_date("Tue, 06 Oct 2026 10:00:00 GMT"), "2026-10-06")

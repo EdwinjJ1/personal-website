@@ -27,9 +27,12 @@ ATOM = "{http://www.w3.org/2005/Atom}"
 DC_DATE = "{http://purl.org/dc/elements/1.1/}date"
 
 
+ARXIV_PREFIX = re.compile(r"^arXiv:\S+\s+Announce Type:\s*\S+\s+Abstract:\s*", re.I)
+
+
 def clip(text, limit):
-    """去标签、压空白、截断。"""
-    plain = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text or ""))).strip()
+    """去标签、压空白、去掉 arXiv 摘要的固定前缀、截断。"""
+    plain = ARXIV_PREFIX.sub("", re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", text or ""))).strip())
     return plain if len(plain) <= limit else plain[: limit - 1] + "…"
 
 
