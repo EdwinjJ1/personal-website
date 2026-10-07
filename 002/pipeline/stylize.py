@@ -73,7 +73,8 @@ class Ctx:
         self.rs = np.random.RandomState(5)
         yy, xx = np.mgrid[0:self.H, 0:self.W].astype(np.float32)
         self.xx, self.yy = xx, yy
-        self.wall = self.mask("wall_")
+        # 只算墙体本身；贴在墙上的剪报和海报（wall_clip_* / wall_poster）不能被当成墙去套墙面图案
+        self.wall = self.mask("wall_body", "wall_brick", "wall_right", "wall_sill")
         self.city = self.mask("tower", "ground")
         self.floor = self.mask("floor", "rug")
         self.desk = self.mask("desk")

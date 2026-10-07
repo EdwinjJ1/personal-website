@@ -214,7 +214,7 @@ def board(w=2400, h=1176):
 
     # 拍立得
     stick(im, polaroid("bars", "echo agent", 11), (250, 250), -7)
-    stick(im, polaroid("city", "sydney", 12, pid=4), (590, 230), 5)
+    stick(im, polaroid("city", "sydney", 12, pid=951), (590, 230), 5)
     stick(im, polaroid("cup", "athena · prize", 13, size=250), (700, 560), -4)
 
     # 便签
@@ -500,7 +500,7 @@ def small_papers(out):
     d.text((216, 282), "github.com/EdwinjJ1", font=font("mono", 28), fill=INK)
     d.text((216, 328), "echoagent.dev", font=font("mono", 28), fill=INK)
     c.save(out / "bizcard.png")
-    for name, kind, caption, seed, pid in (("a", "city", "coast", 61, 6), ("b", "person", "street", 62, 5), ("c", "city", "trees", 63, 3)):
+    for name, kind, caption, seed, pid in (("a", "city", "coast", 61, 1050), ("b", "person", "street", 62, 1001), ("c", "city", "trees", 63, 905)):
         polaroid(kind, caption, seed, pid=pid).save(out / f"polaroid_{name}.png")
 
 
@@ -594,8 +594,8 @@ def main(out):
          "SYDNEY — Athena, a Discord agent that chases project updates and writes them into a live knowledge graph, won the Susquehanna Prize at the UNSW × Mistral AI × Atlassian Hackathon. Jia led product architecture and final integration; the team built it in 24 hours. Every team's answers land in one graph, so contradictions between teams surface on their own."),
         ("TEEN CEO HITS ¥100K IN ONE DAY", "Hypha · 7-person team · age 17", "person", avatar(),
          "BEIJING — At 17, Evan Jia founded Hypha and led a team of seven across engineering, art and legal. Its core digital-collectible product passed ¥100,000 in revenue in a single day. He owned the roadmap, the architecture and most of the backend, and took community growth from zero to a paying audience."),
-        ("TOP 3 AT FEISHU AI CHALLENGE", "Lark Loom · full-stack track", "podium", None,
-         "Lark Loom, a chat-native project coordination agent, finished in the top three of the AI full-stack track at ByteDance's Feishu AI Campus Challenge. It routes between two models, calls functions, and keeps six kinds of memory in a Bitable-backed store so a three-person team could build against stable contracts."),
+        ("TOP 3 AT FEISHU AI CHALLENGE", "Roundtable · agent track", "podium", None,
+         "Roundtable, a visual workbench for multi-agent work, finished in the top three of the Agent track at ByteDance's Feishu AI Campus Challenge. A planner turns a request into a dependency-aware task graph, agents run it in parallel waves, and reviewers gate the result with bounded fix rounds, all in front of you."),
     ]
     for i, (hl, sub, kind, image, text) in enumerate(clips):
         clipping(hl, sub, kind, 20 + i, text, h=820 if i % 2 == 0 else 760, image=image).save(out / f"clip_{i}.png")
