@@ -69,6 +69,7 @@ temp/
 /public/images/photography/*.zip
 
 # Local scratch / personal notes
+/output/
 /new_global_card.txt
 /my-game/
 /.private/
