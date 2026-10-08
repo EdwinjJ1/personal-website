@@ -332,11 +332,11 @@ export const DYNAMIC = {
 
 // 摄影合集的先后和名字：key 是照片的分类（旧站 photography.ts 里的 category）。没登记的分类会排在最后。
 export const ALBUMS = [
-  { key: 'Her', name: L('Her', 'Her') },
   { key: 'Street', name: L('街头', 'Street') },
   { key: 'Portrait', name: L('人像', 'Portrait') },
   { key: 'Architecture', name: L('建筑', 'Architecture') },
   { key: 'Landscape', name: L('风光', 'Landscape') },
+  { key: 'Her', name: L('Her', 'Her') },
   { key: 'Night', name: L('夜', 'Night') },
   { key: 'Nature', name: L('自然', 'Nature') },
   { key: 'Wildlife', name: L('野生动物', 'Wildlife') },
