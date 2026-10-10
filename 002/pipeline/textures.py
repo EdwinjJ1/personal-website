@@ -235,7 +235,7 @@ def board(w=2400, h=1176):
     wd = ImageDraw.Draw(wc)
     wd.rectangle((8, 8, 511, 96), fill=INK)
     wd.text((260, 52), "WHAT I CAN BUILD", font=font("impact", 54), fill=PAPER, anchor="mm")
-    for i, (a, b) in enumerate((("VOICE AGENTS", "Echo Agent · MosMos"), ("AGENT TOOLING", "Roundtable · Chiron"), ("MOBILE + BACKEND", "Expo · Next.js · Stripe"), ("0 TO 1 PRODUCTS", "PM who ships code"))):
+    for i, (a, b) in enumerate((("VOICE AGENTS", "MosMos"), ("AGENT TOOLING", "Roundtable · Chiron"), ("MOBILE + BACKEND", "Expo · Next.js · Stripe"), ("0 TO 1 PRODUCTS", "PM who ships code"))):
         y = 122 + i * 96
         wd.text((34, y), f"0{i + 1}", font=font("black", 40), fill=RED)
         wd.text((118, y - 2), a, font=font("din", 46), fill=INK)
@@ -257,8 +257,8 @@ def board(w=2400, h=1176):
     pts = [(cx + math.cos(i * math.pi / 14) * (r if i % 2 else r * 0.86), cy + math.sin(i * math.pi / 14) * (r if i % 2 else r * 0.86)) for i in range(28)]
     d.polygon([(x + 6, y + 9) for x, y in pts], fill=(0, 0, 0, 80))
     d.polygon(pts, fill=RED, outline=INK)
-    d.text((cx, cy - 26), "61.7k", font=font("impact", 74), fill=PAPER, anchor="mm")
-    d.text((cx, cy + 34), "STARS · INDIE LIST", font=font("din", 30), fill=YELLOW, anchor="mm")
+    d.text((cx, cy - 26), "BUILD", font=font("impact", 74), fill=PAPER, anchor="mm")
+    d.text((cx, cy + 34), "LEARN · SHARE", font=font("din", 30), fill=YELLOW, anchor="mm")
 
     # 红线把照片、名牌、能力卡连起来
     path = [(250, 110), (590, 96), (1160, 300), (1830, 152), (2240, 180)]
@@ -304,7 +304,7 @@ def board(w=2400, h=1176):
 
 
 # ───────────────────────── 剪报 / 海报 ─────────────────────────
-def clipping(headline, sub, kind, seed, text, w=640, h=820, masthead="THE DAILY ECHO", image=None):
+def clipping(headline, sub, kind, seed, text, w=640, h=820, masthead="THE DAILY EVAN", image=None):
     """一张剪报：报头、大标题、导语、配图，下面是一段真实的报道正文。"""
     im = paper(w, h, NEWS, grain=9, seed=seed)
     d = ImageDraw.Draw(im)
@@ -409,23 +409,23 @@ def notebook(w=1400, h=980):
             wobble(a, b)
         d.text((x + bw / 2, y + bh / 2), label, font=fit(d, label, "hand", bw - 20, 40), fill=INK, anchor="mm")
 
-    d.text((60, 30), "echo — how it works", font=font("hand", 46), fill=RED)
-    flow = [("Fn+Space", YELLOW), ("local ASR", None), ("agent loop", (196, 228, 255)), ("echoctl tools", None)]
+    d.text((60, 30), "notes — how I build", font=font("hand", 46), fill=RED)
+    flow = [("idea", YELLOW), ("sketch", None), ("prototype", (196, 228, 255)), ("review", None)]
     for i, (lb, col) in enumerate(flow):
         y = 120 + i * 150
         sketch_box(110, y, 300, 92, lb, col)
         if i < 3:
             wobble((260, y + 96), (260, y + 146), 4)
             d.polygon([(248, y + 134), (272, y + 134), (260, y + 152)], fill=INK)
-    for j, lb in enumerate(("Claude Code", "Codex", "capture")):
+    for j, lb in enumerate(("design", "build", "share")):
         sketch_box(470, 430 + j * 120, 190, 80, lb, PINK if j < 2 else None)
         wobble((412, 615), (468, 470 + j * 120), 3)
-    d.text((70, 760), "voice in, work out.\nno window switching!", font=font("hand", 44), fill=INK)
+    d.text((70, 760), "small steps, real work.\nlearn along the way.", font=font("hand", 44), fill=INK)
 
     x0 = w / 2 + 60
     d.text((x0, 40), "Evan.", font=font("hand", 110), fill=INK)
     d.line((x0, 168, x0 + 300, 160), fill=RED, width=6)
-    for i, (txt, done) in enumerate((("ship echo v0.1.38", True), ("mobile remote (E2E)", True), ("Athena: prize!", True), ("MosMos: selection Q&A", True), ("personal site, 10 styles", False), ("iOS on App Store", False))):
+    for i, (txt, done) in enumerate((("organise course notes", True), ("share project notes", True), ("Athena: prize!", True), ("MosMos: selection Q&A", True), ("personal site, 10 styles", False), ("write the next post", False))):
         y = 230 + i * 86
         d.rectangle((x0, y, x0 + 46, y + 46), outline=INK, width=5)
         if done:
@@ -449,26 +449,26 @@ def screen(w=1600, h=1000):
     d.text((w / 2, 440), "Hi, I'm Evan.", font=font("serif", 170), fill=(255, 122, 61), anchor="mm")
     d.text((w / 2, 580), "AI PM who ships voice agents. Ask me anything.", font=font("mono", 38), fill=(235, 235, 240), anchor="mm")
     cx = 190
-    for chip in ("Who are you?", "What is Echo Agent?", "Show me the résumé", "Why 10 styles?"):
+    for chip in ("Who are you?", "What do you build?", "How to reach you?", "Why 10 styles?"):
         tw = d.textlength(chip, font=font("mono", 30)) + 48
         d.rounded_rectangle((cx, 690, cx + tw, 750), radius=10, outline=(255, 255, 255, 150), width=3)
         d.text((cx + tw / 2, 720), chip, font=font("mono", 30), fill=PAPER, anchor="mm")
         cx += tw + 22
-    d.rounded_rectangle((w / 2 - 250, 44, w / 2 + 250, 116), radius=36, fill=(20, 20, 24, 240))  # 回声胶囊
+    d.rounded_rectangle((w / 2 - 250, 44, w / 2 + 250, 116), radius=36, fill=(20, 20, 24, 240))  # 语音状态条
     d.ellipse((w / 2 - 226, 62, w / 2 - 190, 98), fill=RED)
-    d.text((w / 2 + 16, 80), "Fn+Space · listening…", font=font("mono", 30), fill=PAPER, anchor="mm")
+    d.text((w / 2 + 16, 80), "Ask me anything", font=font("mono", 30), fill=PAPER, anchor="mm")
     return im
 
 
 def phone(w=470, h=1010):
-    """回声手机端的首页，文案和官网手机版页面一致。"""
+    """通用协作看板。"""
     im = Image.new("RGB", (w, h), (18, 18, 22))
     d = ImageDraw.Draw(im)
-    d.text((34, 56), "回声", font=font("cjk", 56), fill=PAPER)
+    d.text((34, 56), "协作", font=font("cjk", 56), fill=PAPER)
     d.ellipse((36, 150, 56, 170), fill=GREEN)
-    d.text((70, 143), "你的 MacBook Pro · 在线", font=font("cjk", 28), fill=(190, 192, 200))
-    d.text((34, 204), "会话", font=font("cjk", 30), fill=(150, 152, 160))
-    for i, (a, b, col) in enumerate((("回声", "正在回答…", PAPER), ("Claude Code", "1 个在跑", ORANGE), ("Codex", "1 个等你批准", YELLOW))):
+    d.text((70, 143), "团队项目 · 进行中", font=font("cjk", 28), fill=(190, 192, 200))
+    d.text((34, 204), "进展", font=font("cjk", 30), fill=(150, 152, 160))
+    for i, (a, b, col) in enumerate((("协作", "整理中…", PAPER), ("设计", "进行中", ORANGE), ("开发", "待同步", YELLOW))):
         y = 256 + i * 142
         d.rounded_rectangle((26, y, w - 26, y + 122), radius=22, fill=(34, 34, 40))
         d.ellipse((48, y + 35, 100, y + 87), fill=col)
@@ -480,7 +480,7 @@ def phone(w=470, h=1010):
     for i, k in enumerate((0.4, 0.75, 0.5)):
         bx = w / 2 + (i - 1) * 34
         d.rounded_rectangle((bx - 10, h - 140 - 56 * k, bx + 10, h - 140 + 56 * k), radius=10, fill=PAPER)
-    d.text((w / 2, h - 34), "按住跟回声说", font=font("cjk", 26), fill=(170, 172, 180), anchor="mm")
+    d.text((w / 2, h - 34), "一起完成", font=font("cjk", 26), fill=(170, 172, 180), anchor="mm")
     return im
 
 
@@ -498,7 +498,7 @@ def small_papers(out):
     d.text((216, 150), "贾岱林 · AI PM × Agent Builder", font=font("cjk", 30), fill=INK)
     d.text((216, 236), "jiaedwin0605@gmail.com", font=font("mono", 28), fill=RED)
     d.text((216, 282), "github.com/EdwinjJ1", font=font("mono", 28), fill=INK)
-    d.text((216, 328), "echoagent.dev", font=font("mono", 28), fill=INK)
+    d.text((216, 328), "evanlin.site", font=font("mono", 28), fill=INK)
     c.save(out / "bizcard.png")
     for name, kind, caption, seed, pid in (("a", "city", "coast", 61, 1050), ("b", "person", "street", 62, 1001), ("c", "city", "trees", 63, 905)):
         polaroid(kind, caption, seed, pid=pid).save(out / f"polaroid_{name}.png")
@@ -588,8 +588,8 @@ def main(out):
     out.mkdir(parents=True, exist_ok=True)
     board().save(out / "board.png")
     clips = [
-        ("ECHO AGENT MAKES THE 61.7K-STAR LIST", "Featured 5 days after first commit", "bars", None,
-         "SHANGHAI — Echo Agent, a voice AI agent for Mac built by Evan Jia and a team of four, was added to GitHub's 61.7k-star list of Chinese indie developer projects on 29 September, five days after its first commit. Press Fn+Space in any app, say it, and Echo hands the work to Claude Code and Codex on your own machine. Version 0.1.38 shipped within two weeks."),
+        ("NOTES, SHARED", "PreUni · university course notes", "notes", None,
+         "SYDNEY — PreUni collects Evan Jia's university computer science course notes in one place. The bilingual site organises the material with interactive visualisations and makes it available to fellow students."),
         ("ATHENA TAKES SUSQUEHANNA PRIZE", "UNSW × Mistral AI × Atlassian", "cup", None,
          "SYDNEY — Athena, a Discord agent that chases project updates and writes them into a live knowledge graph, won the Susquehanna Prize at the UNSW × Mistral AI × Atlassian Hackathon. Jia led product architecture and final integration; the team built it in 24 hours. Every team's answers land in one graph, so contradictions between teams surface on their own."),
         ("TEEN CEO HITS ¥100K IN ONE DAY", "Hypha · 7-person team · age 17", "person", avatar(),
@@ -600,7 +600,7 @@ def main(out):
     for i, (hl, sub, kind, image, text) in enumerate(clips):
         clipping(hl, sub, kind, 20 + i, text, h=820 if i % 2 == 0 else 760, image=image).save(out / f"clip_{i}.png")
     poster().save(out / "poster.png")
-    zine("ECHO AGENT", 1, "SPEAK. IT'S DONE.", (255, 122, 61), INK, "bars").save(out / "zine_echo.png")
+    zine("ECHO AGENT", 1, "HELPING THE TEAM.", (255, 122, 61), INK, "bars").save(out / "zine_echo.png")
     zine("ROUNDTABLE", 2, "AGENTS, ASSEMBLE.", (88, 166, 255), RED, "table").save(out / "zine_roundtable.png")
     zine("ATHENA", 3, "THE BOT THAT CHASES.", (142, 78, 198), INK, "owl").save(out / "zine_athena.png")
     zine("PREUNI", 4, "NOTES, SHARED.", (48, 164, 108), INK, "notes").save(out / "zine_preuni.png")

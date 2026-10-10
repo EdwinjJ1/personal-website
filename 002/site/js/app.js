@@ -1,11 +1,11 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261010-2';
 import * as G from './geometry.js';
 import { coverUrl, createPlayer, fmtTime } from './music.js';
 import { renderNews } from './news.js';
-import { createStage, hexToRgb } from './stage.js';
+import { createStage, hexToRgb } from './stage.js?v=20261010-2';
 import { CENTER as WEB_CENTER, earthOf, hostOf, webLayout } from './web.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);

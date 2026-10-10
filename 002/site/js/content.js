@@ -25,7 +25,7 @@ export const HOTS = {
   keyboard: { action: 'chat' },
   mask: { action: 'style' },
   'zine-echo': { panel: 'echo' },
-  phone: { panel: 'echoMobile' },
+  phone: { panel: 'echo' },
   'zine-roundtable': { panel: 'roundtable' },
   roundtable: { panel: 'roundtable' },
   'zine-athena': { panel: 'athena' },
@@ -50,8 +50,8 @@ export const LABELS = {
   monitor: { zh: '跟我聊聊', en: 'Talk to me' },
   keyboard: { zh: '点键盘，跟我聊', en: 'Click the keyboard. Talk to me.' },
   mask: { zh: '换一个宇宙', en: 'Switch universe' },
-  'zine-echo': { zh: '回声 echo agent', en: 'Echo Agent' },
-  phone: { zh: '回声手机端', en: 'Echo on your phone' },
+  'zine-echo': { zh: '回声 Echo Agent', en: 'Echo Agent' },
+  phone: { zh: 'Echo Agent · 团队协作', en: 'Echo Agent · team collaboration' },
   'zine-roundtable': { zh: 'Roundtable', en: 'Roundtable' },
   roundtable: { zh: 'Roundtable 小圆桌', en: 'The round table' },
   'zine-athena': { zh: 'Athena', en: 'Athena' },
@@ -80,12 +80,12 @@ export const PANELS = {
     body: L(
       [
         '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
-        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。业余时间带 4 个人做回声 echo agent：在 Mac 上按一下快捷键说句话，它就把事情交给 Claude Code 和 Codex 去办。',
+        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。另外也帮助团队制作 Echo Agent。',
         '我喜欢从头到尾自己负责一件事：设计、前端、后端、部署、推广。野心这件事上我比较直白：想做一个真正有用的东西，宁可瞄得太高打偏，也不想瞄低了打中。',
       ],
       [
         'I’m Evan Jia (贾岱林), 20, studying Computer Science at UNSW in Sydney. Before university I ran a seven-person Web3 company in Beijing and took its core product past ¥100K in single-day revenue.',
-        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself. On the side I lead a team of four on Echo Agent: press a hotkey on your Mac, say it, and it hands the work to Claude Code and Codex.',
+        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself. I also help the team build Echo Agent.',
         'I like owning a thing end to end: design, frontend, backend, deploy, launch. I’m ambitious in a fairly plain way: I want to build something that actually matters, and I’d rather aim too high and miss than aim low and hit.',
       ],
     ),
@@ -101,8 +101,8 @@ export const PANELS = {
       {
         heading: L('时间线', 'Timeline'),
         items: L(
-          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.9 至今　回声 echo agent，入选 GitHub 61.7k★ 中国独立开发者项目列表'],
-          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Sep 2026 – now　Echo Agent, featured in the 61.7k★ Chinese indie developer list'],
+          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.9 至今　Echo Agent：帮助团队制作'],
+          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Sep 2026 – now　Echo Agent: helping the team build the project'],
         ),
       },
       {
@@ -159,58 +159,14 @@ export const PANELS = {
     links: [{ label: L('公司官网', 'Company site'), href: 'https://home.mosi.cn/' }],
   },
   echo: {
-    kicker: L('独立产品 · 2026.9 – 至今', 'INDIE PRODUCT · SEP 2026 – NOW'),
-    title: L('回声 echo agent', 'Echo Agent'),
-    sub: L('Mac 上的语音 AI Agent · 发起人，带 4 人团队', 'A voice AI agent for Mac · founder, 4-person team'),
-    image: { src: L('assets/projects/echo-cover-zh.webp', 'assets/projects/echo-cover-en.webp'), alt: L('回声 echo agent 宣传封面', 'Echo Agent cover') },
-    body: L(
-      ['在任何应用里按 Fn+Space 说一句话，回声直接回答，或者动手去做：把编程任务派给本机的 Claude Code 和 Codex，截下当前窗口看图回答，读写文件，操作日历、飞书、微信这些本机应用。', '顶部胶囊浮窗不抢焦点，关掉后任务在后台继续；语音在本机识别，录音不上传。我全权负责产品、架构和研发。'],
-      ['Press Fn+Space in any app and say it. Echo answers, or does the work: it hands coding tasks to Claude Code and Codex on your Mac, captures the window you are looking at, reads and writes files, and drives local apps like Calendar, Feishu and WeChat.', 'A capsule at the top of the screen that never steals focus; tasks keep running after you close it. Speech is recognised on-device and recordings never leave your Mac. I own product, architecture and engineering.'],
-    ),
-    bullets: L(
-      ['首个提交后 5 天被 GitHub 61.7k★「中国独立开发者项目列表」收录', '两周迭代到 v0.1.38'],
-      ['Featured in the 61.7k★ Chinese indie developer list 5 days after the first commit', 'v0.1.38 within two weeks'],
-    ),
-    sections: [
-      {
-        heading: L('macOS 客户端', 'macOS client'),
-        items: L(
-          ['Swift / SwiftUI；全局快捷键 + 浮窗状态机：待命 → 聆听 → 识别 → 执行', '本地流式语音识别，中文里夹英文术语也认得出', '应用层 → 领域层 → 系统接入层单向依赖，10 个模块各管一件事'],
-          ['Swift / SwiftUI; a global hotkey and an overlay state machine: idle → listening → recognising → running', 'On-device streaming speech recognition that copes with English terms inside Chinese', 'One-way dependencies from app to domain to system layers; ten modules, one job each'],
-        ),
-      },
-      {
-        heading: L('Agent 能力层', 'Agent tools'),
-        items: L(
-          ['运行时扩展注册 echo_* 工具，经 echoctl 执行；需要宿主权限的命令走本地 socket', '派发与续接 Claude Code / Codex 会话，几个任务可以同时跑，结果回到对话里', '窗口截图、定时任务、长期记忆（每轮注入系统提示）', '10+ 类本机应用操作：浏览器、音乐、飞书、微信、邮件、备忘录、日历等'],
-          ['A runtime extension registers echo_* tools that run through echoctl; commands needing host permissions go over a local socket', 'Dispatch and resume Claude Code / Codex sessions; several tasks run in parallel and results come back into the chat', 'Window capture, scheduled tasks, long-term memory injected into every turn', '10+ kinds of local app control: browser, music, Feishu, WeChat, mail, notes, calendar and more'],
-        ),
-      },
-      {
-        heading: L('后台与增长', 'Backend and growth'),
-        items: L(
-          ['Next.js + Postgres：邮箱 / 手机 / Google / 微信登录、每日额度、模型转发与成本记账', 'Stripe 月卡（银行卡、微信、支付宝）与兑换码', '匿名埋点与流程漏斗、崩溃报告归组、三级角色的管理后台', '中英双语官网；用 Remotion 程序化渲染宣传片和 3 支剧情短片'],
-          ['Next.js + Postgres: email / phone / Google / WeChat sign-in, daily quotas, model relay with cost accounting', 'Stripe passes (cards, WeChat Pay, Alipay) and promo codes', 'Anonymous analytics and funnels, grouped crash reports, an admin console with three roles', 'A bilingual site; promo film and three story shorts rendered programmatically with Remotion'],
-        ),
-      },
-    ],
-    tags: ['Swift', 'SwiftUI', 'On-device ASR', 'Next.js', 'Postgres', 'Stripe'],
-    links: [{ label: L('echoagent.dev', 'echoagent.dev'), href: 'https://echoagent.dev/zh/' }, { label: L('收录列表', 'The 61.7k★ list'), href: 'https://github.com/1c7/chinese-independent-developer' }, { label: L('手机端', 'Mobile remote'), action: 'echoMobile' }],
-  },
-  echoMobile: {
-    kicker: L('回声 · 手机端', 'ECHO · MOBILE'),
-    title: L('手机上的回声', 'Echo on your phone'),
-    sub: L('Mac 上回声的遥控器 · iOS + Android', 'A remote for Echo on your Mac · iOS + Android'),
-    body: L(
-      ['人不在电脑前，也能在手机上管理 session：看 Claude Code 和 Codex 在做什么、派新任务、续接、停止、审批权限、按住说话。'],
-      ['Away from your desk, manage sessions from your phone: watch Claude Code and Codex, dispatch tasks, resume, stop, approve permissions, hold to talk.'],
-    ),
-    bullets: L(
-      ['Expo / React Native，一套代码出 iOS 和 Android', '中继用 Cloudflare Worker + Durable Object，只转发端到端加密的密文', 'Mac 睡着时命令排队，醒来按顺序执行'],
-      ['Expo / React Native, one codebase for iOS and Android', 'Relay on Cloudflare Workers + Durable Objects that only forwards end-to-end encrypted payloads', 'Commands queue while the Mac sleeps and run in order when it wakes'],
-    ),
-    tags: ['Expo', 'React Native', 'Cloudflare Workers', 'E2E encryption'],
-    links: [{ label: L('手机版页面', 'Mobile page'), href: 'https://echoagent.dev/zh/mobile/' }],
+    kicker: L('团队协作', 'TEAM COLLABORATION'),
+    title: L('回声 Echo Agent', 'Echo Agent'),
+    sub: L('帮助团队制作', 'Helped the team build the project'),
+    image: { src: L('assets/projects/echo-cover-zh.webp', 'assets/projects/echo-cover-en.webp'), alt: L('Echo Agent 项目封面', 'Echo Agent project cover') },
+    body: L([], []),
+    bullets: L([], []),
+    tags: [],
+    links: [{ label: L('项目网站', 'Project site'), href: 'https://echoagent.dev/zh/' }],
   },
   roundtable: {
     kicker: L('开源 · 2026.6 – 2026.7', 'OPEN SOURCE · JUN – JUL 2026'),
@@ -256,13 +212,13 @@ export const PANELS = {
     links: [{ label: L('Chiron Prompt', 'Chiron Prompt'), href: 'https://github.com/EdwinjJ1/chiron-prompt' }, { label: L('Roundtable', 'Roundtable'), href: 'https://github.com/EdwinjJ1/roundtable' }],
   },
   press: {
-    kicker: L('THE DAILY ECHO', 'THE DAILY ECHO'),
+    kicker: L('THE DAILY EVAN', 'THE DAILY EVAN'),
     title: L('剪报墙', 'Press clippings'),
     sub: L('墙上这几张，写的都是真事', 'Everything pinned here actually happened'),
     body: L([], []),
     bullets: L(
-      ['ECHO AGENT MAKES THE 61.7K-STAR LIST：首个提交后 5 天被「中国独立开发者项目列表」收录', 'ATHENA TAKES SUSQUEHANNA PRIZE：UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY：17 岁创立 Hypha，7 人团队', 'TOP 3 AT FEISHU AI CHALLENGE：Roundtable，Agent 赛道', 'HIRE!：AI 产品经理 × Agent 开发者，Open to opportunities'],
-      ['ECHO AGENT MAKES THE 61.7K-STAR LIST: featured 5 days after the first commit', 'ATHENA TAKES SUSQUEHANNA PRIZE: UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY: founded Hypha at 17 with a team of seven', 'TOP 3 AT FEISHU AI CHALLENGE: Roundtable, Agent track', 'HIRE!: AI PM × agent builder, open to opportunities'],
+      ['ATHENA TAKES SUSQUEHANNA PRIZE：UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY：17 岁创立 Hypha，7 人团队', 'TOP 3 AT FEISHU AI CHALLENGE：Roundtable，Agent 赛道', 'HIRE!：AI 产品经理 × Agent 开发者，Open to opportunities'],
+      ['ATHENA TAKES SUSQUEHANNA PRIZE: UNSW × Mistral AI × Atlassian Hackathon', 'TEEN CEO HITS ¥100K IN ONE DAY: founded Hypha at 17 with a team of seven', 'TOP 3 AT FEISHU AI CHALLENGE: Roundtable, Agent track', 'HIRE!: AI PM × agent builder, open to opportunities'],
     ),
     tags: [],
     links: [{ label: L('联系我', 'Get in touch'), action: 'contact' }],
@@ -304,7 +260,7 @@ export const PANELS = {
     body: L(['AI 产品经理、Agent 产品与工程方向的机会都欢迎聊。'], ['Happy to talk about AI product, agent product and engineering roles.']),
     bullets: L([], []),
     tags: [],
-    links: [{ label: L('jiaedwin0605@gmail.com', 'jiaedwin0605@gmail.com'), href: 'mailto:jiaedwin0605@gmail.com' }, { label: L('GitHub @EdwinjJ1', 'GitHub @EdwinjJ1'), href: 'https://github.com/EdwinjJ1' }, { label: L('echoagent.dev', 'echoagent.dev'), href: 'https://echoagent.dev/zh/' }],
+    links: [{ label: L('jiaedwin0605@gmail.com', 'jiaedwin0605@gmail.com'), href: 'mailto:jiaedwin0605@gmail.com' }, { label: L('GitHub @EdwinjJ1', 'GitHub @EdwinjJ1'), href: 'https://github.com/EdwinjJ1' }],
   },
   fries: {
     kicker: L('彩蛋', 'EASTER EGG'),
@@ -318,7 +274,7 @@ export const PANELS = {
 };
 
 // 阅读模式的顺序
-export const INTRO_ORDER = ['about', 'mosi', 'echo', 'echoMobile', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'projects', 'blog', 'photos', 'news', 'friends', 'contact'];
+export const INTRO_ORDER = ['about', 'mosi', 'echo', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'projects', 'blog', 'photos', 'news', 'friends', 'contact'];
 
 // 这几个面板的正文来自 assets/data/<file>.json（从上一代网站导入，见 pipeline/import_legacy.mjs）
 export const DYNAMIC = {
@@ -347,10 +303,10 @@ export const ALBUMS = [
 export const CHAT = {
   api: 'https://evanlin-api.jiaedwin0605.workers.dev',
   hello: L('我是 Evan 的 AI 分身。直接问，或者点下面的问题。', 'I’m Evan’s AI stand-in. Ask anything, or pick a question below.'),
-  fallback: L('这个我没准备台词。试试问：回声是什么、实习做了什么、怎么联系你。', 'I don’t have a line for that. Try: what is Echo, what did you do at MOSI, how to reach you.'),
+  fallback: L('这个我没准备台词。试试问：你是谁、实习做了什么、怎么联系你。', 'I don’t have a line for that. Try: who are you, what did you do at MOSI, how to reach you.'),
   topics: [
     { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
-    { id: 'echo', keys: ['回声', 'echo', 'agent', '语音'], q: L('回声是什么？', 'What is Echo Agent?'), a: L('跑在 Mac 上的语音 AI Agent。任何应用里按 Fn+Space 说一句话，它直接回答，或者把活派给本机的 Claude Code 和 Codex。首个提交后 5 天被 GitHub 61.7k★ 的中国独立开发者项目列表收录。', 'A voice AI agent for Mac. Press Fn+Space anywhere and say it; Echo answers or hands the work to Claude Code and Codex on your machine. It was featured in a 61.7k★ GitHub list 5 days after the first commit.'), panel: 'echo' },
+    { id: 'echo', keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
     { id: 'contact', keys: ['联系', '邮箱', 'email', 'contact', 'hire', '招'], q: L('怎么联系你？', 'How do I reach you?'), a: L('jiaedwin0605@gmail.com。AI 产品、Agent 方向的机会都欢迎聊。', 'jiaedwin0605@gmail.com. Happy to talk about AI product and agent roles.'), panel: 'contact' },

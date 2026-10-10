@@ -120,7 +120,7 @@ export function createStage(canvas, img, assetBase = 'assets/') {
     const key = hi ? 'hi' : 'lo';
     if (e[key]) return Promise.resolve();
     if (!e.pending[key]) {
-      e.pending[key] = loadImage(`${assetBase}styles/${id}${hi ? '' : '@1x'}.webp`).then((im) => {
+      e.pending[key] = loadImage(`${assetBase}styles/${id}${hi ? '' : '@1x'}.webp?v=20261010-2`).then((im) => {
         if (Math.max(im.width, im.height) > maxTex) return;   // 设备放不下全尺寸，就一直用半尺寸
         e[key] = texture(im);
       });
