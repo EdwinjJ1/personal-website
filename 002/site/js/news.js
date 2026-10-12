@@ -15,6 +15,9 @@ export const STR = {
   loading: L('加载中…', 'Loading…'),
   failed: L('这一天的新闻没加载出来，换一天试试。', 'Could not load this day. Try another one.'),
   recent: L('最近的新闻', 'Latest stories'),
+  aihot: L('AIHOT · 中文 AI 资讯', 'AIHOT · AI news in Chinese'),
+  aihotNote: L('精选动态、热点与日报，前往 AIHOT 阅读。', 'Read selected stories, trending topics and daily briefings on AIHOT.'),
+  aihotOpen: L('前往阅读 ↗', 'Read on AIHOT ↗'),
 };
 
 export const monthOf = (date) => date.slice(0, 7);
@@ -167,6 +170,11 @@ function mountCalendar(body, index, h, t, lang, load) {
 export function renderNews(body, recent, h, load = fetchJson) {
   const lang = h.lang();
   const t = (pair) => pair[lang] ?? pair.zh;
+  const aihot = h.extLink('news-source', '', 'https://aihot.news/');
+  const description = h.el('div');
+  description.append(h.el('strong', null, t(STR.aihot)), h.el('p', null, t(STR.aihotNote)));
+  aihot.append(description, h.el('span', 'news-source-open', t(STR.aihotOpen)));
+  body.append(aihot);
   return load('assets/data/news/index.json')
     .then((index) => {
       if (!index?.days?.length) throw new Error('news_empty');

@@ -1,4 +1,9 @@
 /* 新闻面板顶部的月历。配色跟着当前宇宙走（--ink / --paper / --accent）。 */
+.news-source { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 16px; padding: 14px; margin: 0 0 16px; border: var(--edge); color: var(--ink); background: var(--paper); text-decoration: none; box-shadow: 3px 3px 0 var(--ink); }
+.news-source strong { font-size: 17px; }
+.news-source p { margin: 5px 0 0; font-size: 13px; line-height: 1.5; }
+.news-source-open { font-size: 13px; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.news-source:hover, .news-source:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 .cal { border: var(--edge); padding: 10px 10px 12px; margin: 4px 0 2px; background: color-mix(in srgb, var(--paper) 86%, var(--ink)); }
 .cal-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
 .cal-title { font: 400 24px/1 var(--display); letter-spacing: .04em; }
