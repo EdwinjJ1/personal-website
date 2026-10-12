@@ -79,12 +79,12 @@ export const PANELS = {
     sub: L('AI 产品经理 × 全栈 Agent 开发者 · 20 岁', 'AI Product Manager × Full-Stack Agent Builder · 20'),
     body: L(
       [
-        '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
+        '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学，方向是机器学习（ML）和计算机视觉（CV）。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
         '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。',
         '我喜欢从头到尾自己负责一件事：设计、前端、后端、部署、推广。野心这件事上我比较直白：想做一个真正有用的东西，宁可瞄得太高打偏，也不想瞄低了打中。',
       ],
       [
-        'I’m Evan Jia (贾岱林), 20, studying Computer Science at UNSW in Sydney. Before university I ran a seven-person Web3 company in Beijing and took its core product past ¥100K in single-day revenue.',
+        'I’m Evan Jia (贾岱林), 20, studying Computer Science at UNSW in Sydney, focusing on machine learning (ML) and computer vision (CV). Before university I ran a seven-person Web3 company in Beijing and took its core product past ¥100K in single-day revenue.',
         'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself.',
         'I like owning a thing end to end: design, frontend, backend, deploy, launch. I’m ambitious in a fairly plain way: I want to build something that actually matters, and I’d rather aim too high and miss than aim low and hit.',
       ],
@@ -94,8 +94,8 @@ export const PANELS = {
       {
         heading: L('基本信息', 'Basics'),
         items: L(
-          ['贾岱林 / Evan Jia，20 岁', '悉尼 ⇄ 上海', 'UNSW 计算机科学本科，2025 – 2027（预计）', '中文母语，英语是工作语言', 'ENTJ：喜欢带队，也喜欢自己动手', 'Open to opportunities'],
-          ['贾岱林 / Evan Jia, 20', 'Sydney ⇄ Shanghai', 'BSc Computer Science, UNSW, 2025 – 2027 (expected)', 'Native Mandarin, working English', 'ENTJ: comfortable leading, comfortable building', 'Open to opportunities'],
+          ['贾岱林 / Evan Jia，20 岁', '悉尼 ⇄ 上海', 'UNSW 计算机科学本科，2025 – 2027（预计）', '学习方向：机器学习（ML）、计算机视觉（CV）', '中文母语，英语是工作语言', 'ENTJ：喜欢带队，也喜欢自己动手', 'Open to opportunities'],
+          ['贾岱林 / Evan Jia, 20', 'Sydney ⇄ Shanghai', 'BSc Computer Science, UNSW, 2025 – 2027 (expected)', 'Focus: machine learning (ML) and computer vision (CV)', 'Native Mandarin, working English', 'ENTJ: comfortable leading, comfortable building', 'Open to opportunities'],
         ),
       },
       {
@@ -305,7 +305,7 @@ export const CHAT = {
   hello: L('我是 Evan 的 AI 分身。直接问，或者点下面的问题。', 'I’m Evan’s AI stand-in. Ask anything, or pick a question below.'),
   fallback: L('这个我没准备台词。试试问：你是谁、实习做了什么、怎么联系你。', 'I don’t have a line for that. Try: who are you, what did you do at MOSI, how to reach you.'),
   topics: [
-    { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
+    { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，主攻机器学习和计算机视觉，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, focusing on machine learning and computer vision; currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
     { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
