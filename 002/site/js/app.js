@@ -1,11 +1,12 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261010-3';
-import * as G from './geometry.js';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261011-1';
+import * as G from './geometry.js?v=20261011-1';
 import { coverUrl, createPlayer, fmtTime } from './music.js';
 import { renderNews } from './news.js';
-import { createStage, hexToRgb } from './stage.js?v=20261010-2';
+import { createStage, hexToRgb, styleUrl } from './stage.js?v=20261011-1';
+import { createTour } from './tour.js';
 import { CENTER as WEB_CENTER, earthOf, hostOf, webLayout } from './web.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
@@ -22,6 +23,10 @@ const svgEl = (tag, attrs) => {
   return node;
 };
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+// 手机 / 触屏适配的三个开关，查询条件和 css/mobile.css 里的一一对应。桌面端（宽屏 + 鼠标）全都不成立，带它们的分支走不到。
+const touchUi = matchMedia('(hover: none), (pointer: coarse)');                                          // 主指针是手指：换提示语、闲时点名
+const mqDock = matchMedia('(max-width: 899px) and (orientation: portrait)');                             // 竖屏：底部实心控制栏 + 小地图
+const mqSide = matchMedia('(max-width: 899px) and (orientation: landscape) and (max-height: 500px)');    // 横过来的手机：面板在右侧
 const store = {
   get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* 隐私模式下存不了就算了 */ } },
@@ -32,13 +37,14 @@ const dom = {
   tip: $('#tip'), sfx: $('#sfx'), panel: $('#panel'), panelBody: $('#panel-body'), back: $('#back'),
   earth: $('#earth'), dots: $('#dots'), hint: $('#hint'), intro: $('#intro'), introBody: $('#intro-body'),
   btnDesk: $('#btn-desk'), btnIntro: $('#btn-intro'), btnLang: $('#btn-lang'), btnSound: $('#btn-sound'),
+  hudBottom: $('.hud-bottom'), map: $('#map'), mapView: $('#map-view'),
 };
 
 // 状态只通过 set() 换成新对象，不原地改
 let state = Object.freeze({
   lang: store.get('lang', (navigator.language || '').startsWith('zh') ? 'zh' : 'en'),
   style: 0, from: 0, t: 1, tStart: 0,
-  view: null, viewFrom: null, viewTo: null, viewStart: 0, viewDur: 0,
+  view: null, viewFrom: null, viewTo: null, viewStart: 0, viewDur: 0, viewBack: null,
   hover: null, panel: null, mode: 'desk', sound: false, ready: false,
 });
 const set = (patch) => { state = Object.freeze({ ...state, ...patch }); };
@@ -49,7 +55,9 @@ let img = null;
 let stage = null;
 let hotPixels = null;       // { data, w, h }
 let hotByIndex = [];
-const vp = () => ({ w: innerWidth, h: innerHeight });
+let dock = 0;               // 竖屏手机底部控制栏的高度：画面只铺到它上沿（见 fitDock）。桌面和横屏恒为 0
+let under = 0;              // 竖屏手机上面板盖住了画面底部多高（见 fitSheet）。同样，桌面和横屏恒为 0
+const vp = () => ({ w: innerWidth, h: innerHeight - dock, under });
 const dpr = () => Math.min(devicePixelRatio || 1, 2);
 const homeView = () => G.clampView({ cx: img.w / 2, cy: img.h / 2, zoom: 1 }, vp(), img);
 
@@ -119,6 +127,12 @@ function flyTo(view, dur = 900) {
 
 function panelLayout() {
   const wide = innerWidth >= 900;
+  if (!wide && mqSide.matches) return { usable: { w: 0.46, h: 0.62 }, anchor: { x: 0.26, y: 0.5 } };    // 横屏手机：面板占右边不到一半
+  if (!wide && dock) {      // 竖屏手机：面板从底下升上来，物件放在顶栏和面板之间那一截的正中
+    const h = innerHeight - dock;
+    const top = 60;
+    return { usable: { w: 0.9, h: ((h - under - top) / h) * 0.9 }, anchor: { x: 0.5, y: (top + h - under) / 2 / h } };
+  }
   return wide ? { usable: { w: 0.56, h: 0.8 }, anchor: { x: 0.3, y: 0.5 } } : { usable: { w: 0.9, h: 0.4 }, anchor: { x: 0.5, y: 0.24 } };
 }
 
@@ -575,11 +589,17 @@ function chatContent() {
   return wrap;
 }
 
+/** 现在是桌面、面板还是阅读模式。只有 mobile.css 用它决定底栏里留什么。 */
+const syncUi = () => { document.documentElement.dataset.ui = state.mode === 'intro' ? 'intro' : state.panel ? 'panel' : 'desk'; };
+
 function openPanel(key, hotName) {
+  tour.stop();
   dom.panelBody.replaceChildren(key === 'chat' ? chatContent() : panelContent(key));
   dom.panel.hidden = false;
   dom.panelBody.scrollTop = 0;
-  set({ panel: key, hover: null });
+  set({ panel: key, hover: null, viewBack: state.panel ? state.viewBack : state.viewTo || state.view });
+  syncUi();
+  fitSheet();
   dom.tip.hidden = true;
   const hot = hotName && scene.hots[hotName];
   if (hot) flyTo(G.viewForBBox(hot.bbox, vp(), img, panelLayout()));
@@ -591,8 +611,12 @@ function closePanel() {
   if (!state.panel) return;
   chatAbort?.abort();
   dom.panel.hidden = true;
-  set({ panel: null });
-  flyTo(homeView(), 800);
+  const back = dock && state.viewBack ? state.viewBack : homeView();     // 竖屏没有“全景”可回：回到打开面板之前看的那一截
+  set({ panel: null, viewBack: null });
+  syncUi();
+  fitSheet();
+  flyTo(back, 800);
+  idleTour(TOUR_REST);
 }
 
 function activate(name) {
@@ -617,21 +641,34 @@ function setMode(mode) {
   dom.btnIntro.setAttribute('aria-pressed', String(mode === 'intro'));
   if (mode === 'intro') {
     dom.panel.hidden = true;
-    set({ panel: null, hover: null });
+    set({ panel: null, hover: null, viewBack: null });
     renderIntro();
     dom.intro.scrollTop = 0;
   }
+  syncUi();
+  fitDock();
+  fitSheet();
+  if (dock) refit();      // 竖屏带着面板进阅读模式：把抬起来的画面放回去
+  if (mode === 'desk') idleTour(TOUR_REST);
+  else tour.stop();
+}
+
+/** 「DESK 探索」这类按钮字：第一个词之后的部分包一层，窄屏由 mobile.css 收起来，顶栏才排得成一行。 */
+function splitLabel(btn, text) {
+  const [head, ...rest] = text.split(' ');
+  btn.replaceChildren(head, el('span', 'pill-more', rest.length ? ` ${rest.join(' ')}` : ''));
+  btn.setAttribute('aria-label', text);
 }
 
 function applyLang() {
   document.documentElement.lang = state.lang === 'zh' ? 'zh-CN' : 'en';
-  dom.btnDesk.textContent = tr(UI.desk);
-  dom.btnIntro.textContent = tr(UI.intro);
+  splitLabel(dom.btnDesk, tr(UI.desk));
+  splitLabel(dom.btnIntro, tr(UI.intro));
   dom.btnLang.textContent = state.lang === 'zh' ? 'EN' : '中文';
   dom.btnSound.textContent = state.sound ? '♪ ON' : '♪ OFF';
   dom.btnSound.setAttribute('aria-label', tr(state.sound ? UI.soundOn : UI.soundOff));
   dom.back.textContent = tr(UI.back);
-  dom.hint.textContent = tr(UI.hint);
+  dom.hint.textContent = tr(touchUi.matches ? UI.hintTouch : UI.hint);
   dom.loaderText.textContent = tr(UI.loading);
   dom.canvas.setAttribute('aria-label', tr(UI.canvasLabel));
   if (scene) applyTheme();
@@ -640,10 +677,12 @@ function applyLang() {
 }
 
 // ───────────────────────── 指针 ─────────────────────────
-function hotAt(clientX, clientY) {
+/** slop：点偏多少屏幕像素以内也算点中。鼠标是 0，只认指针正下方；手指给一点余量。 */
+function hotAt(clientX, clientY, slop = 0) {
   if (!hotPixels) return null;
   const p = G.screenToImage({ x: clientX, y: clientY }, state.view, vp(), img);
-  const idx = G.hotIndexAt(hotPixels.data, hotPixels.w, hotPixels.h, (p.x / img.w) * hotPixels.w, (p.y / img.h) * hotPixels.h);
+  const k = hotPixels.w / img.w;
+  const idx = G.hotIndexNear(hotPixels.data, hotPixels.w, hotPixels.h, p.x * k, (p.y / img.h) * hotPixels.h, (slop / G.viewScale(state.view, vp(), img)) * k);
   return hotByIndex[idx] || null;
 }
 
@@ -655,35 +694,73 @@ function showTip(name, x, y) {
   dom.tip.style.top = `${G.clamp(y + 20, 8, innerHeight - 48)}px`;
 }
 
+// ── 触屏没有悬停：闲下来的时候把视野里的物件挨个描边、报名字（排队和计时在 tour.js） ──
+const TOUR_REST = 2600;     // 手停下多久之后开始点名
+const TOUCH_SLOP = 14;      // 手指点偏这么多屏幕像素以内也算点中
+const TOUCH_DRAG = 10;      // 手指挪过这么多才算拖动（鼠标是 6）
+let named = null;           // 正在点名的热点
+
+/** 点名时的标签：小物件贴在它正下方，大物件放在中心偏下；左右不出屏。 */
+function nameTip(name) {
+  const hot = scene.hots[name];
+  const size = vp();
+  const c = G.imageToScreen({ x: hot.center[0], y: hot.center[1] }, state.view, size, img);
+  const foot = G.imageToScreen({ x: hot.center[0], y: hot.bbox[3] }, state.view, size, img).y;
+  dom.tip.textContent = tr(LABELS[name]);
+  dom.tip.hidden = false;
+  dom.tip.style.left = `${G.clamp(c.x - dom.tip.offsetWidth / 2, 8, size.w - dom.tip.offsetWidth - 8)}px`;
+  dom.tip.style.top = `${G.clamp(Math.min(foot + 8, c.y + 36), 8, size.h - dom.tip.offsetHeight - 8)}px`;
+}
+
+const tour = createTour({
+  step: 1800,
+  // 顶栏盖住的地方不点；横屏时底栏也浮在画面上，同样让开
+  list: () => G.hotsInView(scene.hots, state.view, vp(), img, { top: 64, right: 16, bottom: dock ? 44 : 76, left: 16 }),
+  idle: () => state.mode === 'desk' && !state.panel && !state.viewTo && !lightbox,
+  show(name) { named = name; set({ hover: name }); nameTip(name); },
+  hide() { named = null; set({ hover: null }); dom.tip.hidden = true; },
+});
+const idleTour = (delay) => { if (touchUi.matches && state.ready) tour.start(delay); };
+const inRect = (r, ev) => ev.clientX >= r.left && ev.clientX <= r.right && ev.clientY >= r.top && ev.clientY <= r.bottom;
+
 function bindPointer() {
   const pointers = new Map();
-  let drag = null;      // { x, y, view, moved }
-  let pinch = 0;
+  let drag = null;      // { x, y, view, moved, slop, pick }
+  let pinch = null;     // { dist, mid }：两指的间距和中点
+  const twoFingers = () => {
+    const [a, b] = [...pointers.values()];
+    return { dist: Math.hypot(a.x - b.x, a.y - b.y), mid: { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 } };
+  };
 
   dom.canvas.addEventListener('pointerdown', (ev) => {
     dom.canvas.setPointerCapture(ev.pointerId);
     pointers.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
-    drag = { x: ev.clientX, y: ev.clientY, view: state.view, moved: false };
-    if (pointers.size === 2) {
-      const [a, b] = [...pointers.values()];
-      pinch = Math.hypot(a.x - b.x, a.y - b.y);
+    const touch = ev.pointerType === 'touch';
+    // 点名的标签不接事件，手指落在标签上也算点它那个物件
+    const pick = touch && named && !dom.tip.hidden && inRect(dom.tip.getBoundingClientRect(), ev) ? named : null;
+    drag = { x: ev.clientX, y: ev.clientY, view: state.view, moved: false, slop: touch ? TOUCH_DRAG : 6, pick };
+    if (touch) {      // 手指按下：停掉点名，把按住的物件描出来，松手前就知道点的是谁
+      tour.stop();
+      set({ hover: pointers.size === 1 && state.mode === 'desk' ? pick || hotAt(ev.clientX, ev.clientY, TOUCH_SLOP) : null });
     }
+    if (pointers.size === 2) pinch = twoFingers();
   });
 
   dom.canvas.addEventListener('pointermove', (ev) => {
     if (pointers.has(ev.pointerId)) pointers.set(ev.pointerId, { x: ev.clientX, y: ev.clientY });
-    if (pointers.size === 2 && pinch) {        // 双指缩放
-      const [a, b] = [...pointers.values()];
-      const dist = Math.hypot(a.x - b.x, a.y - b.y);
-      set({ view: G.zoomAt(state.view, dist / pinch, { x: (a.x + b.x) / 2, y: (a.y + b.y) / 2 }, vp(), img), viewTo: null });
-      pinch = dist;
+    if (pointers.size === 2 && pinch?.dist) {        // 双指：缩放，同时跟着两指的中点平移
+      const now = twoFingers();
+      const s = G.viewScale(state.view, vp(), img);
+      const slid = { ...state.view, cx: state.view.cx - (now.mid.x - pinch.mid.x) / s, cy: state.view.cy - (now.mid.y - pinch.mid.y) / s };
+      set({ view: G.zoomAt(slid, now.dist / pinch.dist, now.mid, vp(), img), viewTo: null });
+      pinch = now;
       if (drag) drag.moved = true;
       return;
     }
     if (drag && pointers.size === 1) {
       const dx = ev.clientX - drag.x;
       const dy = ev.clientY - drag.y;
-      if (Math.hypot(dx, dy) > 6) drag.moved = true;
+      if (Math.hypot(dx, dy) > drag.slop) drag.moved = true;
       if (drag.moved) {
         const s = G.viewScale(drag.view, vp(), img);
         set({ view: G.clampView({ ...drag.view, cx: drag.view.cx - dx / s, cy: drag.view.cy - dy / s }, vp(), img), viewTo: null, hover: null });
@@ -703,15 +780,26 @@ function bindPointer() {
   });
 
   const end = (ev) => {
+    const touch = ev.pointerType === 'touch';
     const wasDrag = drag?.moved;
+    const pick = drag?.pick;
     pointers.delete(ev.pointerId);
-    if (pointers.size < 2) pinch = 0;
+    if (pointers.size < 2) pinch = null;
+    if (pointers.size === 1 && drag) {      // 双指抬起一根：剩下那根从它现在的位置接着拖，不然画面会跳一下
+      const [p] = [...pointers.values()];
+      drag = { ...drag, x: p.x, y: p.y, view: state.view, moved: true };
+    }
     if (pointers.size === 0) {
       drag = null;
+      if (touch) set({ hover: null });
       if (!wasDrag && ev.type === 'pointerup' && state.mode === 'desk') {
-        const name = hotAt(ev.clientX, ev.clientY);
+        const name = pick || hotAt(ev.clientX, ev.clientY, touch ? TOUCH_SLOP : 0);
         if (name) activate(name);
         else if (state.panel) closePanel();
+      }
+      if (touch) {
+        wantHiRes();
+        idleTour(TOUR_REST);
       }
     }
   };
@@ -743,13 +831,61 @@ function bindKeys() {
   });
 }
 
+// ───────────────────────── 手机：底栏和小地图 ─────────────────────────
+const refit = () => { if (state.view) set({ view: G.clampView(state.viewTo || state.view, vp(), img), viewTo: null }); };
+
+/** 竖屏时量一下底栏有多高，画面让出这一截（mobile.css 用 --dock 收画布）；其余情况是 0，什么都不改。 */
+function fitDock() {
+  dom.map.hidden = !mqDock.matches;
+  const next = mqDock.matches ? dom.hudBottom.offsetHeight : 0;
+  if (next === dock) return;
+  dock = next;
+  document.documentElement.style.setProperty('--dock', `${dock}px`);
+  fitSheet();
+  refit();
+}
+
+/** 竖屏时面板从底下升上来盖住画面下半截：量出盖了多高，镜头才知道能把画面抬多少。不在这里 refit，开合面板时让镜头自己飞过去。 */
+function fitSheet() {
+  under = dock && state.panel ? Math.max(0, innerHeight - dock - dom.panel.offsetTop - dom.panelBody.offsetTop) : 0;
+}
+
+// 小地图：竖屏只看得到桌子的一截，底栏里放整张桌子的缩略图，框出现在这一截；点或拖它直接过去
+let mapShown = { id: '', rect: '' };
+function syncMap() {
+  if (dom.map.hidden) return;
+  const id = STYLES[state.style].id;
+  const r = G.viewRect(state.view, vp(), img);
+  const rect = [r.x, r.y, r.w, r.h].map((v) => `${(v * 100).toFixed(2)}%`);
+  if (id === mapShown.id && rect.join() === mapShown.rect) return;
+  if (id !== mapShown.id) dom.map.style.backgroundImage = `url("${styleUrl(id)}")`;
+  mapShown = { id, rect: rect.join() };
+  const [left, top, width, height] = rect;
+  Object.assign(dom.mapView.style, { left, top, width, height });
+}
+
+function bindMap() {
+  const seek = (ev) => {
+    const box = dom.map.getBoundingClientRect();
+    const x = (ev.clientX - box.left - dom.map.clientLeft) / dom.map.clientWidth;
+    const y = (ev.clientY - box.top - dom.map.clientTop) / dom.map.clientHeight;
+    set({ view: G.clampView({ ...state.view, cx: x * img.w, cy: y * img.h }, vp(), img), viewTo: null });
+  };
+  dom.map.addEventListener('pointerdown', (ev) => {
+    dom.map.setPointerCapture(ev.pointerId);
+    tour.stop();
+    seek(ev);
+  });
+  dom.map.addEventListener('pointermove', (ev) => { if (dom.map.hasPointerCapture(ev.pointerId)) seek(ev); });
+  dom.map.addEventListener('pointerup', () => { wantHiRes(); idleTour(TOUR_REST); });
+}
+
 // ───────────────────────── 每帧 ─────────────────────────
 const rain = [];
 function drawFx(time) {
   const c = dom.fx;
   const ctx = c.getContext('2d');
-  const w = innerWidth;
-  const h = innerHeight;
+  const { w, h } = vp();
   if (c.width !== w || c.height !== h) { c.width = w; c.height = h; }
   ctx.clearRect(0, 0, w, h);
   if (STYLES[state.style].id !== 'noir' || reduceMotion || state.mode !== 'desk') return;
@@ -782,6 +918,7 @@ function frame(now) {
     hi: hexToRgb(STYLES[state.style].accent),
   });
   drawFx(now);
+  syncMap();
   requestAnimationFrame(frame);
 }
 
@@ -805,7 +942,9 @@ function buildHud() {
   dom.btnLang.addEventListener('click', () => { set({ lang: state.lang === 'zh' ? 'en' : 'zh' }); store.set('lang', state.lang); applyLang(); });
   dom.btnSound.addEventListener('click', () => { set({ sound: !state.sound }); applyLang(); blip(660, 0.1); });
   dom.back.addEventListener('click', closePanel);
-  addEventListener('resize', () => { if (state.view) set({ view: G.clampView(state.viewTo || state.view, vp(), img), viewTo: null }); });
+  addEventListener('resize', () => { fitDock(); fitSheet(); refit(); idleTour(TOUR_REST); });
+  if ('ResizeObserver' in window) new ResizeObserver(fitDock).observe(dom.hudBottom);     // 字体换好、换语言都可能让底栏变高
+  fitDock();
 }
 
 async function boot() {
@@ -828,13 +967,16 @@ async function boot() {
     progress(0.5);
     await stage.loadStyle(STYLES[0].id);
     progress(1);
+    fitDock();
     set({ view: homeView(), ready: true });
     applyTheme();
     bindPointer();
+    bindMap();
     bindKeys();
     requestAnimationFrame(frame);
     dom.loader.classList.add('done');
     wantHiRes();
+    idleTour(TOUR_REST);
     STYLES.slice(1).reduce((p, s) => p.then(() => stage.loadStyle(s.id)), Promise.resolve());   // 其余九个宇宙后台慢慢载
   } catch (err) {
     console.error(err);

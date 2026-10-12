@@ -19,6 +19,8 @@ vec3 split(sampler2D t, vec2 uv, float sh){
 void main(){
   vec2 frag = vec2(gl_FragCoord.x, uRes.y - gl_FragCoord.y);
   vec2 uv = ((frag - uRes * 0.5) / uScale + uCenter) / uImg;
+  // 图像之外：竖屏手机打开面板时画面会往上抬，底下露出来的地方填成底栏的颜色，不拉伸边缘像素
+  if (uv.x < 0.0 || uv.x > 1.0 || uv.y < 0.0 || uv.y > 1.0) { gl_FragColor = vec4(0.063, 0.063, 0.078, 1.0); return; }
 
   // 转场：画面切成方块，一块块翻到新宇宙；中途带横向错位和 RGB 分离
   float peak = 1.0 - abs(2.0 * uT - 1.0);
@@ -65,6 +67,9 @@ function loadImage(src) {
     im.src = src;
   });
 }
+
+/** 一个风格的贴图地址；hi=true 是全尺寸。手机上的小地图也用它，跟舞台走同一份缓存。 */
+export const styleUrl = (id, hi = false, base = 'assets/') => `${base}styles/${id}${hi ? '' : '@1x'}.webp?v=20261010-2`;
 
 export function hexToRgb(hex) {
   const h = hex.replace('#', '');
@@ -120,7 +125,7 @@ export function createStage(canvas, img, assetBase = 'assets/') {
     const key = hi ? 'hi' : 'lo';
     if (e[key]) return Promise.resolve();
     if (!e.pending[key]) {
-      e.pending[key] = loadImage(`${assetBase}styles/${id}${hi ? '' : '@1x'}.webp?v=20261010-2`).then((im) => {
+      e.pending[key] = loadImage(styleUrl(id, hi, assetBase)).then((im) => {
         if (Math.max(im.width, im.height) > maxTex) return;   // 设备放不下全尺寸，就一直用半尺寸
         e[key] = texture(im);
       });

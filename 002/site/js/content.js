@@ -319,6 +319,7 @@ export const UI = {
   intro: L('INTRO 阅读', 'INTRO read'),
   back: L('← 回到桌面', '← BACK TO DESK'),
   hint: L('点面具或按空格，换一个宇宙', 'Click the mask or press Space to switch universe'),
+  hintTouch: L('拖动看整张桌子 · 点面具换宇宙', 'Drag to explore · tap the mask'),
   chatPlaceholder: L('问我点什么…', 'Ask me something…'),
   send: L('发送', 'Send'),
   soundOn: L('声音：开', 'Sound: on'),

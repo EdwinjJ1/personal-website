@@ -1,0 +1,72 @@
+/* 手机 / 触屏适配。这个文件里的每条规则都包在媒体查询里：桌面端（宽屏 + 鼠标）一条都不会命中。
+   断点沿用 main.css 的 899px；竖屏、横屏两个查询和 app.js 里的 mqDock、mqSide 一一对应，改一边要改另一边。 */
+
+/* ── 触屏通用：安全区、防误触 ── */
+@media (pointer: coarse) {
+  html, body { overscroll-behavior: none; }
+  .hud, #stage, .map { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+  button, a, .map { -webkit-tap-highlight-color: transparent; }
+  button { touch-action: manipulation; }
+  .hud { padding-left: calc(16px + env(safe-area-inset-left, 0px)); padding-right: calc(16px + env(safe-area-inset-right, 0px)); }
+  .hud-top { padding-top: calc(12px + env(safe-area-inset-top, 0px)); }
+}
+
+/* ── 窄屏：顶栏收成一行，面板高度跟着真实可见高度走 ── */
+@media (max-width: 899px) {
+  .hud-top { gap: 8px; }
+  .nav { flex-wrap: nowrap; gap: 6px; }
+  .nav .pill { white-space: nowrap; }
+  .pill-more { display: none; }
+  .panel { max-height: 54dvh; }
+  .lightbox img { max-height: calc(100dvh - 190px); }
+}
+
+/* 最窄的那批手机（320px 上下）：四个按钮再挤一挤 */
+@media (max-width: 359px) {
+  .hud-top { gap: 6px; }
+  .nav { gap: 4px; }
+  .nav .pill { padding: 5px 6px; font-size: 12px; }
+}
+
+/* ── 竖屏：底部是一条实心控制栏，画面只铺到它上沿，桌上的东西不会被按钮盖住 ── */
+@media (max-width: 899px) and (orientation: portrait) {
+  #stage, #fx { height: calc(100% - var(--dock, 0px)); }
+  .hud-bottom {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-areas: "hint map" "earth map" "dots dots";
+    align-items: end; gap: 6px 10px; padding-top: 10px; background: #101014; border-top: 3px solid var(--accent);
+  }
+  .hint { grid-area: hint; display: block; font-size: 12px; line-height: 1.35; word-break: keep-all; }   /* 放不下时在「·」那里换行，不把词拆开 */
+  .hud-bottom .caption { grid-area: earth; justify-self: start; display: grid; gap: 0; max-width: 100%; padding: 3px 10px 4px; line-height: 1.3; }
+  .hud-bottom .caption b, .hud-bottom .caption span { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+  .dots { grid-area: dots; }
+
+  /* 小地图：整张桌子的缩略图，白框是现在看到的这一截 */
+  .map {
+    grid-area: map; position: relative; width: 118px; height: 69px; overflow: hidden; cursor: pointer; touch-action: none;
+    border: var(--edge); background: var(--ink) center / 100% 100% no-repeat;
+  }
+  .map i { position: absolute; box-sizing: border-box; border: 2px solid #fff; box-shadow: 0 0 0 1px #14121c, 0 0 0 200px rgba(16, 16, 20, .55); pointer-events: none; }
+  html[data-style="neon"] .map { border-color: #00f0ff; }
+
+  /* 面板是固定高度的半屏抽屉，内容短也撑满：镜头按这个高度把物件抬到面板上方（app.js 的 fitSheet） */
+  .panel { height: 54vh; height: 54dvh; }
+  .panel-body { flex: 1; min-height: 0; }
+  .panel-body > .card { min-height: 100%; }
+  /* 面板从底下升上来会盖住这一排：先藏起来但占着位置，底栏高度不变，画面就不会跟着缩放 */
+  html[data-ui="panel"] .hud-bottom > :not(.dots) { visibility: hidden; }
+  /* 阅读模式用不着小地图和操作提示 */
+  html[data-ui="intro"] .hint, html[data-ui="intro"] .map { display: none; }
+  .intro { padding-bottom: calc(var(--dock, 96px) + 24px); }
+}
+
+/* ── 横过来的手机：整张桌子都看得见，面板回到右侧，底栏排成一行 ── */
+@media (max-width: 899px) and (orientation: landscape) and (max-height: 500px) {
+  .panel {
+    top: calc(54px + env(safe-area-inset-top, 0px)); left: auto; right: calc(12px + env(safe-area-inset-right, 0px)); bottom: calc(58px + var(--safe-b));
+    width: min(46vw, 400px); max-height: none;
+  }
+  .hud-bottom { flex-wrap: nowrap; }
+  .dots { order: 0; width: auto; }
+  .dot { width: 22px; height: 22px; }
+  .chat-log { max-height: 30vh; }
+}
