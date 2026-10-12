@@ -80,12 +80,12 @@ export const PANELS = {
     body: L(
       [
         '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
-        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。另外也帮助团队制作 Echo Agent。',
+        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。',
         '我喜欢从头到尾自己负责一件事：设计、前端、后端、部署、推广。野心这件事上我比较直白：想做一个真正有用的东西，宁可瞄得太高打偏，也不想瞄低了打中。',
       ],
       [
         'I’m Evan Jia (贾岱林), 20, studying Computer Science at UNSW in Sydney. Before university I ran a seven-person Web3 company in Beijing and took its core product past ¥100K in single-day revenue.',
-        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself. I also help the team build Echo Agent.',
+        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself.',
         'I like owning a thing end to end: design, frontend, backend, deploy, launch. I’m ambitious in a fairly plain way: I want to build something that actually matters, and I’d rather aim too high and miss than aim low and hit.',
       ],
     ),
@@ -101,8 +101,8 @@ export const PANELS = {
       {
         heading: L('时间线', 'Timeline'),
         items: L(
-          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.9 至今　Echo Agent：帮助团队制作'],
-          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Sep 2026 – now　Echo Agent: helping the team build the project'],
+          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习'],
+          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI'],
         ),
       },
       {
@@ -274,7 +274,7 @@ export const PANELS = {
 };
 
 // 阅读模式的顺序
-export const INTRO_ORDER = ['about', 'mosi', 'echo', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'projects', 'blog', 'photos', 'news', 'friends', 'contact'];
+export const INTRO_ORDER = ['about', 'mosi', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'photos', 'news', 'friends', 'contact'];
 
 // 这几个面板的正文来自 assets/data/<file>.json（从上一代网站导入，见 pipeline/import_legacy.mjs）
 export const DYNAMIC = {
@@ -306,7 +306,7 @@ export const CHAT = {
   fallback: L('这个我没准备台词。试试问：你是谁、实习做了什么、怎么联系你。', 'I don’t have a line for that. Try: who are you, what did you do at MOSI, how to reach you.'),
   topics: [
     { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
-    { id: 'echo', keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
+    { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
     { id: 'contact', keys: ['联系', '邮箱', 'email', 'contact', 'hire', '招'], q: L('怎么联系你？', 'How do I reach you?'), a: L('jiaedwin0605@gmail.com。AI 产品、Agent 方向的机会都欢迎聊。', 'jiaedwin0605@gmail.com. Happy to talk about AI product and agent roles.'), panel: 'contact' },

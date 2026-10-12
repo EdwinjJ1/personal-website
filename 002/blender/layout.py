@@ -126,7 +126,7 @@ def build_wall_stuff():
         plane(f"wall_{name}", pw, ph, (px, WY - 0.004 - i * 0.0015, pz), tex(name + ".png", rough=0.9), rot=(0, R(tilt), 0), hot="press")
         box(f"tape_{name}", (0.05, 0.002, 0.018), (px, WY - 0.012 - i * 0.0015, pz + ph / 2 - 0.004), M("tape", "#f5e6a8", 0.7), rot=(0, R(tilt + 8), 0), hot="press")
 
-    # 回声霓虹标：挂在窗格上，背后是楼群
+    # 声波霓虹装饰：挂在窗格上，背后是楼群
     nx, nz = 1.64, 1.50
     cyl("neon_disc", 0.19, 0.02, (nx, WY - 0.012, nz), M("neon_disc", "#18181b", 0.4), rot=(math.pi / 2, 0, 0), seg=64)
     glow = M("neon_bar", "#f4fbff", 0.3, emit=6.0)
@@ -206,7 +206,7 @@ def build_left():
     keyboard("kb", (-0.64, -0.13, T + 0.002), 5, "#22242a", {"main": "#2f323b", "accent": "#ff7a3d", "space": "#f4f1ea"})
     ball("mouse", 0.05, (-0.27, -0.15, T + 0.022), M("mouse", "#22242a", 0.4), scale=(0.72, 1.18, 0.5), hot="keyboard")
     ball("mouse_wheel", 0.008, (-0.27, -0.115, T + 0.045), M("mouse_wheel", "#ff7a3d", 0.3, emit=2.0), scale=(0.5, 1.4, 0.6), hot="keyboard")
-    # 报纸（新闻）+ 回声刊物
+    # 报纸（新闻）+ 团队协作项目刊物
     decal("newspaper", 0.25, 0.327, (-1.05, -0.34), "newspaper.png", yaw=11, hot="news", thick=0.007, edge="#e8e2d0")
     decal("zine_echo", 0.205, 0.28, (-0.70, -0.37), "zine_echo.png", yaw=-7, hot="zine-echo", thick=0.006)
     # 工牌（模思智能）
@@ -225,7 +225,7 @@ def build_center():
         x = px - 0.084 + i * 0.024
         tip = (x + rng.uniform(-0.012, 0.012), py + rng.uniform(0.0, 0.03), T + 0.17 + rng.uniform(-0.01, 0.02))
         rod(f"pen{i}", (x, py, T + 0.04), tip, 0.008, M(f"pen{i}", col, 0.4), seg=10)
-    # 回声圆台：点它切换宇宙
+    # 声波圆台：点击打开团队协作项目说明
     ex, ey = 0.32, 0.26
     cyl("echo_puck", 0.088, 0.045, (ex, ey, T + 0.0225), M("puck", "#18181b", 0.35), seg=56, hot="zine-echo")
     torus("echo_ring", 0.082, 0.006, (ex, ey, T + 0.012), M("puck_ring", "#ff7a3d", 0.3, emit=4.0), hot="zine-echo", seg=56, sub=8)
@@ -313,7 +313,7 @@ def build_right():
     decal("zine_roundtable", 0.205, 0.28, (0.50, -0.05), "zine_roundtable.png", yaw=-13, hot="zine-roundtable", thick=0.006)
     decal("zine_athena", 0.205, 0.28, (0.71, -0.17), "zine_athena.png", yaw=9, hot="zine-athena", thick=0.006, z=0.008)
     decal("zine_preuni", 0.205, 0.28, (0.50, -0.34), "zine_preuni.png", yaw=-3, hot="zine-preuni", thick=0.006)
-    # 手机（回声手机端）
+    # 手机：通用协作看板，点击打开团队协作项目说明
     box("phone_body", (0.082, 0.172, 0.009), (0.86, -0.39, T + 0.0045), M("phone", "#111216", 0.3), rot=(0, 0, R(-18)), hot="phone")
     plane("phone_screen", 0.074, 0.159, (0.86, -0.39, T + 0.0096), tex("phone.png", emit=0.8, rough=0.2), rot=(-math.pi / 2, 0, R(-18)), hot="phone", surface="phone")
     # 相机

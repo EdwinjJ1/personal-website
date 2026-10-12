@@ -1,7 +1,7 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261010-2';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261010-3';
 import * as G from './geometry.js';
 import { coverUrl, createPlayer, fmtTime } from './music.js';
 import { renderNews } from './news.js';
@@ -550,7 +550,7 @@ function chatContent() {
   };
   say('me', tr(CHAT.hello));
   const chips = el('div', 'chips');
-  CHAT.topics.forEach((topic) => {
+  CHAT.topics.filter((topic) => topic.suggested !== false).forEach((topic) => {
     const b = el('button', 'chip', tr(topic.q));
     b.type = 'button';
     b.addEventListener('click', () => ask(tr(topic.q), topic));
