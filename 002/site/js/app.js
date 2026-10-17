@@ -1,8 +1,9 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261011-1';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261012-2';
 import * as G from './geometry.js?v=20261011-1';
+import { renderJournal } from './journal.js?v=20261012-2';
 import { coverUrl, createPlayer, fmtTime } from './music.js';
 import { renderNews } from './news.js';
 import { createStage, hexToRgb, styleUrl } from './stage.js?v=20261011-1';
@@ -30,6 +31,12 @@ const mqSide = matchMedia('(max-width: 899px) and (orientation: landscape) and (
 const store = {
   get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } },
   set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* 隐私模式下存不了就算了 */ } },
+};
+
+const journalSession = {
+  get: () => { try { return sessionStorage.getItem('journal-pw') || ''; } catch { return ''; } },
+  set: (v) => { try { sessionStorage.setItem('journal-pw', v); } catch { /* 存不了就每次重新输 */ } },
+  clear: () => { try { sessionStorage.removeItem('journal-pw'); } catch { /* 同上 */ } },
 };
 
 const dom = {
@@ -323,6 +330,10 @@ const RENDER = {
     };
     list();
   },
+  // 日记：加密存在 Worker 里，输对密码才读得到；密码只放在这个标签页的 sessionStorage 里，关掉就忘。逻辑都在 journal.js
+  journal(body) {
+    return renderJournal(body, { el, lang: () => state.lang }, { api: CHAT.api, session: journalSession });
+  },
   // 摄影按合集翻：每个合集先只露一张封面，点开才是这一组的全部照片（分组在 albums.js）。
   photos(body, items) {
     const albums = groupAlbums(items, ALBUMS);
@@ -510,7 +521,7 @@ function dynamicContent(key) {
   const wrap = cardHead(meta);
   const body = el('div', `dyn dyn-${key}`);
   wrap.append(body);
-  getData(meta.file).then((data) => RENDER[key](body, data)).catch(() => body.append(el('p', null, tr(UI.loadFailed))));
+  (meta.file ? getData(meta.file) : Promise.resolve(null)).then((data) => RENDER[key](body, data)).catch(() => body.append(el('p', null, tr(UI.loadFailed))));
   return wrap;
 }
 
@@ -589,12 +600,29 @@ function chatContent() {
   return wrap;
 }
 
+/** 面板里放什么。笔记本那两个面板（博客、日记）顶上多一排按钮来回切，镜头不动；阅读模式里它们本来就上下挨着，不加。 */
+function panelNode(key) {
+  if (key === 'chat') return chatContent();
+  const card = panelContent(key);
+  if (!NOTEBOOK.includes(key)) return card;
+  const tabs = el('div', 'chips');
+  NOTEBOOK.forEach((k) => {
+    const b = el('button', 'chip', tr(DYNAMIC[k].title));
+    b.type = 'button';
+    b.setAttribute('aria-pressed', String(k === key));
+    b.addEventListener('click', () => { if (k !== key) openPanel(k, null); });
+    tabs.append(b);
+  });
+  card.querySelector('.dyn').before(tabs);
+  return card;
+}
+
 /** 现在是桌面、面板还是阅读模式。只有 mobile.css 用它决定底栏里留什么。 */
 const syncUi = () => { document.documentElement.dataset.ui = state.mode === 'intro' ? 'intro' : state.panel ? 'panel' : 'desk'; };
 
 function openPanel(key, hotName) {
   tour.stop();
-  dom.panelBody.replaceChildren(key === 'chat' ? chatContent() : panelContent(key));
+  dom.panelBody.replaceChildren(panelNode(key));
   dom.panel.hidden = false;
   dom.panelBody.scrollTop = 0;
   set({ panel: key, hover: null, viewBack: state.panel ? state.viewBack : state.viewTo || state.view });
@@ -673,7 +701,7 @@ function applyLang() {
   dom.canvas.setAttribute('aria-label', tr(UI.canvasLabel));
   if (scene) applyTheme();
   if (state.mode === 'intro') renderIntro();
-  if (state.panel) dom.panelBody.replaceChildren(state.panel === 'chat' ? chatContent() : panelContent(state.panel));
+  if (state.panel) dom.panelBody.replaceChildren(panelNode(state.panel));
 }
 
 // ───────────────────────── 指针 ─────────────────────────

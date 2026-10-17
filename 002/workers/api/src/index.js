@@ -4,8 +4,10 @@
  * GET  /now-playing  → NetEase Cloud Music weekly top track (cookie stays server-side)
  * POST /chat         → streaming chat: Cloudflare Workers AI first (no key), any OpenAI-compatible provider as fallback
  * GET  /leetcode     → public LeetCode solve stats + recent accepted submissions
+ * /journal/*         → private encrypted diary (password-gated, see journal.js)
  */
 
+import { handleJournal } from './journal.js';
 import { toOpenAIStream } from './stream.js';
 
 const SYSTEM_PROMPT = `You ARE Evan (贾岱林, Evan Jia), chatting as yourself on your personal website — the monitor on a desk that visitors can flip through ten comic-book universes.
@@ -42,8 +44,8 @@ function corsHeaders(origin, env) {
   const allowOrigin = permitted ? origin : allowed[0] || '*';
   return {
     'Access-Control-Allow-Origin': allowOrigin,
-    'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+    'Access-Control-Allow-Headers': 'Content-Type, Authorization',
     'Vary': 'Origin',
   };
 }
@@ -290,6 +292,10 @@ export default {
     }
     if (url.pathname === '/chat' && request.method === 'POST') {
       return handleChat(request, env, cors);
+    }
+
+    if (url.pathname === '/journal' || url.pathname.startsWith('/journal/')) {
+      return handleJournal(request, env, cors, url);
     }
 
     return json({ error: 'not_found' }, 404, cors);

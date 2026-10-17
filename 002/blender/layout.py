@@ -3,7 +3,7 @@
 俯视机位、铺满物件、墙上软木板 + 剪报，右侧黑钢框落地窗外是楼群。
 每个可点的东西带 hot 名字，前端按它开面板：
   board / press / monitor / keyboard / mask（切换宇宙）/ zine-echo / zine-roundtable / zine-athena / zine-preuni
-  notebook（博客）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
+  notebook（博客、日记）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
 """
 import math
 import random

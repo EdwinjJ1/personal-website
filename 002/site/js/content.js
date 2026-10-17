@@ -57,7 +57,7 @@ export const LABELS = {
   'zine-athena': { zh: 'Athena', en: 'Athena' },
   trophy: { zh: '奖杯柜', en: 'Trophies' },
   'zine-preuni': { zh: 'PreUni 课程笔记', en: 'PreUni notes' },
-  notebook: { zh: '博客', en: 'Blog' },
+  notebook: { zh: '博客 · 日记', en: 'Blog · Journal' },
   hypha: { zh: 'Hypha · 17 岁的创业', en: 'Hypha · founder at 17' },
   mosi: { zh: '模思智能 · 实习', en: 'MOSI · internship' },
   news: { zh: '今日新闻', en: 'News desk' },
@@ -274,17 +274,22 @@ export const PANELS = {
 };
 
 // 阅读模式的顺序
-export const INTRO_ORDER = ['about', 'mosi', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'photos', 'news', 'friends', 'contact'];
+export const INTRO_ORDER = ['about', 'mosi', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'journal', 'photos', 'news', 'friends', 'contact'];
 
 // 这几个面板的正文来自 assets/data/<file>.json（从上一代网站导入，见 pipeline/import_legacy.mjs）
 export const DYNAMIC = {
   projects: { file: 'projects', kicker: L('PRESS START', 'PRESS START'), title: L('全部项目', 'All projects'), sub: L('做过的东西，都在这儿', 'Everything I have built') },
   blog: { file: 'blog', kicker: L('BLOG', 'BLOG'), title: L('博客', 'Blog'), sub: L('关于 AI、Agent 和做产品', 'On AI, agents and building products') },
+  // 日记是私人的：没有 data 文件，正文加密存在 Worker 里，输密码才读得到（见 journal.js）
+  journal: { file: null, kicker: L('JOURNAL', 'JOURNAL'), title: L('日记', 'Journal'), sub: L('只有我自己看得到：做了什么，有什么感悟', 'Private: what I did and what I took from it') },
   photos: { file: 'photos', kicker: L('PHOTOGRAPHY', 'PHOTOGRAPHY'), title: L('摄影', 'Photography'), sub: L('一组一组地看：点封面，翻开整个合集', 'In collections: open a cover to see the whole set') },
   news: { file: 'news', kicker: L('AI DAILY', 'AI DAILY'), title: L('新闻', 'News desk'), sub: L('AI · 研究 · 行业 · 国际', 'AI · Research · Industry · Global') },
   friends: { file: 'friends', kicker: L('FRIENDS', 'FRIENDS'), title: L('朋友们', 'Friends'), sub: L('他们的站也值得看', 'Their sites are worth a visit') },
   music: { file: 'music', kicker: L('NOW SPINNING', 'NOW SPINNING'), title: L('唱片机', 'Turntable'), sub: L('我的网易云歌单，放下唱针就响', 'My NetEase playlist. Drop the needle.') },
 };
+
+// 桌上那本笔记本里放了两个面板：点开先是博客，面板顶上有一排按钮切到日记
+export const NOTEBOOK = ['blog', 'journal'];
 
 // 摄影合集的先后和名字：key 是照片的分类（旧站 photography.ts 里的 category）。没登记的分类会排在最后。
 export const ALBUMS = [

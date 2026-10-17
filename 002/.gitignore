@@ -3,3 +3,6 @@ node_modules/
 .DS_Store
 __pycache__/
 promo/
+private/
+.dev.vars
+.wrangler/

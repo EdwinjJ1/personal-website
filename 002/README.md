@@ -1,7 +1,7 @@
 # Evan 的个人网站：一张桌子，十个宇宙
 
 Blender 建模的工位场景，同一个机位渲染后合成 10 种印刷 / 漫画风格，网页里用 WebGL 切换。
-点桌上的蜘蛛面具或按空格换宇宙；点物件看对应的项目和经历，相机和拍立得是摄影集，报纸是新闻，笔记本是博客，手柄是全部项目，显示器是 AI 对话，唱片是能放歌的黑胶唱片机，杯子是友链蛛网。
+点桌上的蜘蛛面具或按空格换宇宙；点物件看对应的项目和经历，相机和拍立得是摄影集，报纸是新闻，笔记本是博客和日记，手柄是全部项目，显示器是 AI 对话，唱片是能放歌的黑胶唱片机，杯子是友链蛛网。
 
 ![十个宇宙](preview/ten-universes.jpg)
 
@@ -26,7 +26,7 @@ npm test         # 坐标换算 + 内容完整性（node --test，带覆盖率�
 | `site/assets/` | 渲染产物：`styles/<宇宙>.webp`（全尺寸 + `@1x`）、`hot.png`（热点图）、`scene.json`；`data/*.json` 和 `photos/` 是从上一代网站导入的内容 |
 | `blender/` | `kit.py` 建模工具，`layout.py` 场景内容，`scene.py` 分通道渲染入口，`tex/` 贴图 |
 | `pipeline/` | `textures.py` 画场景里的印刷品，`stylize.py` 把通道合成十种风格 |
-| `workers/api/` | 对话后端（Cloudflare Worker，`/chat` 转发到模型），部署方式见下 |
+| `workers/api/` | 后端（Cloudflare Worker）：`/chat` 转发到模型，`/journal` 私人日记，部署方式见下 |
 | `tests/` | 单元测试 |
 
 ## 重新出图
@@ -56,6 +56,7 @@ npm run stylize    # 合成 10 种风格 + 热点图 → site/assets
 |---|---|---|
 | 名字、自我介绍、每个面板的文案 | `site/js/content.js` | 不用 |
 | 项目、博客、友链、摄影清单 | `site/assets/data/*.json`，照片放 `site/assets/photos/` | 不用 |
+| 日记 | 不在站点文件里：加密存在 Worker 的 KV 里，网页输密码读写，见下 | 不用 |
 | 墙上、封面、屏幕里的字 | `pipeline/textures.py` | 要 |
 | 桌上有什么、摆在哪 | `blender/layout.py` | 要 |
 | 某个宇宙的画风 | `pipeline/stylize.py` 里同名的函数 | 只跑 `npm run stylize` |
@@ -98,6 +99,9 @@ npm run stylize    # 合成 10 种风格 + 热点图 → site/assets
 - 唱片机放的是网易云歌单「-EdwinJ-喜欢的音乐」。`pipeline/sync_music.py` 读公开歌单（不带登录信息），只留不用会员就能听的歌，写进 `music.json`；声音走网易云官方外链，放不了的（会员曲目、地区限制）自动跳过。换歌单改脚本里的 `PLAYLIST_ID`，本地更新用 `npm run music`；部署时也会同步一次，抓不到就用仓库里的快照。
 - 摄影是旧站 `../001/src/data/photography.ts` 里的全部作品，网页上按分类归成合集（封面是每个分类的第一张，点开才是整组）。合集的先后和名字在 `content.js` 的 `ALBUMS`；加照片就是把原图放进 `../001/public/images/photography/`、在 `photography.ts` 里登记一条，再跑 `npm run photos`。`Her` 是单独的一个合集，不并进人像：哪些照片归它，列在 `photography.ts` 的 `herFiles` 里。
 - 友链在 `site/assets/data/friends.json`（来源是 `../001/src/data/friends.ts`），加一条就多一根蛛丝。
+- 日记是私人的，**不在 `site/` 里，也不进仓库**。正文用 AES-GCM 加密存在 Worker 的 KV 里（`workers/api/src/journal.js`），点笔记本 → 面板顶部切到「日记」，输入密码才解锁；解锁后能读、写、新建、删除，有网的地方都能改，不用提交也不用部署站点。密码只放在当前标签页里，关掉就忘，也可以点「锁上」。AI 和脚本走同一个接口（说明在 `workers/api/JOURNAL_API.md`），命令行是 `JOURNAL_PASSWORD=… node pipeline/journal.mjs list|get|put|append|delete|push`。
+  - 第一次启用：`cd workers/api`，`npx wrangler secret put JOURNAL_PASSWORD`（日记密码）、`npx wrangler secret put JOURNAL_SECRET`（加密密钥，用 `openssl rand -base64 32` 生成一串随机的，设定后别换），再 `npx wrangler deploy`（会自动建好 KV）。想把 `private/journal/` 里本地的草稿传上去：`JOURNAL_PASSWORD=… node pipeline/journal.mjs push private/journal`。`private/` 在 `.gitignore` 里。
+  - 安全边界：KV 里是用随机密钥加密的密文，只知道 4 位密码解不开；密码本身只能在线上试，同一个 IP 连错 8 次锁 15 分钟。但 4 位数字终究好猜（分布式地试一万次就能过），想更稳就换个长一点的密码——`wrangler secret put JOURNAL_PASSWORD` 重设即可，不影响已有日记。传输走 HTTPS。
 - 新闻每 6 小时由 `.github/workflows/deploy.yml` 抓一次并重新部署，结果只进当次部署，不往仓库里提交；仓库里的 `news.json` 是兜底快照。本地更新用 `npm run news`。
 - 部署：推到 `main`（改动涉及 `002/site/`）就会发布到 GitHub Pages（evanlin.site）。
 - 简历不放在这个站里，也不进这个仓库。

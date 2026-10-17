@@ -5,7 +5,9 @@
 #   npx wrangler login
 #   npx wrangler secret put AI_API_KEY        # e.g. Groq key from https://console.groq.com/keys (free tier)
 #   npx wrangler secret put NETEASE_COOKIE    # "MUSIC_U=xxxx" from music.163.com browser cookies
-#   npx wrangler deploy
+#   npx wrangler secret put JOURNAL_PASSWORD  # 日记密码
+#   npx wrangler secret put JOURNAL_SECRET     # 加密密钥：随机长串，如 `openssl rand -base64 32`；设定后别换，换了旧日记解不开
+#   npx wrangler deploy                        # 第一次部署会自动建好下面的 KV
 #
 # Then set NEXT_PUBLIC_API_BASE to the deployed URL (e.g. https://evanlin-api.<account>.workers.dev
 # or a custom domain like https://api.evanlin.site) in the site build env.
@@ -32,3 +34,7 @@ LEETCODE_USERNAME = "EdwinJL"
 # Production origins. Any localhost port is allowed automatically, so the
 # dev server can move without this list going stale.
 ALLOWED_ORIGINS = "https://evanlin.site,https://www.evanlin.site"
+
+# 私人日记：加密后的正文存在这个 KV 里（第一次 deploy 时 wrangler 自动创建并写回 id）
+[[kv_namespaces]]
+binding = "JOURNAL"

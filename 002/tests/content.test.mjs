@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
 import { test } from 'node:test';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, LANGS, PANELS, STYLES, UI, matchTopic } from '../site/js/content.js';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, LANGS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from '../site/js/content.js';
 
 const hasPanel = (key) => Boolean(PANELS[key] || DYNAMIC[key]);
 
@@ -54,6 +54,22 @@ test('阅读模式引用的面板都存在', () => {
   INTRO_ORDER.forEach((k) => assert.ok(hasPanel(k), k));
 });
 
+test('笔记本：点开的是博客，里面还能切到日记；两个面板都在阅读模式里', () => {
+  assert.deepEqual(NOTEBOOK, ['blog', 'journal']);
+  assert.equal(HOTS.notebook.panel, NOTEBOOK[0]);
+  NOTEBOOK.forEach((k) => {
+    assert.ok(DYNAMIC[k], `${k} 不是动态面板`);
+    assert.ok(INTRO_ORDER.includes(k), `阅读模式里没有 ${k}`);
+  });
+  assert.equal(INTRO_ORDER.indexOf('journal'), INTRO_ORDER.indexOf('blog') + 1);
+});
+
+test('日记是私人的：站点目录里不放任何日记正文或索引', () => {
+  assert.equal(DYNAMIC.journal.file, null);
+  assert.ok(!existsSync(new URL('../site/assets/data/journal', import.meta.url)));
+  assert.ok(!existsSync(new URL('../site/assets/data/journal.json', import.meta.url)));
+});
+
 test('界面文案中英文齐全', () => {
   Object.entries(UI).forEach(([k, v]) => bothLangs(v, `UI.${k}`));
   bothLangs(CHAT.hello, 'chat.hello');
@@ -100,7 +116,7 @@ test('动态面板：文案齐全，数据文件存在且形状正确', { skip: 
   const read = (file) => JSON.parse(readFileSync(new URL(`../site/assets/data/${file}.json`, import.meta.url), 'utf8'));
   Object.entries(DYNAMIC).forEach(([key, meta]) => {
     ['kicker', 'title', 'sub'].forEach((f) => bothLangs(meta[f], `${key}.${f}`));
-    assert.ok(read(meta.file), key);
+    if (meta.file) assert.ok(read(meta.file), key);     // 日记是私人的，没有公开的数据文件
   });
   const news = read('news');
   assert.ok(news.items.length > 0);
