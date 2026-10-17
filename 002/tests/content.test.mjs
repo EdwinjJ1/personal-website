@@ -50,6 +50,16 @@ test('面板中英文齐全，条目数量一致，链接合法', () => {
   });
 });
 
+test('联系面板：邮箱、GitHub、领英、小红书都在', () => {
+  const hrefs = PANELS.contact.links.map((l) => l.href);
+  assert.deepEqual(hrefs, [
+    'mailto:jiaedwin0605@gmail.com',
+    'https://github.com/EdwinjJ1',
+    'https://www.linkedin.com/in/evan-jia-152108369/',
+    'https://www.xiaohongshu.com/user/profile/6147eee3000000000201bfe4',
+  ]);
+});
+
 test('阅读模式引用的面板都存在', () => {
   INTRO_ORDER.forEach((k) => assert.ok(hasPanel(k), k));
 });

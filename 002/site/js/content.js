@@ -260,7 +260,7 @@ export const PANELS = {
     body: L(['AI 产品经理、Agent 产品与工程方向的机会都欢迎聊。'], ['Happy to talk about AI product, agent product and engineering roles.']),
     bullets: L([], []),
     tags: [],
-    links: [{ label: L('jiaedwin0605@gmail.com', 'jiaedwin0605@gmail.com'), href: 'mailto:jiaedwin0605@gmail.com' }, { label: L('GitHub @EdwinjJ1', 'GitHub @EdwinjJ1'), href: 'https://github.com/EdwinjJ1' }],
+    links: [{ label: L('jiaedwin0605@gmail.com', 'jiaedwin0605@gmail.com'), href: 'mailto:jiaedwin0605@gmail.com' }, { label: L('GitHub @EdwinjJ1', 'GitHub @EdwinjJ1'), href: 'https://github.com/EdwinjJ1' }, { label: L('LinkedIn', 'LinkedIn'), href: 'https://www.linkedin.com/in/evan-jia-152108369/' }, { label: L('小红书', 'Xiaohongshu'), href: 'https://www.xiaohongshu.com/user/profile/6147eee3000000000201bfe4' }],
   },
   fries: {
     kicker: L('彩蛋', 'EASTER EGG'),
