@@ -60,6 +60,18 @@ test('联系面板：邮箱、GitHub、领英、小红书都在', () => {
   ]);
 });
 
+test('BuilderSpace：桌上的拼图打开主席面板，链到官网，不自称已获 Arc 认证', () => {
+  assert.equal(HOTS.builderspace.panel, 'builderspace');
+  const p = PANELS.builderspace;
+  assert.match(p.sub.zh, /主席/);
+  assert.match(p.sub.en, /President/);
+  assert.ok(p.links.some((l) => l.href === 'https://www.builderspace.dev'));
+  assert.ok(!/affiliat|official|官方|认证/i.test(JSON.stringify(p)), '社团还在申请 Arc 认证，文案不能暗示已经是官方社团');
+  assert.equal(INTRO_ORDER.indexOf('builderspace'), INTRO_ORDER.indexOf('mosi') + 1);
+  assert.equal(matchTopic('你在 UNSW 办了什么社团').id, 'builderspace');
+  assert.equal(matchTopic('What is the BuilderSpace club?').id, 'builderspace');
+});
+
 test('阅读模式引用的面板都存在', () => {
   INTRO_ORDER.forEach((k) => assert.ok(hasPanel(k), k));
 });

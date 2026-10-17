@@ -3,16 +3,19 @@
 俯视机位、铺满物件、墙上软木板 + 剪报，右侧黑钢框落地窗外是楼群。
 每个可点的东西带 hot 名字，前端按它开面板：
   board / press / monitor / keyboard / mask（切换宇宙）/ zine-echo / zine-roundtable / zine-athena / zine-preuni
-  notebook（博客、日记）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
+  notebook（博客、日记）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / builderspace（拼图吉祥物）
+  news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
 """
+import json
 import math
+import os
 import random
 
 import bmesh
 import bpy
 from mathutils import Euler, Matrix, Vector
 
-from kit import M, T, add, ball, box, cyl, light, plane, slab, torus
+from kit import ROOT, M, T, add, ball, box, cyl, light, plane, slab, torus
 
 WY = 0.58  # 后墙内表面
 rng = random.Random(7)
@@ -42,6 +45,27 @@ def decal(name, w, h, xy, image, yaw=0.0, z=0.002, hot=None, thick=0.0, edge="#f
 def rod(name, p0, p1, r, mat, hot=None, seg=12):
     p0, p1 = Vector(p0), Vector(p1)
     return cyl(name, r, (p1 - p0).length, (p0 + p1) / 2, mat, rot=(p1 - p0).to_track_quat("Z", "Y").to_euler(), seg=seg, hot=hot)
+
+
+def standee(name, outline, size, depth, mat, parent, hot=None, rim=None):
+    """把 2D 轮廓（逆时针，高 1 为单位）立起来挤成厚片：轮廓在 XZ 平面、正面朝 -Y，边缘倒圆角；
+    给了 rim 就用它画倒角那一圈（正反面的描边）。"""
+    bm = bmesh.new()
+    front = [bm.verts.new((u * size, 0, v * size)) for u, v in outline]
+    back = [bm.verts.new((u * size, depth, v * size)) for u, v in outline]
+    bm.faces.new(front)
+    bm.faces.new(back[::-1])
+    n = len(outline)
+    for i in range(n):
+        bm.faces.new((front[i], back[i], back[(i + 1) % n], front[(i + 1) % n])).smooth = True
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    ob = add(name, bm, mat, hot=hot, parent=parent)
+    bev = ob.modifiers.new("bevel", "BEVEL")
+    bev.width, bev.segments, bev.limit_method, bev.angle_limit = depth * 0.22, 3, "ANGLE", R(50)
+    if rim:
+        ob.data.materials.append(rim)
+        bev.material = 1
+    return ob
 
 
 def tbox(name, size, loc, mat, roof):
@@ -275,6 +299,22 @@ def build_right():
         cyl(f"tr_cup_{name}", 0.032 * s, 0.11 * s, (tx, ty, T + 0.18 * s), mat, r2=0.07 * s, hot="trophy")
         for sd in (-1, 1):
             torus(f"tr_handle_{name}{sd}", 0.036 * s, 0.007 * s, (tx + sd * 0.064 * s, ty, T + 0.185 * s), mat, rot=(math.pi / 2, 0, 0), hot="trophy", seg=20, sub=8)
+    # BuilderSpace 创客社的吉祥物：一黄一黑两块拼图拼在一起，站在台灯照着的那块桌面上。
+    # 轮廓和眼睛从官网 logo 描出来（textures.py 的 builderspace_mascot）；黑块和 logo 里一样带一圈暖白光边、眼睛发光
+    with open(os.path.join(ROOT, "tex", "builderspace.json")) as f:
+        mascot = json.load(f)
+    size, depth, stand_h, (bx, by), byaw = 0.13, 0.024, 0.008, (0.715, 0.115), R(-20)
+    half = mascot["aspect"] / 2
+    slab("bs_stand", mascot["aspect"] * size + 0.024, depth + 0.036, stand_h, 0.014, (bx, by, T + stand_h / 2), M("bs_stand", "#18181b", 0.35), rot=(0, 0, byaw), hot="builderspace")
+    root = empty("bs_root", (bx, by, T + stand_h), (0, 0, byaw))
+    for p in mascot["pieces"]:
+        dark = p["name"] == "black"
+        outline = [(u - half, v) for u, v in p["outline"]]
+        rim = M("bs_rim", "#fff1cf", 0.4, emit=1.5) if dark else None
+        standee(f"bs_{p['name']}", outline, size, depth, M(f"bs_{p['name']}", p["color"], 0.3), root, hot="builderspace", rim=rim).location.y = -depth / 2
+        eye = M(f"bs_eye_{p['name']}", p["eye_color"], 0.3, emit=3.0 if dark else 0.0)
+        for k, (u, v, rx, ry) in enumerate(p["eyes"]):
+            ball(f"bs_eye_{p['name']}{k}", 1.0, ((u - half) * size, -depth / 2, v * size), eye, scale=(rx * size, 0.0025, ry * size), hot="builderspace", parent=root)
     # 台灯
     white = M("lamp", "#f4f1ea", 0.4)
     cyl("lamp_base", 0.075, 0.016, (1.02, 0.42, T + 0.008), white)

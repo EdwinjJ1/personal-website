@@ -1,7 +1,7 @@
 # Evan 的个人网站：一张桌子，十个宇宙
 
 Blender 建模的工位场景，同一个机位渲染后合成 10 种印刷 / 漫画风格，网页里用 WebGL 切换。
-点桌上的蜘蛛面具或按空格换宇宙；点物件看对应的项目和经历，相机和拍立得是摄影集，报纸是新闻，笔记本是博客和日记，手柄是全部项目，显示器是 AI 对话，唱片是能放歌的黑胶唱片机，杯子是友链蛛网。
+点桌上的蜘蛛面具或按空格换宇宙；点物件看对应的项目和经历，相机和拍立得是摄影集，报纸是新闻，笔记本是博客和日记，手柄是全部项目，显示器是 AI 对话，唱片是能放歌的黑胶唱片机，杯子是友链蛛网，台灯下那对拼图是 BuilderSpace 创客社。
 
 ![十个宇宙](preview/ten-universes.jpg)
 
@@ -25,7 +25,7 @@ npm test         # 坐标换算 + 内容完整性（node --test，带覆盖率�
 | `site/` | 网页：`js/app.js`（交互）、`js/stage.js`（WebGL）、`js/geometry.js`（坐标换算）、`js/content.js`（中英文案）、`js/music.js`（播放器）、`js/web.js`（友链蛛网布局）、`js/tour.js` + `css/mobile.css`（手机 / 触屏适配） |
 | `site/assets/` | 渲染产物：`styles/<宇宙>.webp`（全尺寸 + `@1x`）、`hot.png`（热点图）、`scene.json`；`data/*.json` 和 `photos/` 是从上一代网站导入的内容 |
 | `blender/` | `kit.py` 建模工具，`layout.py` 场景内容，`scene.py` 分通道渲染入口，`tex/` 贴图 |
-| `pipeline/` | `textures.py` 画场景里的印刷品，`stylize.py` 把通道合成十种风格 |
+| `pipeline/` | `textures.py` 画场景里的印刷品（顺带从 `assets/` 里的 logo 描出 BuilderSpace 拼图吉祥物的轮廓），`stylize.py` 把通道合成十种风格 |
 | `workers/api/` | 后端（Cloudflare Worker）：`/chat` 转发到模型，`/journal` 私人日记，部署方式见下 |
 | `tests/` | 单元测试 |
 
@@ -66,7 +66,7 @@ npm run stylize    # 合成 10 种风格 + 热点图 → site/assets
 - `npm run import` 和 `npm run photos` 读的是作者上一代网站（`../001`），你用不上：直接改 `site/assets/data/` 里的 JSON 就行。
 - 重新渲染是 `npm run textures && npm run render && npm run stylize`，4K 一套在 M1 Max 上十分钟左右。
 - 部署：`site/` 是纯静态目录，放到任何静态托管都行。仓库里的 `.github/workflows/deploy.yml` 是发到 GitHub Pages 的写法，可以照抄。
-- 仓库里的摄影作品、文字和个人形象不在 MIT 范围内，换成你自己的。
+- 仓库里的摄影作品、文字、个人形象，以及 BuilderSpace 的 logo 和吉祥物不在 MIT 范围内，换成你自己的。
 
 不想手改的话，把仓库交给 Claude Code，用大白话说就行。做这个站时说过的几句（原话，略有删减）：
 
@@ -105,4 +105,4 @@ npm run stylize    # 合成 10 种风格 + 热点图 → site/assets
 - 新闻每 6 小时由 `.github/workflows/deploy.yml` 抓一次并重新部署，结果只进当次部署，不往仓库里提交；仓库里的 `news.json` 是兜底快照。本地更新用 `npm run news`。
 - 部署：推到 `main`（改动涉及 `002/site/`）就会发布到 GitHub Pages（evanlin.site）。
 - 简历不放在这个站里，也不进这个仓库。
-- 代码以 MIT 协议开源（见仓库根目录的 `LICENSE`）。摄影作品、文字和个人形象不在此列，版权归作者所有。
+- 代码以 MIT 协议开源（见仓库根目录的 `LICENSE`）。摄影作品、文字和个人形象不在此列，版权归作者所有；BuilderSpace 的 logo 和吉祥物归 BuilderSpace 创客社。

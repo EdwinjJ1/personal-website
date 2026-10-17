@@ -34,6 +34,7 @@ export const HOTS = {
   notebook: { panel: 'blog' },
   hypha: { panel: 'hypha' },
   mosi: { panel: 'mosi' },
+  builderspace: { panel: 'builderspace' },
   news: { panel: 'news' },
   photos: { panel: 'photos' },
   projects: { panel: 'projects' },
@@ -60,6 +61,7 @@ export const LABELS = {
   notebook: { zh: '博客 · 日记', en: 'Blog · Journal' },
   hypha: { zh: 'Hypha · 17 岁的创业', en: 'Hypha · founder at 17' },
   mosi: { zh: '模思智能 · 实习', en: 'MOSI · internship' },
+  builderspace: { zh: 'BuilderSpace · 创客社主席', en: 'BuilderSpace · club president' },
   news: { zh: '今日新闻', en: 'News desk' },
   photos: { zh: '摄影', en: 'Photography' },
   projects: { zh: '全部项目', en: 'All projects' },
@@ -80,12 +82,12 @@ export const PANELS = {
     body: L(
       [
         '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学，方向是机器学习（ML）和计算机视觉（CV）。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
-        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。',
+        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。课外，我在 UNSW 和两位同学发起了 BuilderSpace 创客社，任主席，带大家一起把想法做成能用的东西。',
         '我喜欢从头到尾自己负责一件事：设计、前端、后端、部署、推广。野心这件事上我比较直白：想做一个真正有用的东西，宁可瞄得太高打偏，也不想瞄低了打中。',
       ],
       [
         'I’m Evan Jia (贾岱林), 20, studying Computer Science at UNSW in Sydney, focusing on machine learning (ML) and computer vision (CV). Before university I ran a seven-person Web3 company in Beijing and took its core product past ¥100K in single-day revenue.',
-        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself.',
+        'These days I mostly build voice agents. By day I’m an AI product manager intern at MOSI in Shanghai, owning the voice agent in MosMos: once the PM work is done, I write the code and ship it myself. Outside work I started BuilderSpace, a builders club at UNSW, with two classmates, and I’m its president: we help people turn ideas into things that work.',
         'I like owning a thing end to end: design, frontend, backend, deploy, launch. I’m ambitious in a fairly plain way: I want to build something that actually matters, and I’d rather aim too high and miss than aim low and hit.',
       ],
     ),
@@ -101,8 +103,8 @@ export const PANELS = {
       {
         heading: L('时间线', 'Timeline'),
         items: L(
-          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习'],
-          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI'],
+          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.10 至今　和两位同学发起 BuilderSpace 创客社，任主席'],
+          ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Oct 2026 – now　Started BuilderSpace, a builders club at UNSW, with two classmates; president'],
         ),
       },
       {
@@ -157,6 +159,29 @@ export const PANELS = {
     ],
     tags: ['Flutter', 'Go', 'ASR', 'Tool calling', 'PRD'],
     links: [{ label: L('公司官网', 'Company site'), href: 'https://home.mosi.cn/' }],
+  },
+  // 社团还在申请 Arc 认证：文案只说「从 UNSW 起步」，不写成 UNSW 的官方社团（测试会查）
+  builderspace: {
+    kicker: L('社团 · 2026.10 – 至今', 'CLUB · OCT 2026 – NOW'),
+    title: L('BuilderSpace 创客社', 'BuilderSpace'),
+    sub: L('主席 · 从 UNSW 起步的中英双语创客社', 'President · a bilingual builders club that started at UNSW'),
+    image: { src: L('assets/projects/builderspace.webp', 'assets/projects/builderspace.webp'), alt: L('BuilderSpace 的吉祥物：一黄一黑两块拼在一起的拼图', 'The BuilderSpace mascots: an amber and a black puzzle piece fitted together') },
+    body: L(
+      [
+        'BuilderSpace 是我和两位同学一起发起的创客社，从 UNSW 起步，中英双语。口号是「Bring an idea. Make it work.」：带着想法来，把它做成能用的东西。',
+        '想解决的问题很具体：很多同学成绩很好，却卡在实习这一步，缺的是一段真正做过的项目经历。没有队友、没有节奏、做出来没人试用，那就来这里一起做。桌上那两块拼在一起的拼图，就是社团的吉祥物。',
+      ],
+      [
+        'BuilderSpace is a bilingual builders club I started with two classmates at UNSW. The line is “Bring an idea. Make it work.”: show up with an idea, leave with something that runs.',
+        'The problem it tackles is concrete: plenty of strong students get stuck at the internship step because they have never actually shipped a project. No teammates, no rhythm, nobody to try what they built. So we build it together. The two puzzle pieces fitted together on the desk are the club’s mascots.',
+      ],
+    ),
+    bullets: L(
+      ['作为主席，负责社团的整体方向、对接 Arc（UNSW 学生会），以及和合作方的沟通', '至少两周一场线下活动：Vibe Coding 教学、项目展示、找队友', '做什么不设限：App、网站、小工具，甚至研究都可以', '免费加入，项目归作者所有'],
+      ['As president I own the club’s overall direction, our relationship with Arc (UNSW’s student organisation) and conversations with partners', 'An in-person session at least every two weeks: vibe-coding workshops, demos, finding teammates', 'Build anything: apps, websites, small tools, even research', 'Free to join; your project stays yours'],
+    ),
+    tags: ['President', 'Builders club', 'Bilingual', 'UNSW'],
+    links: [{ label: L('社团官网', 'Club site'), href: 'https://www.builderspace.dev' }],
   },
   echo: {
     kicker: L('团队协作', 'TEAM COLLABORATION'),
@@ -274,7 +299,7 @@ export const PANELS = {
 };
 
 // 阅读模式的顺序
-export const INTRO_ORDER = ['about', 'mosi', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'journal', 'photos', 'news', 'friends', 'contact'];
+export const INTRO_ORDER = ['about', 'mosi', 'builderspace', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'journal', 'photos', 'news', 'friends', 'contact'];
 
 // 这几个面板的正文来自 assets/data/<file>.json（从上一代网站导入，见 pipeline/import_legacy.mjs）
 export const DYNAMIC = {
@@ -313,6 +338,7 @@ export const CHAT = {
     { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，主攻机器学习和计算机视觉，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, focusing on machine learning and computer vision; currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
     { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
+    { id: 'builderspace', keys: ['builderspace', 'buildersoc', '创客社', '社团', 'club', 'society', '主席', 'president'], q: L('你在 UNSW 办的社团是什么？', 'What’s the club you run at UNSW?'), a: L('BuilderSpace 创客社，我是主席。从 UNSW 起步、中英双语，帮想做东西的同学找队友，一起把项目做上线。官网：builderspace.dev', 'BuilderSpace, a bilingual builders club that started at UNSW; I’m the president. We help students find teammates and ship their projects together. Site: builderspace.dev'), panel: 'builderspace' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
     { id: 'contact', keys: ['联系', '邮箱', 'email', 'contact', 'hire', '招'], q: L('怎么联系你？', 'How do I reach you?'), a: L('jiaedwin0605@gmail.com。AI 产品、Agent 方向的机会都欢迎聊。', 'jiaedwin0605@gmail.com. Happy to talk about AI product and agent roles.'), panel: 'contact' },
   ],

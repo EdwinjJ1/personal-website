@@ -1,7 +1,8 @@
 # /// script
-# dependencies = ["numpy", "pillow"]
+# dependencies = ["numpy", "pillow", "opencv-python-headless"]
 # ///
-"""场景里所有“印刷品”的贴图：软木板、剪报、海报、项目刊物、笔记本、屏幕、砖墙、木纹、楼体。
+"""场景里所有“印刷品”的贴图：软木板、剪报、海报、项目刊物、笔记本、屏幕、砖墙、木纹、楼体；
+外加 BuilderSpace 拼图吉祥物的轮廓（builderspace.json，从 assets/ 里的 logo 描出来）。
 
 用法：uv run pipeline/textures.py blender/tex
 内容全部来自简历；改文案改这里，然后重跑 Blender。
@@ -584,8 +585,71 @@ def facade(seed, wall, w=512, h=1024, cols=10, rows=26):
     return im
 
 
+def builderspace_mascot(src=Path(__file__).parent / "assets" / "builderspace-mark.webp"):
+    """BuilderSpace 的吉祥物：从官网 logo 描出一黄一黑两块拼图的轮廓、眼睛和颜色，layout.py 拿去挤成桌上的摆件。
+
+    坐标以整对拼图的高为 1、左下角为原点、y 朝上；eyes 是 [cx, cy, rx, ry]。
+    """
+    import cv2
+
+    rgba = np.asarray(Image.open(src).convert("RGBA")).astype(np.int16)
+    rgb, solid = rgba[..., :3], rgba[..., 3] > 128
+    lum = rgb.mean(-1)
+
+    def disk(r):
+        return cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (2 * r + 1, 2 * r + 1))
+
+    def largest(mask):
+        n, lab, stats, _ = cv2.connectedComponentsWithStats(mask.astype(np.uint8), connectivity=8)
+        return lab == 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA])) if n > 1 else mask
+
+    def hexof(mask):
+        return "#%02x%02x%02x" % tuple(int(c) for c in np.median(rgb[mask], 0))
+
+    def blobs(mask, keep):
+        n, lab, stats, _ = cv2.connectedComponentsWithStats(mask.astype(np.uint8), connectivity=8)
+        found = sorted((s for s in stats[1:] if s[cv2.CC_STAT_AREA] > 40 and keep(s)), key=lambda s: -s[cv2.CC_STAT_AREA])[:2]
+        return sorted(found, key=lambda s: s[0])
+
+    def op(mask, kind, r):
+        return cv2.morphologyEx(mask.astype(np.uint8), kind, disk(r)) > 0
+
+    # 黄块：黄色像素连成一片（眼睛和高光用闭运算补上）。黑块压在黄块前面，带一道白光边：
+    # 不是黄色的不透明像素都归黑块，黄块边上那圈细亮边用开运算去掉；剩下的才是黄块
+    amber = largest(op(solid & (rgb[..., 0] > 150) & (rgb[..., 0] - rgb[..., 2] > 60), cv2.MORPH_CLOSE, 6))
+    black = largest(op(solid & ~amber, cv2.MORPH_OPEN, 5))
+    black = largest(solid & (cv2.GaussianBlur(black.astype(np.float32), (0, 0), 7) > 0.5))   # 抹掉交界处的毛刺
+    masks = [largest(op(solid & ~black, cv2.MORPH_OPEN, 2)), black]
+    ys, xs = np.nonzero(masks[0] | masks[1])
+    x0, y1, h = xs.min(), ys.max(), ys.max() - ys.min()
+
+    def norm(x, y):
+        return [round(float(x - x0) / h, 4), round(float(y1 - y) / h, 4)]
+
+    # 眼睛：黄块上是深色的竖椭圆，黑块上是发亮的竖椭圆；都离边缘远一点，避开白光边和交界处的阴影
+    inner = [cv2.erode(m.astype(np.uint8), disk(r)) > 0 for m, r in zip(masks, (24, 18))]
+    eye_masks = [inner[0] & (lum < 100), inner[1] & (lum > 180)]
+    pieces = []
+    for name, mask, core, eye_mask in zip(("amber", "black"), masks, (amber, black & (lum < 70)), eye_masks):
+        contours, _ = cv2.findContours(mask.astype(np.uint8), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
+        c = max(contours, key=cv2.contourArea)[:, 0].astype(np.float32)
+        k = np.ones(7) / 7   # 像素台阶先抹平，再抽稀
+        c = np.stack([np.convolve(np.r_[c[-3:, i], c[:, i], c[:3, i]], k, "valid") for i in (0, 1)], 1)
+        c = cv2.approxPolyDP(c.reshape(-1, 1, 2).astype(np.float32), 0.6, True)[:, 0]
+        eyes = blobs(eye_mask, lambda s: s[cv2.CC_STAT_HEIGHT] > 1.3 * s[cv2.CC_STAT_WIDTH] and s[cv2.CC_STAT_HEIGHT] < 0.2 * h)
+        pieces.append({
+            "name": name,
+            "color": hexof(core),
+            "eye_color": hexof(eye_mask) if eye_mask.any() else "#000000",
+            "outline": [norm(x, y) for x, y in c[::-1]],   # 图像 y 朝下，倒过来变成逆时针
+            "eyes": [[*norm(s[0] + s[2] / 2, s[1] + s[3] / 2), round(s[2] / 2 / h, 4), round(s[3] / 2 / h, 4)] for s in eyes],
+        })
+    return {"aspect": round(float(xs.max() - x0) / h, 4), "pieces": pieces}
+
+
 def main(out):
     out.mkdir(parents=True, exist_ok=True)
+    (out / "builderspace.json").write_text(json.dumps(builderspace_mascot()))
     board().save(out / "board.png")
     clips = [
         ("NOTES, SHARED", "PreUni · university course notes", "notes", None,
