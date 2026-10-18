@@ -83,6 +83,16 @@ test('模思实习：还没上线的工作写明状态，不写成已上线', ()
   recent.items.en.forEach((item) => assert.match(item, /not (yet )?(shipped|live)|review|test build|sign-off/i, `no status: ${item.slice(0, 30)}`));
 });
 
+test('GitHub 贡献墙：桌上的贡献城打开加宽的贡献墙面板，阅读模式里紧跟 BuilderSpace，对话问得到', () => {
+  assert.equal(HOTS.github.panel, 'github');
+  assert.equal(DYNAMIC.github.file, 'github');
+  assert.equal(DYNAMIC.github.wide, true);
+  assert.equal(INTRO_ORDER.indexOf('github'), INTRO_ORDER.indexOf('builderspace') + 1);
+  assert.equal(matchTopic('你在 GitHub 上提交多吗').id, 'github');
+  assert.equal(matchTopic('How many GitHub contributions do you have?').id, 'github');
+  assert.equal(matchTopic('What did you do in your internship?').id, 'mosi');
+});
+
 test('阅读模式引用的面板都存在', () => {
   INTRO_ORDER.forEach((k) => assert.ok(hasPanel(k), k));
 });

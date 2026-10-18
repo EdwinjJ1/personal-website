@@ -43,6 +43,7 @@ export const HOTS = {
   contact: { panel: 'contact' },
   camera: { panel: 'photos' },
   fries: { panel: 'fries' },
+  github: { panel: 'github' },
 };
 
 export const LABELS = {
@@ -70,6 +71,7 @@ export const LABELS = {
   contact: { zh: '联系我', en: 'Contact' },
   camera: { zh: '摄影', en: 'Photography' },
   fries: { zh: '一盘薯条', en: 'A plate of fries' },
+  github: { zh: 'GitHub · 贡献墙', en: 'GitHub · contributions' },
 };
 
 const L = (zh, en) => ({ zh, en });
@@ -301,7 +303,7 @@ export const PANELS = {
 };
 
 // 阅读模式的顺序
-export const INTRO_ORDER = ['about', 'mosi', 'builderspace', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'journal', 'photos', 'news', 'friends', 'contact'];
+export const INTRO_ORDER = ['about', 'mosi', 'builderspace', 'github', 'roundtable', 'athena', 'awards', 'preuni', 'hypha', 'echo', 'projects', 'blog', 'journal', 'photos', 'news', 'friends', 'contact'];
 
 // 这几个面板的正文来自 assets/data/<file>.json（从上一代网站导入，见 pipeline/import_legacy.mjs）
 export const DYNAMIC = {
@@ -313,6 +315,8 @@ export const DYNAMIC = {
   news: { file: 'news', kicker: L('AI DAILY', 'AI DAILY'), title: L('新闻', 'News desk'), sub: L('AI · 研究 · 行业 · 国际', 'AI · Research · Industry · Global') },
   friends: { file: 'friends', kicker: L('FRIENDS', 'FRIENDS'), title: L('朋友们', 'Friends'), sub: L('他们的站也值得看', 'Their sites are worth a visit') },
   music: { file: 'music', kicker: L('NOW SPINNING', 'NOW SPINNING'), title: L('唱片机', 'Turntable'), sub: L('我的网易云歌单，放下唱针就响', 'My NetEase playlist. Drop the needle.') },
+  // 显示器前那座绿色小城：一根柱子是一天。wide：一整年 53 列要排得下，桌面端面板加宽（见 app.js 的 panelLayout）
+  github: { file: 'github', wide: true, kicker: L('GITHUB · @EdwinjJ1', 'GITHUB · @EdwinjJ1'), title: L('贡献墙', 'Contribution wall'), sub: L('一格是一天，绿得越深，那天提交越多', 'One square per day; the deeper the green, the more I shipped') },
 };
 
 // 桌上那本笔记本里放了两个面板：点开先是博客，面板顶上有一排按钮切到日记
@@ -341,6 +345,7 @@ export const CHAT = {
     { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
     { id: 'builderspace', keys: ['builderspace', 'buildersoc', '创客社', '社团', 'club', 'society', '社长', '主席', 'president'], q: L('你在 UNSW 办的社团是什么？', 'What’s the club you run at UNSW?'), a: L('BuilderSpace 创客社，我是社长。从 UNSW 起步、中英双语，约 200 人，帮想做东西的同学找队友，一起把项目做上线。官网：builderspace.dev', 'BuilderSpace, a bilingual builders club that started at UNSW, about 200 members; I’m the president. We help students find teammates and ship their projects together. Site: builderspace.dev'), panel: 'builderspace' },
+    { id: 'github', keys: ['github', 'commit', '提交', '贡献', 'contribution', '写代码', '代码量', 'coding'], q: L('你平时写多少代码？', 'How much code do you actually ship?'), a: L('过去一年在 GitHub 上两千多次贡献，大多数日子都有提交。显示器前面那座绿色的小城就是这一年：一根柱子是一天，越高那天提交越多。', 'Over two thousand GitHub contributions in the past year, with commits on most days. The little green city in front of the monitor is that year: one tower per day, taller means more commits.'), panel: 'github' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
     { id: 'contact', keys: ['联系', '邮箱', 'email', 'contact', 'hire', '招'], q: L('怎么联系你？', 'How do I reach you?'), a: L('jiaedwin0605@gmail.com。AI 产品、Agent 方向的机会都欢迎聊。', 'jiaedwin0605@gmail.com. Happy to talk about AI product and agent roles.'), panel: 'contact' },
   ],

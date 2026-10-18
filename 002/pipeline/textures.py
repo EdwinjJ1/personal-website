@@ -2,7 +2,8 @@
 # dependencies = ["numpy", "pillow", "opencv-python-headless"]
 # ///
 """场景里所有“印刷品”的贴图：软木板、剪报、海报、项目刊物、笔记本、屏幕、砖墙、木纹、楼体；
-外加 BuilderSpace 拼图吉祥物的轮廓（builderspace.json，从 assets/ 里的 logo 描出来）。
+外加 BuilderSpace 拼图吉祥物的轮廓（builderspace.json，从 assets/ 里的 logo 描出来），
+和 3D 贡献城的网格 + 底座铭牌（skyline.json / skyline_label.png，从 site/assets/data/github.json 转出来）。
 
 用法：uv run pipeline/textures.py blender/tex
 内容全部来自简历；改文案改这里，然后重跑 Blender。
@@ -12,6 +13,7 @@ import math
 import random
 import re
 import sys
+from datetime import date
 from functools import lru_cache
 from pathlib import Path
 
@@ -585,6 +587,32 @@ def facade(seed, wall, w=512, h=1024, cols=10, rows=26):
     return im
 
 
+def skyline(src=ASSETS / "data" / "github.json"):
+    """GitHub 贡献墙「过去一年」那一段 → 桌上 3D 贡献城的网格（layout.py 照着建模）。
+
+    weeks 是一列一周、从旧到新，每列 7 格从周日到周六，和贡献墙一样；每格 [次数, 档位 0–4]，
+    第一周开头、最后一周末尾不在这一年里的格子是 null。数据来自 sync_github.py 写的快照。
+    """
+    doc = json.loads(src.read_text())
+    view = next(v for v in doc["views"] if v["id"] == "last")
+    lead = (date.fromisoformat(view["from"]).weekday() + 1) % 7       # 周日 = 0
+    cells = [None] * lead + [[c, int(lv)] for c, lv in zip(view["counts"], view["levels"])]
+    cells += [None] * (-len(cells) % 7)
+    return {"user": doc["user"], "from": view["from"], "to": view["to"], "total": view["total"], "max": max(view["counts"]),
+            "weeks": [cells[i:i + 7] for i in range(0, len(cells), 7)]}
+
+
+def skyline_label(sky, w=2400, h=110):
+    """贡献城底座正面那条：左边用户名，中间一行小字，右边是这座城建模用的那一年。底色和底座的材质一样。"""
+    im = Image.new("RGB", (w, h), (29, 31, 36))
+    d = ImageDraw.Draw(im)
+    span = " – ".join(f"{s[:4]}.{s[5:7]}" for s in (sky["from"], sky["to"]))
+    d.text((40, h / 2 + 4), f"@{sky['user']}", font=font("din", 84), fill=(236, 233, 226), anchor="lm")
+    d.text((w / 2, h / 2 + 2), f"{sky['total']:,} CONTRIBUTIONS", font=font("mono", 40), fill=(155, 233, 168), anchor="mm")
+    d.text((w - 40, h / 2 + 4), span, font=font("din", 84), fill=(236, 233, 226), anchor="rm")
+    return im
+
+
 def builderspace_mascot(src=Path(__file__).parent / "assets" / "builderspace-mark.webp"):
     """BuilderSpace 的吉祥物：从官网 logo 描出一黄一黑两块拼图的轮廓、眼睛和颜色，layout.py 拿去挤成桌上的摆件。
 
@@ -650,6 +678,9 @@ def builderspace_mascot(src=Path(__file__).parent / "assets" / "builderspace-mar
 def main(out):
     out.mkdir(parents=True, exist_ok=True)
     (out / "builderspace.json").write_text(json.dumps(builderspace_mascot()))
+    sky = skyline()
+    (out / "skyline.json").write_text(json.dumps(sky, separators=(",", ":")))
+    skyline_label(sky).save(out / "skyline_label.png")
     board().save(out / "board.png")
     clips = [
         ("NOTES, SHARED", "PreUni · university course notes", "notes", None,

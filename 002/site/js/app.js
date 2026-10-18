@@ -1,12 +1,13 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261018-1';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261018-2';
 import * as G from './geometry.js?v=20261011-1';
+import { renderGithub, tipLabel } from './github.js';
 import { renderJournal } from './journal.js?v=20261012-2';
 import { coverUrl, createPlayer, fmtTime } from './music.js';
 import { renderNews } from './news.js';
-import { createStage, hexToRgb, styleUrl } from './stage.js?v=20261017-1';
+import { createStage, hexToRgb, styleUrl } from './stage.js?v=20261018-1';
 import { createTour } from './tour.js';
 import { CENTER as WEB_CENTER, earthOf, hostOf, webLayout } from './web.js';
 
@@ -134,6 +135,10 @@ function flyTo(view, dur = 900) {
 
 function panelLayout() {
   const wide = innerWidth >= 900;
+  if (wide && dom.panel.classList.contains('wide')) {     // 贡献墙的面板更宽：物件放进面板左边剩下那块的正中
+    const free = innerWidth - dom.panel.offsetWidth - 48;
+    return { usable: { w: (free * 0.9) / innerWidth, h: 0.8 }, anchor: { x: (16 + free / 2) / innerWidth, y: 0.5 } };
+  }
   if (!wide && mqSide.matches) return { usable: { w: 0.46, h: 0.62 }, anchor: { x: 0.26, y: 0.5 } };    // 横屏手机：面板占右边不到一半
   if (!wide && dock) {      // 竖屏手机：面板从底下升上来，物件放在顶栏和面板之间那一截的正中
     const h = innerHeight - dock;
@@ -470,6 +475,10 @@ const RENDER = {
       navigator.mediaSession.setActionHandler('nexttrack', () => player.step(1));
     }
   },
+  // GitHub 贡献墙：一整年的格子图，点格子去 GitHub 看那一天。排格子、算连续天数都在 github.js
+  github(body, data) {
+    renderGithub(body, data, { el, svg: svgEl, extLink, lang: () => state.lang, open: (url) => window.open(url, '_blank', 'noopener,noreferrer'), touch: () => touchUi.matches, reduceMotion });
+  },
   // 友链画成一张蛛网：Evan 在中心，每个朋友是一根蛛丝另一头的宇宙。布局算法在 web.js。
   friends(body, items) {
     const layout = webLayout(items.length);
@@ -622,6 +631,7 @@ const syncUi = () => { document.documentElement.dataset.ui = state.mode === 'int
 
 function openPanel(key, hotName) {
   tour.stop();
+  dom.panel.classList.toggle('wide', Boolean(DYNAMIC[key]?.wide));
   dom.panelBody.replaceChildren(panelNode(key));
   dom.panel.hidden = false;
   dom.panelBody.scrollTop = 0;
@@ -714,9 +724,13 @@ function hotAt(clientX, clientY, slop = 0) {
   return hotByIndex[idx] || null;
 }
 
+/** 悬停 / 点名时的标签。贡献城的数据到了就带上过去一年的总数，没到就是 LABELS 里的固定文案。 */
+let ghData = null;
+const labelOf = (name) => (name === 'github' && ghData ? tipLabel(ghData, state.lang) : tr(LABELS[name]));
+
 function showTip(name, x, y) {
   if (!name) { dom.tip.hidden = true; return; }
-  dom.tip.textContent = tr(LABELS[name]);
+  dom.tip.textContent = labelOf(name);
   dom.tip.hidden = false;
   dom.tip.style.left = `${G.clamp(x + 18, 8, innerWidth - dom.tip.offsetWidth - 8)}px`;
   dom.tip.style.top = `${G.clamp(y + 20, 8, innerHeight - 48)}px`;
@@ -734,7 +748,7 @@ function nameTip(name) {
   const size = vp();
   const c = G.imageToScreen({ x: hot.center[0], y: hot.center[1] }, state.view, size, img);
   const foot = G.imageToScreen({ x: hot.center[0], y: hot.bbox[3] }, state.view, size, img).y;
-  dom.tip.textContent = tr(LABELS[name]);
+  dom.tip.textContent = labelOf(name);
   dom.tip.hidden = false;
   dom.tip.style.left = `${G.clamp(c.x - dom.tip.offsetWidth / 2, 8, size.w - dom.tip.offsetWidth - 8)}px`;
   dom.tip.style.top = `${G.clamp(Math.min(foot + 8, c.y + 36), 8, size.h - dom.tip.offsetHeight - 8)}px`;
@@ -979,12 +993,12 @@ async function boot() {
   applyLang();
   buildHud();
   try {
-    scene = await (await fetch('assets/scene.json')).json();
+    scene = await (await fetch('assets/scene.json?v=20261018-1')).json();
     img = { w: scene.width, h: scene.height };
     hotByIndex = Object.entries(scene.hots).reduce((arr, [name, h]) => { const next = arr.slice(); next[h.index] = name; return next; }, []);
     stage = createStage(dom.canvas, img);
     progress(0.2);
-    const hotImg = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = 'assets/hot.png'; });
+    const hotImg = await new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = rej; im.src = 'assets/hot.png?v=20261018-1'; });
     const cv = document.createElement('canvas');
     cv.width = hotImg.width;
     cv.height = hotImg.height;
@@ -1005,6 +1019,7 @@ async function boot() {
     dom.loader.classList.add('done');
     wantHiRes();
     idleTour(TOUR_REST);
+    getData('github').then((data) => { ghData = data; }).catch(() => { /* 拿不到就用固定标签 */ });
     STYLES.slice(1).reduce((p, s) => p.then(() => stage.loadStyle(s.id)), Promise.resolve());   // 其余九个宇宙后台慢慢载
   } catch (err) {
     console.error(err);

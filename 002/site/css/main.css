@@ -377,3 +377,48 @@ html[data-style="neon"] .crate-row[aria-current="true"], html[data-style="neon"]
 @media (max-width: 899px) {
   .intro .album-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+/* ── GitHub 贡献墙：一整年 53 列，格子是 GitHub 那四档绿；霓虹宇宙的纸是黑的，换成 GitHub 深色主题那一套 ── */
+@media (min-width: 900px) {
+  .panel.wide { width: min(720px, 60vw); }
+}
+.dyn-github {
+  --gh0: #ebedf0; --gh0: color-mix(in srgb, var(--ink) 9%, var(--paper));
+  --gh1: #9be9a8; --gh2: #40c463; --gh3: #30a14e; --gh4: #216e39;
+}
+html[data-style="neon"] .dyn-github { --gh0: #161b22; --gh1: #0e4429; --gh2: #006d32; --gh3: #26a641; --gh4: #39d353; }
+.gh-years { margin: 4px 0 6px; }
+.gh-years .chip { font-variant-numeric: tabular-nums; }
+.gh-years .chip[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.gh-total { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.card .gh-total { margin: 2px 0 8px; }
+.gh-total strong { font: 400 clamp(46px, 7vw, 66px)/.9 var(--display); letter-spacing: .03em; font-variant-numeric: tabular-nums; text-shadow: 3px 3px 0 var(--gh2); }
+.gh-total span { font-weight: 700; font-style: italic; }
+.gh-wall { padding: 8px 10px 6px 4px; border: var(--edge); box-shadow: 4px 4px 0 var(--ink); background: var(--paper); }
+.gh-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: manipulation; }
+.gh-svg:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+.gh-svg text { font: 700 8.5px var(--text); fill: currentColor; opacity: .7; }
+.gh-c {
+  fill: var(--gh0); stroke: color-mix(in srgb, var(--ink) 18%, transparent); stroke-width: .6; cursor: pointer;
+  transform-box: fill-box; transform-origin: center; transition: transform .12s ease;
+  animation: gh-pop .5s cubic-bezier(.2, 1.5, .4, 1) backwards; animation-delay: calc(var(--w) * 12ms);   /* 打开时一周一周冒出来 */
+}
+/* 选中那格：一块放大的同色高亮盖在最上面 */
+.gh-mark { fill: var(--gh0); stroke: var(--ink); stroke-width: 1.4; opacity: 0; pointer-events: none; transform-box: fill-box; transform-origin: center; transform: scale(1.55); }
+.gh-mark.on { opacity: 1; }
+.gh-c[data-l="1"], .gh-mark[data-l="1"], .gh-sw[data-l="1"] { fill: var(--gh1); background: var(--gh1); }
+.gh-c[data-l="2"], .gh-mark[data-l="2"], .gh-sw[data-l="2"] { fill: var(--gh2); background: var(--gh2); }
+.gh-c[data-l="3"], .gh-mark[data-l="3"], .gh-sw[data-l="3"] { fill: var(--gh3); background: var(--gh3); }
+.gh-c[data-l="4"], .gh-mark[data-l="4"], .gh-sw[data-l="4"] { fill: var(--gh4); background: var(--gh4); }
+.gh-c.gh-future, .gh-mark.gh-future { fill: none; stroke-dasharray: 1.5 1.5; }
+.gh-c.gh-future { cursor: default; }
+@keyframes gh-pop { from { opacity: 0; transform: translateY(6px) scale(.2); } }
+.gh-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 14px; margin: 8px 0 4px; }
+.card .gh-readout { flex: 1 1 260px; min-height: 1.5em; margin: 0; font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
+.card .gh-legend { display: flex; align-items: center; gap: 3px; margin: 0; font-size: 12px; font-weight: 700; opacity: .8; }
+.gh-legend span { margin: 0 3px; }
+.gh-sw { width: 11px; height: 11px; border-radius: 2px; background: var(--gh0); border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent); }
+.gh-stats dd small { display: block; margin-top: 2px; font: 700 12px/1.2 var(--text); letter-spacing: 0; opacity: .7; }
+@media (prefers-reduced-motion: reduce) {
+  .gh-c { animation: none; transition: none; }
+}

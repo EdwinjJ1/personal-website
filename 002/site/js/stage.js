@@ -46,6 +46,16 @@ void main(){
     float pulse = 0.72 + 0.28 * sin(uTime * 5.0);
     col = mix(col, vec3(1.0), inside * 0.10);
     col = mix(col, uHi, near * (1.0 - inside) * pulse);
+    // 贡献城：一道绿光从最早的一周扫到最新的一周，扫过的柱子留一点余光。
+    // 热点图里柱子的像素 B = 255，G 是它在时间轴上的位置（1 最早 … 254 最新，见 stylize.py 的 skyline_track）
+    vec4 hp = texture2D(uHot, uv);
+    if (inside * step(0.99, hp.b) > 0.5) {
+      float d = (hp.g * 255.0 - 1.0) / 253.0 - (fract(uTime * 0.38) * 1.4 - 0.2);
+      float band = exp(-d * d * 1100.0);
+      float trail = step(d, 0.0) * exp(d * 6.0) * 0.45;
+      col = mix(col, vec3(0.224, 0.827, 0.325), min(1.0, band + trail) * 0.85);
+      col += vec3(0.55, 1.0, 0.6) * band * 0.35;
+    }
   }
   gl_FragColor = vec4(col, 1.0);
 }`;
@@ -69,7 +79,7 @@ function loadImage(src) {
 }
 
 /** 一个风格的贴图地址；hi=true 是全尺寸。手机上的小地图也用它，跟舞台走同一份缓存。 */
-export const styleUrl = (id, hi = false, base = 'assets/') => `${base}styles/${id}${hi ? '' : '@1x'}.webp?v=20261017-1`;
+export const styleUrl = (id, hi = false, base = 'assets/') => `${base}styles/${id}${hi ? '' : '@1x'}.webp?v=20261018-1`;
 
 export function hexToRgb(hex) {
   const h = hex.replace('#', '');

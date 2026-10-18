@@ -6,7 +6,7 @@
     uv run pipeline/stylize.py build/passes site/assets [--only comic,noir]
 
 输入：albedo / emit / id / normal / depth + light_<组>.exr + scene.json
-输出：styles/<名字>.webp（及半尺寸 @1x）、hot.png（R 通道 = 热点序号 × 8）、scene.json
+输出：styles/<名字>.webp（及半尺寸 @1x）、hot.png（R 通道 = 热点序号 × 8；G、B 给贡献城的扫光用）、scene.json
 """
 import json
 import os
@@ -107,6 +107,7 @@ class Ctx:
             detail |= (np.abs(la - lr) > 0.13) | (np.abs(A - ar).sum(-1) > 0.34)
         far = self.city
         inner &= ~far
+        inner &= ~self.mask("gh_bars")      # 贡献城的柱子一根才几个像素宽：不画结构线，只留外轮廓和颜色交界，不然整座城会被墨线糊黑
         self.e_outer = (outer & ~far).astype(np.float32)
         self.e_inner = (inner & ~outer).astype(np.float32)
         self.e_detail = (detail & ~outer & ~inner).astype(np.float32)
@@ -382,8 +383,21 @@ def void(C):
 RENDER = {n: globals()[n] for n in STYLES}
 
 
+def skyline_track(C, hot):
+    """贡献城柱子的像素另记两个通道，网页悬停时的扫光用：B = 255，G = 沿时间轴的位置（1 最早 … 254 最新）。
+    时间轴是 layout.py 登记的 surface "skyline"（柱子网格的四角，TL TR BR BL）左右两边中点的连线。其余像素 G、B 和 R 一样。"""
+    corners = C.meta["surfaces"].get("skyline")
+    if not corners:
+        return hot, hot
+    tl, tr, br, bl = (np.array(p, np.float32) for p in corners)
+    a, d = (tl + bl) / 2, (tr + br) / 2 - (tl + bl) / 2
+    t = np.clip(((C.xx - a[0]) * d[0] + (C.yy - a[1]) * d[1]) / float(d @ d), 0, 1)
+    bars = C.mask("gh_bars")
+    return np.where(bars, 1 + np.rint(t * 253), hot).astype(np.uint8), np.where(bars, 255, hot).astype(np.uint8)
+
+
 def export_hot(C, out):
-    """热点图：R = 序号×8（0 = 无）；顺带算每个热点的可见包围盒和中心。"""
+    """热点图：R = 序号×8（0 = 无），G、B 见 skyline_track；顺带算每个热点的可见包围盒和中心。"""
     names = sorted({o["hot"] for o in C.meta["ids"] if o["hot"]})
     hot = np.zeros((C.H, C.W), np.uint8)
     info = {}
@@ -394,8 +408,9 @@ def export_hot(C, out):
         hot[m] = i * 8
         ys, xs = np.nonzero(m)
         info[name] = {"index": i, "bbox": [int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())], "center": [float(xs.mean()), float(ys.mean())]}
-    half = cv2.resize(hot, (C.W // 2, C.H // 2), interpolation=cv2.INTER_NEAREST)
-    Image.fromarray(np.stack([half, half, half], -1)).save(out / "hot.png", optimize=True)
+    half = lambda a: cv2.resize(a, (C.W // 2, C.H // 2), interpolation=cv2.INTER_NEAREST)
+    track, bars = skyline_track(C, hot)
+    Image.fromarray(np.stack([half(hot), half(track), half(bars)], -1)).save(out / "hot.png", optimize=True)
     scene = {"width": C.W, "height": C.H, "styles": STYLES, "hots": info, "surfaces": C.meta["surfaces"]}
     (out / "scene.json").write_text(json.dumps(scene, ensure_ascii=False))
 

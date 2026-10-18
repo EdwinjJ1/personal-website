@@ -4,7 +4,7 @@
 每个可点的东西带 hot 名字，前端按它开面板：
   board / press / monitor / keyboard / mask（切换宇宙）/ zine-echo / zine-roundtable / zine-athena / zine-preuni
   notebook（博客、日记）/ phone / trophy / hypha / roundtable / camera + photos（摄影）/ mosi / builderspace（拼图吉祥物）
-  news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries
+  news（报纸）/ projects（手柄）/ friends（杯子）/ music（唱片）/ contact / fries / github（显示器前的 3D 贡献城）
 """
 import json
 import math
@@ -15,7 +15,7 @@ import bmesh
 import bpy
 from mathutils import Euler, Matrix, Vector
 
-from kit import ROOT, M, T, add, ball, box, cyl, light, plane, slab, torus
+from kit import ROOT, SURFACES, M, T, add, ball, box, cyl, light, plane, slab, torus
 
 WY = 0.58  # 后墙内表面
 rng = random.Random(7)
@@ -201,8 +201,50 @@ def build_monitor():
     slab("mon_base", 0.26, 0.17, 0.012, 0.03, (0, 0.05, 0.006), silver, hot="monitor").parent = root
     lt = light("screen_light", "AREA", "screen", 6, "#ffb07a", (0, -0.06, 0), rot=(-math.pi / 2, 0, 0), size=0.6, size_y=0.36)
     lt.parent = tilt
-    decal("sticky_a", 0.085, 0.071, (-0.80, 0.08), "sticky_1.png", yaw=-9, hot="monitor")
+    decal("sticky_a", 0.085, 0.071, (-0.87, 0.045), "sticky_1.png", yaw=-9, hot="monitor")   # 往左前方挪了一点，给贡献城的底座让位
     decal("sticky_b", 0.085, 0.071, (-0.40, 0.07), "sticky_0.png", yaw=7, hot="keyboard")
+
+
+def build_skyline():
+    """GitHub 贡献城：过去一年每天一根柱子，53 周 × 7 天，和贡献墙一样从左到右是从旧到新、最后面一排是周日。
+    柱子挨着立，高度按当天的贡献次数（开根号，小的日子也看得见），颜色是 GitHub 的四档绿；没有贡献的日子是一块薄砖。
+    站在显示器前面一块梯形底座上，底座正面印着用户名和这一年。数据是 textures.py 从 github.json 转出来的 skyline.json。
+    柱子的网格四角登记成 surface "skyline"：stylize.py 照它给柱子的每个像素算出在时间轴上的位置，网页悬停时的扫光用。"""
+    with open(os.path.join(ROOT, "tex", "skyline.json")) as f:
+        sky = json.load(f)
+    weeks, top = sky["weeks"], max(1, sky["max"])
+    P, hb, slope, rim = 0.0088, 0.016, 0.014, 0.006       # 柱子边长、底座高、底座斜面的水平宽、柱子外留的边
+    gx, gy = len(weeks) * P / 2, 7 * P / 2
+    root = empty("gh_root", (-0.55, 0.17, T), (0, 0, R(4)))
+    bm = bmesh.new()
+    ring = lambda ex, ey, z: [bm.verts.new((sx * ex, sy * ey, z)) for sx, sy in ((-1, -1), (1, -1), (1, 1), (-1, 1))]
+    lo, hi = ring(gx + rim + slope, gy + rim + slope, 0.0), ring(gx + rim, gy + rim, hb)
+    bm.faces.new(hi)
+    bm.faces.new(lo[::-1])
+    for i in range(4):
+        bm.faces.new((lo[i], lo[(i + 1) % 4], hi[(i + 1) % 4], hi[i]))
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    add("gh_base", bm, M("gh_base", "#1d1f24", 0.45), hot="github", parent=root)
+    # 正面斜面上的铭牌：竖直朝 -Y 的平面往后仰到和斜面一样，再沿法线往外挪一点免得和底座打架
+    lean = math.atan2(slope, hb)
+    out = Vector((0, -math.cos(lean), math.sin(lean)))
+    mid = Vector((0, -(gy + rim + slope / 2), hb / 2)) + out * 0.0005
+    plane("gh_label", 2 * (gx + rim + slope / 2) - 0.012, math.hypot(slope, hb) * 0.72, mid, tex("skyline_label.png", rough=0.6), rot=(-lean, 0, 0), hot="github", parent=root)
+    mats = [M("gh_l0", "#3a3e47", 0.6)] + [M(f"gh_l{k}", c, 0.45) for k, c in enumerate(("#9be9a8", "#40c463", "#30a14e", "#216e39"), 1)]
+    bm = bmesh.new()
+    for w, week in enumerate(weeks):
+        for d, cell in enumerate(week):
+            if cell is None:
+                continue
+            count, level = cell
+            h = 0.0012 if count == 0 else 0.005 + 0.075 * math.sqrt(count / top)
+            m = Matrix.Translation((-gx + (w + 0.5) * P, gy - (d + 0.5) * P, hb + h / 2)) @ Matrix.Diagonal((P, P, h, 1))
+            for f in {f for v in bmesh.ops.create_cube(bm, size=1.0, matrix=m)["verts"] for f in v.link_faces}:
+                f.material_index = level if count else 0
+    bars = add("gh_bars", bm, mats[0], hot="github", parent=root)
+    for mat in mats[1:]:
+        bars.data.materials.append(mat)
+    SURFACES["skyline"] = (root, [Vector((-gx, gy, hb)), Vector((gx, gy, hb)), Vector((gx, -gy, hb)), Vector((-gx, -gy, hb))])
 
 
 def build_left():
@@ -407,6 +449,7 @@ def build(scene):
     build_wall_stuff()
     build_desk()
     build_monitor()
+    build_skyline()
     build_left()
     build_center()
     build_right()
