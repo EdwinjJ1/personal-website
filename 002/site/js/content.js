@@ -61,7 +61,7 @@ export const LABELS = {
   notebook: { zh: '博客 · 日记', en: 'Blog · Journal' },
   hypha: { zh: 'Hypha · 17 岁的创业', en: 'Hypha · founder at 17' },
   mosi: { zh: '模思智能 · 实习', en: 'MOSI · internship' },
-  builderspace: { zh: 'BuilderSpace · 创客社主席', en: 'BuilderSpace · club president' },
+  builderspace: { zh: 'BuilderSpace · 创客社社长', en: 'BuilderSpace · club president' },
   news: { zh: '今日新闻', en: 'News desk' },
   photos: { zh: '摄影', en: 'Photography' },
   projects: { zh: '全部项目', en: 'All projects' },
@@ -82,7 +82,7 @@ export const PANELS = {
     body: L(
       [
         '我是贾岱林，英文名 Evan，20 岁，在悉尼的新南威尔士大学（UNSW）读计算机科学，方向是机器学习（ML）和计算机视觉（CV）。上大学之前，我在北京带过一家 7 个人的 Web3 公司，核心产品做到过单日营业额 10 万元以上。',
-        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。课外，我在 UNSW 和两位同学发起了 BuilderSpace 创客社，任主席，带大家一起把想法做成能用的东西。',
+        '现在我主要做语音 Agent。白天在上海模思智能做 AI 产品经理实习，负责 MosMos 的语音 Agent：产品经理的活干完，我会自己把代码写完、推上线。课外，我在 UNSW 和两位同学发起了 BuilderSpace 创客社，任社长，带大家一起把想法做成能用的东西。',
         '我喜欢从头到尾自己负责一件事：设计、前端、后端、部署、推广。野心这件事上我比较直白：想做一个真正有用的东西，宁可瞄得太高打偏，也不想瞄低了打中。',
       ],
       [
@@ -103,7 +103,7 @@ export const PANELS = {
       {
         heading: L('时间线', 'Timeline'),
         items: L(
-          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.10 至今　和两位同学发起 BuilderSpace 创客社，任主席'],
+          ['2023.7 – 2024.7　创立 Hypha，任 CEO，带 7 人团队', '2025.2　入读 UNSW 计算机科学', '2025.6 – 2026.5　PreUni：课程笔记分享站', '2026.6 – 7　Roundtable 开源，拿下飞书 AI 校园挑战赛 Agent 赛道 Top 3', '2026.7 – 8　Athena 获 Susquehanna Prize；Akeso 入围 ICON × Lyra 决赛', '2026.9 至今　模思智能 AI 产品经理实习', '2026.10 至今　和两位同学发起 BuilderSpace 创客社，任社长'],
           ['Jul 2023 – Jul 2024　Founded Hypha, CEO of a team of seven', 'Feb 2025　Started Computer Science at UNSW', 'Jun 2025 – May 2026　PreUni: course notes, shared', 'Jun – Jul 2026　Open-sourced Roundtable; Top 3 in the Agent track of the Feishu AI Campus Challenge', 'Jul – Aug 2026　Athena won the Susquehanna Prize; Akeso reached the ICON × Lyra final', 'Sep 2026 – now　AI PM intern at MOSI', 'Oct 2026 – now　Started BuilderSpace, a builders club at UNSW, with two classmates; president'],
         ),
       },
@@ -117,8 +117,8 @@ export const PANELS = {
       {
         heading: L('技能', 'Skills'),
         items: L(
-          ['语言：TypeScript、Swift、Python、Dart、Go', '端：Next.js、React Native（Expo）、SwiftUI、Flutter', 'AI：LLM API、Function Calling、Agent 运行时与工具层设计、Prompt / Context Engineering', '基础设施：Cloudflare Workers、Vercel、Postgres、Stripe'],
-          ['Languages: TypeScript, Swift, Python, Dart, Go', 'Clients: Next.js, React Native (Expo), SwiftUI, Flutter', 'AI: LLM APIs, function calling, agent runtime and tool design, prompt / context engineering', 'Infra: Cloudflare Workers, Vercel, Postgres, Stripe'],
+          ['语言：TypeScript、Swift、Rust、Python、Dart、Go', '端：Next.js、React Native（Expo）、SwiftUI、Flutter', 'AI：LLM API、Function Calling、Agent 运行时与工具层设计、Prompt / Context Engineering', '基础设施：Cloudflare Workers、Vercel、Postgres、Stripe'],
+          ['Languages: TypeScript, Swift, Rust, Python, Dart, Go', 'Clients: Next.js, React Native (Expo), SwiftUI, Flutter', 'AI: LLM APIs, function calling, agent runtime and tool design, prompt / context engineering', 'Infra: Cloudflare Workers, Vercel, Postgres, Stripe'],
         ),
       },
     ],
@@ -143,6 +143,17 @@ export const PANELS = {
         ),
       },
       {
+        heading: L('10 月：多轮语音对话、截图提问、会议实时转写（开发中）', 'October: multi-turn voice, screenshot Q&A, live meeting transcription (in progress)'),
+        items: L(
+          ['多轮语音对话：唤起后可以连续说话完成追问和修改，说完自动断句，回答后再收音 20 秒等追问；会话内记住最近 6 轮和唤起时的选区，缺信息先追问，能就地修改本次已保存的条目。改动横跨 Flutter/Dart 客户端、macOS 原生回答卡和 Go 服务端；主链路已实现，进入产品评审，尚未上线',
+            '截图提问（我是需求 Owner）：按 ⌥V 或说「截个图」框选屏幕，带图向问答 AI 提问，报错、外文、图表都能直接问，只上传框选的那一块。写了 PRD，并完成 macOS 端和服务端实现，测试包跑通三类场景；目前在评审，尚未上线',
+            '会议实时转写：接入豆包双向流式语音识别，Flutter 采集 16 kHz PCM、每 200 ms 一包，经 Go 的 WebSocket 服务转发，增量文字实时刷新会议页和原生悬浮胶囊；已在本地测试版跑通，生产环境的失败切换和长会议稳定性还在验收'],
+          ['Multi-turn voice: after one wake-up you keep talking to follow up and correct; it detects the end of each utterance, keeps listening 20s for a follow-up, remembers the last 6 turns and the selection, asks before acting when information is missing, and edits items saved earlier in the same conversation in place. Spans the Flutter/Dart client, the native macOS answer card and the Go backend; the main path works and is in product review, not yet shipped',
+            'Screenshot Q&A (I own the spec): press ⌥V or say “take a screenshot”, drag over part of the screen, and ask the assistant about it, from error dialogs to foreign-language text and charts; only the selected region is uploaded. Wrote the PRD and built the macOS client and server side; a test build passed three scenarios, now in review and not yet shipped',
+            'Live meeting transcription: integrated Doubao bidirectional streaming ASR; Flutter captures 16 kHz PCM in 200 ms packets, a Go WebSocket service relays them, and partial text updates the meeting page and the native floating capsule in real time. Verified in a local test build; production failover and long-meeting stability still need sign-off'],
+        ),
+      },
+      {
         heading: L('会议转写兜底策略', 'Meeting transcription fallback'),
         items: L(
           ['背景：会议转写依赖 MOSS 主通道，任务失败或长时间无结果时，用户拿不到逐字稿', '回退规则：明确失败立即切换豆包录音文件识别；503 / 429 等临时错误按 5 / 10 / 20 / 40 秒退避、最多重试 5 次后再切换；已受理但 30 分钟无结果同样切换', '双通道取舍：完整录音走录音文件识别（带时间戳和说话人分离），流式识别只作逐步上屏的兜底、默认关闭', '验证：89.4 秒录音在主通道被模拟拒绝后，约 15 秒返回 25 段、区分 2 位说话人的逐字稿'],
@@ -157,29 +168,20 @@ export const PANELS = {
         ),
       },
     ],
-    tags: ['Flutter', 'Go', 'ASR', 'Tool calling', 'PRD'],
+    tags: ['Flutter', 'Swift', 'Go', 'ASR', 'WebSocket', 'Tool calling', 'PRD'],
     links: [{ label: L('公司官网', 'Company site'), href: 'https://home.mosi.cn/' }],
   },
-  // 社团还在申请 Arc 认证：文案只说「从 UNSW 起步」，不写成 UNSW 的官方社团（测试会查）
+  // 社团还在申请 Arc 认证：文案只说「从 UNSW 起步」，不写成 UNSW 的官方社团（测试会查）。这一段刻意写短：两三行
   builderspace: {
     kicker: L('社团 · 2026.10 – 至今', 'CLUB · OCT 2026 – NOW'),
     title: L('BuilderSpace 创客社', 'BuilderSpace'),
-    sub: L('主席 · 从 UNSW 起步的中英双语创客社', 'President · a bilingual builders club that started at UNSW'),
+    sub: L('社长 · 约 200 人 · 从 UNSW 起步的中英双语创客社', 'President · about 200 members · a bilingual builders club that started at UNSW'),
     image: { src: L('assets/projects/builderspace.webp', 'assets/projects/builderspace.webp'), alt: L('BuilderSpace 的吉祥物：一黄一黑两块拼在一起的拼图', 'The BuilderSpace mascots: an amber and a black puzzle piece fitted together') },
     body: L(
-      [
-        'BuilderSpace 是我和两位同学一起发起的创客社，从 UNSW 起步，中英双语。口号是「Bring an idea. Make it work.」：带着想法来，把它做成能用的东西。',
-        '想解决的问题很具体：很多同学成绩很好，却卡在实习这一步，缺的是一段真正做过的项目经历。没有队友、没有节奏、做出来没人试用，那就来这里一起做。桌上那两块拼在一起的拼图，就是社团的吉祥物。',
-      ],
-      [
-        'BuilderSpace is a bilingual builders club I started with two classmates at UNSW. The line is “Bring an idea. Make it work.”: show up with an idea, leave with something that runs.',
-        'The problem it tackles is concrete: plenty of strong students get stuck at the internship step because they have never actually shipped a project. No teammates, no rhythm, nobody to try what they built. So we build it together. The two puzzle pieces fitted together on the desk are the club’s mascots.',
-      ],
+      ['我是社长，负责社团运营：定方向，对接 Arc 和合作方。社团帮想做东西的同学找队友，至少两周一场线下活动，一起把想法做成能用的东西。'],
+      ['As president I run the club: I set its direction and work with Arc and our partners. We help students find teammates and ship what they build, with an in-person session at least every two weeks.'],
     ),
-    bullets: L(
-      ['作为主席，负责社团的整体方向、对接 Arc（UNSW 学生会），以及和合作方的沟通', '至少两周一场线下活动：Vibe Coding 教学、项目展示、找队友', '做什么不设限：App、网站、小工具，甚至研究都可以', '免费加入，项目归作者所有'],
-      ['As president I own the club’s overall direction, our relationship with Arc (UNSW’s student organisation) and conversations with partners', 'An in-person session at least every two weeks: vibe-coding workshops, demos, finding teammates', 'Build anything: apps, websites, small tools, even research', 'Free to join; your project stays yours'],
-    ),
+    bullets: L([], []),
     tags: ['President', 'Builders club', 'Bilingual', 'UNSW'],
     links: [{ label: L('社团官网', 'Club site'), href: 'https://www.builderspace.dev' }],
   },
@@ -338,7 +340,7 @@ export const CHAT = {
     { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，主攻机器学习和计算机视觉，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, focusing on machine learning and computer vision; currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
     { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
     { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
-    { id: 'builderspace', keys: ['builderspace', 'buildersoc', '创客社', '社团', 'club', 'society', '主席', 'president'], q: L('你在 UNSW 办的社团是什么？', 'What’s the club you run at UNSW?'), a: L('BuilderSpace 创客社，我是主席。从 UNSW 起步、中英双语，帮想做东西的同学找队友，一起把项目做上线。官网：builderspace.dev', 'BuilderSpace, a bilingual builders club that started at UNSW; I’m the president. We help students find teammates and ship their projects together. Site: builderspace.dev'), panel: 'builderspace' },
+    { id: 'builderspace', keys: ['builderspace', 'buildersoc', '创客社', '社团', 'club', 'society', '社长', '主席', 'president'], q: L('你在 UNSW 办的社团是什么？', 'What’s the club you run at UNSW?'), a: L('BuilderSpace 创客社，我是社长。从 UNSW 起步、中英双语，约 200 人，帮想做东西的同学找队友，一起把项目做上线。官网：builderspace.dev', 'BuilderSpace, a bilingual builders club that started at UNSW, about 200 members; I’m the president. We help students find teammates and ship their projects together. Site: builderspace.dev'), panel: 'builderspace' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },
     { id: 'contact', keys: ['联系', '邮箱', 'email', 'contact', 'hire', '招'], q: L('怎么联系你？', 'How do I reach you?'), a: L('jiaedwin0605@gmail.com。AI 产品、Agent 方向的机会都欢迎聊。', 'jiaedwin0605@gmail.com. Happy to talk about AI product and agent roles.'), panel: 'contact' },
   ],

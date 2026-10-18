@@ -60,16 +60,27 @@ test('联系面板：邮箱、GitHub、领英、小红书都在', () => {
   ]);
 });
 
-test('BuilderSpace：桌上的拼图打开主席面板，链到官网，不自称已获 Arc 认证', () => {
+test('BuilderSpace：桌上的拼图打开社长面板，写得简短，链到官网，不自称已获 Arc 认证', () => {
   assert.equal(HOTS.builderspace.panel, 'builderspace');
   const p = PANELS.builderspace;
-  assert.match(p.sub.zh, /主席/);
+  assert.match(p.sub.zh, /社长/);
+  assert.match(p.sub.zh, /200 人/);
   assert.match(p.sub.en, /President/);
+  assert.match(p.body.zh.join(''), /运营/);
+  assert.ok(p.body.zh.length === 1 && p.bullets.zh.length === 0 && !p.sections, '这一段只留两三行：一段正文，不加要点');
   assert.ok(p.links.some((l) => l.href === 'https://www.builderspace.dev'));
   assert.ok(!/affiliat|official|官方|认证/i.test(JSON.stringify(p)), '社团还在申请 Arc 认证，文案不能暗示已经是官方社团');
+  assert.ok(!/主席/.test(JSON.stringify({ p, label: LABELS.builderspace, about: PANELS.about })), '职位统一写社长');
   assert.equal(INTRO_ORDER.indexOf('builderspace'), INTRO_ORDER.indexOf('mosi') + 1);
   assert.equal(matchTopic('你在 UNSW 办了什么社团').id, 'builderspace');
   assert.equal(matchTopic('What is the BuilderSpace club?').id, 'builderspace');
+});
+
+test('模思实习：还没上线的工作写明状态，不写成已上线', () => {
+  const recent = PANELS.mosi.sections.find((s) => /截图提问/.test(s.heading.zh + s.items.zh.join('')));
+  assert.ok(recent, '模思面板里要有 10 月的新工作（截图提问等）');
+  recent.items.zh.forEach((item) => assert.match(item, /未上线|评审|验收|测试版/, `没写状态：${item.slice(0, 20)}`));
+  recent.items.en.forEach((item) => assert.match(item, /not (yet )?(shipped|live)|review|test build|sign-off/i, `no status: ${item.slice(0, 30)}`));
 });
 
 test('阅读模式引用的面板都存在', () => {
