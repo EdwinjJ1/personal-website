@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { parseArgs, request, run } from '../pipeline/journal.mjs';
+import { keychainPassword, parseArgs, request, resolvePassword, run } from '../pipeline/journal.mjs';
 
 const calls = [];
 const fetchImpl = async (url, init) => {
@@ -41,6 +41,22 @@ test('push 只传 <日期>.md，其余文件忽略', async () => {
   const out = await run(ctx, parseArgs(['push', 'dir']), (f) => `读:${f}`, () => ['2026-10-12.md', 'notes.txt', '.DS_Store', '2026-03-07.md']);
   assert.equal(out, '已上传 2 篇：2026-03-07, 2026-10-12');
   assert.deepEqual(calls.map((c) => c.url.replace('https://api.test', '')), ['/journal/2026-03-07', '/journal/2026-10-12']);
+});
+
+test('密码先用环境变量，没有再去钥匙串取', () => {
+  assert.equal(resolvePassword({ JOURNAL_PASSWORD: 'env' }, () => 'kc'), 'env');
+  assert.equal(resolvePassword({}, () => 'kc'), 'kc');
+  assert.equal(resolvePassword({}, () => ''), '');
+});
+
+test('钥匙串：只在 macOS 上问 security，取不到就是空', () => {
+  const asked = [];
+  const spawn = (cmd, args) => { asked.push([cmd, ...args]); return { status: 0, stdout: 'pw\n' }; };
+  assert.equal(keychainPassword('darwin', spawn), 'pw');
+  assert.deepEqual(asked, [['security', 'find-generic-password', '-s', 'evanlin-journal', '-w']]);
+  assert.equal(keychainPassword('darwin', () => ({ status: 44, stdout: '' })), '');
+  assert.equal(keychainPassword('darwin', () => ({ error: new Error('ENOENT') })), '');
+  assert.equal(keychainPassword('linux', () => assert.fail('不该调用')), '');
 });
 
 test('坏日期、空文字、未知命令、密码不对都报错', async () => {

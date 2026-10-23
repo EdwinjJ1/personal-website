@@ -28,4 +28,10 @@ JOURNAL_PASSWORD=... node pipeline/journal.mjs list
 JOURNAL_PASSWORD=... node pipeline/journal.mjs append 2026-10-12 "今天很专注" --section "我的感悟（Edwin）"
 ```
 
+在 Evan 自己的 Mac 上，密码存在钥匙串里（服务名 `evanlin-journal`）。命令行没设 `JOURNAL_PASSWORD` 时会自己去钥匙串取，AI 直接跑 `node pipeline/journal.mjs …` 就行，不用碰密码。换了密码就用同一条命令再存一次：
+
+```sh
+security add-generic-password -U -s evanlin-journal -a "$USER" -w
+```
+
 改之前先 `GET` 一遍；整篇 `PUT` 会覆盖掉原文，只想补一句就用 `append`。
