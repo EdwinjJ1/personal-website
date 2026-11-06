@@ -130,13 +130,27 @@ export const PANELS = {
   mosi: {
     kicker: L('实习 · 2026.9 – 至今', 'INTERNSHIP · SEP 2026 – NOW'),
     title: L('模思智能 MOSI', 'MOSI Intelligence'),
-    sub: L('AI 产品经理实习生 · MosMos AI 语音助手', 'AI Product Manager Intern · MosMos voice assistant'),
+    sub: L('AI 产品经理实习生 · MosMos AI 语音助手 · MOSS-Image 开源仓库核心贡献者', 'AI Product Manager Intern · MosMos voice assistant · Core contributor to the MOSS-Image open-source repo'),
     body: L(
       ['MosMos 是模思智能面向办公场景的 AI 语音助手（macOS / Windows，Flutter 客户端 + Go 服务端）。我入职首月主导了语音 Agent 的「选中提问 + 多轮对话 + 工具调用」，从策划、推动评审到验收，并且超出产品岗的职责，自己把代码写完、合入并上线。'],
       ['MosMos is MOSI’s AI voice assistant for office work (macOS / Windows, a Flutter client and a Go backend). In my first month I owned “ask about selection + multi-turn + tool calling” for its voice agent, from spec and review to acceptance, and went beyond the PM role to write, merge and ship the code myself.'],
     ),
     bullets: L([], []),
     sections: [
+      // 事实都能在 OpenMOSS/MOSS-Image 的 Issue #5、PR #7 和 #8 里查到；身份写「开源仓库核心贡献者」，不写成模型的共创者
+      {
+        heading: L('MOSS-Image 开源：Apple Silicon（Mac）推理支持，已合入官方仓库', 'MOSS-Image open source: Apple silicon (Mac) inference, merged upstream'),
+        items: L(
+          ['MOSS-Image 是模思智能开源的图像生成模型（GitHub 2.6k+ star），原本只能在 NVIDIA 显卡（CUDA）上跑，Mac 上直接报错。我提出 Mac 支持方案（Issue #5）并完成实现（PR #7），10 月 27 日由官方维护者合入主分支，成为这个开源仓库的核心贡献者',
+            '推理路径：文本编码器和 DiT 分阶段加载到 Apple GPU（MPS），两路提示词编码完就释放编码器再开始采样，并缓存最近 8 组提示词编码，32 GB 内存的 M1 Max 也能出 1024×1024 的图（20 步约 5 分钟，含加载）；把 MPS 不支持的 FP64 时间步计算挪到 CPU，同一处修复也让 ComfyUI 节点在 Mac 上跑通；没有 CUDA 时 Gradio 界面自动切到 MPS',
+            '工程交付：13 个文件、+619 行，含 7 项 CPU 回归测试（其中一项专门检查原有 CUDA 路径不变）、Mac 一键安装和启动脚本、中英文 Mac 指南；官方 README 的「Apple Silicon / MPS」一节链接的就是这份指南',
+            '社区验证：另外两位开发者分别在 M5 Max 128 GB（ComfyUI）和 M4 Pro 64 GB 上复现成功；其中一位关掉了自己方向重叠的 PR #8，把测试数据并进我的 PR：分阶段释放文本编码器省下约 10 GB 峰值内存，出图逐像素一致'],
+          ['MOSS-Image is MOSI’s open-source image generation model (2.6k+ GitHub stars). It only ran on NVIDIA GPUs (CUDA) and failed on Macs. I proposed Mac support (Issue #5) and built it (PR #7); the maintainers merged it into main on 27 Oct, making me a core contributor to the open-source repo',
+            'Inference path: the text encoder and DiT are staged onto the Apple GPU (MPS); both prompt branches are encoded and the encoder is released before sampling, with the last 8 prompt encodings cached, so a 32 GB M1 Max renders 1024×1024 images (20 steps in about 5 minutes, loading included). The FP64 timestep computation MPS can’t run moved to the CPU, and the same fix gets the ComfyUI node running on Macs; Gradio switches to MPS when CUDA isn’t available',
+            'Delivery: 13 files, +619 lines, with 7 CPU regression tests (one checks the existing CUDA path is unchanged), one-step Mac setup and launch scripts, and a Mac guide in Chinese and English; the official README’s “Apple Silicon / MPS” section links to that guide',
+            'Community validation: two other developers reproduced it on an M5 Max 128 GB (ComfyUI) and an M4 Pro 64 GB. One closed their overlapping PR #8 and brought their data into mine: releasing the text encoder after encoding cut peak memory by about 10 GB with pixel-identical output'],
+        ),
+      },
       {
         heading: L('语音 Agent：选中提问 + 多轮对话 + 工具调用', 'Voice agent: selection Q&A, multi-turn, tool calling'),
         items: L(
@@ -170,8 +184,8 @@ export const PANELS = {
         ),
       },
     ],
-    tags: ['Flutter', 'Swift', 'Go', 'ASR', 'WebSocket', 'Tool calling', 'PRD'],
-    links: [{ label: L('公司官网', 'Company site'), href: 'https://home.mosi.cn/' }],
+    tags: ['Flutter', 'Swift', 'Go', 'PyTorch', 'Apple Silicon', 'ASR', 'WebSocket', 'Tool calling', 'PRD'],
+    links: [{ label: L('MOSS-Image PR #7', 'MOSS-Image PR #7'), href: 'https://github.com/OpenMOSS/MOSS-Image/pull/7' }, { label: L('公司官网', 'Company site'), href: 'https://home.mosi.cn/' }],
   },
   // 社团还在申请 Arc 认证：文案只说「从 UNSW 起步」，不写成 UNSW 的官方社团（测试会查）。这一段刻意写短：两三行
   builderspace: {
@@ -343,7 +357,7 @@ export const CHAT = {
   topics: [
     { id: 'who', keys: ['你是谁', '介绍', 'who', 'about', 'yourself', 'evan'], q: L('你是谁？', 'Who are you?'), a: L('贾岱林，Evan。20 岁，UNSW 计算机在读，主攻机器学习和计算机视觉，现在在上海模思智能做 AI 产品经理实习。我做语音 Agent：定方向，也自己写代码上线。', 'Evan Jia, 20. CS at UNSW, focusing on machine learning and computer vision; currently an AI PM intern at MOSI in Shanghai. I build voice agents: I set direction and ship the code myself.') },
     { id: 'echo', suggested: false, keys: ['回声', 'echo'], q: L('参与过 Echo Agent 吗？', 'Did you contribute to Echo Agent?'), a: L('我帮助团队制作 Echo Agent。', 'I helped the team build Echo Agent.'), panel: 'echo' },
-    { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
+    { id: 'mosi', keys: ['实习', '模思', 'mosi', 'mosmos', 'moss', 'intern', 'work'], q: L('实习做了什么？', 'What did you do at MOSI?'), a: L('主导 MosMos 语音 Agent 的选中提问、多轮对话和工具调用，并且自己把代码写完上线；给模思开源的图像模型 MOSS-Image 加上了 Mac（Apple Silicon）推理支持，PR 已合入官方仓库；另外做了会议转写的豆包兜底策略，参与了 MOSS-VL 和 Realtime 的 API 文档。', 'I owned selection Q&A, multi-turn and tool calling for the MosMos voice agent and shipped the code myself, added Mac (Apple silicon) inference to MOSI’s open-source image model MOSS-Image with a PR merged upstream, built the Doubao fallback for meeting transcription, and contributed to the MOSS-VL and Realtime API docs.'), panel: 'mosi' },
     { id: 'builderspace', keys: ['builderspace', 'buildersoc', '创客社', '社团', 'club', 'society', '社长', '主席', 'president'], q: L('你在 UNSW 办的社团是什么？', 'What’s the club you run at UNSW?'), a: L('BuilderSpace 创客社，我是社长。从 UNSW 起步、中英双语，约 200 人，帮想做东西的同学找队友，一起把项目做上线。官网：builderspace.dev', 'BuilderSpace, a bilingual builders club that started at UNSW, about 200 members; I’m the president. We help students find teammates and ship their projects together. Site: builderspace.dev'), panel: 'builderspace' },
     { id: 'github', keys: ['github', 'commit', '提交', '贡献', 'contribution', '写代码', '代码量', 'coding'], q: L('你平时写多少代码？', 'How much code do you actually ship?'), a: L('过去一年在 GitHub 上两千多次贡献，大多数日子都有提交。显示器前面那座绿色的小城就是这一年：一根柱子是一天，越高那天提交越多。', 'Over two thousand GitHub contributions in the past year, with commits on most days. The little green city in front of the monitor is that year: one tower per day, taller means more commits.'), panel: 'github' },
     { id: 'styles', keys: ['风格', '宇宙', 'style', 'universe', 'blender', '怎么做'], q: L('为什么有十种画风？', 'Why ten styles?'), a: L('同一张桌子在 Blender 里建模，一个机位渲出底色、光影和轮廓，再合成十种印刷风格。点桌上的面具，或者按空格，就换一个宇宙。', 'One desk modelled in Blender, one camera, rendered into colour, light and outline passes, then composited into ten print styles. Click the mask on the desk, or press Space, to jump universes.') },

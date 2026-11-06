@@ -1,7 +1,7 @@
 // 入口：状态、交互、面板（静态 + 从旧站导入的内容）、对话、阅读模式。画面交给 stage.js，坐标换算在 geometry.js。
 import { groupAlbums } from './albums.js';
 import { streamChat } from './chat.js';
-import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261018-2';
+import { ALBUMS, CHAT, DYNAMIC, HOTS, INTRO_ORDER, LABELS, NOTEBOOK, PANELS, STYLES, UI, matchTopic } from './content.js?v=20261106-1';
 import * as G from './geometry.js?v=20261011-1';
 import { renderGithub, tipLabel } from './github.js';
 import { renderJournal } from './journal.js?v=20261012-2';
